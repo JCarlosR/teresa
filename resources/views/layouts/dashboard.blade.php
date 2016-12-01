@@ -175,6 +175,17 @@
                 </div>
             </div>
         </div>
+        {{--<div class="list-group">--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/principales') }}">Datos principales</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/contacto') }}">Datos de contacto</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/acceso') }}">Accesos al servidor</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/sociales') }}">Perfiles sociales</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/perfiles') }}">Perfiles profesionales</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/datos/personal') }}">Personal</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/proyectos') }}">Proyectos</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/pagos') }}">Pagos</a>--}}
+            {{--<a class="list-group-item" href="{{ url('/resumen') }}">Resumen</a>--}}
+        {{--</div>--}}
         <ul class="list-unstyled navigation mb-0">
             <li class="sidebar-category">Main</li>
             <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="active collapsed"><i class="ion-ios-home-outline bg-purple"></i><span class="sidebar-title">Dashboard</span><span class="badge bg-danger">2</span></a>
