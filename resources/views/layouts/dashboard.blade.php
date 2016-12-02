@@ -175,26 +175,30 @@
                 </div>
             </div>
         </div>
-        {{--<div class="list-group">--}}
-            {{--<a class="list-group-item" href="{{ url('/datos/principales') }}">Datos principales</a>--}}
             {{--<a class="list-group-item" href="{{ url('/datos/contacto') }}">Datos de contacto</a>--}}
             {{--<a class="list-group-item" href="{{ url('/datos/acceso') }}">Accesos al servidor</a>--}}
             {{--<a class="list-group-item" href="{{ url('/datos/sociales') }}">Perfiles sociales</a>--}}
             {{--<a class="list-group-item" href="{{ url('/datos/perfiles') }}">Perfiles profesionales</a>--}}
+
             {{--<a class="list-group-item" href="{{ url('/datos/personal') }}">Personal</a>--}}
+
             {{--<a class="list-group-item" href="{{ url('/proyectos') }}">Proyectos</a>--}}
             {{--<a class="list-group-item" href="{{ url('/pagos') }}">Pagos</a>--}}
             {{--<a class="list-group-item" href="{{ url('/resumen') }}">Resumen</a>--}}
-        {{--</div>--}}
         <ul class="list-unstyled navigation mb-0">
             <li class="sidebar-category">Main</li>
-            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="active collapsed"><i class="ion-ios-home-outline bg-purple"></i><span class="sidebar-title">Dashboard</span><span class="badge bg-danger">2</span></a>
-                <ul id="collapse1" class="list-unstyled collapse">
-                    <li><a href="index.html" class="active">Dashboard v1</a></li>
-                    <li><a href="index-v2.html">Dashboard v2</a></li>
-                </ul>
+            <li class="panel">
+                <a href="{{ url('/home') }}">
+                    <i class="ion-ios-home-outline bg-purple"></i>
+                    <span class="sidebar-title">Dashboard</span>
+                </a>
             </li>
-            <li class="panel"><a href="profile.html"><i class="ion-ios-person-outline bg-success"></i><span class="sidebar-title">Profile</span></a></li>
+            <li class="panel">
+                <a href="{{ url('/datos/principales') }}">
+                    <i class="ion-ios-person-outline bg-success"></i>
+                    <span class="sidebar-title">Datos principales</span>
+                </a>
+            </li>
             <li class="panel"><a href="chat-dashboard.html"><i class="ion-ios-chatbubble-outline bg-primary"></i><span class="sidebar-title">Chat dashboard</span></a></li>
             <li class="panel"><a href="calendar.html"><i class="ion-ios-calendar-outline bg-info"></i><span class="sidebar-title">Calendar</span></a></li>
             <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed"><i class="ion-ios-printer-outline bg-danger"></i><span class="sidebar-title">Email</span></a>
