@@ -21,3 +21,6 @@ Route::get('/perfiles/profesionales', 'ProfileController@getProfessionalProfiles
 // Personal
 Route::get('/personal', 'PersonalController@getPersonal');
 Route::post('/personal', 'PersonalController@postPersonal');
+
+// Payments
+Route::get('/pagos', 'PaymentController@index');
