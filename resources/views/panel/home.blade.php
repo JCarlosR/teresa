@@ -20,7 +20,7 @@
                 <div class="widget">
                     <div class="widget-body">
                         <div class="media">
-                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">New Orders </span><span class="text-danger"><i class="ion-arrow-down-c"></i> 2.43%</span>
+                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">E-mails </span><span class="text-danger"><i class="ion-arrow-down-c"></i> 2.43%</span>
                                 <div class="fs-36 fw-300 counter">1,650</div>
                             </div>
                             <div class="media-right"><i class="ion-ios-list-outline fs-36"></i></div>
@@ -46,7 +46,7 @@
                 <div class="widget">
                     <div class="widget-body">
                         <div class="media">
-                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">New Users </span><span class="text-danger"><i class="ion-arrow-down-c"></i> 5.62%</span>
+                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">Visitas </span><span class="text-danger"><i class="ion-arrow-down-c"></i> 5.62%</span>
                                 <div class="fs-36 fw-300 counter">1,860</div>
                             </div>
                             <div class="media-right"><i class="ion-ios-person-outline fs-36"></i></div>
@@ -59,7 +59,7 @@
                 <div class="widget">
                     <div class="widget-body">
                         <div class="media">
-                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">New Feedbacks </span><span class="text-success"><i class="ion-arrow-up-c"></i> 3.98%</span>
+                            <div class="media-body"><span class="fs-12 text-muted text-uppercase">Seguidores </span><span class="text-success"><i class="ion-arrow-up-c"></i> 3.98%</span>
                                 <div class="fs-36 fw-300 counter">1,350</div>
                             </div>
                             <div class="media-right"><i class="ion-ios-compose-outline fs-36"></i></div>
@@ -118,7 +118,7 @@
             <div class="col-md-8">
                 <div class="widget">
                     <div class="widget-heading clearfix">
-                        <h3 class="widget-title pull-left">Latest Projects</h3>
+                        <h3 class="widget-title pull-left">Proyectos en desarrollo</h3>
                         <ul class="widget-tools pull-right list-inline">
                             <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                             <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
@@ -131,10 +131,10 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Project Name</th>
-                                    <th class="text-center">Start Date</th>
-                                    <th class="text-center">Inspected</th>
-                                    <th class="text-center">Status</th>
+                                    <th>Nombre del proyecto</th>
+                                    <th class="text-center">Fecha de inicio</th>
+                                    <th class="text-center">Fotos</th>
+                                    <th class="text-center">Estado</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -143,42 +143,42 @@
                                     <td>Sigma App v1.0</td>
                                     <td class="text-center">20 Aug 2016</td>
                                     <td class="text-center text-success"><i class="ion-checkmark-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-success">Released</span></td>
+                                    <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Foundation App v1.0</td>
                                     <td class="text-center">15 Oct 2016</td>
                                     <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-purple">Work in Progress</span></td>
+                                    <td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Delta App v1.0</td>
                                     <td class="text-center">15 Oct 2016</td>
                                     <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-purple">Work in Progress</span></td>
+                                    <td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Umega App v1.6</td>
                                     <td class="text-center">06 Apr 2016</td>
                                     <td class="text-center text-success"><i class="ion-checkmark-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-success">Released</span></td>
+                                    <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Umega App v1.7</td>
                                     <td class="text-center">06 Sep 2016</td>
                                     <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-primary">Coming soon</span></td>
+                                    <td class="text-center"><span class="label label-outline label-primary">Pausado</span></td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Sigma App v1.1</td>
                                     <td class="text-center">20 Oct 2016</td>
                                     <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                                    <td class="text-center"><span class="label label-outline label-primary">Coming soon</span></td>
+                                    <td class="text-center"><span class="label label-outline label-primary">Pausado</span></td>
                                 </tr>
                                 </tbody>
                             </table>

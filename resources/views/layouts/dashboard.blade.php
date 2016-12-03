@@ -43,9 +43,12 @@
     </div><a href="javascript:;" role="button" class="hamburger-menu pull-left"><span></span></a>
     <form class="search-form m-10 pull-left hidden-xs">
         <div class="form-group has-feedback mb-0">
-            <input type="text" aria-describedby="inputSearchFor" placeholder="Search for..." style="width: 180px" class="form-control rounded"><span aria-hidden="true" class="ion-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
+            <input type="text" aria-describedby="inputSearchFor" placeholder="Buscar ..." style="width: 180px" class="form-control rounded"><span aria-hidden="true" class="ion-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
         </div>
-    </form><a href="index.html" class="brand"><img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100"></a>
+    </form>
+    <a href="{{ url('/home') }}" class="brand">
+        <img sim="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
+    </a>
     <ul class="notification-bar list-inline pull-right">
         <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ion-search"></i></a></li>
         <li class="visible-lg"><a href="javascript:;" role="button" class="header-icon sidebar-control"><i class="ion-pin"></i></a></li>
@@ -141,7 +144,7 @@
                 <div class="media mt-0">
                     <div class="media-left avatar"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                     <div class="media-right media-middle pl-0">
-                        <p class="fs-12 mb-0">Hi, Ryan</p>
+                        <p class="fs-12 mb-0">Hola, {{ auth()->user()->short_name }}</p>
                     </div>
                 </div></a>
             <ul aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-right animated fadeInUp icon">
@@ -163,7 +166,7 @@
                 <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="avatar img-circle"></div>
             </div>
             <div style="overflow: visible" class="media-body media-middle">
-                <h4 class="media-heading fs-16">Ryan Moreno</h4>
+                <h4 class="media-heading fs-16">{{ auth()->user()->name }}</h4>
                 <div class="dropdown"><a id="dropdown-status" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" class="dropdown-toggle"><span class="status bg-success"></span> Online <span class="caret"></span></a>
                     <ul aria-labelledby="dropdown-status" class="dropdown-menu animated fadeInUp">
                         <li><a href="#">Desconectado</a></li>
