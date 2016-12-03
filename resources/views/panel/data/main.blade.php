@@ -1,15 +1,15 @@
 @extends('layouts.dashboard')
 
 @section('dashboard_content')
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Dashboard
+<div class="page-content container-fluid">
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Datos principales</h3>
         </div>
-
-        <div class="panel-body">
+        <div class="widget-body">
             <form class="form-horizontal" method="POST">
                 <fieldset>
-                    <legend>Datos principales</legend>
+                    {{--<legend>Datos principales</legend>--}}
                     <div class="form-group">
                         <label for="trade_name" class="col-lg-2 control-label">Nombre comercial</label>
                         <div class="col-lg-10">
@@ -76,4 +76,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection

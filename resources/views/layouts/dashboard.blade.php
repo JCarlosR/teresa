@@ -174,9 +174,7 @@
                 </div>
             </div>
         </div>
-            {{--<a class="list-group-item" href="{{ url('/datos/personal') }}">Personal</a>--}}
 
-            {{--<a class="list-group-item" href="{{ url('/proyectos') }}">Proyectos</a>--}}
         <ul class="list-unstyled navigation mb-0">
             <li class="sidebar-category">Opciones principales</li>
             <li class="panel">
@@ -192,7 +190,7 @@
                 </a>
                 <ul id="collapse1" class="list-unstyled collapse">
                     <li><a href="{{ url('/datos/principales') }}">Datos principales</a></li>
-                    <li><a href="{{ url('/datos/contacto') }}">Datos de contacto</a></li>
+                    {{--<li><a href="{{ url('/datos/contacto') }}">Datos de contacto</a></li>--}}
                     <li><a href="{{ url('/datos/acceso') }}">Acceso a servidores</a></li>
                     <li><a href="{{ url('/perfiles/sociales') }}">Perfiles sociales</a></li>
                     <li><a href="{{ url('/perfiles/profesionales') }}">Perfiles profesionales</a></li>
@@ -207,50 +205,30 @@
             <li class="panel">
                 <a href="{{ url('/personal') }}">
                     <i class="ion-ios-people bg-warning"></i>
+                    {{-- Datos de contacto --}}
                     <span class="sidebar-title">Personal</span>
                 </a>
             </li>
+            <li class="panel">
+                <a href="{{ url('/proyectos') }}">
+                    <i class="ion-ios-pricetag-outline bg-primary"></i>
+                    <span class="sidebar-title">Proyectos</span>
+                </a>
+            </li>
+            {{--<a class="list-group-item" href="{{ url('/proyectos') }}">Proyectos</a>--}}
+
 
             <li class="sidebar-category">Más opciones</li>
-            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse6" aria-expanded="false" aria-controls="collapse6" class="collapsed"><i class="ion-ios-list-outline bg-black"></i><span class="sidebar-title">UI Elements</span></a>
-                <ul id="collapse6" class="list-unstyled collapse">
-                    <li><a href="animations.html">Animations</a></li>
-                    <li><a href="buttons.html">Buttons</a></li>
-                    <li><a href="carousels.html">Carousels</a></li>
-                    <li><a href="containers.html">Containers</a></li>
-                    <li><a href="dialogs.html">Dialogs</a></li>
-                    <li><a href="indicators.html">Indicators</a></li>
-                    <li><a href="navigations.html">Navigations</a></li>
-                    <li><a href="progress-bars.html">Progress bars</a></li>
-                    <li><a href="typography.html">Typography</a></li>
-                </ul>
-            </li>
-            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse9" aria-expanded="false" aria-controls="collapse9" class="collapsed"><i class="ion-ios-photos-outline bg-black"></i><span class="sidebar-title">Forms</span></a>
-                <ul id="collapse9" class="list-unstyled collapse">
-                    <li><a href="forms-layouts.html">Form layouts</a></li>
-                    <li><a href="basic-forms.html">Basic forms</a></li>
-                    <li><a href="advanced-elements.html">Advanced elements</a></li>
-                    <li><a href="forms-validation.html">Forms validation</a></li>
-                    <li><a href="forms-wizard.html">Form wizard</a></li>
-                    <li><a href="file-uploads.html">File uploads</a></li>
-                    <li><a href="image-cropper.html">Image cropper</a></li>
-                    <li><a href="text-editors.html">Text editors</a></li>
-                </ul>
-            </li>
-            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse12" aria-expanded="false" aria-controls="collapse12" class="collapsed"><i class="ion-ios-pie-outline bg-black"></i><span class="sidebar-title">Charts</span></a>
-                <ul id="collapse12" class="list-unstyled collapse">
-                    <li><a href="flot-charts.html">Flot charts</a></li>
-                    <li><a href="morris-charts.html">Morris charts</a></li>
-                    <li><a href="chart-js.html">Chart.js</a></li>
-                    <li><a href="chartist.html">Chartist</a></li>
-                    <li><a href="other-charts.html">Other charts</a></li>
-                </ul>
-            </li>
-            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse13" aria-expanded="false" aria-controls="collapse13" class="collapsed"><i class="ion-ios-analytics-outline bg-black"></i><span class="sidebar-title">Maps</span></a>
-                <ul id="collapse13" class="list-unstyled collapse">
-                    <li><a href="vector-maps.html">Vector maps</a></li>
-                    <li><a href="google-maps.html">Google maps</a></li>
-                </ul>
+            <li class="panel">
+                <a href="{{ url('/leads') }}">
+                    <i class="ion-ios-pie-outline bg-black"></i>
+                    <span class="sidebar-title">Leads</span>
+                </a>
+            <li class="panel">
+                <a href="{{ url('/mapa') }}">
+                    <i class="ion-ios-analytics-outline bg-black"></i>
+                    <span class="sidebar-title">Ubicación</span>
+                </a>
             </li>
 
             <li class="sidebar-category">Ayuda</li>
@@ -622,6 +600,6 @@
 <!-- Core JS-->
 <script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>
-<script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
+@yield('scripts')
 </body>
 </html>

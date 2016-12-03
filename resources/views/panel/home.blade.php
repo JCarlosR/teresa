@@ -374,3 +374,7 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+    <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
+@endsection
