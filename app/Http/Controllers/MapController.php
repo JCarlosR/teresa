@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class PaymentController extends Controller
+class MapController extends Controller
 {
     public function __construct()
     {
@@ -15,6 +15,6 @@ class PaymentController extends Controller
 
     public function index()
     {
-        return view('panel.payments');
+        return view('panel.map');
     }
 }

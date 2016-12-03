@@ -24,3 +24,6 @@ Route::post('/personal', 'PersonalController@postPersonal');
 
 // Payments
 Route::get('/pagos', 'PaymentController@index');
+
+// Location
+Route::get('/mapa', 'MapController@index');

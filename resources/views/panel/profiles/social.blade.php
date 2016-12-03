@@ -38,17 +38,62 @@
                         <a href="#" class="btn btn-primary btn-sm" title="Guardar">
                             <span class="glyphicon glyphicon-floppy-disk"></span>
                         </a>
-                        <a href="#" class="btn btn-info btn-sm" title="Enlace">
+                        <button type="button" data-toggle="modal" data-target="#link-modal" class="btn btn-sm btn-info" title="Enlace">
                             <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                        <a href="#" class="btn btn-default btn-sm" title="Estado">
+                        </button>
+                        <button type="button" data-toggle="modal" data-target="#link-state" class="btn btn-sm btn-default" title="Estado">
                             <span class="glyphicon glyphicon-tag"></span>
-                        </a>
+                        </button>
                     </td>
                 </tr>
                 @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" role="dialog" class="modal fade" style="display: none;" id="link-modal">
+    <div role="document" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 id="myLargeModalLabel" class="modal-title">Asignar enlace</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="social_link">Enlace hacia el perfil:</label>
+                    <input type="text" name="social_link" class="form-control" placeholder="Ingresa aquí el enlace hacia el perfil social">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                <button type="button" class="btn btn-black">Guardar enlace</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" role="dialog" class="modal fade" style="display: none;" id="link-state">
+    <div role="document" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 id="myLargeModalLabel" class="modal-title">Asignar estado</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="state-select">Estado del perfil:</label>
+                    <select name="state" id="state-select" class="form-control">
+                        <option value="0">No publicado</option>
+                        <option value="1">Publicado</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                <button type="button" class="btn btn-black">Guardar estado</button>
+            </div>
         </div>
     </div>
 </div>

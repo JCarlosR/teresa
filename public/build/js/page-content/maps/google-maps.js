@@ -1,6 +1,6 @@
 $(document).ready(function() {
     function initialize() {
-
+/*
         // Simple map
         // --------------------------------------------------
         var simpleMapProp = {
@@ -43,13 +43,12 @@ $(document).ready(function() {
         var transitMap = new google.maps.Map(document.getElementById('transitMap'), transitMapProp);
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(transitMap);
-
+ */
         // Styled Map
         // --------------------------------------------------
-
         var styledProp = {
-            center: new google.maps.LatLng(34.052234, -118.243685),
-            zoom: 10,
+            center: new google.maps.LatLng(-12.1169769, -76.9957541),
+            zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: [{
                 "featureType": "administrative",
@@ -107,10 +106,19 @@ $(document).ready(function() {
         };
         var styledMap = new google.maps.Map(document.getElementById('styledMap'), styledProp);
 
+        // Add marker
+        var marker = new google.maps.Marker({ // -12.1170561 -76.9956315
+            position: {
+                lat: -12.1170561, lng: -76.9956315
+            },
+            map: styledMap,
+            title: 'SEO Arquitectos'
+        });
+
         // Street View Map
         // --------------------------------------------------
         var panoMapProp = {
-            position: new google.maps.LatLng(34.052234, -118.243685),
+            position: new google.maps.LatLng(-12.1170561, -76.9956315),
             addressControlOptions: {
                 position: google.maps.ControlPosition.BOTTOM
             },
