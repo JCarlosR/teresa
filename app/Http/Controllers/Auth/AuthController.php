@@ -14,10 +14,9 @@ class AuthController extends Controller
 
     /**
      * Where to redirect users after login / registration.
-     *
-     * @var string
      */
-    protected $redirectTo = '/home';
+    protected $clientPath = '/home';
+    protected $adminPath = '/admin';
 
     /**
      * Create a new authentication controller instance.
@@ -57,5 +56,13 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function redirectPath()
+    {
+        if (auth()->user()->role == 0) // Client
+            return $this->clientPath;
+
+        return $this->adminPath; // Administrator
     }
 }

@@ -6,7 +6,10 @@ Route::get('/', function () {
 
 Route::auth();
 
+// Redirect after login / register
 Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/{id}', 'AdminController@showClient');
 
 // Main data
 Route::get('/datos/principales', 'DataController@getMain');

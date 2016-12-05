@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +36,7 @@
     <div class="search-bar closed">
         <form>
             <div class="input-group input-group-lg">
-                <input type="text" placeholder="Search for..." class="form-control"><span class="input-group-btn">
+                <input type="text" placeholder="Buscar ..." class="form-control"><span class="input-group-btn">
               <button type="button" class="btn btn-default search-bar-toggle"><i class="ion-close-round"></i></button></span>
             </div>
         </form>
@@ -47,7 +47,7 @@
         </div>
     </form>
     <a href="{{ url('/home') }}" class="brand">
-        <img sim="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
+        <img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
     </a>
     <ul class="notification-bar list-inline pull-right">
         <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ion-search"></i></a></li>
@@ -148,10 +148,9 @@
                     </div>
                 </div></a>
             <ul aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-right animated fadeInUp icon">
-                <li><a href="profile.html"><i class="ion-person mr-5"></i> My Profile</a></li>
-                <li><a href="email-inbox.html"><i class="ion-filing mr-5"></i> Inbox</a></li>
-                <li><a href="profile.html"><i class="ion-gear-b mr-5"></i> Account Settings</a></li>
-                <li><a href="login.html"><i class="ion-unlocked mr-5"></i> Logout</a></li>
+                <li><a href="{{ url('/admin/datos') }}"><i class="ion-person mr-5"></i> Mis datos</a></li>
+                <li><a href="{{ url('/admin/mensajes') }}"><i class="ion-filing mr-5"></i> Mensajes</a></li>
+                <li><a href="{{ url('/logout') }}"><i class="ion-unlocked mr-5"></i> Cerrar sesión</a></li>
             </ul>
         </li>
         <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ion-arrow-return-right"></i><span class="badge bg-danger">5</span></a></li>
@@ -200,16 +199,17 @@
                 </ul>
             </li>
             <li class="panel">
-                <a href="{{ url('/pagos') }}">
-                    <i class="ion-ios-calendar-outline bg-info"></i>
-                    <span class="sidebar-title">Pagos</span>
-                </a>
-            </li>
-            <li class="panel">
                 <a href="{{ url('/personal') }}">
                     <i class="ion-ios-people bg-warning"></i>
                     {{-- Datos de contacto --}}
                     <span class="sidebar-title">Personal</span>
+                </a>
+            </li>
+
+            <li class="panel">
+                <a href="{{ url('/servicios') }}">
+                    <i class="ion-ios-browsers bg-danger"></i>
+                    <span class="sidebar-title">Servicios</span>
                 </a>
             </li>
             <li class="panel">
@@ -218,7 +218,12 @@
                     <span class="sidebar-title">Proyectos</span>
                 </a>
             </li>
-            {{--<a class="list-group-item" href="{{ url('/proyectos') }}">Proyectos</a>--}}
+            <li class="panel">
+                <a href="{{ url('/pagos') }}">
+                    <i class="ion-ios-calendar-outline bg-info"></i>
+                    <span class="sidebar-title">Pagos</span>
+                </a>
+            </li>
 
 
             <li class="sidebar-category">Más opciones</li>
@@ -233,33 +238,8 @@
                     <span class="sidebar-title">Ubicación</span>
                 </a>
             </li>
-
-            <li class="sidebar-category">Ayuda</li>
-            <li class="panel">
-                <a href="{{ url('/ayuda') }}">
-                    <i class="ion-ios-help-outline bg-black"></i>
-                    <span class="sidebar-title">Solicitar ayuda</span>
-                </a>
-            </li>
         </ul>
 
-        <div class="sidebar-category">Downloads</div>
-        <div class="sidebar-widget">
-            <ul class="list-unstyled pl-15 pr-15">
-                <li class="mb-20">
-                    <div class="block clearfix mb-10"><span class="pull-left text-muted">image_01.jpg</span><span class="pull-right label label-outline label-success">48 sec</span></div>
-                    <div class="progress progress-xs mb-0">
-                        <div role="progressbar" data-transitiongoal="45" class="progress-bar progress-bar-success"></div>
-                    </div>
-                </li>
-                <li class="mb-20">
-                    <div class="block clearfix mb-10"><span class="pull-left text-muted">image_02.jpg</span><span class="pull-right label label-outline label-purple">22 sec</span></div>
-                    <div class="progress progress-xs mb-0">
-                        <div role="progressbar" data-transitiongoal="58" class="progress-bar progress-bar-purple"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
     </aside>
     <!-- Main Sidebar end-->
     <div class="page-container">
