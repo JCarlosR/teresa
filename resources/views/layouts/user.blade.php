@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.css') }}">
     <!-- Core CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/first-layout.css') }}">
+    @yield('styles')
 </head>
 <body>
 <!-- Header start-->

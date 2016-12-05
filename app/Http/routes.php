@@ -17,6 +17,15 @@ Route::post('/datos/principales', 'DataController@postMain');
 Route::get('/datos/acceso', 'DataController@getAccessData');
 Route::post('/datos/acceso', 'DataController@postAccessData');
 
+// Service
+Route::get('/servicios', 'ServiceController@index');
+Route::get('/servicios/registrar', 'ServiceController@create');
+// Projects
+Route::get('/proyectos', 'ProjectController@index');
+Route::get('/proyectos/registrar', 'ProjectController@create');
+Route::get('/servicio/{id}/proyectos', 'ProjectController@getByService');
+Route::get('/servicio/{id}/proyectos/registrar', 'ProjectController@createByService');
+
 // Profiles (social media)
 Route::get('/perfiles/sociales', 'ProfileController@getSocialProfiles');
 Route::get('/perfiles/profesionales', 'ProfileController@getProfessionalProfiles');
