@@ -21,6 +21,15 @@ class CreateUsersTable extends Migration
 
             $table->smallInteger('role')->default(0); // Client: 0 | Admin: 1
 
+            // Company main data
+            $table->string('trade_name');
+            $table->string('fiscal_name');
+            $table->string('ruc');
+            $table->string('phones');
+            $table->time('schedule_start');
+            $table->time('schedule_end');
+            $table->date('works_from');
+
             $table->rememberToken();
             $table->timestamps();
         });

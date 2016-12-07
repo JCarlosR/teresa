@@ -19,4 +19,9 @@ class User extends Authenticatable
         $parts = explode(' ', $this->name);
         return $parts[0];
     }
+
+    public function getStartOfServiceAttribute()
+    {
+        return $this->created_at->toDateString();
+    }
 }
