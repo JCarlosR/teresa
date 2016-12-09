@@ -24,4 +24,9 @@ class User extends Authenticatable
     {
         return $this->created_at->toDateString();
     }
+
+    public function services()
+    {
+        return $this->hasMany('App\Service');
+    }
 }

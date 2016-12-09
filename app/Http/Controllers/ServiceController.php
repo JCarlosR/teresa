@@ -16,7 +16,8 @@ class ServiceController extends Controller
 
     public function index()
     {
-        return view('panel.services.index');
+        $services = auth()->user()->services;
+        return view('panel.services.index')->with(compact('services'));
     }
 
     public function create()
@@ -35,6 +36,7 @@ class ServiceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service = new Service();
+        $service->user_id = auth()->user()->id;
         $service->name = $request->get('name');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
