@@ -23,6 +23,8 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
+                    <th class="text-center">Contador</th>
+                    <th class="text-center">Porcentaje</th>
                     <th>Opciones</th>
                 </tr>
                 </thead>
@@ -31,6 +33,8 @@
                     <tr>
                         <th scope="row">{{ ++$key }}</th>
                         <td>{{ $service->name }}</td>
+                        <td class="text-center">{{ $service->characters_count }}</td>
+                        <td class="text-center">{{ $service->characters_percent }}</td>
                         <td>
                             <a href="{{ url('/servicio/'.$service->id.'/proyectos') }}" class="btn btn-primary btn-sm" title="Ver proyectos">
                                 <span class="glyphicon glyphicon-log-in"></span>
