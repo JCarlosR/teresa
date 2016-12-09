@@ -20,6 +20,7 @@ Route::post('/datos/acceso', 'DataController@postAccessData');
 // Service
 Route::get('/servicios', 'ServiceController@index');
 Route::get('/servicios/registrar', 'ServiceController@create');
+Route::post('/servicios/registrar', 'ServiceController@store');
 // Projects
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyectos/registrar', 'ProjectController@create');

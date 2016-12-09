@@ -125,7 +125,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Optimización para buscadores</legend>
+                    <legend>Memoria descriptiva</legend>
 
                     <label for="note1">¿Cuál fue el encargo?</label>
                     <textarea id="note1" title="Pregunta 1"></textarea>

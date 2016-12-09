@@ -7,6 +7,12 @@
             <h3 class="widget-title">Servicios profesionales</h3>
         </div>
         <div class="widget-body">
+            @if (session('notification'))
+                <div class="alert alert-success">
+                    <p>{{ session('notification') }}</p>
+                </div>
+            @endif
+
             <a href="{{ url('/servicios/registrar') }}" class="btn btn-success pull-right">
                 <span class="glyphicon glyphicon-plus"></span>
                 Registrar nuevo servicio
