@@ -7,6 +7,11 @@
             <h3 class="widget-title">Proyectos profesionales</h3>
         </div>
         <div class="widget-body">
+            @if (session('notification'))
+                <div class="alert alert-success">
+                    <p>{{ session('notification') }}</p>
+                </div>
+            @endif
 
             @if (isset($service))
                 <a href="{{ url('/servicio/1/proyectos/registrar') }}" class="btn btn-success pull-right">

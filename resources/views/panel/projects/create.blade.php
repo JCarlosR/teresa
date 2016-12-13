@@ -14,20 +14,32 @@
             <h3 class="widget-title">Nuevo proyecto</h3>
         </div>
         <div class="widget-body">
-            <form action="" method="POST">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ url('/proyectos/registrar') }}" method="POST">
+                {{ csrf_field() }}
+
                 <fieldset>
                     <legend>Ficha del proyecto</legend>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-name">Nombre del proyecto</label>
-                                <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto">
+                                <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name') }}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-service">Tipo de servicio</label>
-                                <select name="service" id="project-service" class="form-control">
+                                <select name="service_id" id="project-service" class="form-control">
                                     <option value="">Seleccione servicio</option>
                                     <option value="1" @if($service_id==1) selected @endif>Construcción</option>
                                 </select>
@@ -39,13 +51,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-client">Cliente</label>
-                                <input type="text" name="client" id="project-client" class="form-control" placeholder="Cliente del proyecto">
+                                <input type="text" name="client" id="project-client" class="form-control" placeholder="Cliente del proyecto" value="{{ old('client') }}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-year">Año del proyecto</label>
-                                <input type="number" name="year" id="project-year" class="form-control" placeholder="Año de desarrollo del proyecto">
+                                <input type="number" name="year" id="project-year" class="form-control" placeholder="Año de desarrollo del proyecto" value="{{ old('year') }}">
                             </div>
                         </div>
                     </div>
@@ -120,7 +132,7 @@
 
                     <div class="form-group">
                         <label for="project-acknowledgments">Reconocimientos</label>
-                        <textarea name="acknowledgments" id="project-acknowledgments" placeholder="Reconocimientos recibidos por el proyecto" rows="2" class="form-control"></textarea>
+                        <textarea name="acknowledgments" id="project-acknowledgments" placeholder="Reconocimientos recibidos por el proyecto" rows="2" class="form-control">{{ old('acknowledgments') }}</textarea>
                     </div>
                 </fieldset>
 
@@ -128,13 +140,16 @@
                     <legend>Memoria descriptiva</legend>
 
                     <label for="note1">¿Cuál fue el encargo?</label>
-                    <textarea id="note1" title="Pregunta 1"></textarea>
+                    <span id="limit1"></span>
+                    <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1') }}</textarea>
 
                     <label for="note2">¿Cuál fue el planteamiento del proyecto?</label>
-                    <textarea id="note2" title="Pregunta 2"></textarea>
+                    <span id="limit2"></span>
+                    <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2') }}</textarea>
 
                     <label for="note3">¿Qué detalles técnicos especificarías?</label>
-                    <textarea id="note3" title="Pregunta 3"></textarea>
+                    <span id="limit3"></span>
+                    <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3') }}</textarea>
                 </fieldset>
 
                 <div class="text-right">
@@ -150,5 +165,5 @@
 
 @section('scripts')
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
-    <script src="{{ asset('/panel/services/create.js') }}"></script>
+    <script src="{{ asset('/panel/projects/create.js') }}"></script>
 @endsection

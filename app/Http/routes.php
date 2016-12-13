@@ -24,6 +24,7 @@ Route::post('/servicios/registrar', 'ServiceController@store');
 // Projects
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyectos/registrar', 'ProjectController@create');
+Route::post('/proyectos/registrar', 'ProjectController@store');
 Route::get('/servicio/{id}/proyectos', 'ProjectController@getByService');
 Route::get('/servicio/{id}/proyectos/registrar', 'ProjectController@createByService');
 
