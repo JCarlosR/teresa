@@ -19,4 +19,9 @@ class Service extends Model
         $percent = $this->characters_count / 15; // / 1500 * 100
         return number_format((float) $percent, 2, '.', '');
     }
+
+    public function projects()
+    {
+        return $this->hasMany('App\Project');
+    }
 }
