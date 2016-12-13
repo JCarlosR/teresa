@@ -13,7 +13,7 @@
                     <span class="glyphicon glyphicon-plus"></span>
                     Registrar nuevo proyecto
                 </a>
-                <p class="mb-20">A continuación, un listado de los proyectos realizados por la empresa en el servicio <b>ABC</b>.</p>
+                <p class="mb-20">A continuación, un listado de los proyectos realizados por la empresa en el servicio <b>{{ $service->name }}</b>.</p>
             @else
                 <a href="{{ url('/proyectos/registrar') }}" class="btn btn-success pull-right">
                     <span class="glyphicon glyphicon-plus"></span>
@@ -34,39 +34,19 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach ($projects as $key => $project)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Tienda Samsonite Larcomar</td>
-                    <td>2015</td>
-                    <td>SAMSONITE PERU S.A.C.</td>
+                    <th scope="row">{{ ++$key }}</th>
+                    <td>{{ $project->name }}</td>
+                    <td>{{ $project->year }}</td>
+                    <td>{{ $project->client }}</td>
                     <td>
                         <a href="#" class="btn btn-info btn-sm" title="Ver o editar datos">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Tienda Samsonite INOUTLET Faucett</td>
-                    <td>2015</td>
-                    <td>SAMSONITE PERU S.A.C.</td>
-                    <td>
-                        <a href="#" class="btn btn-info btn-sm" title="Ver o editar datos">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Tienda Colloky Jockey Plaza ETAPA 2</td>
-                    <td>2015</td>
-                    <td>Comercial Colride S.A.C.</td>
-                    <td>
-                        <a href="#" class="btn btn-info btn-sm" title="Ver o editar datos">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                    </td>
-                </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

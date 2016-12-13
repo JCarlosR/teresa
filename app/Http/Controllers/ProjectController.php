@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
+use App\Service;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -15,7 +17,8 @@ class ProjectController extends Controller
 
     public function index()
     {
-        return view('panel.projects.index');
+        $projects = auth()->user()->projects;
+        return view('panel.projects.index')->with(compact('projects'));
     }
     public function create()
     {
@@ -25,8 +28,14 @@ class ProjectController extends Controller
 
     public function getByService($id)
     {
-        $service = 'Construcción';
-        return view('panel.projects.index')->with(compact('service'));
+        // TODO: Validate if the service is associated with the user
+        $service = Service::find($id);
+        if (! $service)
+            return redirect('/servicios');
+
+        $projects = $service->projects;
+
+        return view('panel.projects.index')->with(compact('service', 'projects'));
     }
     public function createByService($id)
     {
