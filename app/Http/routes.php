@@ -21,6 +21,8 @@ Route::post('/datos/acceso', 'DataController@postAccessData');
 Route::get('/servicios', 'ServiceController@index');
 Route::get('/servicios/registrar', 'ServiceController@create');
 Route::post('/servicios/registrar', 'ServiceController@store');
+Route::get('/servicio/{id}/editar', 'ServiceController@edit');
+Route::post('/servicio/editar', 'ServiceController@update');
 // Projects
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyectos/registrar', 'ProjectController@create');

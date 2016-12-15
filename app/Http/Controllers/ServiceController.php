@@ -47,4 +47,34 @@ class ServiceController extends Controller
 
         return redirect('/servicios')->with('notification', 'El servicio se ha registrado correctamente.');
     }
+
+    public function edit($id)
+    {
+        $service = Service::find($id);
+        return view('panel.services.edit')->with(compact('service'));
+    }
+
+    public function update(Request $request)
+    {
+        $rules = [
+            'name' => 'required',
+            'service_id' => 'exists:services,id'
+        ];
+        $messages = [
+            'name.required' => 'Debe ingresar un nombre para el servicio',
+            'service_id.exists' => 'El servicio no existe en nuestra base de datos.'
+        ];
+        $this->validate($request, $rules, $messages);
+
+        $service = Service::find($request->get('service_id'));
+        $service->name = $request->get('name');
+        $service->question_1 = $request->get('question_1');
+        $service->question_2 = $request->get('question_2');
+        $service->question_3 = $request->get('question_3');
+        $service->question_4 = $request->get('question_4');
+        $service->question_5 = $request->get('question_5');
+        $service->save();
+
+        return redirect('/servicios')->with('notification', 'El servicio se ha actualizado correctamente.');
+    }
 }
