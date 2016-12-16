@@ -30,6 +30,11 @@ class CreateUsersTable extends Migration
             $table->time('schedule_end');
             $table->date('works_from');
 
+            // Company data (editable as admin)
+            $table->string('domain');
+            $table->string('google_analytics');
+            $table->string('webmaster_tools');
+
             $table->rememberToken();
             $table->timestamps();
         });

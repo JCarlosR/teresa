@@ -25,6 +25,17 @@ class User extends Authenticatable
         return $this->created_at->toDateString();
     }
 
+    public function getScheduleStartFormatAttribute()
+    {
+        $parts = explode(':', $this->schedule_start);
+        return $parts[0] . ':' . $parts[1];
+    }
+    public function getScheduleEndFormatAttribute()
+    {
+        $parts = explode(':', $this->schedule_end);
+        return $parts[0] . ':' . $parts[1];
+    }
+
     public function services()
     {
         return $this->hasMany('App\Service');

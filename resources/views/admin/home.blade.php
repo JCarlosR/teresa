@@ -14,13 +14,15 @@
                             <div class="col-md-6">
                                 <div class="widget">
                                     <div class="widget-heading">
-                                        <h3 class="widget-title">{{ $client }}</h3>
+                                        <a href="{{ url("admin/$client->id/dashboard") }}">
+                                            <h3 class="widget-title">{{ $client->name }}</h3>
+                                        </a>
                                     </div>
                                     <div class="widget-body">
                                         <div class="media">
                                             <div class="media-left">
                                                 <a href="#">
-                                                    <img alt="Logo {{ $client }}" src="https://www.verticearquitectos.com/imagenes/logos/vertice-arquitectos-logo.png" class="media-object mo-lg img-circle">
+                                                    <img alt="Logo {{ $client->name }}" src="https://www.verticearquitectos.com/imagenes/logos/vertice-arquitectos-logo.png" class="media-object mo-lg img-circle">
                                                 </a>
                                             </div>
                                             <div class="media-body">

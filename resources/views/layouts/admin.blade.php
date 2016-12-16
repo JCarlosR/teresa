@@ -46,7 +46,7 @@
             <input type="text" aria-describedby="inputSearchFor" placeholder="Buscar ..." style="width: 180px" class="form-control rounded"><span aria-hidden="true" class="ion-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
         </div>
     </form>
-    <a href="{{ url('/home') }}" class="brand">
+    <a href="{{ url('/admin') }}" class="brand">
         <img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
     </a>
     <ul class="notification-bar list-inline pull-right">
@@ -191,11 +191,10 @@
                     <span class="sidebar-title">Datos</span>
                 </a>
                 <ul id="collapse1" class="list-unstyled collapse">
-                    <li><a href="{{ url('/datos/principales') }}">Datos principales</a></li>
-                    {{--<li><a href="{{ url('/datos/contacto') }}">Datos de contacto</a></li>--}}
-                    <li><a href="{{ url('/datos/acceso') }}">Acceso a servidores</a></li>
-                    <li><a href="{{ url('/perfiles/sociales') }}">Perfiles sociales</a></li>
-                    <li><a href="{{ url('/perfiles/profesionales') }}">Perfiles profesionales</a></li>
+                    <li><a href="{{ url("/admin/$client_id/datos/principales") }}">Datos principales</a></li>
+                    <li><a href="{{ url("/admin/$client_id/datos/acceso") }}">Acceso a servidores</a></li>
+                    <li><a href="{{ url("/admin/$client_id/perfiles/sociales") }}">Perfiles sociales</a></li>
+                    <li><a href="{{ url("/admin/$client_id/perfiles/profesionales") }}">Perfiles profesionales</a></li>
                 </ul>
             </li>
             <li class="panel">

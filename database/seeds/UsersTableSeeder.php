@@ -32,11 +32,5 @@ class UsersTableSeeder extends Seeder
             'role' => 1 // Administrator
         ]);
 
-        // Clients
-        User::create([
-            'name' => 'Vértice Arquitectos',
-            'email' => 'verticearquitectosperu@gmail.com',
-            'password' => bcrypt('123123')
-        ]);
     }
 }

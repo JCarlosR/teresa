@@ -9,7 +9,6 @@ Route::auth();
 // Redirect after login / register
 Route::get('/home', 'HomeController@index');
 Route::get('/admin', 'AdminController@index');
-Route::get('/admin/{id}', 'AdminController@showClient');
 
 // Main data
 Route::get('/datos/principales', 'DataController@getMain');
@@ -46,3 +45,11 @@ Route::get('/pagos', 'PaymentController@index');
 
 // Location
 Route::get('/mapa', 'MapController@index');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/{client_id}/dashboard/', 'AdminController@clientDashboard');
+
+    // Clients data
+    Route::get('/{client_id}/datos/principales', 'AdminController@getClientData');
+    Route::post('/datos/principales', 'AdminController@postClientData');
+});

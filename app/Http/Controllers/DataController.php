@@ -32,7 +32,7 @@ class DataController extends Controller
             'trade_name.required' => 'Por favor ingresa el nombre comercial de tu empresa.',
             'trade_name.min' => 'Ingresa al menos 5 caracteres para el nombre comercial.',
             'fiscal_name.min' => 'Ingresa al menos 5 caracteres para el nombre fiscal.',
-            'ruc.digits' => 'El RUC debe constar de 11 dígitos.',
+            'ruc.digits' => 'El NIF debe constar de 11 dígitos.',
             'schedule_start.date_format' => 'Ingresa una hora válida de inicio (formato 24 horas).',
             'schedule_end.date_format' => 'Ingresa una hora válida de fin (formato 24 horas).',
             'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.'
