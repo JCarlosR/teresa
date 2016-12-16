@@ -46,7 +46,7 @@
                     <td>{{ $project->year }}</td>
                     <td>{{ $project->client }}</td>
                     <td>
-                        <a href="#" class="btn btn-info btn-sm" title="Ver o editar datos">
+                        <a href="{{ url("proyecto/$project->id/editar") }}" class="btn btn-info btn-sm" title="Ver o editar datos">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
                     </td>

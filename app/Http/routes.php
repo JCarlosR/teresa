@@ -27,6 +27,9 @@ Route::post('/servicio/editar', 'ServiceController@update');
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyectos/registrar', 'ProjectController@create');
 Route::post('/proyectos/registrar', 'ProjectController@store');
+Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
+Route::post('/proyecto/editar', 'ProjectController@update');
+// Projects in a specific category
 Route::get('/servicio/{id}/proyectos', 'ProjectController@getByService');
 Route::get('/servicio/{id}/proyectos/registrar', 'ProjectController@createByService');
 
