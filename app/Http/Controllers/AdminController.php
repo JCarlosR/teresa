@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ServerAccess;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -74,4 +75,60 @@ class AdminController extends Controller
 
         return back()->with('notification', 'Los datos se han actualizado correctamente !');
     }
+
+    public function getClientAccess($client_id)
+    {
+        $accesses = ServerAccess::where('user_id', $client_id)->get();
+        return view('admin.data.access')->with(compact('client_id', 'accesses'));
+    }
+
+    public function postClientAccess(Request $request)
+    {
+        $rules = [
+            'client_id' => 'required|exists:users,id',
+            'name' => 'required|min:3',
+            'url' => 'min:3',
+            'credentials' => 'min:20'
+        ];
+        $messages = [
+            'name.required' => 'Olvidó ingresar el nombre del acceso.',
+            'name.min' => 'El nombre debe constar al menos de 3 caracteres.',
+            'url.min' => 'La url debe constar al menos de 3 caracteres.',
+            'credentials.min' => '¿Olvidó ingresar las credenciales?'
+        ];
+        $this->validate($request, $rules, $messages);
+
+        $serverAccess = new ServerAccess();
+        $serverAccess->user_id = $request->get('client_id');
+        $serverAccess->name = $request->get('name');
+        $serverAccess->url = $request->get('url');
+        $serverAccess->credentials = $request->get('credentials');
+        $serverAccess->save();
+
+        return back()->with('notification', 'Los datos de acceso se han registrado correctamente!');
+    }
+
+    public function updateClientAccess(Request $request)
+    {
+        // TODO: Validate in modal using AJAX
+
+        $serverAccess = ServerAccess::find($request->get('access_id'));
+        $serverAccess->name = $request->get('name');
+        $serverAccess->url = $request->get('url');
+        $serverAccess->credentials = $request->get('credentials');
+        $serverAccess->save();
+
+        return back()->with('notification', 'Los datos de acceso se han actualizado correctamente!');
+    }
+
+    public function deleteClientAccess(Request $request)
+    {
+        // TODO: Check if the server access really belongs to the selected client
+
+        $serverAccess = ServerAccess::find($request->get('access_id'));
+        $serverAccess->delete();
+
+        return back()->with('notification', 'Los datos de acceso se han eliminado correctamente!');
+    }
+
 }

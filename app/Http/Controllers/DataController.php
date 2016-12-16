@@ -54,9 +54,4 @@ class DataController extends Controller
         return back()->with('notification', 'Tus datos se han actualizado correctamente !');
     }
 
-    public function getAccessData()
-    {
-        return view('panel.data.access');
-    }
-
 }

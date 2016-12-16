@@ -13,8 +13,6 @@ Route::get('/admin', 'AdminController@index');
 // Main data
 Route::get('/datos/principales', 'DataController@getMain');
 Route::post('/datos/principales', 'DataController@postMain');
-Route::get('/datos/acceso', 'DataController@getAccessData');
-Route::post('/datos/acceso', 'DataController@postAccessData');
 
 // Service
 Route::get('/servicios', 'ServiceController@index');
@@ -52,4 +50,10 @@ Route::group(['prefix' => 'admin'], function () {
     // Clients data
     Route::get('/{client_id}/datos/principales', 'AdminController@getClientData');
     Route::post('/datos/principales', 'AdminController@postClientData');
+
+    // Client access
+    Route::get('/{client_id}/datos/acceso', 'AdminController@getClientAccess');
+    Route::post('/datos/acceso', 'AdminController@postClientAccess');
+    Route::post('/datos/acceso/editar', 'AdminController@updateClientAccess');
+    Route::post('/datos/acceso/eliminar', 'AdminController@deleteClientAccess');
 });

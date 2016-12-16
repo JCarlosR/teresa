@@ -3941,3 +3941,6 @@ table.dataTable tbody > tr > .selected {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+textarea {
+  resize: vertical; /* user can resize vertically, but width is fixed */
+}
