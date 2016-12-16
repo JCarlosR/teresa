@@ -30,9 +30,6 @@ Route::post('/proyecto/editar', 'ProjectController@update');
 Route::get('/servicio/{id}/proyectos', 'ProjectController@getByService');
 Route::get('/servicio/{id}/proyectos/registrar', 'ProjectController@createByService');
 
-// Profiles (social media)
-Route::get('/perfiles/sociales', 'ProfileController@getSocialProfiles');
-Route::get('/perfiles/profesionales', 'ProfileController@getProfessionalProfiles');
 
 // Personal
 Route::get('/personal', 'PersonalController@getPersonal');
@@ -44,6 +41,7 @@ Route::get('/pagos', 'PaymentController@index');
 // Location
 Route::get('/mapa', 'MapController@index');
 
+// Admin management
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/{client_id}/dashboard/', 'AdminController@clientDashboard');
 
@@ -56,4 +54,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/datos/acceso', 'AdminController@postClientAccess');
     Route::post('/datos/acceso/editar', 'AdminController@updateClientAccess');
     Route::post('/datos/acceso/eliminar', 'AdminController@deleteClientAccess');
+
+    // Profiles (social)
+    Route::get('/{client_id}/perfiles/sociales', 'ProfileController@getSocialProfiles');
+    Route::post('/{client_id}/perfiles/sociales', 'ProfileController@postSocialProfile');
+    // Profiles (professional)
+    Route::get('/{client_id}/perfiles/profesionales', 'ProfileController@getProfessionalProfiles');
 });

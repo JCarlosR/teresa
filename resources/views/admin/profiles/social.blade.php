@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.admin')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -7,6 +7,12 @@
             <h3 class="widget-title">Perfiles sociales</h3>
         </div>
         <div class="widget-body">
+            @if (session('notification'))
+                <div class="alert alert-success">
+                    <p>{{ session('notification') }}</p>
+                </div>
+            @endif
+
             <p class="mb-20">
                 Los siguientes perfiles permiten difundir información sobre la empresa y los servicios que ofrece,
                 en redes sociales genéricas.
@@ -15,36 +21,38 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Red social</th>
-                    <th>Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Notas</th>
-                    <th>Opciones</th>
+                    <th class="col-md-2 text-center">Red social</th>
+                    <th class="text-center">URL</th>
+                    <th class="text-center">Estado</th>
+                    <th class="text-center">Notas</th>
+                    <th class="text-center">Opciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($socialPages as $key => $socialPage)
+                @foreach ($socialProfiles as $key => $socialProfile)
                 <tr>
                     <th scope="row">{{ ++$key }}</th>
-                    <td>{{ $socialPage }}</td>
-                    <td><input type="text" name="username" class="form-control" placeholder="Usuario"></td>
-                    <td>
-                        <input type="text" name="password" class="form-control" placeholder="Contraseña">
-                    </td>
-                    <td>
-                        <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none"></textarea>
-                    </td>
-                    <td>
-                        <a href="#" class="btn btn-primary btn-sm" title="Guardar">
-                            <span class="glyphicon glyphicon-floppy-disk"></span>
-                        </a>
-                        <button type="button" data-toggle="modal" data-target="#link-modal" class="btn btn-sm btn-info" title="Enlace">
-                            <span class="glyphicon glyphicon-link"></span>
-                        </button>
-                        <button type="button" data-toggle="modal" data-target="#link-state" class="btn btn-sm btn-default" title="Estado">
-                            <span class="glyphicon glyphicon-tag"></span>
-                        </button>
-                    </td>
+                    <form action="" method="POST" class="form-inline">
+                        {{ csrf_field() }}
+                        <td class="col-md-2 text-center">
+                            <input type="text" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
+                        </td>
+                        <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil social" value="{{ $socialProfile->url }}"></td>
+                        <td>
+                            <select name="state" class="form-control">
+                                <option value="0" @if($socialProfile->state==0) selected @endif>No publicado</option>
+                                <option value="1" @if($socialProfile->state==1) selected @endif>Publicado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $socialProfile->notes }}</textarea>
+                        </td>
+                        <td class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
+                                <span class="glyphicon glyphicon-floppy-disk"></span>
+                            </button>
+                        </td>
+                    </form>
                 </tr>
                 @endforeach
                 </tbody>

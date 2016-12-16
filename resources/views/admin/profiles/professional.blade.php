@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.admin')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -14,33 +14,26 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Red social</th>
-                    <th>Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Notas</th>
-                    <th>Opciones</th>
+                    <th class="text-center">Red social</th>
+                    <th class="text-center">URL</th>
+                    <th class="text-center">Notas</th>
+                    <th class="text-center">Opciones</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach ($professionalPages as $key => $professionalPage)
                 <tr>
                     <th scope="row">{{ ++$key }}</th>
-                    <td>{{ $professionalPage }}</td>
-                    <td><input type="text" name="username" class="form-control" placeholder="Usuario"></td>
-                    <td>
-                        <input type="text" name="password" class="form-control" placeholder="Contraseña">
-                    </td>
+                    <td class="text-center">{{ $professionalPage }}</td>
+                    <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional"></td>
                     <td>
                         <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none"></textarea>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <a href="#" class="btn btn-primary btn-sm" title="Guardar">
                             <span class="glyphicon glyphicon-floppy-disk"></span>
                         </a>
-                        <a href="#" class="btn btn-info btn-sm" title="Enlace">
-                            <span class="glyphicon glyphicon-link"></span>
-                        </a>
-                        <a href="#" class="btn btn-default btn-sm" title="Estado">
+                        <a href="#" class="btn btn-info btn-sm" title="Estado">
                             <span class="glyphicon glyphicon-tag"></span>
                         </a>
                     </td>
