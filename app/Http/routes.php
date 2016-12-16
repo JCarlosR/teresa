@@ -60,4 +60,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/{client_id}/perfiles/sociales', 'ProfileController@postSocialProfile');
     // Profiles (professional)
     Route::get('/{client_id}/perfiles/profesionales', 'ProfileController@getProfessionalProfiles');
+    Route::post('/{client_id}/perfiles/profesionales', 'ProfileController@postProfessionalProfile');
 });

@@ -14,6 +14,17 @@ class CreateProfessionalProfilesTable extends Migration
     {
         Schema::create('professional_profiles', function (Blueprint $table) {
             $table->increments('id');
+
+            // Owner
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
+            // Data
+            $table->string('name');
+            $table->string('url');
+            $table->string('notes'); // observations
+            $table->smallInteger('state')->unsigned()->default(0); // 0: Not published | 1: Published
+
             $table->timestamps();
         });
     }

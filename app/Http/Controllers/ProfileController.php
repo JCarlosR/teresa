@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ProfessionalProfile;
 use App\SocialProfile;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,6 @@ class ProfileController extends Controller
             'FourSquare'
         ];
         $socialProfiles = collect();
-        // dd($socialProfiles);
 
         foreach ($socialPageNames as $socialPageName) {
             $socialProfile = SocialProfile::firstOrCreate([
@@ -52,7 +52,7 @@ class ProfileController extends Controller
 
     public function getProfessionalProfiles($client_id)
     {
-        $professionalPages = [
+        $professionalPageNames = [
             'Architizer',
             'Archello',
             'Addtiva',
@@ -61,6 +61,31 @@ class ProfileController extends Controller
             'Behance',
             'Phaidon Atlas'
         ];
-        return view('admin.profiles.professional')->with(compact('client_id', 'professionalPages'));
+
+        $professionalProfiles = collect();
+
+        foreach ($professionalPageNames as $professionalPageName) {
+            $professionalProfile = ProfessionalProfile::firstOrCreate([
+                'name' => $professionalPageName,
+                'user_id' => $client_id
+            ]);
+            $professionalProfiles->push($professionalProfile);
+        }
+
+        return view('admin.profiles.professional')->with(compact('client_id', 'professionalProfiles'));
     }
+    public function postProfessionalProfile(Request $request, $client_id)
+    {
+        $professionalProfile = ProfessionalProfile::firstOrCreate([
+            'name' => $request->get('name'),
+            'user_id' => $client_id
+        ]);
+        $professionalProfile->url = $request->get('url');
+        $professionalProfile->notes = $request->get('notes');
+        $professionalProfile->state = $request->get('state');
+        $professionalProfile->save();
+
+        return back()->with('notification', 'El perfil profesional se ha actualizado correctamente!');
+    }
+
 }

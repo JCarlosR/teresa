@@ -7,6 +7,12 @@
             <h3 class="widget-title">Perfiles profesionales</h3>
         </div>
         <div class="widget-body">
+            @if (session('notification'))
+                <div class="alert alert-success">
+                    <p>{{ session('notification') }}</p>
+                </div>
+            @endif
+
             <p class="mb-20">
                 Los siguientes perfiles permiten difundir información sobre la empresa y sus más destacados proyectos.
             </p>
@@ -16,27 +22,36 @@
                     <th>#</th>
                     <th class="text-center">Red social</th>
                     <th class="text-center">URL</th>
+                    <th class="text-center">Estado</th>
                     <th class="text-center">Notas</th>
                     <th class="text-center">Opciones</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($professionalPages as $key => $professionalPage)
+                @foreach ($professionalProfiles as $key => $professionalProfile)
                 <tr>
                     <th scope="row">{{ ++$key }}</th>
-                    <td class="text-center">{{ $professionalPage }}</td>
-                    <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional"></td>
-                    <td>
-                        <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none"></textarea>
-                    </td>
-                    <td class="text-center">
-                        <a href="#" class="btn btn-primary btn-sm" title="Guardar">
-                            <span class="glyphicon glyphicon-floppy-disk"></span>
-                        </a>
-                        <a href="#" class="btn btn-info btn-sm" title="Estado">
-                            <span class="glyphicon glyphicon-tag"></span>
-                        </a>
-                    </td>
+                    <form action="" method="POST" class="form-inline">
+                        {{ csrf_field() }}
+                        <td class="col-md-2 text-center">
+                            <input type="text" name="name" readonly class="form-control" value="{{ $professionalProfile->name }}">
+                        </td>
+                        <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}"></td>
+                        <td>
+                            <select name="state" class="form-control">
+                                <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
+                                <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                            </select>
+                        </td>
+                        <td>
+                            <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
+                        </td>
+                        <td class="text-center">
+                            <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
+                                <span class="glyphicon glyphicon-floppy-disk"></span>
+                            </button>
+                        </td>
+                    </form>
                 </tr>
                 @endforeach
                 </tbody>
