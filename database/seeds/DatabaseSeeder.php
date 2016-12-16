@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
 
         // Clients data
         $this->call(ServerAccessesTableSeeder::class);
+        // Clients profiles
+        $this->call(ProfilesTableSeeder::class);
 
         // Services and projects
         $this->call(ServicesTableSeeder::class);
