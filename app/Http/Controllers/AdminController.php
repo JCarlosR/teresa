@@ -67,7 +67,8 @@ class AdminController extends Controller
 
         $user->domain = $request->get('domain');
         $user->google_analytics = $request->get('google_analytics');
-        $user->webmaster_tools = $request->get('webmaster_tools');
+        $user->webmaster_tools_google = $request->get('webmaster_tools_google');
+        $user->webmaster_tools_bing = $request->get('webmaster_tools_bing');
 
         $user->save();
 

@@ -33,7 +33,8 @@ class CreateUsersTable extends Migration
             // Company data (editable as admin)
             $table->string('domain');
             $table->string('google_analytics');
-            $table->string('webmaster_tools');
+            $table->string('webmaster_tools_google');
+            $table->string('webmaster_tools_bing');
 
             $table->rememberToken();
             $table->timestamps();

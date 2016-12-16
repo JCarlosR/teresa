@@ -97,19 +97,25 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="webmaster_tools" class="col-lg-2 control-label">Webmaster Tools</label>
+                        <label for="webmaster_tools_google" class="col-lg-2 control-label">WT Google</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="webmaster_tools" placeholder="Webmaster Tools" value="{{ old('webmaster_tools', $client->webmaster_tools) }}">
+                            <input type="text" class="form-control" name="webmaster_tools" placeholder="Webmaster Tools Google" value="{{ old('webmaster_tools_google', $client->webmaster_tools_google) }}">
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-2">
-                            <a href="{{ url("/admin/$client_id/dashboard") }}" class="btn btn-default">Cancelar</a>
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        <label for="webmaster_tools_bing" class="col-lg-2 control-label">WT Bing</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="webmaster_tools" placeholder="Webmaster Tools Bing" value="{{ old('webmaster_tools_bing', $client->webmaster_tools_bing) }}">
                         </div>
                     </div>
                 </fieldset>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <a href="{{ url("/admin/$client_id/dashboard") }}" class="btn btn-default">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
