@@ -43,13 +43,13 @@ class ProfilesTableSeeder extends Seeder
             'user_id' => $client->id,
             'name' => 'Architizer',
             'url' => 'http://architizer.com/firms/jm-polo-arquitectos-proyectos-y-negocios/',
-            'state' => 0
+            'state' => 1
         ]);
         ProfessionalProfile::create([
             'user_id' => $client->id,
             'name' => 'Archello',
             'url' => 'http://www.archello.com/en/company/jm-polo-arquitectos-proyectos-y-negocios',
-            'state' => 0
+            'state' => 1
         ]);
     }
 }

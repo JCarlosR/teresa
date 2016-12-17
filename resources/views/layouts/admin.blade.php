@@ -165,22 +165,15 @@
                 <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="avatar img-circle"></div>
             </div>
             <div style="overflow: visible" class="media-body media-middle">
-                <h4 class="media-heading fs-16">{{ auth()->user()->name }}</h4>
-                <div class="dropdown"><a id="dropdown-status" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" class="dropdown-toggle"><span class="status bg-success"></span> Online <span class="caret"></span></a>
-                    <ul aria-labelledby="dropdown-status" class="dropdown-menu animated fadeInUp">
-                        <li><a href="#">Desconectado</a></li>
-                        <li><a href="#">Ocupado</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ url('/logout') }}">Cerrar sesión</a></li>
-                    </ul>
-                </div>
+                <p>Conectado como</p>
+                <h4 class="media-heading fs-16">{{ session('client_name') }}</h4>
             </div>
         </div>
 
         <ul class="list-unstyled navigation mb-0">
             <li class="sidebar-category">Opciones principales</li>
             <li class="panel">
-                <a href="{{ url('/home') }}">
+                <a href="{{ url("/admin/$client_id/dashboard") }}">
                     <i class="ion-ios-home-outline bg-purple"></i>
                     <span class="sidebar-title">Dashboard</span>
                 </a>

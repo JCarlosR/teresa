@@ -10,6 +10,8 @@ use App\Http\Requests;
 
 class AdminController extends Controller
 {
+    use ClientDashboard;
+
     public function __construct()
     {
         $this->middleware('admin');
@@ -23,7 +25,14 @@ class AdminController extends Controller
 
     public function clientDashboard($client_id)
     {
-        return view('admin.client_dashboard')->with(compact('client_id'));
+        $client = User::find($client_id);
+        if (! $client)
+            return redirect('/admin');
+
+        // Set session variable to show the client name in the left menu
+        session()->put('client_name', $client->name);
+
+        return $this->getDashboardResponse(true, $client_id);
     }
 
     public function getClientData($client_id)

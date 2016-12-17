@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\SocialProfile;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    use ClientDashboard;
 
     public function __construct()
     {
@@ -15,6 +17,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('panel.home');
+        $client_id = auth()->user()->id;
+        return $this->getDashboardResponse(false, $client_id);
     }
+
 }

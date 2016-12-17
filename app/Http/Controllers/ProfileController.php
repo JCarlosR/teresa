@@ -55,11 +55,10 @@ class ProfileController extends Controller
         $professionalPageNames = [
             'Architizer',
             'Archello',
-            'Addtiva',
             'Archilovers',
             'Open Buildings',
-            'Behance',
-            'Phaidon Atlas'
+            'Behance' // ,
+            // 'Phaidon Atlas'
         ];
 
         $professionalProfiles = collect();

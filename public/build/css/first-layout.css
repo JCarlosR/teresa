@@ -3944,3 +3944,20 @@ table.dataTable tbody > tr > .selected {
 textarea {
   resize: vertical; /* user can resize vertically, but width is fixed */
 }
+
+/* Social media colors */
+.social-color-facebook {
+    color: #3b5998;
+}
+.social-color-linkedin {
+    color: #007bb5;
+}
+.social-color-google {
+    color: #dd4b39;
+}
+.social-color-twitter {
+    color: #55acee;
+}
+.social-color-foursquare {
+  color: #ff0084;
+}

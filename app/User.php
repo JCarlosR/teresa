@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Project');
     }
+
+    public function getIsAdminAttribute()
+    {
+        return $this->rol == 1;
+    }
 }
