@@ -59,27 +59,33 @@
             </div>
             <div class="widget-body text-center">
                 <div class="row row-0 expand">
+                    <br><br>
                     <p class="fs-12 text-uppercase text-muted">
                         <a href="{{ $architizer }}" target="_blank">
                             <i class="glyphicon glyphicon-link"></i> Architizer
                         </a>
                     </p>
+                    <br>
                     <p class="fs-12 text-uppercase text-muted">
                         <a href="{{ $archello }}" target="_blank">
                             <i class="glyphicon glyphicon-link"></i> Archello
                         </a>
                     </p>
+                    <br>
                     <p class="fs-12 text-uppercase text-muted">
                         <a href="{{ $archilovers }}" target="_blank">
                             <i class="glyphicon glyphicon-link"></i> Archilovers
                         </a>
                     </p>
+                    <br>
                     <p class="fs-12 text-uppercase text-muted">
                         <i class="glyphicon glyphicon-link"></i> Open Buildings
                     </p>
+                    <br>
                     <p class="fs-12 text-uppercase text-muted">
                         <i class="glyphicon glyphicon-link"></i> Behance
                     </p>
+                    <br><br>
                 </div>
             </div>
         </div>

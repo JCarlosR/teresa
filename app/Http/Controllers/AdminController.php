@@ -20,7 +20,7 @@ class AdminController extends Controller
     public function index()
     {
         $clients = User::where('role', 0)->get();
-        return view('admin.home')->with(compact('clients'));
+        return view('admin.index')->with(compact('clients'));
     }
 
     public function clientDashboard($client_id)
@@ -34,6 +34,8 @@ class AdminController extends Controller
 
         return $this->getDashboardResponse(true, $client_id);
     }
+
+    // Client data
 
     public function getClientData($client_id)
     {
@@ -84,6 +86,8 @@ class AdminController extends Controller
 
         return back()->with('notification', 'Los datos se han actualizado correctamente !');
     }
+
+    // Client accesses
 
     public function getClientAccess($client_id)
     {
@@ -140,4 +144,11 @@ class AdminController extends Controller
         return back()->with('notification', 'Los datos de acceso se han eliminado correctamente!');
     }
 
+    // Projects
+
+    public function getClientProjects($client_id)
+    {
+        $projects = User::find($client_id)->projects;
+        return view('admin.projects.index')->with(compact('projects', 'client_id'));
+    }
 }

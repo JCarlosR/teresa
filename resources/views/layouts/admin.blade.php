@@ -205,7 +205,7 @@
                 </a>
             </li>
             <li class="panel">
-                <a href="{{ url('/proyectos') }}">
+                <a href="{{ url("/admin/$client_id/proyectos") }}">
                     <i class="ion-ios-pricetag-outline bg-primary"></i>
                     <span class="sidebar-title">Proyectos</span>
                 </a>

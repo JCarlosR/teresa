@@ -20,7 +20,7 @@ trait ClientDashboard
         $archilovers = $this->getProfessionalLink($client_id, 'Archilovers');
 
         if ($isAdmin)
-            return view('admin.client_dashboard')->with(compact(
+            return view('admin.home')->with(compact(
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'fourSquare',
                 'architizer', 'archello', 'archilovers',
                 'client_id'
