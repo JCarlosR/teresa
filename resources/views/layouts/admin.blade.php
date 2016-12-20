@@ -191,7 +191,7 @@
                 </ul>
             </li>
             <li class="panel">
-                <a href="{{ url('/personal') }}">
+                <a href="{{ url('/admin/personal') }}">
                     <i class="ion-ios-people bg-warning"></i>
                     {{-- Datos de contacto --}}
                     <span class="sidebar-title">Personal</span>

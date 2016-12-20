@@ -17,4 +17,8 @@ class PersonalController extends Controller
     {
         return view('panel.personal');
     }
+    public function postPersonal(Request $request)
+    {
+
+    }
 }

@@ -30,11 +30,6 @@ Route::post('/proyecto/editar', 'ProjectController@update');
 Route::get('/servicio/{id}/proyectos', 'ProjectController@getByService');
 Route::get('/servicio/{id}/proyectos/registrar', 'ProjectController@createByService');
 
-
-// Personal
-Route::get('/personal', 'PersonalController@getPersonal');
-Route::post('/personal', 'PersonalController@postPersonal');
-
 // Payments
 Route::get('/pagos', 'PaymentController@index');
 
@@ -64,4 +59,12 @@ Route::group(['prefix' => 'admin'], function () {
 
     // Projects
     Route::get('/{client_id}/proyectos', 'AdminController@getClientProjects');
+    Route::get('/{client_id}/proyectos/registrar', 'AdminController@getClientNewProject');
+    Route::post('/{client_id}/proyectos/registrar', 'AdminController@postClientNewProject');
+    Route::get('/{client_id}/proyecto/{id}/editar', 'AdminController@getClientEditProject');
+    Route::post('/{client_id}/proyecto/editar', 'AdminController@postClientUpdateProject');
+
+    // Personal
+    Route::get('/personal', 'PersonalController@getPersonal');
+    Route::post('/personal', 'PersonalController@postPersonal');
 });
