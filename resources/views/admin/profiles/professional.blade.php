@@ -38,10 +38,12 @@
                         </td>
                         <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}"></td>
                         <td>
-                            <select name="state" class="form-control">
-                                <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
-                                <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
-                            </select>
+                            <div class="form-group">
+                                <select name="state" class="form-control">
+                                    <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
+                                    <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                                </select>
+                            </div>
                         </td>
                         <td>
                             <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
@@ -60,3 +62,8 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('build/js/select-color-by-value.js') }}"></script>
+@endsection
+

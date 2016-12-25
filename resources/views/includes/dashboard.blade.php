@@ -35,16 +35,18 @@
                         <div class="mt-10 fs-11 text-muted">86</div>
                     </div>
                     <div class="col-xs-2">
+                        <p class="fs-12 text-uppercase text-muted">Pinterest</p>
+                        <a href="{{ $fourSquare }}" target="_blank">
+                            <i class="block ion-social-pinterest fs-18 social-color-pinterest"></i>
+                        </a>
+                        <div class="mt-10 fs-11 text-muted">46</div>
+                    </div>
+                    <div class="col-xs-2">
                         <p class="fs-12 text-uppercase text-muted">FourSquare</p>
                         <a href="{{ $fourSquare }}" target="_blank">
                             <i class="block ion-social-foursquare fs-18 social-color-foursquare"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">86</div>
-                    </div>
-                    <div class="col-xs-2">
-                        <p class="fs-12 text-uppercase text-muted">E-mails</p>
-                        <i class="block ion-email fs-18"></i>
-                        <div class="mt-10 fs-11 text-muted">186</div>
+                        <div class="mt-10 fs-11 text-muted">13</div>
                     </div>
                 </div>
             </div>

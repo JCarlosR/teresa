@@ -22,6 +22,7 @@ class ProfileController extends Controller
             'Linkedin',
             'Google+',
             'Twitter',
+            'Pinterest',
             'FourSquare'
         ];
         $socialProfiles = collect();
@@ -57,8 +58,7 @@ class ProfileController extends Controller
             'Archello',
             'Archilovers',
             'Open Buildings',
-            'Behance' // ,
-            // 'Phaidon Atlas'
+            'Behance'
         ];
 
         $professionalProfiles = collect();
