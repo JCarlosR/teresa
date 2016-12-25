@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Intervention\Image\Facades\Image;
 
 class DataController extends Controller
 {
@@ -17,6 +18,7 @@ class DataController extends Controller
     {
         return view('panel.data.main');
     }
+
     public function postMain(Request $request)
     {
         $rules = [
@@ -54,4 +56,27 @@ class DataController extends Controller
         return back()->with('notification', 'Tus datos se han actualizado correctamente !');
     }
 
+    public function postProfileImage(Request $request)
+    {
+        $this->validate($request, [
+            'photo' => 'required|image'
+        ]);
+
+        $user = auth()->user();
+        $extension = $request->file('photo')->getClientOriginalExtension();
+        $file_name = $user->id . '.' . $extension;
+
+        $path = public_path('images/users/' . $file_name);
+
+        Image::make($request->file('photo'))
+            ->fit(144, 144)
+            ->save($path);
+
+        $user->photo = $extension;
+        $user->save();
+
+        $data['success'] = true;
+        $data['file_name'] = $file_name;
+        return $data;
+    }
 }

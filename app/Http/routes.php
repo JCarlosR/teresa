@@ -13,6 +13,8 @@ Route::get('/admin', 'AdminController@index');
 // Main data
 Route::get('/datos/principales', 'DataController@getMain');
 Route::post('/datos/principales', 'DataController@postMain');
+// Profile image
+Route::post('/user/image', 'DataController@postProfileImage');
 
 // Service
 Route::get('/servicios', 'ServiceController@index');

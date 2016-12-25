@@ -36,6 +36,11 @@ class User extends Authenticatable
         return $parts[0] . ':' . $parts[1];
     }
 
+    public function getPhotoFileNameAttribute()
+    {
+        return $this->id . '.' . $this->photo;
+    }
+
     public function services()
     {
         return $this->hasMany('App\Service');

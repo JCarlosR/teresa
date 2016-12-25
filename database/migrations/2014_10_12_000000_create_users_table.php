@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('photo'); // profile photo extension
 
             $table->smallInteger('role')->default(0); // Client: 0 | Admin: 1
 

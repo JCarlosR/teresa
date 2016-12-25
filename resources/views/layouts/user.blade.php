@@ -163,7 +163,13 @@
     <aside data-mcs-theme="minimal-dark" class="main-sidebar mCustomScrollbar">
         <div class="media user">
             <div class="media-left">
-                <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="avatar img-circle"></div>
+                <div id="esp-user-profile" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart" data-percent="66">
+                    <form action="{{ url('/user/image') }}" id="avatarForm">
+                        {{ csrf_field() }}
+                        <input type="file" style="display: none" name="photo" id="avatarInput">
+                    </form>
+                    <img src="{{ asset('images/users/'.auth()->user()->photo_file_name) }}" id="avatarImage" alt="Imagen de perfil" class="avatar img-circle">
+                </div>
             </div>
             <div style="overflow: visible" class="media-body media-middle">
                 <h4 class="media-heading fs-16">{{ auth()->user()->name }}</h4>
@@ -595,6 +601,8 @@
 <!-- Core JS-->
 <script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>
+<!-- Upload image profile -->
+<script type="text/javascript" src="{{ asset('build/js/image-profile.js') }}"></script>
 @yield('scripts')
 </body>
 </html>
