@@ -38,7 +38,9 @@ class User extends Authenticatable
 
     public function getPhotoFileNameAttribute()
     {
-        return $this->id . '.' . $this->photo;
+        if ($this->photo)
+            return $this->id . '.' . $this->photo;
+        return 'default.jpg';
     }
 
     public function services()

@@ -33,11 +33,13 @@
                     <th scope="row">{{ ++$key }}</th>
                     <form action="" method="POST" class="form-inline">
                         {{ csrf_field() }}
-                        <td class="col-md-2 text-center">
+                        <td class="text-center">
                             <input type="text" name="name" readonly class="form-control" value="{{ $professionalProfile->name }}">
                         </td>
-                        <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}"></td>
-                        <td>
+                        <td class="col-md-5">
+                            <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
+                        </td>
+                        <td class="col-md-2">
                             <div class="form-group">
                                 <select name="state" class="form-control">
                                     <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
@@ -66,4 +68,3 @@
 @section('scripts')
     <script src="{{ asset('build/js/select-color-by-value.js') }}"></script>
 @endsection
-

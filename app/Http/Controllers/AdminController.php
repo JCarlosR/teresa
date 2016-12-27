@@ -30,6 +30,7 @@ class AdminController extends Controller
             return redirect('/admin');
 
         // Set session variable to show the client name in the left menu
+        session()->put('client_id', $client->id);
         session()->put('client_name', $client->name);
 
         return $this->getDashboardResponse(true, $client_id);

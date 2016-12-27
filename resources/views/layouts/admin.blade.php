@@ -165,13 +165,13 @@
                 <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="avatar img-circle"></div>
             </div>
             <div style="overflow: visible" class="media-body media-middle">
-                <p>Conectado como</p>
+                <p>Conectado a</p>
                 <h4 class="media-heading fs-16">{{ session('client_name') }}</h4>
             </div>
         </div>
 
         <ul class="list-unstyled navigation mb-0">
-            <li class="sidebar-category">Opciones principales</li>
+            <li class="sidebar-category">Datos principales</li>
             <li class="panel">
                 <a href="{{ url("/admin/$client_id/dashboard") }}">
                     <i class="ion-ios-home-outline bg-purple"></i>
@@ -190,44 +190,39 @@
                     <li><a href="{{ url("/admin/$client_id/perfiles/profesionales") }}">Perfiles profesionales</a></li>
                 </ul>
             </li>
+            {{-- Datos de contacto --}}
             <li class="panel">
                 <a href="{{ url('/admin/personal') }}">
                     <i class="ion-ios-people bg-warning"></i>
-                    {{-- Datos de contacto --}}
                     <span class="sidebar-title">Personal</span>
                 </a>
             </li>
 
-            <li class="panel">
-                <a href="{{ url('/servicios') }}">
-                    <i class="ion-ios-browsers bg-danger"></i>
-                    <span class="sidebar-title">Servicios</span>
-                </a>
-            </li>
-            <li class="panel">
-                <a href="{{ url("/admin/$client_id/proyectos") }}">
-                    <i class="ion-ios-pricetag-outline bg-primary"></i>
-                    <span class="sidebar-title">Proyectos</span>
-                </a>
-            </li>
-            <li class="panel">
-                <a href="{{ url('/pagos') }}">
-                    <i class="ion-ios-calendar-outline bg-info"></i>
-                    <span class="sidebar-title">Pagos</span>
-                </a>
-            </li>
+            {{--<li class="panel">--}}
+                {{--<a href="{{ url('/servicios') }}">--}}
+                    {{--<i class="ion-ios-browsers bg-danger"></i>--}}
+                    {{--<span class="sidebar-title">Servicios</span>--}}
+                {{--</a>--}}
+            {{--</li>--}}
+            {{--<li class="panel">--}}
+                {{--<a href="{{ url("/admin/$client_id/proyectos") }}">--}}
+                    {{--<i class="ion-ios-pricetag-outline bg-primary"></i>--}}
+                    {{--<span class="sidebar-title">Proyectos</span>--}}
+                {{--</a>--}}
+            {{--</li>--}}
+            {{--<li class="panel">--}}
+                {{--<a href="{{ url('/pagos') }}">--}}
+                    {{--<i class="ion-ios-calendar-outline bg-info"></i>--}}
+                    {{--<span class="sidebar-title">Pagos</span>--}}
+                {{--</a>--}}
+            {{--</li>--}}
 
 
-            <li class="sidebar-category">Más opciones</li>
+            <li class="sidebar-category">Sección reportes</li>
             <li class="panel">
                 <a href="{{ url('/leads') }}">
                     <i class="ion-ios-pie-outline bg-black"></i>
                     <span class="sidebar-title">Leads</span>
-                </a>
-            <li class="panel">
-                <a href="{{ url('/mapa') }}">
-                    <i class="ion-ios-analytics-outline bg-black"></i>
-                    <span class="sidebar-title">Ubicación</span>
                 </a>
             </li>
         </ul>

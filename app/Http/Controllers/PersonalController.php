@@ -15,7 +15,8 @@ class PersonalController extends Controller
 
     public function getPersonal()
     {
-        return view('panel.personal');
+        $client_id = session('client_id');
+        return view('admin.personal')->with(compact('client_id'));
     }
     public function postPersonal(Request $request)
     {

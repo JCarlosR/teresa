@@ -21,7 +21,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th class="col-md-2 text-center">Red social</th>
+                    <th class="text-center">Red social</th>
                     <th class="text-center">URL</th>
                     <th class="text-center">Estado</th>
                     <th class="text-center">Notas</th>
@@ -34,11 +34,13 @@
                     <th scope="row">{{ ++$key }}</th>
                     <form action="" method="POST" class="form-inline">
                         {{ csrf_field() }}
-                        <td class="col-md-2 text-center">
+                        <td class="text-center">
                             <input type="text" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
                         </td>
-                        <td><input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil social" value="{{ $socialProfile->url }}"></td>
-                        <td>
+                        <td class="col-md-5">
+                            <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil social" value="{{ $socialProfile->url }}">
+                        </td>
+                        <td class="col-md-2">
                             <div class="form-group">
                                 <select name="state" class="form-control">
                                     <option value="0" @if($socialProfile->state==0) selected @endif>No publicado</option>

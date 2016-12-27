@@ -56,38 +56,50 @@
         <li class="dropdown"><a id="dropdownMenu0" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ion-code-working"></i><span class="badge bg-danger">4</span></a>
             <div aria-labelledby="dropdownMenu0" class="dropdown-menu dropdown-menu-right dm-small animated fadeInUp">
                 <ul data-mcs-theme="minimal-dark" class="media-list mCustomScrollbar">
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">HTML5</span><span class="pull-right label label-outline label-primary">65% Complete</span></div>
-                            <div class="progress progress-xs mb-0">
-                                <div role="progressbar" data-transitiongoal="65" class="progress-bar"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">CSS3</span><span class="pull-right label label-outline label-success">80% Complete</span></div>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Datos principales</span><span class="pull-right label label-outline label-success">80% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="80" class="progress-bar progress-bar-success"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">PHP</span><span class="pull-right label label-outline label-danger">20% Complete</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Servicios</span><span class="pull-right label label-outline label-danger">20% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="20" class="progress-bar progress-bar-danger"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">Javascript</span><span class="pull-right label label-outline label-purple">45% Complete</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Proyectos</span><span class="pull-right label label-outline label-primary">65% Completo</span></div>
+                            <div class="progress progress-xs mb-0">
+                                <div role="progressbar" data-transitiongoal="65" class="progress-bar"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Pagos realizados</span><span class="pull-right label label-outline label-purple">45% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="45" class="progress-bar progress-bar-purple"></div>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </li>
         <li class="dropdown"><a id="dropdownMenu1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ion-alert"></i><span class="badge bg-danger">6</span></a>
             <div aria-labelledby="dropdownMenu1" class="dropdown-menu dropdown-menu-right dm-medium animated fadeInUp">
-                <h5 class="dropdown-header">You have 6 notifications</h5>
+                <h5 class="dropdown-header">Tienes 6 notificaciones</h5>
                 <ul data-mcs-theme="minimal-dark" class="media-list mCustomScrollbar">
                     <li class="media"><a href="javascript:;">
                             <div class="media-left"><i class="ion-chatbubbles media-object mo-md img-circle bg-primary text-center"></i></div>
                             <div class="media-body">
-                                <h5 class="media-heading">Brittany Curtis</h5>
-                                <p class="text-muted mb-0">Commented on your post</p>
+                                <h5 class="media-heading">Edo Esaine</h5>
+                                <p class="text-muted mb-0">Te envió un mensaje</p>
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">5 mins</time>
@@ -96,7 +108,7 @@
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/11.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Judy Fowler</h5>
-                                <p class="text-muted mb-0">Sent you a new email</p>
+                                <p class="text-muted mb-0">Te envió un nuevo email</p>
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">12 mins</time>
@@ -185,7 +197,7 @@
         </div>
 
         <ul class="list-unstyled navigation mb-0">
-            <li class="sidebar-category">Opciones principales</li>
+            <li class="sidebar-category">Datos principales</li>
             <li class="panel">
                 <a href="{{ url('/home') }}">
                     <i class="ion-ios-home-outline bg-purple"></i>
@@ -219,7 +231,7 @@
             </li>
 
 
-            <li class="sidebar-category">Más opciones</li>
+            <li class="sidebar-category">Sección reportes</li>
             <li class="panel">
                 <a href="{{ url('/leads') }}">
                     <i class="ion-ios-pie-outline bg-black"></i>
@@ -241,19 +253,19 @@
             </li>
         </ul>
 
-        <div class="sidebar-category">Downloads</div>
+        <div class="sidebar-category">Indicadores</div>
         <div class="sidebar-widget">
             <ul class="list-unstyled pl-15 pr-15">
                 <li class="mb-20">
-                    <div class="block clearfix mb-10"><span class="pull-left text-muted">image_01.jpg</span><span class="pull-right label label-outline label-success">48 sec</span></div>
+                    <div class="block clearfix mb-10"><span class="pull-left text-muted">Datos ingresados</span><span class="pull-right label label-outline label-success">78 %</span></div>
                     <div class="progress progress-xs mb-0">
-                        <div role="progressbar" data-transitiongoal="45" class="progress-bar progress-bar-success"></div>
+                        <div role="progressbar" data-transitiongoal="78" class="progress-bar progress-bar-success"></div>
                     </div>
                 </li>
                 <li class="mb-20">
-                    <div class="block clearfix mb-10"><span class="pull-left text-muted">image_02.jpg</span><span class="pull-right label label-outline label-purple">22 sec</span></div>
+                    <div class="block clearfix mb-10"><span class="pull-left text-muted">Atraso en los pagos</span><span class="pull-right label label-outline label-purple">12 días</span></div>
                     <div class="progress progress-xs mb-0">
-                        <div role="progressbar" data-transitiongoal="58" class="progress-bar progress-bar-purple"></div>
+                        <div role="progressbar" data-transitiongoal="24" class="progress-bar progress-bar-purple"></div>
                     </div>
                 </li>
             </ul>
