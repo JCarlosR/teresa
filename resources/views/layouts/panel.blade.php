@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.css') }}">
     <!-- Core CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/first-layout.css') }}">
+    @yield('styles')
 </head>
 <body>
 <!-- Header start-->
@@ -46,7 +47,7 @@
             <input type="text" aria-describedby="inputSearchFor" placeholder="Buscar ..." style="width: 180px" class="form-control rounded"><span aria-hidden="true" class="ion-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
         </div>
     </form>
-    <a href="{{ url('/admin') }}" class="brand">
+    <a href="{{ url(auth()->user()->root_route) }}" class="brand">
         <img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
     </a>
     <ul class="notification-bar list-inline pull-right">
@@ -55,51 +56,67 @@
         <li class="dropdown"><a id="dropdownMenu0" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ion-code-working"></i><span class="badge bg-danger">4</span></a>
             <div aria-labelledby="dropdownMenu0" class="dropdown-menu dropdown-menu-right dm-small animated fadeInUp">
                 <ul data-mcs-theme="minimal-dark" class="media-list mCustomScrollbar">
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">HTML5</span><span class="pull-right label label-outline label-primary">65% Complete</span></div>
-                            <div class="progress progress-xs mb-0">
-                                <div role="progressbar" data-transitiongoal="65" class="progress-bar"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">CSS3</span><span class="pull-right label label-outline label-success">80% Complete</span></div>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Datos principales</span><span class="pull-right label label-outline label-success">80% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="80" class="progress-bar progress-bar-success"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">PHP</span><span class="pull-right label label-outline label-danger">20% Complete</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Servicios</span><span class="pull-right label label-outline label-danger">20% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="20" class="progress-bar progress-bar-danger"></div>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="block clearfix mb-10"><span class="pull-left">Javascript</span><span class="pull-right label label-outline label-purple">45% Complete</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Proyectos</span><span class="pull-right label label-outline label-primary">65% Completo</span></div>
+                            <div class="progress progress-xs mb-0">
+                                <div role="progressbar" data-transitiongoal="65" class="progress-bar"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="media">
+                        <a href="javascript:;">
+                            <div class="block clearfix mb-10"><span class="pull-left">Pagos realizados</span><span class="pull-right label label-outline label-purple">45% Completo</span></div>
                             <div class="progress progress-xs mb-0">
                                 <div role="progressbar" data-transitiongoal="45" class="progress-bar progress-bar-purple"></div>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </li>
-        <li class="dropdown"><a id="dropdownMenu1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ion-alert"></i><span class="badge bg-danger">6</span></a>
+        <li class="dropdown"><a id="dropdownMenu1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ion-alert"></i><span class="badge bg-danger">3</span></a>
             <div aria-labelledby="dropdownMenu1" class="dropdown-menu dropdown-menu-right dm-medium animated fadeInUp">
-                <h5 class="dropdown-header">You have 6 notifications</h5>
+                <h5 class="dropdown-header">Tienes 6 notificaciones</h5>
                 <ul data-mcs-theme="minimal-dark" class="media-list mCustomScrollbar">
                     <li class="media"><a href="javascript:;">
                             <div class="media-left"><i class="ion-chatbubbles media-object mo-md img-circle bg-primary text-center"></i></div>
                             <div class="media-body">
-                                <h5 class="media-heading">Brittany Curtis</h5>
-                                <p class="text-muted mb-0">Commented on your post</p>
+                                <h5 class="media-heading">Edo Esaine</h5>
+                                <p class="text-muted mb-0">Te envió un mensaje</p>
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">5 mins</time>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/11.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Judy Fowler</h5>
-                                <p class="text-muted mb-0">Sent you a new email</p>
+                                <p class="text-muted mb-0">Te envió un nuevo email</p>
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">12 mins</time>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;">
                             <div class="media-left"><span class="media-object mo-md img-circle bg-success text-center fw-700">S</span></div>
                             <div class="media-body">
@@ -108,16 +125,9 @@
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">8 hours</time>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/05.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Johnny Dean</h5>
-                                <p class="text-muted mb-0">You have 8 unread messages</p>
                             </div>
-                            <div class="media-right text-nowrap">
-                                <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">20 Oct</time>
-                            </div></a></li>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;">
                             <div class="media-left"><i class="ion-person media-object mo-md img-circle bg-purple text-center"></i></div>
                             <div class="media-body">
@@ -126,7 +136,9 @@
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">20 Oct</time>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/13.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                             <div class="media-body">
@@ -135,103 +147,41 @@
                             </div>
                             <div class="media-right text-nowrap">
                                 <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">20 Oct</time>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
                 <div class="dropdown-footer"><a href="javascript:;" class="text-muted">View all notifications</a></div>
             </div>
         </li>
         <li class="dropdown hidden-sm hidden-xs"><a id="dropdownMenu2" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle header-icon lh-1 pt-10 pb-10">
                 <div class="media mt-0">
-                    <div class="media-left avatar"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                    <div class="media-left avatar"><img src="{{ asset(auth()->user()->photo_route) }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                     <div class="media-right media-middle pl-0">
                         <p class="fs-12 mb-0">Hola, {{ auth()->user()->short_name }}</p>
                     </div>
                 </div></a>
             <ul aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-right animated fadeInUp icon">
-                <li><a href="{{ url('/admin/datos') }}"><i class="ion-person mr-5"></i> Mis datos</a></li>
-                <li><a href="{{ url('/admin/mensajes') }}"><i class="ion-filing mr-5"></i> Mensajes</a></li>
+                <li><a href="{{ url('/datos/principales') }}"><i class="ion-person mr-5"></i> Mis datos</a></li>
+                <li><a href="{{ url('/leads') }}"><i class="ion-filing mr-5"></i> Leads</a></li>
                 <li><a href="{{ url('/logout') }}"><i class="ion-unlocked mr-5"></i> Cerrar sesión</a></li>
             </ul>
         </li>
-        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ion-arrow-return-right"></i><span class="badge bg-danger">5</span></a></li>
+        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ion-arrow-return-right"></i><span class="badge bg-danger">4</span></a></li>
     </ul>
 </header>
 <!-- Header end-->
 <div class="main-container">
-    <!-- Main Sidebar start-->
-    <aside data-mcs-theme="minimal-dark" class="main-sidebar mCustomScrollbar">
-        <div class="media user">
-            <div class="media-left">
-                <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="avatar img-circle"></div>
-            </div>
-            <div style="overflow: visible" class="media-body media-middle">
-                <p>Conectado a</p>
-                <h4 class="media-heading fs-16">{{ session('client_name') }}</h4>
-            </div>
-        </div>
+    @if (auth()->user()->is_admin)
+        @include('includes.admin.sidebar')
+    @else
+        @include('includes.user.sidebar')
+    @endif
 
-        <ul class="list-unstyled navigation mb-0">
-            <li class="sidebar-category">Datos principales</li>
-            <li class="panel">
-                <a href="{{ url("/admin/$client_id/dashboard") }}">
-                    <i class="ion-ios-home-outline bg-purple"></i>
-                    <span class="sidebar-title">Dashboard</span>
-                </a>
-            </li>
-            <li class="panel">
-                <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">
-                    <i class="ion-ios-person-outline bg-success"></i>
-                    <span class="sidebar-title">Datos</span>
-                </a>
-                <ul id="collapse1" class="list-unstyled collapse">
-                    <li><a href="{{ url("/admin/$client_id/datos/principales") }}">Datos principales</a></li>
-                    <li><a href="{{ url("/admin/$client_id/datos/acceso") }}">Acceso a servidores</a></li>
-                    <li><a href="{{ url("/admin/$client_id/perfiles/sociales") }}">Perfiles sociales</a></li>
-                    <li><a href="{{ url("/admin/$client_id/perfiles/profesionales") }}">Perfiles profesionales</a></li>
-                </ul>
-            </li>
-            {{-- Datos de contacto --}}
-            <li class="panel">
-                <a href="{{ url('/admin/personal') }}">
-                    <i class="ion-ios-people bg-warning"></i>
-                    <span class="sidebar-title">Personal</span>
-                </a>
-            </li>
-
-            {{--<li class="panel">--}}
-                {{--<a href="{{ url('/servicios') }}">--}}
-                    {{--<i class="ion-ios-browsers bg-danger"></i>--}}
-                    {{--<span class="sidebar-title">Servicios</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li class="panel">--}}
-                {{--<a href="{{ url("/admin/$client_id/proyectos") }}">--}}
-                    {{--<i class="ion-ios-pricetag-outline bg-primary"></i>--}}
-                    {{--<span class="sidebar-title">Proyectos</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
-            {{--<li class="panel">--}}
-                {{--<a href="{{ url('/pagos') }}">--}}
-                    {{--<i class="ion-ios-calendar-outline bg-info"></i>--}}
-                    {{--<span class="sidebar-title">Pagos</span>--}}
-                {{--</a>--}}
-            {{--</li>--}}
-
-
-            <li class="sidebar-category">Sección reportes</li>
-            <li class="panel">
-                <a href="{{ url('/leads') }}">
-                    <i class="ion-ios-pie-outline bg-black"></i>
-                    <span class="sidebar-title">Leads</span>
-                </a>
-            </li>
-        </ul>
-
-    </aside>
-    <!-- Main Sidebar end-->
     <div class="page-container">
         @yield('dashboard_content')
     </div>
+
     <!-- Right Sidebar start-->
     <aside class="right-sidebar closed">
         <ul role="tablist" class="nav nav-tabs nav-justified nav-sidebar">
@@ -249,38 +199,16 @@
                 </form>
                 <div class="sidebar-category">Online</div>
                 <ul class="chat-list mb-0 media-list">
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/20.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Crystal Wheeler</h5>
-                                <p class="text-muted mb-0">United States</p>
-                            </div>
-                            <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/01.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Brian Austin</h5>
-                                <p class="text-muted mb-0">brianaustin@example.com</p>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/02.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">David Clark</h5>
-                                <p class="text-muted mb-0">david.clark@example.com</p>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
+                    <li class="media">
+                        <a href="javascript:;" class="conversation-toggle">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/12.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Emma Lawrence</h5>
                                 <p class="text-muted mb-0">(707) 680 1328</p>
                             </div>
-                            <div class="media-right"><span class="badge bg-danger">3</span></div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/06.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Brian Hudson</h5>
-                                <p class="text-muted mb-0">06/03/1989</p>
-                            </div></a></li>
+                            <div class="media-right"><span class="badge bg-danger">3</span></div>
+                        </a>
+                    </li>
                 </ul>
                 <div class="sidebar-category">Away</div>
                 <ul class="chat-list mb-0 media-list">
@@ -290,34 +218,37 @@
                                 <h5 class="media-heading">Evelyn Martinez</h5>
                                 <p class="text-muted mb-0">evelyn_84@example.com</p>
                             </div>
-                            <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
+                            <div class="media-right"><span class="badge bg-danger">1</span></div>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;" class="conversation-toggle">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/09.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Nicholas Mitchell</h5>
                                 <p class="text-muted mb-0">(752) 282 4218</p>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                     <li class="media"><a href="javascript:;" class="conversation-toggle">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/03.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Tyler Gordon</h5>
                                 <p class="text-muted mb-0">tylergordon@example.com</p>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
                 <div class="sidebar-category">Busy</div>
                 <ul class="chat-list mb-0 media-list">
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
+                    <li class="media">
+                        <a href="javascript:;" class="conversation-toggle">
                             <div class="media-left avatar"><img src="{{ asset('build/images/users/15.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">Stephanie Ford</h5>
                                 <p class="text-muted mb-0">29/06/1992</p>
-                            </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                            <div class="media-left avatar"><img src="{{ asset('build/images/users/07.jpg') }}" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Adam Sandoval</h5>
-                                <p class="text-muted mb-0">adam-86@example.com</p>
-                            </div></a></li>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div id="system" role="tabpanel" class="tab-pane fade">
@@ -385,13 +316,6 @@
                         <div class="media-body">
                             <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">28 minutes ago</time>
                             <p class="mt-10 mb-0">Brandon Garcia <span class="text-danger">subscribed</span> to Harold Fuller</p>
-                        </div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left pr-15"><img src="{{ asset('build/images/users/05.jpg') }}" alt="" class="media-object mo-md img-circle"></div>
-                        <div class="media-body">
-                            <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">20 minutes ago</time>
-                            <p class="mt-10 mb-0">Sell 15 products to LE company</p>
                         </div>
                     </li>
                     <li class="media">
@@ -466,7 +390,7 @@
     <aside class="conversation closed">
         <h5 class="text-center m-0 p-20">Emma Lawrence<a href="javascript:;" class="conversation-toggle pull-left"><i class="ion-close-round text-muted"></i></a><a href="javascript:;" class="pull-right"><i class="ion-refresh text-muted"></i></a></h5>
         <ul data-mcs-theme="minimal-dark" class="chat-content pl-20 pr-20 mCustomScrollbar">
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">Hello.</div>
                 </div>
@@ -478,7 +402,7 @@
                 </div>
                 <time datetime="2016-12-10T20:50:48+07:00" class="block fs-12 text-muted"><i class="ion-clock"></i> 11 minutes ago</time>
             </li>
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">How are you?</div>
                 </div>
@@ -490,7 +414,7 @@
                 </div>
                 <time datetime="2016-12-10T20:50:48+07:00" class="block fs-12 text-muted"><i class="ion-clock"></i> 10 minutes ago</time>
             </li>
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">Good. Do you speak English?</div>
                 </div>
@@ -502,7 +426,7 @@
                 </div>
                 <time datetime="2016-12-10T20:50:48+07:00" class="block fs-12 text-muted"><i class="ion-clock"></i> 8 minutes ago</time>
             </li>
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">Yes.</div>
                 </div>
@@ -514,7 +438,7 @@
                 </div>
                 <time datetime="2016-12-10T20:50:48+07:00" class="block fs-12 text-muted"><i class="ion-clock"></i> 7 minutes ago</time>
             </li>
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">I'm from California.</div>
                 </div>
@@ -526,7 +450,7 @@
                 </div>
                 <time datetime="2016-12-10T20:50:48+07:00" class="block fs-12 text-muted"><i class="ion-clock"></i> 15 seconds ago</time>
             </li>
-            <li class="chat-item self"><img src="{{ asset('build/images/users/04.jpg') }}" alt="" class="img-circle chat-avatar">
+            <li class="chat-item self"><img src="{{ asset('build/images/users/16.jpg') }}" alt="" class="img-circle chat-avatar">
                 <div class="chat-bubble">
                     <div class="chat-text">Nice to meet you too.</div>
                 </div>
@@ -570,6 +494,8 @@
 <!-- Core JS-->
 <script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>
+<!-- Upload image profile -->
+<script type="text/javascript" src="{{ asset('build/js/image-profile.js') }}"></script>
 @yield('scripts')
 </body>
 </html>

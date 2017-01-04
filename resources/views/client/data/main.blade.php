@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -57,11 +57,11 @@
                         <div class="col-lg-10">
                             <div class="col-md-6">
                                 <label for="start">Horario de inicio</label>
-                                <input type="time" name="schedule_start" id="start" class="form-control" value="{{ old('schedule_start', auth()->user()->schedule_start) }}">
+                                <input type="time" name="schedule_start" id="start" class="form-control" value="{{ old('schedule_start', auth()->user()->schedule_start_format) }}">
                             </div>
                             <div class="col-md-6">
                                 <label for="end">Horario de fin</label>
-                                <input type="time" name="schedule_end" id="end" class="form-control col-md-6" value="{{ old('schedule_end', auth()->user()->schedule_end) }}">
+                                <input type="time" name="schedule_end" id="end" class="form-control col-md-6" value="{{ old('schedule_end', auth()->user()->schedule_end_format) }}">
                             </div>
                             <span class="help-block">Usar un formato de 24 horas.</span>
                         </div>

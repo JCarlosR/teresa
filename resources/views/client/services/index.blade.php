@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -36,9 +36,6 @@
                         <td class="text-center">{{ $service->characters_count }}</td>
                         <td class="text-center">{{ $service->characters_percent }}</td>
                         <td>
-                            <a href="{{ url('/servicio/'.$service->id.'/proyectos') }}" class="btn btn-primary btn-sm" title="Ver proyectos">
-                                <span class="glyphicon glyphicon-log-in"></span>
-                            </a>
                             <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Ver o editar datos">
                                 <span class="glyphicon glyphicon-edit"></span>
                             </a>

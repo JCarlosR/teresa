@@ -1,7 +1,15 @@
-@extends('layouts.user')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
+    <div class="widget">
+        <div class="widget-body">
+            <div>
+                <p class="mb-0">Si la información que muestran los mapas no coincide con su dirección por favor comuníquese con el equipo de TERESA.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="widget">

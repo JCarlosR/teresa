@@ -3,26 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class ServiceController extends Controller
 {
+    private $user;
+
     public function __construct()
     {
         $this->middleware('auth');
+
+        // Services associated with
+        if (auth()->user()->is_admin)
+            $this->user = User::find(session('client_id'));
+        else
+            $this->user = auth()->user();
     }
 
     public function index()
     {
-        $services = auth()->user()->services;
-        return view('panel.services.index')->with(compact('services'));
+        $services = $this->user->services;
+        return view('client.services.index')->with(compact('services'));
     }
 
     public function create()
     {
-        return view('panel.services.create');
+        return view('client.services.create');
     }
 
     public function store(Request $request)
@@ -36,7 +45,7 @@ class ServiceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service = new Service();
-        $service->user_id = auth()->user()->id;
+        $service->user_id = $this->user->id;
         $service->name = $request->get('name');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
@@ -51,7 +60,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::find($id);
-        return view('panel.services.edit')->with(compact('service'));
+        return view('client.services.edit')->with(compact('service'));
     }
 
     public function update(Request $request)

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class MapController extends Controller
+class PaymentController extends Controller
 {
     public function __construct()
     {
@@ -15,6 +16,6 @@ class MapController extends Controller
 
     public function index()
     {
-        return view('panel.map');
+        return view('client.payments');
     }
 }

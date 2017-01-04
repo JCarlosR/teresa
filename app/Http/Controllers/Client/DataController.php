@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -14,12 +15,12 @@ class DataController extends Controller
         $this->middleware('auth');
     }
 
-    public function getMain()
+    public function edit()
     {
-        return view('panel.data.main');
+        return view('client.data.main');
     }
 
-    public function postMain(Request $request)
+    public function update(Request $request)
     {
         $rules = [
             'trade_name' => 'required|min:5',

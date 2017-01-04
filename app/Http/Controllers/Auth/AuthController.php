@@ -12,17 +12,6 @@ class AuthController extends Controller
 {
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    /**
-     * Where to redirect users after login / registration.
-     */
-    protected $clientPath = '/home';
-    protected $adminPath = '/admin';
-
-    /**
-     * Create a new authentication controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
@@ -60,9 +49,6 @@ class AuthController extends Controller
 
     public function redirectPath()
     {
-        if (auth()->user()->role == 0) // Client
-            return $this->clientPath;
-
-        return $this->adminPath; // Administrator
+        return auth()->user()->root_route;
     }
 }

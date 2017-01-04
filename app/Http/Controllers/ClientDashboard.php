@@ -7,8 +7,15 @@ use App\SocialProfile;
 
 trait ClientDashboard
 {
-    public function getDashboardResponse($isAdmin, $client_id)
+    public function getDashboardResponse()
     {
+        $is_admin = auth()->user()->is_admin;
+
+        if ($is_admin)
+            $client_id = session('client_id');
+        else
+            $client_id = auth()->user()->id;
+
         $facebook = $this->getSocialLink($client_id, 'Facebook');
         $linkedIn = $this->getSocialLink($client_id, 'Linkedin');
         $googlePlus = $this->getSocialLink($client_id, 'Google+');
@@ -19,14 +26,7 @@ trait ClientDashboard
         $archello = $this->getProfessionalLink($client_id, 'Archello');
         $archilovers = $this->getProfessionalLink($client_id, 'Archilovers');
 
-        if ($isAdmin)
-            return view('admin.home')->with(compact(
-                'facebook', 'linkedIn', 'googlePlus', 'twitter', 'fourSquare',
-                'architizer', 'archello', 'archilovers',
-                'client_id'
-            ));
-
-        return view('panel.home')->with(compact(
+        return view('client.dashboard')->with(compact(
             'facebook', 'linkedIn', 'googlePlus', 'twitter', 'fourSquare',
             'architizer', 'archello', 'archilovers'
         ));
@@ -41,6 +41,7 @@ trait ClientDashboard
 
         return '#';
     }
+
     public function getProfessionalLink($user_id, $name)
     {
         $professionalProfile = ProfessionalProfile::where('user_id', $user_id)->where('name', $name)->first();

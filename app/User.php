@@ -6,6 +6,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    /**
+     * @property boolean $is_admin
+     * @property boolean $is_client
+     */
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -13,6 +18,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // where to redirect users after login / registration.
+    protected $clientPath = '/dashboard';
+    protected $adminPath = '/admin';
+
+    // accessors
 
     public function getShortNameAttribute()
     {
@@ -36,12 +47,35 @@ class User extends Authenticatable
         return $parts[0] . ':' . $parts[1];
     }
 
-    public function getPhotoFileNameAttribute()
+    public function getPhotoRouteAttribute()
     {
+        $path = 'images/users/';
+
         if ($this->photo)
-            return $this->id . '.' . $this->photo;
-        return 'default.jpg';
+            $file_name = $this->id . '.' . $this->photo;
+        else $file_name = 'default.jpg';
+
+        return $path . $file_name;
     }
+
+    public function getIsClientAttribute()
+    {
+        return $this->role == 0;
+    }
+    public function getIsAdminAttribute()
+    {
+        return $this->role == 1;
+    }
+
+    public function getRootRouteAttribute()
+    {
+        if ($this->is_admin)
+            return $this->adminPath;
+        return $this->clientPath;
+    }
+
+
+    // relationships
 
     public function services()
     {
@@ -52,8 +86,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Project');
     }
 
-    public function getIsAdminAttribute()
+
+    // scopes
+    public function scopeClient($query)
     {
-        return $this->rol == 1;
+        return $query->where('role', 0);
     }
 }

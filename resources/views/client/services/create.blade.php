@@ -1,10 +1,13 @@
-@extends('layouts.user')
+@extends('layouts.panel')
 
 @section('styles')
-    <!-- Font Awesome-->
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
-    <!-- Summer note-->
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
+    <style>
+        textarea {
+            display: none;
+        }
+    </style>
 @endsection
 
 @section('dashboard_content')

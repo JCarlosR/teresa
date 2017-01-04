@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -22,7 +22,6 @@
 
             <form class="form-horizontal" method="POST" action="{{ url('admin/datos/principales') }}">
                 {{ csrf_field() }}
-                <input type="hidden" name="client_id" value="{{ $client_id }}">
                 <fieldset>
                     <legend>Datos de la empresa</legend>
                     <div class="form-group">
@@ -99,20 +98,20 @@
                     <div class="form-group">
                         <label for="webmaster_tools_google" class="col-lg-2 control-label">WT Google</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="webmaster_tools" placeholder="Webmaster Tools Google" value="{{ old('webmaster_tools_google', $client->webmaster_tools_google) }}">
+                            <input type="text" class="form-control" name="webmaster_tools_google" placeholder="Webmaster Tools Google" value="{{ old('webmaster_tools_google', $client->webmaster_tools_google) }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="webmaster_tools_bing" class="col-lg-2 control-label">WT Bing</label>
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" name="webmaster_tools" placeholder="Webmaster Tools Bing" value="{{ old('webmaster_tools_bing', $client->webmaster_tools_bing) }}">
+                            <input type="text" class="form-control" name="webmaster_tools_bing" placeholder="Webmaster Tools Bing" value="{{ old('webmaster_tools_bing', $client->webmaster_tools_bing) }}">
                         </div>
                     </div>
                 </fieldset>
 
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <a href="{{ url("/admin/$client_id/dashboard") }}" class="btn btn-default">Cancelar</a>
+                        <a href="{{ url("/admin/dashboard") }}" class="btn btn-default">Cancelar</a>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </div>

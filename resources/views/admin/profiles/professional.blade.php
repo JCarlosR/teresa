@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">

@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.panel')
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
@@ -67,7 +67,6 @@
 
             <form class="form-horizontal" method="POST" action="{{ url('/admin/datos/acceso') }}">
                 {{ csrf_field() }}
-                <input type="hidden" name="client_id" value="{{ $client_id }}">
 
                 <fieldset>
                     <div class="form-group">

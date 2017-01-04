@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\ProfessionalProfile;
 use App\SocialProfile;
 use Illuminate\Http\Request;
@@ -12,10 +13,10 @@ class ProfileController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin');
+        $this->middleware('admin'); // TODO: client_selected middleware
     }
 
-    public function getSocialProfiles($client_id)
+    public function getSocialProfiles()
     {
         $socialPageNames = [
             'Facebook',
@@ -30,18 +31,18 @@ class ProfileController extends Controller
         foreach ($socialPageNames as $socialPageName) {
             $socialProfile = SocialProfile::firstOrCreate([
                 'name' => $socialPageName,
-                'user_id' => $client_id
+                'user_id' => session('client_id')
             ]);
             $socialProfiles->push($socialProfile);
         }
 
         return view('admin.profiles.social')->with(compact('client_id', 'socialProfiles'));
     }
-    public function postSocialProfile(Request $request, $client_id)
+    public function postSocialProfile(Request $request)
     {
         $socialProfile = SocialProfile::firstOrCreate([
             'name' => $request->get('name'),
-            'user_id' => $client_id
+            'user_id' => session('client_id')
         ]);
         $socialProfile->url = $request->get('url');
         $socialProfile->notes = $request->get('notes');
@@ -51,7 +52,7 @@ class ProfileController extends Controller
         return back()->with('notification', 'El perfil social se ha actualizado correctamente!');
     }
 
-    public function getProfessionalProfiles($client_id)
+    public function getProfessionalProfiles()
     {
         $professionalPageNames = [
             'Architizer',
@@ -66,18 +67,19 @@ class ProfileController extends Controller
         foreach ($professionalPageNames as $professionalPageName) {
             $professionalProfile = ProfessionalProfile::firstOrCreate([
                 'name' => $professionalPageName,
-                'user_id' => $client_id
+                'user_id' => session('client_id')
             ]);
             $professionalProfiles->push($professionalProfile);
         }
 
-        return view('admin.profiles.professional')->with(compact('client_id', 'professionalProfiles'));
+        return view('admin.profiles.professional')->with(compact('professionalProfiles'));
     }
-    public function postProfessionalProfile(Request $request, $client_id)
+
+    public function postProfessionalProfile(Request $request)
     {
         $professionalProfile = ProfessionalProfile::firstOrCreate([
             'name' => $request->get('name'),
-            'user_id' => $client_id
+            'user_id' => session('client_id')
         ]);
         $professionalProfile->url = $request->get('url');
         $professionalProfile->notes = $request->get('notes');

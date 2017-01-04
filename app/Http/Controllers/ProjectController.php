@@ -4,28 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use App\Service;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class ProjectController extends Controller
 {
+    private $user;
+
     public function __construct()
     {
         $this->middleware('auth');
+
+        // Projects associated with
+        if (auth()->user()->is_admin)
+            $this->user = User::find(session('client_id'));
+        else
+            $this->user = auth()->user();
     }
 
     public function index()
     {
-        $projects = auth()->user()->projects;
-        return view('panel.projects.index')->with(compact('projects'));
+        $projects = $this->user->projects;
+        return view('client.projects.index')->with(compact('projects'));
     }
 
     public function create()
     {
         $service_id = 0;
-        $services = auth()->user()->services;
-        return view('panel.projects.create')->with(compact('service_id', 'services'));
+        $services = $this->user->services;
+        return view('client.projects.create')->with(compact('service_id', 'services'));
     }
 
     public function store(Request $request)
@@ -54,7 +63,7 @@ class ProjectController extends Controller
         $project->service_id = $service_id ?: null;
         $project->client = $request->get('client');
         $project->year = $request->get('year');
-        $project->user_id = auth()->user()->id;
+        $project->user_id = $this->user->id;
         $project->acknowledgments = $request->get('acknowledgments');
         $project->question_1 = $request->get('question_1');
         $project->question_2 = $request->get('question_2');
@@ -62,32 +71,9 @@ class ProjectController extends Controller
         $project->save();
 
         $notification = 'El proyecto se ha registrado correctamente!';
+        session()->flash('notification', $notification);
 
-        if ($service_id)
-            return redirect("/servicio/$service_id/proyectos")->with('notification', $notification);
-
-        return redirect('/proyectos')->with('notification', $notification);
-    }
-
-    public function getByService($id)
-    {
-        $service = Service::find($id);
-        if (! $service)
-            return redirect('/servicios');
-
-        // Check if the service really belongsTo the user
-        if ($service->user_id !== auth()->user()->id)
-            return redirect('/servicios');
-
-        $projects = $service->projects;
-
-        return view('panel.projects.index')->with(compact('service', 'projects'));
-    }
-    public function createByService($id)
-    {
-        $service_id = $id;
-        $services = auth()->user()->services;
-        return view('panel.projects.create')->with(compact('service_id', 'services'));
+        return redirect('/proyectos');
     }
 
     public function edit($id)
@@ -97,12 +83,12 @@ class ProjectController extends Controller
             return redirect('/proyectos');
 
         // Check if the project really belongs to the user
-        if ($project->user_id !== auth()->user()->id)
+        if ($project->user_id !== $this->user->id)
             return redirect('/proyectos');
 
-        $services = auth()->user()->services;
+        $services = $this->user->services;
         $service_id = 0;
-        return view('panel.projects.edit')->with(compact('project', 'services', 'service_id'));
+        return view('client.projects.edit')->with(compact('project', 'services', 'service_id'));
     }
 
     public function update(Request $request)

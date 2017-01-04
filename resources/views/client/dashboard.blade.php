@@ -1,8 +1,8 @@
-@extends('layouts.user')
+@extends('layouts.panel')
 
 @section('dashboard_content')
     <div class="page-content container-fluid">
-        {{-- Show only for clients --}}
+        @if (auth()->user()->is_client)
         <div class="row">
             <div class="col-md-12">
                 <div class="widget">
@@ -13,6 +13,7 @@
                 </div>
             </div>
         </div>
+        @endif
 
         @include('includes.dashboard')
     </div>
