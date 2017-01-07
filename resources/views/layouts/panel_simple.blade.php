@@ -44,7 +44,7 @@
 <body>
 
 <header>
-    <a href="{{ url('/home') }}" class="brand">
+    <a href="{{ url(auth()->user()->root_route) }}" class="brand">
         <img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
     </a>
     <ul class="notification-bar list-inline pull-right">

@@ -20,7 +20,8 @@ class ClientsTableSeeder extends Seeder
             'trade_name' => 'J.M Polo Arquitectos, Proyectos y Negocios',
             'fiscal_name' => 'J.M Polo Arquitectos, Proyectos y Negocios SAC',
             'ruc' => '20502880056',
-            'phones' => '00511 4370235'
+            'phones' => '00511 4370235',
+            'domain' => 'www.verticearquitectos.com'
         ]);
         User::create([
             'name' => 'Vértice Arquitectos',

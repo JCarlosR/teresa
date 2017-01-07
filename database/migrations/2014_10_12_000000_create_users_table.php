@@ -20,7 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('photo'); // profile photo extension
 
-            $table->smallInteger('role')->default(0); // Client: 0 | Admin: 1
+            // Client: 0 | Admin: 1
+            $table->smallInteger('role')->default(0);
+
+            // Client type
+            $table->integer('client_type_id')->unsigned()->nullable();
+            $table->foreign('client_type_id')->references('id')->on('client_types');
 
             // Company main data
             $table->string('trade_name');

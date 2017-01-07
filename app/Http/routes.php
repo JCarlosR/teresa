@@ -35,10 +35,14 @@ Route::get('/mapa', 'Client\MapController@index');
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
-    Route::get('/select/{client_id}', 'AdminController@select');
-    Route::get('/dashboard/', 'Admin\DashboardController@index');
+    Route::get('/cliente/seleccionar/{client_id}', 'AdminController@select');
+
+    // Clients management
+    Route::get('/cliente/registrar', 'Admin\ClientController@create');
+    Route::post('/cliente/registrar', 'Admin\ClientController@store');
 
     // Clients data
+    Route::get('/dashboard/', 'Admin\DashboardController@index');
     Route::get('/datos/principales', 'Admin\DataController@edit');
     Route::post('/datos/principales', 'Admin\DataController@update');
 
