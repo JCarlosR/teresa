@@ -15,11 +15,16 @@ class CreateEmployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
 
+            // Owner
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->string('job'); // profession
             $table->string('name');
             $table->text('emails');
             $table->text('phones');
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

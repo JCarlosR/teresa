@@ -13,19 +13,13 @@
                 </div>
             @endif
 
-            @if (isset($service))
-                <a href="{{ url("/servicio/$service->id/proyectos/registrar") }}" class="btn btn-success pull-right">
-                    <span class="glyphicon glyphicon-plus"></span>
-                    Registrar nuevo proyecto
-                </a>
-                <p class="mb-20">A continuación, un listado de los proyectos realizados por la empresa en el servicio <b>{{ $service->name }}</b>.</p>
-            @else
-                <a href="{{ url('/proyectos/registrar') }}" class="btn btn-success pull-right">
-                    <span class="glyphicon glyphicon-plus"></span>
-                    Registrar nuevo proyecto
-                </a>
-                <p class="mb-20">A continuación, un listado de <strong>todos los proyectos</strong> realizados por la empresa.</p>
-            @endif
+
+            <a href="{{ url('/proyectos/registrar') }}" class="btn btn-success pull-right">
+                <span class="glyphicon glyphicon-plus"></span>
+                Registrar nuevo proyecto
+            </a>
+            <p class="mb-20">A continuación, un listado de <strong>todos los proyectos</strong> realizados por la empresa.</p>
+
 
             {{-- TODO: Mostrar una columna con el tipo de servicio cuando se están mostrando TODOS los proyectos en general. --}}
             <table class="table table-hover">

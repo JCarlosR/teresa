@@ -69,6 +69,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/proyecto/editar', 'ProjectController@update');
 
     // Personal
-    Route::get('/personal', 'PersonalController@getPersonal');
-    Route::post('/personal', 'PersonalController@postPersonal');
+    Route::get('/personal', 'Admin\PersonalController@index');
+    Route::post('/personal', 'Admin\PersonalController@store');
+    Route::post('/personal/editar', 'Admin\PersonalController@update');
+    Route::post('/personal/eliminar', 'Admin\PersonalController@delete');
 });

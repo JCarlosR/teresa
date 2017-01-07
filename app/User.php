@@ -88,6 +88,7 @@ class User extends Authenticatable
 
 
     // scopes
+
     public function scopeClient($query)
     {
         return $query->where('role', 0);

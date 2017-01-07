@@ -162,7 +162,7 @@
 
                         <div class="modal-body">
                             <fieldset>
-                                <legend>¿Está seguro que desea eliminar los siguientes datos?</legend>
+                                <p>¿Estás seguro que deseas eliminar los siguientes datos?</p>
                                 <div class="form-group">
                                     <label for="name" class="col-lg-2 control-label">Nombre de acceso</label>
                                     <div class="col-lg-10">
