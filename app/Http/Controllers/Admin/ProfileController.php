@@ -24,7 +24,10 @@ class ProfileController extends Controller
             'Google+',
             'Twitter',
             'Pinterest',
-            'FourSquare'
+            'FourSquare',
+            'Flickr',
+            'Instagram',
+            'Youtube'
         ];
         $socialProfiles = collect();
 

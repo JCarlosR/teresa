@@ -20,10 +20,10 @@
             <table class="table table-condensed">
                 <thead>
                 <tr>
-                    <th>#</th>
                     <th class="text-center">Red social</th>
                     <th class="text-center">URL</th>
                     <th class="text-center">Estado</th>
+                    <th class="text-center">Seguidores</th>
                     <th class="text-center">Notas</th>
                     <th class="text-center">Opciones</th>
                 </tr>
@@ -31,13 +31,12 @@
                 <tbody>
                 @foreach ($socialProfiles as $key => $socialProfile)
                 <tr>
-                    <th scope="row">{{ ++$key }}</th>
                     <form action="" method="POST" class="form-inline">
                         {{ csrf_field() }}
-                        <td class="text-center">
+                        <td class="text-center col-md-2">
                             <input type="text" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
                         </td>
-                        <td class="col-md-5">
+                        <td>
                             <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil social" value="{{ $socialProfile->url }}">
                         </td>
                         <td class="col-md-2">
@@ -48,7 +47,10 @@
                                 </select>
                             </div>
                         </td>
-                        <td>
+                        <td class="col-md-1">
+                            <input type="text" class="form-control">
+                        </td>
+                        <td class="col-md-2">
                             <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $socialProfile->notes }}</textarea>
                         </td>
                         <td class="text-center">

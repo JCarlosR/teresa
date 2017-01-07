@@ -1,3 +1,17 @@
+@section('styles')
+    <style>
+        .col-social {
+            width: 11.11%;
+            // border: 1px solid grey;
+            float:left;
+            position: relative;
+            min-height: 1px;
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+    </style>
+@endsection
+
 <div class="row">
     <div class="col-md-12">
         <div class="widget text-center">
@@ -6,47 +20,68 @@
             </div>
             <div class="widget-body">
                 <div class="row row-0 expand">
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Facebook</p>
-                        <a href="{{ $facebook }}" target="_blank">
+                        <a href="{{ $facebook->url }}" target="_blank">
                             <i class="ion-social-facebook fs-18 social-color-facebook"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">87</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $facebook->followers }}</div>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Linkedin</p>
-                        <a href="{{ $linkedIn }}" target="_blank">
+                        <a href="{{ $linkedIn->url }}" target="_blank">
                             <i class="ion-social-linkedin fs-18 social-color-linkedin"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">85</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $linkedIn->followers }}</div>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Google+</p>
-                        <a href="{{ $googlePlus }}" target="_blank">
+                        <a href="{{ $googlePlus->url }}" target="_blank">
                             <i class="block ion-social-google fs-18 social-color-google"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">90</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $googlePlus->followers }}</div>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Twitter</p>
-                        <a href="{{ $twitter }}" target="_blank">
+                        <a href="{{ $twitter->url }}" target="_blank">
                             <i class="block ion-social-twitter fs-18 social-color-twitter"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">86</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $twitter->followers }}</div>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Pinterest</p>
-                        <a href="{{ $fourSquare }}" target="_blank">
+                        <a href="{{ $pinterest->url }}" target="_blank">
                             <i class="block ion-social-pinterest fs-18 social-color-pinterest"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">46</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $pinterest->followers }}</div>
                     </div>
-                    <div class="col-xs-2">
+                    <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">FourSquare</p>
-                        <a href="{{ $fourSquare }}" target="_blank">
+                        <a href="{{ $fourSquare->url }}" target="_blank">
                             <i class="block ion-social-foursquare fs-18 social-color-foursquare"></i>
                         </a>
-                        <div class="mt-10 fs-11 text-muted">13</div>
+                        <div class="mt-10 fs-11 text-muted">{{ $fourSquare->followers }}</div>
+                    </div>
+                    <div class="col-social">
+                        <p class="fs-12 text-uppercase text-muted">Flickr</p>
+                        <a href="{{ $flickr->url }}" target="_blank">
+                            <i class="block ion-ios-circle-filled fs-18 social-color-flickr"></i>
+                        </a>
+                        <div class="mt-10 fs-11 text-muted">{{ $flickr->followers }}</div>
+                    </div>
+                    <div class="col-social">
+                        <p class="fs-12 text-uppercase text-muted">Instagram</p>
+                        <a href="{{ $instagram->url }}" target="_blank">
+                            <i class="block ion-social-instagram fs-18 social-color-instagram"></i>
+                        </a>
+                        <div class="mt-10 fs-11 text-muted">{{ $instagram->followers }}</div>
+                    </div>
+                    <div class="col-social">
+                        <p class="fs-12 text-uppercase text-muted">Youtube</p>
+                        <a href="{{ $youtube->url }}" target="_blank">
+                            <i class="block ion-social-youtube fs-18 social-color-youtube"></i>
+                        </a>
+                        <div class="mt-10 fs-11 text-muted">{{ $youtube->followers }}</div>
                     </div>
                 </div>
             </div>
@@ -81,11 +116,15 @@
                     </p>
                     <br>
                     <p class="fs-12 text-uppercase text-muted">
-                        <i class="glyphicon glyphicon-link"></i> Open Buildings
+                        <a href="{{ $buildings }}" target="_blank">
+                            <i class="glyphicon glyphicon-link"></i> Open Buildings
+                        </a>
                     </p>
                     <br>
                     <p class="fs-12 text-uppercase text-muted">
-                        <i class="glyphicon glyphicon-link"></i> Behance
+                        <a href="{{ $behance }}" target="_blank">
+                            <i class="glyphicon glyphicon-link"></i> Behance
+                        </a>
                     </p>
                     <br><br>
                 </div>

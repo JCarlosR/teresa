@@ -22,6 +22,7 @@ class CreateSocialProfilesTable extends Migration
             // Data
             $table->string('name');
             $table->string('url');
+            $table->integer('followers')->unsigned()->default(0);
             $table->string('notes'); // observations
             $table->smallInteger('state')->unsigned()->default(0); // 0: Not published | 1: Published
 

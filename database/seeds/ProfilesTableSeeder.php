@@ -15,7 +15,7 @@ class ProfilesTableSeeder extends Seeder
     public function run()
     {
         // Take the first generated client
-        $client = User::where('role', 0)->first();
+        $client = User::client()->first();
         if (! $client) return;
 
         // Social profiles
@@ -23,18 +23,21 @@ class ProfilesTableSeeder extends Seeder
             'user_id' => $client->id,
             'name' => 'Facebook',
             'url' => 'https://www.facebook.com/jmpoloarquitectos/',
+            'followers' => 682,
             'state' => 1
         ]);
         SocialProfile::create([
             'user_id' => $client->id,
             'name' => 'Linkedin',
             'url' => 'https://www.linkedin.com/company/j.m-polo-arquitectos-proyectos-y-negocios-sac',
+            'followers' => 33,
             'state' => 1
         ]);
         SocialProfile::create([
             'user_id' => $client->id,
             'name' => 'Google+',
             'url' => 'https://plus.google.com/u/0/b/113756668599454191052/102914145479591542265',
+            'followers' => 11,
             'state' => 0
         ]);
 
