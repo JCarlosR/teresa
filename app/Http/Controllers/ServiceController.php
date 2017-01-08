@@ -6,8 +6,6 @@ use App\Service;
 use App\User;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
 class ServiceController extends Controller
 {
     private $user;
@@ -85,5 +83,14 @@ class ServiceController extends Controller
         $service->save();
 
         return redirect('/servicios')->with('notification', 'El servicio se ha actualizado correctamente.');
+    }
+
+    public function delete($id)
+    {
+        $service = Service::findOrFail($id);
+        $service->delete();
+
+        $notification = 'El servicio seleccionado se ha eliminado correctamente.';
+        return back()->with(compact('notification'));
     }
 }

@@ -43,6 +43,13 @@
                             <a href="{{ url("proyecto/$project->id/editar") }}" class="btn btn-info btn-sm" title="Ver o editar datos">
                                 <span class="glyphicon glyphicon-edit"></span>
                             </a>
+
+                            <a href="{{ url('/proyecto/'.$project->id.'/eliminar') }}"
+                               class="btn btn-danger btn-sm" title="Eliminar servicio"
+                               onclick="return confirm('¿Estás seguro que deseas eliminar este proyecto?');"
+                            >
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

@@ -28,6 +28,7 @@ class CreateServicesTable extends Migration
             $table->text('question_4');
             $table->text('question_5');
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Project;
-use App\Service;
 use App\User;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 
 class ProjectController extends Controller
 {
@@ -132,5 +129,14 @@ class ProjectController extends Controller
             return redirect("/servicio/$service_id/proyectos")->with('notification', $notification);
 
         return redirect('/proyectos')->with('notification', $notification);
+    }
+
+    public function delete($id)
+    {
+        $project = Project::findOrFail($id);
+        $project->delete();
+
+        $notification = 'El proyecto seleccionado se ha eliminado correctamente.';
+        return back()->with(compact('notification'));
     }
 }

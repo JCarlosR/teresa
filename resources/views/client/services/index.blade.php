@@ -39,6 +39,13 @@
                             <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Ver o editar datos">
                                 <span class="glyphicon glyphicon-edit"></span>
                             </a>
+
+                            <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
+                               class="btn btn-danger btn-sm" title="Eliminar servicio"
+                               onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');"
+                            >
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

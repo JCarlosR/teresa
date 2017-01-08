@@ -20,12 +20,14 @@ Route::get('/servicios/registrar', 'ServiceController@create');
 Route::post('/servicios/registrar', 'ServiceController@store');
 Route::get('/servicio/{id}/editar', 'ServiceController@edit');
 Route::post('/servicio/editar', 'ServiceController@update');
+Route::get('/servicio/{id}/eliminar', 'ServiceController@delete');
 // Projects
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyectos/registrar', 'ProjectController@create');
 Route::post('/proyectos/registrar', 'ProjectController@store');
 Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
 Route::post('/proyecto/editar', 'ProjectController@update');
+Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 
 // Payments
 Route::get('/pagos', 'Client\PaymentController@index');
@@ -65,12 +67,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/servicios/registrar', 'ServiceController@store');
     Route::get('/servicio/{id}/editar', 'ServiceController@edit');
     Route::post('/servicio/editar', 'ServiceController@update');
+    Route::get('/servicio/{id}/eliminar', 'ServiceController@delete');
     // Projects
     Route::get('/proyectos', 'ProjectController@index');
     Route::get('/proyectos/registrar', 'ProjectController@create');
     Route::post('/proyectos/registrar', 'ProjectController@store');
     Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
     Route::post('/proyecto/editar', 'ProjectController@update');
+    Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 
     // Personal
     Route::get('/personal', 'Admin\PersonalController@index');
