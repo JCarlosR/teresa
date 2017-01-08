@@ -75,7 +75,7 @@
                     <div class="form-group">
                         <label for="start_of_service" class="col-lg-2 control-label">Inicio del servicio SEO</label>
                         <div class="col-lg-10">
-                            <input type="date" class="form-control" value="{{ $client->start_of_service }}" name="start_of_service" id="start_of_service" readonly>
+                            <input type="date" class="form-control" value="{{ $client->start_of_service }}" name="start_of_service" id="start_of_service" disabled>
                             <span class="help-block">Este campo es calculado por el sistema al momento del registro.</span>
                         </div>
                     </div>
