@@ -45,7 +45,7 @@
                                 <select name="service_id" id="project-service" class="form-control">
                                     <option value="">Seleccione servicio</option>
                                     @foreach ($services as $service)
-                                        <option value="{{ $service->id }}" @if(old('service_id', $service_id)==$service->id) selected @endif>{{ $service->name }}</option>
+                                        <option value="{{ $service->id }}" @if(old('service_id')==$service->id) selected @endif>{{ $service->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -66,80 +66,43 @@
                             </div>
                         </div>
                     </div>
-
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-6">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-architect">Arquitectura</label>--}}
-                                {{--<input type="text" name="architect" id="project-architect" class="form-control" placeholder="Arquitectura del proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-6">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-structure">Estructuras</label>--}}
-                                {{--<input type="text" name="structure" id="project-structure" class="form-control" placeholder="Estructuras del proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-6">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-builder">Constructora</label>--}}
-                                {{--<input type="text" name="builder" id="project-builder" class="form-control" placeholder="Constructora del proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-6">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-type">Tipo de proyecto</label>--}}
-                                {{--<input type="text" name="type" id="project-type" class="form-control" placeholder="Tipo de proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-location">Ubicación</label>--}}
-                                {{--<input type="text" name="location" id="project-location" class="form-control" placeholder="Ubicación del proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<label for="ground_area">Área terreno</label>--}}
-                            {{--<input type="number" min="1" name="ground_area" id="ground_area" class="form-control" placeholder="En metros cuadrados">--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<label for="project_area">Área proyecto</label>--}}
-                            {{--<input type="number" min="1" name="project_area" id="project_area" class="form-control" placeholder="En metros cuadrados">--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="row">--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-floors"># de pisos</label>--}}
-                                {{--<input type="number" name="floors" id="project-floors" min="1" class="form-control" placeholder="Número de pisos">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-basements"># de sótanos</label>--}}
-                                {{--<input type="number" name="basements" id="project-basements" min="1" class="form-control" placeholder="Número de sótanos">--}}
-                            {{--</div>--}}
-                       {{--</div>--}}
-                        {{--<div class="col-md-4">--}}
-                            {{--<div class="form-group">--}}
-                                {{--<label for="project-state">Estado</label>--}}
-                                {{--<input type="text" name="state" id="project-state" class="form-control" placeholder="Estado del proyecto">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    <div class="form-group">
-                        <label for="project-acknowledgments">Reconocimientos</label>
-                        <textarea name="acknowledgments" id="project-acknowledgments" placeholder="Reconocimientos recibidos por el proyecto" rows="2" class="form-control">{{ old('acknowledgments') }}</textarea>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="project-type">Tipo de proyecto</label>
+                                <input type="text" name="type" id="project-type" class="form-control" placeholder="Tipo de proyecto" value="{{ old('type') }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="project-duration">Duración</label>
+                                <input type="text" name="duration" id="project-duration" class="form-control" placeholder="Especificar: días, semanas, meses" value="{{ old('duration') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="project-status">Estado</label>
+                                <input type="text" name="status" id="project-status" class="form-control"
+                                       placeholder="Estado del proyecto" value="{{ old('status') }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="project-acknowledgments">Reconocimientos</label>
+                            <textarea name="acknowledgments" id="project-acknowledgments" placeholder="Reconocimientos recibidos por el proyecto" rows="2" class="form-control">{{ old('acknowledgments') }}</textarea>
+                        </div>
                     </div>
                 </fieldset>
+
+                @if ($client->client_type_id)
+                    <fieldset>
+                        <legend>Datos específicos del proyecto</legend>
+                        @if ($client->client_type_id == 1)
+                            @include('layouts.projects.architects.create')
+                        @endif
+                    </fieldset>
+                @endif
 
                 <fieldset>
                     <legend>Memoria descriptiva</legend>

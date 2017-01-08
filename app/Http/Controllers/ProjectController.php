@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\ArchitectProject;
+use App\ArchitectProjects;
 use App\Project;
 use App\User;
 use Illuminate\Http\Request;
@@ -29,9 +31,9 @@ class ProjectController extends Controller
 
     public function create()
     {
-        $service_id = 0;
+        $client = $this->user;
         $services = $this->user->services;
-        return view('client.projects.create')->with(compact('service_id', 'services'));
+        return view('client.projects.create')->with(compact('client', 'services'));
     }
 
     public function store(Request $request)
@@ -55,17 +57,42 @@ class ProjectController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service_id = $request->get('service_id');
+
         $project = new Project();
+        $project->user_id = $this->user->id;
+
         $project->name = $request->get('name');
         $project->service_id = $service_id ?: null;
         $project->client = $request->get('client');
         $project->year = $request->get('year');
-        $project->user_id = $this->user->id;
+        $project->type = $request->get('type');
+        $project->duration = $request->get('duration');
+        $project->status = $request->get('status');
         $project->acknowledgments = $request->get('acknowledgments');
+
         $project->question_1 = $request->get('question_1');
         $project->question_2 = $request->get('question_2');
         $project->question_3 = $request->get('question_3');
+
         $project->save();
+
+        if ($this->user->client_type_id) {
+            if ($this->user->client_type_id==1) { // SEO Architects
+
+                $architect_project = new ArchitectProject();
+                $architect_project->architect = $request->get('architect');
+                $architect_project->structure = $request->get('structure');
+                $architect_project->location = $request->get('location');
+                $architect_project->ground_area = $request->get('ground_area');
+                $architect_project->project_area = $request->get('project_area');
+                $architect_project->builder = $request->get('builder');
+                $architect_project->floors = $request->get('floors');
+                $architect_project->basements = $request->get('basements');
+
+                $architect_project->project_id = $project->id;
+                $architect_project->save();
+            }
+        }
 
         $notification = 'El proyecto se ha registrado correctamente!';
         session()->flash('notification', $notification);
@@ -75,17 +102,15 @@ class ProjectController extends Controller
 
     public function edit($id)
     {
-        $project = Project::find($id);
-        if (! $project)
-            return redirect('/proyectos');
+        $project = Project::findOrFail($id);
 
         // Check if the project really belongs to the user
         if ($project->user_id !== $this->user->id)
             return redirect('/proyectos');
 
         $services = $this->user->services;
-        $service_id = 0;
-        return view('client.projects.edit')->with(compact('project', 'services', 'service_id'));
+        $client = $this->user;
+        return view('client.projects.edit')->with(compact('client', 'project', 'services'));
     }
 
     public function update(Request $request)
@@ -112,23 +137,42 @@ class ProjectController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service_id = $request->get('service_id');
+
         $project = Project::find($request->get('project_id'));
         $project->name = $request->get('name');
         $project->service_id = $service_id ?: null;
         $project->client = $request->get('client');
         $project->year = $request->get('year');
+        $project->type = $request->get('type');
+        $project->duration = $request->get('duration');
+        $project->status = $request->get('status');
         $project->acknowledgments = $request->get('acknowledgments');
+
         $project->question_1 = $request->get('question_1');
         $project->question_2 = $request->get('question_2');
         $project->question_3 = $request->get('question_3');
+
         $project->save();
 
+        if ($this->user->client_type_id) {
+            if ($this->user->client_type_id==1) { // SEO Architects
+
+                $architect_project = $project->architect_project;
+                $architect_project->architect = $request->get('architect');
+                $architect_project->structure = $request->get('structure');
+                $architect_project->location = $request->get('location');
+                $architect_project->ground_area = $request->get('ground_area');
+                $architect_project->project_area = $request->get('project_area');
+                $architect_project->builder = $request->get('builder');
+                $architect_project->floors = $request->get('floors');
+                $architect_project->basements = $request->get('basements');
+
+                $architect_project->save();
+            }
+        }
+
         $notification = 'El proyecto se ha actualizado correctamente!';
-
-        if ($service_id)
-            return redirect("/servicio/$service_id/proyectos")->with('notification', $notification);
-
-        return redirect('/proyectos')->with('notification', $notification);
+        return redirect('/proyectos')->with(compact('notification'));
     }
 
     public function delete($id)

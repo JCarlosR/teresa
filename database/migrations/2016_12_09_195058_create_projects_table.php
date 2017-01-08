@@ -18,6 +18,9 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('client');
             $table->integer('year')->unsigned();
+            $table->string('type'); // plain text
+            $table->string('duration'); // plain text
+            $table->string('status'); // plain text
             $table->text('acknowledgments');
 
             // SEO questions

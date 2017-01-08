@@ -17,6 +17,7 @@ class ClientsTableSeeder extends Seeder
             'name' => 'JMPolo Arquitectos',
             'email' => 'webjmpoloarquitectos@gmail.com',
             'password' => bcrypt('123123'),
+            'client_type_id' => 1,
             'trade_name' => 'J.M Polo Arquitectos, Proyectos y Negocios',
             'fiscal_name' => 'J.M Polo Arquitectos, Proyectos y Negocios SAC',
             'ruc' => '20502880056',
@@ -26,17 +27,20 @@ class ClientsTableSeeder extends Seeder
         User::create([
             'name' => 'Vértice Arquitectos',
             'email' => 'verticearquitectosperu@gmail.com',
-            'password' => bcrypt('123123')
+            'password' => bcrypt('123123'),
+            'client_type_id' => 1,
         ]);
         User::create([
             'name' => 'Lindley Arquitectos',
             'email' => 'catherine@lindleyarq.com',
-            'password' => bcrypt('123123')
+            'password' => bcrypt('123123'),
+            'client_type_id' => 1,
         ]);
         User::create([
             'name' => 'Alfredo Queirolo',
             'email' => 'alfredoqueirolo@gmail.com',
-            'password' => bcrypt('123123')
+            'password' => bcrypt('123123'),
+            'client_type_id' => 1,
         ]);
         User::create([
             'name' => 'Diaz Marchani',
