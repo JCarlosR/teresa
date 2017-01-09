@@ -13,10 +13,10 @@ class Service extends Model
 
     public function getCharactersCountAttribute()
     {
-        return strlen($this->question_1) +
-            strlen($this->question_2) +
-            strlen($this->question_3) +
-            strlen($this->question_4);
+        return strlen(strip_tags($this->question_1)) +
+            strlen(strip_tags($this->question_2)) +
+            strlen(strip_tags($this->question_3)) +
+            strlen(strip_tags($this->question_4));
     }
 
     public function getCharactersPercentAttribute()
