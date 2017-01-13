@@ -121,6 +121,9 @@
                 </fieldset>
 
                 <div class="text-right">
+                    <button type="button" class="btn btn-default" onclick="window.history.back();">
+                        Cancelar registro
+                    </button>
                     <button type="submit" class="btn btn-primary">
                         Registrar proyecto
                     </button>

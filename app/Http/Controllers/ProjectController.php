@@ -41,14 +41,14 @@ class ProjectController extends Controller
         $rules = [
             'name' => 'required|min:4',
             'service_id' => 'exists:services,id',
-            'client' => 'required|min:3',
+            'client' => 'min:3',
             'year' => 'required|integer|min:1980'
         ];
         $messages = [
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
             'service_id.exists' => 'El servicio indicado no existe en la base de datos.',
-            'client.required' => 'Es necesario ingresar el nombre del cliente.',
+            // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
             'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
             'year.integer' => 'El formato del año es inadecuado.',
@@ -119,7 +119,7 @@ class ProjectController extends Controller
             'project_id' => 'required|exists:projects,id',
             'name' => 'required|min:4',
             'service_id' => 'exists:services,id',
-            'client' => 'required|min:3',
+            'client' => 'min:3',
             'year' => 'required|integer|min:1980'
         ];
         $messages = [
@@ -128,7 +128,7 @@ class ProjectController extends Controller
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
             'service_id.exists' => 'El servicio indicado no existe en la base de datos.',
-            'client.required' => 'Es necesario ingresar el nombre del cliente.',
+            // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
             'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
             'year.integer' => 'El formato del año es inadecuado.',
@@ -158,6 +158,12 @@ class ProjectController extends Controller
             if ($this->user->client_type_id==1) { // SEO Architects
 
                 $architect_project = $project->architect_project;
+
+                if (! $architect_project) {
+                    $architect_project = new ArchitectProject();
+                    $architect_project->project_id = $project->id;
+                }
+
                 $architect_project->architect = $request->get('architect');
                 $architect_project->structure = $request->get('structure');
                 $architect_project->location = $request->get('location');

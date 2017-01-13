@@ -122,6 +122,9 @@
                 </fieldset>
 
                 <div class="text-right">
+                    <button type="button" class="btn btn-default" onclick="window.history.back();">
+                        Volver sin guardar
+                    </button>
                     <button type="submit" class="btn btn-primary">
                         Guardar proyecto
                     </button>

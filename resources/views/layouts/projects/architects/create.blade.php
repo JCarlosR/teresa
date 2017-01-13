@@ -21,11 +21,11 @@
     </div>
     <div class="col-md-4">
         <label for="ground_area">Área terreno</label>
-        <input type="number" min="1" name="ground_area" id="ground_area" class="form-control" placeholder="En metros cuadrados" value="{{ old('ground_area') }}">
+        <input type="number" min="0" step="0.001" name="ground_area" id="ground_area" class="form-control" placeholder="En metros cuadrados" value="{{ old('ground_area') }}">
     </div>
     <div class="col-md-4">
         <label for="project_area">Área proyecto</label>
-        <input type="number" min="1" name="project_area" id="project_area" class="form-control" placeholder="En metros cuadrados" value="{{ old('project_area') }}">
+        <input type="number" min="0" step="0.001" name="project_area" id="project_area" class="form-control" placeholder="En metros cuadrados" value="{{ old('project_area') }}">
     </div>
 </div>
 <div class="row">
@@ -38,13 +38,13 @@
     <div class="col-md-4">
         <div class="form-group">
             <label for="project-floors"># de pisos</label>
-            <input type="number" name="floors" id="project-floors" min="1" class="form-control" placeholder="Número de pisos" value="{{ old('floors') }}">
+            <input type="number" name="floors" id="project-floors" min="0" class="form-control" placeholder="Número de pisos" value="{{ old('floors') }}">
         </div>
     </div>
     <div class="col-md-4">
         <div class="form-group">
             <label for="project-basements"># de sótanos</label>
-            <input type="number" name="basements" id="project-basements" min="1" class="form-control" placeholder="Número de sótanos" value="{{ old('basements') }}">
+            <input type="number" name="basements" id="project-basements" min="0" class="form-control" placeholder="Número de sótanos" value="{{ old('basements') }}">
         </div>
     </div>
 </div>
