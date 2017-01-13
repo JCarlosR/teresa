@@ -43,7 +43,11 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Inicio</a></li>
+                    @if (auth()->check())
+                        <li><a href="{{ url(auth()->user()->root_route) }}">Inicio</a></li>
+                    @else
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->

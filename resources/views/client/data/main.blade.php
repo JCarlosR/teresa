@@ -44,6 +44,12 @@
                             <input type="text" class="form-control" name="ruc" placeholder="NIF" value="{{ old('ruc', auth()->user()->ruc) }}">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="address" class="col-lg-2 control-label">Dirección</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="address" placeholder="Dirección principal" value="{{ old('address', auth()->user()->address) }}">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="phones" class="col-lg-2 control-label">Teléfonos</label>

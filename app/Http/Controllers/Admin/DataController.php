@@ -46,6 +46,7 @@ class DataController extends Controller
         $user->trade_name = $request->get('trade_name');
         $user->fiscal_name = $request->get('fiscal_name');
         $user->ruc = $request->get('ruc');
+        $user->address = $request->get('address');
         $user->phones = $request->get('phones');
         $user->schedule_start = $request->get('schedule_start');
         $user->schedule_end = $request->get('schedule_end');

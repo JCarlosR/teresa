@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('trade_name');
             $table->string('fiscal_name');
             $table->string('ruc');
+            $table->string('address');
             $table->string('phones');
             $table->time('schedule_start');
             $table->time('schedule_end');

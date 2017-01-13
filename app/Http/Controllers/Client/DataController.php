@@ -26,7 +26,6 @@ class DataController extends Controller
             'trade_name' => 'required|min:5',
             'fiscal_name' => 'min:5',
             'ruc' => 'digits:11',
-            // 'phones' => '',
             'schedule_start' => 'date_format:H:i',
             'schedule_end' => 'date_format:H:i',
             'works_from' => 'date'
@@ -48,6 +47,7 @@ class DataController extends Controller
         $user->trade_name = $request->get('trade_name');
         $user->fiscal_name = $request->get('fiscal_name');
         $user->ruc = $request->get('ruc');
+        $user->address = $request->get('address');
         $user->phones = $request->get('phones');
         $user->schedule_start = $request->get('schedule_start');
         $user->schedule_end = $request->get('schedule_end');
