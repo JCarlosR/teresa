@@ -48,7 +48,7 @@
                             </div>
                         </td>
                         <td class="col-md-1">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="followers" value="{{ $socialProfile->followers }}">
                         </td>
                         <td class="col-md-2">
                             <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $socialProfile->notes }}</textarea>

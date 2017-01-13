@@ -23,63 +23,63 @@
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Facebook</p>
                         <a href="{{ $facebook->url }}" target="_blank">
-                            <i class="ion-social-facebook fs-18 social-color-facebook"></i>
+                            <i class="ion-social-facebook fs-24 social-color-facebook"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $facebook->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Linkedin</p>
                         <a href="{{ $linkedIn->url }}" target="_blank">
-                            <i class="ion-social-linkedin fs-18 social-color-linkedin"></i>
+                            <i class="ion-social-linkedin fs-24 social-color-linkedin"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $linkedIn->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Google+</p>
                         <a href="{{ $googlePlus->url }}" target="_blank">
-                            <i class="block ion-social-google fs-18 social-color-google"></i>
+                            <i class="block ion-social-google fs-24 social-color-google"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $googlePlus->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Twitter</p>
                         <a href="{{ $twitter->url }}" target="_blank">
-                            <i class="block ion-social-twitter fs-18 social-color-twitter"></i>
+                            <i class="block ion-social-twitter fs-24 social-color-twitter"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $twitter->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Pinterest</p>
                         <a href="{{ $pinterest->url }}" target="_blank">
-                            <i class="block ion-social-pinterest fs-18 social-color-pinterest"></i>
+                            <i class="block ion-social-pinterest fs-24 social-color-pinterest"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $pinterest->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">FourSquare</p>
                         <a href="{{ $fourSquare->url }}" target="_blank">
-                            <i class="block ion-social-foursquare fs-18 social-color-foursquare"></i>
+                            <i class="block ion-social-foursquare fs-24 social-color-foursquare"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $fourSquare->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Flickr</p>
                         <a href="{{ $flickr->url }}" target="_blank">
-                            <i class="block ion-ios-circle-filled fs-18 social-color-flickr"></i>
+                            <i class="block ion-ios-circle-filled fs-24 social-color-flickr"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $flickr->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Instagram</p>
                         <a href="{{ $instagram->url }}" target="_blank">
-                            <i class="block ion-social-instagram fs-18 social-color-instagram"></i>
+                            <i class="block ion-social-instagram fs-24 social-color-instagram"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $instagram->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Youtube</p>
                         <a href="{{ $youtube->url }}" target="_blank">
-                            <i class="block ion-social-youtube fs-18 social-color-youtube"></i>
+                            <i class="block ion-social-youtube fs-24 social-color-youtube"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $youtube->followers }}</div>
                     </div>

@@ -48,8 +48,9 @@ class ProfileController extends Controller
             'user_id' => session('client_id')
         ]);
         $socialProfile->url = $request->get('url');
-        $socialProfile->notes = $request->get('notes');
         $socialProfile->state = $request->get('state');
+        $socialProfile->followers = $request->get('followers');
+        $socialProfile->notes = $request->get('notes');
         $socialProfile->save();
 
         return back()->with('notification', 'El perfil social se ha actualizado correctamente!');
