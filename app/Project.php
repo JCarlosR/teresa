@@ -11,6 +11,7 @@ class Project extends Model
 
     protected $dates = ['deleted_at'];
 
+
     // relationships
 
     public function service()
@@ -28,4 +29,19 @@ class Project extends Model
         return $this->hasOne('App\ArchitectProject');
     }
 
+
+    // accessors
+
+    public function getCharactersCountAttribute()
+    {
+        return strlen(strip_tags($this->question_1)) +
+            strlen(strip_tags($this->question_2)) +
+            strlen(strip_tags($this->question_3));
+    }
+
+    public function getCharactersPercentAttribute()
+    {
+        $percent = $this->characters_count / 15; // / 1500 * 100
+        return number_format((float) $percent, 2, '.', '');
+    }
 }

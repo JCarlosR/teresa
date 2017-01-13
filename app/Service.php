@@ -11,6 +11,9 @@ class Service extends Model
 
     protected $dates = ['deleted_at'];
 
+
+    // accessors
+
     public function getCharactersCountAttribute()
     {
         return strlen(strip_tags($this->question_1)) +
@@ -24,6 +27,9 @@ class Service extends Model
         $percent = $this->characters_count / 15; // / 1500 * 100
         return number_format((float) $percent, 2, '.', '');
     }
+
+
+    // relationships
 
     public function projects()
     {

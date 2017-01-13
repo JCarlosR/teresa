@@ -27,8 +27,10 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Año</th>
-                    <th>Cliente</th>
+                    <th>Tipo</th>
+                    <th class="text-center">Fotos</th>
+                    <th class="text-right">Contador</th>
+                    <th class="text-center">Porcentaje</th>
                     <th>Opciones</th>
                 </tr>
                 </thead>
@@ -37,8 +39,16 @@
                     <tr>
                         <th scope="row">{{ ++$key }}</th>
                         <td>{{ $project->name }}</td>
-                        <td>{{ $project->year }}</td>
-                        <td>{{ $project->client }}</td>
+                        <td>{{ $project->type ?: 'Sin especificar' }}</td>
+                        <td class="text-center">
+                            @if ($key%2==0)
+                                <i class="ion-checkmark-round"></i>
+                            @else
+                                <i class="ion-close"></i>
+                            @endif
+                        </td>
+                        <td class="text-right">{{ $project->characters_count }}</td>
+                        <td class="text-center">{{ $project->characters_percent }}</td>
                         <td>
                             <a href="{{ url("proyecto/$project->id/editar") }}" class="btn btn-info btn-sm" title="Ver o editar datos">
                                 <span class="glyphicon glyphicon-edit"></span>
