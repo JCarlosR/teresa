@@ -25,6 +25,12 @@
                 <fieldset>
                     <legend>Datos de la empresa</legend>
                     <div class="form-group">
+                        <label for="user_email" class="col-lg-2 control-label">E-mail de usuario</label>
+                        <div class="col-lg-10">
+                            <input type="text" id="user_email" class="form-control" value="{{ $client->email }}" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="trade_name" class="col-lg-2 control-label">Nombre comercial</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" name="trade_name" placeholder="Nombre comercial" value="{{ old('trade_name', $client->trade_name) }}">
