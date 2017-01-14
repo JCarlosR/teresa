@@ -28,10 +28,6 @@ class CreateProjectsTable extends Migration
             $table->text('question_2');
             $table->text('question_3');
 
-            // Service associated (category)
-            $table->integer('service_id')->unsigned()->nullable();
-            $table->foreign('service_id')->references('id')->on('services');
-
             // Owner
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

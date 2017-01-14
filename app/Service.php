@@ -12,6 +12,14 @@ class Service extends Model
     protected $dates = ['deleted_at'];
 
 
+    // relationships
+
+    public function projects()
+    {
+        return $this->belongsToMany('App\Project')->withTimestamps();
+    }
+
+
     // accessors
 
     public function getCharactersCountAttribute()
@@ -28,11 +36,4 @@ class Service extends Model
         return number_format((float) $percent, 2, '.', '');
     }
 
-
-    // relationships
-
-    public function projects()
-    {
-        return $this->hasMany('App\Project');
-    }
 }

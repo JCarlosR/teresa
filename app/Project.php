@@ -14,9 +14,9 @@ class Project extends Model
 
     // relationships
 
-    public function service()
+    public function services()
     {
-        return $this->belongsTo('App\Service');
+        return $this->belongsToMany('App\Service')->withTimestamps();
     }
 
     public function user()
