@@ -8,7 +8,7 @@
                 <div class="panel-heading">Bienvenido a Teresa v1.0</div>
 
                 <div class="panel-body text-center">
-                    <img src="{{ asset('/images/teresa-placeholder.png') }}" alt="Teresa - Texto">
+                    <img src="{{ asset('/images/teresa-placeholder.png') }}" class="img-responsive" style="margin: 0 auto" alt="Teresa - Texto" width="380">
                     <p>
                         <em>Software de Gestión de contenido en Internet, para empresas digitales.</em>
                     </p>
