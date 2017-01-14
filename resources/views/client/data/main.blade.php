@@ -81,10 +81,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="start_of_service" class="col-lg-2 control-label">Inicio del servicio SEO</label>
+                        <label for="service_started_at" class="col-lg-2 control-label">Inicio del servicio SEO</label>
                         <div class="col-lg-10">
-                            <input type="date" class="form-control" value="{{ auth()->user()->start_of_service }}" name="start_of_service" id="start_of_service" disabled>
-                            <span class="help-block">Este campo es calculado por el sistema al momento del registro.</span>
+                            <input type="date" class="form-control" value="{{ auth()->user()->service_started_at }}" name="service_started_at" id="service_started_at" disabled>
+                            <span class="help-block">Esta fecha solo puede ser modificada por un administrador.</span>
                         </div>
                     </div>
 

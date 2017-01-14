@@ -31,11 +31,6 @@ class User extends Authenticatable
         return $parts[0];
     }
 
-    public function getStartOfServiceAttribute()
-    {
-        return $this->created_at->toDateString();
-    }
-
     public function getScheduleStartFormatAttribute()
     {
         $parts = explode(':', $this->schedule_start);

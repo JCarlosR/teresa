@@ -36,6 +36,7 @@ class CreateUsersTable extends Migration
             $table->time('schedule_start');
             $table->time('schedule_end');
             $table->date('works_from');
+            $table->date('service_started_at');
 
             // Company data (editable as admin)
             $table->string('domain');

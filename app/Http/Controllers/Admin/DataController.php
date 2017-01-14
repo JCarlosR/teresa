@@ -51,6 +51,7 @@ class DataController extends Controller
         $user->schedule_start = $request->get('schedule_start');
         $user->schedule_end = $request->get('schedule_end');
         $user->works_from = $request->get('works_from');
+        $user->service_started_at = $request->get('service_started_at');
 
         $user->domain = $request->get('domain');
         $user->google_analytics = $request->get('google_analytics');
