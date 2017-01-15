@@ -50,7 +50,6 @@ class ProjectController extends Controller
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
             'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
-            // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
             'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
             'year.integer' => 'El formato del año es inadecuado.',
@@ -125,7 +124,7 @@ class ProjectController extends Controller
         $rules = [
             'project_id' => 'required|exists:projects,id',
             'name' => 'required|min:4',
-            'service_id' => 'exists:services,id',
+            'services.*' => 'exists:services,name',
             'client' => 'min:3',
             'year' => 'required|integer|min:1980'
         ];
@@ -134,7 +133,7 @@ class ProjectController extends Controller
             'project_id.exists' => 'El proyecto indicado no existe en nuestra base de datos.',
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
-            'service_id.exists' => 'El servicio indicado no existe en la base de datos.',
+            'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
             // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
             'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
@@ -143,11 +142,10 @@ class ProjectController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
-        $service_id = $request->get('service_id');
+        $services_name = $request->get('services');
 
         $project = Project::find($request->get('project_id'));
         $project->name = $request->get('name');
-        $project->service_id = $service_id ?: null;
         $project->client = $request->get('client');
         $project->year = $request->get('year');
         $project->type = $request->get('type');
@@ -183,6 +181,14 @@ class ProjectController extends Controller
                 $architect_project->save();
             }
         }
+
+        $services = [];
+        foreach ($services_name as $service_name) {
+            $service = Service::where('name', $service_name)->first(['id']);
+            if ($service)
+                $services[] = $service->id;
+        }
+        $project->services()->sync($services);
 
         $notification = 'El proyecto se ha actualizado correctamente!';
         return redirect('/proyectos')->with(compact('notification'));

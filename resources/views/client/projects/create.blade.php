@@ -8,6 +8,8 @@
             display: none;
         }
     </style>
+
+    {{-- Tag-it styles --}}
     <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
 @endsection
@@ -43,7 +45,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="project-service">Tipo de servicio</label>
+                                <label for="project-service">Servicios</label>
                                 <ul id="myULServices">
                                     <!-- Existing list items will be pre-added -->
                                     @foreach (old('services') as $old_service)
