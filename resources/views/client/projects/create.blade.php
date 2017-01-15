@@ -8,6 +8,8 @@
             display: none;
         }
     </style>
+    <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('dashboard_content')
@@ -42,12 +44,12 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-service">Tipo de servicio</label>
-                                <select name="service_id" id="project-service" class="form-control">
-                                    <option value="">Seleccione servicio</option>
-                                    @foreach ($services as $service)
-                                        <option value="{{ $service->id }}" @if(old('service_id')==$service->id) selected @endif>{{ $service->name }}</option>
+                                <ul id="myULServices">
+                                    <!-- Existing list items will be pre-added -->
+                                    @foreach (old('services') as $old_service)
+                                    <li>{{ $old_service }}</li>
                                     @endforeach
-                                </select>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -135,6 +137,19 @@
 @endsection
 
 @section('scripts')
+    <script>
+        var sampleTags = [];
+        @foreach ($services as $service)
+            sampleTags.push('{!! $service->name !!}');
+        @endforeach
+    </script>
+
+    <!-- Tag-it and the required jquery ui -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('vendor/tag-it/tag-it.min.js') }}" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Summer note editor for text-areas -->
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
+
     <script src="{{ asset('/panel/projects/create.js') }}"></script>
 @endsection

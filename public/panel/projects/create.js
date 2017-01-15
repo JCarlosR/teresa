@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+    // Tag-it setup
+    $('#myULServices').tagit({
+        availableTags: sampleTags, // this param is of course optional. it's for autocomplete.
+        fieldName: 'services[]',
+        allowSpaces: true
+    });
+
+
+    // Summer note setup
     $('#note1, #note2, #note3').summernote({
         toolbar: [
             ['style', ['style']],
