@@ -48,9 +48,11 @@
                                 <label for="project-service">Servicios</label>
                                 <ul id="myULServices">
                                     <!-- Existing list items will be pre-added -->
-                                    @foreach (old('services') as $old_service)
-                                    <li>{{ $old_service }}</li>
-                                    @endforeach
+                                    @if (old('services'))
+                                        @foreach (old('services') as $old_service)
+                                        <li>{{ $old_service }}</li>
+                                        @endforeach
+                                    @endif
                                 </ul>
                             </div>
                         </div>
