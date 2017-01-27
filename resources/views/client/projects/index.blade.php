@@ -25,6 +25,7 @@
                     <thead>
                     <tr>
                         <th>#</th>
+                        <th></th>{{-- Semaphore--}}
                         <th>Nombre</th>
                         <th>Tipo</th>
                         <th class="text-center">Fotos</th>
@@ -37,8 +38,8 @@
                     @foreach ($projects as $key => $project)
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
+                            <td><img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="40"></td>
                             <td>
-                                <img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="40">
                                 {{ $project->name }}
                             </td>
                             <td>{{ $project->type ?: 'Sin especificar' }}</td>
