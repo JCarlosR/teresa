@@ -36,4 +36,15 @@ class Service extends Model
         return number_format((float) $percent, 2, '.', '');
     }
 
+    public function getStatusColorAttribute()
+    {
+        $percent = $this->characters_percent;
+        if ($percent <= 25)
+            return 'red';
+        // else
+        if ($percent <= 75)
+            return 'yellow';
+        // else
+        return 'green';
+    }
 }

@@ -23,6 +23,7 @@
                     <thead>
                     <tr>
                         <th>#</th>
+                        <th></th>{{-- Semaphore--}}
                         <th>Nombre</th>
                         <th class="text-center">Fotos</th>
                         <th class="text-center">Contador</th>
@@ -34,6 +35,7 @@
                     @foreach ($services as $key => $service)
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
+                            <td><img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="40"></td>
                             <td>{{ $service->name }}</td>
                             <td class="text-center">
                                 @if ($key%2==0)
