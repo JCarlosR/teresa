@@ -18,39 +18,49 @@
                 Registrar nuevo servicio
             </a>
             <p class="mb-20">A continuación, un listado de los servicios profesionales brindados por la empresa.</p>
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th class="text-center">Contador</th>
-                    <th class="text-center">Porcentaje</th>
-                    <th>Opciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach ($services as $key => $service)
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
                     <tr>
-                        <th scope="row">{{ ++$key }}</th>
-                        <td>{{ $service->name }}</td>
-                        <td class="text-center">{{ $service->characters_count }}</td>
-                        <td class="text-center">{{ $service->characters_percent }}</td>
-                        <td>
-                            <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Ver o editar datos">
-                                <span class="glyphicon glyphicon-edit"></span>
-                            </a>
-
-                            <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
-                               class="btn btn-danger btn-sm" title="Eliminar servicio"
-                               onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');"
-                            >
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </a>
-                        </td>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th class="text-center">Fotos</th>
+                        <th class="text-center">Contador</th>
+                        <th class="text-center">Porcentaje</th>
+                        <th>Opciones</th>
                     </tr>
-                @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    @foreach ($services as $key => $service)
+                        <tr>
+                            <th scope="row">{{ ++$key }}</th>
+                            <td>{{ $service->name }}</td>
+                            <td class="text-center">
+                                @if ($key%2==0)
+                                    <i class="ion-checkmark-round"></i>
+                                @else
+                                    <i class="ion-close"></i>
+                                @endif
+                            </td>
+                            <td class="text-center">{{ $service->characters_count }}</td>
+                            <td class="text-center">{{ $service->characters_percent }}</td>
+                            <td>
+                                <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Ver o editar datos">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+
+                                <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
+                                   class="btn btn-danger btn-sm" title="Eliminar servicio"
+                                   onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');"
+                                >
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
