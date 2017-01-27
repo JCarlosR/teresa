@@ -48,7 +48,7 @@
         </div>
     </form>
     <a href="{{ url(auth()->user()->root_route) }}" class="brand">
-        <img src="{{ asset('build/images/logo/logo-dark.png') }}" alt="" width="100">
+        <img src="{{ asset('images/logo-dark.png') }}" alt="Logo Teresa" width="100">
     </a>
     <ul class="notification-bar list-inline pull-right">
         <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ion-search"></i></a></li>
