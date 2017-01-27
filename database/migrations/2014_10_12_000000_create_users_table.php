@@ -46,6 +46,9 @@ class CreateUsersTable extends Migration
             $table->string('webmaster_tools_google');
             $table->string('webmaster_tools_bing');
 
+            // Star ON / OFF
+            $table->boolean('starred')->default(false);
+
             $table->rememberToken();
             $table->timestamps();
         });

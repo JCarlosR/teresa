@@ -33,8 +33,17 @@ class AdminController extends Controller
 
     public function index()
     {
-        $clients = User::client()->get();
+        $clients = User::client()->orderBy('starred', 'desc')->get();
         return view('admin.index')->with(compact('clients'));
+    }
+
+    public function star($client_id, $state)
+    {
+        $user = User::findOrFail($client_id);
+        $user->starred = $state=='on';
+        $user->save();
+
+        return back();
     }
 
 }

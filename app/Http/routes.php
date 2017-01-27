@@ -44,7 +44,10 @@ Route::get('/mapa', 'Client\MapController@index');
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
+    // Go to client dashboard
     Route::get('/cliente/seleccionar/{client_id}', 'AdminController@select');
+    // Star switching
+    Route::get('/cliente/{client_id}/destacar/{state}', 'AdminController@star');
 
     // Clients management
     Route::get('/cliente/registrar', 'Admin\ClientController@create');

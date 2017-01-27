@@ -69,6 +69,28 @@ class User extends Authenticatable
         return $this->clientPath;
     }
 
+    public function getClientTypeAttribute()
+    {
+        if ($this->client_type_id) {
+            switch ($this->client_type_id) {
+                case 1: return 'architect';
+            }
+        }
+
+        return 'seo';
+    }
+
+    public function getStarStateAttribute()
+    {
+        if ($this->starred) return 'on';
+        return 'off';
+    }
+
+    public function getInverseStarStateAttribute()
+    {
+        if ($this->starred) return 'off';
+        return 'on';
+    }
 
     // relationships
 
