@@ -114,6 +114,13 @@
                     <legend>Memoria descriptiva</legend>
 
                     <h3>
+                        Título de la historia del proyecto.
+                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
+                    </h3>
+                    <span id="limit0"></span>
+                    <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0') }}</textarea>
+
+                    <h3>
                         ¿Cuál fue el encargo?
                         <small>¿Se realizo un diagnóstico/estudio previo a la ejecución del proyecto? Descríbelo</small>
                     </h3>

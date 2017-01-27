@@ -118,6 +118,13 @@
                 <fieldset>
                     <legend>Memoria descriptiva</legend>
 
+                    <h3>
+                        Título de la historia del proyecto.
+                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
+                    </h3>
+                    <span id="limit0"></span>
+                    <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0', $project->question_0) }}</textarea>
+
                     <label for="note1">¿Cuál fue el encargo?</label>
                     <span id="limit1"></span>
                     <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1', $project->question_1) }}</textarea>

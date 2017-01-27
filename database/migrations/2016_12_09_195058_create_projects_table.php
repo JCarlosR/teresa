@@ -24,6 +24,7 @@ class CreateProjectsTable extends Migration
             $table->text('acknowledgments');
 
             // SEO questions
+            $table->text('question_0'); // title
             $table->text('question_1');
             $table->text('question_2');
             $table->text('question_3');

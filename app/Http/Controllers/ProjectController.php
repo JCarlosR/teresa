@@ -57,7 +57,7 @@ class ProjectController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
-        $services_name = $request->get('services');
+        $services_name = $request->get('services') ?: [];
 
         $project = new Project();
         $project->user_id = $this->user->id;
@@ -70,6 +70,7 @@ class ProjectController extends Controller
         $project->status = $request->get('status');
         $project->acknowledgments = $request->get('acknowledgments');
 
+        $project->question_0 = $request->get('question_0');
         $project->question_1 = $request->get('question_1');
         $project->question_2 = $request->get('question_2');
         $project->question_3 = $request->get('question_3');
@@ -142,7 +143,7 @@ class ProjectController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
-        $services_name = $request->get('services');
+        $services_name = $request->get('services') ?: [];
 
         $project = Project::find($request->get('project_id'));
         $project->name = $request->get('name');
@@ -153,6 +154,7 @@ class ProjectController extends Controller
         $project->status = $request->get('status');
         $project->acknowledgments = $request->get('acknowledgments');
 
+        $project->question_0 = $request->get('question_0');
         $project->question_1 = $request->get('question_1');
         $project->question_2 = $request->get('question_2');
         $project->question_3 = $request->get('question_3');

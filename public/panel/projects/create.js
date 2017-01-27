@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 
     // Summer note setup
-    $('#note1, #note2, #note3').summernote({
+    $('#note0, #note1, #note2, #note3').summernote({
         toolbar: [
             ['style', ['style']],
             ['font', ['bold', 'italic', 'underline', 'clear']],
@@ -21,10 +21,14 @@ $(document).ready(function() {
         ]
     });
 
+    $('#note0').on('summernote.keyup', onKeyUp0);
     $('#note1').on('summernote.keyup', onKeyUp1);
     $('#note2').on('summernote.keyup', onKeyUp2);
     $('#note3').on('summernote.keyup', onKeyUp3);
 
+    function onKeyUp0() {
+        setCharactersLengthMessage($(this), $('#limit0'));
+    }
     function onKeyUp1() {
         setCharactersLengthMessage($(this), $('#limit1'));
     }
