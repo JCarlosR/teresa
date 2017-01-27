@@ -40,6 +40,8 @@ class CreateUsersTable extends Migration
 
             // Company data (editable as admin)
             $table->string('domain');
+            $table->string('title');
+            $table->string('description');
             $table->string('google_analytics');
             $table->string('webmaster_tools_google');
             $table->string('webmaster_tools_bing');

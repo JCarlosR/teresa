@@ -102,6 +102,18 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="title" class="col-lg-2 control-label">Título</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="title" placeholder="Título del sitio web principal" value="{{ old('title', $client->title) }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-lg-2 control-label">Descripción</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="description" placeholder="Descripción del sitio web principal" value="{{ old('description', $client->description) }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="google_analytics" class="col-lg-2 control-label">Google Analytics</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" name="google_analytics" placeholder="ID de Google Analytics" value="{{ old('google_analytics', $client->google_analytics) }}">

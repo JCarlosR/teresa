@@ -23,25 +23,21 @@
 
         <div class="row">
             @foreach ($clients as $client)
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="widget">
-                        <div class="widget-heading">
+                        <div class="widget-body text-center">
                             <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
-                                <h3 class="widget-title">{{ $client->name ?: 'Sin alias' }}</h3>
+                                <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
+                                <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
                             </a>
-                        </div>
-                        <div class="widget-body">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
-                                        <img alt="Logo {{ $client->name }}" src="{{ url($client->photo_route) }}" class="media-object mo-lg img-circle">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <p><b>Nombre fiscal:</b> {{ $client->fiscal_name ?: 'Sin especificar' }}</p>
-                                    <p><b>Dominio:</b> {{ $client->domain ?: 'Sin especificar' }}</p>
-                                </div>
-                            </div>
+                            <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at }}</p>
+                            <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
+                            {{--<ul class="list-inline mb-0">--}}
+                                {{--<li><a href="#"><i class="ion-social-facebook text-info fs-18"></i></a></li>--}}
+                                {{--<li><a href="#"><i class="ion-social-pinterest text-danger fs-18"></i></a></li>--}}
+                                {{--<li><a href="#"><i class="ion-social-whatsapp text-success fs-18"></i></a></li>--}}
+                                {{--<li><a href="#"><i class="ion-social-instagram text-black fs-18"></i></a></li>--}}
+                            {{--</ul>--}}
                         </div>
                     </div>
                 </div>

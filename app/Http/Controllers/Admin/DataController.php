@@ -54,6 +54,9 @@ class DataController extends Controller
         $user->service_started_at = $request->get('service_started_at');
 
         $user->domain = $request->get('domain');
+        $user->title = $request->get('title');
+        $user->description = $request->get('description');
+
         $user->google_analytics = $request->get('google_analytics');
         $user->webmaster_tools_google = $request->get('webmaster_tools_google');
         $user->webmaster_tools_bing = $request->get('webmaster_tools_bing');
