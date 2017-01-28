@@ -2429,9 +2429,9 @@ height:calc(100% - 54px);
   header {
     height: 54px;
   }
-  .brand {
-    display: none;
-  }
+  /*.brand {*/
+    /*display: none;*/
+  /*}*/
   .main-sidebar {
     top: 54px;
     -lh-property: 0;
