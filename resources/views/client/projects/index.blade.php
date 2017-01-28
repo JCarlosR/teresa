@@ -53,7 +53,11 @@
                             <td class="text-right">{{ $project->characters_count }}</td>
                             <td class="text-center">{{ $project->characters_percent }}</td>
                             <td>
-                                <a href="{{ url("proyecto/$project->id/editar") }}" class="btn btn-info btn-sm" title="Ver o editar datos">
+                                <a href="{{ url("proyecto/$project->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+
+                                <a href="{{ url("proyecto/$project->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 

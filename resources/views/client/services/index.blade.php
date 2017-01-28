@@ -47,7 +47,11 @@
                             <td class="text-center">{{ $service->characters_count }}</td>
                             <td class="text-center">{{ $service->characters_percent }}</td>
                             <td>
-                                <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Ver o editar datos">
+                                {{--<a href="{{ url("servicio/$service->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
+                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
+                                {{--</a>--}}
+
+                                <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 

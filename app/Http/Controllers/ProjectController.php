@@ -31,6 +31,18 @@ class ProjectController extends Controller
         return view('client.projects.index')->with(compact('projects'));
     }
 
+    public function show($id)
+    {
+        $project = Project::findOrFail($id);
+
+        // Check if the project really belongs to the user
+        if ($project->user_id !== $this->user->id)
+            return redirect('/proyectos');
+
+        $client = $this->user;
+        return view('client.projects.show')->with(compact('client', 'project'));
+    }
+
     public function create()
     {
         $client = $this->user;

@@ -96,24 +96,30 @@ class User extends Authenticatable
     {
         $projects = $this->projects;
 
+        $n = sizeof($projects);
+        if ($n == 0) return 0;
+
         $sum = 0;
         foreach ($projects as $project) {
             $sum += $project->characters_percent;
         }
 
-        $average = $sum / sizeof($projects);
+        $average = $sum / $n;
         return number_format((float) $average, 1, '.', '');
     }
     public function getServicesPercentAttribute()
     {
         $services = $this->services;
 
+        $n = sizeof($services);
+        if ($n == 0) return 0;
+
         $sum = 0;
         foreach ($services as $service) {
             $sum += $service->characters_percent;
         }
 
-        $average = $sum / sizeof($services);
+        $average = $sum / $n;
         return number_format((float) $average, 1, '.', '');
     }
 
