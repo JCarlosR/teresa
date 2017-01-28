@@ -10,10 +10,19 @@
             padding-left: 1em;
         }
         .col-professional {
-            width: 19.8%;
+            width: 20%;
             float:left;
             position: relative;
             min-height: 1px;
+            padding: 1em;
+        }
+        @media(max-width:576px) {
+            .col-social {
+                width: 33.33%;
+            }
+            .col-professional {
+                width: 33.33%;
+            }
         }
     </style>
 @endsection
@@ -100,63 +109,63 @@
             <div class="widget-body">
                 <div class="row row-0 expand">
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Facebook</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Facebook</p>
                         <a href="{{ $facebook->url }}" target="_blank">
                             <i class="ion-social-facebook fs-36 social-color-facebook"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $facebook->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Linkedin</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Linkedin</p>
                         <a href="{{ $linkedIn->url }}" target="_blank">
                             <i class="ion-social-linkedin fs-36 social-color-linkedin"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $linkedIn->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Google+</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Google+</p>
                         <a href="{{ $googlePlus->url }}" target="_blank">
                             <i class="block ion-social-google fs-36 social-color-google"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $googlePlus->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Twitter</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Twitter</p>
                         <a href="{{ $twitter->url }}" target="_blank">
                             <i class="block ion-social-twitter fs-36 social-color-twitter"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $twitter->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Pinterest</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Pinterest</p>
                         <a href="{{ $pinterest->url }}" target="_blank">
                             <i class="block ion-social-pinterest fs-36 social-color-pinterest"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $pinterest->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">FourSquare</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">FourSquare</p>
                         <a href="{{ $fourSquare->url }}" target="_blank">
                             <i class="block ion-social-foursquare fs-36 social-color-foursquare"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $fourSquare->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Flickr</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Flickr</p>
                         <a href="{{ $flickr->url }}" target="_blank">
                             <i class="block ion-ios-circle-filled fs-36 social-color-flickr"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $flickr->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Instagram</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Instagram</p>
                         <a href="{{ $instagram->url }}" target="_blank">
                             <i class="block ion-social-instagram fs-36 social-color-instagram"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $instagram->followers }}</div>
                     </div>
                     <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted">Youtube</p>
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">Youtube</p>
                         <a href="{{ $youtube->url }}" target="_blank">
                             <i class="block ion-social-youtube fs-36 social-color-youtube"></i>
                         </a>
@@ -170,10 +179,10 @@
                 <h3 class="widget-title">Perfiles profesionales</h3>
             </div>
             <div class="widget-body text-center">
-                <div class="row row-0 expand">
+                <div class="row expand">
 
                     <div class="col-professional">
-                        <p class="fs-12 text-uppercase text-muted">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Architizer
                         </p>
                         <a href="{{ $architizer }}" target="_blank">
@@ -182,7 +191,7 @@
                     </div>
 
                     <div class="col-professional">
-                        <p class="fs-12 text-uppercase text-muted">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Archello
                         </p>
                         <a href="{{ $archello }}" target="_blank">
@@ -191,7 +200,7 @@
                     </div>
 
                     <div class="col-professional">
-                        <p class="fs-12 text-uppercase text-muted">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Archilovers
                         </p>
                         <a href="{{ $archilovers }}" target="_blank">
@@ -200,7 +209,7 @@
                     </div>
 
                     <div class="col-professional">
-                        <p class="fs-12 text-uppercase text-muted">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Open Buildings
                         </p>
                         <a href="{{ $buildings }}" target="_blank">
@@ -209,7 +218,7 @@
                     </div>
 
                     <div class="col-professional">
-                        <p class="fs-12 text-uppercase text-muted">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Behance
                         </p>
                         <a href="{{ $behance }}" target="_blank">
