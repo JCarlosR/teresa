@@ -51,6 +51,13 @@
                 <span class="sidebar-title">Proyectos</span>
             </a>
         </li>
+
+        <li class="panel">
+            <a href="{{ url("/admin/nosotros") }}">
+                <i class="ion-ios-bolt bg-primary"></i>
+                <span class="sidebar-title">Nosotros</span>
+            </a>
+        </li>
         {{--<li class="panel">--}}
         {{--<a href="{{ url('/pagos') }}">--}}
         {{--<i class="ion-ios-calendar-outline bg-info"></i>--}}

@@ -37,6 +37,9 @@ Route::post('/proyectos/registrar', 'ProjectController@store');
 Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
 Route::post('/proyecto/editar', 'ProjectController@update');
 Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
+// About us
+Route::get('/nosotros', 'AboutUsController@index');
+Route::post('/nosotros', 'AboutUsController@update');
 
 // Payments
 Route::get('/pagos', 'Client\PaymentController@index');
@@ -89,6 +92,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
     Route::post('/proyecto/editar', 'ProjectController@update');
     Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
+    // About us
+    Route::get('/nosotros', 'AboutUsController@index');
+    Route::post('/nosotros', 'AboutUsController@update');
 
     // Personal
     Route::get('/personal', 'Admin\PersonalController@index');
