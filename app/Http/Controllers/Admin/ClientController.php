@@ -51,7 +51,7 @@ class ClientController extends Controller
         $user = new User();
 
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
+        $user->password = bcrypt($request->get('password'));
         $user->client_type_id = $request->get('client_type_id') ?: null;
 
         $user->name = $request->get('trade_name');
