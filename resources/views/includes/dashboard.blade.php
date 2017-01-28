@@ -148,51 +148,32 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre del proyecto</th>
-                            <th class="text-center">Fecha de inicio</th>
+                            <th class="text-center">Año</th>
                             <th class="text-center">Fotos</th>
                             <th class="text-center">Estado</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sigma App v1.0</td>
-                            <td class="text-center">20 Aug 2016</td>
-                            <td class="text-center text-success"><i class="ion-checkmark-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Foundation App v1.0</td>
-                            <td class="text-center">15 Oct 2016</td>
-                            <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>
-                        </tr>
+                        @foreach ($projects as $key => $project)
+                            <tr>
+                                <td>{{ $key +1 }}</td>
+                                <td>{{ $project->name }}</td>
+                                <td class="text-center">{{ $project->year }}</td>
+                                <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
+                                <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
+                            </tr>
+                        @endforeach
                         <tr>
                             <td>3</td>
                             <td>Delta App v1.0</td>
-                            <td class="text-center">15 Oct 2016</td>
+                            <td class="text-center">2017</td>
                             <td class="text-center text-danger"><i class="ion-close-round"></i></td>
                             <td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Umega App v1.6</td>
-                            <td class="text-center">06 Apr 2016</td>
-                            <td class="text-center text-success"><i class="ion-checkmark-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Umega App v1.7</td>
-                            <td class="text-center">06 Sep 2016</td>
-                            <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-primary">Pausado</span></td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>Sigma App v1.1</td>
-                            <td class="text-center">20 Oct 2016</td>
+                            <td class="text-center">2017</td>
                             <td class="text-center text-danger"><i class="ion-close-round"></i></td>
                             <td class="text-center"><span class="label label-outline label-primary">Pausado</span></td>
                         </tr>

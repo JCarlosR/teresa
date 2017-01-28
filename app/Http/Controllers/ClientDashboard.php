@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ProfessionalProfile;
+use App\Project;
 use App\SocialProfile;
 
 trait ClientDashboard
@@ -32,9 +33,12 @@ trait ClientDashboard
         $buildings = $this->getProfessionalLink($client_id, 'Open Buildings');
         $behance = $this->getProfessionalLink($client_id, 'Behance');
 
+        $projects = Project::where('user_id', $client_id)->get();
+
         return view('client.dashboard')->with(compact(
             'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'flickr', 'instagram', 'youtube',
-            'architizer', 'archello', 'archilovers', 'buildings', 'behance'
+            'architizer', 'archello', 'archilovers', 'buildings', 'behance',
+            'projects'
         ));
     }
 

@@ -77,7 +77,7 @@ class User extends Authenticatable
             }
         }
 
-        return 'seo';
+        return 'sps';
     }
 
     public function getStarStateAttribute()
