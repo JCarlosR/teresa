@@ -92,6 +92,31 @@ class User extends Authenticatable
         return 'on';
     }
 
+    public function getProjectsPercentAttribute()
+    {
+        $projects = $this->projects;
+
+        $sum = 0;
+        foreach ($projects as $project) {
+            $sum += $project->characters_percent;
+        }
+
+        $average = $sum / sizeof($projects);
+        return number_format((float) $average, 1, '.', '');
+    }
+    public function getServicesPercentAttribute()
+    {
+        $services = $this->services;
+
+        $sum = 0;
+        foreach ($services as $service) {
+            $sum += $service->characters_percent;
+        }
+
+        $average = $sum / sizeof($services);
+        return number_format((float) $average, 1, '.', '');
+    }
+
     // relationships
 
     public function services()

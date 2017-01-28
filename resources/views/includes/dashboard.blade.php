@@ -44,14 +44,14 @@
                 <div class="row row-0 divider">
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Proyectos</h6>
-                        <div class="fs-36 fw-300"><span class="counter">32</span><span>%</span></div>
+                        <div class="fs-36 fw-300"><span class="counter">{{ $client->projects_percent }}</span><span>%</span></div>
                         <div class="progress progress-xs mb-0">
                             <div role="progressbar" data-transitiongoal="100" class="progress-bar"></div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Servicios</h6>
-                        <div class="fs-36 fw-300"><span class="counter">15</span><span>%</span></div>
+                        <div class="fs-36 fw-300"><span class="counter">{{ $client->services_percent }}</span><span>%</span></div>
                         <div class="progress progress-xs mb-0">
                             <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-success"></div>
                         </div>

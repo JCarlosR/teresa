@@ -33,6 +33,7 @@ class Service extends Model
     public function getCharactersPercentAttribute()
     {
         $percent = $this->characters_count / 15; // / 1500 * 100
+        if ($percent > 100) $percent = 100;
         return number_format((float) $percent, 2, '.', '');
     }
 
