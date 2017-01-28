@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\ProfessionalProfile;
 use App\Project;
+use App\Service;
 use App\SocialProfile;
+use App\User;
 
 trait ClientDashboard
 {
@@ -12,10 +14,13 @@ trait ClientDashboard
     {
         $is_admin = auth()->user()->is_admin;
 
-        if ($is_admin)
+        if ($is_admin) {
             $client_id = session('client_id');
-        else
-            $client_id = auth()->user()->id;
+            $client = User::findOrFail($client_id);
+        } else {
+            $client = auth()->user();
+            $client_id = $client->id;
+        }
 
         $facebook = $this->getSocialProfile($client_id, 'Facebook');
         $linkedIn = $this->getSocialProfile($client_id, 'Linkedin');
@@ -34,11 +39,12 @@ trait ClientDashboard
         $behance = $this->getProfessionalLink($client_id, 'Behance');
 
         $projects = Project::where('user_id', $client_id)->get();
+        $services = Service::where('user_id', $client_id)->get();
 
         return view('client.dashboard')->with(compact(
             'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'flickr', 'instagram', 'youtube',
             'architizer', 'archello', 'archilovers', 'buildings', 'behance',
-            'projects'
+            'client', 'projects', 'services'
         ));
     }
 

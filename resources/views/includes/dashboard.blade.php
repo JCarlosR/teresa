@@ -2,18 +2,97 @@
     <style>
         .col-social {
             width: 11.11%;
-            // border: 1px solid grey;
+            /*border: 1px solid grey;*/
             float:left;
             position: relative;
             min-height: 1px;
             padding-right: 1em;
             padding-left: 1em;
         }
+        .col-professional {
+            width: 19.8%;
+            float:left;
+            position: relative;
+            min-height: 1px;
+        }
     </style>
 @endsection
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
+        <div class="widget">
+            <div class="widget-body text-center">
+                <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
+                    <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
+                    <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
+                </a>
+                <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at }}</p>
+                <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-body text-center p-0">
+                <div class="row row-0 divider">
+                    <div class="col-xs-4">
+                        <h6 class="text-uppercase">Proyectos</h6>
+                        <div class="fs-36 fw-300"><span class="counter">32</span><span>%</span></div>
+                        <div class="progress progress-xs mb-0">
+                            <div role="progressbar" data-transitiongoal="100" class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <h6 class="text-uppercase">Servicios</h6>
+                        <div class="fs-36 fw-300"><span class="counter">15</span><span>%</span></div>
+                        <div class="progress progress-xs mb-0">
+                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-success"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <h6 class="text-uppercase">Leads</h6>
+                        <div class="fs-36 fw-300"><span class="counter">28</span><span>%</span></div>
+                        <div class="progress progress-xs mb-0">
+                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-purple"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-heading clearfix">
+                <h3 class="widget-title pull-left">Servicios profesionales</h3>
+                <ul class="widget-tools pull-right list-inline">
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                    <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
+                    <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
+                </ul>
+            </div>
+            <div class="widget-body">
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th class="text-center">Porcentaje</th>
+                            {{--<th class="text-center">Fotos</th>--}}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach ($services as $key => $service)
+                            <tr>
+                                <td>{{ $key +1 }}</td>
+                                <td>{{ $service->name }}</td>
+                                <td class="text-center">{{ $service->characters_percent }}</td>
+                                {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
         <div class="widget text-center">
             <div class="widget-heading">
                 <h3 class="widget-title">Perfiles sociales</h3>
@@ -23,118 +102,127 @@
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Facebook</p>
                         <a href="{{ $facebook->url }}" target="_blank">
-                            <i class="ion-social-facebook fs-24 social-color-facebook"></i>
+                            <i class="ion-social-facebook fs-36 social-color-facebook"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $facebook->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Linkedin</p>
                         <a href="{{ $linkedIn->url }}" target="_blank">
-                            <i class="ion-social-linkedin fs-24 social-color-linkedin"></i>
+                            <i class="ion-social-linkedin fs-36 social-color-linkedin"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $linkedIn->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Google+</p>
                         <a href="{{ $googlePlus->url }}" target="_blank">
-                            <i class="block ion-social-google fs-24 social-color-google"></i>
+                            <i class="block ion-social-google fs-36 social-color-google"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $googlePlus->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Twitter</p>
                         <a href="{{ $twitter->url }}" target="_blank">
-                            <i class="block ion-social-twitter fs-24 social-color-twitter"></i>
+                            <i class="block ion-social-twitter fs-36 social-color-twitter"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $twitter->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Pinterest</p>
                         <a href="{{ $pinterest->url }}" target="_blank">
-                            <i class="block ion-social-pinterest fs-24 social-color-pinterest"></i>
+                            <i class="block ion-social-pinterest fs-36 social-color-pinterest"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $pinterest->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">FourSquare</p>
                         <a href="{{ $fourSquare->url }}" target="_blank">
-                            <i class="block ion-social-foursquare fs-24 social-color-foursquare"></i>
+                            <i class="block ion-social-foursquare fs-36 social-color-foursquare"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $fourSquare->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Flickr</p>
                         <a href="{{ $flickr->url }}" target="_blank">
-                            <i class="block ion-ios-circle-filled fs-24 social-color-flickr"></i>
+                            <i class="block ion-ios-circle-filled fs-36 social-color-flickr"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $flickr->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Instagram</p>
                         <a href="{{ $instagram->url }}" target="_blank">
-                            <i class="block ion-social-instagram fs-24 social-color-instagram"></i>
+                            <i class="block ion-social-instagram fs-36 social-color-instagram"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $instagram->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted">Youtube</p>
                         <a href="{{ $youtube->url }}" target="_blank">
-                            <i class="block ion-social-youtube fs-24 social-color-youtube"></i>
+                            <i class="block ion-social-youtube fs-36 social-color-youtube"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $youtube->followers }}</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
         <div class="widget">
-            <div class="widget-heading">
+            <div class="widget-heading text-center">
                 <h3 class="widget-title">Perfiles profesionales</h3>
             </div>
             <div class="widget-body text-center">
                 <div class="row row-0 expand">
-                    <br><br>
-                    <p class="fs-12 text-uppercase text-muted">
+
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted">
+                            Architizer
+                        </p>
                         <a href="{{ $architizer }}" target="_blank">
-                            <i class="glyphicon glyphicon-link"></i> Architizer
+                            <img src="{{ asset('/images/professional/architizer.png') }}" alt="Architizer" width="36">
                         </a>
-                    </p>
-                    <br>
-                    <p class="fs-12 text-uppercase text-muted">
+                    </div>
+
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted">
+                            Archello
+                        </p>
                         <a href="{{ $archello }}" target="_blank">
-                            <i class="glyphicon glyphicon-link"></i> Archello
+                            <img src="{{ asset('/images/professional/archello.png') }}" alt="Archello" width="36">
                         </a>
-                    </p>
-                    <br>
-                    <p class="fs-12 text-uppercase text-muted">
+                    </div>
+
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted">
+                            Archilovers
+                        </p>
                         <a href="{{ $archilovers }}" target="_blank">
-                            <i class="glyphicon glyphicon-link"></i> Archilovers
+                            <img src="{{ asset('/images/professional/archilovers.png') }}" alt="Archilovers" width="36">
                         </a>
-                    </p>
-                    <br>
-                    <p class="fs-12 text-uppercase text-muted">
+                    </div>
+
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted">
+                            Open Buildings
+                        </p>
                         <a href="{{ $buildings }}" target="_blank">
-                            <i class="glyphicon glyphicon-link"></i> Open Buildings
+                            <img src="{{ asset('/images/professional/openbuildings.png') }}" alt="Open Buildings" width="36">
                         </a>
-                    </p>
-                    <br>
-                    <p class="fs-12 text-uppercase text-muted">
+                    </div>
+
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted">
+                            Behance
+                        </p>
                         <a href="{{ $behance }}" target="_blank">
-                            <i class="glyphicon glyphicon-link"></i> Behance
+                            <img src="{{ asset('/images/professional/behance.png') }}" alt="Behance" width="36">
                         </a>
-                    </p>
-                    <br><br>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-8">
         <div class="widget">
             <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Proyectos en desarrollo</h3>
+                <h3 class="widget-title pull-left">Proyectos profesionales</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
@@ -184,6 +272,7 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="widget">
@@ -284,51 +373,6 @@
                         <p class="mt-10 mb-0">You deleted homepage.psd</p>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="widget">
-            <div class="widget-body text-center"><img src="{{ asset('build/images/users/12.jpg') }}" width="100" alt="" class="img-circle">
-                <h4 class="mt-20 mb-5 text-black">Emma Lawrence</h4>
-                <p class="fs-12 text-uppercase text-muted">Developer</p>
-                <p>I am a freelance graphic designer with 5 years experience working in the Graphic Design industry.</p>
-                <ul class="list-inline mb-0">
-                    <li><a href="#"><i class="ion-social-skype text-info fs-18"></i></a></li>
-                    <li><a href="#"><i class="ion-social-pinterest text-danger fs-18"></i></a></li>
-                    <li><a href="#"><i class="ion-social-whatsapp text-success fs-18"></i></a></li>
-                    <li><a href="#"><i class="ion-social-instagram text-black fs-18"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="widget">
-            <div class="widget-body text-center p-0">
-                <div class="row row-0 divider">
-                    <div class="col-xs-4">
-                        <h6 class="text-uppercase">Facebook</h6>
-                        <p class="mb-0">43,654</p>
-                        <div class="fs-36 fw-300"><span class="counter">32</span><span>%</span></div>
-                        <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <h6 class="text-uppercase">Dribbble</h6>
-                        <p class="mb-0">12,325</p>
-                        <div class="fs-36 fw-300"><span class="counter">15</span><span>%</span></div>
-                        <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-success"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <h6 class="text-uppercase">Pinterest</h6>
-                        <p class="mb-0">32,790</p>
-                        <div class="fs-36 fw-300"><span class="counter">28</span><span>%</span></div>
-                        <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-purple"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

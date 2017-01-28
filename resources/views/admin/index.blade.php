@@ -33,24 +33,20 @@
 
         <div class="row">
             @foreach ($clients as $client)
-                <div class="col-md-4" data-status="{{ $client->client_type }}">
+                <div class="col-md-3" data-status="{{ $client->client_type }}">
                     <div class="widget">
                         <div class="widget-body text-center">
-                            <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}">
-                                <img src="{{ asset('/images/stars/'.$client->star_state.'.png') }}" alt="Destacado" class="pull-right">
-                            </a>
+                            <p  class="text-right">
+                                <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}">
+                                    <img src="{{ asset('/images/stars/'.$client->star_state.'.png') }}" alt="Destacado">
+                                </a>
+                            </p>
                             <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
                                 <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
                                 <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
                             </a>
                             <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at }}</p>
                             <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
-                            {{--<ul class="list-inline mb-0">--}}
-                                {{--<li><a href="#"><i class="ion-social-facebook text-info fs-18"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="ion-social-pinterest text-danger fs-18"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="ion-social-whatsapp text-success fs-18"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="ion-social-instagram text-black fs-18"></i></a></li>--}}
-                            {{--</ul>--}}
                         </div>
                     </div>
                 </div>
