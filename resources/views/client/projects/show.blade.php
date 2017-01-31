@@ -18,30 +18,20 @@
 <div class="page-content container-fluid">
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Ver proyecto</h3>
+            {!! $project->question_0 !!}
         </div>
         <div class="widget-body">
 
             <div class="row">
                 <div class="col-md-8">
                     <fieldset>
-                        <legend>Memoria descriptiva</legend>
-
-                        {!! $project->question_0 !!}
-
-                        <h3>
-                            ¿Cuál fue el encargo?
-                        </h3>
+                        {{--<small>¿Cuál fue el encargo?</small>--}}
                         {!! $project->question_1 !!}
 
-                        <h3>
-                            ¿Cuál fue el planteamiento del proyecto?
-                        </h3>
+                        {{--<small>¿Cuál fue el planteamiento del proyecto?</small>--}}
                         {!! $project->question_2 !!}
 
-                        <h3>
-                            ¿Qué detalles técnicos especificarías?
-                        </h3>
+                        {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
                         {!! $project->question_3 !!}
                     </fieldset>
                 </div>
