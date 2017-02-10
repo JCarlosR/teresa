@@ -54,21 +54,22 @@
 
         <li class="panel">
             <a href="{{ url("/admin/nosotros") }}">
-                <i class="ion-ios-bolt bg-primary"></i>
+                <i class="ion-ios-bolt bg-info"></i>
                 <span class="sidebar-title">Nosotros</span>
             </a>
         </li>
-        {{--<li class="panel">--}}
-        {{--<a href="{{ url('/pagos') }}">--}}
-        {{--<i class="ion-ios-calendar-outline bg-info"></i>--}}
-        {{--<span class="sidebar-title">Pagos</span>--}}
-        {{--</a>--}}
-        {{--</li>--}}
 
 
-        <li class="sidebar-category">Sección reportes</li>
+
+        <li class="sidebar-category">Datos de gestión</li>
         <li class="panel">
-            <a href="{{ url('/leads') }}">
+            <a href="{{ url('/admin/pagos') }}">
+                <i class="ion-ios-calendar-outline bg-black"></i>
+                <span class="sidebar-title">Facturación</span>
+            </a>
+        </li>
+        <li class="panel">
+            <a href="{{ url('/admin/leads') }}">
                 <i class="ion-ios-pie-outline bg-black"></i>
                 <span class="sidebar-title">Leads</span>
             </a>

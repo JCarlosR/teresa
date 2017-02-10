@@ -41,8 +41,10 @@ Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 Route::get('/nosotros', 'AboutUsController@index');
 Route::post('/nosotros', 'AboutUsController@update');
 
-// Payments
+// Payments & Leads
 Route::get('/pagos', 'Client\PaymentController@index');
+Route::get('/leads', 'Client\LeadController@index');
+
 // Location
 Route::get('/mapa', 'Client\MapController@index');
 
@@ -76,6 +78,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/perfiles/profesionales', 'Admin\ProfileController@getProfessionalProfiles');
     Route::post('/perfiles/profesionales', 'Admin\ProfileController@postProfessionalProfile');
 
+    // Personal
+    Route::get('/personal', 'Admin\PersonalController@index');
+    Route::post('/personal', 'Admin\PersonalController@store');
+    Route::post('/personal/editar', 'Admin\PersonalController@update');
+    Route::post('/personal/eliminar', 'Admin\PersonalController@delete');
+
     // Services
     Route::get('/servicios', 'ServiceController@index');
     Route::get('/servicio/{id}/ver', 'ServiceController@show');
@@ -96,9 +104,12 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/nosotros', 'AboutUsController@index');
     Route::post('/nosotros', 'AboutUsController@update');
 
-    // Personal
-    Route::get('/personal', 'Admin\PersonalController@index');
-    Route::post('/personal', 'Admin\PersonalController@store');
-    Route::post('/personal/editar', 'Admin\PersonalController@update');
-    Route::post('/personal/eliminar', 'Admin\PersonalController@delete');
+    // Payments & Leads
+    Route::get('/pagos', 'Admin\PaymentController@index');
+    Route::get('/pagos/registrar', 'Admin\PaymentController@create');
+    Route::post('/pagos/registrar', 'Admin\PaymentController@store');
+    Route::get('/pagos/{id}', 'Admin\PaymentController@show');
+    Route::post('/pagos/detalles', 'Admin\PaymentController@detailPayment');
+    Route::get('/leads', 'Admin\LeadController@index');
+
 });
