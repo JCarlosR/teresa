@@ -71,10 +71,10 @@ class PaymentController extends Controller
         return redirect('admin/pagos/'.$paymentSchedule->id);
     }
 
-    public function show($id)
+    public function edit($id)
     {
         $paymentSchedule = PaymentSchedule::findOrFail($id);
-        return view('admin.payments.show')->with(compact('paymentSchedule'));
+        return view('admin.payments.edit')->with(compact('paymentSchedule'));
     }
 
     public function detailPayment(Request $request)

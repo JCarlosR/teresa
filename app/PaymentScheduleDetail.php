@@ -37,4 +37,14 @@ class PaymentScheduleDetail extends Model
         else
             return $daysDifference*-1 . ' días de retraso';
     }
+
+    public function getTotalLeadsAttribute()
+    {
+        return $this->employment
+            + $this->suppliers
+            + $this->followers
+            + $this->contact
+            + $this->projects
+            + $this->others;
+    }
 }

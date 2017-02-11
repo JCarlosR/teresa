@@ -16,6 +16,12 @@ class PaymentSchedule extends Model
         return 'Mes';
     }
 
+    public function getModalityShortTextAttribute()
+    {
+        if ($this->modality == 'Q') return 'T';
+        return 'M';
+    }
+
     public function details()
     {
         return $this->hasMany('App\PaymentScheduleDetail');

@@ -108,8 +108,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/pagos', 'Admin\PaymentController@index');
     Route::get('/pagos/registrar', 'Admin\PaymentController@create');
     Route::post('/pagos/registrar', 'Admin\PaymentController@store');
-    Route::get('/pagos/{id}', 'Admin\PaymentController@show');
+    Route::get('/pagos/{id}', 'Admin\PaymentController@edit');
     Route::post('/pagos/detalles', 'Admin\PaymentController@detailPayment');
     Route::get('/leads', 'Admin\LeadController@index');
-
+    Route::get('/leads/{id}', 'Admin\LeadController@edit');
+    Route::post('/leads/update', 'Admin\LeadController@update');
 });
