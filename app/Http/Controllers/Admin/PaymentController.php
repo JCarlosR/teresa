@@ -26,6 +26,7 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         $rules = [
+            'title' => 'required|min:4',
             'starter_date' => 'required',
             'coin_type' => 'in:USD,PEN',
             'total_amount' => 'required|numeric|min:1000',
@@ -34,6 +35,8 @@ class PaymentController extends Controller
             'quotas' => 'min:2|numeric'
         ];
         $messages = [
+            'title.required' => 'Es necesario ingresar un título para el cronograma.',
+            'title.min' => 'Debe ingresar al menos 4 caracteres para el título.',
             'starter_date.required' => 'Es necesario ingresar una fecha de inicio.',
             'total_amount.required' => 'Es necesario ingresar el valor total bruto.',
             'total_amount.min' => 'Ha ingresado un valor muy pequeño para el monto total.',
@@ -45,7 +48,7 @@ class PaymentController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
-        $headerData = $request->only('starter_date', 'coin_type', 'total_amount', 'income_tax', 'modality', 'quotas');
+        $headerData = $request->only('title', 'starter_date', 'coin_type', 'total_amount', 'income_tax', 'modality', 'quotas');
         $headerData['user_id'] = session('client_id');
         $paymentSchedule = PaymentSchedule::create(
             $headerData
@@ -84,5 +87,23 @@ class PaymentController extends Controller
         $paymentScheduleDetail->save();
 
         return back()->with('notification', 'Fecha de pago asignada correctamente.');
+    }
+
+    public function updateTitle($id, Request $request)
+    {
+        $schedule = PaymentSchedule::findOrFail($id);
+        $schedule->title = $request->input('title');
+        $schedule->save();
+
+        return back()->with('notification', 'El título se ha actualizado correctamente.');
+    }
+
+    public function delete(Request $request)
+    {
+        $schedule_id = $request->input('schedule_id');
+        $schedule = PaymentSchedule::findOrFail($schedule_id);
+        $schedule->delete();
+
+        return back()->with('notification', 'El cronograma de pagos seleccionado se ha dado de baja correctamente.');
     }
 }

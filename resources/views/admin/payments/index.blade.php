@@ -23,6 +23,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th>Título</th>
                     <th>Fecha de inicio</th>
                     <th>Moneda</th>
                     <th>Monto total bruto</th>
@@ -34,7 +35,8 @@
                 <tbody>
                 @foreach ($schedules as $schedule)
                 <tr>
-                    <th scope="row">{{ $schedule->id }}</th>
+                    <td>{{ $schedule->id }}</td>
+                    <th>{{ $schedule->title }}</th>
                     <td>{{ $schedule->starter_date->format('d/m/Y') }}</td>
                     <td>{{ $schedule->coin_type }}</td>
                     <td>{{ $schedule->total_amount }}</td>
@@ -45,9 +47,9 @@
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
-                        {{--<button class="btn btn-danger btn-sm" title="Eliminar" data-target="#modal-delete-{{ $employee->id }}" data-toggle="modal">--}}
-                            {{--<span class="glyphicon glyphicon-trash"></span>--}}
-                        {{--</button>--}}
+                        <button class="btn btn-danger btn-sm" title="Eliminar" data-target="#modal-delete-{{ $schedule->id }}" data-toggle="modal">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
                     </td>
                 </tr>
                 @endforeach
@@ -59,57 +61,93 @@
 </div>
 
     {{-- Modals to delete --}}
-    {{--@foreach ($employees as $employee)--}}
-        {{--<div tabindex="-1" role="dialog" class="modal fade" id="modal-delete-{{ $employee->id }}">--}}
-            {{--<div role="document" class="modal-dialog">--}}
-                {{--<div class="modal-content">--}}
-                    {{--<div class="modal-header">--}}
-                        {{--<button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>--}}
-                        {{--<h4 class="modal-title">Eliminar datos de contacto</h4>--}}
-                    {{--</div>--}}
-                    {{--<form action="{{ url('/admin/personal/eliminar') }}" class="form-horizontal" method="POST">--}}
-                        {{--{{ csrf_field() }}--}}
-                        {{--<input type="hidden" name="employee_id" value="{{ $employee->id }}">--}}
+    @foreach ($schedules as $schedule)
+        <div tabindex="-1" role="dialog" class="modal fade" id="modal-delete-{{ $schedule->id }}">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title">Eliminar cronograma de pago</h4>
+                    </div>
+                    <form action="{{ url('/admin/pagos/eliminar') }}" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="schedule_id" value="{{ $schedule->id }}">
 
-                        {{--<div class="modal-body">--}}
-                            {{--<fieldset>--}}
-                                {{--<div class="form-group">--}}
-                                    {{--<label for="job" class="col-lg-2 control-label">Cargo</label>--}}
-                                    {{--<div class="col-lg-10">--}}
-                                        {{--<input type="text" class="form-control" name="job" placeholder="Cargo del representante" value="{{ $employee->job }}" readonly>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                    {{--<label for="name" class="col-lg-2 control-label">Nombre</label>--}}
-                                    {{--<div class="col-lg-10">--}}
-                                        {{--<input type="text" class="form-control" name="name" placeholder="Nombre del representante" value="{{ $employee->name }}" readonly>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                    {{--<label for="emails" class="col-lg-2 control-label">Correo electrónico</label>--}}
-                                    {{--<div class="col-lg-10">--}}
-                                        {{--<textarea class="form-control" name="emails" placeholder="Correo electrónico" readonly>{{ $employee->emails }}</textarea>--}}
-                                        {{--<span class="help-block">Escribir un correo por línea.</span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                    {{--<label for="phones" class="col-lg-2 control-label">Teléfonos</label>--}}
-                                    {{--<div class="col-lg-10">--}}
-                                        {{--<textarea class="form-control" name="phones" placeholder="Listado de teléfonos" readonly>{{ $employee->phones }}</textarea>--}}
-                                        {{--<span class="help-block">Escribir un teléfono por línea.</span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</fieldset>--}}
-                        {{--</div>--}}
-                        {{--<div class="modal-footer">--}}
-                            {{--<button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>--}}
-                            {{--<button type="submit" class="btn btn-black">Eliminar datos</button>--}}
-                        {{--</div>--}}
-                    {{--</form>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--@endforeach--}}
+                        <div class="modal-body">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="title">Título del cronograma</label>
+                                            <input type="text" name="title" id="title" value="{{ $schedule->title }}"
+                                                   class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="starter_date">Fecha de inicio</label>
+                                            <input type="date" class="form-control" name="starter_date" value="{{ $schedule->starter_date->format('Y-m-d') }}" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="coin_type">Tipo de moneda moneda</label>
+                                            <select name="coin_type" id="coin_type" class="form-control" readonly>
+                                                <option value="USD" @if($schedule->coin_type=='USD') selected @endif>(USD) Dólares</option>
+                                                <option value="PEN" @if($schedule->coin_type=='PEN') selected @endif>(PEN) Soles</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="total_amount">Monto total bruto</label>
+                                            <input type="number" class="form-control" name="total_amount" placeholder="Monto total a pagar" value="{{ $schedule->total_amount }}" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="income_tax">Impuesto a la renta</label>
+                                            <input class="form-control" name="income_tax" placeholder="Impuesto a la renta" type="number" value="{{ $schedule->income_tax }}" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="modality">Modalidad de pago</label>
+                                            <select name="modality" id="modality" class="form-control" readonly>
+                                                <option value="">Seleccione modalidad</option>
+                                                <option value="Q" @if($schedule->modality=='Q') selected @endif>Trimestral</option>
+                                                <option value="M" @if($schedule->modality=='M') selected @endif>Mensual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="quotas">Número de cuotas</label>
+                                            <input class="form-control" name="quotas" type="number" value="{{ $schedule->quotas }}" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                            <button type="submit" class="btn btn-black">Anular cronograma</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection
 
 @section('scripts')

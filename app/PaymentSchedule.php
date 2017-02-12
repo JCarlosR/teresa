@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PaymentSchedule extends Model
 {
-    protected $fillable = ['user_id', 'starter_date', 'coin_type', 'total_amount', 'income_tax', 'modality', 'quotas'];
+    use SoftDeletes;
+
+    protected $fillable = ['user_id', 'title', 'starter_date', 'coin_type', 'total_amount', 'income_tax', 'modality', 'quotas'];
 
     protected $dates = ['starter_date'];
 

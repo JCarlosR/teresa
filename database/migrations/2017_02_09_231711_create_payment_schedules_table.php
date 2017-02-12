@@ -19,6 +19,8 @@ class CreatePaymentSchedulesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
 
+            $table->string('title');
+
             $table->date('starter_date');
             $table->string('coin_type', 3);
 
@@ -28,6 +30,7 @@ class CreatePaymentSchedulesTable extends Migration
             $table->char('modality', 1); // Quarterly, Monthly
             $table->smallInteger('quotas'); // # times to pay
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

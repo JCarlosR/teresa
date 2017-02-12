@@ -14,7 +14,20 @@
                 </div>
             @endif
 
-            <p class="mb-20">Listado de cronogramas de pago, y sus correspondientes contratos asociados.</p>
+            <p class="mb-20">Cronograma de pago seleccionado, y sus periodos.</p>
+
+            <form action="{{ url('/admin/pagos/'.$paymentSchedule->id.'/titulo') }}" method="POST">
+                {{ csrf_field() }}
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Título del cronograma" value="{{ old('title', $paymentSchedule->title) }}" name="title">
+                    <span class="input-group-btn">
+                    <button class="btn btn-success btn-sm" type="button">
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+            </form>
+
             <table class="table table-hover">
                 <thead>
                 <tr>
