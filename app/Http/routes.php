@@ -45,6 +45,7 @@ Route::post('/nosotros', 'AboutUsController@update');
 Route::get('/pagos', 'Client\PaymentController@index');
 Route::get('/pagos/{id}', 'Client\PaymentController@show');
 Route::get('/leads', 'Client\LeadController@index');
+Route::get('/leads/{id}', 'Client\LeadController@show');
 
 // Location
 Route::get('/mapa', 'Client\MapController@index');
