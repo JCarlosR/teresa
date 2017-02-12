@@ -39,16 +39,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Empleo</th>
-                        <?php $total = 0; ?>
+                        <?php $total['employment'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->employment; ?>
+                            <?php $total['employment'] += $detail->employment; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->employment ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['employment'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -62,16 +62,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Proveedores</th>
-                        <?php $total = 0; ?>
+                        <?php $total['suppliers'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->suppliers; ?>
+                            <?php $total['suppliers'] += $detail->suppliers; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->suppliers ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['suppliers'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -85,16 +85,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Seguidores</th>
-                        <?php $total = 0; ?>
+                        <?php $total['followers'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->followers; ?>
+                            <?php $total['followers'] += $detail->followers; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->followers ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['followers'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -108,16 +108,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Contacto</th>
-                        <?php $total = 0; ?>
+                        <?php $total['contact'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->contact; ?>
+                            <?php $total['contact'] += $detail->contact; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->contact ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['contact'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -131,16 +131,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Proyectos</th>
-                        <?php $total = 0; ?>
+                        <?php $total['projects'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->projects; ?>
+                            <?php $total['projects'] += $detail->projects; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->projects ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['projects'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -154,16 +154,16 @@
                     {{ csrf_field() }}
                     <tr>
                         <th scope="row">Otros</th>
-                        <?php $total = 0; ?>
+                        <?php $total['others'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total += $detail->others; ?>
+                            <?php $total['others'] += $detail->others; ?>
                             <td>
                                 <input type="hidden" name="details[]" value="{{ $detail->id }}">
                                 <input name="leads[]" type="number" value="{{ $detail->others ?: 0 }}" class="form-control">
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total }}
+                            {{ $total['others'] }}
                         </td>
                         <td class="text-center">
                             <button class="btn btn-success btn-sm" title="Guardar" type="submit">
@@ -175,23 +175,35 @@
 
                 <tr>
                     <td>Total</td>
-                    <?php $total = 0; ?>
+                    <?php $total['leads'] = 0; ?>
                     @foreach ($details as $detail)
-                        <?php $total += $detail->total_leads; ?>
+                        <?php $total['leads'] += $detail->total_leads; ?>
                         <td>
                             {{ $detail->total_leads }}
                         </td>
                     @endforeach
-                    <td>{{ $total }}</td>
+                    <td>{{ $total['leads'] }}</td>
                 </tr>
                 </tbody>
             </table>
 
+            <div id="donut-chart-legend" class="mb-10"></div>
+            <div id="donut-chart" style="height: 300px;"></div>
         </div>
     </div>
 </div>
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('/panel/employees/create.js') }}"></script>
+    <script>
+        var employment = 0{{ $total['employment'] }};
+        var suppliers = 0{{ $total['suppliers'] }};
+        var followers = 0{{ $total['followers'] }};
+        var contact = 0{{ $total['contact'] }};
+        var projects = 0{{ $total['projects'] }};
+        var others = 0{{ $total['others'] }};
+    </script>
+    <script src="{{ url('/plugins/flot/jquery.flot.js') }}"></script>
+    <script src="{{ url('/plugins/flot/jquery.flot.pie.js') }}"></script>
+    <script src="{{ url('/panel/leads/flot-charts.js') }}"></script>
 @endsection
