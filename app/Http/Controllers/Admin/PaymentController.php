@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 
 class PaymentController extends Controller
 {
+
     public function index()
     {
         $schedules = PaymentSchedule::where('user_id', session('client_id'))->get();

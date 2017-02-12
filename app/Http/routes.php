@@ -43,6 +43,7 @@ Route::post('/nosotros', 'AboutUsController@update');
 
 // Payments & Leads
 Route::get('/pagos', 'Client\PaymentController@index');
+Route::get('/pagos/{id}', 'Client\PaymentController@show');
 Route::get('/leads', 'Client\LeadController@index');
 
 // Location
