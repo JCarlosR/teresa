@@ -15,7 +15,7 @@
         <li class="sidebar-category">Datos principales</li>
         <li class="panel">
             <a href="{{ url("/admin/dashboard") }}">
-                <i class="ion-ios-home-outline bg-purple"></i>
+                <i class="ion-ios-home-outline bg-warning"></i>
                 <span class="sidebar-title">Dashboard</span>
             </a>
         </li>
@@ -34,7 +34,7 @@
         {{-- Datos de contacto --}}
         <li class="panel">
             <a href="{{ url('/admin/personal') }}">
-                <i class="ion-ios-people bg-warning"></i>
+                <i class="ion-ios-people bg-black"></i>
                 <span class="sidebar-title">Personal</span>
             </a>
         </li>
@@ -64,13 +64,13 @@
         <li class="sidebar-category">Datos de gestión</li>
         <li class="panel">
             <a href="{{ url('/admin/pagos') }}">
-                <i class="ion-ios-calendar-outline bg-black"></i>
+                <i class="ion-ios-calendar-outline bg-purple"></i>
                 <span class="sidebar-title">Facturación</span>
             </a>
         </li>
         <li class="panel">
             <a href="{{ url('/admin/leads') }}">
-                <i class="ion-ios-pie-outline bg-black"></i>
+                <i class="ion-ios-pie-outline bg-purple"></i>
                 <span class="sidebar-title">Leads</span>
             </a>
         </li>

@@ -35,16 +35,16 @@
                 <tbody>
 
                     <tr>
-                        <th scope="row">Empleo</th>
-                        <?php $total['employment'] = 0; ?>
+                        <th scope="row">Proyectos</th>
+                        <?php $total['projects'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total['employment'] += $detail->employment; ?>
+                            <?php $total['projects'] += $detail->projects; ?>
                             <td>
-                                {{ $detail->employment ?: 0 }}
+                                {{ $detail->projects ?: 0 }}
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total['employment'] }}
+                            {{ $total['projects'] }}
                         </td>
                     </tr>
 
@@ -63,16 +63,16 @@
                     </tr>
 
                     <tr>
-                        <th scope="row">Seguidores</th>
-                        <?php $total['followers'] = 0; ?>
+                        <th scope="row">Empleo</th>
+                        <?php $total['employment'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total['followers'] += $detail->followers; ?>
+                            <?php $total['employment'] += $detail->employment; ?>
                             <td>
-                                {{ $detail->followers ?: 0 }}
+                                {{ $detail->employment ?: 0 }}
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total['followers'] }}
+                            {{ $total['employment'] }}
                         </td>
                     </tr>
 
@@ -91,16 +91,16 @@
                     </tr>
 
                     <tr>
-                        <th scope="row">Proyectos</th>
-                        <?php $total['projects'] = 0; ?>
+                        <th scope="row">Spam</th>
+                        <?php $total['spam'] = 0; ?>
                         @foreach ($details as $detail)
-                            <?php $total['projects'] += $detail->projects; ?>
+                            <?php $total['spam'] += $detail->spam; ?>
                             <td>
-                                {{ $detail->projects ?: 0 }}
+                                {{ $detail->spam ?: 0 }}
                             </td>
                         @endforeach
                         <td class="text-center">
-                            {{ $total['projects'] }}
+                            {{ $total['spam'] }}
                         </td>
                     </tr>
 
@@ -141,11 +141,11 @@
 
 @section('scripts')
     <script>
-        var employment = 0{{ $total['employment'] }};
-        var suppliers = 0{{ $total['suppliers'] }};
-        var followers = 0{{ $total['followers'] }};
-        var contact = 0{{ $total['contact'] }};
         var projects = 0{{ $total['projects'] }};
+        var suppliers = 0{{ $total['suppliers'] }};
+        var employment = 0{{ $total['employment'] }};
+        var contact = 0{{ $total['contact'] }};
+        var spam = 0{{ $total['spam'] }};
         var others = 0{{ $total['others'] }};
     </script>
     <script src="{{ url('/plugins/flot/jquery.flot.js') }}"></script>

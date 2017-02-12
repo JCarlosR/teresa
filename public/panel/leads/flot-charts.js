@@ -7,29 +7,29 @@ $(document).ready(function() {
     // --------------------------------------------------
 
     var dataSetPie = [{
-        label: 'Empleo',
-        data: employment,
-        color: '#5DC2AE'
+        label: 'Proyectos',
+        data: projects,
+        color: '#F2829A'
     }, {
         label: 'Proveedores',
         data: suppliers,
         color: '#B065E9'
     }, {
-        label: 'Seguidores',
-        data: followers,
-        color: '#5195E2'
+        label: 'Empleo',
+        data: employment,
+        color: '#5DC2AE'
     }, {
         label: 'Contacto',
         data: contact,
         color: '#FFCC62'
     }, {
-        label: 'Proyectos',
-        data: projects,
-        color: '#F2829A'
+        label: 'Spam',
+        data: spam,
+        color: '#FF3344'
     }, {
         label: 'Otros',
         data: others,
-        color: '#FF3344'
+        color: '#5195E2'
     }];
     // var optionsPie = {
     //     series: {

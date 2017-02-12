@@ -28,13 +28,12 @@ class CreatePaymentScheduleDetailsTable extends Migration
             $table->float('net');
 
             // Leads fields
-            // Empleo, Proveedores, Seguidores, Contacto, Proyectos y Otros
-            // Employment, Suppliers, Followers, Contact, Projects and Others
-            $table->integer('employment');
-            $table->integer('suppliers');
-            $table->integer('followers');
-            $table->integer('contact');
+            // Proyectos, Proveedores, Empleo, Contacto, Spam, Otros
             $table->integer('projects');
+            $table->integer('suppliers');
+            $table->integer('employment');
+            $table->integer('contact'); // direct contact with previous clients
+            $table->integer('spam');
             $table->integer('others');
 
             $table->timestamps();
