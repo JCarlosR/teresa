@@ -32,5 +32,11 @@ class UsersTableSeeder extends Seeder
             'role' => 1 // Administrator
         ]);
 
+        User::create([
+            'name' => 'Jorge Peña',
+            'email' => 'jorgeparq@seo-arquitectos.com',
+            'password' => bcrypt('123123'),
+            'role' => 1 // Temporary administrator
+        ]);
     }
 }

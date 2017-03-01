@@ -46,21 +46,21 @@
                         <h6 class="text-uppercase">Proyectos</h6>
                         <div class="fs-36 fw-300"><span class="counter">{{ $client->projects_percent }}</span><span>%</span></div>
                         <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar"></div>
+                            <div role="progressbar" data-transitiongoal="{{ $client->projects_percent }}" class="progress-bar"></div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Servicios</h6>
                         <div class="fs-36 fw-300"><span class="counter">{{ $client->services_percent }}</span><span>%</span></div>
                         <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-success"></div>
+                            <div role="progressbar" data-transitiongoal="{{ $client->services_percent }}" class="progress-bar progress-bar-success"></div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Leads</h6>
                         <div class="fs-36 fw-300"><span class="counter">28</span><span>%</span></div>
                         <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-purple"></div>
+                            <div role="progressbar" data-transitiongoal="28" class="progress-bar progress-bar-purple"></div>
                         </div>
                     </div>
                 </div>

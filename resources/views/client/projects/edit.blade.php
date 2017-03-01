@@ -73,7 +73,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="project-year">Año del proyecto</label>
-                                <input type="number" name="year" id="project-year" min="1980" class="form-control" placeholder="Año de desarrollo del proyecto" value="{{ old('year', $project->year) }}">
+                                <input type="number" name="year" id="project-year" class="form-control" placeholder="Año de desarrollo del proyecto" value="{{ old('year', $project->year) }}">
                             </div>
                         </div>
                     </div>
