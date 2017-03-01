@@ -2,7 +2,15 @@
 
 namespace App;
 
+use App\Teresa\Clients\Accessors\DataPresentationAccessors;
+use App\Teresa\Clients\Accessors\RolesRelatedAccessors;
+use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
+use App\Teresa\Clients\Accessors\TypeAndStatusAccessors;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
+use App\Teresa\Clients\Relationships\ContentRelatedRelationships;
+use App\Teresa\Clients\Accessors\ProjectsRelatedAccessors;
+use App\Teresa\Clients\Scopes\RolesRelatedScopes;
 
 class User extends Authenticatable
 {
@@ -23,122 +31,17 @@ class User extends Authenticatable
     protected $clientPath = '/dashboard';
     protected $adminPath = '/admin';
 
-    // accessors
-
-    public function getShortNameAttribute()
-    {
-        $parts = explode(' ', $this->name);
-        return $parts[0];
-    }
-
-    public function getScheduleStartFormatAttribute()
-    {
-        $parts = explode(':', $this->schedule_start);
-        return $parts[0] . ':' . $parts[1];
-    }
-    public function getScheduleEndFormatAttribute()
-    {
-        $parts = explode(':', $this->schedule_end);
-        return $parts[0] . ':' . $parts[1];
-    }
-
-    public function getPhotoRouteAttribute()
-    {
-        $path = 'images/users/';
-
-        if ($this->photo)
-            $file_name = $this->id . '.' . $this->photo;
-        else $file_name = 'default.jpg';
-
-        return $path . $file_name;
-    }
-
-    public function getIsClientAttribute()
-    {
-        return $this->role == 0;
-    }
-    public function getIsAdminAttribute()
-    {
-        return $this->role == 1;
-    }
-
-    public function getRootRouteAttribute()
-    {
-        if ($this->is_admin)
-            return $this->adminPath;
-        return $this->clientPath;
-    }
-
-    public function getClientTypeAttribute()
-    {
-        if ($this->client_type_id) {
-            switch ($this->client_type_id) {
-                case 1: return 'architect';
-            }
-        }
-
-        return 'sps';
-    }
-
-    public function getStarStateAttribute()
-    {
-        if ($this->starred) return 'on';
-        return 'off';
-    }
-
-    public function getInverseStarStateAttribute()
-    {
-        if ($this->starred) return 'off';
-        return 'on';
-    }
-
-    public function getProjectsPercentAttribute()
-    {
-        $projects = $this->projects;
-
-        $n = sizeof($projects);
-        if ($n == 0) return 0;
-
-        $sum = 0;
-        foreach ($projects as $project) {
-            $sum += $project->characters_percent;
-        }
-
-        $average = $sum / $n;
-        return number_format((float) $average, 1, '.', '');
-    }
-    public function getServicesPercentAttribute()
-    {
-        $services = $this->services;
-
-        $n = sizeof($services);
-        if ($n == 0) return 0;
-
-        $sum = 0;
-        foreach ($services as $service) {
-            $sum += $service->characters_percent;
-        }
-
-        $average = $sum / $n;
-        return number_format((float) $average, 1, '.', '');
-    }
+    // accessors: client data
+    use DataPresentationAccessors;
+    use RolesRelatedAccessors;
+    use TypeAndStatusAccessors;
+    // accessors: client content
+    use ProjectsRelatedAccessors;
+    use ServicesRelatedAccessors;
 
     // relationships
-
-    public function services()
-    {
-        return $this->hasMany('App\Service');
-    }
-    public function projects()
-    {
-        return $this->hasMany('App\Project');
-    }
-
+    use ContentRelatedRelationships;
 
     // scopes
-
-    public function scopeClient($query)
-    {
-        return $query->where('role', 0);
-    }
+    use RolesRelatedScopes;
 }
