@@ -20,6 +20,16 @@ trait ServicesRelatedAccessors
         return number_format((float) $average, 1, '.', '');
     }
 
+    public function getServicesStatusAttribute()
+    {
+        if ($this->services_percent < 50) {
+            return 'danger';
+        } else if ($this->services_percent < 90) {
+            return 'warning';
+        } else
+            return 'success';
+    }
+
     public function getServicesCountAttribute()
     {
         return Service::where('user_id', $this->id)->count();

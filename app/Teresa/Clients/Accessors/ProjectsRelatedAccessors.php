@@ -20,6 +20,16 @@ trait ProjectsRelatedAccessors
         return number_format((float) $average, 1, '.', '');
     }
 
+    public function getProjectsStatusAttribute()
+    {
+        if ($this->projects_percent < 50) {
+            return 'danger';
+        } else if ($this->projects_percent < 90) {
+            return 'warning';
+        } else
+            return 'success';
+    }
+
     public function getProjectsCountAttribute()
     {
         return Project::where('user_id', $this->id)->count();
