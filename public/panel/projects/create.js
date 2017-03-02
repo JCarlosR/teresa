@@ -1,3 +1,9 @@
+var htmlStatus = {
+    'good': '<i class="ion-record text-success"></i> Correcto',
+    'regular': '<i class="ion-record text-warning"></i> Regular',
+    'bad': '<i class="ion-record text-danger"></i> Pobre'
+};
+
 $(document).ready(function() {
 
     // Tag-it setup
@@ -6,7 +12,6 @@ $(document).ready(function() {
         fieldName: 'services[]',
         allowSpaces: true
     });
-
 
     // Summer note setup
     $('#note0, #note1, #note2, #note3').summernote({
@@ -27,20 +32,27 @@ $(document).ready(function() {
     $('#note3').on('summernote.keyup', onKeyUp3);
 
     function onKeyUp0() {
-        setCharactersLengthMessage($(this), $('#limit0'));
+        setCharactersLengthMessage($(this), $('#limit0'), $('#status0'));
     }
     function onKeyUp1() {
-        setCharactersLengthMessage($(this), $('#limit1'));
+        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'));
     }
     function onKeyUp2() {
-        setCharactersLengthMessage($(this), $('#limit2'));
+        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'));
     }
     function onKeyUp3() {
-        setCharactersLengthMessage($(this), $('#limit3'));
+        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
     }
 
-    function setCharactersLengthMessage($summerNote, $container) {
+    function setCharactersLengthMessage($summerNote, $limit, $status) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text().length;
-        $container.html(charactersNum + ' caracteres');
+        $limit.html(charactersNum + ' caracteres');
+
+        if (charactersNum >= 375)
+            $status.html(htmlStatus.good);
+        else if (charactersNum >= 280)
+            $status.html(htmlStatus.regular);
+        else
+            $status.html(htmlStatus.bad);
     }
 });
