@@ -1,17 +1,7 @@
 @extends('layouts.panel')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
-    <style>
-        textarea {
-            display: none;
-        }
-    </style>
 
-    {{-- Tag-it styles --}}
-    <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('dashboard_content')
@@ -98,7 +88,5 @@
 @endsection
 
 @section('scripts')
-    <!-- Tag-it and the required jquery ui -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="{{ asset('vendor/tag-it/tag-it.min.js') }}" type="text/javascript" charset="utf-8"></script>
+
 @endsection

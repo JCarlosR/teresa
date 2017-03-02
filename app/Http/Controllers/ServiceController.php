@@ -27,6 +27,18 @@ class ServiceController extends Controller
         return view('client.services.index')->with(compact('services'));
     }
 
+    public function show($id)
+    {
+        $service = Service::findOrFail($id);
+
+        // Check if the service really belongs to the user
+        if ($service->user_id !== $this->user->id)
+            return redirect('/servicios');
+
+        $client = $this->user;
+        return view('client.services.show')->with(compact('client', 'service'));
+    }
+
     public function create()
     {
         return view('client.services.create');
