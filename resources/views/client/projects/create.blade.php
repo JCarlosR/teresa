@@ -52,6 +52,10 @@
                                         @foreach (old('services') as $old_service)
                                         <li>{{ $old_service }}</li>
                                         @endforeach
+                                    @else
+                                        @foreach ($project->services as $service)
+                                            <li>{{ $service->name }}</li>
+                                        @endforeach
                                     @endif
                                 </ul>
                             </div>
