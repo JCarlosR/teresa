@@ -40,10 +40,10 @@ class Service extends Model
     public function getStatusColorAttribute()
     {
         $percent = $this->characters_percent;
-        if ($percent <= 25)
+        if ($percent < 50)
             return 'red';
         // else
-        if ($percent <= 75)
+        if ($percent < 100)
             return 'yellow';
         // else
         return 'green';
