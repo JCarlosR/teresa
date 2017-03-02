@@ -38,22 +38,15 @@
         </li>
 
         <li class="panel">
-            <a href="{{ url('/servicios') }}">
+            <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
                 <i class="ion-ios-browsers bg-danger"></i>
-                <span class="sidebar-title">Servicios</span>
+                <span class="sidebar-title">Contenido</span>
             </a>
-        </li>
-        <li class="panel">
-            <a href="{{ url('/proyectos') }}">
-                <i class="ion-ios-pricetag-outline bg-primary"></i>
-                <span class="sidebar-title">Proyectos</span>
-            </a>
-        </li>
-        <li class="panel">
-            <a href="{{ url('/nosotros') }}">
-                <i class="ion-ios-bolt bg-info"></i>
-                <span class="sidebar-title">Nosotros</span>
-            </a>
+            <ul id="collapse2" class="list-unstyled collapse">
+                <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url('/servicios') }}">Servicios</a></li>
+                <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
+            </ul>
         </li>
 
 

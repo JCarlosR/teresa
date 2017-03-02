@@ -19,6 +19,7 @@
                 <span class="sidebar-title">Dashboard</span>
             </a>
         </li>
+
         <li class="panel">
             <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">
                 <i class="ion-ios-person-outline bg-success"></i>
@@ -31,6 +32,7 @@
                 <li><a href="{{ url("/admin/perfiles/profesionales") }}">Perfiles profesionales</a></li>
             </ul>
         </li>
+
         {{-- Datos de contacto --}}
         <li class="panel">
             <a href="{{ url('/admin/personal') }}">
@@ -40,28 +42,20 @@
         </li>
 
         <li class="panel">
-            <a href="{{ url('/admin/servicios') }}">
+            <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
                 <i class="ion-ios-browsers bg-danger"></i>
-                <span class="sidebar-title">Servicios</span>
+                <span class="sidebar-title">Contenido</span>
             </a>
+            <ul id="collapse2" class="list-unstyled collapse">
+                <li><a href="{{ url('/admin/nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url('/admin/servicios') }}">Servicios</a></li>
+                <li><a href="{{ url('/admin/proyectos') }}">Proyectos</a></li>
+            </ul>
         </li>
-        <li class="panel">
-            <a href="{{ url("/admin/proyectos") }}">
-                <i class="ion-ios-pricetag-outline bg-primary"></i>
-                <span class="sidebar-title">Proyectos</span>
-            </a>
-        </li>
-
-        <li class="panel">
-            <a href="{{ url("/admin/nosotros") }}">
-                <i class="ion-ios-bolt bg-info"></i>
-                <span class="sidebar-title">Nosotros</span>
-            </a>
-        </li>
-
 
 
         <li class="sidebar-category">Datos de gestión</li>
+
         <li class="panel">
             <a href="{{ url('/admin/pagos') }}">
                 <i class="ion-ios-calendar-outline bg-purple"></i>
