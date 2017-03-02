@@ -1,3 +1,9 @@
+var htmlStatus = {
+    'good': '<i class="ion-record text-success"></i> Correcto',
+    'regular': '<i class="ion-record text-warning"></i> Regular',
+    'bad': '<i class="ion-record text-danger"></i> Pobre'
+};
+
 $(document).ready(function() {
     $('#note1, #note2, #note3, #note4, #note5').summernote({
         toolbar: [
@@ -18,23 +24,30 @@ $(document).ready(function() {
     $('#note5').on('summernote.keyup', onKeyUp5);
 
     function onKeyUp1() {
-        setCharactersLengthMessage($(this), $('#limit1'));
+        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'));
     }
     function onKeyUp2() {
-        setCharactersLengthMessage($(this), $('#limit2'));
+        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'));
     }
     function onKeyUp3() {
-        setCharactersLengthMessage($(this), $('#limit3'));
+        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
     }
     function onKeyUp4() {
-        setCharactersLengthMessage($(this), $('#limit4'));
+        setCharactersLengthMessage($(this), $('#limit4'), $('#status4'));
     }
     function onKeyUp5() {
-        setCharactersLengthMessage($(this), $('#limit5'));
+        setCharactersLengthMessage($(this), $('#limit5'), $('#status5'));
     }
 
-    function setCharactersLengthMessage($summerNote, $container) {
+    function setCharactersLengthMessage($summerNote, $limit, $status) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text().length;
-        $container.html(charactersNum + ' caracteres');
+        $limit.html(charactersNum + ' caracteres');
+
+        if (charactersNum >= 300)
+            $status.html(htmlStatus.good);
+        else if (charactersNum >= 200)
+            $status.html(htmlStatus.regular);
+        else
+            $status.html(htmlStatus.bad);
     }
 });

@@ -47,6 +47,7 @@
                         <small>La idea principal del servicio</small>
                     </h3>
                     <span id="limit1"></span>
+                    <span id="status1" class="pull-right"></span>
                     <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1', $service->question_1) }}</textarea>
 
                     <h3>
@@ -54,6 +55,7 @@
                         <small>Desde cuándo lo vienen haciendo, para qué clientes o tipo de clientes.</small>
                     </h3>
                     <span id="limit2"></span>
+                    <span id="status2" class="pull-right"></span>
                     <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2', $service->question_2) }}</textarea>
 
                     <h3>
@@ -61,6 +63,7 @@
                         <small>Hasta dónde ofrecen sus servicios, en qué país, región, ciudad.</small>
                     </h3>
                     <span id="limit3"></span>
+                    <span id="status3" class="pull-right"></span>
                     <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3', $service->question_3) }}</textarea>
 
                     <h3>
@@ -68,6 +71,7 @@
                         <small>¿Por qué?</small>
                     </h3>
                     <span id="limit4"></span>
+                    <span id="status4" class="pull-right"></span>
                     <textarea id="note4" title="Pregunta 4" name="question_4">{{ old('question_4', $service->question_4) }}</textarea>
 
                     <h3>
@@ -75,6 +79,7 @@
                         <small>¿De qué manera el cliente resulta beneficiado por este?</small>
                     </h3>
                     <span id="limit5"></span>
+                    <span id="status5" class="pull-right"></span>
                     <textarea id="note5" title="Pregunta 5" name="question_5">{{ old('question_5', $service->question_5) }}</textarea>
                 </fieldset>
 
