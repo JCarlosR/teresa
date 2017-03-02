@@ -53,12 +53,13 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required|min:4',
+            'name' => 'required|min:4|unique:projects,name',
             'services.*' => 'exists:services,name',
             'client' => 'min:3',
             'year' => 'required|integer|min:1980'
         ];
         $messages = [
+            'name.unique' => 'Este nombre de proyecto ya se encuentra registrado. Por favor usa otro.',
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
             'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
