@@ -48,4 +48,34 @@ class Service extends Model
         // else
         return 'green';
     }
+
+
+    // methods
+    public function questionStatus($i) {
+        $characters = 0;
+        switch ($i) {
+            case 1:
+                $characters = strlen(strip_tags($this->question_1));
+                break;
+            case 2:
+                $characters = strlen(strip_tags($this->question_2));
+                break;
+            case 3:
+                $characters = strlen(strip_tags($this->question_3));
+                break;
+            case 4:
+                $characters = strlen(strip_tags($this->question_4));
+                break;
+            case 5:
+                $characters = strlen(strip_tags($this->question_5));
+                break;
+        }
+
+        if ($characters >= 300)
+            return 'success';
+        else if ($characters >= 200)
+            return 'warning';
+        else
+            return 'danger';
+    }
 }

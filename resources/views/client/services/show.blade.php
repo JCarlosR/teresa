@@ -23,8 +23,14 @@
                     </fieldset>
                 </div>
                 <div class="col-md-4">
-                    <h3>Evaluación</h3>
-
+                    <fieldset>
+                        <legend>Evaluación</legend>
+                        <p>Pregunta 1: <i class="ion-record text-{{ $service->questionStatus(1) }}"></i></p>
+                        <p>Pregunta 2: <i class="ion-record text-{{ $service->questionStatus(2) }}"></i></p>
+                        <p>Pregunta 3: <i class="ion-record text-{{ $service->questionStatus(3) }}"></i></p>
+                        <p>Pregunta 4: <i class="ion-record text-{{ $service->questionStatus(4) }}"></i></p>
+                        <p>Pregunta 5: <i class="ion-record text-{{ $service->questionStatus(5) }}"></i></p>
+                    </fieldset>
                 </div>
             </div>
 
