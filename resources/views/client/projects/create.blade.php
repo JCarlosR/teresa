@@ -53,7 +53,7 @@
                                         <li>{{ $old_service }}</li>
                                         @endforeach
                                     @else
-                                        @foreach ($project->services as $service)
+                                        @foreach ($services as $service)
                                             <li>{{ $service->name }}</li>
                                         @endforeach
                                     @endif
