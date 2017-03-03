@@ -17,8 +17,9 @@ $(document).ready(function() {
         ],
         callbacks: {
             onInit: function() {
-                // Apply one and first evaluation
-                onKeyUp1(); onKeyUp2(); onKeyUp3(); onKeyUp4(); onKeyUp5();
+                // Apply one and first evaluation to each summer note
+                for (var i=1; i<=5; ++i)
+                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i));
             }
         }
     });
