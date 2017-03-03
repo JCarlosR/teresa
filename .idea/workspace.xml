@@ -4,7 +4,6 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/first-layout.css" afterPath="$PROJECT_DIR$/public/build/css/first-layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="first-layout.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="first-layout.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/build/css/first-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="3949" column="14" lean-forward="false" selection-start-line="3949" selection-start-column="14" selection-end-line="3949" selection-end-column="14" />
+            <state relative-caret-position="102">
+              <caret line="3948" column="19" lean-forward="false" selection-start-line="3948" selection-start-column="19" selection-end-line="3948" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -154,8 +153,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ClientController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/simple.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PaymentController.php" />
-        <option value="$PROJECT_DIR$/public/build/css/first-layout.css" />
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/public/build/css/first-layout.css" />
       </list>
     </option>
   </component>
@@ -415,7 +414,7 @@
       <workItem from="1487690603171" duration="360000" />
       <workItem from="1488377316041" duration="6262000" />
       <workItem from="1488463614398" duration="7152000" />
-      <workItem from="1488550073026" duration="3659000" />
+      <workItem from="1488550073026" duration="4327000" />
     </task>
     <task id="LOCAL-00001" summary="No min value for years">
       <created>1488379703418</created>
@@ -599,11 +598,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488552748387</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Black when followers is 0">
+      <created>1488555049056</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1488555049056</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277286000" />
+    <option name="totallyTimeSpent" value="277954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -646,8 +652,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Organizing model using traits" />
-    <MESSAGE value="Show projects and services count per client" />
     <MESSAGE value="Upload all new files !" />
     <MESSAGE value="Show count and status bar with color" />
     <MESSAGE value="Update status color percent" />
@@ -671,7 +675,9 @@
     <MESSAGE value="NIF no validation" />
     <MESSAGE value="Lang login page" />
     <MESSAGE value="Add months instead of days" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add months instead of days" />
+    <MESSAGE value="Black when followers is 0" />
+    <MESSAGE value="Typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,18 +1042,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/css/first-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="3949" column="14" lean-forward="false" selection-start-line="3949" selection-start-column="14" selection-end-line="3949" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/css/first-layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="3948" column="19" lean-forward="false" selection-start-line="3948" selection-start-column="19" selection-end-line="3948" selection-end-column="19" />
           <folding />
         </state>
       </provider>

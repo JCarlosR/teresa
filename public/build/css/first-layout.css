@@ -3946,8 +3946,8 @@ textarea {
 }
 
 /* Social media colors */
-.social-color-disable {
-  color: black;
+.social-color-black {
+    color: black;
 }
 .social-color-facebook {
     color: #3b5998;
