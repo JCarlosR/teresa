@@ -23,7 +23,14 @@ $(document).ready(function() {
             ['para', ['ul', 'ol', 'paragraph']],
             ['insert', ['link', 'picture', 'hr']],
             ['view', ['fullscreen']]
-        ]
+        ],
+        callbacks: {
+            onInit: function() {
+                // Apply one and first evaluation to each summer note
+                for (var i=0; i<=3; ++i)
+                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i));
+            }
+        }
     });
 
     $('#note0').on('summernote.keyup', onKeyUp0);
@@ -43,9 +50,6 @@ $(document).ready(function() {
     function onKeyUp3() {
         setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
     }
-
-    // Apply one and first evaluation
-    onKeyUp0(); onKeyUp1(); onKeyUp2(); onKeyUp3();
 
     function setCharactersLengthMessage($summerNote, $limit, $status) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()

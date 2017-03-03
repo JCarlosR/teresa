@@ -122,6 +122,7 @@
                         <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
                     </h3>
                     <span id="limit0"></span>
+                    <span id="status0" class="pull-right"></span>
                     <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0') }}</textarea>
 
                     <h3>
@@ -129,6 +130,7 @@
                         <small>¿Se realizo un diagnóstico/estudio previo a la ejecución del proyecto? Descríbelo</small>
                     </h3>
                     <span id="limit1"></span>
+                    <span id="status1" class="pull-right"></span>
                     <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1') }}</textarea>
 
                     <h3>
@@ -136,6 +138,7 @@
                         <small>¿Cómo se planteó la ejecución del proyecto y en dónde reside el valor añadido entregado al cliente?</small>
                     </h3>
                     <span id="limit2"></span>
+                    <span id="status2" class="pull-right"></span>
                     <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2') }}</textarea>
 
                     <h3>
@@ -143,6 +146,7 @@
                         <small>¿Que dificultades se encontraron pero fueron superadas durante la realización del proyecto? ¿Se entregó un cronograma e informe de resultados?</small>
                     </h3>
                     <span id="limit3"></span>
+                    <span id="status3" class="pull-right"></span>
                     <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3') }}</textarea>
                 </fieldset>
 
