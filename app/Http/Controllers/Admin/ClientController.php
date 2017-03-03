@@ -26,7 +26,7 @@ class ClientController extends Controller
 
             'trade_name' => 'required|min:5',
             'fiscal_name' => 'min:5',
-            'ruc' => 'digits:11',
+            // 'ruc' => '',
             'schedule_start' => 'date_format:H:i',
             'schedule_end' => 'date_format:H:i',
             'works_from' => 'date'
@@ -41,7 +41,7 @@ class ClientController extends Controller
             'trade_name.required' => 'Por favor ingresa el nombre comercial de la empresa.',
             'trade_name.min' => 'Ingresa al menos 5 caracteres para el nombre comercial.',
             'fiscal_name.min' => 'Ingresa al menos 5 caracteres para el nombre fiscal.',
-            'ruc.digits' => 'El NIF debe constar de 11 dígitos.',
+
             'schedule_start.date_format' => 'Ingresa una hora válida de inicio (formato 24 horas).',
             'schedule_end.date_format' => 'Ingresa una hora válida de fin (formato 24 horas).',
             'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.'
