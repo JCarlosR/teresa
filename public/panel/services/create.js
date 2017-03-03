@@ -40,7 +40,9 @@ $(document).ready(function() {
     }
 
     function setCharactersLengthMessage($summerNote, $limit, $status) {
-        var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text().length;
+        var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
+            .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
+
         $limit.html(charactersNum + ' caracteres');
 
         if (charactersNum >= 300)

@@ -13,11 +13,6 @@
                 </div>
             @endif
 
-            <a href="{{ url('/admin/pagos/registrar') }}" class="btn btn-success pull-right">
-                <span class="glyphicon glyphicon-plus"></span>
-                Registrar nuevo cronograma de pagos
-            </a>
-
             <p class="mb-20">Listado de cronogramas de pago, y sus correspondientes contratos asociados.</p>
             <table class="table table-hover">
                 <thead>
