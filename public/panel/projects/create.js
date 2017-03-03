@@ -44,6 +44,9 @@ $(document).ready(function() {
         setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
     }
 
+    // Apply one and first evaluation
+    onKeyUp0(); onKeyUp1(); onKeyUp2(); onKeyUp3();
+
     function setCharactersLengthMessage($summerNote, $limit, $status) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
             .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
