@@ -56,9 +56,9 @@ class PaymentController extends Controller
         );
 
         if ($paymentSchedule->modality == 'Q')
-            $daysInterval = 90;
+            $monthsInterval = 3;
         else // M
-            $daysInterval = 30;
+            $monthsInterval = 1;
 
         $amountPerQuota = $paymentSchedule->total_amount / $paymentSchedule->quotas;
         $amountNet = $amountPerQuota * (1-$paymentSchedule->income_tax);
@@ -66,7 +66,7 @@ class PaymentController extends Controller
         for ($i=0; $i<$paymentSchedule->quotas; ++$i) {
             PaymentScheduleDetail::create([
                 'payment_schedule_id' => $paymentSchedule->id,
-                'emission_date' => $paymentSchedule->starter_date->addDays($daysInterval*$i),
+                'emission_date' => $paymentSchedule->starter_date->addMonths($monthsInterval*$i),
                 'total' => $amountPerQuota,
                 'net' => $amountNet
             ]);
