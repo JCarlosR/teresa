@@ -20,5 +20,12 @@
 @endsection
 
 @section('scripts')
+    <!-- Flot Charts-->
+    <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.time.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.resize.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/flot.curvedlines/curvedLines.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+
     <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
 @endsection

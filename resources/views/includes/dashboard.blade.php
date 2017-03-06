@@ -286,7 +286,7 @@
     <div class="col-lg-12">
         <div class="widget">
             <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Visitors Analytics</h3>
+                <h3 class="widget-title pull-left">Visitas del sitio web</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>

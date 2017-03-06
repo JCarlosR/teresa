@@ -366,13 +366,10 @@
 <!-- jQuery Counter Up-->
 <script type="text/javascript" src="{{ asset('plugins/jquery-waypoints/waypoints.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plugins/Counter-Up/jquery.counterup.min.js') }}"></script>
-<!-- Flot Charts-->
-<script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.resize.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plugins/flot.curvedlines/curvedLines.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
+
 <!-- Bootstrap Date Range Picker-->
 <script type="text/javascript" src="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+
 <!-- Core JS-->
 <script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>

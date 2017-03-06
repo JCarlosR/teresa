@@ -50,6 +50,9 @@ Route::get('/leads/{id}', 'Client\LeadController@show');
 // Location
 Route::get('/mapa', 'Client\MapController@index');
 
+// Google Analytics
+Route::get('/analytics', 'Client\GoogleAnalyticsController@index');
+
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
