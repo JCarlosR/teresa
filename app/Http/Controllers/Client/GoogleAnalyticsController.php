@@ -12,14 +12,15 @@ use App\Teresa\Analytics\AnalyticsHelper;
 
 class GoogleAnalyticsController extends Controller
 {
-    public function index(AnalyticsHelper $analyticsHelper)
+    public function index(AnalyticsHelper $analyticsHelper, Request $request)
     {
         $metrics = 'ga:pageviews';
         $optional = [
             'dimensions' => 'ga:date,ga:medium'
         ];
 
-        $analytics = $analyticsHelper->getView('132436261');
+        $view_id = $request->input('view_id');
+        $analytics = $analyticsHelper->getView($view_id);
         $response = $analytics->performQuery(Period::days(30), $metrics, $optional);
         // dd($response);
         return $this->responseToChartData($response->rows);

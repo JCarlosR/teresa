@@ -5,7 +5,9 @@ return [
     /*
      * The view id of which you want to display data.
      */
-    'view_id' => env('ANALYTICS_VIEW_ID'),
+    'view_id' => env('ANALYTICS_VIEW_ID', ''),
+    // We will use a custom class AnalyticsHelper to instantiate an Analytics object
+    // based on a GA View ID parameter :)
 
     /*
      * Path to the client secret json file. Take a look at the README of this package

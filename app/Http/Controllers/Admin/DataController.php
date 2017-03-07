@@ -58,6 +58,7 @@ class DataController extends Controller
         $user->description = $request->get('description');
 
         $user->google_analytics = $request->get('google_analytics');
+        $user->google_analytics_view_id = $request->get('google_analytics_view_id');
         $user->webmaster_tools_google = $request->get('webmaster_tools_google');
         $user->webmaster_tools_bing = $request->get('webmaster_tools_bing');
 

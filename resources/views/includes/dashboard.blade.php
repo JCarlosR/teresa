@@ -304,7 +304,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="flot-visitor" style="height: 300px"></div>
+                        {{-- GA View ID (required to query the Analytics API) --}}
+                        <div id="flot-visitor" style="height: 300px" data-view-id="{{ $client->google_analytics_view_id }}">
+                            {{-- Load using Ajax --}}
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="media">

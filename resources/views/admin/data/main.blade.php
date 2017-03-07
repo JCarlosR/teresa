@@ -120,6 +120,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="google_analytics_view_id" class="col-lg-2 control-label">GA View ID</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" name="google_analytics_view_id" placeholder="Google Analytics View ID" value="{{ old('google_analytics_view_id', $client->google_analytics_view_id) }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="webmaster_tools_google" class="col-lg-2 control-label">WT Google</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" name="webmaster_tools_google" placeholder="Webmaster Tools Google" value="{{ old('webmaster_tools_google', $client->webmaster_tools_google) }}">
