@@ -53,6 +53,9 @@ Route::get('/mapa', 'Client\MapController@index');
 // Google Analytics
 Route::post('/analytics', 'Client\GoogleAnalyticsController@index');
 
+// External contact forms
+Route::get('/formulario/contacto', 'External\ContactController@index');
+
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
