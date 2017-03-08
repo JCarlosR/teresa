@@ -59,7 +59,7 @@
 
         <li class="panel">
             <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
-                <i class="ion-ios-browsers bg-danger"></i>
+                <i class="ion-ios-pie-outline bg-purple"></i>
                 <span class="sidebar-title">Leads</span>
             </a>
             <ul id="collapse3" class="list-unstyled collapse">
