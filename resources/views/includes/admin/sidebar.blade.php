@@ -1,4 +1,5 @@
 <aside data-mcs-theme="minimal-dark" class="main-sidebar mCustomScrollbar">
+
     <div class="media user">
         <div class="media-left">
             <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;" class="easy-pie-chart">
@@ -57,17 +58,23 @@
         <li class="sidebar-category">Datos de gestión</li>
 
         <li class="panel">
+            <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
+                <i class="ion-ios-browsers bg-danger"></i>
+                <span class="sidebar-title">Leads</span>
+            </a>
+            <ul id="collapse3" class="list-unstyled collapse">
+                <li><a href="{{ url('/admin/leads') }}">Reportes</a></li>
+                <li><a href="{{ url('/admin/inbox') }}">Bandeja</a></li>
+                <li><a href="{{ url('/admin/inbox/config') }}">Configuración</a></li>
+            </ul>
+        </li>
+        <li class="panel">
             <a href="{{ url('/admin/pagos') }}">
                 <i class="ion-ios-calendar-outline bg-purple"></i>
                 <span class="sidebar-title">Facturación</span>
             </a>
         </li>
-        <li class="panel">
-            <a href="{{ url('/admin/leads') }}">
-                <i class="ion-ios-pie-outline bg-purple"></i>
-                <span class="sidebar-title">Leads</span>
-            </a>
-        </li>
+
     </ul>
 
 </aside>

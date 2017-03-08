@@ -112,7 +112,15 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/nosotros', 'AboutUsController@index');
     Route::post('/nosotros', 'AboutUsController@update');
 
-    // Payments & Leads
+    // Leads
+    Route::get('/leads', 'Admin\LeadController@index');
+    Route::get('/leads/{id}', 'Admin\LeadController@edit');
+    Route::post('/leads/update', 'Admin\LeadController@update');
+    // Inbox
+    Route::get('/inbox', 'InboxController@index');
+    Route::get('/inbox/config', 'InboxController@config');
+
+    // Payments
     Route::get('/pagos', 'Admin\PaymentController@index');
     Route::get('/pagos/registrar', 'Admin\PaymentController@create');
     Route::post('/pagos/registrar', 'Admin\PaymentController@store');
@@ -120,7 +128,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/pagos/detalles', 'Admin\PaymentController@detailPayment'); // update payment_date
     Route::post('/pagos/{id}/titulo', 'Admin\PaymentController@updateTitle');
     Route::post('/pagos/eliminar', 'Admin\PaymentController@delete');
-    Route::get('/leads', 'Admin\LeadController@index');
-    Route::get('/leads/{id}', 'Admin\LeadController@edit');
-    Route::post('/leads/update', 'Admin\LeadController@update');
+
 });

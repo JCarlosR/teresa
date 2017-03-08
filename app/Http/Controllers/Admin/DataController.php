@@ -26,7 +26,10 @@ class DataController extends Controller
             'ruc' => 'digits:11',
             'schedule_start' => 'date_format:H:i',
             'schedule_end' => 'date_format:H:i',
-            'works_from' => 'date'
+            'works_from' => 'date',
+
+            'google_account' => 'email',
+            'contact_email' => 'email'
         ];
         $messages = [
             'trade_name.required' => 'Por favor ingresa el nombre comercial de tu empresa.',
@@ -35,7 +38,10 @@ class DataController extends Controller
             'ruc.digits' => 'El NIF debe constar de 11 dígitos.',
             'schedule_start.date_format' => 'Ingresa una hora válida de inicio (formato 24 horas).',
             'schedule_end.date_format' => 'Ingresa una hora válida de fin (formato 24 horas).',
-            'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.'
+            'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.',
+
+            'google_account.email' => 'Ingresa un email válido como Google Account.',
+            'contact_email.email' => 'El email de contacto no contiene un formato válido.'
         ];
 
         $this->validate($request, $rules, $messages);
@@ -61,6 +67,9 @@ class DataController extends Controller
         $user->google_analytics_view_id = $request->get('google_analytics_view_id');
         $user->webmaster_tools_google = $request->get('webmaster_tools_google');
         $user->webmaster_tools_bing = $request->get('webmaster_tools_bing');
+
+        $user->google_account = $request->get('google_account');
+        $user->contact_email = $request->get('contact_email');
 
         $user->save();
 

@@ -14,6 +14,18 @@ class CreateInboxMessagesTable extends Migration
     {
         Schema::create('inbox_messages', function (Blueprint $table) {
             $table->increments('id');
+
+            // Client target
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('content');
+
+            $table->string('topic');
+
             $table->timestamps();
         });
     }

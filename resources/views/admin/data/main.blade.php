@@ -139,6 +139,24 @@
                     </div>
                 </fieldset>
 
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+                        <div class="form-group">
+                            <label for="google_account" class="col-lg-2 control-label">Google Account</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" name="google_account" placeholder="Correo de gmail para gestión" value="{{ old('google_account', $client->google_account) }}">
+                                <p class="text-muted">Correo creado por nosotros para gestionar cuentas del cliente</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_email" class="col-lg-2 control-label">E-mail de contacto</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" name="contact_email" placeholder="E-mail destinatario" value="{{ old('contact_email', $client->contact_email) }}">
+                                <p class="text-muted">Correo de la empresa que recibirá los mensajes</p>
+                            </div>
+                        </div>
+                </fieldset>
+
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <a href="{{ url("/admin/dashboard") }}" class="btn btn-default">Cancelar</a>
