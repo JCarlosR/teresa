@@ -70,12 +70,12 @@
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Servicios profesionales</h3>
                 <ul class="widget-tools pull-right list-inline">
-                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body">
+            <div class="widget-body" style="display: none;">
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead>
@@ -233,12 +233,12 @@
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Proyectos profesionales</h3>
                 <ul class="widget-tools pull-right list-inline">
-                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body">
+            <div class="widget-body" style="display: none;">
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead>
@@ -260,20 +260,7 @@
                                 <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                             </tr>
                         @endforeach
-                        <tr>
-                            <td>3</td>
-                            <td>Delta App v1.0</td>
-                            <td class="text-center">2017</td>
-                            <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Sigma App v1.1</td>
-                            <td class="text-center">2017</td>
-                            <td class="text-center text-danger"><i class="ion-close-round"></i></td>
-                            <td class="text-center"><span class="label label-outline label-primary">Pausado</span></td>
-                        </tr>
+                        {{--<td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>--}}
                         </tbody>
                     </table>
                 </div>
@@ -312,44 +299,14 @@
                     <div class="col-md-4">
                         <div class="media">
                             <div class="media-body">
-                                <div class="fs-36 fw-300 counter">12,389</div>
-                                <h6 class="m-0 fw-400 text-muted text-uppercase">Your Profile Views</h6>
+                                <div class="fs-36 fw-300" id="total-visits-count">0</div>
+                                <h6 class="m-0 fw-400 text-muted text-uppercase">Visitas totales</h6>
                             </div>
-                            <div class="media-right"><i class="ion-ios-bookmarks-outline fs-36"></i></div>
+                            <div class="media-right" title="Ir a la sección de Google Analytics">
+                                <i class="ion-arrow-graph-up-right fs-36"></i>
+                            </div>
                         </div>
-                        <div id="flot-profile" style="height: 87px"></div>
-                        <div class="table-responsive mt-10">
-                            <table class="table mb-0 no-border">
-                                <thead>
-                                <tr>
-                                    <th style="width:10%">#</th>
-                                    <th style="width:40%">Browser</th>
-                                    <th style="width:25%">Sessions</th>
-                                    <th style="width:25%">Up/Down</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Chrome</td>
-                                    <td>4325</td>
-                                    <td class="text-success">+3.26%</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Firefox</td>
-                                    <td>3257</td>
-                                    <td class="text-danger">-2.14%</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Edge</td>
-                                    <td>2314</td>
-                                    <td class="text-success">+2.92%</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <div id="donut-chart" style="height: 300px"></div>
                     </div>
                 </div>
             </div>
@@ -360,7 +317,7 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-heading">
-                <h3 class="widget-title">Recent Activities</h3>
+                <h3 class="widget-title">Actividad reciente</h3>
             </div>
             <div class="widget-body">
                 <ul class="activity-list activity-sm list-unstyled mb-0">
@@ -391,7 +348,7 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-heading">
-                <h3 class="widget-title">Trending Articles</h3>
+                <h3 class="widget-title">Últimos artículos</h3>
             </div>
             <div class="widget-body">
                 <ul class="media-list media-lg mb-0">

@@ -1,6 +1,8 @@
 var ANALYTICS_VIEW_ID;
 var CSRF_TOKEN;
 
+var $totalVisitsCount;
+
 $(document).ready(function() {
 
     // jQuery Counter Up
@@ -8,83 +10,6 @@ $(document).ready(function() {
     $('.counter').counterUp({
         delay: 10,
         time: 1000
-    });
-
-
-    // Profile Views
-    // --------------------------------------------------
-
-    var dataProfile = [
-        [0, 3424],
-        [1, 4355],
-        [2, 3216],
-        [3, 1435],
-        [4, 5467],
-        [5, 4356],
-        [6, 2978],
-        [7, 972],
-        [8, 1230],
-        [9, 1900],
-        [10, 4398],
-        [11, 5690],
-        [12, 3980],
-        [13, 4329],
-        [14, 1240]
-    ];
-    var datasetProfile = [{
-        label: 'Profile',
-        data: dataProfile,
-        color: '#1F364F',
-        lines: {
-            show: true,
-            lineWidth: 2
-        },
-        curvedLines: {
-            apply: true,
-            monotonicFit: true
-        }
-    }, {
-        data: dataProfile,
-        color: '#1F364F',
-        lines: {
-            show: true,
-            lineWidth: 0
-        }
-    }];
-    var optionsProfile = {
-        series: {
-            curvedLines: {
-                active: true
-            },
-            shadowSize: 0
-        },
-        grid: {
-            hoverable: true,
-            borderWidth: 0
-        },
-        xaxis: {
-            ticks: 0
-        },
-        yaxis: {
-            ticks: 0
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: false
-        }
-    };
-    $.plot($('#flot-profile'), datasetProfile, optionsProfile);
-    $('#flot-profile').bind('plothover', function(event, pos, item) {
-        if (item) {
-            $('.flotTip').text('Views: ' + item.datapoint[1].toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')).css({
-                top: item.pageY + 15,
-                left: item.pageX + 10
-            }).show();
-        } else {
-            $('.flotTip').hide();
-        }
     });
 
 
@@ -125,6 +50,7 @@ $(document).ready(function() {
 
     ANALYTICS_VIEW_ID = $('#flot-visitor').data('view-id');
     CSRF_TOKEN = $('meta[name=csrf-token]').attr('content');
+    $totalVisitsCount = $('#total-visits-count');
 
     performGoogleAnalyticsQuery(optionsVisitor);
 
@@ -220,5 +146,53 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
                 $('.flotTip').hide();
             }
         });
+
+        // Donut chart
+
+        $totalVisitsCount.text(1300);
+        $totalVisitsCount.counterUp({ time: 1000 });
+
+        var dataSetPie = [{
+            label: 'Orgánico',
+            data: 4119630000,
+            color: '#5DC2AE'
+        }, {
+            label: 'Referido',
+            data: 590950000,
+            color: '#B065E9'
+        }, {
+            label: 'Directo',
+            data: 1012960000,
+            color: '#5195E2'
+        }];
+        var optionsDonut = {
+            series: {
+                pie: {
+                    show: true,
+                    stroke: {
+                        width: 0
+                    },
+                    innerRadius: 0.4,
+                    label: {
+                        show: true
+                    },
+                    highlight: {
+                        opacity: 0
+                    }
+                }
+            },
+            grid: {
+                hoverable: true
+            },
+            tooltip: {
+                show: true,
+                content: '%s: %p.0%',
+                defaultTheme: false
+            },
+            legend: {
+                show: false
+            }
+        };
+        $.plot($('#donut-chart'), dataSetPie, optionsDonut);
     }, 'json');
 }

@@ -24,6 +24,7 @@
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.time.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.resize.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.pie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot.curvedlines/curvedLines.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
 
