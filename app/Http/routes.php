@@ -52,6 +52,7 @@ Route::get('/mapa', 'Client\MapController@index');
 
 // Google Analytics
 Route::post('/analytics', 'Client\GoogleAnalyticsController@index');
+Route::post('/analytics/channels', 'Client\GoogleAnalyticsController@byChannelGrouping');
 
 // External contact forms
 Route::get('/formulario/contacto', 'External\ContactController@index');

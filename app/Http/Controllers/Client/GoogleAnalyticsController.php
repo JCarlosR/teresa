@@ -23,12 +23,12 @@ class GoogleAnalyticsController extends Controller
         $analytics = $analyticsHelper->getView($view_id);
         $response = $analytics->performQuery(Period::days(30), $metrics, $optional);
         // dd($response);
-        return $this->responseToChartData($response->rows);
+        return $this->responseToChartVisitsData($response->rows);
 
         // return $analytics->fetchVisitorsAndPageViews(Period::days(30));
     }
 
-    public function responseToChartData($rows) {
+    public function responseToChartVisitsData($rows) {
         $data = [];
         $data['total'] = [];
         $data['referral'] = [];
@@ -69,5 +69,18 @@ class GoogleAnalyticsController extends Controller
         }
 
         return $data;
+    }
+
+    public function byChannelGrouping(AnalyticsHelper $analyticsHelper, Request $request)
+    {
+        $metrics = 'ga:pageviews';
+        $optional = [
+            'dimensions' => 'ga:channelGrouping'
+        ];
+
+        $view_id = $request->input('view_id');
+        $analytics = $analyticsHelper->getView($view_id);
+        $response = $analytics->performQuery(Period::days(30), $metrics, $optional);
+        return $response->rows;
     }
 }

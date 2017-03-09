@@ -91,6 +91,7 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
         return;
     }
 
+    // Plot chart: visitors
     $.post('/analytics?view_id='+ANALYTICS_VIEW_ID+'&_token='+CSRF_TOKEN, function (data) {
         // at this point we have data.total, data.referral and data.organic
 
@@ -147,23 +148,34 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
             }
         });
 
-        // Donut chart
+    }, 'json');
 
-        $totalVisitsCount.text(1300);
+    // Donut chart: byChannelGrouping
+    var params = 'view_id='+ANALYTICS_VIEW_ID+'&_token='+CSRF_TOKEN;
+    $.post('/analytics/channels', params, function (data) {
+        var totalVisits = 0;
+        for (var i=0; i<data.length; ++i) {
+            totalVisits += parseInt(data[i][1]);
+        }
+        $totalVisitsCount.text(totalVisits);
         $totalVisitsCount.counterUp({ time: 1000 });
 
         var dataSetPie = [{
+            label: 'Directo',
+            data: data[0][1],
+            color: '#5195E2'
+        }, {
             label: 'Orgánico',
-            data: 4119630000,
+            data: data[1][1],
             color: '#5DC2AE'
         }, {
             label: 'Referido',
-            data: 590950000,
+            data: data[2][1],
             color: '#B065E9'
         }, {
-            label: 'Directo',
-            data: 1012960000,
-            color: '#5195E2'
+            label: 'Social',
+            data: data[3][1],
+            color: '#e9c200'
         }];
         var optionsDonut = {
             series: {
