@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
@@ -40,10 +40,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <folding>
+                <element signature="e#40#53#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#6059#6130#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
+            <state relative-caret-position="84">
               <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="61" />
               <folding />
             </state>
@@ -104,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Relationships/ContentRelatedRelationships.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Accessors/DataPresentationAccessors.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Accessors/RolesRelatedAccessors.php" />
@@ -152,9 +185,10 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_03_07_161145_create_inbox_messages_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DataController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
         <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
+        <option value="$PROJECT_DIR$/resources/views/client/inbox/config.blade.php" />
       </list>
     </option>
   </component>
@@ -304,19 +338,19 @@
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\teresa\resources\views\client\inbox" />
-      <recent name="C:\wamp\www\teresa\resources\views\client\services" />
-      <recent name="C:\wamp\www\teresa\app\Teresa\Clients\Accessors" />
-      <recent name="C:\wamp\www\teresa\resources\views\client\leads" />
-      <recent name="C:\wamp\www\teresa\resources\views\client\payments" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\teresa\public\panel" />
       <recent name="C:\wamp\www\teresa\public\admin" />
       <recent name="C:\wamp\www\teresa\resources\views\layouts\projects\architects" />
       <recent name="C:\wamp\www\teresa\app\Http\Controllers\Admin" />
       <recent name="C:\wamp\www\teresa\resources\views\admin\employees" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\teresa\resources\views\client\inbox" />
+      <recent name="C:\wamp\www\teresa\resources\views\client\services" />
+      <recent name="C:\wamp\www\teresa\app\Teresa\Clients\Accessors" />
+      <recent name="C:\wamp\www\teresa\resources\views\client\leads" />
+      <recent name="C:\wamp\www\teresa\resources\views\client\payments" />
     </key>
   </component>
   <component name="RunManager">
@@ -466,7 +500,8 @@
       <workItem from="1488808137950" duration="7892000" />
       <workItem from="1488834930764" duration="15000" />
       <workItem from="1488895830563" duration="7683000" />
-      <workItem from="1488989274844" duration="3720000" />
+      <workItem from="1488989274844" duration="3764000" />
+      <workItem from="1489069843550" duration="3989000" />
     </task>
     <task id="LOCAL-00001" summary="No min value for years">
       <created>1488379703418</created>
@@ -706,11 +741,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488995514170</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fix leads icon color in sidebar">
+      <created>1488995656987</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1488995656987</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302343000" />
+    <option name="totallyTimeSpent" value="306376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,7 +768,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30862328" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31316188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -753,7 +795,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Service show option" />
     <MESSAGE value="Show service characters status" />
     <MESSAGE value="Show project characters status" />
     <MESSAGE value="Show service question status in show" />
@@ -778,7 +819,8 @@
     <MESSAGE value="Custom Google Analytics view id" />
     <MESSAGE value="Mail advances using Gmail SMTP" />
     <MESSAGE value="Contact form and inbox advances" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact form and inbox advances" />
+    <MESSAGE value="Fix leads icon color in sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix leads icon color in sidebar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,24 +829,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/about-us/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="47" column="56" lean-forward="false" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -988,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="61" lean-forward="false" selection-start-line="57" selection-start-column="61" selection-end-line="57" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,7 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,7 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,15 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_08_161812_add_contact_form_data_for_clients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="153" column="32" lean-forward="false" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,23 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171">
           <caret line="43" column="89" lean-forward="false" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1128,7 +1122,7 @@
         <state relative-caret-position="207">
           <caret line="57" column="105" lean-forward="false" selection-start-line="57" selection-start-column="105" selection-end-line="57" selection-end-column="105" />
           <folding>
-            <element signature="e#3990#4010#0#HTML" expanded="true" />
+            <element signature="e#3990#4010#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1137,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,13 +1138,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="84">
           <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="61" />
           <folding />
         </state>
@@ -1162,6 +1154,52 @@
         <state relative-caret-position="228">
           <caret line="61" column="61" lean-forward="false" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#262#528#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_08_161812_add_contact_form_data_for_clients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#6059#6130#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
