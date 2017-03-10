@@ -31,78 +31,77 @@
                 </div>
             @endif
 
-            <form action="{{ url('/proyectos/registrar') }}" method="POST">
+            <form action="{{ url('/proyectos/registrar') }}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <fieldset>
                     <legend>Ficha del proyecto</legend>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-name">Nombre del proyecto</label>
-                                <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name') }}">
-                            </div>
+
+                    <div class="form-group">
+                        <label for="project-name" class="col-sm-2 control-label">Nombre del proyecto</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name') }}">
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-service">Servicios</label>
-                                <ul id="myULServices">
-                                    <!-- Existing list items will be pre-added -->
-                                    @if (old('services'))
-                                        @foreach (old('services') as $old_service)
+                    </div>
+                    <div class="form-group">
+                        <label for="project-service" class="col-sm-2 control-label">Servicios</label>
+                        <div class="col-sm-10">
+                            <ul id="myULServices">
+                                <!-- Existing list items will be pre-added -->
+                                @if (old('services'))
+                                    @foreach (old('services') as $old_service)
                                         <li>{{ $old_service }}</li>
-                                        @endforeach
-                                    @else
-                                        @foreach ($services as $service)
-                                            <li>{{ $service->name }}</li>
-                                        @endforeach
-                                    @endif
-                                </ul>
-                            </div>
+                                    @endforeach
+                                @else
+                                    @foreach ($services as $service)
+                                        <li>{{ $service->name }}</li>
+                                    @endforeach
+                                @endif
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-client">Cliente</label>
-                                <input type="text" name="client" id="project-client" class="form-control" placeholder="Cliente del proyecto" value="{{ old('client') }}">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-year">Año del proyecto</label>
-                                <input type="number" name="year" id="project-year" class="form-control" placeholder="Año de desarrollo del proyecto" value="{{ old('year') }}">
-                            </div>
+                    <div class="form-group">
+                        <label for="project-client" class="col-sm-2 control-label">Cliente</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="client" id="project-client" class="form-control" placeholder="Cliente del proyecto" value="{{ old('client') }}">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-type">Tipo de proyecto</label>
-                                <input type="text" name="type" id="project-type" class="form-control" placeholder="Tipo de proyecto" value="{{ old('type') }}">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-duration">Duración</label>
-                                <input type="text" name="duration" id="project-duration" class="form-control" placeholder="Especificar: días, semanas, meses" value="{{ old('duration') }}">
-                            </div>
+                    <div class="form-group">
+                        <label for="project-year" class="col-sm-2 control-label">Año del proyecto</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="year" id="project-year" class="form-control" placeholder="Año de desarrollo del proyecto" value="{{ old('year') }}">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="project-status">Estado</label>
-                                <input type="text" name="status" id="project-status" class="form-control"
-                                       placeholder="Estado del proyecto" value="{{ old('status') }}">
-                            </div>
+
+                    <div class="form-group">
+                        <label for="project-type" class="col-sm-2 control-label">Tipo de proyecto</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="type" id="project-type" class="form-control" placeholder="Tipo de proyecto" value="{{ old('type') }}">
                         </div>
-                        <div class="col-md-6">
-                            <label for="project-acknowledgments">Reconocimientos</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-duration" class="col-sm-2 control-label">Duración</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="duration" id="project-duration" class="form-control" placeholder="Especificar: días, semanas, meses" value="{{ old('duration') }}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-status" class="col-sm-2 control-label">Estado</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="status" id="project-status" class="form-control"
+                                   placeholder="Estado del proyecto" value="{{ old('status') }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-acknowledgments" class="col-sm-2 control-label">Reconocimientos</label>
+                        <div class="col-sm-10">
                             <textarea name="acknowledgments" id="project-acknowledgments" placeholder="Reconocimientos recibidos por el proyecto" rows="2" class="form-control">{{ old('acknowledgments') }}</textarea>
                         </div>
                     </div>
+
                 </fieldset>
 
                 @if ($client->client_type_id)
