@@ -112,7 +112,9 @@
     </select>
 
     Mensaje:
-    <textarea name="content" required>
+    <textarea name="content" required></textarea>
+
+    <button type="submit">Enviar</button>
 </form>
                     </textarea>
                     <p class="text-muted">No se recomienda copiar y pegar porque se perderían los estilos del formulario de la plantilla. Se debe usar como guía.</p>
