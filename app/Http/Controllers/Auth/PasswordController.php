@@ -20,13 +20,16 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
-    /**
-     * Create a new password controller instance.
-     *
-     * @return void
-     */
+    protected $subject = 'Cambia tu contraseña aquí';
+
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    // Override the redirect path
+    public function redirectPath()
+    {
+        return auth()->user()->root_route;
     }
 }
