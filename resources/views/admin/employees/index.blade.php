@@ -32,7 +32,7 @@
                     <td>{{ $employee->job }}</td>
                     <td>{{ $employee->name }}</td>
                     <td>
-                        {{ $employee->emails }}
+                        <textarea readonly class="form-control" style="resize: none;">{{ $employee->emails }}</textarea>
                     </td>
                     <td>
                         {{ $employee->phones }}
