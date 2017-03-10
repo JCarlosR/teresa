@@ -13,6 +13,8 @@
     <blockquote>
         <p><strong>Nombre: </strong> {{ $name }}</p>
         <p><strong>E-mail: </strong> {{ $email }}</p>
+        <p><strong>Teléfono: </strong> {{ $phone }}</p>
+        <p><strong>Asunto: </strong> {{ $topic }}</p>
         <p><strong>Mensaje: </strong> {{ $content }}</p>
     </blockquote>
 </body>
