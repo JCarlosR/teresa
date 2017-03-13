@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\External;
 
+use App\InboxMessage;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -15,6 +16,8 @@ class ContactController extends Controller
         Mail::send('emails.external.contact', $request->all(), function ($m) {
             $m->to('juancagb.17@gmail.com', 'Juan Ramos')->subject('Han usado el formulario de contacto!');
         });
+
+        // InboxMessage::create();
 
         return back();
     }
