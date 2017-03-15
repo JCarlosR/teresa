@@ -68,7 +68,7 @@
         </div>
         <div class="widget">
             <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Servicios profesionales</h3>
+                <h3 class="widget-title pull-left">Servicios al {{ $client->services_percent }} %</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
@@ -231,7 +231,7 @@
         </div>
         <div class="widget">
             <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Proyectos profesionales</h3>
+                <h3 class="widget-title pull-left">Proyectos al {{ $client->projects_percent }} %</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
