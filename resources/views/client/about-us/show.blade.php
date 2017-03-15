@@ -27,7 +27,7 @@
             @if (session('notification'))
                 <div class="alert alert-success">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    
+
                     {{ session('notification') }}
                 </div>
             @endif
@@ -42,7 +42,7 @@
                 </div>
             @endif
 
-            <a href="{{ auth()->user()->admin_prefix_route }}/nosotros/editar" class="btn btn-primary pull-right" title="Editar sección">
+            <a href="/nosotros/editar" class="btn btn-primary pull-right" title="Editar sección">
                 <i class="glyphicon glyphicon-pencil"></i>
             </a>
 

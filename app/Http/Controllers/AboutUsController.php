@@ -58,7 +58,7 @@ class AboutUsController extends Controller
 
         session()->flash('notification', 'Se han guardado exitosamente los datos sobre la sección nosotros.');
 
-        $afterEditAboutUs = auth()->user()->admin_prefix_route . '/nosotros';
-        return redirect($afterEditAboutUs);
+        // same route for admin and client
+        return redirect('/nosotros');
     }
 }

@@ -93,6 +93,9 @@
                 </fieldset>
 
                 <div class="text-right">
+                    <a href="/servicios" type="button" class="btn btn-default">
+                        Volver sin guardar
+                    </a>
                     <button type="submit" class="btn btn-primary">
                         Guardar cambios
                     </button>

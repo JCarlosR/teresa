@@ -4,15 +4,21 @@
 <div class="page-content container-fluid">
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
-        <li><a href="{{ url(auth()->user()->services_route) }}">Servicios</a></li>
+        <li><a href="/servicios">Servicios</a></li>
         <li class="active">Ver servicio</li>
     </ol>
 
     <div class="widget">
         <div class="widget-heading">
-            <h1>{{ $service->name }}</h1>
+            <h1>
+                {{ $service->name }}
+                <a href="/servicio/{{ $service->id }}/editar" title="Editar servicio" style="color: #57caff">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </a>
+            </h1>
         </div>
         <div class="widget-body">
+
 
             <div class="row">
                 <div class="col-md-8">

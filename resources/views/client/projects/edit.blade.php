@@ -154,9 +154,9 @@
                 </fieldset>
 
                 <div class="text-right">
-                    <button type="button" class="btn btn-default" onclick="window.history.back();">
+                    <a href="/proyectos" type="button" class="btn btn-default">
                         Volver sin guardar
-                    </button>
+                    </a>
                     <button type="submit" class="btn btn-primary">
                         Guardar proyecto
                     </button>
