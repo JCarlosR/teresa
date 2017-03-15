@@ -27,6 +27,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $dates = [
+        'service_started_at'
+    ];
+
     // where to redirect users after login / registration.
     protected $clientPath = '/dashboard';
     protected $adminPath = '/admin';
