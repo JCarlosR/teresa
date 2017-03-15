@@ -29,4 +29,10 @@ trait RolesRelatedAccessors
         return '/servicios';
     }
 
+    public function getAdminPrefixRouteAttribute()
+    {
+        if ($this->is_admin)
+            return '/admin';
+        return '';
+    }
 }

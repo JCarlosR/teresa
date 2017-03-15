@@ -23,13 +23,22 @@ class AboutUsController extends Controller
             $this->user = auth()->user();
     }
 
-    public function index()
+    public function show()
     {
         $about_us = AboutUs::firstOrNew([
             'user_id' => $this->user->id
         ]);
 
-        return view('client.about-us.index')->with(compact('about_us'));
+        return view('client.about-us.show')->with(compact('about_us'));
+    }
+
+    public function edit()
+    {
+        $about_us = AboutUs::firstOrNew([
+            'user_id' => $this->user->id
+        ]);
+
+        return view('client.about-us.edit')->with(compact('about_us'));
     }
 
     public function update(Request $request)
@@ -48,6 +57,8 @@ class AboutUsController extends Controller
         $about_us->save();
 
         session()->flash('notification', 'Se han guardado exitosamente los datos sobre la sección nosotros.');
-        return back();
+
+        $afterEditAboutUs = auth()->user()->admin_prefix_route . '/nosotros';
+        return redirect($afterEditAboutUs);
     }
 }

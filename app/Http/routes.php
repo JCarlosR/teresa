@@ -38,7 +38,8 @@ Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
 Route::post('/proyecto/editar', 'ProjectController@update');
 Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 // About us
-Route::get('/nosotros', 'AboutUsController@index');
+Route::get('/nosotros', 'AboutUsController@edit');
+Route::get('/nosotros/editar', 'AboutUsController@edit');
 Route::post('/nosotros', 'AboutUsController@update');
 
 // Payments & Leads
@@ -110,7 +111,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/proyecto/editar', 'ProjectController@update');
     Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
     // About us
-    Route::get('/nosotros', 'AboutUsController@index');
+    Route::get('/nosotros', 'AboutUsController@show');
+    Route::get('/nosotros/editar', 'AboutUsController@edit');
     Route::post('/nosotros', 'AboutUsController@update');
 
     // Leads
