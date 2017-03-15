@@ -22,4 +22,11 @@ trait RolesRelatedAccessors
         return $this->clientPath;
     }
 
+    public function getServicesRouteAttribute()
+    {
+        if ($this->is_admin)
+            return '/admin/servicios';
+        return '/servicios';
+    }
+
 }

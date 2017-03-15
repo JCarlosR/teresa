@@ -35,6 +35,7 @@ class User extends Authenticatable
     use DataPresentationAccessors;
     use RolesRelatedAccessors;
     use TypeAndStatusAccessors;
+
     // accessors: client content
     use ProjectsRelatedAccessors;
     use ServicesRelatedAccessors;
