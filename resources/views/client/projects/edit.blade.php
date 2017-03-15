@@ -7,6 +7,9 @@
         textarea {
             display: none;
         }
+        [id^="status"] {
+            font-size: 1.8em;
+        }
     </style>
 
     {{-- Tag-it styles --}}
@@ -117,36 +120,36 @@
                 <fieldset>
                     <legend>Memoria descriptiva</legend>
 
+                    <span id="status0" class="pull-right"></span>
                     <h3>
                         Título de la historia del proyecto.
                         <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
                     </h3>
                     <span id="limit0"></span>
-                    <span id="status0" class="pull-right"></span>
                     <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0', $project->question_0) }}</textarea>
 
+                    <span id="status1" class="pull-right"></span>
                     <h3>
                         ¿Cuál fue el encargo?
                         <small>¿Se realizo un diagnóstico/estudio previo a la ejecución del proyecto? Descríbelo</small>
                     </h3>
                     <span id="limit1"></span>
-                    <span id="status1" class="pull-right"></span>
                     <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1', $project->question_1) }}</textarea>
 
+                    <span id="status2" class="pull-right"></span>
                     <h3>
                         ¿Cuál fue el planteamiento del proyecto?
                         <small>¿Cómo se planteó la ejecución del proyecto y en dónde reside el valor añadido entregado al cliente?</small>
                     </h3>
                     <span id="limit2"></span>
-                    <span id="status2" class="pull-right"></span>
                     <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2', $project->question_2) }}</textarea>
 
+                    <span id="status3" class="pull-right"></span>
                     <h3>
                         ¿Qué detalles técnicos especificarías?
                         <small>¿Que dificultades se encontraron pero fueron superadas durante la realización del proyecto? ¿Se entregó un cronograma e informe de resultados?</small>
                     </h3>
                     <span id="limit3"></span>
-                    <span id="status3" class="pull-right"></span>
                     <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3', $project->question_3) }}</textarea>
                 </fieldset>
 
