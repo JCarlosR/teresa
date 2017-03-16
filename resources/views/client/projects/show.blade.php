@@ -6,6 +6,12 @@
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
+    <ol class="breadcrumb">
+        <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
+        <li><a href="/proyectos">Proyectos</a></li>
+        <li class="active">Ver proyecto</li>
+    </ol>
+
     <div class="widget">
         <div class="widget-heading">
             {!! $project->question_0 !!}

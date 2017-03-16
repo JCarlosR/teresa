@@ -17,7 +17,7 @@
 <div class="page-content container-fluid">
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
-        <li><a href="{{ url(auth()->user()->services_route) }}">Servicios</a></li>
+        <li><a href="/servicios">Servicios</a></li>
         <li class="active">Editar servicio</li>
     </ol>
 

@@ -12,6 +12,12 @@
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
+    <ol class="breadcrumb">
+        <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li class="active">Nuevo servicio</li>
+    </ol>
+
     <div class="widget">
         <div class="widget-heading">
             <h3 class="widget-title">Nuevo servicio profesional</h3>
