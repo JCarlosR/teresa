@@ -59,7 +59,7 @@ Route::post('/analytics/channels', 'Client\GoogleAnalyticsController@byChannelGr
 
 Route::group(['middleware' => 'cors'], function(Router $router){
     // External contact forms
-    $router->post('/formulario/contacto', 'External\ContactController@index');
+    $router->get('/formulario/contacto', 'External\ContactController@index');
 });
 
 // Admin management
