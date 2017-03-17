@@ -56,7 +56,7 @@ Route::post('/analytics', 'Client\GoogleAnalyticsController@index');
 Route::post('/analytics/channels', 'Client\GoogleAnalyticsController@byChannelGrouping');
 
 // External contact forms
-Route::get('/formulario/contacto', 'External\ContactController@index');
+Route::post('/formulario/contacto', 'External\ContactController@index');
 
 // Admin management
 Route::group(['prefix' => 'admin'], function () {

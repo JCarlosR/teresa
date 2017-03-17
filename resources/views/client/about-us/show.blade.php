@@ -48,47 +48,39 @@
 
             <fieldset>
                 <span id="status1" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Qué tipo de empresa es?
-                </h3>
-                <span id="limit1"></span>
+                </small>
                 {!! $about_us->question_1 !!}
 
                 <span id="status2" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Cuál es su especialización?
-                </h3>
-                <span id="limit2"></span>
+                </small>
                 {!! $about_us->question_2 !!}
 
                 <span id="status3" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Cuándo, cómo y dónde se creó la empresa?
-                </h3>
-                <span id="limit3"></span>
+                </small>
                 {!! $about_us->question_3 !!}
 
                 <span id="status4" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Qué servicios ofrecen?
-                </h3>
-                <span id="limit4"></span>
+                </small>
                 {!! $about_us->question_4 !!}
 
                 <span id="status5" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Cuáles con los objetivos de la empresa?
-                    <small>Misión</small>
-                </h3>
-                <span id="limit5"></span>
+                </small>
                 {!! $about_us->question_5 !!}
 
                 <span id="status6" class="pull-right"></span>
-                <h3>
+                <small>
                     ¿Cómo ven el futuro de la empresa?
-                    <small>Visión, a corto y largo plazo</small>
-                </h3>
-                <span id="limit6"></span>
+                </small>
                 {!! $about_us->question_6 !!}
             </fieldset>
         </div>
