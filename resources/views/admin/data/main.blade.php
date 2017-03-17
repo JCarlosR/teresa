@@ -87,7 +87,7 @@
                     <div class="form-group">
                         <label for="service_started_at" class="col-lg-2 control-label">Inicio del servicio SEO</label>
                         <div class="col-lg-10">
-                            <input type="date" class="form-control" value="{{ $client->service_started_at }}" name="service_started_at" id="service_started_at">
+                            <input type="date" class="form-control" value="{{ $client->service_started_at->toDateString() }}" name="service_started_at" id="service_started_at">
                             <span class="help-block">Ingrese la fecha desde la que se brinda el servicio SEO a este cliente.</span>
                         </div>
                     </div>
