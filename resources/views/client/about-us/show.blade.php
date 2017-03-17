@@ -42,45 +42,34 @@
                 </div>
             @endif
 
-            <a href="/nosotros/editar" class="btn btn-primary pull-right" title="Editar sección">
+            <a href="/nosotros/editar" class="pull-right" title="Editar sección"
+               style="color: #57caff; font-size: 2em;">
                 <i class="glyphicon glyphicon-pencil"></i>
             </a>
 
             <fieldset>
                 <span id="status1" class="pull-right"></span>
-                <small>
-                    ¿Qué tipo de empresa es?
-                </small>
+                {{--¿Qué tipo de empresa es?--}}
                 {!! $about_us->question_1 !!}
 
                 <span id="status2" class="pull-right"></span>
-                <small>
-                    ¿Cuál es su especialización?
-                </small>
+                {{--¿Cuál es su especialización?--}}
                 {!! $about_us->question_2 !!}
 
                 <span id="status3" class="pull-right"></span>
-                <small>
-                    ¿Cuándo, cómo y dónde se creó la empresa?
-                </small>
+                {{--¿Cuándo, cómo y dónde se creó la empresa?--}}
                 {!! $about_us->question_3 !!}
 
                 <span id="status4" class="pull-right"></span>
-                <small>
-                    ¿Qué servicios ofrecen?
-                </small>
+                {{--¿Qué servicios ofrecen?--}}
                 {!! $about_us->question_4 !!}
 
                 <span id="status5" class="pull-right"></span>
-                <small>
-                    ¿Cuáles con los objetivos de la empresa?
-                </small>
+                {{--¿Cuáles con los objetivos de la empresa?--}}
                 {!! $about_us->question_5 !!}
 
                 <span id="status6" class="pull-right"></span>
-                <small>
-                    ¿Cómo ven el futuro de la empresa?
-                </small>
+                {{--¿Cómo ven el futuro de la empresa?--}}
                 {!! $about_us->question_6 !!}
             </fieldset>
         </div>
