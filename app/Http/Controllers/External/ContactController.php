@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\External;
 
 use App\InboxMessage;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -48,9 +49,15 @@ class ContactController extends Controller
 
         $this->validate($request, $rules, $messages);
 
-        Mail::send('emails.external.contact', $request->all(), function ($m) {
-            $m->to('juancagb.17@gmail.com', 'Juan Ramos')->subject('Han usado el formulario de contacto!');
+        $client = User::find($request->input('user_id'));
+
+        Mail::send('emails.external.contact', $request->all(), function ($m) use ($client) {
+            $m->to($client->google_account, 'Juan Ramos')
+                ->cc($client->contact_email)
+                ->subject('Han usado el formulario de contacto!');
         });
+
+        // TODO: Send a confirmation email to the visitor
 
         $inboxMessage = new InboxMessage();
         $inboxMessage->user_id = $request->input('user_id');
