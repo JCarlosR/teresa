@@ -94,7 +94,7 @@ class ServiceController extends Controller
         $service->question_5 = $request->get('question_5');
         $service->save();
 
-        return redirect('/servicios')->with('notification', 'El servicio se ha actualizado correctamente.');
+        return redirect('/servicio/'.$service->id.'/ver');
     }
 
     public function delete($id)

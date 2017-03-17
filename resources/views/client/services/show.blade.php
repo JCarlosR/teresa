@@ -12,10 +12,12 @@
         <div class="widget-heading">
             <h1>
                 {{ $service->name }}
-                <a href="/servicio/{{ $service->id }}/editar" title="Editar servicio" style="color: #57caff">
-                    <i class="glyphicon glyphicon-pencil"></i>
-                </a>
             </h1>
+            <a href="/servicio/{{ $service->id }}/editar" title="Editar servicio"
+               class="pull-right"
+               style="color: #57caff; font-size: 2em;">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
         </div>
         <div class="widget-body">
 

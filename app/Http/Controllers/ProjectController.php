@@ -205,8 +205,8 @@ class ProjectController extends Controller
         }
         $project->services()->sync($services);
 
-        $notification = 'El proyecto se ha actualizado correctamente!';
-        return redirect('/proyectos')->with(compact('notification'));
+        // $notification = 'El proyecto se ha actualizado correctamente!';
+        return redirect('/proyecto/'.$project->id.'/ver');
     }
 
     public function delete($id)

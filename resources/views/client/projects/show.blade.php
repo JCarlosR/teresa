@@ -15,6 +15,12 @@
     <div class="widget">
         <div class="widget-heading">
             {!! $project->question_0 !!}
+
+            <a href="/proyecto/{{ $project->id }}/editar" title="Editar proyecto"
+               class="pull-right"
+               style="color: #57caff; font-size: 2em;">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
         </div>
         <div class="widget-body">
 
@@ -90,9 +96,9 @@
 
 
             <div class="text-right">
-                <button type="button" class="btn btn-default" onclick="window.history.back();">
+                <a href="/proyectos" type="button" class="btn btn-default">
                     Volver al listado
-                </button>
+                </a>
             </div>
 
         </div>
