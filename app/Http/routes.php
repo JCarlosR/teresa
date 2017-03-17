@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Routing\Router;
+
 Route::get('/', 'GuessController@welcome');
 
 // Authentication Routes
@@ -55,8 +57,10 @@ Route::get('/mapa', 'Client\MapController@index');
 Route::post('/analytics', 'Client\GoogleAnalyticsController@index');
 Route::post('/analytics/channels', 'Client\GoogleAnalyticsController@byChannelGrouping');
 
-// External contact forms
-Route::post('/formulario/contacto', 'External\ContactController@index');
+Route::group(['middleware' => 'cors'], function(Router $router){
+    // External contact forms
+    $router->post('/formulario/contacto', 'External\ContactController@index');
+});
 
 // Admin management
 Route::group(['prefix' => 'admin'], function () {

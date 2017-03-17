@@ -158,6 +158,7 @@ return [
 
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*
