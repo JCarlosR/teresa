@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         $rules = [
-            'client_id' => 'required|exists:users,id',
+            'user_id' => 'required|exists:users,id',
             'name' => 'required|min:3|max:30',
             'email' => 'required|email',
             'phone' => 'min:6|max:30',
@@ -26,8 +26,8 @@ class ContactController extends Controller
         ];
 
         $messages = [
-            'client_id' => 'No se ha especificado el destinatario.',
-            'client_id.exists' => 'Ha ocurrido un error inesperado.',
+            'user_id' => 'No se ha especificado el destinatario.',
+            'user_id.exists' => 'Ha ocurrido un error inesperado.',
 
             'name.required' => 'Olvidó ingresar su nombre.',
             'name.min' => 'El nombre ingresado es demasiado corto.',

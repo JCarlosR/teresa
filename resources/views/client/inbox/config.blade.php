@@ -80,7 +80,7 @@
                     <h3>4. Asociar al cliente con su formulario de contacto</h3>
                     <p>Para que Teresa pueda reconocer a qué cliente se enviaron los mensajes de contacto, es necesario añadir un campo adicional.</p>
                     <p>Los campos descritos en (2) son campos visibles por el usuario. Además de ellos, el formulario tendrá un campo oculto con el ID del cliente destino:</p>
-                    <textarea id="form-contact-hidden-id" class="form-control"><input type="hidden" name="client_id" value="{{ $client->id }}"></textarea>
+                    <textarea id="form-contact-hidden-id" class="form-control"><input type="hidden" name="user_id" value="{{ $client->id }}"></textarea>
                     <p class="text-muted">Para {{ $client->name }} el ID es {{ $client->id }}, por lo que el código anterior se puede usar directamente.</p>
 
                     <h3>Ejemplo</h3>
@@ -90,7 +90,7 @@
                           style="font-family: Monospace, sans-serif; font-size: 12px; border: 0;"
                           rows="20">
 <form action="{{ url('/formulario/contacto') }}">
-    <input type="hidden" name="client_id" value="{{ $client->id }}">
+    <input type="hidden" name="user_id" value="{{ $client->id }}">
 
     Nombre completo:
     <input type="text" name="name" required>
