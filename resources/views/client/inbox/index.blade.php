@@ -63,6 +63,11 @@
         <div class="table-responsive">
             <table class="table table-hover">
                 <tbody>
+                @if (count($messages) == 0)
+                    <div class="clearfix">
+                        <div class="pull-left">No se han encontrado mensajes.</div>
+                    </div>
+                @endif
                 @foreach ($messages as $message)
                 <tr class="unread">
                     <td class="email-select">
