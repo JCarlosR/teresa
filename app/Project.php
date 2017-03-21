@@ -75,11 +75,24 @@ class Project extends Model
                 break;
         }
 
-        if ($characters >= 500)
-            return 'success';
-        else if ($characters >= 300)
-            return 'warning';
-        else
-            return 'danger';
+        if ($i==1)
+        {
+            // question 1: title
+            if ($characters >= 55 && $characters <= 70)
+                return 'success';
+            else if ($characters >= 50 && $characters <= 72)
+                return 'warning';
+            else
+                return 'danger';
+        } else {
+            // other questions
+            if ($characters >= 500)
+                return 'success';
+            else if ($characters >= 300)
+                return 'warning';
+            else
+                return 'danger';
+        }
+
     }
 }
