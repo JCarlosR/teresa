@@ -63,69 +63,7 @@
         <div class="table-responsive">
             <table class="table table-hover">
                 <tbody>
-                <tr class="unread">
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk1" type="checkbox">
-                            <label for="chk1"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-primary text-center fw-700">B</span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Brittany Curtis</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">06:35 PM </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Sociosqu amet dignissim curabitur libero</span><span class="email-summary"> - Pharetra aptent lectus eu mattis litora montes...</span></a></td>
-                </tr>
-                <tr class="unread">
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk2" type="checkbox">
-                            <label for="chk2"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><img src="../build/images/users/10.jpg" alt="" class="media-object mo-md img-circle"></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Jose Curtis</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">05:15 AM </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Libero enim pretium cras</span><span class="email-summary"> - Sapien faucibus fames conubia sodales mus quam ligula...</span></a></td>
-                </tr>
-                <tr>
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk3" type="checkbox">
-                            <label for="chk3"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star text-warning"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><img src="../build/images/users/11.jpg" alt="" class="media-object mo-md img-circle"></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Mariana Vasquez</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">16 Oct 2016</time>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Ante ultrices tempus</span><span class="email-summary"> - Arcu non magna lorem mauris gravida iaculis non inceptos...</span></a></td>
-                </tr>
+                @foreach ($messages as $message)
                 <tr class="unread">
                     <td class="email-select">
                         <div class="checkbox checkbox-custom m-0">
@@ -138,151 +76,138 @@
                         <div class="media">
                             <div class="media-left"><span class="media-object mo-md img-circle bg-purple text-center fw-700">D</span></div>
                             <div class="media-body">
-                                <h5 class="media-heading">Debra Spencer</h5>
+                                <h5 class="media-heading">{{ $message->name }}</h5>
                                 <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">16 Oct 2016</time>
+                                    <time datetime="{{ $message->created_at }}" class="fs-13 mr-5">
+                                        {{ $message->created_at->format('d/m/Y') }}
+                                    </time>
                                 </p>
                             </div>
                         </div>
                     </td>
-                    <td><a href="email-read.html"><span class="email-title">Massa metus euismod egestas egestas</span><span class="email-summary"> - Duis aliquet dui laoreet ad neque class dui...</span></a></td>
+                    <td>
+                        <a href="email-read.html">
+                            <span class="email-title">{{ $message->phone }}</span>
+                            <span class="email-summary"> - {{ $message->content }} ...</span>
+                        </a>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk5" type="checkbox">
-                            <label for="chk5"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-black text-center fw-700">S</span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Stephanie May</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">16 Oct 2016 </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Et parturient phasellus rhoncus</span><span class="email-summary"> - Vivamus elit sapien risus fames nulla primis magna...</span></a></td>
-                </tr>
-                <tr>
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk6" type="checkbox">
-                            <label for="chk6"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><img src="../build/images/users/16.jpg" alt="" class="media-object mo-md img-circle"></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Diana Wilson</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">15 Oct 2016</time>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Aliquam fusce sollicitudin</span><span class="email-summary"> - Pulvinar non orci ligula dictum magna adipiscing class...</span></a></td>
-                </tr>
-                <tr class="unread">
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk7" type="checkbox">
-                            <label for="chk7"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star text-warning"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-danger text-center fw-700">P</span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Patrick Gardner</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">12 Oct 2016 </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Convallis natoque urna pulvinar tempor</span><span class="email-summary"> - Ultrices ultricies ante leo duis pretium...</span></a></td>
-                </tr>
-                <tr class="unread">
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk8" type="checkbox">
-                            <label for="chk8"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-success text-center fw-700">W</span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">William Taylor</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">10 Oct 2016 </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Laoreet dignissim tellus aenean</span><span class="email-summary"> - Sagittis donec at eu rutrum rhoncus per commodo...</span></a></td>
-                </tr>
-                <tr>
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk9" type="checkbox">
-                            <label for="chk9"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><img src="../build/images/users/17.jpg" alt="" class="media-object mo-md img-circle"></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Laura Andrews</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">10 Oct 2016 </time><i class="ion-android-attach fs-16"></i>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Condimentum laoreet mi cursus</span><span class="email-summary"> - Convallis faucibus sed pharetra consectetur...</span></a></td>
-                </tr>
-                <tr>
-                    <td class="email-select">
-                        <div class="checkbox checkbox-custom m-0">
-                            <input id="chk10" type="checkbox">
-                            <label for="chk10"></label>
-                        </div>
-                    </td>
-                    <td class="email-select"><i class="ion-star text-warning"></i></td>
-                    <td class="email-from">
-                        <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-warning text-center fw-700">M</span></div>
-                            <div class="media-body">
-                                <h5 class="media-heading">Maria Pearson</h5>
-                                <p class="text-muted mb-0">
-                                    <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">08 Oct 2016</time>
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-                    <td><a href="email-read.html"><span class="email-title">Eu pharetra vulputate</span><span class="email-summary"> - Dui lobortis eu tortor dictum massa lorem aenean pretium...</span></a></td>
-                </tr>
+                @endforeach
+                {{--<tr class="unread">--}}
+                    {{--<td class="email-select">--}}
+                        {{--<div class="checkbox checkbox-custom m-0">--}}
+                            {{--<input id="chk4" type="checkbox">--}}
+                            {{--<label for="chk4"></label>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td class="email-select"><i class="ion-star text-warning"></i></td>--}}
+                    {{--<td class="email-from">--}}
+                        {{--<div class="media">--}}
+                            {{--<div class="media-left"><span class="media-object mo-md img-circle bg-purple text-center fw-700">D</span></div>--}}
+                            {{--<div class="media-body">--}}
+                                {{--<h5 class="media-heading">Debra Spencer</h5>--}}
+                                {{--<p class="text-muted mb-0">--}}
+                                    {{--<time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">16 Oct 2016</time>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td><a href="email-read.html"><span class="email-title">Massa metus euismod egestas egestas</span><span class="email-summary"> - Duis aliquet dui laoreet ad neque class dui...</span></a></td>--}}
+                {{--</tr>--}}
+                {{--<tr>--}}
+                    {{--<td class="email-select">--}}
+                        {{--<div class="checkbox checkbox-custom m-0">--}}
+                            {{--<input id="chk5" type="checkbox">--}}
+                            {{--<label for="chk5"></label>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td class="email-select"><i class="ion-star"></i></td>--}}
+                    {{--<td class="email-from">--}}
+                        {{--<div class="media">--}}
+                            {{--<div class="media-left"><span class="media-object mo-md img-circle bg-black text-center fw-700">S</span></div>--}}
+                            {{--<div class="media-body">--}}
+                                {{--<h5 class="media-heading">Stephanie May</h5>--}}
+                                {{--<p class="text-muted mb-0">--}}
+                                    {{--<time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">16 Oct 2016 </time><i class="ion-android-attach fs-16"></i>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td><a href="email-read.html"><span class="email-title">Et parturient phasellus rhoncus</span><span class="email-summary"> - Vivamus elit sapien risus fames nulla primis magna...</span></a></td>--}}
+                {{--</tr>--}}
+                {{--<tr>--}}
+                    {{--<td class="email-select">--}}
+                        {{--<div class="checkbox checkbox-custom m-0">--}}
+                            {{--<input id="chk6" type="checkbox">--}}
+                            {{--<label for="chk6"></label>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td class="email-select"><i class="ion-star"></i></td>--}}
+                    {{--<td class="email-from">--}}
+                        {{--<div class="media">--}}
+                            {{--<div class="media-left"><img src="../build/images/users/16.jpg" alt="" class="media-object mo-md img-circle"></div>--}}
+                            {{--<div class="media-body">--}}
+                                {{--<h5 class="media-heading">Diana Wilson</h5>--}}
+                                {{--<p class="text-muted mb-0">--}}
+                                    {{--<time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">15 Oct 2016</time>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td><a href="email-read.html"><span class="email-title">Aliquam fusce sollicitudin</span><span class="email-summary"> - Pulvinar non orci ligula dictum magna adipiscing class...</span></a></td>--}}
+                {{--</tr>--}}
+                {{--<tr class="unread">--}}
+                    {{--<td class="email-select">--}}
+                        {{--<div class="checkbox checkbox-custom m-0">--}}
+                            {{--<input id="chk7" type="checkbox">--}}
+                            {{--<label for="chk7"></label>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td class="email-select"><i class="ion-star text-warning"></i></td>--}}
+                    {{--<td class="email-from">--}}
+                        {{--<div class="media">--}}
+                            {{--<div class="media-left"><span class="media-object mo-md img-circle bg-danger text-center fw-700">P</span></div>--}}
+                            {{--<div class="media-body">--}}
+                                {{--<h5 class="media-heading">Patrick Gardner</h5>--}}
+                                {{--<p class="text-muted mb-0">--}}
+                                    {{--<time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">12 Oct 2016 </time><i class="ion-android-attach fs-16"></i>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td><a href="email-read.html"><span class="email-title">Convallis natoque urna pulvinar tempor</span><span class="email-summary"> - Ultrices ultricies ante leo duis pretium...</span></a></td>--}}
+                {{--</tr>--}}
+                {{--<tr>--}}
+                    {{--<td class="email-select">--}}
+                        {{--<div class="checkbox checkbox-custom m-0">--}}
+                            {{--<input id="chk9" type="checkbox">--}}
+                            {{--<label for="chk9"></label>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td class="email-select"><i class="ion-star"></i></td>--}}
+                    {{--<td class="email-from">--}}
+                        {{--<div class="media">--}}
+                            {{--<div class="media-left"><img src="../build/images/users/17.jpg" alt="" class="media-object mo-md img-circle"></div>--}}
+                            {{--<div class="media-body">--}}
+                                {{--<h5 class="media-heading">Laura Andrews</h5>--}}
+                                {{--<p class="text-muted mb-0">--}}
+                                    {{--<time datetime="2016-12-10T20:27:48+07:00" class="fs-13 mr-5">10 Oct 2016 </time><i class="ion-android-attach fs-16"></i>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</td>--}}
+                    {{--<td><a href="email-read.html"><span class="email-title">Condimentum laoreet mi cursus</span><span class="email-summary"> - Convallis faucibus sed pharetra consectetur...</span></a></td>--}}
+                {{--</tr>--}}
                 </tbody>
             </table>
         </div>
-        <div class="clearfix">
-            <div class="pull-left">Mostrando 1 - 10 de 100</div>
-            <div class="btn-group pull-right">
-                <button type="button" class="btn btn-default"><i class="ion-arrow-left-c"></i></button>
-                <button type="button" class="btn btn-default"><i class="ion-arrow-right-c"></i></button>
-            </div>
-        </div>
+        {{--<div class="clearfix">--}}
+            {{--<div class="pull-left">Mostrando 1 - 10 de 100</div>--}}
+            {{--<div class="btn-group pull-right">--}}
+                {{--<button type="button" class="btn btn-default"><i class="ion-arrow-left-c"></i></button>--}}
+                {{--<button type="button" class="btn btn-default"><i class="ion-arrow-right-c"></i></button>--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
 
 </div>

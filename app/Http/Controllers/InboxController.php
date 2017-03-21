@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\InboxMessage;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class InboxController extends Controller
     public function config()
     {
         $client = $this->user;
-        return view('client.inbox.config', compact('client'));
+        $messages = InboxMessage::where('user_id', $client->id)->get();
+        return view('client.inbox.config', compact('client', 'messages'));
     }
 }
