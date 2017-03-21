@@ -61,11 +61,11 @@ $(document).ready(function() {
         {
             // for the story title
             if (charactersNum >= 55 && charactersNum <= 70)
-                return 'success';
+                $status.html(htmlStatus.good);
             else if (charactersNum >= 50 && charactersNum <= 72)
-                return 'warning';
+                $status.html(htmlStatus.regular);
             else
-                return 'danger';
+                $status.html(htmlStatus.bad);
         } else {
             // for questions
             if (charactersNum >= 300)
