@@ -40,6 +40,7 @@
                 <div class="col-md-4">
                     <fieldset>
                         <legend>Evaluación</legend>
+                        <p>Título: <i class="ion-record text-{{ $project->questionStatus(0) }}"></i></p>
                         <p>Pregunta 1: <i class="ion-record text-{{ $project->questionStatus(1) }}"></i></p>
                         <p>Pregunta 2: <i class="ion-record text-{{ $project->questionStatus(2) }}"></i></p>
                         <p>Pregunta 3: <i class="ion-record text-{{ $project->questionStatus(3) }}"></i></p>

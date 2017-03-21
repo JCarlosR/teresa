@@ -64,6 +64,9 @@ class Project extends Model
     public function questionStatus($i) {
         $characters = 0;
         switch ($i) {
+            case 0:
+                $characters = strlen(strip_tags($this->question_0));
+                break;
             case 1:
                 $characters = strlen(strip_tags($this->question_1));
                 break;
@@ -75,9 +78,9 @@ class Project extends Model
                 break;
         }
 
-        if ($i==1)
+        if ($i==0)
         {
-            // question 1: title
+            // question 0: title
             if ($characters >= 55 && $characters <= 70)
                 return 'success';
             else if ($characters >= 50 && $characters <= 72)

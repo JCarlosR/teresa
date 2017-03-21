@@ -39,29 +39,42 @@ $(document).ready(function() {
     $('#note3').on('summernote.keyup', onKeyUp3);
 
     function onKeyUp0() {
-        setCharactersLengthMessage($(this), $('#limit0'), $('#status0'));
+        setCharactersLengthMessage($(this), $('#limit0'), $('#status0'), true);
     }
     function onKeyUp1() {
-        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'));
+        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'), false);
     }
     function onKeyUp2() {
-        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'));
+        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'), false);
     }
     function onKeyUp3() {
-        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
+        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'), false);
     }
 
-    function setCharactersLengthMessage($summerNote, $limit, $status) {
+    function setCharactersLengthMessage($summerNote, $limit, $status, isTitle) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
             .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
 
         $limit.html(charactersNum + ' caracteres');
 
-        if (charactersNum >= 300)
-            $status.html(htmlStatus.good);
-        else if (charactersNum >= 200)
-            $status.html(htmlStatus.regular);
-        else
-            $status.html(htmlStatus.bad);
+        if (isTitle)
+        {
+            // for the story title
+            if (charactersNum >= 55 && charactersNum <= 70)
+                return 'success';
+            else if (charactersNum >= 50 && charactersNum <= 72)
+                return 'warning';
+            else
+                return 'danger';
+        } else {
+            // for questions
+            if (charactersNum >= 300)
+                $status.html(htmlStatus.good);
+            else if (charactersNum >= 200)
+                $status.html(htmlStatus.regular);
+            else
+                $status.html(htmlStatus.bad);
+        }
+
     }
 });
