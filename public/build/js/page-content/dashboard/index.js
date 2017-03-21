@@ -1,7 +1,43 @@
+// Global variables taken from the view
 var ANALYTICS_VIEW_ID;
 var CSRF_TOKEN;
 
+// Elements that will be updated
 var $totalVisitsCount;
+
+// Chart options
+var visitsChartOptions = {
+    series: {
+        curvedLines: {
+            active: true
+        },
+        shadowSize: 0
+    },
+    grid: {
+        borderWidth: 0,
+        hoverable: true,
+        labelMargin: 15
+    },
+    xaxis: {
+        mode: "time", // indicates that the date will be received in timestamps
+        timeformat: "%d de %b (%Y)",
+        tickSize: [7, 'day'], // tick label frequency
+        font: {
+            color: '#9a9a9a',
+            size: 11
+        }
+    },
+    tooltip: {
+        show: false
+    },
+    legend: {
+        show: true,
+        container: $('#flot-visitor-legend'),
+        noColumns: 2,
+        labelBoxBorderColor: '#FFF',
+        margin: 0
+    }
+};
 
 $(document).ready(function() {
 
@@ -15,45 +51,13 @@ $(document).ready(function() {
 
     // Google Analytics Chart
     // --------------------------------------------------
-    var optionsVisitor = {
-        series: {
-            curvedLines: {
-                active: true
-            },
-            shadowSize: 0
-        },
-        grid: {
-            borderWidth: 0,
-            hoverable: true,
-            labelMargin: 15
-        },
-        xaxis: {
-            mode: "time", // indicates that the date will be received in timestamps
-            timeformat: "%d de %b (%Y)",
-            tickSize: [7, 'day'],
-            font: {
-                color: '#9a9a9a',
-                size: 11
-            }
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: true,
-            container: $('#flot-visitor-legend'),
-            noColumns: 2,
-            labelBoxBorderColor: '#FFF',
-            margin: 0
-        }
-    };
-
     ANALYTICS_VIEW_ID = $('#flot-visitor').data('view-id');
     CSRF_TOKEN = $('meta[name=csrf-token]').attr('content');
     $totalVisitsCount = $('#total-visits-count');
 
-    performGoogleAnalyticsQuery(optionsVisitor);
-
+    var initialStartDate = moment().subtract(29, 'days');
+    var initialEndDate = moment();
+    reloadAnalyticsForNewDateRange(initialStartDate, initialEndDate);
 
 
     // Bootstrap Date Range Picker
@@ -66,17 +70,21 @@ $(document).ready(function() {
             'Last 7 Days': [moment().subtract(6, 'days'), moment()],
             'Last 30 Days': [moment().subtract(29, 'days'), moment()],
             'This Month': [moment().startOf('month'), moment().endOf('month')],
-            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+            'Last Year': [moment().subtract(1, 'year'), moment()]
         },
         opens: 'left',
-        startDate: moment().subtract(29, 'days'),
-        endDate: moment(),
+        startDate: initialStartDate,
+        endDate: initialEndDate,
         applyClass: 'btn-black mr-5',
         cancelClass: 'btn-default'
     }, function(start, end, label) {
         $('#daterangepicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        reloadAnalyticsForNewDateRange(start, end);
     });
-    $('#daterangepicker span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+    // Initial display for date range picker (because the change event is not called initially)
+    $('#daterangepicker span').html(initialStartDate.format('MMMM D, YYYY') + ' - ' + initialEndDate.format('MMMM D, YYYY'));
 
     $('<div class=\'flotTip\'></div>').appendTo('body').css({
         'position': 'absolute',
@@ -85,14 +93,22 @@ $(document).ready(function() {
 
 });
 
-function performGoogleAnalyticsQuery(optionsVisitor) {
+function performGoogleAnalyticsQuery(startDate, endDate) {
     if (!ANALYTICS_VIEW_ID) {
         $('#flot-visitor').text('Aun no se ha configurado su cuenta de Google Analytics.');
         return;
     }
 
+    // Query parameters
+    var params = {
+        view_id: ANALYTICS_VIEW_ID,
+        _token: CSRF_TOKEN,
+        start: startDate,
+        end: endDate
+    };
+
     // Plot chart: visitors
-    $.post('/analytics?view_id='+ANALYTICS_VIEW_ID+'&_token='+CSRF_TOKEN, function (data) {
+    $.post('/analytics', params, function (data) {
         // at this point we have data.total, data.referral and data.organic
 
         var dataVisitors = [{
@@ -136,7 +152,12 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
             }
         }];
 
-        $.plot($('#flot-visitor'), dataVisitors, optionsVisitor);
+        // Update the label print frequency
+        visitsChartOptions.xaxis.tickSize[0] = data.total.length / 10;
+        // to avoid too much labels in big ranges
+        // it tends to be 10 labels :D
+
+        $.plot($('#flot-visitor'), dataVisitors, visitsChartOptions);
         $('#flot-visitor').bind('plothover', function(event, pos, item) {
             if (item) {
                 $('.flotTip').text(item.datapoint[1].toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' visitas').css({
@@ -151,7 +172,6 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
     }, 'json');
 
     // Donut chart: byChannelGrouping
-    var params = 'view_id='+ANALYTICS_VIEW_ID+'&_token='+CSRF_TOKEN;
     $.post('/analytics/channels', params, function (data) {
         var totalVisits = 0;
         for (var i=0; i<data.length; ++i) {
@@ -170,11 +190,11 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
             color: '#5DC2AE'
         }, {
             label: 'Referido',
-            data: data[2][1],
+            data: data[2] ? data[2][1] : 0,
             color: '#B065E9'
         }, {
             label: 'Social',
-            data: data[3][1],
+            data: data[3] ? data[3][1] : 0,
             color: '#e9c200'
         }];
         var optionsDonut = {
@@ -207,4 +227,11 @@ function performGoogleAnalyticsQuery(optionsVisitor) {
         };
         $.plot($('#donut-chart'), dataSetPie, optionsDonut);
     }, 'json');
+}
+
+function reloadAnalyticsForNewDateRange(start, end) {
+    var startDateWithFormat = start.format('Y-MM-DD H:mm:ss');
+    var endDateWithFormat = end.format('Y-MM-DD H:mm:ss');
+
+    performGoogleAnalyticsQuery(startDateWithFormat, endDateWithFormat);
 }

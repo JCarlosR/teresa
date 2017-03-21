@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
+use DateTime;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,8 +13,15 @@ use App\Teresa\Analytics\AnalyticsHelper;
 
 class GoogleAnalyticsController extends Controller
 {
+    protected $format = 'Y-m-d H:i:s';
+
     public function index(AnalyticsHelper $analyticsHelper, Request $request)
     {
+        // Date range
+        $startDateTime = DateTime::createFromFormat($this->format, $request->input('start'));
+        $endDateTime = DateTime::createFromFormat($this->format, $request->input('end'));
+        $period = Period::create($startDateTime, $endDateTime);
+
         $metrics = 'ga:pageviews';
         $optional = [
             'dimensions' => 'ga:date,ga:medium'
@@ -21,11 +29,9 @@ class GoogleAnalyticsController extends Controller
 
         $view_id = $request->input('view_id');
         $analytics = $analyticsHelper->getView($view_id);
-        $response = $analytics->performQuery(Period::days(30), $metrics, $optional);
-        // dd($response);
-        return $this->responseToChartVisitsData($response->rows);
+        $response = $analytics->performQuery($period, $metrics, $optional);
 
-        // return $analytics->fetchVisitorsAndPageViews(Period::days(30));
+        return $this->responseToChartVisitsData($response->rows);
     }
 
     public function responseToChartVisitsData($rows) {
@@ -73,6 +79,11 @@ class GoogleAnalyticsController extends Controller
 
     public function byChannelGrouping(AnalyticsHelper $analyticsHelper, Request $request)
     {
+        // Date range
+        $startDateTime = DateTime::createFromFormat($this->format, $request->input('start'));
+        $endDateTime = DateTime::createFromFormat($this->format, $request->input('end'));
+        $period = Period::create($startDateTime, $endDateTime);
+
         $metrics = 'ga:pageviews';
         $optional = [
             'dimensions' => 'ga:channelGrouping'
@@ -80,7 +91,7 @@ class GoogleAnalyticsController extends Controller
 
         $view_id = $request->input('view_id');
         $analytics = $analyticsHelper->getView($view_id);
-        $response = $analytics->performQuery(Period::days(30), $metrics, $optional);
+        $response = $analytics->performQuery($period, $metrics, $optional);
         return $response->rows;
     }
 }
