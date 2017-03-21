@@ -28,7 +28,8 @@ $(document).ready(function() {
             onInit: function() {
                 // Apply one and first evaluation to each summer note
                 for (var i=0; i<=3; ++i)
-                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i));
+                    // isTitle: TRUE for i == 0
+                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i), i==0);
             }
         }
     });
