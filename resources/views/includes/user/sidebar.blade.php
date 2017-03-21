@@ -57,12 +57,18 @@
                 <span class="sidebar-title">Facturación</span>
             </a>
         </li>
+
         <li class="panel">
-            <a href="{{ url('/leads') }}">
+            <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
                 <i class="ion-ios-pie-outline bg-purple"></i>
                 <span class="sidebar-title">Leads</span>
             </a>
+            <ul id="collapse3" class="list-unstyled collapse">
+                <li><a href="{{ url('/leads') }}">Reportes</a></li>
+                <li><a href="{{ url('/inbox') }}">Bandeja</a></li>
+            </ul>
         </li>
+
         <li class="panel">
             <a href="{{ url('/mapa') }}">
                 <i class="ion-ios-analytics-outline bg-black"></i>

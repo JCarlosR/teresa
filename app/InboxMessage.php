@@ -12,6 +12,6 @@ class InboxMessage extends Model
 
     public function getShortContentAttribute()
     {
-        return mb_strimwidth($this->content, 0, 15, "...");
+        return mb_strimwidth($this->content, 0, 18, "...");
     }
 }

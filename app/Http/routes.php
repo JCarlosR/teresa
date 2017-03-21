@@ -50,6 +50,9 @@ Route::get('/pagos/{id}', 'Client\PaymentController@show');
 Route::get('/leads', 'Client\LeadController@index');
 Route::get('/leads/{id}', 'Client\LeadController@show');
 
+// Inbox
+Route::get('/inbox', 'InboxController@index');
+
 // Location
 Route::get('/mapa', 'Client\MapController@index');
 
@@ -103,7 +106,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/leads/{id}', 'Admin\LeadController@edit');
     Route::post('/leads/update', 'Admin\LeadController@update');
     // Inbox
-    Route::get('/inbox', 'InboxController@index');
     Route::get('/inbox/config', 'InboxController@config');
 
     // Payments

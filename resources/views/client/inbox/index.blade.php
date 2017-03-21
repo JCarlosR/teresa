@@ -5,7 +5,24 @@
     <div class="sidebar-container sidebar-sm">
         <div class="sidebar-toggle bg-white"><i class="ion-grid"></i></div>
         <div data-mcs-theme="minimal-dark" class="sidebar sidebar-sm bg-white mCustomScrollbar"><a href="email-compose.html" class="btn btn-rounded btn-success mb-20"><i class="ion-paintbrush mr-5"></i> Redactar</a>
-            <div class="list-group no-border"><a href="javascript:;" class="list-group-item active"><i class="ion-filing"></i> Inbox (5)</a><a href="javascript:;" class="list-group-item"><i class="ion-paper-airplane"></i> Enviados</a><a href="javascript:;" class="list-group-item"><i class="ion-edit"></i> Borradores (2)</a><a href="javascript:;" class="list-group-item"><i class="ion-trash-b"></i> Eliminados (98)</a><a href="javascript:;" class="list-group-item"><i class="ion-pricetag"></i> Importantes</a></div>
+            <div class="list-group no-border">
+                <a href="javascript:;" class="list-group-item active">
+                    <i class="ion-filing"></i> Inbox (5)
+                </a>
+                <a href="javascript:;" class="list-group-item">
+                    <i class="ion-paper-airplane"></i> Enviados
+                </a>
+                <a href="javascript:;" class="list-group-item">
+                    <i class="ion-edit"></i> Borradores (2)
+                </a>
+                <a href="javascript:;" class="list-group-item">
+                    <i class="ion-trash-b"></i> Eliminados (7)
+                </a>
+                <a href="javascript:;" class="list-group-item">
+                    <i class="ion-pricetag"></i> Importantes
+                </a>
+            </div>
+
             <h6 class="text-uppercase">Categorías</h6>
             <div class="list-group no-border">
                 <a href="javascript:;" class="list-group-item">
@@ -79,7 +96,6 @@
                     <td class="email-select"><i class="ion-star text-warning"></i></td>
                     <td class="email-from">
                         <div class="media">
-                            <div class="media-left"><span class="media-object mo-md img-circle bg-purple text-center fw-700">D</span></div>
                             <div class="media-body">
                                 <h5 class="media-heading">{{ $message->name }}</h5>
                                 <p class="text-muted mb-0">
@@ -93,7 +109,7 @@
                     <td>
                         <a href="email-read.html">
                             <span class="email-title">{{ $message->phone }}</span>
-                            <span class="email-summary"> - {{ $message->content }} ...</span>
+                            <span class="email-summary"> - {{ $message->short_content }} ...</span>
                         </a>
                     </td>
                 </tr>
