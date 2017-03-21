@@ -23,13 +23,14 @@ class InboxController extends Controller
 
     public function index()
     {
-        return view('client.inbox.index');
+        $client = $this->user;
+        $messages = InboxMessage::where('user_id', $client->id)->get();
+        return view('client.inbox.index')->with(compact('messages'));
     }
 
     public function config()
     {
         $client = $this->user;
-        $messages = InboxMessage::where('user_id', $client->id)->get();
-        return view('client.inbox.config', compact('client', 'messages'));
+        return view('client.inbox.config', compact('client'));
     }
 }
