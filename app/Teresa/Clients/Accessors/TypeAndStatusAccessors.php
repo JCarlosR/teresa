@@ -17,8 +17,8 @@ trait TypeAndStatusAccessors
 
     public function getStarStateAttribute()
     {
-        if ($this->starred) return 'on';
-        return 'off';
+        if ($this->starred) return 'star';
+        return 'star-empty';
     }
 
     public function getInverseStarStateAttribute()

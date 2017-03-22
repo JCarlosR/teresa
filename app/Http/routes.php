@@ -72,6 +72,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/cliente/seleccionar/{client_id}', 'AdminController@select');
     // Star switching
     Route::get('/cliente/{client_id}/destacar/{state}', 'AdminController@star');
+    // Impersonate (login as client)
+    Route::get('/cliente/{client_id}/impersonate', 'AdminController@impersonate');
 
     // Clients management
     Route::get('/cliente/registrar', 'Admin\ClientController@create');

@@ -46,4 +46,11 @@ class AdminController extends Controller
         return back();
     }
 
+    public function impersonate($client_id)
+    {
+        $client = User::findOrFail($client_id);
+        auth()->login($client);
+        return redirect('/');
+    }
+
 }

@@ -1,5 +1,14 @@
 @extends('layouts.panel_simple')
 
+@section('styles')
+    <style>
+        .big-black-icon {
+            color: #1f364f;
+            font-size: 1.2em;
+        }
+    </style>
+@endsection
+
 @section('dashboard_content')
 <div class="widget">
     <div class="widget-body">
@@ -37,8 +46,13 @@
                     <div class="widget">
                         <div class="widget-body text-center">
                             <p  class="text-right">
-                                <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}">
-                                    <img src="{{ asset('/images/stars/'.$client->star_state.'.png') }}" alt="Destacado">
+                                <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}"
+                                   data-toggle="tooltip" data-placement="top" title="Clic para destacar o quitar destacado">
+                                    <i class="glyphicon glyphicon-{{ $client->star_state }} big-black-icon"></i>
+                                </a>
+                                <a href="/admin/cliente/{{ $client->id }}/impersonate"
+                                   data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
+                                    <i class="glyphicon glyphicon-log-in big-black-icon"></i>
                                 </a>
                             </p>
                             <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
