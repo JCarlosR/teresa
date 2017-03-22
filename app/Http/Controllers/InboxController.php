@@ -32,7 +32,7 @@ class InboxController extends Controller
             $messagesQuery->where('topic', $topic);
         }
 
-        $messages = $messagesQuery->get();
+        $messages = $messagesQuery->orderBy('id', 'desc')->get();
 
         return view('client.inbox.index')->with(compact('messages', 'topic'));
     }

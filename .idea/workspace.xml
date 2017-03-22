@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,20 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+            <state relative-caret-position="396">
+              <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
+            <state relative-caret-position="1203">
               <caret line="72" column="20" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
               <folding />
             </state>
@@ -154,9 +154,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
         <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
       </list>
     </option>
   </component>
@@ -480,14 +480,7 @@
       <workItem from="1489760084108" duration="5049000" />
       <workItem from="1490105418299" duration="7735000" />
       <workItem from="1490191865804" duration="4505000" />
-      <workItem from="1490198681628" duration="231000" />
-    </task>
-    <task id="LOCAL-00028" summary="Typo">
-      <created>1488557364018</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1488557364018</updated>
+      <workItem from="1490198681628" duration="566000" />
     </task>
     <task id="LOCAL-00029" summary="Gray color">
       <created>1488557442140</created>
@@ -825,11 +818,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490195824251</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Json response">
+      <created>1490198928017</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1490198928018</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345291000" />
+    <option name="totallyTimeSpent" value="345626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,7 +873,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Higher font size" />
     <MESSAGE value="Preview and edit about us section" />
     <MESSAGE value="Link instead of back in history, Remove unnecessary routes, Edit option in show" />
     <MESSAGE value="Breadcrumb for projects" />
@@ -898,7 +897,8 @@
     <MESSAGE value="Select topic, filter in inbox" />
     <MESSAGE value="Logic &amp;&amp;" />
     <MESSAGE value="No required dots" />
-    <option name="LAST_COMMIT_MESSAGE" value="No required dots" />
+    <MESSAGE value="Json response" />
+    <option name="LAST_COMMIT_MESSAGE" value="Json response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1255,18 +1255,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        <state relative-caret-position="1203">
+          <caret line="72" column="20" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="72" column="20" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+        <state relative-caret-position="396">
+          <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
           <folding />
         </state>
       </provider>
