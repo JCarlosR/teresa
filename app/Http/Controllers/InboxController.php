@@ -21,11 +21,20 @@ class InboxController extends Controller
             $this->user = auth()->user();
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $client = $this->user;
-        $messages = InboxMessage::where('user_id', $client->id)->get();
-        return view('client.inbox.index')->with(compact('messages'));
+
+        $messagesQuery = InboxMessage::where('user_id', $client->id);
+
+        $topic = $request->input('categoria');
+        if ($topic != 'Todas') {
+            $messagesQuery->where('topic', $topic);
+        }
+
+        $messages = $messagesQuery->get();
+
+        return view('client.inbox.index')->with(compact('messages', 'topic'));
     }
 
     public function config()

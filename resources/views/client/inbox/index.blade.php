@@ -25,19 +25,28 @@
 
             <h6 class="text-uppercase">Categorías</h6>
             <div class="list-group no-border">
-                <a href="javascript:;" class="list-group-item">
+                <a href="{{ url('/inbox?categoria=Todas') }}"
+                   class="list-group-item @if($topic == 'Todas') active @endif">
+                    <i class="ion-folder"></i> Todas
+                </a>
+                <a href="{{ url('/inbox?categoria=Proyectos') }}"
+                   class="list-group-item @if($topic == 'Proyectos') active @endif">
                     <i class="ion-folder"></i> Proyectos
                 </a>
-                <a href="javascript:;" class="list-group-item">
+                <a href="{{ url('/inbox?categoria=Proveedores') }}"
+                   class="list-group-item @if($topic == 'Proveedores') active @endif">
                     <i class="ion-folder"></i> Proveedores
                 </a>
-                <a href="javascript:;" class="list-group-item">
+                <a href="{{ url('/inbox?categoria=Empleo') }}"
+                   class="list-group-item @if($topic == 'Empleo') active @endif">
                     <i class="ion-folder"></i> Empleo
                 </a>
-                <a href="javascript:;" class="list-group-item">
+                <a href="{{ url('/inbox?categoria=Directo') }}"
+                   class="list-group-item @if($topic == 'Directo') active @endif">
                     <i class="ion-folder"></i> C. Directo
                 </a>
-                <a href="javascript:;" class="list-group-item">
+                <a href="{{ url('/inbox?categoria=Otros') }}"
+                   class="list-group-item @if($topic == 'Otros') active @endif">
                     <i class="ion-folder"></i> Otros
                 </a>
             </div>
