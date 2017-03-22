@@ -4,8 +4,6 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +53,8 @@
       <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" column="74" lean-forward="false" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+            <state relative-caret-position="294">
+              <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -501,14 +499,7 @@
       <workItem from="1489719312616" duration="1562000" />
       <workItem from="1489760084108" duration="5049000" />
       <workItem from="1490105418299" duration="7735000" />
-      <workItem from="1490191865804" duration="3722000" />
-    </task>
-    <task id="LOCAL-00025" summary="Lang login page">
-      <created>1488552456899</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1488552456899</updated>
+      <workItem from="1490191865804" duration="3849000" />
     </task>
     <task id="LOCAL-00026" summary="Add months instead of days">
       <created>1488552748387</created>
@@ -846,11 +837,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490194432817</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Select topic, filter in inbox">
+      <created>1490195648003</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1490195648003</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344277000" />
+    <option name="totallyTimeSpent" value="344404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -894,7 +892,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Show percent in widget title" />
     <MESSAGE value="Change date format for service_started_at" />
     <MESSAGE value="Higher font size" />
     <MESSAGE value="Preview and edit about us section" />
@@ -919,7 +916,8 @@
     <MESSAGE value="Custom ranges for Google Analytics chart" />
     <MESSAGE value="Impersonate user" />
     <MESSAGE value="Select topic, filter in inbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Select topic, filter in inbox" />
+    <MESSAGE value="Logic &amp;&amp;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logic &amp;&amp;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1302,8 +1300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" column="74" lean-forward="false" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+        <state relative-caret-position="294">
+          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
           <folding />
         </state>
       </provider>

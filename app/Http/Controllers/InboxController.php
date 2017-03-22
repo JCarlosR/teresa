@@ -28,7 +28,7 @@ class InboxController extends Controller
         $messagesQuery = InboxMessage::where('user_id', $client->id);
 
         $topic = $request->input('categoria');
-        if ($topic != 'Todas') {
+        if ($topic && $topic != 'Todas') { // no filter for empty param
             $messagesQuery->where('topic', $topic);
         }
 
