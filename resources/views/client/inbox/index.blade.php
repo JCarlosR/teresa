@@ -98,8 +98,8 @@
                 <tr class="unread">
                     <td class="email-select">
                         <div class="checkbox checkbox-custom m-0">
-                            <input id="chk4" type="checkbox">
-                            <label for="chk4"></label>
+                            <input id="chk{{ $message->id }}" type="checkbox">
+                            <label for="chk{{ $message->id }}"></label>
                         </div>
                     </td>
                     <td class="email-select"><i class="ion-star text-warning"></i></td>

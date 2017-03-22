@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="100" column="57" lean-forward="false" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -154,9 +164,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
+        <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
       </list>
     </option>
   </component>
@@ -480,14 +490,7 @@
       <workItem from="1489760084108" duration="5049000" />
       <workItem from="1490105418299" duration="7735000" />
       <workItem from="1490191865804" duration="4505000" />
-      <workItem from="1490198681628" duration="566000" />
-    </task>
-    <task id="LOCAL-00029" summary="Gray color">
-      <created>1488557442140</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1488557442140</updated>
+      <workItem from="1490198681628" duration="1147000" />
     </task>
     <task id="LOCAL-00030" summary="Google maps dependency - Flot chart time">
       <created>1488811997641</created>
@@ -825,11 +828,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490198928018</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Desc">
+      <created>1490199259644</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1490199259644</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345626000" />
+    <option name="totallyTimeSpent" value="346207000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,8 +883,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Preview and edit about us section" />
-    <MESSAGE value="Link instead of back in history, Remove unnecessary routes, Edit option in show" />
     <MESSAGE value="Breadcrumb for projects" />
     <MESSAGE value="Go to show view after update" />
     <MESSAGE value="Format date for started at" />
@@ -898,7 +906,9 @@
     <MESSAGE value="Logic &amp;&amp;" />
     <MESSAGE value="No required dots" />
     <MESSAGE value="Json response" />
-    <option name="LAST_COMMIT_MESSAGE" value="Json response" />
+    <MESSAGE value="Desc" />
+    <MESSAGE value="Checkbox id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkbox id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1247,14 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="120" column="88" lean-forward="false" selection-start-line="120" selection-start-column="88" selection-end-line="120" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/External/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1203">
@@ -1267,6 +1269,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="100" column="57" lean-forward="false" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
           <folding />
         </state>
       </provider>
