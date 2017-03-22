@@ -59,7 +59,7 @@
                                 <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
                                 <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
                             </a>
-                            <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at }}</p>
+                            <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
                             <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
                         </div>
                     </div>
