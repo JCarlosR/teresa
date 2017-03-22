@@ -68,7 +68,9 @@ class ContactController extends Controller
         $inboxMessage->topic = $request->input('topic');
         $inboxMessage->save();
 
-        return back();
+        $data = [];
+        $data['success'] = true;
+        return $data;
     }
 
 }
