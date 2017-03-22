@@ -118,7 +118,7 @@
                     <td>
                         <a href="email-read.html">
                             <span class="email-title">{{ $message->phone }}</span>
-                            <span class="email-summary"> - {{ $message->short_content }} ...</span>
+                            <span class="email-summary"> - {{ $message->short_content }}</span>
                         </a>
                     </td>
                 </tr>

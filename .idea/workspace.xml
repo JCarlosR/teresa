@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,17 +40,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="207">
+              <caret line="120" column="88" lean-forward="false" selection-start-line="120" selection-start-column="88" selection-end-line="120" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InboxController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
@@ -81,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$totalVistsCount</find>
       <find>totalVistsCount</find>
       <find>flot-v</find>
       <find>home</find>
@@ -111,6 +110,7 @@
       <find>data[2]</find>
       <find>tick</find>
       <find>.</find>
+      <find>...</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -175,8 +175,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
+        <option value="$PROJECT_DIR$/resources/views/client/inbox/index.blade.php" />
       </list>
     </option>
   </component>
@@ -499,14 +499,7 @@
       <workItem from="1489719312616" duration="1562000" />
       <workItem from="1489760084108" duration="5049000" />
       <workItem from="1490105418299" duration="7735000" />
-      <workItem from="1490191865804" duration="3849000" />
-    </task>
-    <task id="LOCAL-00026" summary="Add months instead of days">
-      <created>1488552748387</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1488552748387</updated>
+      <workItem from="1490191865804" duration="3886000" />
     </task>
     <task id="LOCAL-00027" summary="Black when followers is 0">
       <created>1488555049056</created>
@@ -844,11 +837,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490195648003</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Logic &amp;&amp;">
+      <created>1490195774552</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1490195774552</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344404000" />
+    <option name="totallyTimeSpent" value="344441000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1290,18 +1290,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InboxController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="120" column="88" lean-forward="false" selection-start-line="120" selection-start-column="88" selection-end-line="120" selection-end-column="88" />
           <folding />
         </state>
       </provider>
