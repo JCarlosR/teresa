@@ -31,7 +31,7 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-body text-center">
-                <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
+                <a href="{{ $client->domain ?: '#' }}" target="_blank">
                     <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
                     <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
                 </a>
