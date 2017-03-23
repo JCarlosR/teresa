@@ -38,5 +38,12 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('123123'),
             'role' => 1 // Temporary administrator
         ]);
+
+        User::create([
+            'name' => 'Roel Ccente',
+            'email' => 'roel@seo-arquitectos.com',
+            'password' => bcrypt('123123'),
+            'role' => 1 // Mini edo - Administrator
+        ]);
     }
 }

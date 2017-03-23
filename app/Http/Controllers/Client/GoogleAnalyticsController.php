@@ -22,19 +22,30 @@ class GoogleAnalyticsController extends Controller
         $endDateTime = DateTime::createFromFormat($this->format, $request->input('end'));
         $period = Period::create($startDateTime, $endDateTime);
 
+        // Time dimension parameter
+        $timeDimension = $request->input('ga_time');
+        if ($timeDimension != 'date') { // to avoid invalid values
+            $timeDimension = 'month';
+        }
+
         $metrics = 'ga:pageviews';
         $optional = [
-            'dimensions' => 'ga:date,ga:medium'
+            'dimensions' => "ga:$timeDimension,ga:medium"
         ];
 
         $view_id = $request->input('view_id');
         $analytics = $analyticsHelper->getView($view_id);
         $response = $analytics->performQuery($period, $metrics, $optional);
 
-        return $this->responseToChartVisitsData($response->rows);
+        // dd($response);
+
+        if ($timeDimension == 'date')
+            return $this->formatToVisitsPerDate($response->rows);
+        // else
+        return $this->formatToVisitsPerMonth($response->rows);
     }
 
-    public function responseToChartVisitsData($rows) {
+    public function formatToVisitsPerDate($rows) {
         $data = [];
         $data['total'] = [];
         $data['referral'] = [];
@@ -60,13 +71,56 @@ class GoogleAnalyticsController extends Controller
             if ($i==0)
                 $data['total'][] = $rowData;
             else {
-                // if date is the same than the previus
+                // if date is the same than the previous
                 // sum the quantities
                 // if not, add a new row
                 $lastPosition = sizeof($data['total']) -1;
                 // here we use the & to get a reference of the array :)
                 $lastTotalRow = &$data['total'][$lastPosition];
                 if ($row['date'] === $lastTotalRow[0]) {
+                    $lastTotalRow[1] += $row['quantity'];
+                } else {
+                    $data['total'][] = $rowData;
+                }
+            }
+        }
+
+        return $data;
+    }
+
+    public function formatToVisitsPerMonth($rows) {
+        $data = [];
+        $data['total'] = [];
+        $data['referral'] = [];
+        $data['organic'] = [];
+
+        for ($i=0; $i<sizeof($rows); ++$i) {
+            $row = [
+                'month' => intval($rows[$i][0]), // from "01" to "12"
+                'type' => $rows[$i][1],
+                'quantity' => $rows[$i][2]
+            ];
+
+            $rowData = [
+                $row['month'], $row['quantity']
+            ];
+
+            if ($row['type'] == 'referral') {
+                $data['referral'][] = $rowData;
+            } else if ($row['type'] == 'organic') {
+                $data['organic'][] = $rowData;
+            }
+
+            if ($i==0)
+                $data['total'][] = $rowData;
+            else {
+                // if month is the same than the previous
+                // sum the quantities
+                // if not, add a new row
+                $lastPosition = sizeof($data['total']) -1;
+                // here we use the & to get a reference of the array :)
+                $lastTotalRow = &$data['total'][$lastPosition];
+                if ($row['month'] === $lastTotalRow[0]) {
                     $lastTotalRow[1] += $row['quantity'];
                 } else {
                     $data['total'][] = $rowData;

@@ -287,7 +287,17 @@
                             <div id="flot-visitor-legend" class="pull-left"></div>
                             <div class="pull-right">
                                 <div class="btn-toolbar">
-                                    <button id="daterangepicker" type="button" class="btn btn-rounded btn-outline btn-black"><i class="ion-calendar mr-5"></i><span></span></button>
+                                    <div class="btn-group" id="gaTimeDimensions">
+                                        <button type="button" data-toggle="dropdown" class="btn btn btn btn-outline btn-rounded btn-black dropdown-toggle">
+                                            <span data-selected>Día</span> <span class="caret"></span>
+                                        </button>
+                                        <ul role="menu" class="dropdown-menu fadeInUp animated">
+                                            <li><a href="#" data-dimension="date">Día</a></li>
+                                            <li><a href="#" data-dimension="month">Mes</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <button id="dateRangePicker" type="button" class="btn btn-rounded btn-outline btn-black"><i class="ion-calendar mr-5"></i><span></span></button>
                                 </div>
                             </div>
                         </div>

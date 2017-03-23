@@ -1,12 +1,17 @@
-// Global variables taken from the view
+// Global constants taken from the view
 var ANALYTICS_VIEW_ID;
 var CSRF_TOKEN;
 
-// Elements that will be updated
-var $totalVisitsCount;
+// Element references
+var $totalVisitsCount; // will be updated
+var $dateRangePicker;
+var $gaTimeDimensions;
+
+// Global variables
+var gaTimeDimension = 'date';
 
 // Chart options
-var visitsChartOptions = {
+var visitsDateOptions = {
     series: {
         curvedLines: {
             active: true
@@ -39,6 +44,15 @@ var visitsChartOptions = {
     }
 };
 
+var visitsMonthOptions = jQuery.extend(true, {}, visitsDateOptions); // deep copy
+visitsMonthOptions.xaxis = {
+    ticks: [
+        [1,'Ene'],[2,'Feb'],[3,'Mar'],[4,'Abr'],
+        [5,'May'],[6,'Jun'],[7,'Jul'],[8,'Ago'],
+        [9,'Sept'],[10,'Oct'],[11,'Nov'],[12,'Dic']
+    ]
+};
+
 $(document).ready(function() {
 
     // jQuery Counter Up
@@ -46,6 +60,28 @@ $(document).ready(function() {
     $('.counter').counterUp({
         delay: 10,
         time: 1000
+    });
+
+    // Button group
+    // --------------------------------------------------
+    $dateRangePicker = $('#dateRangePicker');
+    $gaTimeDimensions = $("#gaTimeDimensions");
+
+    $gaTimeDimensions.find('a').click(function (event) {
+        event.preventDefault();
+
+        var $this = $(this);
+        var newGaTimeDimension = $this.data('dimension');
+        // alert('newSelection => ' + newGaTimeDimension);
+
+        if (gaTimeDimension != newGaTimeDimension) {
+            gaTimeDimension = newGaTimeDimension;
+            $gaTimeDimensions.find('[data-selected]').text($this.text());
+
+            var start = $dateRangePicker.data('daterangepicker').startDate;
+            var end = $dateRangePicker.data('daterangepicker').endDate;
+            reloadAnalyticsForNewDateRange(start, end);
+        }
     });
 
 
@@ -63,7 +99,7 @@ $(document).ready(function() {
     // Bootstrap Date Range Picker
     // --------------------------------------------------
 
-    $('#daterangepicker').daterangepicker({
+    $dateRangePicker.daterangepicker({
         ranges: {
             'Today': [moment(), moment()],
             'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -79,12 +115,12 @@ $(document).ready(function() {
         applyClass: 'btn-black mr-5',
         cancelClass: 'btn-default'
     }, function(start, end, label) {
-        $('#daterangepicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        $('#dateRangePicker span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         reloadAnalyticsForNewDateRange(start, end);
     });
 
     // Initial display for date range picker (because the change event is not called initially)
-    $('#daterangepicker span').html(initialStartDate.format('MMMM D, YYYY') + ' - ' + initialEndDate.format('MMMM D, YYYY'));
+    $('#dateRangePicker span').html(initialStartDate.format('MMMM D, YYYY') + ' - ' + initialEndDate.format('MMMM D, YYYY'));
 
     $('<div class=\'flotTip\'></div>').appendTo('body').css({
         'position': 'absolute',
@@ -96,15 +132,19 @@ $(document).ready(function() {
 function performGoogleAnalyticsQuery(startDate, endDate) {
     if (!ANALYTICS_VIEW_ID) {
         $('#flot-visitor').text('Aun no se ha configurado su cuenta de Google Analytics.');
+        $('#gaTimeDimensions, #dateRangePicker').fadeOut('slow');
         return;
     }
+
+    // alert(gaTimeDimension);
 
     // Query parameters
     var params = {
         view_id: ANALYTICS_VIEW_ID,
         _token: CSRF_TOKEN,
         start: startDate,
-        end: endDate
+        end: endDate,
+        ga_time: gaTimeDimension
     };
 
     // Plot chart: visitors
@@ -153,11 +193,12 @@ function performGoogleAnalyticsQuery(startDate, endDate) {
         }];
 
         // Update the label print frequency
-        visitsChartOptions.xaxis.tickSize[0] = data.total.length / 10;
+        visitsDateOptions.xaxis.tickSize[0] = data.total.length / 10;
         // to avoid too much labels in big ranges
         // it tends to be 10 labels :D
 
-        $.plot($('#flot-visitor'), dataVisitors, visitsChartOptions);
+        var chartOptions = gaTimeDimension=='date' ? visitsDateOptions : visitsMonthOptions;
+        $.plot($('#flot-visitor'), dataVisitors, chartOptions);
         $('#flot-visitor').bind('plothover', function(event, pos, item) {
             if (item) {
                 $('.flotTip').text(item.datapoint[1].toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' visitas').css({
