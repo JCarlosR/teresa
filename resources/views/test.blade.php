@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Social Media Counters</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="{{ url('vendor/SocialCounters/css/style.css') }}">
+</head>
+<body>
+<div id="wrapper" class="square">
+    <div id="total"></div>
+    <div id="total_k"></div>
+    <a class="item twitter"><i class="fa fa-twitter"></i><span class="count"></span>Followers</a>
+    <a class="item facebook"><i class="fa fa-facebook"></i><span class="count"></span>Likes</a>
+    <a class="item instagram"><i class="fa fa-instagram"></i><span class="count"> </span>Followers</a>
+    <a class="item google"><i class="fa fa-google-plus"></i><span class="count"></span>Followers</a>
+    <a class="item instagram_sandbox"><i class="fa fa-instagram"></i><span class="count"> </span>Followers</a>
+    <a class="item linkedin"><i class="fa fa-linkedin"></i><span class="count"></span>Connections</a>
+    <a class="item youtube"><i class="fa fa-youtube"></i><span class="count"></span>Subscribers</a>
+    <a class="item twitch"><i class="fa fa-twitch"></i><span class="count"></span>Followers</a>
+    <a class="item tumblr"><i class="fa fa-tumblr"></i><span class="count"></span>Followers</a>
+    <a class="item vine"><i class="fa fa-vine"></i><span class="count"></span>Followers</a>
+    <a class="item pinterest"><i class="fa fa-pinterest"></i><span class="count"></span>Followers</a>
+    <a class="item dribbble"><i class="fa fa-dribbble"></i><span class="count"></span>Followers</a>
+    <a class="item soundcloud"><i class="fa fa-soundcloud"></i><span class="count"></span>Followers</a>
+    <a class="item vimeo"><i class="fa fa-vimeo"></i><span class="count"></span>Followers</a>
+    <a class="item github"><i class="fa fa-github"></i><span class="count"></span>Followers</a>
+    <a class="item behance"><i class="fa fa-behance"></i><span class="count"></span>Followers</a>
+    <a class="item vk"><i class="fa fa-vk"></i><span class="count"></span>Followers</a>
+    <a class="item foursquare"><i class="fa fa-foursquare"></i><span class="count"></span>Friends</a>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="{{ url('vendor/SocialCounters/js/api.js') }}"></script>
+<script>
+    $('#wrapper').SocialCounter({
+        //Get Usernames
+        /*dribbble_user: 'username_here',
+         facebook_user: 'username_here',
+         instagram_user: 'username_here',
+         google_plus_id: 'username_here',
+         instagram_user_sandbox: 'username_here',
+         youtube_user: 'username_here',*/
+         pinterest_user: 'lindleyarq',/*
+         soundcloud_user_id: 'user_id_here',
+         vimeo_user: 'username_here',
+         github_user: 'username_here',*/
+         twitter_user: 'programacionym'/*
+         behance_user: 'username_here',
+         vine_user: 'user_id_here',
+         vk_id: 'user_id_here',
+         foursquare_user: 'username_here',
+         tumblr_username: 'username_here',
+         twitch_username:'username_here',
+         //Get Access Tokens,keys,client_ids
+         /*dribbble_token: 'token_here',
+         instagram_token:'token_here',
+         google_plus_key:'key_here',
+         facebook_token:'token_here',
+         youtube_key:'key_here',
+         twitch_client_id:'client_id_here',
+         soundcloud_client_id:'client_id_here',
+         vimeo_token:'token_here',
+         behance_client_id:'client_id_here',
+         foursquare_token:'token_here',
+         linkedin_oauth: 'token_here' */
+    });
+</script>
+</body>
+</html>
