@@ -33,7 +33,7 @@
     }, options);
 
     function pinterest(){
-      //Pinterst API V3
+      // Pinterst API V3
       $.ajax({
         url: 'https://api.pinterest.com/v3/pidgets/users/'+settings.pinterest_user+'/pins',
         dataType: 'jsonp',
@@ -48,7 +48,7 @@
       }); 
     }
     function dribbble(){
-      //Dribble API
+      // Dribble API
       $.ajax({
         url: 'https://api.dribbble.com/v1/users/'+settings.dribbble_user,
         dataType: 'json',
@@ -66,10 +66,10 @@
       }); 
     }
     function facebook(){
-      //Facebook API
-      //60 Day Access Token - Regenerate a new one after two months
-      //https://neosmart-stream.de/facebook/how-to-create-a-facebook-access-token/
-      //https://smashballoon.com/custom-facebook-feed/access-token/
+      // Facebook API
+      // 60 Day Access Token - Regenerate a new one after two months
+      // https://neosmart-stream.de/facebook/how-to-create-a-facebook-access-token/
+      // https://smashballoon.com/custom-facebook-feed/access-token/
       $.ajax({
         url: 'https://graph.facebook.com/v2.8/'+settings.facebook_user,
         dataType: 'json',
@@ -88,11 +88,11 @@
       }); 
     }
     function instagram(){
-      //Create access tokens
-      //https://www.youtube.com/watch?v=LkuJtIcXR68
-      //http://instagram.pixelunion.net
-      //http://dmolsen.com/2013/04/05/generating-access-tokens-for-instagram
-      //http://ka.lpe.sh/2015/12/24/this-request-requires-scope-public_content-but-this-access-token-is-not-authorized-with-this-scope/
+      // Create access tokens
+      // https://www.youtube.com/watch?v=LkuJtIcXR68
+      // http://instagram.pixelunion.net
+      // http://dmolsen.com/2013/04/05/generating-access-tokens-for-instagram
+      // http://ka.lpe.sh/2015/12/24/this-request-requires-scope-public_content-but-this-access-token-is-not-authorized-with-this-scope/
       $.ajax({
         url: 'https://api.instagram.com/v1/users/self/',
         dataType: 'jsonp',
@@ -141,7 +141,7 @@
        });
      }
     function google(){
-      //Google+ API
+      // Google+ API
       $.ajax({
         url: 'https://www.googleapis.com/plus/v1/people/' + settings.google_plus_id,
         type: "GET",
@@ -159,7 +159,7 @@
       });
     }
     function youtube(){
-      //YouTube API V3
+      // YouTube API V3
       $.ajax({
         url: 'https://www.googleapis.com/youtube/v3/channels',
         dataType: 'jsonp',
@@ -179,7 +179,7 @@
       }); 
     }
     function soundcloud(){
-      //SoundCloud API
+      // SoundCloud API
       $.ajax({
         url: 'http://api.soundcloud.com/users/'+settings.soundcloud_user_id,
         dataType: 'json',
@@ -197,7 +197,7 @@
       }); 
     }
     function vimeo(){
-      //Vimeo V3 API
+      // Vimeo V3 API
       $.ajax({
         url: 'https://api.vimeo.com/users/'+settings.vimeo_user+'/followers',
         dataType: 'json',
@@ -219,7 +219,7 @@
       // http://stackoverflow.com/questions/17409227/follower-count-number-in-twitter
       // https://github.com/J7mbo/twitter-api-php
       $.ajax({
-        url: '../SocialCounters/twitter/index.php',
+        url: 'vendor/SocialCounters/twitter/index.php',
         dataType: 'json',
         type: 'GET',
         data: {
@@ -234,7 +234,7 @@
       }); 
     }
     function github(){
-      //Github
+      // Github
       $.ajax({
         url: 'https://api.github.com/users/'+settings.github_user,
         dataType: 'json',
@@ -249,7 +249,7 @@
       }); 
     }
     function behance(){
-      //Behance
+      // Behance
       $.ajax({
         url: 'https://api.behance.net/v2/users/'+settings.behance_user,
         dataType: 'jsonp',
