@@ -44,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="113" column="95" lean-forward="false" selection-start-line="113" selection-start-column="95" selection-end-line="113" selection-end-column="95" />
+              <caret line="113" column="90" lean-forward="false" selection-start-line="113" selection-start-column="90" selection-end-line="113" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -482,14 +482,7 @@
       <workItem from="1490364596990" duration="1608000" />
       <workItem from="1490626586487" duration="1325000" />
       <workItem from="1490655641635" duration="532000" />
-      <workItem from="1490711147645" duration="5628000" />
-    </task>
-    <task id="LOCAL-00037" summary="Add donut chart (flot plugin)">
-      <created>1489075998211</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1489075998211</updated>
+      <workItem from="1490711147645" duration="5691000" />
     </task>
     <task id="LOCAL-00038" summary="Google Analytics donut chart">
       <created>1489077852278</created>
@@ -827,11 +820,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490718196003</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Black color icon for social profiles with ? value">
+      <created>1490718826846</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1490718826846</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363232000" />
+    <option name="totallyTimeSpent" value="363295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -875,7 +875,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="CORS support" />
     <MESSAGE value="Get verb" />
     <MESSAGE value="Change param name" />
     <MESSAGE value="Right recipients" />
@@ -900,7 +899,8 @@
     <MESSAGE value="Google Analytics showing per Month or Date" />
     <MESSAGE value="Custom HTTP Request class (for CloudFlare HTTPS)" />
     <MESSAGE value="Privacy policy, remove followers field and add placeholders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Privacy policy, remove followers field and add placeholders" />
+    <MESSAGE value="Black color icon for social profiles with ? value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Black color icon for social profiles with ? value" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1275,7 +1275,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="113" column="95" lean-forward="false" selection-start-line="113" selection-start-column="95" selection-end-line="113" selection-end-column="95" />
+          <caret line="113" column="90" lean-forward="false" selection-start-line="113" selection-start-column="90" selection-end-line="113" selection-end-column="90" />
           <folding />
         </state>
       </provider>
