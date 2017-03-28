@@ -21,9 +21,8 @@
                 <thead>
                 <tr>
                     <th class="text-center">Red social</th>
-                    <th class="text-center">URL</th>
+                    <th class="text-center">ID</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Seguidores</th>
                     <th class="text-center">Notas</th>
                     <th class="text-center">Opciones</th>
                 </tr>
@@ -37,7 +36,7 @@
                             <input type="text" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
                         </td>
                         <td>
-                            <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil social" value="{{ $socialProfile->url }}">
+                            <input type="text" name="url" class="form-control" placeholder="{{ $socialProfile->placeholder }}" value="{{ $socialProfile->url }}">
                         </td>
                         <td class="col-md-2">
                             <div class="form-group">
@@ -47,13 +46,10 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="col-md-1">
-                            <input type="text" class="form-control" name="followers" value="{{ $socialProfile->followers }}">
-                        </td>
-                        <td class="col-md-2">
+                        <td>
                             <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $socialProfile->notes }}</textarea>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center col-md-1">
                             <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
                                 <span class="glyphicon glyphicon-floppy-disk"></span>
                             </button>

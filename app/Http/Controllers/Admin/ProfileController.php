@@ -18,29 +18,33 @@ class ProfileController extends Controller
 
     public function getSocialProfiles()
     {
-        $socialPageNames = [
-            'Facebook',
-            'Linkedin',
-            'Google+',
-            'Twitter',
-            'Pinterest',
-            'FourSquare',
-            'Flickr',
-            'Instagram',
-            'Youtube'
+        $socialPages = [
+            ['Facebook', 'https://www.fb.com/{id}'],
+            ['Linkedin', 'https://www.linkedin.com/company/{id}'],
+            ['Google+', 'https://plus.google.com/+{id}'],
+            ['Twitter', 'https://twitter.com/{id}'],
+            ['Pinterest', 'http://www.pinterest.com/{id}'],
+            ['FourSquare', 'https://es.foursquare.com/v/{id}'],
+            ['Flickr', 'https://www.flickr.com/photos/{id}'],
+            ['Instagram', 'https://www.instagram.com/{id}'],
+            ['Youtube', 'https://www.youtube.com/{id}']
         ];
+
         $socialProfiles = collect();
 
-        foreach ($socialPageNames as $socialPageName) {
+        foreach ($socialPages as $socialPage) {
             $socialProfile = SocialProfile::firstOrCreate([
-                'name' => $socialPageName,
+                'name' => $socialPage[0],
                 'user_id' => session('client_id')
             ]);
+
+            $socialProfile->placeholder = $socialPage[1];
             $socialProfiles->push($socialProfile);
         }
 
         return view('admin.profiles.social')->with(compact('client_id', 'socialProfiles'));
     }
+
     public function postSocialProfile(Request $request)
     {
         $socialProfile = SocialProfile::firstOrCreate([
@@ -49,12 +53,13 @@ class ProfileController extends Controller
         ]);
         $socialProfile->url = $request->get('url');
         $socialProfile->state = $request->get('state');
-        $socialProfile->followers = $request->get('followers');
+        // $socialProfile->followers = $request->get('followers');
         $socialProfile->notes = $request->get('notes');
         $socialProfile->save();
 
         return back()->with('notification', 'El perfil social se ha actualizado correctamente!');
     }
+
 
     public function getProfessionalProfiles()
     {

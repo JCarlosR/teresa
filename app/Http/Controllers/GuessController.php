@@ -12,4 +12,9 @@ class GuessController extends Controller
     {
         return view('welcome');
     }
+
+    public function privacy()
+    {
+        return view('guess.privacy');
+    }
 }
