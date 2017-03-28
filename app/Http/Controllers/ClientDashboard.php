@@ -22,15 +22,14 @@ trait ClientDashboard
             $client_id = $client->id;
         }
 
-        $facebook = $this->getSocialProfile($client_id, 'Facebook');
-        $linkedIn = $this->getSocialProfile($client_id, 'Linkedin');
-        $googlePlus = $this->getSocialProfile($client_id, 'Google+');
-        $twitter = $this->getSocialProfile($client_id, 'Twitter');
-        $pinterest = $this->getSocialProfile($client_id, 'Pinterest');
-        $fourSquare = $this->getSocialProfile($client_id, 'FourSquare');
-        $flickr = $this->getSocialProfile($client_id, 'Flickr');
-        $instagram = $this->getSocialProfile($client_id, 'Instagram');
-        $youtube = $this->getSocialProfile($client_id, 'Youtube');
+        $facebook = $this->getSocialProfile($client_id, 'Facebook', 'https://www.fb.com/{id}');
+        $linkedIn = $this->getSocialProfile($client_id, 'Linkedin', 'https://www.linkedin.com/company/{id}');
+        $googlePlus = $this->getSocialProfile($client_id, 'Google+', 'https://plus.google.com/+{id}');
+        $twitter = $this->getSocialProfile($client_id, 'Twitter', 'https://twitter.com/{id}');
+        $pinterest = $this->getSocialProfile($client_id, 'Pinterest', 'http://www.pinterest.com/{id}');
+        $fourSquare = $this->getSocialProfile($client_id, 'FourSquare', 'https://es.foursquare.com/v/{id}');
+        $instagram = $this->getSocialProfile($client_id, 'Instagram', 'https://www.instagram.com/{id}');
+        $youtube = $this->getSocialProfile($client_id, 'Youtube', 'https://www.youtube.com/{id}');
 
         $architizer = $this->getProfessionalLink($client_id, 'Architizer');
         $archello = $this->getProfessionalLink($client_id, 'Archello');
@@ -42,25 +41,26 @@ trait ClientDashboard
         $services = Service::where('user_id', $client_id)->get();
 
         return view('client.dashboard')->with(compact(
-            'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'flickr', 'instagram', 'youtube',
+            'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
             'architizer', 'archello', 'archilovers', 'buildings', 'behance',
             'client', 'projects', 'services'
         ));
     }
 
-    public function getSocialProfile($user_id, $name)
+    public function getSocialProfile($user_id, $name, $placeholder)
     {
         $customObject = new \stdClass;
 
         $socialProfile = SocialProfile::where('user_id', $user_id)->where('name', $name)->first();
 
         if ($socialProfile) {
-            // URL
-            if ($socialProfile->url !== '')
-                $customObject->url = $socialProfile->url;
+            // the URL field is used as the ID
+            $id = $socialProfile->url;
+            if ($id !== '')
+                $customObject->url = str_replace('{id}', $id, $placeholder);
             else
                 $customObject->url = '#';
-            // Followers
+            // TODO: Update the followers count just once per day
             $customObject->followers = $socialProfile->followers;
         } else {
             $customObject->url = '#';

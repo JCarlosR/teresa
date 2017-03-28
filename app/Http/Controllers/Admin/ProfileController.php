@@ -25,7 +25,6 @@ class ProfileController extends Controller
             ['Twitter', 'https://twitter.com/{id}'],
             ['Pinterest', 'http://www.pinterest.com/{id}'],
             ['FourSquare', 'https://es.foursquare.com/v/{id}'],
-            ['Flickr', 'https://www.flickr.com/photos/{id}'],
             ['Instagram', 'https://www.instagram.com/{id}'],
             ['Youtube', 'https://www.youtube.com/{id}']
         ];

@@ -1,7 +1,7 @@
 @section('styles')
     <style>
         .col-social {
-            width: 11.11%;
+            width: 12.5%;
             /*border: 1px solid grey;*/
             float:left;
             position: relative;
@@ -149,13 +149,6 @@
                             <i class="block ion-social-foursquare fs-36 @if($fourSquare->followers) social-color-foursquare @else social-color-black @endif"></i>
                         </a>
                         <div class="mt-10 fs-11 text-muted">{{ $fourSquare->followers }}</div>
-                    </div>
-                    <div class="col-social">
-                        <p class="fs-12 text-uppercase text-muted hidden-xs">Flickr</p>
-                        <a href="{{ $flickr->url }}" target="_blank">
-                            <i class="block ion-ios-circle-filled fs-36 @if($flickr->followers) social-color-flickr @else social-color-black @endif"></i>
-                        </a>
-                        <div class="mt-10 fs-11 text-muted">{{ $flickr->followers }}</div>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Instagram</p>
