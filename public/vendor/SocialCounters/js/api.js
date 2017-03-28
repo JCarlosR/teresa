@@ -219,7 +219,7 @@
       // http://stackoverflow.com/questions/17409227/follower-count-number-in-twitter
       // https://github.com/J7mbo/twitter-api-php
       $.ajax({
-        url: 'vendor/SocialCounters/twitter/index.php',
+        url: '/vendor/SocialCounters/twitter/index.php',
         dataType: 'json',
         type: 'GET',
         data: {
