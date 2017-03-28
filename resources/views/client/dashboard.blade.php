@@ -20,13 +20,15 @@
 @endsection
 
 @section('scripts')
-    <!-- Flot Charts-->
+    {{-- Flot Charts --}}
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.time.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.resize.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot/jquery.flot.pie.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot.curvedlines/curvedLines.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
-
+    {{-- Social counters --}}
+    <script type="text/javascript" src="{{ asset('vendor/SocialCounters/js/api.js') }}"></script>
+    {{-- Dashboard logic --}}
     <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
 @endsection

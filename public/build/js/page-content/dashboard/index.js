@@ -54,6 +54,7 @@ visitsMonthOptions.xaxis = {
 };
 
 $(document).ready(function() {
+    setupSocialCounters();
 
     // jQuery Counter Up
     // --------------------------------------------------
@@ -275,4 +276,40 @@ function reloadAnalyticsForNewDateRange(start, end) {
     var endDateWithFormat = end.format('Y-MM-DD H:mm:ss');
 
     performGoogleAnalyticsQuery(startDateWithFormat, endDateWithFormat);
+}
+
+function setupSocialCounters() {
+    $('#wrapper').SocialCounter({
+        //Get Usernames
+        // dribbble_user: 'username_here',
+        facebook_user: 'programacionymas',
+        google_plus_id: '108818802219696725304',
+        youtube_user: 'SorcJC',
+        instagram_user: 'verticearquitectos',
+        // instagram_user_sandbox: 'username_here',
+        pinterest_user: 'lindleyarq',
+        // soundcloud_user_id: 'user_id_here',
+        // vimeo_user: 'username_here',
+        // github_user: 'username_here',
+        twitter_user: 'programacionym',
+        // behance_user: 'username_here',
+        // vine_user: 'user_id_here',
+        // vk_id: 'user_id_here',
+        foursquare_user: 'vértice-arquitectos',
+        // tumblr_username: 'username_here',
+        // twitch_username:'username_here',
+
+        // Access tokens, keys, client_ids
+        // dribbble_token: 'token_here',
+        instagram_token: '4928751214.1677ed0.2933bfc9a12145c581c37a314dfbae30',
+        google_plus_key: 'AIzaSyChRafLoh052qjGq-yuZZOQt74pF5a1rmk',
+        facebook_token: '351967525166562|Ukz2I63XP18E4uw-JKwl5REQEUM',
+        youtube_key: 'AIzaSyChRafLoh052qjGq-yuZZOQt74pF5a1rmk',
+        // twitch_client_id:'client_id_here',
+        // soundcloud_client_id:'client_id_here',
+        // vimeo_token:'token_here',
+        // behance_client_id:'client_id_here',
+        foursquare_token: 'OTPZ04SSPJUZPATMOOYTR2MCT5NUQ2V4MVX0SSZMVDA35D3N',
+        linkedin_oauth: 'AQVtm9xrypjrOnkq27kqiNFDtr8zqM3kVq0u-9Y94hkiYYxwqtryh1Pf_DE5grSybuA_pmyIDGK1kkJSFKuXu4utH-E1-gIhgjcssv-TihJPffnnhl9xRP68kbmEM9CuvLqhD87BPokQnfVdcrd6HrCg5_xNuqvc3czwcOD-_hMfHAJ12GY'
+    });
 }

@@ -66,11 +66,6 @@ Route::group(['middleware' => 'cors'], function(Router $router){
     $router->get('/formulario/contacto', 'External\ContactController@index');
 });
 
-// Social counters
-Route::get('/social-counters', function () {
-    return view('test');
-});
-
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
