@@ -23,7 +23,6 @@ class DataController extends Controller
         $rules = [
             'trade_name' => 'required|min:5',
             'fiscal_name' => 'min:5',
-            'ruc' => 'digits:11',
             'schedule_start' => 'date_format:H:i',
             'schedule_end' => 'date_format:H:i',
             'works_from' => 'date',

@@ -310,7 +310,7 @@
         data:{
           twitter: settings.foursquare_user,
           oauth_token: settings.foursquare_token,
-          v:'20131017'
+          v: '20131017'
         },
         success: function(data) {
           //Get user ID
