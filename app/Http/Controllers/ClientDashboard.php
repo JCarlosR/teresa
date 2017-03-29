@@ -59,7 +59,7 @@ trait ClientDashboard
             // the URL field is used as the ID
             // and the URL have to be calculated after replace the ID in the placeholder
             $customObject->id = $socialProfile->url;
-            
+
             if ($socialProfile->id !== '')
                 $customObject->url = str_replace('{id}', $customObject->id, $placeholder);
             else

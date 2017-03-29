@@ -279,23 +279,24 @@ function reloadAnalyticsForNewDateRange(start, end) {
 }
 
 function setupSocialCounters() {
-    $('#wrapper').SocialCounter({
+    var $wrapper = $('#wrapper');
+    $wrapper.SocialCounter({
         //Get Usernames
         // dribbble_user: 'username_here',
-        facebook_user: 'programacionymas',
+        facebook_user: $wrapper.find('[data-social="facebook"]').data('id'),
         google_plus_id: '108818802219696725304',
-        youtube_user: 'SorcJC',
-        instagram_user: 'verticearquitectos',
+        youtube_user: $wrapper.find('[data-social="youtube"]').data('id'),
+        instagram_user: $wrapper.find('[data-social="instagram"]').data('id'),
         // instagram_user_sandbox: 'username_here',
-        pinterest_user: 'lindleyarq',
+        pinterest_user: $wrapper.find('[data-social="pinterest"]').data('id'),
         // soundcloud_user_id: 'user_id_here',
         // vimeo_user: 'username_here',
         // github_user: 'username_here',
-        twitter_user: 'programacionym',
+        twitter_user: $wrapper.find('[data-social="twitter"]').data('id'),
         // behance_user: 'username_here',
         // vine_user: 'user_id_here',
         // vk_id: 'user_id_here',
-        foursquare_user: '87982235',
+        foursquare_user: $wrapper.find('[data-social="fourSquare"]').data('id'),
         // tumblr_username: 'username_here',
         // twitch_username:'username_here',
 
