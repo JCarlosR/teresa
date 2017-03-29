@@ -37,6 +37,10 @@ class ProfileController extends Controller
                 'user_id' => session('client_id')
             ]);
 
+            if (! property_exists($socialProfile, 'state')) {
+                $socialProfile->state = false;
+            }
+
             $socialProfile->placeholder = $socialPage[1];
             $socialProfiles->push($socialProfile);
         }
