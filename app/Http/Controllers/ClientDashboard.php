@@ -50,6 +50,7 @@ trait ClientDashboard
     public function getSocialProfile($user_id, $name, $placeholder)
     {
         $customObject = new \stdClass;
+        $customObject->state = false;
 
         $socialProfile = SocialProfile::where('user_id', $user_id)->where('name', $name)->first();
 
@@ -64,9 +65,7 @@ trait ClientDashboard
             // TODO: Update the followers count just once per day
             // $customObject->followers = $socialProfile->followers;
 
-            if (! isset($customObject->state)) {
-                $customObject->state = false;
-            }
+            $customObject->state = $socialProfile->state;
         } else {
             $customObject->url = '#';
             $customObject->followers = '?';

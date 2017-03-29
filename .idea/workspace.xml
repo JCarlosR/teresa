@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,21 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016_12_16_190548_create_social_profiles_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190548_create_social_profiles_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClientDashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+            <state relative-caret-position="378">
+              <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -606,14 +595,7 @@
       <workItem from="1490626586487" duration="1325000" />
       <workItem from="1490655641635" duration="532000" />
       <workItem from="1490711147645" duration="9115000" />
-      <workItem from="1490797444432" duration="2008000" />
-    </task>
-    <task id="LOCAL-00046" summary="Contact validations">
-      <created>1489589204307</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1489589204307</updated>
+      <workItem from="1490797444432" duration="2166000" />
     </task>
     <task id="LOCAL-00047" summary="Breadcrumb for services">
       <created>1489590736906</created>
@@ -951,11 +933,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490799359431</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="check if is set state">
+      <created>1490799475220</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1490799475221</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368727000" />
+    <option name="totallyTimeSpent" value="368885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -999,7 +988,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Specific validation for project title" />
     <MESSAGE value="Update status message" />
     <MESSAGE value="Update isTitle value for first load" />
     <MESSAGE value="Custom ranges for Google Analytics chart" />
@@ -1024,7 +1012,8 @@
     <MESSAGE value="Remove followers from controller and use state attribute" />
     <MESSAGE value="Property exists in object" />
     <MESSAGE value="isset" />
-    <option name="LAST_COMMIT_MESSAGE" value="isset" />
+    <MESSAGE value="check if is set state" />
+    <option name="LAST_COMMIT_MESSAGE" value="check if is set state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1320,14 +1309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Vendor/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1360,10 +1341,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190548_create_social_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="127" column="90" lean-forward="false" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1376,18 +1365,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190548_create_social_profiles_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="39" />
+        <state relative-caret-position="525">
+          <caret line="127" column="90" lean-forward="false" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+        <state relative-caret-position="378">
+          <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding />
         </state>
       </provider>
