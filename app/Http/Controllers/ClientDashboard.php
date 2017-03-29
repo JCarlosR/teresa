@@ -60,8 +60,13 @@ trait ClientDashboard
                 $customObject->url = str_replace('{id}', $id, $placeholder);
             else
                 $customObject->url = '#';
+
             // TODO: Update the followers count just once per day
-            $customObject->followers = $socialProfile->followers;
+            // $customObject->followers = $socialProfile->followers;
+
+            if (! isset($customObject->state)) {
+                $customObject->state = false;
+            }
         } else {
             $customObject->url = '#';
             $customObject->followers = '?';

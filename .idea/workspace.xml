@@ -4,6 +4,7 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +34,7 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="525">
               <caret line="127" column="90" lean-forward="false" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
               <folding />
             </state>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="252">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientDashboard.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientDashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="59" column="48" lean-forward="false" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+            <state relative-caret-position="357">
+              <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -191,7 +192,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GuessController.php" />
         <option value="$PROJECT_DIR$/resources/views/guess/privacy.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" />
         <option value="$PROJECT_DIR$/public/vendor/SocialCounters/twitter/index.php" />
@@ -200,6 +200,7 @@
         <option value="$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
       </list>
     </option>
   </component>
@@ -605,14 +606,7 @@
       <workItem from="1490626586487" duration="1325000" />
       <workItem from="1490655641635" duration="532000" />
       <workItem from="1490711147645" duration="9115000" />
-      <workItem from="1490797444432" duration="1899000" />
-    </task>
-    <task id="LOCAL-00045" summary="New logo">
-      <created>1489424321528</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1489424321528</updated>
+      <workItem from="1490797444432" duration="2008000" />
     </task>
     <task id="LOCAL-00046" summary="Contact validations">
       <created>1489589204307</created>
@@ -950,11 +944,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490799283458</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="isset">
+      <created>1490799359431</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1490799359431</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368618000" />
+    <option name="totallyTimeSpent" value="368727000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +999,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update qualification for question 1 in projects (story title)" />
     <MESSAGE value="Specific validation for project title" />
     <MESSAGE value="Update status message" />
     <MESSAGE value="Update isTitle value for first load" />
@@ -1023,7 +1023,8 @@
     <MESSAGE value="Apply data attributes" />
     <MESSAGE value="Remove followers from controller and use state attribute" />
     <MESSAGE value="Property exists in object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Property exists in object" />
+    <MESSAGE value="isset" />
+    <option name="LAST_COMMIT_MESSAGE" value="isset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1319,14 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="59" column="48" lean-forward="false" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1367,6 +1360,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="127" column="90" lean-forward="false" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190548_create_social_profiles_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1375,18 +1384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="127" column="90" lean-forward="false" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="357">
+          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
           <folding />
         </state>
       </provider>
