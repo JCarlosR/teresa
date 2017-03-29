@@ -83,8 +83,8 @@
       <file leaf-file-name="ClientDashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="61" column="12" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -507,14 +507,7 @@
       <workItem from="1490626586487" duration="1325000" />
       <workItem from="1490655641635" duration="532000" />
       <workItem from="1490711147645" duration="9115000" />
-      <workItem from="1490797444432" duration="4584000" />
-    </task>
-    <task id="LOCAL-00052" summary="Link instead of back in history, Remove unnecessary routes, Edit option in show">
-      <created>1489594441666</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1489594441666</updated>
+      <workItem from="1490797444432" duration="5162000" />
     </task>
     <task id="LOCAL-00053" summary="Breadcrumb for projects">
       <created>1489673743554</created>
@@ -852,11 +845,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490802336767</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="print social profile ids">
+      <created>1490802626364</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1490802626364</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371303000" />
+    <option name="totallyTimeSpent" value="371881000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -900,7 +900,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Logic &amp;&amp;" />
     <MESSAGE value="No required dots" />
     <MESSAGE value="Json response" />
     <MESSAGE value="Desc" />
@@ -925,7 +924,8 @@
     <MESSAGE value="remove validation NIF" />
     <MESSAGE value="foursquare using user id directly" />
     <MESSAGE value="print social profile ids" />
-    <option name="LAST_COMMIT_MESSAGE" value="print social profile ids" />
+    <MESSAGE value="fix id" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1289,8 +1289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="270">
+          <caret line="61" column="12" lean-forward="false" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
           <folding />
         </state>
       </provider>
