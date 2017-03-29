@@ -50,6 +50,7 @@ trait ClientDashboard
     public function getSocialProfile($user_id, $name, $placeholder)
     {
         $customObject = new \stdClass;
+        $customObject->id = '';
         $customObject->state = false;
 
         $socialProfile = SocialProfile::where('user_id', $user_id)->where('name', $name)->first();
