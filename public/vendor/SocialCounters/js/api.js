@@ -32,7 +32,7 @@
       twitch_client_id:''
     }, options);
 
-    function pinterest(){
+    function pinterest() {
       // Pinterst API V3
       $.ajax({
         url: 'https://api.pinterest.com/v3/pidgets/users/'+settings.pinterest_user+'/pins',
@@ -41,7 +41,7 @@
         success: function(data) {   
           var followers = parseInt(data.data.user.follower_count);
           var k = kFormatter(followers);
-          $('#wrapper [data-social="pinterest"] .count').append(k);
+          $('#wrapper [data-social="pinterest"] .count').text(k);
           // $('#wrapper [data-social="pinterest"]').attr('href','https://pinterest.com/'+settings.pinterest_user);
           getTotal(followers); 
         } 
@@ -65,7 +65,7 @@
         } 
       }); 
     }
-    function facebook(){
+    function facebook() {
       // Facebook API
       // 60 Day Access Token - Regenerate a new one after two months
       // https://neosmart-stream.de/facebook/how-to-create-a-facebook-access-token/
@@ -81,13 +81,13 @@
         success: function(data) {   
           var followers = parseInt(data.fan_count);
           var k = kFormatter(followers);
-          $('#wrapper [data-social="facebook"] .count').append(k);
+          $('#wrapper [data-social="facebook"] .count').text(k);
           // $('#wrapper [data-social="facebook"]').attr('href','https://facebook.com/'+settings.facebook_user);
           getTotal(followers); 
         } 
       }); 
     }
-    function instagram(){
+    function instagram() {
       // Create access tokens
       // https://www.youtube.com/watch?v=LkuJtIcXR68
       // http://instagram.pixelunion.net
@@ -103,7 +103,7 @@
         success: function(data) {
           var followers = parseInt(data.data.counts.followed_by);
           var k = kFormatter(followers);
-          $('#wrapper [data-social="instagram"] .count').append(k);
+          $('#wrapper [data-social="instagram"] .count').text(k);
           // $('#wrapper [data-social="instagram"]').attr('href','https://instagram.com/'+settings.instagram_user);
           getTotal(followers); 
         }
@@ -140,7 +140,7 @@
          }
        });
      }
-    function google(){
+    function google() {
       // Google+ API
       $.ajax({
         url: 'https://www.googleapis.com/plus/v1/people/' + settings.google_plus_id,
@@ -152,13 +152,13 @@
         success: function (data) {
           var followers = parseInt(data.circledByCount);
           var k = kFormatter(followers);
-          $('#wrapper [data-social="googlePlus"] .count').append(k);
+          $('#wrapper [data-social="googlePlus"] .count').text(k);
           // $('#wrapper [data-social="googlePlus"]').attr('href','https://plus.google.com/'+settings.google_plus_id);
           getTotal(followers); 
         }
       });
     }
-    function youtube(){
+    function youtube() {
       // YouTube API V3
       $.ajax({
         url: 'https://www.googleapis.com/youtube/v3/channels',
@@ -172,7 +172,7 @@
         success: function(data) {   
           var subscribers = parseInt(data.items[0].statistics.subscriberCount);
           var k = kFormatter(subscribers);
-          $('#wrapper [data-social="youtube"] .count').append(k);
+          $('#wrapper [data-social="youtube"] .count').text(k);
           // $('#wrapper [data-social="youtube"]').attr('href','https://youtube.com/'+settings.youtube_user);
           getTotal(subscribers); 
         } 
@@ -213,7 +213,7 @@
         } 
       }); 
     }
-    function twitter(){
+    function twitter() {
       // Twitter API - Requires PHP.
       // References
       // http://stackoverflow.com/questions/17409227/follower-count-number-in-twitter
@@ -227,7 +227,7 @@
         },
         success: function(data) {   
           var followers = parseInt(data.followers);
-          $('#wrapper [data-social="twitter"] .count').append(followers).digits();
+          $('#wrapper [data-social="twitter"] .count').text(followers).digits();
           // $('#wrapper [data-social="twitter"]').attr('href','https://twitter.com/'+settings.twitter_user);
           getTotal(followers); 
         } 
@@ -301,7 +301,7 @@
         } 
       });
     }
-    function foursquare(){
+    function foursquare() {
       //Foursquare API - GET ID
       $.ajax({
         url: 'https://api.foursquare.com/v2/users/search',
@@ -327,7 +327,7 @@
             success: function(data) {    
               var followers = parseInt(data.response.user.friends.count);
               var k = kFormatter(followers);
-              $('#wrapper [data-social="fourSquare"] .count').append(k);
+              $('#wrapper [data-social="fourSquare"] .count').text(k);
               // $('#wrapper [data-social="foursquare"]').attr('href','https://foursquare.com/'+settings.foursquare_user);
               getTotal(followers); 
             } 
@@ -335,7 +335,7 @@
         } 
       });
     }
-    function linkedin(){
+    function linkedin() {
       $.ajax({
         url: 'https://api.linkedin.com/v1/people/~:(num-connections,public-profile-url)',
         dataType:'jsonp',
@@ -347,8 +347,8 @@
         success: function(data){
           var connections = parseInt(data.numConnections);
           var k = kFormatter(connections);
-          $('#wrapper [data-social="linkedIn"] .count').append(k);
-          // $('#wrapper [data-social="linkedin"').attr('href',data.publicProfileUrl);
+          $('#wrapper [data-social="linkedIn"] .count').text(k);
+          // $('#wrapper [data-social="linkedin"').attr('href', data.publicProfileUrl);
           getTotal(connections); 
         }
       });
@@ -364,7 +364,7 @@
         success: function(data) {
           var followers = parseInt(data.followers);
           var k = kFormatter(followers);
-          $('#wrapper .item.tumblr .count').append(k); 
+          $('#wrapper .item.tumblr .count').append(k);
           $('#wrapper .item.tumblr').attr('href','https://'+settings.tumblr_username+'.tumblr.com');
           getTotal(followers); 
         } 
