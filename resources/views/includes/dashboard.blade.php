@@ -110,56 +110,56 @@
                 <div class="row row-0 expand">
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Facebook</p>
-                        <a href="{{ $facebook->url }}" target="_blank" data-social="facebook">
+                        <a href="{{ $facebook->url }}" target="_blank" data-social="facebook" data-id="{{ $facebook->id }}">
                             <i class="ion-social-facebook fs-36 @if($facebook->state) social-color-facebook @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Linkedin</p>
-                        <a href="{{ $linkedIn->url }}" target="_blank" data-social="linkedIn">
+                        <a href="{{ $linkedIn->url }}" target="_blank" data-social="linkedIn" data-id="{{ $linkedIn->id }}">
                             <i class="ion-social-linkedin fs-36 @if($linkedIn->state) social-color-linkedin @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Google+</p>
-                        <a href="{{ $googlePlus->url }}" target="_blank" data-social="googlePlus">
+                        <a href="{{ $googlePlus->url }}" target="_blank" data-social="googlePlus" data-id="{{ $googlePlus->id }}">
                             <i class="block ion-social-google fs-36 @if($googlePlus->state) social-color-google @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Twitter</p>
-                        <a href="{{ $twitter->url }}" target="_blank" data-social="twitter">
+                        <a href="{{ $twitter->url }}" target="_blank" data-social="twitter" data-id="{{ $twitter->id }}">
                             <i class="block ion-social-twitter fs-36 @if($twitter->state) social-color-twitter @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Pinterest</p>
-                        <a href="{{ $pinterest->url }}" target="_blank" data-social="pinterest">
+                        <a href="{{ $pinterest->url }}" target="_blank" data-social="pinterest" data-id="{{ $pinterest->id }}">
                             <i class="block ion-social-pinterest fs-36 @if($pinterest->state) social-color-pinterest @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">FourSquare</p>
-                        <a href="{{ $fourSquare->url }}" target="_blank" data-social="fourSquare">
+                        <a href="{{ $fourSquare->url }}" target="_blank" data-social="fourSquare" data-id="{{ $fourSquare->id }}">
                             <i class="block ion-social-foursquare fs-36 @if($fourSquare->state) social-color-foursquare @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Instagram</p>
-                        <a href="{{ $instagram->url }}" target="_blank" data-social="instagram">
+                        <a href="{{ $instagram->url }}" target="_blank" data-social="instagram" data-id="{{ $instagram->id }}">
                             <i class="block ion-social-instagram fs-36 @if($instagram->state) social-color-instagram @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
                     <div class="col-social">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Youtube</p>
-                        <a href="{{ $youtube->url }}" target="_blank" data-social="youtube">
+                        <a href="{{ $youtube->url }}" target="_blank" data-social="youtube" data-id="{{ $youtube->id }}">
                             <i class="block ion-social-youtube fs-36 @if($youtube->state) social-color-youtube @else social-color-black @endif"></i>
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>

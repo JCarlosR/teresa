@@ -295,7 +295,7 @@ function setupSocialCounters() {
         // behance_user: 'username_here',
         // vine_user: 'user_id_here',
         // vk_id: 'user_id_here',
-        foursquare_user: 'vértice-arquitectos',
+        foursquare_user: '87982235',
         // tumblr_username: 'username_here',
         // twitch_username:'username_here',
 
