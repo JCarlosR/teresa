@@ -10,7 +10,7 @@ use TwitterAPIExchange;
 
 class TwitterController extends Controller
 {
-    public function index()
+    public function counter()
     {
         header('Access-Control-Allow-Origin: *');
         header('Content-type: application/json');
