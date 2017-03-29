@@ -37,7 +37,7 @@ class ProfileController extends Controller
                 'user_id' => session('client_id')
             ]);
 
-            if (! property_exists($socialProfile, 'state')) {
+            if (! isset($socialProfile->state)) {
                 $socialProfile->state = false;
             }
 

@@ -53,8 +53,8 @@
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="273">
+              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -605,14 +605,7 @@
       <workItem from="1490626586487" duration="1325000" />
       <workItem from="1490655641635" duration="532000" />
       <workItem from="1490711147645" duration="9115000" />
-      <workItem from="1490797444432" duration="1818000" />
-    </task>
-    <task id="LOCAL-00044" summary="Test return back with external link">
-      <created>1489162386826</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1489162386826</updated>
+      <workItem from="1490797444432" duration="1899000" />
     </task>
     <task id="LOCAL-00045" summary="New logo">
       <created>1489424321528</created>
@@ -950,11 +943,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490799107447</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Property exists in object">
+      <created>1490799283458</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1490799283458</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368537000" />
+    <option name="totallyTimeSpent" value="368618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +998,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Show inbox option for clients" />
     <MESSAGE value="Update qualification for question 1 in projects (story title)" />
     <MESSAGE value="Specific validation for project title" />
     <MESSAGE value="Update status message" />
@@ -1023,7 +1022,8 @@
     <MESSAGE value="Apply absolute path for twitter php" />
     <MESSAGE value="Apply data attributes" />
     <MESSAGE value="Remove followers from controller and use state attribute" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove followers from controller and use state attribute" />
+    <MESSAGE value="Property exists in object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Property exists in object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1385,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+        <state relative-caret-position="273">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
           <folding />
         </state>
       </provider>
