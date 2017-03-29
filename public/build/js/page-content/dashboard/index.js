@@ -284,7 +284,7 @@ function setupSocialCounters() {
         //Get Usernames
         // dribbble_user: 'username_here',
         facebook_user: $wrapper.find('[data-social="facebook"]').data('id'),
-        google_plus_id: '108818802219696725304',
+        google_plus_id: $wrapper.find('[data-social="googlePlus"]').data('id'),
         youtube_user: $wrapper.find('[data-social="youtube"]').data('id'),
         instagram_user: $wrapper.find('[data-social="instagram"]').data('id'),
         // instagram_user_sandbox: 'username_here',

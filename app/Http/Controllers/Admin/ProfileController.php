@@ -21,7 +21,7 @@ class ProfileController extends Controller
         $socialPages = [
             ['Facebook', 'https://www.fb.com/{id}'],
             ['Linkedin', 'https://www.linkedin.com/company/{id}'],
-            ['Google+', 'https://plus.google.com/+{id}'],
+            ['Google+', 'https://plus.google.com/{id}'],
             ['Twitter', 'https://twitter.com/{id}'],
             ['Pinterest', 'http://www.pinterest.com/{id}'],
             ['FourSquare', 'https://es.foursquare.com/v/{id}'],
