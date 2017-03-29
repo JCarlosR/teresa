@@ -302,38 +302,25 @@
       });
     }
     function foursquare() {
-      //Foursquare API - GET ID
-      $.ajax({
-        url: 'https://api.foursquare.com/v2/users/search',
-        dataType: 'jsonp',
-        type: 'GET',
-        data:{
-          twitter: settings.foursquare_user,
-          oauth_token: settings.foursquare_token,
-          v: '20131017'
-        },
-        success: function(data) {
-          //Get user ID
-          var id = data.response.results[0].id;
-          //Foursquare API - GET FRIENDS COUNT
-          $.ajax({
-            url: 'https://api.foursquare.com/v2/users/'+id,
+        // Get user ID
+        var id = settings.foursquare_user;
+        // Foursquare API - GET FRIENDS COUNT
+        $.ajax({
+            url: 'https://api.foursquare.com/v2/users/' + id,
             dataType: 'jsonp',
             type: 'GET',
-            data:{
-              oauth_token: settings.foursquare_token,
-              v:'20131017'
+            data: {
+                oauth_token: settings.foursquare_token,
+                v: '20131017'
             },
-            success: function(data) {    
-              var followers = parseInt(data.response.user.friends.count);
-              var k = kFormatter(followers);
-              $('#wrapper [data-social="fourSquare"] .count').text(k);
-              // $('#wrapper [data-social="foursquare"]').attr('href','https://foursquare.com/'+settings.foursquare_user);
-              getTotal(followers); 
-            } 
-          });
-        } 
-      });
+            success: function (data) {
+                var followers = parseInt(data.response.user.friends.count);
+                var k = kFormatter(followers);
+                $('#wrapper [data-social="fourSquare"] .count').text(k);
+                // $('#wrapper [data-social="foursquare"]').attr('href','https://foursquare.com/'+settings.foursquare_user);
+                getTotal(followers);
+            }
+        });
     }
     function linkedin() {
       $.ajax({

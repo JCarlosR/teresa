@@ -27,7 +27,7 @@ trait ClientDashboard
         $googlePlus = $this->getSocialProfile($client_id, 'Google+', 'https://plus.google.com/+{id}');
         $twitter = $this->getSocialProfile($client_id, 'Twitter', 'https://twitter.com/{id}');
         $pinterest = $this->getSocialProfile($client_id, 'Pinterest', 'http://www.pinterest.com/{id}');
-        $fourSquare = $this->getSocialProfile($client_id, 'FourSquare', 'https://es.foursquare.com/v/{id}');
+        $fourSquare = $this->getSocialProfile($client_id, 'FourSquare', 'https://foursquare.com/user/{id}');
         $instagram = $this->getSocialProfile($client_id, 'Instagram', 'https://www.instagram.com/{id}');
         $youtube = $this->getSocialProfile($client_id, 'Youtube', 'https://www.youtube.com/{id}');
 
