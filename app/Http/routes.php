@@ -4,6 +4,7 @@ use Illuminate\Routing\Router;
 
 Route::get('/', 'GuessController@welcome');
 Route::get('/privacidad', 'GuessController@privacy');
+Route::get('/twitter/counter', 'Vendor\TwitterController@counter');
 
 // Authentication Routes
 Route::get('login', 'Auth\AuthController@showLoginForm');

@@ -41,8 +41,8 @@
         success: function(data) {   
           var followers = parseInt(data.data.user.follower_count);
           var k = kFormatter(followers);
-          $('#wrapper .item.pinterest .count').append(k); 
-          $('#wrapper .item.pinterest').attr('href','https://pinterest.com/'+settings.pinterest_user);
+          $('#wrapper [data-social="pinterest"] .count').append(k);
+          // $('#wrapper [data-social="pinterest"]').attr('href','https://pinterest.com/'+settings.pinterest_user);
           getTotal(followers); 
         } 
       }); 
@@ -81,8 +81,8 @@
         success: function(data) {   
           var followers = parseInt(data.fan_count);
           var k = kFormatter(followers);
-          $('#wrapper .item.facebook .count').append(k); 
-          $('#wrapper .item.facebook').attr('href','https://facebook.com/'+settings.facebook_user);
+          $('#wrapper [data-social="facebook"] .count').append(k);
+          // $('#wrapper [data-social="facebook"]').attr('href','https://facebook.com/'+settings.facebook_user);
           getTotal(followers); 
         } 
       }); 
@@ -103,8 +103,8 @@
         success: function(data) {
           var followers = parseInt(data.data.counts.followed_by);
           var k = kFormatter(followers);
-          $('#wrapper .item.instagram .count').append(k);
-          $('#wrapper .item.instagram').attr('href','https://instagram.com/'+settings.instagram_user);
+          $('#wrapper [data-social="instagram"] .count').append(k);
+          // $('#wrapper [data-social="instagram"]').attr('href','https://instagram.com/'+settings.instagram_user);
           getTotal(followers); 
         }
       });
@@ -152,8 +152,8 @@
         success: function (data) {
           var followers = parseInt(data.circledByCount);
           var k = kFormatter(followers);
-          $("#wrapper .item.google .count").append(k);
-          $('#wrapper .item.google').attr('href','https://plus.google.com/'+settings.google_plus_id);
+          $('#wrapper [data-social="googlePlus"] .count').append(k);
+          // $('#wrapper [data-social="googlePlus"]').attr('href','https://plus.google.com/'+settings.google_plus_id);
           getTotal(followers); 
         }
       });
@@ -172,8 +172,8 @@
         success: function(data) {   
           var subscribers = parseInt(data.items[0].statistics.subscriberCount);
           var k = kFormatter(subscribers);
-          $('#wrapper .item.youtube .count').append(k); 
-          $('#wrapper .item.youtube').attr('href','https://youtube.com/'+settings.youtube_user);
+          $('#wrapper [data-social="youtube"] .count').append(k);
+          // $('#wrapper [data-social="youtube"]').attr('href','https://youtube.com/'+settings.youtube_user);
           getTotal(subscribers); 
         } 
       }); 
@@ -219,7 +219,7 @@
       // http://stackoverflow.com/questions/17409227/follower-count-number-in-twitter
       // https://github.com/J7mbo/twitter-api-php
       $.ajax({
-        url: '/vendor/SocialCounters/twitter/index.php',
+        url: '/twitter/counter',
         dataType: 'json',
         type: 'GET',
         data: {
@@ -227,8 +227,8 @@
         },
         success: function(data) {   
           var followers = parseInt(data.followers);
-          $('#wrapper .item.twitter .count').append(followers).digits(); 
-          $('#wrapper .item.twitter').attr('href','https://twitter.com/'+settings.twitter_user);
+          $('#wrapper [data-social="twitter"] .count').append(followers).digits();
+          // $('#wrapper [data-social="twitter"]').attr('href','https://twitter.com/'+settings.twitter_user);
           getTotal(followers); 
         } 
       }); 
@@ -310,7 +310,7 @@
         data:{
           twitter: settings.foursquare_user,
           oauth_token: settings.foursquare_token,
-          v:'20131017',
+          v:'20131017'
         },
         success: function(data) {
           //Get user ID
@@ -327,8 +327,8 @@
             success: function(data) {    
               var followers = parseInt(data.response.user.friends.count);
               var k = kFormatter(followers);
-              $('#wrapper .item.foursquare .count').append(k); 
-              $('#wrapper .item.foursquare').attr('href','https://foursquare.com/'+settings.foursquare_user);
+              $('#wrapper [data-social="fourSquare"] .count').append(k);
+              // $('#wrapper [data-social="foursquare"]').attr('href','https://foursquare.com/'+settings.foursquare_user);
               getTotal(followers); 
             } 
           });
@@ -347,8 +347,8 @@
         success: function(data){
           var connections = parseInt(data.numConnections);
           var k = kFormatter(connections);
-          $('#wrapper .item.linkedin .count').append(k); 
-          $('#wrapper .item.linkedin').attr('href',data.publicProfileUrl);
+          $('#wrapper [data-social="linkedIn"] .count').append(k);
+          // $('#wrapper [data-social="linkedin"').attr('href',data.publicProfileUrl);
           getTotal(connections); 
         }
       });
