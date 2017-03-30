@@ -97,6 +97,7 @@ class GoogleAnalyticsController extends Controller
         for ($i=0; $i<sizeof($rows); ++$i) {
             $row = [
                 // concatenate the first day of the month
+                // this is the UNIQUE DIFFERENCE with the previous method
                 'date' => strtotime($rows[$i][0].'01') *1000,
                 'type' => $rows[$i][1],
                 'quantity' => $rows[$i][2]

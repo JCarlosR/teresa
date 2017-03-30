@@ -25,7 +25,7 @@ class AdminController extends Controller
 
         // Set session variable to show the client name in the left menu
         session()->put('client_id', $client->id);
-        session()->put('client_name', $client->name);
+        session()->put('client_name', $client->trade_name);
         session()->put('client_photo_route', $client->photo_route);
 
         return redirect('/admin/dashboard');
