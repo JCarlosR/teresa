@@ -6,6 +6,9 @@
             color: #1f364f;
             font-size: 1.2em;
         }
+        .client-widget {
+            height: 360px;
+        }
     </style>
 @endsection
 
@@ -48,7 +51,7 @@
         <div class="row">
             @foreach ($clients as $client)
                 <div class="col-md-3" data-status="{{ $client->client_type }}">
-                    <div class="widget">
+                    <div class="widget client-widget">
                         <div class="widget-body text-center">
                             <p  class="text-right">
                                 <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}"
