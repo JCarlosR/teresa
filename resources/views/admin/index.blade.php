@@ -33,6 +33,11 @@
         <div class="row text-center">
             <div class="col-md-12 form-group">
                 <div class="btn-group">
+                    <a href="/admin" class="btn btn-default">Todos</a>
+                    <a href="/admin?mostrar=activos" class="btn btn-default">Activos</a>
+                    <a href="/admin?mostrar=inactivos" class="btn btn-default">Inactivos</a>
+                </div>
+                <div class="btn-group">
                     <button type="button" class="btn btn-success btn-filter" data-target="architect">SEO Arquitectos</button>
                     <button type="button" class="btn btn-warning btn-filter" data-target="sps">SPS General</button>
                     <button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>

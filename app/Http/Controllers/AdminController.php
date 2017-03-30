@@ -31,9 +31,19 @@ class AdminController extends Controller
         return redirect('/admin/dashboard');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $clients = User::client()->orderBy('starred', 'desc')->get();
+        $show = $request->input('mostrar');
+
+        $query = User::client();
+        if ($show == 'activos') {
+            $query->where('starred', true);
+        } elseif ($show == 'inactivos')
+            $query->where('starred', false);
+        else // order when all are selected
+            $query->orderBy('starred', 'desc');
+
+        $clients = $query->get();
         return view('admin.index')->with(compact('clients'));
     }
 
