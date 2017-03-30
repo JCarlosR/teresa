@@ -25,7 +25,7 @@ class GoogleAnalyticsController extends Controller
         // Time dimension parameter
         $timeDimension = $request->input('ga_time');
         if ($timeDimension != 'date') { // to avoid invalid values
-            $timeDimension = 'month';
+            $timeDimension = 'yearMonth';
         }
 
         $metrics = 'ga:pageviews';
@@ -37,12 +37,12 @@ class GoogleAnalyticsController extends Controller
         $analytics = $analyticsHelper->getView($view_id);
         $response = $analytics->performQuery($period, $metrics, $optional);
 
-        // dd($response);
+        // dd($response->rows);
 
         if ($timeDimension == 'date')
             return $this->formatToVisitsPerDate($response->rows);
         // else
-        return $this->formatToVisitsPerMonth($response->rows);
+        return $this->formatToVisitsYearMonth($response->rows);
     }
 
     public function formatToVisitsPerDate($rows) {
@@ -88,7 +88,7 @@ class GoogleAnalyticsController extends Controller
         return $data;
     }
 
-    public function formatToVisitsPerMonth($rows) {
+    public function formatToVisitsYearMonth($rows) {
         $data = [];
         $data['total'] = [];
         $data['referral'] = [];
@@ -96,13 +96,14 @@ class GoogleAnalyticsController extends Controller
 
         for ($i=0; $i<sizeof($rows); ++$i) {
             $row = [
-                'month' => intval($rows[$i][0]), // from "01" to "12"
+                // concatenate the first day of the month
+                'date' => strtotime($rows[$i][0].'01') *1000,
                 'type' => $rows[$i][1],
                 'quantity' => $rows[$i][2]
             ];
 
             $rowData = [
-                $row['month'], $row['quantity']
+                $row['date'], $row['quantity']
             ];
 
             if ($row['type'] == 'referral') {
@@ -120,7 +121,7 @@ class GoogleAnalyticsController extends Controller
                 $lastPosition = sizeof($data['total']) -1;
                 // here we use the & to get a reference of the array :)
                 $lastTotalRow = &$data['total'][$lastPosition];
-                if ($row['month'] === $lastTotalRow[0]) {
+                if ($row['date'] === $lastTotalRow[0]) {
                     $lastTotalRow[1] += $row['quantity'];
                 } else {
                     $data['total'][] = $rowData;

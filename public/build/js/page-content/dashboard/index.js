@@ -44,14 +44,14 @@ var visitsDateOptions = {
     }
 };
 
-var visitsMonthOptions = jQuery.extend(true, {}, visitsDateOptions); // deep copy
+/*var visitsMonthOptions = jQuery.extend(true, {}, visitsDateOptions); // deep copy
 visitsMonthOptions.xaxis = {
     ticks: [
         [1,'Ene'],[2,'Feb'],[3,'Mar'],[4,'Abr'],
         [5,'May'],[6,'Jun'],[7,'Jul'],[8,'Ago'],
         [9,'Sept'],[10,'Oct'],[11,'Nov'],[12,'Dic']
     ]
-};
+};*/
 
 $(document).ready(function() {
     setupSocialCounters();
@@ -193,13 +193,17 @@ function performGoogleAnalyticsQuery(startDate, endDate) {
             }
         }];
 
-        // Update the label print frequency
-        visitsDateOptions.xaxis.tickSize[0] = data.total.length / 10;
-        // to avoid too much labels in big ranges
-        // it tends to be 10 labels :D
+        if (gaTimeDimension=='date') {
+            // Update the label print frequency
+            var tick = data.total.length / 10;
+            visitsDateOptions.xaxis.tickSize = [tick, 'day'];
+            // to avoid too much labels in big ranges
+            // it tends to be 10 labels :D
+        } else {
+            visitsDateOptions.xaxis.tickSize = [1, 'month'];
+        }
 
-        var chartOptions = gaTimeDimension=='date' ? visitsDateOptions : visitsMonthOptions;
-        $.plot($('#flot-visitor'), dataVisitors, chartOptions);
+        $.plot($('#flot-visitor'), dataVisitors, visitsDateOptions);
         $('#flot-visitor').bind('plothover', function(event, pos, item) {
             if (item) {
                 $('.flotTip').text(item.datapoint[1].toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' visitas').css({
