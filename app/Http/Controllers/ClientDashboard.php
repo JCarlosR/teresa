@@ -58,14 +58,15 @@ trait ClientDashboard
         if ($socialProfile) {
             // the URL field is used as the ID
             // and the URL have to be calculated after replace the ID in the placeholder
-            $customObject->id = $socialProfile->url;
 
             $customObject->state = $socialProfile->state;
-
-            if ($customObject->id !== '' && $customObject->state==TRUE)
+            if ($customObject->state==TRUE) {
+                $customObject->id = $socialProfile->url;
                 $customObject->url = str_replace('{id}', $customObject->id, $placeholder);
-            else
+            } else {
+                $customObject->id = '';
                 $customObject->url = '#';
+            }
 
             // TODO: Update the followers count just once per day
             // $customObject->followers = $socialProfile->followers;
