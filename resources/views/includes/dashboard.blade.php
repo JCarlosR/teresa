@@ -30,11 +30,13 @@
 <div class="row">
     <div class="col-md-4">
         <div class="widget">
-            <div class="widget-body text-center">
-                <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->trade_name }}" class="img-circle">
+            <div class="widget-body">
+                <div class="text-center">
+                    <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->trade_name }}" class="img-circle">
+                </div>
+                <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
                 <a href="{{ $client->domain ?: '#' }}" target="_blank" style="color: #1e0fbe;">
-                    <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
-                    <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin nombre comercial' }}</h4>
+                    <h4 class="mt-20 mb-5">{{ $client->name ?: 'Sin nombre comercial' }}</h4>
                 </a>
                 <p style="color: #006621;">{{ $client->domain ?: url('/') }}</p>
                 <p style="color: #545454;">{{ $client->description ?: 'Descripción sin especificar' }}</p>
