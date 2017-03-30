@@ -31,12 +31,13 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-body text-center">
-                <a href="{{ $client->domain ?: '#' }}" target="_blank">
-                    <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
-                    <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
+                <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->trade_name }}" class="img-circle">
+                <a href="{{ $client->domain ?: '#' }}" target="_blank" style="color: #1e0fbe;">
+                    <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
+                    <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin nombre comercial' }}</h4>
                 </a>
-                <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
-                <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
+                <p style="color: #006621;">{{ $client->domain ?: url('/') }}</p>
+                <p style="color: #545454;">{{ $client->description ?: 'Descripción sin especificar' }}</p>
             </div>
         </div>
         <div class="widget">
