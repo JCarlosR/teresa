@@ -193,15 +193,11 @@ function performGoogleAnalyticsQuery(startDate, endDate) {
             }
         }];
 
-        if (gaTimeDimension=='date') {
-            // Update the label print frequency
-            var tick = data.total.length / 10;
-            visitsDateOptions.xaxis.tickSize = [tick, 'day'];
-            // to avoid too much labels in big ranges
-            // it tends to be 10 labels :D
-        } else {
-            visitsDateOptions.xaxis.tickSize = [1, 'month'];
-        }
+        // Update the label print frequency
+        var tick = data.total.length / 10;
+        visitsDateOptions.xaxis.tickSize = [tick, (gaTimeDimension=='date'?'day':'month')];
+        // to avoid too much labels in big ranges
+        // it tends to be 10 labels :D
 
         $.plot($('#flot-visitor'), dataVisitors, visitsDateOptions);
         $('#flot-visitor').bind('plothover', function(event, pos, item) {

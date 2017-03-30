@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/GoogleAnalyticsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/GoogleAnalyticsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" afterPath="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="202" column="57" lean-forward="false" selection-start-line="202" selection-start-column="57" selection-end-line="202" selection-end-column="57" />
+            <state relative-caret-position="216">
+              <caret line="197" column="89" lean-forward="false" selection-start-line="197" selection-start-column="89" selection-end-line="197" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -466,14 +465,7 @@
       <workItem from="1490655641635" duration="532000" />
       <workItem from="1490711147645" duration="9115000" />
       <workItem from="1490797444432" duration="7921000" />
-      <workItem from="1490882941598" duration="3194000" />
-    </task>
-    <task id="LOCAL-00060" summary="Get verb">
-      <created>1489763826204</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1489763826204</updated>
+      <workItem from="1490882941598" duration="3434000" />
     </task>
     <task id="LOCAL-00061" summary="Change param name">
       <created>1489769651701</created>
@@ -811,11 +803,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490884025811</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="show yearMonth dimension instead of month dimension">
+      <created>1490887821580</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1490887821580</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377834000" />
+    <option name="totallyTimeSpent" value="378074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,8 +858,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Google Analytics showing per Month or Date" />
-    <MESSAGE value="Custom HTTP Request class (for CloudFlare HTTPS)" />
     <MESSAGE value="Privacy policy, remove followers field and add placeholders" />
     <MESSAGE value="Black color icon for social profiles with ? value" />
     <MESSAGE value="Change operator" />
@@ -884,7 +881,9 @@
     <MESSAGE value="id empty when state is false" />
     <MESSAGE value="based on state" />
     <MESSAGE value="Filter users list based on starred state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter users list based on starred state" />
+    <MESSAGE value="show yearMonth dimension instead of month dimension" />
+    <MESSAGE value="limit labels tick for months" />
+    <option name="LAST_COMMIT_MESSAGE" value="limit labels tick for months" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1236,8 +1235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="202" column="57" lean-forward="false" selection-start-line="202" selection-start-column="57" selection-end-line="202" selection-end-column="57" />
+        <state relative-caret-position="216">
+          <caret line="197" column="89" lean-forward="false" selection-start-line="197" selection-start-column="89" selection-end-line="197" selection-end-column="89" />
           <folding />
         </state>
       </provider>
