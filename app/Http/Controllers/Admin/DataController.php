@@ -27,6 +27,9 @@ class DataController extends Controller
             'schedule_end' => 'date_format:H:i',
             'works_from' => 'date',
 
+            'title' => 'max:48',
+            'description' => 'max:152',
+
             'google_account' => 'email',
             'contact_email' => 'email'
         ];
@@ -38,6 +41,9 @@ class DataController extends Controller
             'schedule_start.date_format' => 'Ingresa una hora válida de inicio (formato 24 horas).',
             'schedule_end.date_format' => 'Ingresa una hora válida de fin (formato 24 horas).',
             'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.',
+
+            'title.max' => 'El título ingresado supera el límite permitido (48 caracteres).',
+            'description.max' => 'La descripción ingresada supera el límite permitido (152 caracteres).',
 
             'google_account.email' => 'Ingresa un email válido como Google Account.',
             'contact_email.email' => 'El email de contacto no contiene un formato válido.'
