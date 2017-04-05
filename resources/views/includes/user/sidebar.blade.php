@@ -69,37 +69,37 @@
             </ul>
         </li>
 
-        <li class="panel">
-            <a href="{{ url('/mapa') }}">
-                <i class="ion-ios-analytics-outline bg-black"></i>
-                <span class="sidebar-title">Ubicación</span>
-            </a>
-        </li>
+        {{--<li class="panel">--}}
+            {{--<a href="{{ url('/mapa') }}">--}}
+                {{--<i class="ion-ios-analytics-outline bg-black"></i>--}}
+                {{--<span class="sidebar-title">Ubicación</span>--}}
+            {{--</a>--}}
+        {{--</li>--}}
 
-        <li class="sidebar-category">Ayuda</li>
-        <li class="panel">
-            <a href="{{ url('/ayuda') }}">
-                <i class="ion-ios-help-outline bg-black"></i>
-                <span class="sidebar-title">Solicitar ayuda</span>
-            </a>
-        </li>
+        {{--<li class="sidebar-category">Ayuda</li>--}}
+        {{--<li class="panel">--}}
+            {{--<a href="{{ url('/ayuda') }}">--}}
+                {{--<i class="ion-ios-help-outline bg-black"></i>--}}
+                {{--<span class="sidebar-title">Solicitar ayuda</span>--}}
+            {{--</a>--}}
+        {{--</li>--}}
     </ul>
 
     <div class="sidebar-category">Indicadores</div>
     <div class="sidebar-widget">
         <ul class="list-unstyled pl-15 pr-15">
             <li class="mb-20">
-                <div class="block clearfix mb-10"><span class="pull-left text-muted">Datos ingresados</span><span class="pull-right label label-outline label-success">78 %</span></div>
+                <div class="block clearfix mb-10"><span class="pull-left text-muted">Datos ingresados</span><span class="pull-right label label-outline label-success">{{ auth()->user()->projects_percent }} %</span></div>
                 <div class="progress progress-xs mb-0">
-                    <div role="progressbar" data-transitiongoal="78" class="progress-bar progress-bar-success"></div>
+                    <div role="progressbar" data-transitiongoal="{{ auth()->user()->projects_percent }}" class="progress-bar progress-bar-success"></div>
                 </div>
             </li>
-            <li class="mb-20">
-                <div class="block clearfix mb-10"><span class="pull-left text-muted">Atraso en los pagos</span><span class="pull-right label label-outline label-purple">12 días</span></div>
-                <div class="progress progress-xs mb-0">
-                    <div role="progressbar" data-transitiongoal="24" class="progress-bar progress-bar-purple"></div>
-                </div>
-            </li>
+            {{--<li class="mb-20">--}}
+                {{--<div class="block clearfix mb-10"><span class="pull-left text-muted">Atraso en los pagos</span><span class="pull-right label label-outline label-purple">12 días</span></div>--}}
+                {{--<div class="progress progress-xs mb-0">--}}
+                    {{--<div role="progressbar" data-transitiongoal="24" class="progress-bar progress-bar-purple"></div>--}}
+                {{--</div>--}}
+            {{--</li>--}}
         </ul>
     </div>
 </aside>
