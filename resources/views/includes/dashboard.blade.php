@@ -98,7 +98,7 @@
                                         {{ $service->name }}
                                     </a>
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     <img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="24">
                                 </td>
                                 {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
