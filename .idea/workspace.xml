@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
-              <caret line="341" column="33" lean-forward="false" selection-start-line="341" selection-start-column="33" selection-end-line="341" selection-end-column="33" />
+              <caret line="341" column="30" lean-forward="false" selection-start-line="341" selection-start-column="30" selection-end-line="341" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -511,14 +511,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="1583000" />
-    </task>
-    <task id="LOCAL-00073" summary="Impersonate user">
-      <created>1490194432817</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1490194432817</updated>
+      <workItem from="1491490641426" duration="1666000" />
     </task>
     <task id="LOCAL-00074" summary="Select topic, filter in inbox">
       <created>1490195648003</created>
@@ -856,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491492112415</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="error callback for linkedIn">
+      <created>1491492241964</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1491492241964</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386305000" />
+    <option name="totallyTimeSpent" value="386388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -904,7 +904,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="check if is set state" />
     <MESSAGE value="set state when is possible" />
     <MESSAGE value="fix twitter counter" />
     <MESSAGE value="remove validation NIF" />
@@ -929,7 +928,8 @@
     <MESSAGE value="remove data type" />
     <MESSAGE value="data type json" />
     <MESSAGE value="jsonp is required to perform cross requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonp is required to perform cross requests" />
+    <MESSAGE value="error callback for linkedIn" />
+    <option name="LAST_COMMIT_MESSAGE" value="error callback for linkedIn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1280,7 +1280,7 @@
     <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="341" column="33" lean-forward="false" selection-start-line="341" selection-start-column="33" selection-end-line="341" selection-end-column="33" />
+          <caret line="341" column="30" lean-forward="false" selection-start-line="341" selection-start-column="30" selection-end-line="341" selection-end-column="30" />
           <folding />
         </state>
       </provider>
