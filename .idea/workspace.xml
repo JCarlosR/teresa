@@ -43,8 +43,8 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="254" column="56" lean-forward="true" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
+            <state relative-caret-position="375">
+              <caret line="258" column="134" lean-forward="false" selection-start-line="258" selection-start-column="134" selection-end-line="258" selection-end-column="134" />
               <folding />
             </state>
           </provider>
@@ -525,14 +525,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="2876000" />
-    </task>
-    <task id="LOCAL-00077" summary="Json response">
-      <created>1490198928017</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1490198928018</updated>
+      <workItem from="1491490641426" duration="2936000" />
     </task>
     <task id="LOCAL-00078" summary="Desc">
       <created>1490199259644</created>
@@ -870,11 +863,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491492665692</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="show project status">
+      <created>1491493646717</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1491493646717</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387598000" />
+    <option name="totallyTimeSpent" value="387658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -918,7 +918,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="remove validation NIF" />
     <MESSAGE value="foursquare using user id directly" />
     <MESSAGE value="print social profile ids" />
     <MESSAGE value="fix id" />
@@ -943,7 +942,8 @@
     <MESSAGE value="error callback for linkedIn" />
     <MESSAGE value="ajax error message" />
     <MESSAGE value="jsonp and jsonp" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonp and jsonp" />
+    <MESSAGE value="show project status" />
+    <option name="LAST_COMMIT_MESSAGE" value="show project status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1294,8 +1294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="254" column="56" lean-forward="true" selection-start-line="254" selection-start-column="56" selection-end-line="254" selection-end-column="56" />
+        <state relative-caret-position="375">
+          <caret line="258" column="134" lean-forward="false" selection-start-line="258" selection-start-column="134" selection-end-line="258" selection-end-column="134" />
           <folding />
         </state>
       </provider>
