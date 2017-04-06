@@ -11,6 +11,7 @@
       google_plus_id:'',
       google_plus_key:'',
       linkedin_oauth:'',
+      linkedin_company_id:'',
       youtube_user:'',
       youtube_key:'',
       vine_user:'',
@@ -324,19 +325,17 @@
     }
     function linkedin() {
       $.ajax({
-        url: 'https://api.linkedin.com/v1/people/~:(num-connections,public-profile-url)',
-        dataType:'jsonp',
-        type:'GET',
-        data:{
-          oauth2_access_token:settings.linkedin_oauth,
-          format:'jsonp'
+          url: 'https://api.linkedin.com/v1/companies/' + settings.linkedin_company_id + '/num-followers',
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {
+          oauth2_access_token: settings.linkedin_oauth,
+          format:'json'
         },
-        success: function(data){
-          var connections = parseInt(data.numConnections);
-          var k = kFormatter(connections);
+        success: function(followers){
+          var k = kFormatter(followers);
           $('#wrapper [data-social="linkedIn"] .count').text(k);
-          // $('#wrapper [data-social="linkedin"').attr('href', data.publicProfileUrl);
-          getTotal(connections); 
+          getTotal(followers);
         }
       });
     }
@@ -399,7 +398,7 @@
     linkClick();
 
     //Call Functions
-    if(settings.twitter_user!=''){ 
+    if (settings.twitter_user!=''){
       twitter(); 
     } if(settings.facebook_user!='' && settings.facebook_token!=''){ 
       facebook(); 
@@ -407,9 +406,9 @@
       instagram();
     } if(settings.instagram_user_sandbox!='' && settings.instagram_token!=''){ 
       instagram_sandbox();
-    }if(settings.google_plus_id!='' && settings.google_plus_key!=''){ 
+    } if(settings.google_plus_id!='' && settings.google_plus_key!=''){
       google();
-    } if(settings.linkedin_oauth!=''){ 
+    } if(settings.linkedin_oauth!='' && settings.linkedin_company_id!=''){
       linkedin(); 
     } if(settings.youtube_user!='' && settings.youtube_key!=''){ 
       youtube(); 
