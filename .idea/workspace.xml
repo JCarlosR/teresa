@@ -35,7 +35,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
               <caret line="314" column="66" lean-forward="false" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
-              <folding />
+              <folding>
+                <marker date="1491491529732" expanded="true" signature="8496:10481" ph="{...}" />
+                <marker date="1491491529732" expanded="true" signature="8559:10477" ph="{&quot;instagram_token&quot;: '4928751214.1677ed0.2933bfc9a12145c581c37a314dfbae30'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,9 +46,15 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="100" column="54" lean-forward="false" selection-start-line="100" selection-start-column="54" selection-end-line="100" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="-219">
+              <caret line="431" column="51" lean-forward="false" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
+              <folding>
+                <element signature="n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+                <element signature="n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+                <element signature="n#p#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#2;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#2;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +84,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
               <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
-              <folding />
+              <folding>
+                <marker date="1491492648393" expanded="true" signature="13:16004" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>responseToChartVisitsData</find>
-      <find>Mes</find>
       <find>gaTimeDimensions</find>
       <find>$gaT</find>
       <find>previu</find>
@@ -131,6 +140,8 @@
       <find>servicios</find>
       <find>status_color</find>
       <find>status_</find>
+      <find>artícu</find>
+      <find>-</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -535,14 +546,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="3280000" />
-    </task>
-    <task id="LOCAL-00081" summary="Format date index admin">
-      <created>1490200214898</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1490200214898</updated>
+      <workItem from="1491490641426" duration="4381000" />
     </task>
     <task id="LOCAL-00082" summary="Google Analytics showing per Month or Date">
       <created>1490282051504</created>
@@ -880,11 +884,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491493984430</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="center image status services">
+      <created>1491494040833</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1491494040834</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388002000" />
+    <option name="totallyTimeSpent" value="389103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,18 +917,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -928,7 +939,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="google plus id" />
     <MESSAGE value="google plus id dashboard" />
     <MESSAGE value="id empty when state is false" />
     <MESSAGE value="based on state" />
@@ -953,7 +963,8 @@
     <MESSAGE value="add link to services and status" />
     <MESSAGE value="image status services" />
     <MESSAGE value="center image status services" />
-    <option name="LAST_COMMIT_MESSAGE" value="center image status services" />
+    <MESSAGE value="inbox in dashboard (dummy data)" />
+    <option name="LAST_COMMIT_MESSAGE" value="inbox in dashboard (dummy data)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1275,7 +1286,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="314" column="66" lean-forward="false" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
-          <folding />
+          <folding>
+            <marker date="1491491529732" expanded="true" signature="8496:10481" ph="{...}" />
+            <marker date="1491491529732" expanded="true" signature="8559:10477" ph="{&quot;instagram_token&quot;: '4928751214.1677ed0.2933bfc9a12145c581c37a314dfbae30'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,7 +1297,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
-          <folding />
+          <folding>
+            <marker date="1491492648393" expanded="true" signature="13:16004" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,9 +1321,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="100" column="54" lean-forward="false" selection-start-line="100" selection-start-column="54" selection-end-line="100" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="-219">
+          <caret line="431" column="51" lean-forward="false" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
+          <folding>
+            <element signature="n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#td#0;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#2;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

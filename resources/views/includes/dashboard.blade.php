@@ -335,31 +335,135 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-heading">
-                <h3 class="widget-title">Actividad reciente</h3>
+                <h3 class="widget-title">Últimos mensajes recibidos</h3>
             </div>
             <div class="widget-body">
-                <ul class="activity-list activity-sm list-unstyled mb-0">
-                    <li class="activity-purple">
-                        <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">9 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="label label-success">recommended</span> Karen Ortega</p>
-                    </li>
-                    <li class="activity-danger">
-                        <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">15 minutes ago</time>
-                        <p class="mt-10 mb-0">You followed Olivia Williamson</p>
-                    </li>
-                    <li class="activity-warning">
-                        <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">22 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="text-danger">subscribed</span> to Harold Fuller</p>
-                    </li>
-                    <li class="activity-success">
-                        <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">30 minutes ago</time>
-                        <p class="mt-10 mb-0">You updated your profile picture</p>
-                    </li>
-                    <li class="activity-primary">
-                        <time datetime="2016-12-10T20:22:48+07:00" class="fs-13 text-muted">35 minutes ago</time>
-                        <p class="mt-10 mb-0">You deleted homepage.psd</p>
-                    </li>
-                </ul>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Emisor</th>
+                        <th>Mensaje</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="unread">
+                        <td class="email-select">
+                            Proyectos
+                            <p class="text-muted mb-0">
+                                <time datetime="2017-03-22 16:22:12" class="fs-13 mr-5">
+                                    22/03/2017
+                                </time>
+                            </p>
+                        </td>
+                        <td class="email-from">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="media-heading">Magdalena</h5>
+                                    <span>954343777</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Ver mensaje
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="email-select">
+                            Proveedores
+                            <p class="text-muted mb-0">
+                                <time datetime="2017-03-22 16:18:53" class="fs-13 mr-5">
+                                    22/03/2017
+                                </time>
+                            </p>
+                        </td>
+                        <td class="email-from">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="media-heading">Benito</h5>
+                                    <span class="email-title">911543777</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Ver mensaje
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email-select">
+                            Empleo
+                            <p class="text-muted mb-0">
+                                <time datetime="2017-03-22 16:17:56" class="fs-13 mr-5">
+                                    22/03/2017
+                                </time>
+                            </p>
+                        </td>
+                        <td class="email-from">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="media-heading">Rosa</h5>
+                                    <span>966378777</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Ver mensaje
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="unread">
+                        <td class="email-select">
+                            Proyectos
+                            <p class="text-muted mb-0">
+                                <time datetime="2017-03-22 16:15:11" class="fs-13 mr-5">
+                                    22/03/2017
+                                </time>
+                            </p>
+                        </td>
+                        <td class="email-from">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="media-heading">María</h5>
+                                    <span>966468468</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Ver mensaje
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email-select">
+                            C. Directo
+                            <p class="text-muted mb-0">
+                                <time datetime="2017-03-22 16:10:15" class="fs-13 mr-5">
+                                    22/03/2017
+                                </time>
+                            </p>
+                        </td>
+                        <td class="email-from">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h5 class="media-heading">Carlos</h5>
+                                    <span>966543777</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#">
+                                Ver mensaje
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -394,6 +498,37 @@
                         <div class="media-left"><img src="{{ asset('build/images/products/01.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
                         <div class="media-body media-middle"><a href="#" class="text-base">
                                 <h5 class="media-heading">Designing For Digital Products</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Sara Price</a></span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="widget">
+            <div class="widget-heading">
+                <h3 class="widget-title">Actividad reciente</h3>
+            </div>
+            <div class="widget-body">
+                <ul class="activity-list activity-sm list-unstyled mb-0">
+                    <li class="activity-purple">
+                        <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">9 minutes ago</time>
+                        <p class="mt-10 mb-0">You <span class="label label-success">recommended</span> Karen Ortega</p>
+                    </li>
+                    <li class="activity-danger">
+                        <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">15 minutes ago</time>
+                        <p class="mt-10 mb-0">You followed Olivia Williamson</p>
+                    </li>
+                    <li class="activity-warning">
+                        <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">22 minutes ago</time>
+                        <p class="mt-10 mb-0">You <span class="text-danger">subscribed</span> to Harold Fuller</p>
+                    </li>
+                    <li class="activity-success">
+                        <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">30 minutes ago</time>
+                        <p class="mt-10 mb-0">You updated your profile picture</p>
+                    </li>
+                    <li class="activity-primary">
+                        <time datetime="2016-12-10T20:22:48+07:00" class="fs-13 text-muted">35 minutes ago</time>
+                        <p class="mt-10 mb-0">You deleted homepage.psd</p>
                     </li>
                 </ul>
             </div>
