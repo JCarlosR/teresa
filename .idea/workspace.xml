@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+              <caret line="328" column="25" lean-forward="false" selection-start-line="328" selection-start-column="25" selection-end-line="328" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -511,14 +511,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="1151000" />
-    </task>
-    <task id="LOCAL-00070" summary="Update status message">
-      <created>1490108473683</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1490108473683</updated>
+      <workItem from="1491490641426" duration="1341000" />
     </task>
     <task id="LOCAL-00071" summary="Update isTitle value for first load">
       <created>1490108709973</created>
@@ -856,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491491578879</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="remove data type">
+      <created>1491491808459</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1491491808459</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385873000" />
+    <option name="totallyTimeSpent" value="386063000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -904,7 +904,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Remove followers from controller and use state attribute" />
     <MESSAGE value="Property exists in object" />
     <MESSAGE value="isset" />
     <MESSAGE value="check if is set state" />
@@ -929,7 +928,8 @@
     <MESSAGE value="max characters count for title and description" />
     <MESSAGE value="Show projects percent and hide some links" />
     <MESSAGE value="linkedin api company id" />
-    <option name="LAST_COMMIT_MESSAGE" value="linkedin api company id" />
+    <MESSAGE value="remove data type" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove data type" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1280,7 +1280,7 @@
     <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="328" column="0" lean-forward="false" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+          <caret line="328" column="25" lean-forward="false" selection-start-line="328" selection-start-column="25" selection-end-line="328" selection-end-column="25" />
           <folding />
         </state>
       </provider>

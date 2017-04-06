@@ -326,6 +326,7 @@
     function linkedin() {
       $.ajax({
           url: 'https://api.linkedin.com/v1/companies/' + settings.linkedin_company_id + '/num-followers',
+          dataType: 'json',
           type: 'GET',
           data: {
               oauth2_access_token: settings.linkedin_oauth,
