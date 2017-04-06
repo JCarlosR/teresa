@@ -326,17 +326,18 @@
     function linkedin() {
       $.ajax({
           url: 'https://api.linkedin.com/v1/companies/' + settings.linkedin_company_id + '/num-followers',
-        dataType: 'jsonp',
-        type: 'GET',
-        data: {
-          oauth2_access_token: settings.linkedin_oauth,
-          format:'json'
-        },
-        success: function(followers){
-          var k = kFormatter(followers);
-          $('#wrapper [data-social="linkedIn"] .count').text(k);
-          getTotal(followers);
-        }
+          dataType: 'jsonp',
+          type: 'GET',
+          data: {
+              oauth2_access_token: settings.linkedin_oauth,
+              format: 'json'
+          },
+          success: function (followers) {
+              console.log(followers);
+              var k = kFormatter(followers);
+              $('#wrapper [data-social="linkedIn"] .count').text(k);
+              getTotal(followers);
+          }
       });
     }
     function tumblr(){

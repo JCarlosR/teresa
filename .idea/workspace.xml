@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" afterPath="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js" afterPath="$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +30,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
@@ -51,21 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <state relative-caret-position="364">
+              <caret line="334" column="10" lean-forward="false" selection-start-line="334" selection-start-column="10" selection-end-line="339" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -92,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reloadAnalyticsForNewDateRange</find>
       <find>alert</find>
       <find>$('#dateRangePicker')</find>
       <find>perform</find>
@@ -122,6 +110,7 @@
       <find>data-s</find>
       <find>linked</find>
       <find>linkedin_o</find>
+      <find>linkedin_company_id</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -522,14 +511,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="504000" />
-    </task>
-    <task id="LOCAL-00068" summary="Update qualification for question 1 in projects (story title)">
-      <created>1490107982565</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1490107982566</updated>
+      <workItem from="1491490641426" duration="923000" />
     </task>
     <task id="LOCAL-00069" summary="Specific validation for project title">
       <created>1490108359549</created>
@@ -867,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491405749457</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="linkedin api company id">
+      <created>1491491171101</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1491491171102</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385226000" />
+    <option name="totallyTimeSpent" value="385645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,7 +904,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Apply data attributes" />
     <MESSAGE value="Remove followers from controller and use state attribute" />
     <MESSAGE value="Property exists in object" />
     <MESSAGE value="isset" />
@@ -940,7 +928,8 @@
     <MESSAGE value="left align" />
     <MESSAGE value="max characters count for title and description" />
     <MESSAGE value="Show projects percent and hide some links" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show projects percent and hide some links" />
+    <MESSAGE value="linkedin api company id" />
+    <option name="LAST_COMMIT_MESSAGE" value="linkedin api company id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1264,14 +1253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-210">
@@ -1280,10 +1261,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="207">
+          <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -1292,6 +1273,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="314" column="66" lean-forward="false" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="334" column="10" lean-forward="false" selection-start-line="334" selection-start-column="10" selection-end-line="339" selection-end-column="11" />
           <folding />
         </state>
       </provider>
