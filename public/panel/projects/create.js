@@ -69,9 +69,9 @@ $(document).ready(function() {
                 $status.html(htmlStatus.bad);
         } else {
             // for questions
-            if (charactersNum >= 300)
+            if (charactersNum >= 500)
                 $status.html(htmlStatus.good);
-            else if (charactersNum >= 200)
+            else if (charactersNum >= 300)
                 $status.html(htmlStatus.regular);
             else
                 $status.html(htmlStatus.bad);
