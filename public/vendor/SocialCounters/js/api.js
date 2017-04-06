@@ -330,7 +330,7 @@
           type: 'GET',
           data: {
               oauth2_access_token: settings.linkedin_oauth,
-              format: 'json'
+              format: 'jsonp'
           },
           success: function (followers) {
               console.log(followers);

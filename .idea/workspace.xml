@@ -53,8 +53,8 @@
       <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="355" column="41" lean-forward="false" selection-start-line="355" selection-start-column="41" selection-end-line="355" selection-end-column="41" />
+            <state relative-caret-position="69">
+              <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -511,14 +511,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="1866000" />
-    </task>
-    <task id="LOCAL-00075" summary="Logic &amp;&amp;">
-      <created>1490195774552</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1490195774552</updated>
+      <workItem from="1491490641426" duration="2004000" />
     </task>
     <task id="LOCAL-00076" summary="No required dots">
       <created>1490195824251</created>
@@ -856,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491492319322</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="ajax error message">
+      <created>1491492515139</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1491492515139</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386588000" />
+    <option name="totallyTimeSpent" value="386726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1279,8 +1279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="355" column="41" lean-forward="false" selection-start-line="355" selection-start-column="41" selection-end-line="355" selection-end-column="41" />
+        <state relative-caret-position="69">
+          <caret line="332" column="28" lean-forward="false" selection-start-line="332" selection-start-column="28" selection-end-line="332" selection-end-column="28" />
           <folding />
         </state>
       </provider>
