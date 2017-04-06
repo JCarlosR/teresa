@@ -44,7 +44,17 @@
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="258" column="134" lean-forward="false" selection-start-line="258" selection-start-column="134" selection-end-line="258" selection-end-column="134" />
+              <caret line="96" column="54" lean-forward="false" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-252">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -91,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert</find>
       <find>$('#dateRangePicker')</find>
       <find>perform</find>
       <find>responseToChartVisitsData</find>
@@ -121,6 +130,7 @@
       <find>linked</find>
       <find>linkedin_o</find>
       <find>linkedin_company_id</find>
+      <find>servicios</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -525,14 +535,7 @@
       <workItem from="1490970118045" duration="1858000" />
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
-      <workItem from="1491490641426" duration="2936000" />
-    </task>
-    <task id="LOCAL-00078" summary="Desc">
-      <created>1490199259644</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1490199259644</updated>
+      <workItem from="1491490641426" duration="3133000" />
     </task>
     <task id="LOCAL-00079" summary="Checkbox id">
       <created>1490199843330</created>
@@ -870,11 +873,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491493646717</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add link to show project">
+      <created>1491493707146</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1491493707146</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387658000" />
+    <option name="totallyTimeSpent" value="387855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -918,7 +928,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="foursquare using user id directly" />
     <MESSAGE value="print social profile ids" />
     <MESSAGE value="fix id" />
     <MESSAGE value="take id from data attributes" />
@@ -943,7 +952,8 @@
     <MESSAGE value="ajax error message" />
     <MESSAGE value="jsonp and jsonp" />
     <MESSAGE value="show project status" />
-    <option name="LAST_COMMIT_MESSAGE" value="show project status" />
+    <MESSAGE value="add link to show project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add link to show project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,13 +962,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/tests/unit/DocBlock/Tags/SourceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/projects/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3032">
@@ -1292,10 +1295,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="258" column="134" lean-forward="false" selection-start-line="258" selection-start-column="134" selection-end-line="258" selection-end-column="134" />
+          <caret line="96" column="54" lean-forward="false" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
           <folding />
         </state>
       </provider>

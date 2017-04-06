@@ -85,7 +85,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre</th>
-                            <th class="text-center">Porcentaje</th>
+                            <th class="text-center">Estado</th>
                             {{--<th class="text-center">Fotos</th>--}}
                         </tr>
                         </thead>
@@ -93,8 +93,12 @@
                         @foreach ($services as $key => $service)
                             <tr>
                                 <td>{{ $key +1 }}</td>
-                                <td>{{ $service->name }}</td>
-                                <td class="text-center">{{ $service->characters_percent }}</td>
+                                <td>
+                                    <a href="/servicio/{{ $service->id }}/ver">
+                                        {{ $service->name }}
+                                    </a>
+                                </td>
+                                <td class="text-center">{{ $service->status_color }}</td>
                                 {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
                             </tr>
                         @endforeach
