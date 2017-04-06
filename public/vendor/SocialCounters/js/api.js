@@ -337,6 +337,9 @@
               var k = kFormatter(followers);
               $('#wrapper [data-social="linkedIn"] .count').text(k);
               getTotal(followers);
+          },
+          error: function (error) {
+              console.error(error);
           }
       });
     }
