@@ -241,7 +241,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre del proyecto</th>
-                            <th class="text-center">Año</th>
+                            <th class="text-center">Estado</th>
                             <th class="text-center">Fotos</th>
                             <th class="text-center">Estado</th>
                         </tr>
@@ -250,8 +250,13 @@
                         @foreach ($projects as $key => $project)
                             <tr>
                                 <td>{{ $key +1 }}</td>
-                                <td>{{ $project->name }}</td>
-                                <td class="text-center">{{ $project->year }}</td>
+                                <td>
+                                    <a href="/proyecto/{{ $project->id }}/ver"></a>
+                                    {{ $project->name }}
+                                </td>
+                                <td>
+                                    <img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="26">
+                                </td>
                                 <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
                                 <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                             </tr>
