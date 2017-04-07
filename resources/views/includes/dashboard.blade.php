@@ -240,7 +240,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="max-height: 550px; overflow-y: auto;">
+            <div class="widget-body" style="max-height: 580px; overflow-y: hidden;">
                 <div class="table-responsive">
                     <table id="table-projects" class="table mb-0">
                         <thead>

@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
-    var table = $('#table-projects').DataTable({
+    var tableProjects = $('#table-projects').DataTable({
+        lengthChange: false,
+        buttons: ['copy', 'excel', 'pdf', 'print']
+    });
+    tableProjects.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
+
+    var tableServices = $('#table-services').DataTable({
         lengthChange: false,
         buttons: ['copy', 'excel', 'pdf', 'print']
     });
 
-    table.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
+    tableServices.buttons().container().appendTo('#table-services_wrapper .col-sm-6:eq(0)');
 
 });
