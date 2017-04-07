@@ -20,15 +20,16 @@ $(document).ready(function() {
     /*var tableServices = */$('#table-services').DataTable({
         lengthChange: false,
         iDisplayLength: 5,
-        "oLanguage": {
+        searching: false,
+        /*"oLanguage": {
             "oPaginate": {
                 "sPrevious": "Anterior",
                 "sNext": "Siguiente"
             }
-        },
-        "language": {
-            "search": "Buscar: ",
-            "info": "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
+        },*/
+        language: {
+            search: "Buscar: ",
+            info: "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
         }
     });
 
