@@ -29,6 +29,12 @@
     <script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
     {{-- Social counters --}}
     <script type="text/javascript" src="{{ asset('vendor/SocialCounters/js/api.js') }}"></script>
+    {{-- Data tables --}}
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net-buttons-bs/js/buttons.bootstrap.min.js') }}"></script>
     {{-- Dashboard logic --}}
     <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/js/page-content/tables/data-tables.js') }}"></script>
 @endsection

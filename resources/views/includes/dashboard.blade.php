@@ -242,7 +242,7 @@
             </div>
             <div class="widget-body" style="max-height: 550px; overflow-y: auto;">
                 <div class="table-responsive">
-                    <table class="table mb-0">
+                    <table id="table-projects" class="table mb-0">
                         <thead>
                         <tr>
                             <th>#</th>
