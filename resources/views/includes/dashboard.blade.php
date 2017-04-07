@@ -73,12 +73,12 @@
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Servicios al {{ $client->services_percent }} %</h3>
                 <ul class="widget-tools pull-right list-inline">
-                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="display: none;">
+            <div class="widget-body" style="max-height: 550px;">
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead>
@@ -235,12 +235,12 @@
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Proyectos al {{ $client->projects_percent }} %</h3>
                 <ul class="widget-tools pull-right list-inline">
-                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="display: none;">
+            <div class="widget-body" style="max-height: 450px;">
                 <div class="table-responsive">
                     <table class="table mb-0">
                         <thead>

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,22 +30,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="85" column="81" lean-forward="false" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="102" column="81" lean-forward="false" selection-start-line="102" selection-start-column="81" selection-end-line="102" selection-end-column="81" />
-              <folding />
+            <state relative-caret-position="396">
+              <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$gaT</find>
-      <find>previu</find>
       <find>visitsChartOptions</find>
       <find>Abril</find>
       <find>perf</find>
@@ -92,6 +82,8 @@
       <find>artícu</find>
       <find>-</find>
       <find>datos</find>
+      <find>proyectos</find>
+      <find>servicios a</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -158,10 +150,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DataController.php" />
         <option value="$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js" />
         <option value="$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js" />
-        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/public/panel/projects/create.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -471,14 +463,7 @@
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
-      <workItem from="1491580396067" duration="420000" />
-    </task>
-    <task id="LOCAL-00084" summary="Privacy policy, remove followers field and add placeholders">
-      <created>1490716813577</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1490716813577</updated>
+      <workItem from="1491580396067" duration="768000" />
     </task>
     <task id="LOCAL-00085" summary="Privacy policy, remove followers field and add placeholders">
       <created>1490718196003</created>
@@ -816,11 +801,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491495354371</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Show teresa version in sidebar">
+      <created>1491580832248</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1491580832249</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390341000" />
+    <option name="totallyTimeSpent" value="390689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,7 +825,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1188,13 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="431" column="51" lean-forward="false" selection-start-line="431" selection-start-column="51" selection-end-line="431" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1226,6 +1211,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="85" column="81" lean-forward="false" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -1234,11 +1227,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="85" column="81" lean-forward="false" selection-start-line="85" selection-start-column="81" selection-end-line="85" selection-end-column="81" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
