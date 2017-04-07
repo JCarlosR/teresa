@@ -89,9 +89,21 @@
     <div class="sidebar-widget">
         <ul class="list-unstyled pl-15 pr-15">
             <li class="mb-20">
-                <div class="block clearfix mb-10"><span class="pull-left text-muted">Datos ingresados</span><span class="pull-right label label-outline label-success">{{ auth()->user()->projects_percent }} %</span></div>
+                <div class="block clearfix mb-10">
+                    <span class="pull-left text-muted">Datos ingresados</span>
+                    <span class="pull-right label label-outline label-info">{{ auth()->user()->projects_percent }} %</span>
+                </div>
                 <div class="progress progress-xs mb-0">
-                    <div role="progressbar" data-transitiongoal="{{ auth()->user()->projects_percent }}" class="progress-bar progress-bar-success"></div>
+                    <div role="progressbar" data-transitiongoal="{{ auth()->user()->projects_percent }}" class="progress-bar progress-bar-info"></div>
+                </div>
+            </li>
+            <li class="mb-20">
+                <div class="block clearfix mb-10">
+                    <span class="pull-left text-muted">Teresa v1.0</span>
+                    <span class="pull-right label label-outline label-success">78 %</span>
+                </div>
+                <div class="progress progress-xs mb-0">
+                    <div role="progressbar" data-transitiongoal="78" class="progress-bar progress-bar-success"></div>
                 </div>
             </li>
             {{--<li class="mb-20">--}}

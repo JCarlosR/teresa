@@ -77,4 +77,18 @@
 
     </ul>
 
+    <div class="sidebar-category">Indicadores</div>
+    <div class="sidebar-widget">
+        <ul class="list-unstyled pl-15 pr-15">
+            <li class="mb-20">
+                <div class="block clearfix mb-10">
+                    <span class="pull-left text-muted">Teresa v1.0</span>
+                    <span class="pull-right label label-outline label-success">78 %</span>
+                </div>
+                <div class="progress progress-xs mb-0">
+                    <div role="progressbar" data-transitiongoal="78" class="progress-bar progress-bar-success"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </aside>
