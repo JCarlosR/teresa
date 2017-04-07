@@ -4,7 +4,6 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js" afterPath="$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="data-tables.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="279">
+              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -539,14 +538,7 @@
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
-      <workItem from="1491580396067" duration="3025000" />
-    </task>
-    <task id="LOCAL-00091" summary="Apply data attributes">
-      <created>1490798546515</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1490798546517</updated>
+      <workItem from="1491580396067" duration="3251000" />
     </task>
     <task id="LOCAL-00092" summary="Remove followers from controller and use state attribute">
       <created>1490799107447</created>
@@ -884,11 +876,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491582985273</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Language labels">
+      <created>1491583449003</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1491583449003</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392946000" />
+    <option name="totallyTimeSpent" value="393172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -932,7 +931,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="google ad style" />
     <MESSAGE value="left align" />
     <MESSAGE value="max characters count for title and description" />
     <MESSAGE value="Show projects percent and hide some links" />
@@ -957,7 +955,8 @@
     <MESSAGE value="Add some missing js" />
     <MESSAGE value="Apply to services" />
     <MESSAGE value="Change data tables config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change data tables config" />
+    <MESSAGE value="Language labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Language labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1309,8 +1308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="279">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding />
         </state>
       </provider>
