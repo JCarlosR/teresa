@@ -78,9 +78,9 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="max-height: 450px; overflow-y: auto;">
+            <div class="widget-body" style="max-height: 450px; overflow-y: hidden;">
                 <div class="table-responsive">
-                    <table class="table mb-0">
+                    <table id="table-services" class="table mb-0">
                         <thead>
                         <tr>
                             <th>#</th>
