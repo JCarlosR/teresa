@@ -78,35 +78,33 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="max-height: 450px; overflow: hidden;">
-                <div class="table-responsive">
-                    <table id="table-services" class="table mb-0">
-                        <thead>
+            <div class="widget-body" style="">
+                <table id="table-services" class="table mb-0">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th class="text-center">Estado</th>
+                        {{--<th class="text-center">Fotos</th>--}}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($services as $key => $service)
                         <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th class="text-center">Estado</th>
-                            {{--<th class="text-center">Fotos</th>--}}
+                            <td>{{ $key +1 }}</td>
+                            <td>
+                                <a href="/servicio/{{ $service->id }}/ver">
+                                    {{ $service->name }}
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="24">
+                            </td>
+                            {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
                         </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($services as $key => $service)
-                            <tr>
-                                <td>{{ $key +1 }}</td>
-                                <td>
-                                    <a href="/servicio/{{ $service->id }}/ver">
-                                        {{ $service->name }}
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="24">
-                                </td>
-                                {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -241,37 +239,37 @@
                 </ul>
             </div>
             <div class="widget-body" style="">
-                <div class="table-responsive">
-                    <table id="table-projects" class="table mb-0">
-                        <thead>
+
+                <table id="table-projects" class="table mb-0">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del proyecto</th>
+                        <th class="text-center">Estado</th>
+                        <th class="text-center">Fotos</th>
+                        <th class="text-center">Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($projects as $key => $project)
                         <tr>
-                            <th>#</th>
-                            <th>Nombre del proyecto</th>
-                            <th class="text-center">Estado</th>
-                            <th class="text-center">Fotos</th>
-                            <th class="text-center">Estado</th>
+                            <td>{{ $key +1 }}</td>
+                            <td>
+                                <a href="/proyecto/{{ $project->id }}/ver">
+                                {{ $project->name }}
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="24">
+                            </td>
+                            <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
+                            <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($projects as $key => $project)
-                            <tr>
-                                <td>{{ $key +1 }}</td>
-                                <td>
-                                    <a href="/proyecto/{{ $project->id }}/ver">
-                                    {{ $project->name }}
-                                    </a>
-                                </td>
-                                <td class="text-center">
-                                    <img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="24">
-                                </td>
-                                <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
-                                <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
-                            </tr>
-                        @endforeach
-                        {{--<td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>--}}
-                        </tbody>
-                    </table>
-                </div>
+                    @endforeach
+                    {{--<td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>--}}
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

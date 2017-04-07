@@ -7,10 +7,12 @@ $(document).ready(function() {
         "oLanguage": {
             "oPaginate": {
                 "sPrevious": "Anterior",
-                "sNext": "Siguiente",
-                "sInfo": "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
-                "sSearch": "Buscar:"
+                "sNext": "Siguiente"
             }
+        },
+        "language": {
+            "search": "Buscar: ",
+            "info": "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
         }
     });
     tableProjects.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
@@ -21,10 +23,12 @@ $(document).ready(function() {
         "oLanguage": {
             "oPaginate": {
                 "sPrevious": "Anterior",
-                "sNext": "Siguiente",
-                "sInfo": "Mostrando servicios del _START_ al _END_ (_TOTAL_ en total)",
-                "sSearch": "Buscar:"
+                "sNext": "Siguiente"
             }
+        },
+        "language": {
+            "search": "Buscar: ",
+            "info": "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
         }
     });
 
