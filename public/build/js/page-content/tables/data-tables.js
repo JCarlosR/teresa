@@ -4,15 +4,13 @@ $(document).ready(function() {
         lengthChange: false,
         buttons: ['excel', 'pdf', 'print'],
         iDisplayLength: 7,
-        "oLanguage": {
-            "oPaginate": {
-                "sPrevious": "Anterior",
-                "sNext": "Siguiente"
-            }
-        },
-        "language": {
-            "search": "Buscar: ",
-            "info": "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
+        language: {
+            paginate: {
+                previous: 'Anterior',
+                next: 'Siguiente'
+            },
+            search: "Buscar: ",
+            info: "Mostrando del _START_ al _END_ de _TOTAL_ proyectos"
         }
     });
     tableProjects.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
@@ -21,15 +19,13 @@ $(document).ready(function() {
         lengthChange: false,
         iDisplayLength: 5,
         searching: false,
-        /*"oLanguage": {
-            "oPaginate": {
-                "sPrevious": "Anterior",
-                "sNext": "Siguiente"
-            }
-        },*/
+        info: false,
         language: {
-            search: "Buscar: ",
-            info: "Mostrando proyectos del _START_ al _END_ (_TOTAL_ en total)",
+            paginate: {
+                previous: 'Anterior',
+                next: 'Siguiente'
+            }
+            // search: "Buscar: "
         }
     });
 

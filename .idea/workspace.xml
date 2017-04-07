@@ -53,8 +53,8 @@
       <file leaf-file-name="data-tables.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="510">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -536,14 +536,7 @@
       <workItem from="1491059204075" duration="125000" />
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
-      <workItem from="1491580396067" duration="4409000" />
-    </task>
-    <task id="LOCAL-00094" summary="isset">
-      <created>1490799359431</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1490799359431</updated>
+      <workItem from="1491580396067" duration="4671000" />
     </task>
     <task id="LOCAL-00095" summary="check if is set state">
       <created>1490799475220</created>
@@ -881,11 +874,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491584129401</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Test labels change">
+      <created>1491584834501</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1491584834501</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394330000" />
+    <option name="totallyTimeSpent" value="394592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,7 +929,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Show projects percent and hide some links" />
     <MESSAGE value="linkedin api company id" />
     <MESSAGE value="remove data type" />
     <MESSAGE value="data type json" />
@@ -954,7 +953,8 @@
     <MESSAGE value="Language labels" />
     <MESSAGE value="No buttons for services" />
     <MESSAGE value="Remove div container" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove div container" />
+    <MESSAGE value="Test labels change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test labels change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1304,8 +1304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="510">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
