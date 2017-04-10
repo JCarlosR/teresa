@@ -43,7 +43,7 @@
       <file leaf-file-name="professional.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="84">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#1276#3130#0#HTML" expanded="false" />
@@ -52,21 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="90" column="96" lean-forward="false" selection-start-line="90" selection-start-column="96" selection-end-line="90" selection-end-column="96" />
+            <state relative-caret-position="396">
+              <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
               <folding>
                 <element signature="e#371#1393#0#PHP" expanded="false" />
                 <element signature="e#1399#1983#0#PHP" expanded="false" />
@@ -552,14 +542,7 @@
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
       <workItem from="1491580396067" duration="5291000" />
-      <workItem from="1491832963248" duration="2856000" />
-    </task>
-    <task id="LOCAL-00102" summary="fix id">
-      <created>1490803196809</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1490803196809</updated>
+      <workItem from="1491832963248" duration="3164000" />
     </task>
     <task id="LOCAL-00103" summary="take id from data attributes">
       <created>1490803514431</created>
@@ -897,11 +880,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491835801030</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="add variable to view professional profiles">
+      <created>1491835845590</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1491835845590</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398068000" />
+    <option name="totallyTimeSpent" value="398376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,7 +935,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="show project status" />
     <MESSAGE value="add link to show project" />
     <MESSAGE value="add link to services and status" />
     <MESSAGE value="image status services" />
@@ -970,7 +959,8 @@
     <MESSAGE value="styles section" />
     <MESSAGE value="test custom professional profiles" />
     <MESSAGE value="professional profiles for general clients" />
-    <option name="LAST_COMMIT_MESSAGE" value="professional profiles for general clients" />
+    <MESSAGE value="add variable to view professional profiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="add variable to view professional profiles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,7 +1305,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="84">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#1276#3130#0#HTML" expanded="false" />
@@ -1325,8 +1315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="90" column="96" lean-forward="false" selection-start-line="90" selection-start-column="96" selection-end-line="90" selection-end-column="96" />
+        <state relative-caret-position="396">
+          <caret line="117" column="47" lean-forward="false" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
           <folding>
             <element signature="e#371#1393#0#PHP" expanded="false" />
             <element signature="e#1399#1983#0#PHP" expanded="false" />

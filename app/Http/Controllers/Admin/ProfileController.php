@@ -93,14 +93,31 @@ class ProfileController extends Controller
 
     public function postProfessionalProfile(Request $request)
     {
-        $professionalProfile = ProfessionalProfile::firstOrCreate([
-            'name' => $request->get('name'),
-            'user_id' => session('client_id')
-        ]);
-        $professionalProfile->url = $request->get('url');
-        $professionalProfile->notes = $request->get('notes');
-        $professionalProfile->state = $request->get('state');
-        $professionalProfile->save();
+        $client = User::find(session('client_id'));
+
+        if ($client->client_type == 'architect') {
+            $professionalProfile = ProfessionalProfile::firstOrCreate([
+                'name' => $request->get('name'),
+                'user_id' => session('client_id')
+            ]);
+            $professionalProfile->url = $request->get('url');
+            $professionalProfile->notes = $request->get('notes');
+            $professionalProfile->state = $request->get('state');
+            $professionalProfile->save();
+        } else {
+            $professionalProfile = ProfessionalProfile::firstOrCreate([
+                'name' => $request->get('name'),
+                'user_id' => session('client_id')
+            ]);
+            if ($professionalProfile->name) {
+                $professionalProfile->url = $request->get('url');
+                $professionalProfile->notes = $request->get('notes');
+                $professionalProfile->state = $request->get('state');
+                $professionalProfile->save();
+            } else {
+                $professionalProfile->delete();
+            }
+        }
 
         return back()->with('notification', 'El perfil profesional se ha actualizado correctamente!');
     }
