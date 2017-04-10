@@ -151,7 +151,7 @@
             </div>
             <div class="widget-body text-center">
                 <div class="row expand">
-
+                @if ($client->client_type == 'architect')
                     <div class="col-professional">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">
                             Architizer
@@ -196,7 +196,18 @@
                             <img src="{{ asset('/images/professional/behance.png') }}" alt="Behance" width="36">
                         </a>
                     </div>
-
+                @else
+                    @foreach ($professionalLinks as $professionalLink)
+                    <div class="col-professional">
+                        <p class="fs-12 text-uppercase text-muted hidden-xs">
+                            {{ $professionalLink->name }}
+                        </p>
+                        <a href="{{ $professionalLink->url }}" target="_blank">
+                            <img src="{{ asset('/images/professional/behance.png') }}" alt="{{ $professionalLink->name }}" width="36">
+                        </a>
+                    </div>
+                    @endforeach
+                @endif
                 </div>
             </div>
         </div>
