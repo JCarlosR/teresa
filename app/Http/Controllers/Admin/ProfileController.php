@@ -88,7 +88,7 @@ class ProfileController extends Controller
             $professionalProfiles = ProfessionalProfile::where('user_id', $client->id)->get();
         }
 
-        return view('admin.profiles.professional')->with(compact('professionalProfiles'));
+        return view('admin.profiles.professional')->with(compact('professionalProfiles', 'client'));
     }
 
     public function postProfessionalProfile(Request $request)

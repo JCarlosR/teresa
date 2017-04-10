@@ -4,9 +4,6 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="professional.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="professional.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="336">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#1276#3130#0#HTML" expanded="false" />
@@ -65,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+            <state relative-caret-position="459">
+              <caret line="90" column="96" lean-forward="false" selection-start-line="90" selection-start-column="96" selection-end-line="90" selection-end-column="96" />
               <folding>
                 <element signature="e#371#1393#0#PHP" expanded="false" />
                 <element signature="e#1399#1983#0#PHP" expanded="false" />
@@ -217,8 +214,8 @@
         <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
       </list>
     </option>
   </component>
@@ -555,14 +552,7 @@
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
       <workItem from="1491580396067" duration="5291000" />
-      <workItem from="1491832963248" duration="2807000" />
-    </task>
-    <task id="LOCAL-00101" summary="print social profile ids">
-      <created>1490802626364</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1490802626364</updated>
+      <workItem from="1491832963248" duration="2856000" />
     </task>
     <task id="LOCAL-00102" summary="fix id">
       <created>1490803196809</created>
@@ -900,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491834748444</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="professional profiles for general clients">
+      <created>1491835801030</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1491835801030</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398019000" />
+    <option name="totallyTimeSpent" value="398068000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -948,7 +945,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="jsonp and jsonp" />
     <MESSAGE value="show project status" />
     <MESSAGE value="add link to show project" />
     <MESSAGE value="add link to services and status" />
@@ -973,7 +969,8 @@
     <MESSAGE value="responsive js data tables" />
     <MESSAGE value="styles section" />
     <MESSAGE value="test custom professional profiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="test custom professional profiles" />
+    <MESSAGE value="professional profiles for general clients" />
+    <option name="LAST_COMMIT_MESSAGE" value="professional profiles for general clients" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1308,17 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="98" column="11" lean-forward="true" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-          <folding>
-            <element signature="e#371#1393#0#PHP" expanded="false" />
-            <element signature="e#1399#1983#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1329,10 +1315,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="336">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="e#1276#3130#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="90" column="96" lean-forward="false" selection-start-line="90" selection-start-column="96" selection-end-line="90" selection-end-column="96" />
+          <folding>
+            <element signature="e#371#1393#0#PHP" expanded="false" />
+            <element signature="e#1399#1983#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
