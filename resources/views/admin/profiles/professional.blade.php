@@ -91,7 +91,7 @@
                         </tr>
                     @endforeach
                     <tr>
-                        <th scope="row">{{ ++$key }}</th>
+                        <th scope="row">#</th>
                         <form action="" method="POST" class="form-inline">
                             {{ csrf_field() }}
                             <td class="text-center">
