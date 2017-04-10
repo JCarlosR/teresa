@@ -5,6 +5,32 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}">
+    <style>
+        .col-social {
+            width: 12.5%;
+            /*border: 1px solid grey;*/
+            float:left;
+            position: relative;
+            min-height: 1px;
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+        .col-professional {
+            width: 20%;
+            float:left;
+            position: relative;
+            min-height: 1px;
+            padding: 1em;
+        }
+        @media(max-width:576px) {
+            .col-social {
+                width: 33.33%;
+            }
+            .col-professional {
+                width: 33.33%;
+            }
+        }
+    </style>
 @endsection
 
 @section('dashboard_content')
