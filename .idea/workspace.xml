@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,17 +30,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5649">
-              <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
+            <state relative-caret-position="207">
+              <caret line="242" column="81" lean-forward="false" selection-start-line="242" selection-start-column="81" selection-end-line="242" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -71,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Facebo</find>
       <find>test</find>
       <find>social</find>
       <find>twitter</find>
@@ -99,8 +98,9 @@
       <find>proyectos a</find>
       <find>servicios al</find>
       <find>overflow-</find>
-      <find>servicios a</find>
       <find>proyectos al</find>
+      <find>servicios a</find>
+      <find>table-p</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/public/panel/projects/create.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js" />
         <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -537,14 +537,7 @@
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
       <workItem from="1491580396067" duration="5291000" />
-      <workItem from="1491832963248" duration="219000" />
-    </task>
-    <task id="LOCAL-00096" summary="set state when is possible">
-      <created>1490799631854</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1490799631854</updated>
+      <workItem from="1491832963248" duration="327000" />
     </task>
     <task id="LOCAL-00097" summary="fix twitter counter">
       <created>1490799687550</created>
@@ -882,11 +875,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491585096502</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="add css data tables">
+      <created>1491833192467</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1491833192468</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395431000" />
+    <option name="totallyTimeSpent" value="395539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1282,14 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5649">
-          <caret line="269" column="12" lean-forward="false" selection-start-line="269" selection-start-column="12" selection-end-line="269" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1302,6 +1294,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="129" lean-forward="false" selection-start-line="5" selection-start-column="129" selection-end-line="5" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="242" column="81" lean-forward="false" selection-start-line="242" selection-start-column="81" selection-end-line="242" selection-end-column="81" />
           <folding />
         </state>
       </provider>

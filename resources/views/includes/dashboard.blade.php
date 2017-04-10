@@ -79,7 +79,7 @@
                 </ul>
             </div>
             <div class="widget-body" style="">
-                <table id="table-services" class="table mb-0">
+                <table id="table-services" class="table mb-0 dt-responsive nowrap">
                     <thead>
                     <tr>
                         <th>#</th>
@@ -240,7 +240,7 @@
             </div>
             <div class="widget-body" style="">
 
-                <table id="table-projects" class="table mb-0">
+                <table id="table-projects" class="table mb-0 dt-responsive nowrap">
                     <thead>
                     <tr>
                         <th>#</th>
