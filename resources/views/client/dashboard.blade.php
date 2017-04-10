@@ -47,6 +47,8 @@
     <script type="text/javascript" src="{{ asset('plugins/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js') }}"></script>
     {{-- Dashboard logic --}}
     <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
     <script type="text/javascript" src="{{ asset('build/js/page-content/tables/data-tables.js') }}"></script>

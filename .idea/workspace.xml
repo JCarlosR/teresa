@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,21 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="242" column="81" lean-forward="false" selection-start-line="242" selection-start-column="81" selection-end-line="242" selection-end-column="81" />
+            <state relative-caret-position="-3">
+              <caret line="253" column="21" lean-forward="true" selection-start-line="253" selection-start-column="21" selection-end-line="253" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="129" lean-forward="false" selection-start-line="5" selection-start-column="129" selection-end-line="5" selection-end-column="129" />
+            <state relative-caret-position="382">
+              <caret line="50" column="118" lean-forward="false" selection-start-line="50" selection-start-column="118" selection-end-line="50" selection-end-column="118" />
               <folding />
             </state>
           </provider>
@@ -169,8 +169,8 @@
         <option value="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js" />
-        <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -537,14 +537,7 @@
       <workItem from="1491402972660" duration="1913000" />
       <workItem from="1491490641426" duration="5199000" />
       <workItem from="1491580396067" duration="5291000" />
-      <workItem from="1491832963248" duration="327000" />
-    </task>
-    <task id="LOCAL-00097" summary="fix twitter counter">
-      <created>1490799687550</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1490799687550</updated>
+      <workItem from="1491832963248" duration="581000" />
     </task>
     <task id="LOCAL-00098" summary="remove validation NIF">
       <created>1490800538239</created>
@@ -882,11 +875,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491833192468</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="apply responsive class to tables">
+      <created>1491833311275</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1491833311275</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395539000" />
+    <option name="totallyTimeSpent" value="395793000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -930,7 +930,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="data type json" />
     <MESSAGE value="jsonp is required to perform cross requests" />
     <MESSAGE value="error callback for linkedIn" />
     <MESSAGE value="ajax error message" />
@@ -955,7 +954,8 @@
     <MESSAGE value="Test labels change" />
     <MESSAGE value="Language api data tables" />
     <MESSAGE value="add css data tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="add css data tables" />
+    <MESSAGE value="apply responsive class to tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply responsive class to tables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1290,18 +1290,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="129" lean-forward="false" selection-start-line="5" selection-start-column="129" selection-end-line="5" selection-end-column="129" />
+        <state relative-caret-position="-3">
+          <caret line="253" column="21" lean-forward="true" selection-start-line="253" selection-start-column="21" selection-end-line="253" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="242" column="81" lean-forward="false" selection-start-line="242" selection-start-column="81" selection-end-line="242" selection-end-column="81" />
+        <state relative-caret-position="382">
+          <caret line="50" column="118" lean-forward="false" selection-start-line="50" selection-start-column="118" selection-end-line="50" selection-end-column="118" />
           <folding />
         </state>
       </provider>
