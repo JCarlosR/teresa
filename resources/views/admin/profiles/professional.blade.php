@@ -98,18 +98,18 @@
                                 <input type="text" name="name" class="form-control" placeholder="Nuevo perfil profesional" required>
                             </td>
                             <td class="col-md-5">
-                                <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
+                                <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional">
                             </td>
                             <td class="col-md-2">
                                 <div class="form-group">
                                     <select name="state" class="form-control">
-                                        <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
-                                        <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                                        <option value="0" selected>No publicado</option>
+                                        <option value="1">Publicado</option>
                                     </select>
                                 </div>
                             </td>
                             <td>
-                                <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
+                                <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none"></textarea>
                             </td>
                             <td class="text-center">
                                 <button type="submit" class="btn btn-primary btn-sm" title="Nuevo">
