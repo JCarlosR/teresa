@@ -100,6 +100,10 @@ trait ClientDashboard
     public function getProfessionalLinks($user_id)
     {
         $professionalProfiles = ProfessionalProfile::where('user_id', $user_id)->get();
+        foreach ($professionalProfiles as $professionalProfile) {
+            if ($professionalProfile->url == '')
+                $professionalProfile->url = '#';
+        }
         return $professionalProfiles;
     }
 }

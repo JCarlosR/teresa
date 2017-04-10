@@ -203,7 +203,7 @@
                             {{ $professionalLink->name }}
                         </p>
                         <a href="{{ $professionalLink->url }}" target="_blank">
-                            <img src="{{ asset('/images/professional/behance.png') }}" alt="{{ $professionalLink->name }}" width="36">
+                            <img src="{{ asset('/images/professional/default.png') }}" alt="{{ $professionalLink->name }}" width="36">
                         </a>
                     </div>
                     @endforeach

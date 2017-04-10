@@ -28,36 +28,97 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($professionalProfiles as $key => $professionalProfile)
-                <tr>
-                    <th scope="row">{{ ++$key }}</th>
-                    <form action="" method="POST" class="form-inline">
-                        {{ csrf_field() }}
-                        <td class="text-center">
-                            <input type="text" name="name" readonly class="form-control" value="{{ $professionalProfile->name }}">
-                        </td>
-                        <td class="col-md-5">
-                            <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
-                        </td>
-                        <td class="col-md-2">
-                            <div class="form-group">
-                                <select name="state" class="form-control">
-                                    <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
-                                    <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
-                        </td>
-                        <td class="text-center">
-                            <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
-                                <span class="glyphicon glyphicon-floppy-disk"></span>
-                            </button>
-                        </td>
-                    </form>
-                </tr>
-                @endforeach
+                @if ($client->client_type == 'architect')
+                    @foreach ($professionalProfiles as $key => $professionalProfile)
+                    <tr>
+                        <th scope="row">{{ ++$key }}</th>
+                        <form action="" method="POST" class="form-inline">
+                            {{ csrf_field() }}
+                            <td class="text-center">
+                                <input type="text" name="name" readonly class="form-control" value="{{ $professionalProfile->name }}">
+                            </td>
+                            <td class="col-md-5">
+                                <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
+                            </td>
+                            <td class="col-md-2">
+                                <div class="form-group">
+                                    <select name="state" class="form-control">
+                                        <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
+                                        <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
+                            </td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
+                                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                                </button>
+                            </td>
+                        </form>
+                    </tr>
+                    @endforeach
+                @else
+                    @foreach ($professionalProfiles as $key => $professionalProfile)
+                        <tr>
+                            <th scope="row">{{ ++$key }}</th>
+                            <form action="" method="POST" class="form-inline">
+                                {{ csrf_field() }}
+                                <td class="text-center">
+                                    <input type="text" name="name" class="form-control" value="{{ $professionalProfile->name }}">
+                                </td>
+                                <td class="col-md-5">
+                                    <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
+                                </td>
+                                <td class="col-md-2">
+                                    <div class="form-group">
+                                        <select name="state" class="form-control">
+                                            <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
+                                            <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
+                                </td>
+                                <td class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm" title="Guardar">
+                                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                                    </button>
+                                </td>
+                            </form>
+                        </tr>
+                    @endforeach
+                    <tr>
+                        <th scope="row">{{ ++$key }}</th>
+                        <form action="" method="POST" class="form-inline">
+                            {{ csrf_field() }}
+                            <td class="text-center">
+                                <input type="text" name="name" class="form-control" placeholder="Nuevo perfil profesional" required>
+                            </td>
+                            <td class="col-md-5">
+                                <input type="text" name="url" class="form-control" placeholder="Dirección URL del perfil profesional" value="{{ $professionalProfile->url }}">
+                            </td>
+                            <td class="col-md-2">
+                                <div class="form-group">
+                                    <select name="state" class="form-control">
+                                        <option value="0" @if($professionalProfile->state==0) selected @endif>No publicado</option>
+                                        <option value="1" @if($professionalProfile->state==1) selected @endif>Publicado</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <textarea name="notes" rows="2" placeholder="Observación" class="form-control" style="resize: none">{{ $professionalProfile->notes }}</textarea>
+                            </td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-primary btn-sm" title="Nuevo">
+                                    <span class="glyphicon glyphicon-floppy-disk"></span>
+                                </button>
+                            </td>
+                        </form>
+                    </tr>
+                @endif
                 </tbody>
             </table>
         </div>

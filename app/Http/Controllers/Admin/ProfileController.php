@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\ProfessionalProfile;
 use App\SocialProfile;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -62,22 +63,29 @@ class ProfileController extends Controller
 
     public function getProfessionalProfiles()
     {
-        $professionalPageNames = [
-            'Architizer',
-            'Archello',
-            'Archilovers',
-            'Open Buildings',
-            'Behance'
-        ];
+        $client = User::find(session('client_id'));
 
-        $professionalProfiles = collect();
+        if ($client->client_type == 'architect') {
+            $professionalPageNames = [
+                'Architizer',
+                'Archello',
+                'Archilovers',
+                'Open Buildings',
+                'Behance'
+            ];
 
-        foreach ($professionalPageNames as $professionalPageName) {
-            $professionalProfile = ProfessionalProfile::firstOrCreate([
-                'name' => $professionalPageName,
-                'user_id' => session('client_id')
-            ]);
-            $professionalProfiles->push($professionalProfile);
+            $professionalProfiles = collect();
+
+            foreach ($professionalPageNames as $professionalPageName) {
+                $professionalProfile = ProfessionalProfile::firstOrCreate([
+                    'name' => $professionalPageName,
+                    'user_id' => session('client_id')
+                ]);
+                $professionalProfiles->push($professionalProfile);
+            }
+
+        } else {
+            $professionalProfiles = ProfessionalProfile::where('user_id', $client->id)->get();
         }
 
         return view('admin.profiles.professional')->with(compact('professionalProfiles'));
