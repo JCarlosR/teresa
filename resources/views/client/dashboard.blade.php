@@ -1,5 +1,12 @@
 @extends('layouts.panel')
 
+@section('styles')
+    <!-- DataTables-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}">
+@endsection
+
 @section('dashboard_content')
     <div class="page-content container-fluid">
         @if (auth()->user()->is_client)
