@@ -105,6 +105,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/personal/editar', 'Admin\PersonalController@update');
     Route::post('/personal/eliminar', 'Admin\PersonalController@delete');
 
+    // Work schedule
+    Route::get('/cronograma', 'Admin\WorkScheduleController@index');
+    Route::get('/cronograma/{id}', 'Admin\WorkScheduleController@show');
+    Route::get('/cronograma/{id}/editar', 'Admin\WorkScheduleController@edit');
+
     // Leads
     Route::get('/leads', 'Admin\LeadController@index');
     Route::get('/leads/{id}', 'Admin\LeadController@edit');

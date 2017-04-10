@@ -54,6 +54,12 @@
             </ul>
         </li>
 
+        <li class="panel">
+            <a href="{{ url('/admin/cronograma') }}">
+                <i class="ion-ios-calendar bg-info"></i>
+                <span class="sidebar-title">Cronogramas <small>de trabajo</small></span>
+            </a>
+        </li>
 
         <li class="sidebar-category">Datos de gestión</li>
 

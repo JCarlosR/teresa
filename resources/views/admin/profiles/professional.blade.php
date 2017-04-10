@@ -20,7 +20,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th class="text-center">Red social</th>
+                    <th class="text-center">Perfil profesional</th>
                     <th class="text-center">URL</th>
                     <th class="text-center">Estado</th>
                     <th class="text-center">Notas</th>
