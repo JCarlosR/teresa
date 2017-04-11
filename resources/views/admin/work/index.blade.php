@@ -15,7 +15,7 @@
 
             <p class="mb-20">Los cronogramas de trabajo permiten a los clientes conocer qué actividades
                 se han realizado, se están realizando o se realizarán como parte de la estrategia de Teresa.</p>
-                
+
             <table class="table table-hover">
                 <thead>
                 <tr>
