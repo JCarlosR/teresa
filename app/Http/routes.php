@@ -46,6 +46,9 @@ Route::get('/nosotros', 'AboutUsController@show');
 Route::get('/nosotros/editar', 'AboutUsController@edit');
 Route::post('/nosotros', 'AboutUsController@update');
 
+// Work schedule
+Route::get('/cronograma', 'Client\WorkScheduleController@index');
+
 // Payments & Leads
 Route::get('/pagos', 'Client\PaymentController@index');
 Route::get('/pagos/{id}', 'Client\PaymentController@show');

@@ -220,6 +220,3 @@
 </div>
 @endsection
 
-@section('scripts')
-    <script src="{{ asset('/panel/employees/create.js') }}"></script>
-@endsection

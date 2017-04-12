@@ -319,6 +319,42 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-heading">
+                <h3 class="widget-title pull-left">Actividad reciente</h3>
+                <ul class="widget-tools pull-right list-inline">
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                    <li><a href="{{ url(auth()->user()->work_schedule_route) }}"><i class="ion-calendar"></i></a></li>
+                    <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
+                </ul>
+            </div>
+            <div class="widget-body">
+                <ul class="activity-list activity-sm list-unstyled mb-0">
+                    <li class="activity-purple">
+                        <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">9 minutes ago</time>
+                        <p class="mt-10 mb-0">You <span class="label label-success">recommended</span> Karen Ortega</p>
+                    </li>
+                    <li class="activity-danger">
+                        <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">15 minutes ago</time>
+                        <p class="mt-10 mb-0">You followed Olivia Williamson</p>
+                    </li>
+                    <li class="activity-warning">
+                        <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">22 minutes ago</time>
+                        <p class="mt-10 mb-0">You <span class="text-danger">subscribed</span> to Harold Fuller</p>
+                    </li>
+                    <li class="activity-success">
+                        <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">30 minutes ago</time>
+                        <p class="mt-10 mb-0">You updated your profile picture</p>
+                    </li>
+                    <li class="activity-primary">
+                        <time datetime="2016-12-10T20:22:48+07:00" class="fs-13 text-muted">35 minutes ago</time>
+                        <p class="mt-10 mb-0">You deleted homepage.psd</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="widget">
+            <div class="widget-heading">
                 <h3 class="widget-title">Últimos mensajes recibidos</h3>
             </div>
             <div class="widget-body">
@@ -482,37 +518,6 @@
                         <div class="media-left"><img src="{{ asset('build/images/products/01.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
                         <div class="media-body media-middle"><a href="#" class="text-base">
                                 <h5 class="media-heading">Designing For Digital Products</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Sara Price</a></span></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="widget">
-            <div class="widget-heading">
-                <h3 class="widget-title">Actividad reciente</h3>
-            </div>
-            <div class="widget-body">
-                <ul class="activity-list activity-sm list-unstyled mb-0">
-                    <li class="activity-purple">
-                        <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">9 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="label label-success">recommended</span> Karen Ortega</p>
-                    </li>
-                    <li class="activity-danger">
-                        <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">15 minutes ago</time>
-                        <p class="mt-10 mb-0">You followed Olivia Williamson</p>
-                    </li>
-                    <li class="activity-warning">
-                        <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">22 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="text-danger">subscribed</span> to Harold Fuller</p>
-                    </li>
-                    <li class="activity-success">
-                        <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">30 minutes ago</time>
-                        <p class="mt-10 mb-0">You updated your profile picture</p>
-                    </li>
-                    <li class="activity-primary">
-                        <time datetime="2016-12-10T20:22:48+07:00" class="fs-13 text-muted">35 minutes ago</time>
-                        <p class="mt-10 mb-0">You deleted homepage.psd</p>
                     </li>
                 </ul>
             </div>

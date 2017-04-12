@@ -15,6 +15,7 @@ trait DataPresentationAccessors
         $parts = explode(':', $this->schedule_start);
         return $parts[0] . ':' . $parts[1];
     }
+
     public function getScheduleEndFormatAttribute()
     {
         $parts = explode(':', $this->schedule_end);
@@ -30,6 +31,14 @@ trait DataPresentationAccessors
         else $file_name = 'default.jpg';
 
         return $path . $file_name;
+    }
+
+    public function getWorkScheduleRouteAttribute()
+    {
+        if ($this->is_admin)
+            return 'admin/cronograma';
+
+        return '/cronograma';
     }
 
 }

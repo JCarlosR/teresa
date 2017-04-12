@@ -20,8 +20,9 @@ class WorkScheduleController extends Controller
         $client = User::find(session('client_id'));
 
         $workSchedule = WorkSchedule::find($id);
-        $workScheduleDetails = $workSchedule->details;
 
+        // Generate an incomplete matrix (only with the required data)
+        $workScheduleDetails = $workSchedule->details;
         $details = [];
         foreach ($workScheduleDetails as $workScheduleDetail) {
             $details[$workScheduleDetail->type][$workScheduleDetail->month_offset] = $workScheduleDetail->state;

@@ -333,7 +333,7 @@
               format: 'jsonp'
           },
           success: function (followers) {
-              console.log(followers);
+              // console.log(followers);
               var k = kFormatter(followers);
               $('#wrapper [data-social="linkedIn"] .count').text(k);
               getTotal(followers);

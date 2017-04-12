@@ -1,5 +1,13 @@
 @extends('layouts.panel')
 
+@section('styles')
+    <style>
+        .big-icon {
+            font-size: 2em;
+        }
+    </style>
+@endsection
+
 @section('dashboard_content')
 <div class="page-content container-fluid">
     <div class="widget">
@@ -8,37 +16,13 @@
         </div>
         <div class="widget-body">
 
-            <p class="mb-20">Los cronogramas de trabajo permiten a los clientes conocer qué actividades
+            <p class="mb-20">A continuación puedes ver qué actividades
                 se han realizado, se están realizando o se realizarán como parte de la estrategia de Teresa.</p>
 
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Fecha de inicio</th>
-                    <th>Actividades realizadas</th>
-                    <th>Opciones</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach ($workSchedules as $key => $workSchedule)
-                <tr>
-                    <th scope="row">{{ $key +1 }}</th>
-                    <td>{{ $workSchedule->start_date->format('d/m/Y') }}</td>
-                    <td>{{ $workSchedule->completed_string }}</td>
-                    <td>
-                        <a href="{{ url('/admin/cronograma/' . $workSchedule->id) }}" class="btn btn-default btn-sm" title="Ver">
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                        </a>
+            <p class="text-muted">Al finalizar el año, el cronograma de actividades se actualizará
+                a fin de planificar una estrategia adecuada según los progresos alcanzados.</p>
 
-                        <a href="{{ url('/admin/cronograma/' . $workSchedule->id . '/editar') }}" class="btn btn-primary btn-sm" title="Editar">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                    </td>
-                </tr>
-                @endforeach
-                </tbody>
-            </table>
+            @include('includes.user.work.show_activities_table')
         </div>
     </div>
 

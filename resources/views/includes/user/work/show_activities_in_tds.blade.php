@@ -1,5 +1,6 @@
 @foreach (range(0, 11) as $i)
     <td class="text-center">
+        {{ $i }}
         @if (isset($details[$type][$i]))
             @if ($details[$type][$i] == 0)
                 <i class="ion-clock text-default big-icon"></i>
