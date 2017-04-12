@@ -69,7 +69,9 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="24">
+                                <img src="/images/semaphores/{{ $service->status_color }}.png"
+                                     alt="Semáforo de estado" height="24"
+                                    title="{{ $service->characters_percent }} %">
                             </td>
                             {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
                         </tr>
@@ -242,7 +244,9 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <img src="/images/semaphores/{{ $project->status_color }}.png" alt="Semáforo de estado" height="24">
+                                <img src="/images/semaphores/{{ $project->status_color }}.png"
+                                     alt="Semáforo de estado" height="24"
+                                     title="{{ $project->characters_percent }} %">
                             </td>
                             <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
                             <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>

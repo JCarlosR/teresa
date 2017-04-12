@@ -10,6 +10,13 @@ $(document).ready(function() {
             },
             search: "Buscar: ",
             info: "Mostrando del _START_ al _END_ de _TOTAL_ proyectos"
+        },
+        fnDrawCallback: function() {
+            if (jQuery('#table-projects_paginate .paginate_button').size() > 3) {
+                jQuery('#table-projects_paginate')[0].style.display = "block";
+            } else {
+                jQuery('#table-projects_paginate')[0].style.display = "none";
+            }
         }
     });
     tableProjects.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
