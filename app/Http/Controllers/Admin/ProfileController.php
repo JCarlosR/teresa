@@ -105,11 +105,10 @@ class ProfileController extends Controller
             $professionalProfile->state = $request->get('state');
             $professionalProfile->save();
         } else {
-            $professionalProfile = ProfessionalProfile::firstOrCreate([
-                'name' => $request->get('name'),
-                'user_id' => session('client_id')
-            ]);
-            if ($professionalProfile->name) {
+            $professionalProfile = ProfessionalProfile::find($request->input('id'));
+            $name = $request->input('name');
+            if ($name) {
+                $professionalProfile->name = $name;
                 $professionalProfile->url = $request->get('url');
                 $professionalProfile->notes = $request->get('notes');
                 $professionalProfile->state = $request->get('state');

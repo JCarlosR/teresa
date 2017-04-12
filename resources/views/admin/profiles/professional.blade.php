@@ -65,6 +65,7 @@
                             <th scope="row">{{ ++$key }}</th>
                             <form action="" method="POST" class="form-inline">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="id" value="{{ $professionalProfile->id }}">
                                 <td class="text-center">
                                     <input type="text" name="name" class="form-control" value="{{ $professionalProfile->name }}">
                                 </td>
