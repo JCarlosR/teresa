@@ -7,11 +7,6 @@
             <h3 class="widget-title">Cronogramas de trabajo</h3>
         </div>
         <div class="widget-body">
-            @if (session('notification'))
-                <div class="alert alert-success">
-                    <p>{{ session('notification') }}</p>
-                </div>
-            @endif
 
             <p class="mb-20">Los cronogramas de trabajo permiten a los clientes conocer qué actividades
                 se han realizado, se están realizando o se realizarán como parte de la estrategia de Teresa.</p>
@@ -26,20 +21,22 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach ($workSchedules as $key => $workSchedule)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>12/06/2017</td>
-                    <td><strong>7</strong> / 21</td>
+                    <th scope="row">{{ $key +1 }}</th>
+                    <td>{{ $workSchedule->start_date->format('d/m/Y') }}</td>
+                    <td>{{ $workSchedule->completed_string }}</td>
                     <td>
-                        <a href="{{ url('/admin/cronograma/' . 7) }}" class="btn btn-default btn-sm" title="Ver">
+                        <a href="{{ url('/admin/cronograma/' . $workSchedule->id) }}" class="btn btn-default btn-sm" title="Ver">
                             <span class="glyphicon glyphicon-eye-open"></span>
                         </a>
 
-                        <a href="{{ url('/admin/cronograma/' . 7 . '/editar') }}" class="btn btn-primary btn-sm" title="Editar">
+                        <a href="{{ url('/admin/cronograma/' . $workSchedule->id . '/editar') }}" class="btn btn-primary btn-sm" title="Editar">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
                     </td>
                 </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>
@@ -66,17 +63,19 @@
                     <small>Por ejemplo: si la fecha es 07/07/2017 el primer mes será Julio del 2017. Hasta Junio del 2018.</small>
                 </li>
             </ul>
-            <form action="#">
+            <form action="" method="POST">
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label for="start_date">Fecha de inicio:</label>
-                    <input type="date" class="form-control">
+                    <input type="date" name="start_date" id="start_date" class="form-control" required>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-success">
+                        Registrar nuevo cronograma
+                    </button>
                 </div>
             </form>
-            <div class="text-right">
-                <a href="#" class="btn btn-success">
-                    Registrar nuevo cronograma
-                </a>
-            </div>
         </div>
     </div>
 </div>

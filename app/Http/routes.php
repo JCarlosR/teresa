@@ -107,8 +107,13 @@ Route::group(['prefix' => 'admin'], function () {
 
     // Work schedule
     Route::get('/cronograma', 'Admin\WorkScheduleController@index');
+    Route::post('/cronograma', 'Admin\WorkScheduleController@store');
     Route::get('/cronograma/{id}', 'Admin\WorkScheduleController@show');
     Route::get('/cronograma/{id}/editar', 'Admin\WorkScheduleController@edit');
+    Route::put('/cronograma/{id}/editar', 'Admin\WorkScheduleController@update');
+    // Details
+    Route::post('/cronograma/{id}/editar', 'Admin\WorkScheduleDetailController@store');
+    Route::get('/cronograma/detalle/{detail_id}', 'Admin\WorkScheduleDetailController@update');
 
     // Leads
     Route::get('/leads', 'Admin\LeadController@index');

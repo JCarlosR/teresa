@@ -35,22 +35,26 @@
                     <thead>
                     <tr>
                         <th>{{ $client->trade_name }}</th>
-                        <th colspan="12">2017</th>
+                        <th colspan="12">{{ $workSchedule->start_date->format('Y') }}</th>
                     </tr>
                     <tr>
                         <th>Actividad</th>
-                        <th>Marzo</th>
-                        <th>Abril</th>
-                        <th>Mayo</th>
-                        <th>Junio</th>
-                        <th>Julio</th>
-                        <th>Agosto</th>
-                        <th>Setiembre</th>
-                        <th>Octubre</th>
-                        <th>Noviembre</th>
-                        <th>Diciembre</th>
-                        <th>Enero</th>
-                        <th>Febrero</th>
+                        @for ($i=0; $i<12; ++$i)
+                            <th>{{ $workSchedule->start_date->addMonth($i)->format('M') }}</th>
+                        @endfor
+
+                        {{--<th>Marzo</th>--}}
+                        {{--<th>Abril</th>--}}
+                        {{--<th>Mayo</th>--}}
+                        {{--<th>Junio</th>--}}
+                        {{--<th>Julio</th>--}}
+                        {{--<th>Agosto</th>--}}
+                        {{--<th>Setiembre</th>--}}
+                        {{--<th>Octubre</th>--}}
+                        {{--<th>Noviembre</th>--}}
+                        {{--<th>Diciembre</th>--}}
+                        {{--<th>Enero</th>--}}
+                        {{--<th>Febrero</th>--}}
                     </tr>
                     </thead>
                     <tbody>
@@ -59,86 +63,46 @@
                     </tr>
                     <tr>
                         <td>Proyectos en sitio web</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'project_in_website' ])
                     </tr>
                     <tr>
                         <td>Artículos</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'articles' ])
                     </tr>
                     <tr>
                         <td>Proyecto para medios profesionales</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'project_in_professional_media' ])
                     </tr>
                     <tr>
                         <td>Vídeos en Youtube</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'youtube_video' ])
                     </tr>
                     <tr>
                         <th scope="row">Registro en Google Maps</th>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'register_in_google_maps' ])
                     </tr>
                     <tr>
                         <th scope="row">Perfile sociales</th>
                     </tr>
                     <tr>
                         <td>Publicaciones en Facebook, LinkedIn y Google+</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'social_post' ])
                     </tr>
                     <tr>
                         <td>Publicidad en Facebook</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'facebook_ads' ])
                     </tr>
                     <tr>
                         <td>Publicidad en LinkedIn</td>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'linkedin_ads' ])
                     </tr>
                     <tr>
                         <th scope="row">Botón de llamada (call me back)</th>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'button_call_me_back' ])
                     </tr>
                     <tr>
                         <th scope="row">Informes de resultado</th>
-                        @foreach (range(1, 12) as $i)
-                            <td class="text-center text-{{ $i%2==0 ? 'default' : 'success' }}">
-                                <i class="ion-{{ $i%2==0 ? 'clock' : 'checkmark-round' }} big-icon"></i>
-                            </td>
-                        @endforeach
+                        @include('includes.user.work.show_activities_in_tds', ['type' => 'results_report' ])
                     </tr>
                     </tbody>
                 </table>

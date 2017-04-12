@@ -6,6 +6,7 @@ use App\Teresa\Clients\Accessors\DataPresentationAccessors;
 use App\Teresa\Clients\Accessors\RolesRelatedAccessors;
 use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
 use App\Teresa\Clients\Accessors\TypeAndStatusAccessors;
+use App\Teresa\Clients\Relationships\WorkScheduleRelationships;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Teresa\Clients\Relationships\ContentRelatedRelationships;
@@ -46,6 +47,7 @@ class User extends Authenticatable
 
     // relationships
     use ContentRelatedRelationships;
+    use WorkScheduleRelationships;
 
     // scopes
     use RolesRelatedScopes;
