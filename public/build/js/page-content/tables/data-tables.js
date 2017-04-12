@@ -2,8 +2,7 @@ $(document).ready(function() {
 
     var tableProjects = $('#table-projects').DataTable({
         lengthChange: false,
-        buttons: ['excel', 'pdf', 'print'],
-        iDisplayLength: 7,
+        iDisplayLength: 10,
         language: {
             paginate: {
                 previous: 'Anterior',
@@ -17,7 +16,7 @@ $(document).ready(function() {
 
     /*var tableServices = */$('#table-services').DataTable({
         lengthChange: false,
-        iDisplayLength: 5,
+        iDisplayLength: 10,
         searching: false,
         info: false,
         language: {
@@ -26,6 +25,13 @@ $(document).ready(function() {
                 next: 'Siguiente'
             }
             // search: "Buscar: "
+        },
+        fnDrawCallback: function() {
+            if (jQuery('#table-services_paginate .paginate_button').size() > 3) {
+                jQuery('#table-services_paginate')[0].style.display = "block";
+            } else {
+                jQuery('#table-services_paginate')[0].style.display = "none";
+            }
         }
     });
 
