@@ -205,7 +205,8 @@
                             {{ $professionalLink->name }}
                         </p>
                         <a href="{{ $professionalLink->url }}" target="_blank">
-                            <img src="{{ asset('/images/professional/default.png') }}" alt="{{ $professionalLink->name }}" width="36">
+                            <img src="https://www.google.com/s2/favicons?domain_url={{ $professionalLink->url }}"
+                                 alt="{{ $professionalLink->name }}" width="16">
                         </a>
                     </div>
                     @endforeach
