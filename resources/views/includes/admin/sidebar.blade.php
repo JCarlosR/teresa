@@ -31,6 +31,7 @@
                 <li><a href="{{ url("/admin/datos/acceso") }}">Datos de acceso</a></li>
                 <li><a href="{{ url("/admin/perfiles/sociales") }}">Perfiles sociales</a></li>
                 <li><a href="{{ url("/admin/perfiles/profesionales") }}">Perfiles profesionales</a></li>
+                <li><a href="{{ url("/admin/medios/profesionales") }}">Medios profesionales</a></li>
             </ul>
         </li>
 

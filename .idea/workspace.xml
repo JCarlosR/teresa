@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ProfessionalMedia.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2017_04_13_144441_create_professional_media_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/media.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +40,9 @@
       <file leaf-file-name="professional.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="1407">
               <caret line="67" column="97" lean-forward="false" selection-start-line="67" selection-start-column="97" selection-end-line="67" selection-end-column="97" />
-              <folding>
-                <element signature="e#1284#3138#0#HTML" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,8 +50,22 @@
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="110" column="46" lean-forward="false" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+            <state relative-caret-position="462">
+              <caret line="113" column="72" lean-forward="false" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="72" />
+              <folding>
+                <element signature="e#398#1420#0#PHP" expanded="false" />
+                <element signature="e#1426#2010#0#PHP" expanded="false" />
+                <element signature="e#2017#3007#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="media.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/media.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-234">
+              <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -55,14 +74,43 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="207" column="112" lean-forward="false" selection-start-line="207" selection-start-column="112" selection-end-line="207" selection-end-column="112" />
+            <state relative-caret-position="102">
+              <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientDashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="56" column="69" lean-forward="false" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+              <folding>
+                <element signature="e#40#66#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_04_13_144441_create_professional_media_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_13_144441_create_professional_media_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_12_16_190618_create_professional_profiles_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190618_create_professional_profiles_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,14 +126,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status_color</find>
-      <find>status_</find>
-      <find>artícu</find>
-      <find>-</find>
-      <find>datos</find>
       <find>proyectos</find>
       <find>proyectos a</find>
-      <find>servicios al</find>
       <find>overflow-</find>
       <find>proyectos al</find>
       <find>table-p</find>
@@ -108,6 +150,12 @@
       <find>actividad</find>
       <find>crono</find>
       <find>perfiles p</find>
+      <find>profil</find>
+      <find>perfile</find>
+      <find>perfil</find>
+      <find>siguiente</find>
+      <find>getProfessionalLinks</find>
+      <find>servicios al</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -119,6 +167,7 @@
       <replace>formatToVisitsPerDate</replace>
       <replace>visitsDateOptions</replace>
       <replace>formatToVisitsYearMonth</replace>
+      <replace>getProfessionalProfileLinks</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -127,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/client/inbox/config.blade.php" />
-        <option value="$PROJECT_DIR$/app/InboxMessage.php" />
         <option value="$PROJECT_DIR$/resources/views/client/projects/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Project.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Accessors/TypeAndStatusAccessors.php" />
@@ -153,8 +200,6 @@
         <option value="$PROJECT_DIR$/public/panel/projects/create.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Relationships/WorkScheduleRelationships.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_04_11_151225_create_work_schedules_table.php" />
@@ -169,14 +214,18 @@
         <option value="$PROJECT_DIR$/public/vendor/SocialCounters/js/api.js" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/work/show_activities_in_tds.blade.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Accessors/DataPresentationAccessors.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/work/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Client/WorkScheduleController.php" />
         <option value="$PROJECT_DIR$/resources/views/client/work/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_04_13_144441_create_professional_media_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/profiles/media.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
       </list>
     </option>
@@ -219,7 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,8 +280,89 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teresa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -247,19 +376,19 @@
     <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\teresa\resources\views\admin\profiles" />
+      <recent name="C:\wamp\www\teresa\resources\views\client\work" />
+      <recent name="C:\wamp\www\teresa\app\Teresa\Clients\Relationships" />
+      <recent name="C:\wamp\www\teresa\resources\views\admin\work" />
+      <recent name="C:\wamp\www\teresa\resources\views\guess" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\teresa\app\Http\Controllers" />
       <recent name="C:\wamp\www\teresa\app\Teresa\Vendor" />
       <recent name="C:\wamp\www\teresa\public\panel" />
       <recent name="C:\wamp\www\teresa\public\admin" />
       <recent name="C:\wamp\www\teresa\resources\views\layouts\projects\architects" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\teresa\resources\views\client\work" />
-      <recent name="C:\wamp\www\teresa\app\Teresa\Clients\Relationships" />
-      <recent name="C:\wamp\www\teresa\resources\views\admin\work" />
-      <recent name="C:\wamp\www\teresa\resources\views\guess" />
-      <recent name="C:\wamp\www\teresa\resources\views\client\about-us" />
     </key>
   </component>
   <component name="RunManager">
@@ -437,14 +566,8 @@
       <workItem from="1491832963248" duration="9956000" />
       <workItem from="1491878134403" duration="250000" />
       <workItem from="1491919275652" duration="8033000" />
-      <workItem from="1492006090814" duration="9608000" />
-    </task>
-    <task id="LOCAL-00112" summary="apply height for client cards">
-      <created>1490890508142</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1490890508142</updated>
+      <workItem from="1492006090814" duration="10230000" />
+      <workItem from="1492092206389" duration="2095000" />
     </task>
     <task id="LOCAL-00113" summary="google ad style">
       <created>1490892989958</created>
@@ -782,11 +905,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492016526325</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Get fav icons using google s2">
+      <created>1492016755460</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1492016755460</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423059000" />
+    <option name="totallyTimeSpent" value="425776000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,10 +929,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24281392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24659607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -831,8 +961,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Test data tables" />
-    <MESSAGE value="Add some missing js" />
     <MESSAGE value="Apply to services" />
     <MESSAGE value="Change data tables config" />
     <MESSAGE value="Language labels" />
@@ -856,7 +984,9 @@
     <MESSAGE value="Show % for projects and services" />
     <MESSAGE value="Work schedule for clients, PDF export advances" />
     <MESSAGE value="Fix set name for professional profiles (general user)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix set name for professional profiles (general user)" />
+    <MESSAGE value="Get fav icons using google s2" />
+    <MESSAGE value="Professional media and fix professional profiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Professional media and fix professional profiles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -865,27 +995,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Teresa/Clients/Accessors/ProjectsRelatedAccessors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/page-content/dashboard/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="314" column="66" lean-forward="false" selection-start-line="314" selection-start-column="66" selection-end-line="314" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/client/projects/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/Profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -914,13 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="102" column="81" lean-forward="false" selection-start-line="102" selection-start-column="81" selection-end-line="102" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Teresa/Clients/Accessors/TypeAndStatusAccessors.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -932,13 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -984,13 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1002,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-126">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,7 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,7 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,9 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="30" column="99" lean-forward="false" selection-start-line="30" selection-start-column="99" selection-end-line="30" selection-end-column="99" />
-          <folding>
-            <element signature="e#46#73#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="335" column="17" lean-forward="false" selection-start-line="335" selection-start-column="17" selection-end-line="335" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1140,7 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,7 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,11 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-          <folding>
-            <element signature="e#86#207#0#PHP" expanded="false" />
-            <element signature="e#213#372#0#PHP" expanded="false" />
-            <element signature="e#378#533#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1180,24 +1243,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="28" column="9" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#203#386#0#PHP" expanded="false" />
-            <element signature="e#967#1178#0#PHP" expanded="false" />
-            <element signature="e#1184#1518#0#PHP" expanded="false" />
-            <element signature="e#1524#1820#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,9 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#47#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,9 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,7 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,37 +1282,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/professional.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
+        <state relative-caret-position="1407">
           <caret line="67" column="97" lean-forward="false" selection-start-line="67" selection-start-column="97" selection-end-line="67" selection-end-column="97" />
-          <folding>
-            <element signature="e#1284#3138#0#HTML" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_16_190618_create_professional_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_13_144441_create_professional_media_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="33" column="50" lean-forward="false" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/user/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="106" lean-forward="false" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="105" column="87" lean-forward="false" selection-start-line="105" selection-start-column="87" selection-end-line="105" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/media.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234">
+          <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="110" column="46" lean-forward="false" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="462">
+          <caret line="113" column="72" lean-forward="false" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="72" />
+          <folding>
+            <element signature="e#398#1420#0#PHP" expanded="false" />
+            <element signature="e#1426#2010#0#PHP" expanded="false" />
+            <element signature="e#2017#3007#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="56" column="69" lean-forward="false" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="207" column="112" lean-forward="false" selection-start-line="207" selection-start-column="112" selection-end-line="207" selection-end-column="112" />
+        <state relative-caret-position="102">
+          <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

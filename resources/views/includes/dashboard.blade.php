@@ -49,7 +49,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="">
+            <div class="widget-body" style="min-height: 25em;">
                 <table id="table-services" class="table mb-0 dt-responsive nowrap">
                     <thead>
                     <tr>
@@ -214,6 +214,27 @@
                 </div>
             </div>
         </div>
+        <div class="widget">
+            <div class="widget-heading text-center">
+                <h3 class="widget-title">Medios profesionales</h3>
+            </div>
+            <div class="widget-body text-center">
+                <div class="row expand">
+                    @foreach ($professionalMedia as $item)
+                        <div class="col-professional">
+                            <p class="fs-12 text-uppercase text-muted hidden-xs">
+                                {{ $item->name }}
+                            </p>
+                            <a href="{{ $item->url }}" target="_blank">
+                                <img src="https://www.google.com/s2/favicons?domain_url={{ $item->url }}"
+                                     alt="{{ $item->name }}" width="16">
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
         <div class="widget">
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Proyectos al {{ $client->projects_percent }} %</h3>

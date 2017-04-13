@@ -101,6 +101,9 @@ Route::group(['prefix' => 'admin'], function () {
     // Profiles (professional)
     Route::get('/perfiles/profesionales', 'Admin\ProfileController@getProfessionalProfiles');
     Route::post('/perfiles/profesionales', 'Admin\ProfileController@postProfessionalProfile');
+    // Professional media
+    Route::get('/medios/profesionales', 'Admin\ProfileController@getProfessionalMedia');
+    Route::post('/medios/profesionales', 'Admin\ProfileController@postProfessionalMedia');
 
     // Personal
     Route::get('/personal', 'Admin\PersonalController@index');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ProfessionalMedia;
 use App\ProfessionalProfile;
 use App\Project;
 use App\Service;
@@ -25,6 +26,8 @@ trait ClientDashboard
         $projects = Project::where('user_id', $client_id)->get();
         $services = Service::where('user_id', $client_id)->get();
 
+        $professionalMedia = $this->getProfessionalMediaLinks($client_id);
+
         $facebook = $this->getSocialProfile($client_id, 'Facebook', 'https://www.fb.com/{id}');
         $linkedIn = $this->getSocialProfile($client_id, 'Linkedin', 'https://www.linkedin.com/company/{id}');
         $googlePlus = $this->getSocialProfile($client_id, 'Google+', 'https://plus.google.com/{id}');
@@ -44,14 +47,14 @@ trait ClientDashboard
             return view('client.dashboard')->with(compact(
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'architizer', 'archello', 'archilovers', 'buildings', 'behance',
-                'client', 'projects', 'services'
+                'client', 'projects', 'services', 'professionalMedia'
             ));
         } else {
-            $professionalLinks = $this->getProfessionalLinks($client_id);
+            $professionalLinks = $this->getProfessionalProfileLinks($client_id);
             return view('client.dashboard')->with(compact(
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'professionalLinks',
-                'client', 'projects', 'services'
+                'client', 'projects', 'services', 'professionalMedia'
             ));
         }
     }
@@ -97,7 +100,7 @@ trait ClientDashboard
         return '#';
     }
 
-    public function getProfessionalLinks($user_id)
+    public function getProfessionalProfileLinks($user_id)
     {
         $professionalProfiles = ProfessionalProfile::where('user_id', $user_id)->get();
         foreach ($professionalProfiles as $professionalProfile) {
@@ -105,5 +108,15 @@ trait ClientDashboard
                 $professionalProfile->url = '#';
         }
         return $professionalProfiles;
+    }
+
+    public function getProfessionalMediaLinks($user_id)
+    {
+        $professionalMedia = ProfessionalMedia::where('user_id', $user_id)->get();
+        foreach ($professionalMedia as $item) {
+            if ($item->url == '')
+                $item->url = '#';
+        }
+        return $professionalMedia;
     }
 }

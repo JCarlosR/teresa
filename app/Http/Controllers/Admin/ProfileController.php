@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\ProfessionalMedia;
 use App\ProfessionalProfile;
 use App\SocialProfile;
 use App\User;
@@ -108,17 +109,56 @@ class ProfileController extends Controller
             $professionalProfile = ProfessionalProfile::find($request->input('id'));
             $name = $request->input('name');
             if ($name) {
+                if (! $professionalProfile) {
+                    $professionalProfile = new ProfessionalProfile();
+                    $professionalProfile->user_id = session('client_id');
+                }
+
                 $professionalProfile->name = $name;
                 $professionalProfile->url = $request->get('url');
                 $professionalProfile->notes = $request->get('notes');
                 $professionalProfile->state = $request->get('state');
                 $professionalProfile->save();
             } else {
-                $professionalProfile->delete();
+                if ($professionalProfile)
+                    $professionalProfile->delete();
             }
         }
 
         return back()->with('notification', 'El perfil profesional se ha actualizado correctamente!');
     }
 
+
+    public function getProfessionalMedia()
+    {
+        $client = User::find(session('client_id'));
+
+        $professionalMedia = ProfessionalMedia::where('user_id', $client->id)->get();
+
+        return view('admin.profiles.media')->with(compact('professionalMedia', 'client'));
+    }
+
+    public function postProfessionalMedia(Request $request)
+    {
+        $professionalMedia = ProfessionalMedia::find($request->input('id'));
+
+        $name = $request->input('name');
+        if ($name) {
+            if (! $professionalMedia) {
+                $professionalMedia = new ProfessionalMedia();
+                $professionalMedia->user_id = session('client_id');
+            }
+
+            $professionalMedia->name = $name;
+            $professionalMedia->url = $request->get('url');
+            $professionalMedia->notes = $request->get('notes');
+            $professionalMedia->state = $request->get('state');
+            $professionalMedia->save();
+        } else {
+            if ($professionalMedia)
+                $professionalMedia->delete();
+        }
+
+        return back()->with('notification', 'El medio profesional se ha actualizado correctamente!');
+    }
 }
