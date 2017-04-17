@@ -132,7 +132,8 @@
                         <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
                     </h3>
                     <span id="limit0"></span>
-                    <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0', $project->question_0) }}</textarea>
+                    <input id="note0" title="Pregunta 0" name="question_0" class="form-control"
+                        value="{{ old('question_0', $project->question_0) }}">
 
                     <span id="status1" class="pull-right"></span>
                     <h3>

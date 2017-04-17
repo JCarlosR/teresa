@@ -14,13 +14,12 @@
 
     <div class="widget">
         <div class="widget-heading">
-            {!! $project->question_0 !!}
-
             <a href="/proyecto/{{ $project->id }}/editar" title="Editar proyecto"
                class="pull-right"
                style="color: #57caff; font-size: 2em;">
                 <i class="glyphicon glyphicon-pencil"></i>
             </a>
+            <h1>{{ $project->question_0 }}</h1>
         </div>
         <div class="widget-body">
 

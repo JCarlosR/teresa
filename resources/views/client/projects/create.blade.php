@@ -128,7 +128,8 @@
                     </h3>
                     <span id="limit0"></span>
                     <span id="status0" class="pull-right"></span>
-                    <textarea id="note0" title="Pregunta 0" name="question_0">{{ old('question_0') }}</textarea>
+                    <input type="text" id="note0" title="Pregunta 0" class="form-control"
+                           name="question_0" value="{{ old('question_0') }}">
 
                     <h3>
                         ¿Cuál fue el encargo?

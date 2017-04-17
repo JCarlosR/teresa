@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     // Summer note setup
-    $('#note0, #note1, #note2, #note3').summernote({
+    $('#note1, #note2, #note3').summernote({
         toolbar: [
             ['style', ['style']],
             ['font', ['bold', 'italic', 'underline', 'clear']],
@@ -27,55 +27,55 @@ $(document).ready(function() {
         callbacks: {
             onInit: function() {
                 // Apply one and first evaluation to each summer note
-                for (var i=0; i<=3; ++i)
+                for (var i=1; i<=3; ++i)
                     // isTitle: TRUE for i == 0
-                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i), i==0);
+                    setCharactersLengthMessage($('#note'+i), $('#limit'+i), $('#status'+i));
             }
         }
     });
 
-    $('#note0').on('summernote.keyup', onKeyUp0);
+    onKeyUp0(); // initial evaluation
+
+    $('#note0').on('keyup', onKeyUp0); // this field is just an input
     $('#note1').on('summernote.keyup', onKeyUp1);
     $('#note2').on('summernote.keyup', onKeyUp2);
     $('#note3').on('summernote.keyup', onKeyUp3);
 
     function onKeyUp0() {
-        setCharactersLengthMessage($(this), $('#limit0'), $('#status0'), true);
+        var charactersNum = $('#note0').val().length;
+        $('#limit0').html(charactersNum + ' caracteres');
+        // for the story title
+        var $status = $('#status0');
+        if (charactersNum >= 55 && charactersNum <= 70)
+            $status.html(htmlStatus.good);
+        else if (charactersNum >= 50 && charactersNum <= 72)
+            $status.html(htmlStatus.regular);
+        else
+            $status.html(htmlStatus.bad);
     }
     function onKeyUp1() {
-        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'), false);
+        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'));
     }
     function onKeyUp2() {
-        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'), false);
+        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'));
     }
     function onKeyUp3() {
-        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'), false);
+        setCharactersLengthMessage($(this), $('#limit3'), $('#status3'));
     }
 
-    function setCharactersLengthMessage($summerNote, $limit, $status, isTitle) {
+    function setCharactersLengthMessage($summerNote, $limit, $status) {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
             .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
 
         $limit.html(charactersNum + ' caracteres');
 
-        if (isTitle)
-        {
-            // for the story title
-            if (charactersNum >= 55 && charactersNum <= 70)
-                $status.html(htmlStatus.good);
-            else if (charactersNum >= 50 && charactersNum <= 72)
-                $status.html(htmlStatus.regular);
-            else
-                $status.html(htmlStatus.bad);
-        } else {
-            // for questions
-            if (charactersNum >= 500)
-                $status.html(htmlStatus.good);
-            else if (charactersNum >= 300)
-                $status.html(htmlStatus.regular);
-            else
-                $status.html(htmlStatus.bad);
-        }
+        // for questions
+        if (charactersNum >= 500)
+            $status.html(htmlStatus.good);
+        else if (charactersNum >= 300)
+            $status.html(htmlStatus.regular);
+        else
+            $status.html(htmlStatus.bad);
 
     }
 });
