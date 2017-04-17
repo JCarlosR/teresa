@@ -5,7 +5,7 @@
             <th>{{ $client->trade_name }}</th>
             <th colspan="12">{{ $workSchedule->start_date->format('Y') }}</th>
         </tr>
-        <tr>
+        <tr id="schedule-tr-months">
             <th>Actividad</th>
             @for ($i=0; $i<12; ++$i)
                 <th>{{ $workSchedule->start_date->addMonth($i)->format('M') }}</th>

@@ -33,6 +33,16 @@
                 </div>
             @endif
 
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form action="" method="POST">
                 {{ csrf_field() }}
                 <h3 class="mb-20">Seleccione un tipo de actividad.</h3>
@@ -97,18 +107,6 @@
                         @for ($i=0; $i<12; ++$i)
                             <option value="{{ $i }}">{{ $workSchedule->start_date->addMonth($i)->format('F Y') }}</option>
                         @endfor
-                        {{--<option value="1">Enero</option>--}}
-                        {{--<option value="2">Febrero</option>--}}
-                        {{--<option value="3">Marzo</option>--}}
-                        {{--<option value="4">Abril</option>--}}
-                        {{--<option value="5">Mayo</option>--}}
-                        {{--<option value="6">Junio</option>--}}
-                        {{--<option value="7">Julio</option>--}}
-                        {{--<option value="8">Agosto</option>--}}
-                        {{--<option value="9">Setiembre</option>--}}
-                        {{--<option value="10">Octubre</option>--}}
-                        {{--<option value="11">Noviembre</option>--}}
-                        {{--<option value="12">Diciembre</option>--}}
                     </select>
                     <p class="text-muted">Inicialmente se iban a considerar como campos separados. Pero es necesario que estén así para evitar inconsistencias.</p>
                 </div>
@@ -158,30 +156,6 @@
                         </td>
                     </tr>
                 @endforeach
-                {{--<tr>--}}
-                    {{--<th class="row">Proyectos en sitio web</th>--}}
-                    {{--<td>2017</td>--}}
-                    {{--<td>Marzo</td>--}}
-                    {{--<td class="text-center text-success">--}}
-                        {{--<i class="ion-checkmark-round big-icon"></i>--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
-                {{--<tr>--}}
-                    {{--<th class="row">Registro en Google Maps</th>--}}
-                    {{--<td>2017</td>--}}
-                    {{--<td>Julio</td>--}}
-                    {{--<td class="text-center text-default">--}}
-                        {{--<i class="ion-clock big-icon"></i>--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
-                {{--<tr>--}}
-                    {{--<th class="row">Publicidad en Facebook</th>--}}
-                    {{--<td>2018</td>--}}
-                    {{--<td>Enero</td>--}}
-                    {{--<td class="text-center text-default">--}}
-                        {{--<i class="ion-clock big-icon"></i>--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
                 </tbody>
             </table>
         </div>

@@ -119,6 +119,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::put('/cronograma/{id}/editar', 'Admin\WorkScheduleController@update');
     // Details
     Route::post('/cronograma/{id}/editar', 'Admin\WorkScheduleDetailController@store');
+    Route::get('/cronograma/{id}/detalle', 'Admin\WorkScheduleDetailController@updateByActivityAndOffset');
     Route::get('/cronograma/detalle/{detail_id}', 'Admin\WorkScheduleDetailController@update');
 
     // Leads

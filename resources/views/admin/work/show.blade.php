@@ -39,30 +39,50 @@
     </div>
 
 </div>
+
+<div id="modalActivityMonth" tabindex="-1" role="dialog" class="modal fade bs-example-modal-lg" style="display: none;">
+    <div role="document" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-black no-border">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Seleccione el estado de la actividad</h4>
+            </div>
+            <form action="{{ url('/admin/cronograma/'.$workSchedule->id.'/detalle') }}" method="get" id="formUpdateState">
+                <input type="hidden" name="type" value="">
+                <input type="hidden" name="month_offset" value="">
+                <div class="modal-body">
+                    <p><strong>Mes seleccionado:</strong> <span id="spanMonth"></span></p>
+                    <p><strong>Actividad seleccionada:</strong> <span id="spanActivity"></span></p>
+                    <p><strong>Estado de la actividad:</strong></p>
+                    <div class="radio-custom">
+                        <input id="complete" name="state" type="radio" value="1">
+                        <label for="complete">Actividad completada <i class="ion-checkmark-round text-success"></i></label>
+                    </div>
+                    <div class="radio-custom">
+                        <input id="awaiting" name="state" type="radio" value="0">
+                        <label for="awaiting">Actividad en espera <i class="ion-clock text-default"></i></label>
+                    </div>
+                    <div class="radio-custom">
+                        <input id="cancel" name="state" type="radio" value="-1">
+                        <label for="cancel">Actividad cancelada <i class="ion-close-round text-danger"></i></label>
+                    </div>
+                    <div class="radio-custom">
+                        <input id="empty" name="state" type="radio" value="-2">
+                        <label for="empty">Sin actividad</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">No aplicar cambios</button>
+                    <button type="submit" class="btn btn-black">Aplicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('scripts')
     <script src="{{ asset('/vendor/jspdf/jspdf.debug.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.0/jspdf.plugin.autotable.js"></script>
-    <script>
-        $(function () {
-            $('#exportToPdf').on('click', htmlToPdf);
-
-            function htmlToPdf() {
-                var doc = new jsPDF('l', 'mm', [297, 210]);
-                doc.text("From HTML", 14, 16);
-                var elem = document.getElementById("schedule-table");
-                var res = doc.autoTableHtmlToJson(elem);
-                console.log(res);
-                doc.autoTable(res.columns, res.data, {startY: 20});
-
-                doc.setProperties({
-                    title: 'Cronograma de trabajo',
-                    subject: 'Cronograma generado por Teresa v1.0'
-                });
-
-                doc.save('table.pdf');
-            }
-        });
-    </script>
+    <script src="{{ asset('panel/admin/work/show.js') }}"></script>
 @endsection
