@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/work/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/work/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +65,8 @@
       <file leaf-file-name="show_activities_table.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+            <state relative-caret-position="459">
+              <caret line="119" column="13" lean-forward="false" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -549,14 +548,7 @@
       <workItem from="1492006090814" duration="10230000" />
       <workItem from="1492092206389" duration="2710000" />
       <workItem from="1492437116664" duration="8163000" />
-      <workItem from="1492524139959" duration="5549000" />
-    </task>
-    <task id="LOCAL-00120" summary="data type json">
-      <created>1491491997580</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1491491997580</updated>
+      <workItem from="1492524139959" duration="6297000" />
     </task>
     <task id="LOCAL-00121" summary="jsonp is required to perform cross requests">
       <created>1491492112415</created>
@@ -894,11 +886,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492531015394</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Fix typo">
+      <created>1492531575652</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1492531575652</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440103000" />
+    <option name="totallyTimeSpent" value="440851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1364,8 +1363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        <state relative-caret-position="459">
+          <caret line="119" column="13" lean-forward="false" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -110,6 +110,14 @@
             @include('includes.user.work.show_activities_in_tds', ['type' => 'instagram_ads' ])
         </tr>
 
+        <tr>
+            <th scope="row">Botón de llamada (call me back)</th>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'button_call_me_back' ])
+        </tr>
+        <tr>
+            <th scope="row">Informes de resultado</th>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'results_report' ])
+        </tr>
         </tbody>
     </table>
 </div>
