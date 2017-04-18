@@ -3,11 +3,12 @@
 @section('styles')
     <style>
         .big-icon {
-            font-size: 1.8em;
+            font-size: 1.2em;
         }
         #schedule-table td {
             padding-top: 0;
             padding-bottom: 0;
+            min-height: 1.2em;
         }
     </style>
 @endsection
