@@ -12,6 +12,8 @@ class WorkScheduleDetail extends Model
             case 'hosting_and_ssl': return 'Hosting + SSL';
             case 'web_content': return 'Contenido web';
             case 'web_template': return 'Plantilla web';
+            case 'photos_stock': return 'Fotos de stock';
+            case 'professional_photos': return 'Fotografía profesional';
 
             case 'project_in_website': return 'Proyectos en sitio web';
             case 'articles': return 'Artículos en sitio web';

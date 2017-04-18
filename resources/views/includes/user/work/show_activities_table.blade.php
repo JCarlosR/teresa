@@ -28,6 +28,14 @@
             <td>Plantilla web</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'web_template' ])
         </tr>
+        <tr>
+            <td>Fotos de stock</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'photos_stock' ])
+        </tr>
+        <tr>
+            <td>Fotografía profesional</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'professional_photos' ])
+        </tr>
 
         <tr>
             <th scope="row">Proyectos y artículos</th>
