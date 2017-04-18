@@ -49,22 +49,37 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <h4>Optimización SEO</h4>
+                        <h4>Plataforma web</h4>
+                        <div class="radio-custom">
+                            <input type="radio" name="activity_type" id="option11" value="hosting_and_ssl" checked>
+                            <label for="option11">Hosting + SSL</label>
+                        </div>
+                        <div class="radio-custom">
+                            <input type="radio" name="activity_type" id="option12" value="web_content">
+                            <label for="option12" title="Nosotros y Servicios">Contenido web</label>
+                        </div>
+                        <div class="radio-custom">
+                            <input type="radio" name="activity_type" id="option13" value="web_template">
+                            <label for="option13">Plantilla web</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Proyectos y artículos</h4>
                         <div class="radio-custom">
                             <input type="radio" name="activity_type" id="option1" value="project_in_website" checked>
                             <label for="option1">Proyectos en sitio web</label>
                         </div>
                         <div class="radio-custom">
                             <input type="radio" name="activity_type" id="option2" value="articles">
-                            <label for="option2">Artículos</label>
+                            <label for="option2">Artículos en sitio web</label>
                         </div>
                         <div class="radio-custom">
                             <input type="radio" name="activity_type" id="option3" value="project_in_professional_media">
-                            <label for="option3">Proyecto para medios profesionales</label>
+                            <label for="option3">Proyectos en medios profesionales</label>
                         </div>
                         <div class="radio-custom">
                             <input type="radio" name="activity_type" id="option4" value="youtube_video">
-                            <label for="option4">Vídeos en Youtube</label>
+                            <label for="option4">Proyectos en vídeos (Youtube)</label>
                         </div>
                     </div>
                     <div class="col-md-4">

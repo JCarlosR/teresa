@@ -14,24 +14,41 @@
         </thead>
         <tbody>
         <tr>
-            <th scope="row">Optimización SEO</th>
+            <th scope="row">Plataforma web</th>
+        </tr>
+        <tr>
+            <td>Hosting + SSL</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'hosting_and_ssl' ])
+        </tr>
+        <tr>
+            <td>Contenido web</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'web_content' ])
+        </tr>
+        <tr>
+            <td>Plantilla web</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'web_template' ])
+        </tr>
+
+        <tr>
+            <th scope="row">Proyectos y artículos</th>
         </tr>
         <tr>
             <td>Proyectos en sitio web</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'project_in_website' ])
         </tr>
         <tr>
-            <td>Artículos</td>
+            <td>Artículos en sitio web</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'articles' ])
         </tr>
         <tr>
-            <td>Proyecto para medios profesionales</td>
+            <td>Proyectos en medios profesionales</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'project_in_professional_media' ])
         </tr>
         <tr>
-            <td>Vídeos en Youtube</td>
+            <td>Proyectos en vídeo (Youtube)</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'youtube_video' ])
         </tr>
+
         <tr>
             <th scope="row">Registro en Google Maps</th>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'register_in_google_maps' ])

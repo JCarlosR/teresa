@@ -9,6 +9,10 @@ class WorkScheduleDetail extends Model
     public function getTypeNameAttribute()
     {
         switch ($this->type) {
+            case 'hosting_and_ssl': return 'Hosting + SSL';
+            case 'web_content': return 'Contenido web';
+            case 'web_template': return 'Plantilla web';
+
             case 'project_in_website': return 'Proyectos en sitio web';
             case 'articles': return 'Artículos';
             case 'project_in_professional_media': return 'Proyecto para medios profesionales';
