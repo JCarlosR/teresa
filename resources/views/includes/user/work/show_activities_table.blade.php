@@ -83,7 +83,7 @@
         </tr>
 
         <tr>
-            <th scope="row">Publicaciones</th>
+            <th scope="row">Publicidad</th>
         </tr>
         <tr>
             <td>Facebok</td>
