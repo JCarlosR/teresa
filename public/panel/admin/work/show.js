@@ -42,7 +42,7 @@ $(function () {
 
 
 
-    $('#exportToPdf').on('click', htmlToPdf);
+    // $('#exportToPdf').on('click', htmlToPdf);
     function htmlToPdf() {
         var doc = new jsPDF('l', 'mm', [297, 210]);
         doc.text("From HTML", 14, 16);

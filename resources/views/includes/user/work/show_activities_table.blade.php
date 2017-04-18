@@ -3,7 +3,7 @@
         <thead>
         <tr>
             <th>{{ $client->trade_name }}</th>
-            <th colspan="12">{{ $workSchedule->start_date->format('Y') }}</th>
+            <th colspan="12">Cronograma de trabajo {{ $workSchedule->start_date->format('Y') }}</th>
         </tr>
         <tr id="schedule-tr-months">
             <th>Actividad</th>
@@ -53,29 +53,63 @@
             <th scope="row">Registro en Google Maps</th>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'register_in_google_maps' ])
         </tr>
+
         <tr>
-            <th scope="row">Perfile sociales</th>
+            <th scope="row">Publicaciones</th>
         </tr>
         <tr>
-            <td>Publicaciones en Facebook, LinkedIn y Google+</td>
-            @include('includes.user.work.show_activities_in_tds', ['type' => 'social_post' ])
+            <td>Facebok</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'facebook_post' ])
         </tr>
         <tr>
-            <td>Publicidad en Facebook</td>
+            <td>LinkedIn</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'linkedin_post' ])
+        </tr>
+        <tr>
+            <td>Google+</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'google_plus_post' ])
+        </tr>
+        <tr>
+            <td>Twitter</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'twitter_post' ])
+        </tr>
+        <tr>
+            <td>Pinterest</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'pinterest_post' ])
+        </tr>
+        <tr>
+            <td>Instagram</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'instagram_post' ])
+        </tr>
+
+        <tr>
+            <th scope="row">Publicaciones</th>
+        </tr>
+        <tr>
+            <td>Facebok</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'facebook_ads' ])
         </tr>
         <tr>
-            <td>Publicidad en LinkedIn</td>
+            <td>LinkedIn</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'linkedin_ads' ])
         </tr>
         <tr>
-            <th scope="row">Botón de llamada (call me back)</th>
-            @include('includes.user.work.show_activities_in_tds', ['type' => 'button_call_me_back' ])
+            <td>Google+</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'google_plus_ads' ])
         </tr>
         <tr>
-            <th scope="row">Informes de resultado</th>
-            @include('includes.user.work.show_activities_in_tds', ['type' => 'results_report' ])
+            <td>Twitter</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'twitter_ads' ])
         </tr>
+        <tr>
+            <td>Pinterest</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'pinterest_ads' ])
+        </tr>
+        <tr>
+            <td>Instagram</td>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'instagram_ads' ])
+        </tr>
+
         </tbody>
     </table>
 </div>

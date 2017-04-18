@@ -5,12 +5,16 @@
         .big-icon {
             font-size: 1.2em;
         }
-        #schedule-table td {
+        #schedule-table td, #schedule-table th {
             padding-top: 0;
             padding-bottom: 0;
             min-height: 1.2em;
         }
+        #schedule-table td {
+            padding-left: 1.5em;
+        }
     </style>
+    <link rel="stylesheet" type="text/css" media="print" href="{{ asset('panel/admin/work/print-show.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -32,12 +36,11 @@
                 </div>
             @endif
 
+                <button type="button" onclick="window.print();" class="btn btn-info btn-sm pull-right">
+                <i class="glyphicon glyphicon-print"></i>
+            </button>
             <p class="mb-20">Los cronogramas de trabajo permiten a los clientes conocer qué actividades
                 se han realizado, se están realizando o se realizarán como parte de la estrategia de Teresa.</p>
-
-            <div class="text-right">
-                <button id="exportToPdf" class="btn btn-info">Exportar a PDF</button>
-            </div>
 
             @include('includes.user.work.show_activities_table')
         </div>
@@ -87,7 +90,7 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('/vendor/jspdf/jspdf.debug.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.0/jspdf.plugin.autotable.js"></script>
+    {{--<script src="{{ asset('/vendor/jspdf/jspdf.debug.js') }}"></script>--}}
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.0/jspdf.plugin.autotable.js"></script>--}}
     <script src="{{ asset('panel/admin/work/show.js') }}"></script>
 @endsection

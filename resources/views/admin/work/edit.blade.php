@@ -24,7 +24,7 @@
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Registrar actividad</h3>
+            <h3 class="widget-title">Actualizar estado de las actividades</h3>
         </div>
         <div class="widget-body">
             @if (session('notification'))
@@ -43,103 +43,6 @@
                 </div>
             @endif
 
-            <form action="" method="POST">
-                {{ csrf_field() }}
-                <h3 class="mb-20">Seleccione un tipo de actividad.</h3>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <h4>Plataforma web</h4>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option11" value="hosting_and_ssl" checked>
-                            <label for="option11">Hosting + SSL</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option12" value="web_content">
-                            <label for="option12" title="Nosotros y Servicios">Contenido web</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option13" value="web_template">
-                            <label for="option13">Plantilla web</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Proyectos y artículos</h4>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option1" value="project_in_website" checked>
-                            <label for="option1">Proyectos en sitio web</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option2" value="articles">
-                            <label for="option2">Artículos en sitio web</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option3" value="project_in_professional_media">
-                            <label for="option3">Proyectos en medios profesionales</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option4" value="youtube_video">
-                            <label for="option4">Proyectos en vídeos (Youtube)</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Perfiles sociales</h4>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option5" value="social_post">
-                            <label for="option5">Publicaciones en Facebook, LinkedIn y Google+</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option6" value="facebook_ads">
-                            <label for="option6">Publicidad en Facebook</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option7" value="linkedin_ads">
-                            <label for="option7">Publicidad en LinkedIn</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Opciones generales</h4>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option8" value="register_in_google_maps">
-                            <label for="option8">Registro en Google Maps</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option9" value="button_call_me_back">
-                            <label for="option9">Botón de llamada (call me back)</label>
-                        </div>
-                        <div class="radio-custom">
-                            <input type="radio" name="activity_type" id="option10" value="results_report">
-                            <label for="option10">Informes de resultado</label>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="mb-20">Seleccione mes y año.</h3>
-
-                <div class="form-group">
-                    <label for="month_offset">Mes</label>
-                    <select name="month_offset" id="month_offset" class="form-control">
-                        @for ($i=0; $i<12; ++$i)
-                            <option value="{{ $i }}">{{ $workSchedule->start_date->addMonth($i)->format('F Y') }}</option>
-                        @endfor
-                    </select>
-                    <p class="text-muted">Inicialmente se iban a considerar como campos separados. Pero es necesario que estén así para evitar inconsistencias.</p>
-                </div>
-
-                <div class="form-group text-right">
-                    <button type="submit" class="btn btn-success">
-                        Registrar actividad
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="widget">
-        <div class="widget-heading">
-            <h3 class="widget-title">Actualizar estado de las actividades</h3>
-        </div>
-        <div class="widget-body">
             <p>Marque como realizada o como pendiente las actividades registradas en el cronograma.</p>
             <p>Para alterar el estado de una actividad simplemente <strong>haga clic sobre el ícono</strong> de su estado. La imagen que se muestra <strong>representa el estado actual</strong>.</p>
 
