@@ -45,6 +45,8 @@ Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
 Route::get('/proyecto/{id}/imagenes', 'ProjectImageController@index');
 Route::post('/proyecto/{id}/imagenes', 'ProjectImageController@upload');
 Route::get('/proyecto/imagenes/{id}/eliminar', 'ProjectImageController@delete');
+Route::get('/proyecto/imagenes/{id}/editar', 'ProjectImageController@edit');
+Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
 
 // About us
 Route::get('/nosotros', 'AboutUsController@show');
