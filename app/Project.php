@@ -29,6 +29,11 @@ class Project extends Model
         return $this->hasOne('App\ArchitectProject');
     }
 
+    public function images()
+    {
+        return $this->hasMany('App\ProjectImage');
+    }
+
 
     // accessors
 

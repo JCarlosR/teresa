@@ -41,6 +41,11 @@ Route::post('/proyectos/registrar', 'ProjectController@store');
 Route::get('/proyecto/{id}/editar', 'ProjectController@edit');
 Route::post('/proyecto/editar', 'ProjectController@update');
 Route::get('/proyecto/{id}/eliminar', 'ProjectController@delete');
+// Project images
+Route::get('/proyecto/{id}/imagenes', 'ProjectImageController@index');
+Route::post('/proyecto/{id}/imagenes', 'ProjectImageController@upload');
+Route::get('/proyecto/imagenes/{id}/eliminar', 'ProjectImageController@delete');
+
 // About us
 Route::get('/nosotros', 'AboutUsController@show');
 Route::get('/nosotros/editar', 'AboutUsController@edit');
