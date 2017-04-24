@@ -270,7 +270,7 @@
                                      alt="Semáforo de estado" height="24"
                                      title="{{ $project->characters_percent }} %">
                             </td>
-                            <td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>
+                            <td class="text-center text-{{ $project->hasPhotos ? 'success' : 'danger' }}"><i class="ion-{{ $project->hasPhotos ? 'checkmark' : 'close' }}-round"></i></td>
                             <td class="text-center"><span class="label label-outline label-success">Publicado</span></td>
                         </tr>
                     @endforeach

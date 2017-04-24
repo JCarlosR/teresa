@@ -34,6 +34,11 @@ class Project extends Model
         return $this->hasMany('App\ProjectImage');
     }
 
+    public function getHasPhotosAttribute()
+    {
+        return ProjectImage::where('project_id', $this->id)->count();
+    }
+
 
     // accessors
 
