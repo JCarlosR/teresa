@@ -33,6 +33,13 @@ Route::post('/servicios/registrar', 'ServiceController@store');
 Route::get('/servicio/{id}/editar', 'ServiceController@edit');
 Route::post('/servicio/editar', 'ServiceController@update');
 Route::get('/servicio/{id}/eliminar', 'ServiceController@delete');
+// Service images
+Route::get('/servicio/{id}/imagenes', 'ServiceImageController@index');
+Route::post('/servicio/{id}/imagenes', 'ServiceImageController@upload');
+Route::get('/servicio/imagenes/{id}/eliminar', 'ServiceImageController@delete');
+Route::get('/servicio/imagenes/{id}/editar', 'ServiceImageController@edit');
+Route::post('/servicio/imagenes/{id}/editar', 'ServiceImageController@update');
+
 // Projects
 Route::get('/proyectos', 'ProjectController@index');
 Route::get('/proyecto/{id}/ver', 'ProjectController@show');

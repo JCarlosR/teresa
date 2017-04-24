@@ -44,7 +44,7 @@
                             </td>
                             <td>{{ $project->type ?: 'Sin especificar' }}</td>
                             <td class="text-center">
-                                @if ($key%2==0)
+                                @if ($project->hasPhotos)
                                     <i class="ion-checkmark-round"></i>
                                 @else
                                     <i class="ion-close"></i>
@@ -67,8 +67,7 @@
 
                                 <a href="{{ url('/proyecto/'.$project->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar servicio"
-                                   onclick="return confirm('¿Estás seguro que deseas eliminar este proyecto?');"
-                                >
+                                   onclick="return confirm('¿Estás seguro que deseas eliminar este proyecto?');">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                             </td>

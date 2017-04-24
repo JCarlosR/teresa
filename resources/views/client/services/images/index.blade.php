@@ -1,0 +1,99 @@
+@extends('layouts.panel')
+
+@section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.css">
+    <style>
+        .thumbnail {
+            height: 180px;
+        }
+        .thumbnail img {
+            max-height: 95%;
+        }
+    </style>
+@endsection
+
+@section('dashboard_content')
+<div class="page-content container-fluid">
+    <ol class="breadcrumb">
+        <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li class="active">Imágenes</li>
+    </ol>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Imágenes del servicio {{ $service->name }}</h3>
+        </div>
+        <div class="widget-body">
+            @if (session('notification'))
+                <div class="alert alert-success">
+                    <p>{{ session('notification') }}</p>
+                </div>
+            @endif
+
+            <div class="row">
+                @foreach ($service->images as $image)
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <div class="widget-heading">
+                                <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
+                            </div>
+                            <div class="widget-body">
+                                <div class="thumbnail">
+                                    <img src="/images/services/{{ $image->file_name }}"
+                                         alt="{{ $image->name ?: 'Imagen sin nombre' }}"
+                                         title="{{ $image->description ?: 'Sin descripción' }}">
+                                </div>
+                                <div class="row btn-demo animation-demo">
+                                    <div class="col-xs-6">
+                                        <a href="{{ url('/servicio/imagenes/'.$image->id.'/editar') }}" class="btn btn-sm btn-block btn-outline btn-rounded btn-primary">
+                                            <span class="glyphicon glyphicon-edit"></span> Editar
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a href="{{ url('/servicio/imagenes/'.$image->id.'/eliminar') }}" onclick="return confirm('Está seguro que desea eliminar esta imagen?');" class="btn btn-sm btn-block btn-outline btn-rounded btn-danger">
+                                            <span class="glyphicon glyphicon-remove"></span> Eliminar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Subir imágenes al servicio {{ $service->name }}</h3>
+        </div>
+        <div class="widget-body">
+            <div class="form-group">
+                <a href="" class="btn btn-info" id="refresh-button" style="display: none;">
+                    <span class="glyphicon glyphicon-refresh"></span> Actualizar página
+                </a>
+            </div>
+            <form action="{{ asset('/servicio/'.$service->id.'/imagenes') }}"
+                  class="dropzone" id="my-awesome-dropzone">
+                {{ csrf_field() }}
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
+    <script>
+        // "myAwesomeDropzone" is the camelized version of the HTML element's ID
+        Dropzone.options.myAwesomeDropzone = {
+            paramName: "file",
+            maxFilesize: 2,
+            success: function (file, response) {
+                // console.log(response);
+                $('#refresh-button').slideDown('slow');
+            }
+        };
+    </script>
+@endsection

@@ -38,7 +38,7 @@
                             <td><img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="40"></td>
                             <td>{{ $service->name }}</td>
                             <td class="text-center">
-                                @if ($key%2==0)
+                                @if ($service->hasPhotos)
                                     <i class="ion-checkmark-round"></i>
                                 @else
                                     <i class="ion-close"></i>
@@ -55,10 +55,13 @@
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 
+                                <a href="{{ url("servicio/$service->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                </a>
+
                                 <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar servicio"
-                                   onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');"
-                                >
+                                   onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                             </td>

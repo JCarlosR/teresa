@@ -19,6 +19,11 @@ class Service extends Model
         return $this->belongsToMany('App\Project')->withTimestamps();
     }
 
+    public function images()
+    {
+        return $this->hasMany('App\ServiceImage');
+    }
+
 
     // accessors
 
@@ -49,8 +54,14 @@ class Service extends Model
         return 'green';
     }
 
+    public function getHasPhotosAttribute()
+    {
+        return ServiceImage::where('service_id', $this->id)->count();
+    }
+
 
     // methods
+
     public function questionStatus($i) {
         $characters = 0;
         switch ($i) {
