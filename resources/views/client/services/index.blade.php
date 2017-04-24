@@ -37,7 +37,7 @@
                             <th scope="row">{{ ++$key }}</th>
                             <td><img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="40"></td>
                             <td>{{ $service->name }}</td>
-                            <td class="text-center">
+                            <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
                                 @if ($service->hasPhotos)
                                     <i class="ion-checkmark-round"></i>
                                 @else

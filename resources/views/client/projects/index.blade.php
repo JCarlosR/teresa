@@ -43,7 +43,7 @@
                                 {{ $project->name }}
                             </td>
                             <td>{{ $project->type ?: 'Sin especificar' }}</td>
-                            <td class="text-center">
+                            <td class="text-center text-{{ $project->hasPhotos ? 'success' : 'danger' }}">
                                 @if ($project->hasPhotos)
                                     <i class="ion-checkmark-round"></i>
                                 @else

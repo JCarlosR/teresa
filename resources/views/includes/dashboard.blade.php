@@ -56,7 +56,7 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th class="text-center">Estado</th>
-                        {{--<th class="text-center">Fotos</th>--}}
+                        <th class="text-center">Fotos</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -73,7 +73,9 @@
                                      alt="Semáforo de estado" height="24"
                                     title="{{ $service->characters_percent }} %">
                             </td>
-                            {{--<td class="text-center text-{{ $key%2==0 ? 'danger' : 'success' }}"><i class="ion-{{ $key%2==0 ? 'close' : 'checkmark' }}-round"></i></td>--}}
+                            <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
+                                <i class="ion-{{ $service->hasPhotos ? 'checkmark' : 'close' }}-round"></i>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
