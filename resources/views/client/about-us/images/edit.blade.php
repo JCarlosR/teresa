@@ -13,8 +13,8 @@
 <div class="page-content container-fluid">
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
-        <li><a href="/proyectos">Proyectos</a></li>
-        <li><a href="/proyecto/{{ $project->id }}/imagenes">Imágenes de {{ $project->name }}</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/nosotros/imagenes">Imágenes</a></li>
         <li class="active">Editar imagen</li>
     </ol>
 
@@ -30,7 +30,7 @@
             @endif
 
             <div class="text-center">
-                <img class="img-responsive" src="/images/projects/{{ $image->file_name }}"
+                <img class="img-responsive" src="/images/about-us/{{ $image->file_name }}"
                     alt="{{ $image->name }}"
                     title="{{ $image->description }}">
             </div>

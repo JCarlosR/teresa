@@ -59,6 +59,12 @@ Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
 Route::get('/nosotros', 'AboutUsController@show');
 Route::get('/nosotros/editar', 'AboutUsController@edit');
 Route::post('/nosotros', 'AboutUsController@update');
+// About us images
+Route::get('/nosotros/imagenes', 'AboutUsImageController@index');
+Route::post('/nosotros/imagenes', 'AboutUsImageController@upload');
+Route::get('/nosotros/imagenes/{id}/eliminar', 'AboutUsImageController@delete');
+Route::get('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@edit');
+Route::post('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@update');
 
 // Work schedule
 Route::get('/cronograma', 'Client\WorkScheduleController@index');

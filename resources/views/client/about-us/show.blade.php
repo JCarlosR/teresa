@@ -19,6 +19,7 @@
 
 @section('dashboard_content')
 <div class="page-content container-fluid">
+
     <div class="widget">
         <div class="widget-heading">
             <a href="/nosotros/editar" class="pull-right" title="Editar sección"
@@ -73,6 +74,39 @@
             </fieldset>
         </div>
     </div>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <a href="/nosotros/imagenes" class="pull-right" title="Editar imágenes"
+               style="color: #57caff; font-size: 2em;">
+                <i class="glyphicon glyphicon-picture"></i>
+            </a>
+            <h3 class="widget-title">Imágenes de la sección nosotros</h3>
+        </div>
+        <div class="widget-body">
+
+            <div class="row">
+                @foreach ($about_us->images as $image)
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <div class="widget-heading">
+                                <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
+                            </div>
+                            <div class="widget-body">
+                                <div class="thumbnail">
+                                    <img src="/images/about-us/{{ $image->file_name }}"
+                                         alt="{{ $image->name ?: 'Imagen sin nombre' }}"
+                                         title="{{ $image->description ?: 'Sin descripción' }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+        </div>
+    </div>
+
 </div>
 @endsection
 
