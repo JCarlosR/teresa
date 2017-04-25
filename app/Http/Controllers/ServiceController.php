@@ -47,16 +47,19 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required'
+            'name' => 'required',
+            'description' => 'max:155'
         ];
         $messages = [
-            'name.required' => 'Debe ingresar un nombre para el servicio'
+            'name.required' => 'Debe ingresar un nombre para el servicio.',
+            'description.max' => 'La descripción del servicio es muy extensa (resumen).'
         ];
         $this->validate($request, $rules, $messages);
 
         $service = new Service();
         $service->user_id = $this->user->id;
         $service->name = $request->get('name');
+        $service->description = $request->get('description');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
         $service->question_3 = $request->get('question_3');
@@ -77,16 +80,19 @@ class ServiceController extends Controller
     {
         $rules = [
             'name' => 'required',
-            'service_id' => 'exists:services,id'
+            'service_id' => 'exists:services,id',
+            'description' => 'max:155'
         ];
         $messages = [
-            'name.required' => 'Debe ingresar un nombre para el servicio',
-            'service_id.exists' => 'El servicio no existe en nuestra base de datos.'
+            'name.required' => 'Debe ingresar un nombre para el servicio.',
+            'service_id.exists' => 'El servicio no existe en nuestra base de datos.',
+            'description.max' => 'La descripción del servicio es muy extensa (resumen).'
         ];
         $this->validate($request, $rules, $messages);
 
         $service = Service::find($request->get('service_id'));
         $service->name = $request->get('name');
+        $service->description = $request->get('description');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
         $service->question_3 = $request->get('question_3');

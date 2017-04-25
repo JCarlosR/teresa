@@ -54,6 +54,7 @@ class ProjectController extends Controller
     {
         $rules = [
             'name' => 'required|min:4|unique:projects,name',
+            'description' => 'max:155',
             'services.*' => 'exists:services,name',
             'client' => 'min:3',
             'year' => 'required|integer|min:1980'
@@ -62,6 +63,7 @@ class ProjectController extends Controller
             'name.unique' => 'Este nombre de proyecto ya se encuentra registrado. Por favor usa otro.',
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
+            'description.max' => 'La descripción del proyecto es muy extensa (resumen).',
             'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
             'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
@@ -76,6 +78,7 @@ class ProjectController extends Controller
         $project->user_id = $this->user->id;
 
         $project->name = $request->get('name');
+        $project->description = $request->get('description');
         $project->client = $request->get('client');
         $project->year = $request->get('year');
         $project->type = $request->get('type');
@@ -138,6 +141,7 @@ class ProjectController extends Controller
         $rules = [
             'project_id' => 'required|exists:projects,id',
             'name' => 'required|min:4',
+            'description' => 'max:155',
             'services.*' => 'exists:services,name',
             'client' => 'min:3',
             'year' => 'required|integer|min:1980'
@@ -147,6 +151,7 @@ class ProjectController extends Controller
             'project_id.exists' => 'El proyecto indicado no existe en nuestra base de datos.',
             'name.required' => 'Debes ingresar el nombre del proyecto.',
             'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
+            'description.max' => 'La descripción del proyecto es muy extensa (resumen).',
             'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
             // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
             'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
@@ -160,6 +165,7 @@ class ProjectController extends Controller
 
         $project = Project::find($request->get('project_id'));
         $project->name = $request->get('name');
+        $project->description = $request->get('description');
         $project->client = $request->get('client');
         $project->year = $request->get('year');
         $project->type = $request->get('type');

@@ -50,6 +50,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="project-description" class="col-sm-2 control-label">Resumen del servicio</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description') }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="project-service" class="col-sm-2 control-label">Servicios</label>
                         <div class="col-sm-10">
                             <ul id="myULServices">

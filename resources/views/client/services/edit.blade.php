@@ -45,6 +45,10 @@
                         <label for="service-name">Nombre del servicio</label>
                         <input type="text" name="name" id="service-name" class="form-control" placeholder="Ingresa aquí el nombre del servicio" value="{{ old('name', $service->name) }}">
                     </div>
+                    <div class="form-group">
+                        <label for="service-description">Resumen del servicio</label>
+                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Ingresa aquí una descripción breve del servicio" value="{{ old('description', $service->description) }}">
+                    </div>
                 </fieldset>
 
                 <fieldset>
