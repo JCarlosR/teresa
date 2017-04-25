@@ -21,6 +21,10 @@
 <div class="page-content container-fluid">
     <div class="widget">
         <div class="widget-heading">
+            <a href="/nosotros/editar" class="pull-right" title="Editar sección"
+               style="color: #57caff; font-size: 2em;">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
             <h3 class="widget-title">Sobre nosotros</h3>
         </div>
         <div class="widget-body">
@@ -41,11 +45,6 @@
                     </ul>
                 </div>
             @endif
-
-            <a href="/nosotros/editar" class="pull-right" title="Editar sección"
-               style="color: #57caff; font-size: 2em;">
-                <i class="glyphicon glyphicon-pencil"></i>
-            </a>
 
             <fieldset>
                 <span id="status1" class="pull-right"></span>

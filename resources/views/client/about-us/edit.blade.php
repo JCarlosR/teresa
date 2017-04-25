@@ -44,6 +44,14 @@
                 {{ csrf_field() }}
 
                 <fieldset>
+                    <div class="form-group">
+                        <label for="about-us-description" class="col-sm-2 control-label">Resumen de "Nosotros"</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="description" id="about-us-description" class="form-control" placeholder="Ingresa aquí una descripción breve del equipo de la empresa" value="{{ old('description', $about_us->description) }}">
+                        </div>
+                        <br><br>
+                    </div>
+
                     <span id="status1" class="pull-right"></span>
                     <h3>
                         ¿Qué tipo de empresa es?
