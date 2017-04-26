@@ -350,7 +350,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body">
+            <div class="widget-body" style="height: 29em; overflow: auto;">
                 @if (isset($workSchedule))
                     <ul class="activity-list activity-sm list-unstyled mb-0">
                         @foreach ($workSchedule->details as $detail)
