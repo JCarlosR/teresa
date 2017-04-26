@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/WorkSchedule.php" afterPath="$PROJECT_DIR$/app/WorkSchedule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/WorkScheduleDetail.php" afterPath="$PROJECT_DIR$/app/WorkScheduleDetail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="356" column="153" lean-forward="false" selection-start-line="356" selection-start-column="153" selection-end-line="356" selection-end-column="153" />
+            <state relative-caret-position="417">
+              <caret line="363" column="73" lean-forward="false" selection-start-line="363" selection-start-column="73" selection-end-line="363" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -63,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkScheduleDetail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WorkScheduleDetail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/WorkScheduleDetail.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
@@ -208,10 +205,10 @@
         <option value="$PROJECT_DIR$/resources/views/client/about-us/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AboutUsImageController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
         <option value="$PROJECT_DIR$/app/WorkSchedule.php" />
         <option value="$PROJECT_DIR$/app/WorkScheduleDetail.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
       </list>
     </option>
   </component>
@@ -560,14 +557,7 @@
       <workItem from="1492689589418" duration="6750000" />
       <workItem from="1493042517647" duration="3868000" />
       <workItem from="1493130286296" duration="6417000" />
-      <workItem from="1493216304894" duration="982000" />
-    </task>
-    <task id="LOCAL-00129" summary="image status services">
-      <created>1491493984430</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1491493984430</updated>
+      <workItem from="1493216304894" duration="1101000" />
     </task>
     <task id="LOCAL-00130" summary="center image status services">
       <created>1491494040833</created>
@@ -905,11 +895,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493136959996</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="Last work-schedule details in dashboard">
+      <created>1493217310806</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1493217310806</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="466701000" />
+    <option name="totallyTimeSpent" value="466820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -955,7 +952,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work schedule advances (admin)" />
     <MESSAGE value="Work schedule admin" />
     <MESSAGE value="update data tables in dashboard" />
     <MESSAGE value="Show % for projects and services" />
@@ -980,7 +976,8 @@
     <MESSAGE value="Add description for about us section" />
     <MESSAGE value="Work schedule for clients (read only, show last by default)" />
     <MESSAGE value="About us images" />
-    <option name="LAST_COMMIT_MESSAGE" value="About us images" />
+    <MESSAGE value="Last work-schedule details in dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last work-schedule details in dashboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1323,30 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="356" column="153" lean-forward="false" selection-start-line="356" selection-start-column="153" selection-end-line="356" selection-end-column="153" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_11_151332_create_work_schedule_details_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/work/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="60" column="114" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/WorkSchedule.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1372,6 +1345,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="48" column="48" lean-forward="false" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/work/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="60" column="114" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_11_151332_create_work_schedule_details_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="363" column="73" lean-forward="false" selection-start-line="363" selection-start-column="73" selection-end-line="363" selection-end-column="73" />
           <folding />
         </state>
       </provider>

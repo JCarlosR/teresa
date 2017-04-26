@@ -351,14 +351,18 @@
                 </ul>
             </div>
             <div class="widget-body">
-                <ul class="activity-list activity-sm list-unstyled mb-0">
-                    @foreach ($workSchedule->details as $detail)
-                    <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
-                        <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
-                        <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
-                    </li>
-                    @endforeach
-                </ul>
+                @if (isset($workSchedule))
+                    <ul class="activity-list activity-sm list-unstyled mb-0">
+                        @foreach ($workSchedule->details as $detail)
+                        <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
+                            <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
+                            <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>Aun no se ha establecido un cronograma de trabajo.</p>
+                @endif
             </div>
         </div>
     </div>
