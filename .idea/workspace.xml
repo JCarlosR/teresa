@@ -33,8 +33,8 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="363" column="73" lean-forward="false" selection-start-line="363" selection-start-column="73" selection-end-line="363" selection-end-column="73" />
+            <state relative-caret-position="144">
+              <caret line="344" column="47" lean-forward="false" selection-start-line="344" selection-start-column="47" selection-end-line="344" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -557,14 +557,7 @@
       <workItem from="1492689589418" duration="6750000" />
       <workItem from="1493042517647" duration="3868000" />
       <workItem from="1493130286296" duration="6417000" />
-      <workItem from="1493216304894" duration="1101000" />
-    </task>
-    <task id="LOCAL-00130" summary="center image status services">
-      <created>1491494040833</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1491494040834</updated>
+      <workItem from="1493216304894" duration="1335000" />
     </task>
     <task id="LOCAL-00131" summary="inbox in dashboard (dummy data)">
       <created>1491495142965</created>
@@ -902,11 +895,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493217310806</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Fix">
+      <created>1493217420928</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1493217420928</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="466820000" />
+    <option name="totallyTimeSpent" value="467054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -952,8 +952,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Work schedule admin" />
-    <MESSAGE value="update data tables in dashboard" />
     <MESSAGE value="Show % for projects and services" />
     <MESSAGE value="Work schedule for clients, PDF export advances" />
     <MESSAGE value="Fix set name for professional profiles (general user)" />
@@ -977,7 +975,9 @@
     <MESSAGE value="Work schedule for clients (read only, show last by default)" />
     <MESSAGE value="About us images" />
     <MESSAGE value="Last work-schedule details in dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last work-schedule details in dashboard" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="Clear fix (ignore pull left and right)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clear fix (ignore pull left and right)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1367,8 +1367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="363" column="73" lean-forward="false" selection-start-line="363" selection-start-column="73" selection-end-line="363" selection-end-column="73" />
+        <state relative-caret-position="144">
+          <caret line="344" column="47" lean-forward="false" selection-start-line="344" selection-start-column="47" selection-end-line="344" selection-end-column="47" />
           <folding />
         </state>
       </provider>

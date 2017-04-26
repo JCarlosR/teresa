@@ -342,7 +342,7 @@
 <div class="row">
     <div class="col-md-4">
         <div class="widget">
-            <div class="widget-heading">
+            <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Cronograma de trabajo</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
