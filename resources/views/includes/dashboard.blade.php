@@ -343,7 +343,7 @@
     <div class="col-md-4">
         <div class="widget">
             <div class="widget-heading">
-                <h3 class="widget-title pull-left">Actividad reciente</h3>
+                <h3 class="widget-title pull-left">Cronograma de trabajo</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="{{ url(auth()->user()->work_schedule_route) }}"><i class="ion-calendar"></i></a></li>
@@ -352,26 +352,12 @@
             </div>
             <div class="widget-body">
                 <ul class="activity-list activity-sm list-unstyled mb-0">
-                    <li class="activity-purple">
-                        <time datetime="2016-12-10T20:50:48+07:00" class="fs-13 text-muted">9 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="label label-success">recommended</span> Karen Ortega</p>
+                    @foreach ($workSchedule->details as $detail)
+                    <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
+                        <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
+                        <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
                     </li>
-                    <li class="activity-danger">
-                        <time datetime="2016-12-10T20:42:40+07:00" class="fs-13 text-muted">15 minutes ago</time>
-                        <p class="mt-10 mb-0">You followed Olivia Williamson</p>
-                    </li>
-                    <li class="activity-warning">
-                        <time datetime="2016-12-10T20:35:35+07:00" class="fs-13 text-muted">22 minutes ago</time>
-                        <p class="mt-10 mb-0">You <span class="text-danger">subscribed</span> to Harold Fuller</p>
-                    </li>
-                    <li class="activity-success">
-                        <time datetime="2016-12-10T20:27:48+07:00" class="fs-13 text-muted">30 minutes ago</time>
-                        <p class="mt-10 mb-0">You updated your profile picture</p>
-                    </li>
-                    <li class="activity-primary">
-                        <time datetime="2016-12-10T20:22:48+07:00" class="fs-13 text-muted">35 minutes ago</time>
-                        <p class="mt-10 mb-0">You deleted homepage.psd</p>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

@@ -10,7 +10,7 @@ class WorkSchedule extends Model
 
     public function details()
     {
-        return $this->hasMany('App\WorkScheduleDetail');
+        return $this->hasMany('App\WorkScheduleDetail')->orderBy('month_offset', 'asc');
     }
 
     public function getCompletedStringAttribute()

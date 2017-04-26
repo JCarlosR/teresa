@@ -8,6 +8,7 @@ use App\Project;
 use App\Service;
 use App\SocialProfile;
 use App\User;
+use App\WorkSchedule;
 
 trait ClientDashboard
 {
@@ -22,6 +23,9 @@ trait ClientDashboard
             $client = auth()->user();
             $client_id = $client->id;
         }
+
+        $workSchedule = WorkSchedule::where('user_id', $client_id)
+            ->orderBy('created_at', 'desc')->first();
 
         $projects = Project::where('user_id', $client_id)->get();
         $services = Service::where('user_id', $client_id)->get();
@@ -47,14 +51,16 @@ trait ClientDashboard
             return view('client.dashboard')->with(compact(
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'architizer', 'archello', 'archilovers', 'buildings', 'behance',
-                'client', 'projects', 'services', 'professionalMedia'
+                'client', 'projects', 'services', 'professionalMedia',
+                'workSchedule'
             ));
         } else {
             $professionalLinks = $this->getProfessionalProfileLinks($client_id);
             return view('client.dashboard')->with(compact(
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'professionalLinks',
-                'client', 'projects', 'services', 'professionalMedia'
+                'client', 'projects', 'services', 'professionalMedia',
+                'workSchedule'
             ));
         }
     }

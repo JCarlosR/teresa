@@ -29,7 +29,7 @@ class WorkScheduleDetail extends Model
 
             case 'facebook_ads': return 'Publicidad en Facebook';
             case 'linkedin_ads': return 'Publicidad en Linkedin';
-            case 'google_plus_ads': return 'Publicidad en Google`+';
+            case 'google_plus_ads': return 'Publicidad en Google+';
             case 'twitter_ads': return 'Publicidad en Twitter';
             case 'pinterest_ads': return 'Publicidad en Pinterest';
             case 'instagram_ads': return 'Publicidad en Instagram';
@@ -40,6 +40,28 @@ class WorkScheduleDetail extends Model
 
             default: return 'Actividad desconocida';
         }
+    }
+
+    public function getStateNameAttribute()
+    {
+        switch ($this->state)
+        {
+            case -1: return 'Actividad cancelada';
+            case 0: return 'Actividad pediente por realizar';
+            case +1: return 'Actividad realizada';
+        }
+        return 'Estado desconocido';
+    }
+
+    public function getStateColorAttribute()
+    {
+        switch ($this->state)
+        {
+            case -1: return 'danger';
+            case 0: return 'warning';
+            case +1: return 'success';
+        }
+        return 'default';
     }
 
     public function work_schedule()
