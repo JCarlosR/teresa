@@ -32,34 +32,36 @@
             @endif
 
             <div class="row">
-                @foreach ($about_us->images as $image)
-                    <div class="col-md-3">
-                        <div class="widget">
-                            <div class="widget-heading">
-                                <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
-                            </div>
-                            <div class="widget-body">
-                                <div class="thumbnail">
-                                    <img src="/images/about-us/{{ $image->file_name }}"
-                                         alt="{{ $image->name ?: 'Imagen sin nombre' }}"
-                                         title="{{ $image->description ?: 'Sin descripción' }}">
+                @if (isset($about_us))
+                    @foreach ($about_us->images as $image)
+                        <div class="col-md-3">
+                            <div class="widget">
+                                <div class="widget-heading">
+                                    <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
                                 </div>
-                                <div class="row btn-demo animation-demo">
-                                    <div class="col-xs-6">
-                                        <a href="{{ url('/nosotros/imagenes/'.$image->id.'/editar') }}" class="btn btn-sm btn-block btn-outline btn-rounded btn-primary">
-                                            <span class="glyphicon glyphicon-edit"></span> Editar
-                                        </a>
+                                <div class="widget-body">
+                                    <div class="thumbnail">
+                                        <img src="/images/about-us/{{ $image->file_name }}"
+                                             alt="{{ $image->name ?: 'Imagen sin nombre' }}"
+                                             title="{{ $image->description ?: 'Sin descripción' }}">
                                     </div>
-                                    <div class="col-xs-6">
-                                        <a href="{{ url('/nosotros/imagenes/'.$image->id.'/eliminar') }}" onclick="return confirm('Está seguro que desea eliminar esta imagen?');" class="btn btn-sm btn-block btn-outline btn-rounded btn-danger">
-                                            <span class="glyphicon glyphicon-remove"></span> Eliminar
-                                        </a>
+                                    <div class="row btn-demo animation-demo">
+                                        <div class="col-xs-6">
+                                            <a href="{{ url('/nosotros/imagenes/'.$image->id.'/editar') }}" class="btn btn-sm btn-block btn-outline btn-rounded btn-primary">
+                                                <span class="glyphicon glyphicon-edit"></span> Editar
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <a href="{{ url('/nosotros/imagenes/'.$image->id.'/eliminar') }}" onclick="return confirm('Está seguro que desea eliminar esta imagen?');" class="btn btn-sm btn-block btn-outline btn-rounded btn-danger">
+                                                <span class="glyphicon glyphicon-remove"></span> Eliminar
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
