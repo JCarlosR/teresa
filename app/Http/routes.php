@@ -55,6 +55,12 @@ Route::get('/proyecto/imagenes/{id}/eliminar', 'ProjectImageController@delete');
 Route::get('/proyecto/imagenes/{id}/editar', 'ProjectImageController@edit');
 Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
 
+// Quotes
+Route::get('/citas', 'QuoteController@index');
+Route::post('/citas', 'QuoteController@store');
+Route::post('/citas/{id}/editar', 'QuoteController@update');
+Route::get('/citas/{id}/eliminar', 'QuoteController@delete');
+
 // About us
 Route::get('/nosotros', 'AboutUsController@show');
 Route::get('/nosotros/editar', 'AboutUsController@edit');
