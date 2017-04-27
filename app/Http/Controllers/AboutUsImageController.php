@@ -51,7 +51,6 @@ class AboutUsImageController extends Controller
     public function delete($id)
     {
         $aboutUsImage = AboutUsImage::find($id);
-        $projectId = $aboutUsImage->project_id;
 
         $path = public_path() . '/images/about-us/' . $aboutUsImage->file_name;
         if(File::isFile($path)){

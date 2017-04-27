@@ -16,7 +16,7 @@ class CreateQuotesTable extends Migration
             $table->increments('id');
 
             $table->text('content');
-            $table->string('author');
+            $table->string('image');
 
             // Associated client
             $table->integer('user_id')->unsigned();

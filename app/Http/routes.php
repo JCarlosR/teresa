@@ -57,7 +57,9 @@ Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
 
 // Quotes
 Route::get('/citas', 'QuoteController@index');
-Route::post('/citas', 'QuoteController@store');
+Route::get('/citas/registrar', 'QuoteController@create');
+Route::post('/citas/registrar', 'QuoteController@store');
+Route::get('/citas/{id}/editar', 'QuoteController@edit');
 Route::post('/citas/{id}/editar', 'QuoteController@update');
 Route::get('/citas/{id}/eliminar', 'QuoteController@delete');
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Quote;
 use App\User;
+use File;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -29,25 +30,62 @@ class QuoteController extends Controller
         return view('client.quotes.index')->with(compact('quotes'));
     }
 
+    public function create()
+    {
+        return view('client.quotes.create');
+    }
+
     public function store(Request $request)
     {
         $quote = new Quote();
         $quote->content = $request->input('content');
-        $quote->author = $request->input('author');
-        $quote->user_id = $this->user->id;
+
+        $file = $request->file('image');
+        $path = public_path() . '/images/quotes';
+        $fileName = uniqid() . $file->getClientOriginalName();
+
+        $file->move($path, $fileName);
+
+        $quote->image = $fileName;
         $quote->save();
 
-        return back();
+        $notification = 'Cita registrada correctamente.';
+        return redirect('citas')->with(compact('notification'));
+    }
+
+    public function edit($id)
+    {
+        $quote = Quote::find($id);
+        return view('client.quotes.edit')->with(compact('quote'));
     }
 
     public function update($id, Request $request)
     {
         $quote = Quote::find($id);
         $quote->content = $request->input('content');
-        $quote->author = $request->input('author');
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = public_path() . '/images/quotes';
+            $fileName = uniqid() . $file->getClientOriginalName();
+
+            $moved = $file->move($path, $fileName);
+
+            if ($moved) {
+                // remove previous image
+                $oldPath = public_path() . '/images/quotes/' . $quote->image;
+                if(File::isFile($oldPath)){
+                    File::delete($oldPath);
+                }
+            }
+
+            $quote->image = $fileName;
+        }
+
         $quote->save();
 
-        return back();
+        $notification = 'Cita modificada exitosamente.';
+        return redirect('citas')->with(compact('notification'));
     }
 
     public function delete($id)
