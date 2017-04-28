@@ -3,6 +3,7 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
     <style>
         textarea {
             display: none;
@@ -48,6 +49,15 @@
                     <div class="form-group">
                         <label for="service-description">Resumen del servicio</label>
                         <input type="text" name="description" id="service-description" class="form-control" placeholder="Ingresa aquí una descripción breve del servicio" value="{{ old('description', $service->description) }}">
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">{{ $service->name }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
+                        </div>
+                        <span class="description">{{ $service->description }}</span>
                     </div>
                 </fieldset>
 
@@ -113,4 +123,5 @@
 @section('scripts')
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ asset('/panel/services/create.js') }}"></script>
+    <script src="{{ asset('/panel/google-results/results.js') }}"></script>
 @endsection

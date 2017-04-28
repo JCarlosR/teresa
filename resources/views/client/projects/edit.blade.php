@@ -15,6 +15,8 @@
     {{-- Tag-it styles --}}
     <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -40,7 +42,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/proyecto/editar') }}" method="POST" class="form-horizontal">
+            <form action="{{ url('/proyecto/editar') }}" method="POST" class="form-horizontal" autocomplete="off">
                 {{ csrf_field() }}
                 <input type="hidden" name="project_id" value="{{ $project->id }}">
 
@@ -58,6 +60,15 @@
                         <div class="col-sm-10">
                             <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description', $project->description) }}">
                         </div>
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">{{ $project->name }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($project->name) }}</span></cite>
+                        </div>
+                        <span class="description">{{ $project->description }}</span>
                     </div>
                     <div class="form-group">
                         <label for="project-service" class="col-sm-2 control-label">Servicios</label>
@@ -196,4 +207,5 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
 
     <script src="{{ asset('/panel/projects/create.js') }}"></script>
+    <script src="{{ asset('/panel/google-results/results.js') }}"></script>
 @endsection

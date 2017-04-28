@@ -12,6 +12,8 @@
     {{-- Tag-it styles --}}
     <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -54,6 +56,15 @@
                         <div class="col-sm-10">
                             <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description') }}">
                         </div>
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">Este es un ejemplo de un título con 70 caracteres de longitud</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/proyectos/<span>example</span></cite>
+                        </div>
+                        <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
                     </div>
                     <div class="form-group">
                         <label for="project-service" class="col-sm-2 control-label">Servicios</label>
@@ -192,4 +203,5 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
 
     <script src="{{ asset('/panel/projects/create.js') }}"></script>
+    <script src="{{ asset('/panel/google-results/results.js') }}"></script>
 @endsection

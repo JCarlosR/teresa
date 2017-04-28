@@ -1,0 +1,31 @@
+.google-results {
+    font-size: small;
+    font-family: arial,sans-serif;
+
+    border-left: 1px solid #d3e1f9;
+    padding: 4px 8px 0;
+    margin: 1em 0 1.5em;
+}
+
+.google-results .title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 512px;
+    color: #1e0fbe;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.google-results cite {
+    color: #006621;
+    font-style: normal;
+    line-height: 16px;
+}
+
+.google-results .description {
+    color: #545454;
+    line-height: 1.4;
+    word-wrap: break-word;
+}

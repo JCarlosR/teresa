@@ -41,7 +41,8 @@ class ServiceController extends Controller
 
     public function create()
     {
-        return view('client.services.create');
+        $client = $this->user;
+        return view('client.services.create')->with(compact('client'));
     }
 
     public function store(Request $request)
@@ -73,7 +74,8 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::find($id);
-        return view('client.services.edit')->with(compact('service'));
+        $client = $this->user;
+        return view('client.services.edit')->with(compact('service', 'client'));
     }
 
     public function update(Request $request)
