@@ -3,27 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Service;
-use App\User;
+use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    private $user;
+    use AccessClientAsAdmin;
 
     public function __construct()
     {
         $this->middleware('auth');
-
-        // Services associated with
-        if (auth()->user()->is_admin)
-            $this->user = User::find(session('client_id'));
-        else
-            $this->user = auth()->user();
     }
 
     public function index()
     {
-        $services = $this->user->services;
+        $services = $this->client()->services;
         return view('client.services.index')->with(compact('services'));
     }
 
@@ -32,16 +26,16 @@ class ServiceController extends Controller
         $service = Service::findOrFail($id);
 
         // Check if the service really belongs to the user
-        if ($service->user_id !== $this->user->id)
+        if ($service->user_id !== $this->client()->id)
             return redirect('/servicios');
 
-        $client = $this->user;
+        $client = $this->client();
         return view('client.services.show')->with(compact('client', 'service'));
     }
 
     public function create()
     {
-        $client = $this->user;
+        $client = $this->client();
         return view('client.services.create')->with(compact('client'));
     }
 
@@ -58,7 +52,7 @@ class ServiceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service = new Service();
-        $service->user_id = $this->user->id;
+        $service->user_id = $this->client()->id;
         $service->name = $request->get('name');
         $service->description = $request->get('description');
         $service->question_1 = $request->get('question_1');
@@ -74,7 +68,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::find($id);
-        $client = $this->user;
+        $client = $this->client();
         return view('client.services.edit')->with(compact('service', 'client'));
     }
 

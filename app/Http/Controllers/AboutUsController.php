@@ -3,30 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\AboutUs;
-use App\User;
+use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 
 class AboutUsController extends Controller
 {
-    private $user;
+    use AccessClientAsAdmin;
 
     public function __construct()
     {
         $this->middleware('auth');
-
-        // Projects associated with
-        if (auth()->user()->is_admin)
-            $this->user = User::find(session('client_id'));
-        else
-            $this->user = auth()->user();
     }
 
     public function show()
     {
         $about_us = AboutUs::firstOrNew([
-            'user_id' => $this->user->id
+            'user_id' => $this->client()->id
         ]);
 
         return view('client.about-us.show')->with(compact('about_us'));
@@ -35,7 +27,7 @@ class AboutUsController extends Controller
     public function edit()
     {
         $about_us = AboutUs::firstOrNew([
-            'user_id' => $this->user->id
+            'user_id' => $this->client()->id
         ]);
 
         return view('client.about-us.edit')->with(compact('about_us'));
@@ -44,7 +36,7 @@ class AboutUsController extends Controller
     public function update(Request $request)
     {
         $about_us = AboutUs::firstOrNew([
-            'user_id' => $this->user->id
+            'user_id' => $this->client()->id
         ]);
 
         $about_us->description = $request->input('description');

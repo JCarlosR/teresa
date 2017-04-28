@@ -7,27 +7,22 @@ use App\ArchitectProjects;
 use App\Project;
 use App\ServerAccess;
 use App\Service;
+use App\Teresa\Admin\AccessClientAsAdmin;
 use App\User;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    private $user;
+    use AccessClientAsAdmin;
 
     public function __construct()
     {
         $this->middleware('auth');
-
-        // Projects associated with
-        if (auth()->user()->is_admin)
-            $this->user = User::find(session('client_id'));
-        else
-            $this->user = auth()->user();
     }
 
     public function index()
     {
-        $projects = $this->user->projects;
+        $projects = $this->client()->projects;
         return view('client.projects.index')->with(compact('projects'));
     }
 
@@ -36,17 +31,17 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);
 
         // Check if the project really belongs to the user
-        if ($project->user_id !== $this->user->id)
+        if ($project->user_id !== $this->client()->id)
             return redirect('/proyectos');
 
-        $client = $this->user;
+        $client = $this->client();
         return view('client.projects.show')->with(compact('client', 'project'));
     }
 
     public function create()
     {
-        $client = $this->user;
-        $services = $this->user->services;
+        $client = $this->client();
+        $services = $client->services;
         return view('client.projects.create')->with(compact('client', 'services'));
     }
 
@@ -75,7 +70,7 @@ class ProjectController extends Controller
         $services_name = $request->get('services') ?: [];
 
         $project = new Project();
-        $project->user_id = $this->user->id;
+        $project->user_id = $this->client()->id;
 
         $project->name = $request->get('name');
         $project->description = $request->get('description');
@@ -99,8 +94,8 @@ class ProjectController extends Controller
                 $project->services()->attach($service);
         }
 
-        if ($this->user->client_type_id) {
-            if ($this->user->client_type_id==1) { // SEO Architects
+        if ($this->client()->client_type_id) {
+            if ($this->client()->client_type_id==1) { // SEO Architects
 
                 $architect_project = new ArchitectProject();
                 $architect_project->architect = $request->get('architect');
@@ -128,11 +123,11 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);
 
         // Check if the project really belongs to the user
-        if ($project->user_id !== $this->user->id)
+        if ($project->user_id !== $this->client()->id)
             return redirect('/proyectos');
 
-        $services = $this->user->services;
-        $client = $this->user;
+        $client = $this->client();
+        $services = $client->services;
         return view('client.projects.edit')->with(compact('client', 'project', 'services'));
     }
 
@@ -180,8 +175,8 @@ class ProjectController extends Controller
 
         $project->save();
 
-        if ($this->user->client_type_id) {
-            if ($this->user->client_type_id==1) { // SEO Architects
+        if ($this->client()->client_type_id) {
+            if ($this->client()->client_type_id==1) { // SEO Architects
 
                 $architect_project = $project->architect_project;
 

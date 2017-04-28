@@ -20,4 +20,8 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Project');
     }
 
+    public function quotes()
+    {
+        return $this->hasMany('App\Quote');
+    }
 }
