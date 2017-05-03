@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 class GuessController extends Controller
 {
+
     public function welcome()
     {
         return view('welcome');
@@ -17,4 +18,5 @@ class GuessController extends Controller
     {
         return view('guess.privacy');
     }
+
 }

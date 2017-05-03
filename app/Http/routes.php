@@ -98,6 +98,9 @@ Route::group(['middleware' => 'cors'], function(Router $router){
     $router->get('/formulario/contacto', 'External\ContactController@index');
 });
 
+// Teresa CMS
+Route::get('/ver/{id}', 'Cms\GuessController@index');
+
 // Admin management
 Route::group(['prefix' => 'admin'], function () {
 
