@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class=" js no-touch">
+<html lang="es" class=" js no-touch">
 <head>
     <title>{{ $me->title }}</title>
+
+    <meta property="og:title" content="{{ $me->title }}"/>
+    <meta property="og:type" content="company"/>
+    <meta property="og:url" content="http://www.lindleyarq.com/index.html"/>
+    <meta property="og:image" content="http://www.lindleyarq.com/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg"/>
+    <meta property="og:site_name" content="Lindley Arquitectos"/>
+    <meta property="og:description" content="Oficina de Arquitectura en Perú especializada en diseño de tiendas y locales comerciales, construcción, implementación, equipamiento e instalaciones"/>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('/themes/default/css/bootstrap.min.css') }}">
