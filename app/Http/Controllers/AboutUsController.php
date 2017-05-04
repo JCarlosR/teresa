@@ -26,11 +26,12 @@ class AboutUsController extends Controller
 
     public function edit()
     {
+        $client = $this->client();
         $about_us = AboutUs::firstOrNew([
-            'user_id' => $this->client()->id
+            'user_id' => $client->id
         ]);
 
-        return view('client.about-us.edit')->with(compact('about_us'));
+        return view('client.about-us.edit')->with(compact('about_us', 'client'));
     }
 
     public function update(Request $request)

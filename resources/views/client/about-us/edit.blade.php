@@ -15,6 +15,8 @@
     {{-- Tag-it styles --}}
     <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -50,6 +52,15 @@
                             <input type="text" name="description" id="about-us-description" class="form-control" placeholder="Ingresa aquí una descripción breve del equipo de la empresa" value="{{ old('description', $about_us->description) }}">
                         </div>
                         <br><br>
+                        <div class="google-results">
+                            <a href="#" onclick="return false;">
+                                <span class="title">Sobre {{ $client->trade_name }}</span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/nosotros</cite>
+                            </div>
+                            <span class="description">{{ $about_us->description }}</span>
+                        </div>
                     </div>
 
                     <span id="status1" class="pull-right"></span>
@@ -113,4 +124,5 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
 
     <script src="{{ asset('/panel/about-us/index.js') }}"></script>
+    <script src="{{ asset('/panel/google-results/results.js') }}"></script>
 @endsection
