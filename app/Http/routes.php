@@ -100,6 +100,10 @@ Route::group(['middleware' => 'cors'], function(Router $router){
 
 // Teresa CMS
 Route::get('/ver/{id}', 'Cms\GuessController@index');
+Route::get('/ver/{id}/proyectos', 'Cms\GuessController@projects');
+Route::get('/ver/{id}/servicios', 'Cms\GuessController@services');
+Route::get('/ver/{id}/nosotros', 'Cms\GuessController@aboutUs');
+Route::get('/ver/{id}/contacto', 'Cms\GuessController@contact');
 
 // Admin management
 Route::group(['prefix' => 'admin'], function () {

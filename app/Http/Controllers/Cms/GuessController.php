@@ -16,4 +16,31 @@ class GuessController extends Controller
         $services = $me->services;
         return view('themes.default.welcome')->with(compact('me', 'services'));
     }
+
+    public function projects($id)
+    {
+        $me = User::find($id);
+        $projects = $me->projects;
+        return view('themes.default.projects.index')->with(compact('me', 'projects'));
+    }
+
+    public function services($id)
+    {
+        $me = User::find($id);
+        $services = $me->services;
+        return view('themes.default.services.index')->with(compact('me', 'services'));
+    }
+
+    public function aboutUs($id)
+    {
+        $me = User::find($id);
+        $aboutUs = $me->about_us;
+        return view('themes.default.about-us')->with(compact('me', 'aboutUs'));
+    }
+
+    public function contact($id)
+    {
+        $me = User::find($id);
+        return view('themes.default.contact')->with(compact('me'));
+    }
 }
