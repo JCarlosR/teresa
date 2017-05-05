@@ -3,9 +3,8 @@
 @section('styles')
     <style>
         #myCarousel img {
-            width: auto;
-            height: 225px;
-            max-height: 225px;
+            width: 100%;
+            height: auto;
         }
     </style>
 @endsection
