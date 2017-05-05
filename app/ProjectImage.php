@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectImage extends Model
 {
 
+    // accessors
+    public function getFullPathAttribute()
+    {
+        return asset('/images/projects/'.$this->file_name);
+    }
+
     // relationships
 
     public function project()
