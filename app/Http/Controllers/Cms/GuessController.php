@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Service;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -29,6 +30,13 @@ class GuessController extends Controller
         $me = User::find($id);
         $services = $me->services;
         return view('themes.default.services.index')->with(compact('me', 'services'));
+    }
+
+    public function showService($id, $service)
+    {
+        $me = User::find($id);
+        $service = Service::find($service);
+        return view('themes.default.services.show')->with(compact('me', 'service'));
     }
 
     public function aboutUs($id)

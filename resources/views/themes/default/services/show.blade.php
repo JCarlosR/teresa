@@ -5,7 +5,7 @@
     <div class="cta-1">
         <div class="container">
             <div class="row text-center white">
-                <h1 class="cta-title">Servicios</h1>
+                <h1 class="cta-title">{{ $service->name }}</h1>
                 <p class="cta-sub-title">Conoce más sobre los servicios que ofrecemos</p>
             </div>
         </div>
@@ -17,16 +17,13 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <ul>
-                        @foreach ($services as $service)
-                        <li>
-                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
-                                {{ $service->name }}
-                            </a>: {{ $service->description }}
-                            <hr class="pg-titl-bdr-btm">
-                        </li>
-                        @endforeach
-                    </ul>
+                    <p>{{ $service->description }}</p>
+                    <hr class="pg-titl-bdr-btm">
+                    <p>{{ $service->question_1 }}</p>
+                    <p>{{ $service->question_2 }}</p>
+                    <p>{{ $service->question_3 }}</p>
+                    <p>{{ $service->question_4 }}</p>
+                    <p>{{ $service->question_5 }}</p>
                 </div>
             </div>
         </div>

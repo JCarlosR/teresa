@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\InboxMessage;
+use App\Teresa\Admin\AccessClientAsAdmin;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -10,20 +11,16 @@ use App\Http\Requests;
 
 class InboxController extends Controller
 {
+    use AccessClientAsAdmin;
+
     public function __construct()
     {
         $this->middleware('auth');
-
-        // Projects associated with
-        if (auth()->user()->is_admin)
-            $this->user = User::find(session('client_id'));
-        else
-            $this->user = auth()->user();
     }
 
     public function index(Request $request)
     {
-        $client = $this->user;
+        $client = $this->client();
 
         $messagesQuery = InboxMessage::where('user_id', $client->id);
 
@@ -39,7 +36,7 @@ class InboxController extends Controller
 
     public function config()
     {
-        $client = $this->user;
+        $client = $this->client();
         return view('client.inbox.config', compact('client'));
     }
 }

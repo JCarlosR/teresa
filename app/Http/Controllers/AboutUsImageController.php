@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutUs;
 use App\AboutUsImage;
+use App\Teresa\Admin\AccessClientAsAdmin;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -12,22 +13,16 @@ use Illuminate\Support\Facades\File;
 
 class AboutUsImageController extends Controller
 {
-    private $user;
+    use AccessClientAsAdmin;
 
     public function __construct()
     {
         $this->middleware('auth');
-
-        // Projects associated with
-        if (auth()->user()->is_admin)
-            $this->user = User::find(session('client_id'));
-        else
-            $this->user = auth()->user();
     }
 
     public function index()
     {
-        $about_us = $this->user->about_us;
+        $about_us = $this->client()->about_us;
         return view('client.about-us.images.index')->with(compact('about_us'));
     }
 
@@ -40,7 +35,7 @@ class AboutUsImageController extends Controller
         $file->move($path, $fileName);
 
         $aboutUsImage = new AboutUsImage();
-        $aboutUsImage->about_us_id = $this->user->about_us->id;
+        $aboutUsImage->about_us_id = $this->client()->about_us->id;
         $aboutUsImage->user_id = auth()->user()->id;
         $aboutUsImage->file_name = $fileName;
         $aboutUsImage->save();
