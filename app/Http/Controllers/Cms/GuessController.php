@@ -25,6 +25,13 @@ class GuessController extends Controller
         return view('themes.default.projects.index')->with(compact('me', 'projects'));
     }
 
+    public function showProject($id, $project)
+    {
+        $me = User::find($id);
+        $project = Service::find($project);
+        return view('themes.default.projects.show')->with(compact('me', 'project'));
+    }
+
     public function services($id)
     {
         $me = User::find($id);

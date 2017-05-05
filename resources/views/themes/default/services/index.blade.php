@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <ul>
+                    <ol>
                         @foreach ($services as $service)
                         <li>
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
@@ -26,7 +26,7 @@
                             <hr class="pg-titl-bdr-btm">
                         </li>
                         @endforeach
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
