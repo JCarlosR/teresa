@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row text-center white">
                 <h1 class="cta-title">{{ $project->name }}</h1>
-                <p class="cta-sub-title">Conoce más sobre nuestros proyectos realizados</p>
+                <p class="cta-sub-title">{{ $project->description }}</p>
             </div>
         </div>
     </div>
