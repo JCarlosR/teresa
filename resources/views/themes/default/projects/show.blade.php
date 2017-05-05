@@ -39,7 +39,7 @@
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         @foreach ($project->images as $key => $image)
-                                        <li data-target="#myCarousel" data-slide-to="{{ $key }}"></li>
+                                        <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
                                         @endforeach
                                     </ol>
 
