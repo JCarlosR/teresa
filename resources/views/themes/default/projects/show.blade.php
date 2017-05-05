@@ -1,5 +1,15 @@
 @extends('themes.default.base')
 
+@section('styles')
+    <style>
+        #myCarousel img {
+            width: auto;
+            height: 225px;
+            max-height: 225px;
+        }
+    </style>
+@endsection
+
 @section('content')
     <!--CTA1 START-->
     <div class="cta-1">
