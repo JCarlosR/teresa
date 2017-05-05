@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Project;
 use App\Service;
 use App\User;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class GuessController extends Controller
     public function showProject($id, $project)
     {
         $me = User::find($id);
-        $project = Service::find($project);
+        $project = Project::find($project);
         return view('themes.default.projects.show')->with(compact('me', 'project'));
     }
 
