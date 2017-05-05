@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/projects/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/projects/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="41" column="123" lean-forward="false" selection-start-line="41" selection-start-column="123" selection-end-line="41" selection-end-column="123" />
+            <state relative-caret-position="360">
+              <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -496,14 +495,7 @@
       <workItem from="1493820449542" duration="5890000" />
       <workItem from="1493831711043" duration="626000" />
       <workItem from="1493906504563" duration="7121000" />
-      <workItem from="1493995413293" duration="6523000" />
-    </task>
-    <task id="LOCAL-00150" summary="professional profiles for general clients">
-      <created>1491835801030</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1491835801030</updated>
+      <workItem from="1493995413293" duration="6705000" />
     </task>
     <task id="LOCAL-00151" summary="add variable to view professional profiles">
       <created>1491835845590</created>
@@ -841,11 +833,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494002380448</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="active class">
+      <created>1494002488288</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1494002488288</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503685000" />
+    <option name="totallyTimeSpent" value="503867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,7 +890,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add description for services and projects" />
     <MESSAGE value="Add description for about us section" />
     <MESSAGE value="Work schedule for clients (read only, show last by default)" />
     <MESSAGE value="About us images" />
@@ -916,7 +914,8 @@
     <MESSAGE value="Full path (?)" />
     <MESSAGE value="Slider (?)" />
     <MESSAGE value="Typo class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Typo class" />
+    <MESSAGE value="active class" />
+    <option name="LAST_COMMIT_MESSAGE" value="active class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1307,8 +1306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="41" column="123" lean-forward="false" selection-start-line="41" selection-start-column="123" selection-end-line="41" selection-end-column="123" />
+        <state relative-caret-position="360">
+          <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
           <folding />
         </state>
       </provider>

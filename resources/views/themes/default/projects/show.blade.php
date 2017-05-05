@@ -45,8 +45,8 @@
 
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner">
-                                        @foreach ($project->images as $image)
-                                        <div class="item">
+                                        @foreach ($project->images as $key => $image)
+                                        <div class="item @if($key==0) active @endif">
                                             <img src="/images/projects/{{ $image->file_name }}" alt="{{ $image->name }}">
                                             <div class="carousel-caption">
                                                 <h3>{{ $image->name }}</h3>
