@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutUsImageController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutUsImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InboxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +43,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+            <state relative-caret-position="396">
+              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -614,14 +609,7 @@
       <workItem from="1493820449542" duration="5890000" />
       <workItem from="1493831711043" duration="626000" />
       <workItem from="1493906504563" duration="7121000" />
-      <workItem from="1493995413293" duration="3526000" />
-    </task>
-    <task id="LOCAL-00142" summary="Remove div container">
-      <created>1491584129401</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1491584129401</updated>
+      <workItem from="1493995413293" duration="4047000" />
     </task>
     <task id="LOCAL-00143" summary="Test labels change">
       <created>1491584834501</created>
@@ -959,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493916388929</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Questions">
+      <created>1493999481494</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1493999481494</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="500688000" />
+    <option name="totallyTimeSpent" value="501209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1414,8 +1409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        <state relative-caret-position="396">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
