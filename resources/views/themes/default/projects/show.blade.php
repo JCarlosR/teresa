@@ -43,6 +43,7 @@
                                     {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
                                     {!! $project->question_3 !!}
                                 </fieldset>
+
                                 @if (isset($project->images))
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                     <!-- Indicators -->
