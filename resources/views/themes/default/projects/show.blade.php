@@ -47,7 +47,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($project->images as $image)
                                         <div class="item">
-                                            <img src="{{ $image->full_path }}" alt="{{ $image->name }}">
+                                            <img src="/images/projects/{{ $image->file_name }}" alt="{{ $image->name }}">
                                             <div class="carousel-caption">
                                                 <h3>{{ $image->name }}</h3>
                                                 <p>{{ $image->description }}</p>
@@ -58,11 +58,11 @@
 
                                     <!-- Left and right controls -->
                                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="fa fa-backward"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
                                     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="fa fa-forward"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
