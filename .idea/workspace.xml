@@ -44,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
+              <caret line="66" column="40" lean-forward="false" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -495,14 +495,7 @@
       <workItem from="1493820449542" duration="5890000" />
       <workItem from="1493831711043" duration="626000" />
       <workItem from="1493906504563" duration="7121000" />
-      <workItem from="1493995413293" duration="6705000" />
-    </task>
-    <task id="LOCAL-00151" summary="add variable to view professional profiles">
-      <created>1491835845590</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1491835845590</updated>
+      <workItem from="1493995413293" duration="6800000" />
     </task>
     <task id="LOCAL-00152" summary="delete when name is empty">
       <created>1491836149228</created>
@@ -840,11 +833,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494002488288</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="active class item">
+      <created>1494002670538</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1494002670538</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503867000" />
+    <option name="totallyTimeSpent" value="503962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,7 +890,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add description for about us section" />
     <MESSAGE value="Work schedule for clients (read only, show last by default)" />
     <MESSAGE value="About us images" />
     <MESSAGE value="Last work-schedule details in dashboard" />
@@ -915,7 +914,8 @@
     <MESSAGE value="Slider (?)" />
     <MESSAGE value="Typo class" />
     <MESSAGE value="active class" />
-    <option name="LAST_COMMIT_MESSAGE" value="active class" />
+    <MESSAGE value="active class item" />
+    <option name="LAST_COMMIT_MESSAGE" value="active class item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1307,7 +1307,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/projects/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
+          <caret line="66" column="40" lean-forward="false" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
           <folding />
         </state>
       </provider>
