@@ -38,16 +38,16 @@
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
-                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        @foreach ($project->images as $key => $image)
+                                        <li data-target="#myCarousel" data-slide-to="{{ $key }}"></li>
+                                        @endforeach
                                     </ol>
 
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner">
                                         @foreach ($project->images as $image)
                                         <div class="item">
-                                            <img src="{{ $image->full_path }}" alt="Chicago">
+                                            <img src="{{ $image->full_path }}" alt="{{ $image->name }}">
                                             <div class="carousel-caption">
                                                 <h3>{{ $image->name }}</h3>
                                                 <p>{{ $image->description }}</p>

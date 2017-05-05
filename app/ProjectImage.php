@@ -10,7 +10,7 @@ class ProjectImage extends Model
     // accessors
     public function getFullPathAttribute()
     {
-        return asset('/images/projects/'.$this->file_name);
+        return url('/images/projects/'.$this->file_name);
     }
 
     // relationships
