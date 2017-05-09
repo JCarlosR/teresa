@@ -82,9 +82,11 @@
                     </div>
                     <div id="Container">
                         @foreach ($me->projects as $project)
+                            @if ($project->featuredImage)
                             <div class="filimg mix {{ $project->services }} col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                 <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
                             </div>
+                            @endif
                         @endforeach
                         <div class="filimg mix category-1 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="2">
                             <img src="{{ asset('/themes/default/img/fea1.jpg') }}" class="img-responsive">
