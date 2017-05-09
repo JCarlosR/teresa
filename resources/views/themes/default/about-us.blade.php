@@ -22,22 +22,22 @@
                     <hr class="pg-titl-bdr-btm">
 
                     {{--¿Qué tipo de empresa es?--}}
-                    {!! $about_us->question_1 !!}
+                    {!! $aboutUs->question_1 !!}
 
                     {{--¿Cuál es su especialización?--}}
-                    {!! $about_us->question_2 !!}
+                    {!! $aboutUs->question_2 !!}
 
                     {{--¿Cuándo, cómo y dónde se creó la empresa?--}}
-                    {!! $about_us->question_3 !!}
+                    {!! $aboutUs->question_3 !!}
 
                     {{--¿Qué servicios ofrecen?--}}
-                    {!! $about_us->question_4 !!}
+                    {!! $aboutUs->question_4 !!}
 
                     {{--¿Cuáles con los objetivos de la empresa?--}}
-                    {!! $about_us->question_5 !!}
+                    {!! $aboutUs->question_5 !!}
 
                     {{--¿Cómo ven el futuro de la empresa?--}}
-                    {!! $about_us->question_6 !!}
+                    {!! $aboutUs->question_6 !!}
                 </div>
             </div>
         </div>

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/themes/default/img/agent1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/themes/default/img/agent2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/themes/default/img/agent3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/themes/default/img/agent4.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,8 +43,13 @@
       <file leaf-file-name="about-us.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="417">
+              <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -574,14 +572,7 @@
       <workItem from="1493906504563" duration="7121000" />
       <workItem from="1493995413293" duration="7652000" />
       <workItem from="1494193817573" duration="599000" />
-      <workItem from="1494338539367" duration="6276000" />
-    </task>
-    <task id="LOCAL-00167" summary="Reduce td padding">
-      <created>1492529347223</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1492529347223</updated>
+      <workItem from="1494338539367" duration="6313000" />
     </task>
     <task id="LOCAL-00168" summary="Print CSS, new activity types, and remove section in edit view">
       <created>1492531015394</created>
@@ -919,11 +910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494345511776</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="About us section advances">
+      <created>1494345985150</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1494345985150</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511689000" />
+    <option name="totallyTimeSpent" value="511726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -992,7 +990,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Questions" />
     <MESSAGE value="Questions HTML" />
     <MESSAGE value="Project show" />
     <MESSAGE value="Service show" />
@@ -1017,7 +1014,8 @@
     <MESSAGE value="OMG it was updating other work schedule" />
     <MESSAGE value="Meta tags" />
     <MESSAGE value="Meta tags fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meta tags fix" />
+    <MESSAGE value="About us section advances" />
+    <option name="LAST_COMMIT_MESSAGE" value="About us section advances" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1402,8 +1400,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        <state relative-caret-position="417">
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding />
         </state>
       </provider>
