@@ -35,11 +35,11 @@ class ProfileController extends Controller
 
         foreach ($socialPages as $socialPage) {
             $socialProfile = SocialProfile::firstOrCreate([
-                'display' => $socialPage[0],
                 'name' => $socialPage[1],
                 'user_id' => session('client_id')
             ]);
 
+            $socialProfile->display = $socialPage[0]; // temporal attribute
             $socialProfile->placeholder = $socialPage[1];
             $socialProfiles->push($socialProfile);
         }

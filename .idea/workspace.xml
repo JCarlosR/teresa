@@ -4,7 +4,6 @@
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,14 +68,14 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+              <caret line="41" column="75" lean-forward="false" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
               <folding>
                 <element signature="e#279#392#0#PHP" expanded="false" />
-                <element signature="e#1572#2156#0#PHP" expanded="false" />
-                <element signature="e#2163#3153#0#PHP" expanded="false" />
-                <element signature="e#3159#4683#0#PHP" expanded="false" />
-                <element signature="e#4690#4971#0#PHP" expanded="false" />
-                <element signature="e#4977#5855#0#PHP" expanded="false" />
+                <element signature="e#1603#2187#0#PHP" expanded="false" />
+                <element signature="e#2194#3184#0#PHP" expanded="false" />
+                <element signature="e#3190#4714#0#PHP" expanded="false" />
+                <element signature="e#4721#5002#0#PHP" expanded="false" />
+                <element signature="e#5008#5886#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -214,8 +213,8 @@
         <option value="$PROJECT_DIR$/resources/views/includes/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Teresa/Clients/Methods/SocialProfilesMethods.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClientDashboard.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
       </list>
     </option>
   </component>
@@ -573,14 +572,7 @@
       <workItem from="1493906504563" duration="7121000" />
       <workItem from="1493995413293" duration="7652000" />
       <workItem from="1494193817573" duration="599000" />
-      <workItem from="1494338539367" duration="13897000" />
-    </task>
-    <task id="LOCAL-00176" summary="Work schedule for clients (read only, show last by default)">
-      <created>1493132557921</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1493132557921</updated>
+      <workItem from="1494338539367" duration="13984000" />
     </task>
     <task id="LOCAL-00177" summary="About us images">
       <created>1493136959996</created>
@@ -918,11 +910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494360966207</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <task id="LOCAL-00225" summary="Display name and name">
+      <created>1494361486105</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1494361486105</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519310000" />
+    <option name="totallyTimeSpent" value="519397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -968,7 +967,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="active class" />
     <MESSAGE value="active class item" />
     <MESSAGE value="Prev &amp; next glyphicons" />
     <MESSAGE value="Fix different sizes img" />
@@ -993,7 +991,8 @@
     <MESSAGE value="Btn default" />
     <MESSAGE value="Contact info" />
     <MESSAGE value="Social profile refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Social profile refactor" />
+    <MESSAGE value="Display name and name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display name and name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1409,14 +1408,14 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <caret line="41" column="75" lean-forward="false" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
           <folding>
             <element signature="e#279#392#0#PHP" expanded="false" />
-            <element signature="e#1572#2156#0#PHP" expanded="false" />
-            <element signature="e#2163#3153#0#PHP" expanded="false" />
-            <element signature="e#3159#4683#0#PHP" expanded="false" />
-            <element signature="e#4690#4971#0#PHP" expanded="false" />
-            <element signature="e#4977#5855#0#PHP" expanded="false" />
+            <element signature="e#1603#2187#0#PHP" expanded="false" />
+            <element signature="e#2194#3184#0#PHP" expanded="false" />
+            <element signature="e#3190#4714#0#PHP" expanded="false" />
+            <element signature="e#4721#5002#0#PHP" expanded="false" />
+            <element signature="e#5008#5886#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
