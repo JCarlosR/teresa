@@ -5,7 +5,7 @@
 
     <meta property="og:title" content="{{ $me->title }}"/>
     <meta property="og:type" content="company"/>
-    <meta property="og:url" content="{{ $me->domain }}"/>
+    <meta property="og:url" content="{{ url()->current() }}"/>
     <meta property="og:image" content="{{ $me->photo_route }}"/>
     <meta property="og:site_name" content="{{ $me->name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
