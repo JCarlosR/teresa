@@ -21,21 +21,22 @@ class ProfileController extends Controller
     public function getSocialProfiles()
     {
         $socialPages = [
-            ['Facebook', 'https://www.fb.com/{id}'],
-            ['Linkedin', 'https://www.linkedin.com/company/{id}'],
-            ['Google+', 'https://plus.google.com/{id}'],
-            ['Twitter', 'https://twitter.com/{id}'],
-            ['Pinterest', 'http://www.pinterest.com/{id}'],
-            ['FourSquare', 'https://es.foursquare.com/v/{id}'],
-            ['Instagram', 'https://www.instagram.com/{id}'],
-            ['Youtube', 'https://www.youtube.com/{id}']
+            ['Facebook', 'facebook', 'https://www.fb.com/{id}'],
+            ['Linkedin', 'linkedin', 'https://www.linkedin.com/company/{id}'],
+            ['Google+', 'google_plus', 'https://plus.google.com/{id}'],
+            ['Twitter', 'twitter', 'https://twitter.com/{id}'],
+            ['Pinterest', 'pinterest', 'http://www.pinterest.com/{id}'],
+            ['FourSquare', 'foursquare', 'https://es.foursquare.com/v/{id}'],
+            ['Instagram', 'instagram', 'https://www.instagram.com/{id}'],
+            ['Youtube', 'youtube', 'https://www.youtube.com/{id}']
         ];
 
         $socialProfiles = collect();
 
         foreach ($socialPages as $socialPage) {
             $socialProfile = SocialProfile::firstOrCreate([
-                'name' => $socialPage[0],
+                'display' => $socialPage[0],
+                'name' => $socialPage[1],
                 'user_id' => session('client_id')
             ]);
 

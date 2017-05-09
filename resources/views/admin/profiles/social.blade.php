@@ -33,7 +33,8 @@
                     <form action="" method="POST" class="form-inline">
                         {{ csrf_field() }}
                         <td class="text-center col-md-2">
-                            <input type="text" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
+                            <input type="text" readonly class="form-control" value="{{ $socialProfile->display }}">
+                            <input type="hidden" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
                         </td>
                         <td>
                             <input type="text" name="url" class="form-control" placeholder="{{ $socialProfile->placeholder }}" value="{{ $socialProfile->url }}">
