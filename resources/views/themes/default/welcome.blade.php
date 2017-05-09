@@ -33,7 +33,7 @@
                 <div class="page-title text-center">
                     <h1>Nuestros servicios</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. </p>
-                    <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn btn-primary">Ver más</a></p>
+                    <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
                 </div>
                 @foreach ($services as $service)
@@ -68,7 +68,7 @@
                 <div class="page-title text-center">
                     <h1>Nuestros proyectos</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. </p>
-                    <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-primary">Ver más</a></p>
+                    <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
                 </div>
                 <div class="port-sec">
@@ -118,10 +118,7 @@
                 <div class="page-title text-center">
                     <h1>Nosotros</h1>
                     <p>{{ $me->about_us }}</p>
-                    <p>
-                        <a href="{{ $me->getLinkTo('/contacto') }}">Leer más</a>
-                    </p>
-                    {{--<hr class="pg-titl-bdr-btm">--}}
+                    <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
                 </div>
             </div>
         </div>
@@ -132,9 +129,9 @@
     <div class="cta2">
         <div class="container">
             <div class="row white text-center">
-                <h3 class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - Brian Reed</h3>
+                <h3 class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - {{ $me->name }}</h3>
                 <p class="cta-sub-title"></p>
-                <a href="#" class="btn btn-default">Request A Quote</a>
+                <a href="#" class="btn btn-default">Contactar</a>
             </div>
         </div>
     </div>
