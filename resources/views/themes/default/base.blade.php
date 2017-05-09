@@ -5,12 +5,14 @@
 
     <meta property="og:title" content="{{ $me->title }}"/>
     <meta property="og:type" content="company"/>
-    <meta property="og:url" content="http://www.lindleyarq.com/index.html"/>
-    <meta property="og:image" content="http://www.lindleyarq.com/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg"/>
-    <meta property="og:site_name" content="Lindley Arquitectos"/>
+    <meta property="og:url" content="{{ $me->domain }}"/>
+    <meta property="og:image" content="{{ $me->photo_route }}"/>
+    <meta property="og:site_name" content="{{ $me->name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
 
     <meta charset="utf-8">
+    <meta name="description" content="{{ $me->description }}"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/font-awesome.min.css') }}">
