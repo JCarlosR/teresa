@@ -28,7 +28,7 @@ class DataController extends Controller
             'works_from' => 'date',
 
             'title' => 'max:48',
-            'description' => 'max:152',
+            'description' => 'max:155',
 
             'google_account' => 'email',
             'contact_email' => 'email'
@@ -43,7 +43,7 @@ class DataController extends Controller
             'works_from.date' => 'Ingresa una fecha válida como inicio de la empresa.',
 
             'title.max' => 'El título ingresado supera el límite permitido (48 caracteres).',
-            'description.max' => 'La descripción ingresada supera el límite permitido (152 caracteres).',
+            'description.max' => 'La descripción ingresada supera el límite permitido (155 caracteres).',
 
             'google_account.email' => 'Ingresa un email válido como Google Account.',
             'contact_email.email' => 'El email de contacto no contiene un formato válido.'
