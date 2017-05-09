@@ -17,8 +17,27 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <p>{{ $aboutUs }}</p>
+                    <p class="lead">{{ $aboutUs->description }}</p>
+
                     <hr class="pg-titl-bdr-btm">
+
+                    {{--¿Qué tipo de empresa es?--}}
+                    {!! $about_us->question_1 !!}
+
+                    {{--¿Cuál es su especialización?--}}
+                    {!! $about_us->question_2 !!}
+
+                    {{--¿Cuándo, cómo y dónde se creó la empresa?--}}
+                    {!! $about_us->question_3 !!}
+
+                    {{--¿Qué servicios ofrecen?--}}
+                    {!! $about_us->question_4 !!}
+
+                    {{--¿Cuáles con los objetivos de la empresa?--}}
+                    {!! $about_us->question_5 !!}
+
+                    {{--¿Cómo ven el futuro de la empresa?--}}
+                    {!! $about_us->question_6 !!}
                 </div>
             </div>
         </div>

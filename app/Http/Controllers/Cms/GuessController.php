@@ -16,7 +16,8 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $services = $me->services;
-        return view('themes.default.welcome')->with(compact('me', 'services'));
+        $me->about_us = $me->about_us->description;
+        return view('themes.default.welcome')->with(compact('me', 'services', 'about_us'));
     }
 
     public function projects($id)

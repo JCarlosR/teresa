@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es" class=" js no-touch">
 <head>
+    <meta charset="utf-8">
     <title>{{ $me->title }}</title>
+    <meta name="description" content="{{ $me->description }}"/>
 
     <meta property="og:title" content="{{ $me->title }}"/>
     <meta property="og:type" content="company"/>
@@ -9,9 +11,6 @@
     <meta property="og:image" content="{{ $me->photo_route }}"/>
     <meta property="og:site_name" content="{{ $me->name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
-
-    <meta charset="utf-8">
-    <meta name="description" content="{{ $me->description }}"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
