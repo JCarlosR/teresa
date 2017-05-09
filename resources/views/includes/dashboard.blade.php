@@ -174,7 +174,11 @@
                             Archello
                         </p>
                         <a href="{{ $archello }}" target="_blank">
-                            <img src="{{ asset('/images/professional/archello.png') }}" alt="Archello" width="36">
+                            @if ($archello == '#')
+                                <img src="{{ asset('/images/professional/archello-off.png') }}" alt="Archello" width="36">
+                            @else
+                                <img src="{{ asset('/images/professional/archello.png') }}" alt="Archello" width="36">
+                            @endif
                         </a>
                     </div>
 
@@ -183,7 +187,11 @@
                             Archilovers
                         </p>
                         <a href="{{ $archilovers }}" target="_blank">
-                            <img src="{{ asset('/images/professional/archilovers.png') }}" alt="Archilovers" width="36">
+                            @if ($archilovers == '#')
+                                <img src="{{ asset('/images/professional/archilovers-off.png') }}" alt="Archilovers" width="36">
+                            @else
+                                <img src="{{ asset('/images/professional/archilovers.png') }}" alt="Archilovers" width="36">
+                            @endif
                         </a>
                     </div>
 
@@ -192,7 +200,11 @@
                             Open Buildings
                         </p>
                         <a href="{{ $buildings }}" target="_blank">
-                            <img src="{{ asset('/images/professional/openbuildings.png') }}" alt="Open Buildings" width="36">
+                            @if ($buildings == '#')
+                                <img src="{{ asset('/images/professional/openbuildings-off.png') }}" alt="Open Buildings" width="36">
+                            @else
+                                <img src="{{ asset('/images/professional/openbuildings.png') }}" alt="Open Buildings" width="36">
+                            @endif
                         </a>
                     </div>
 
@@ -201,7 +213,11 @@
                             Behance
                         </p>
                         <a href="{{ $behance }}" target="_blank">
-                            <img src="{{ asset('/images/professional/behance.png') }}" alt="Behance" width="36">
+                            @if ($behance == '#')
+                                <img src="{{ asset('/images/professional/behance-off.png') }}" alt="Behance" width="36">
+                            @else
+                                <img src="{{ asset('/images/professional/behance.png') }}" alt="Behance" width="36">
+                            @endif
                         </a>
                     </div>
                 @else
