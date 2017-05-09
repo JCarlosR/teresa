@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Http\Controllers\SocialProfilesMethods;
 use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
 use App\Teresa\Clients\Accessors\PhotosRelatedAccessors;
@@ -50,6 +51,9 @@ class User extends Authenticatable
 
     // accessors: photos
     use PhotosRelatedAccessors;
+
+    // methods: profiles
+    use SocialProfilesMethods;
 
     // relationships
     use ContentRelatedRelationships;

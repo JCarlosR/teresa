@@ -6,12 +6,12 @@ use App\ProfessionalMedia;
 use App\ProfessionalProfile;
 use App\Project;
 use App\Service;
-use App\SocialProfile;
 use App\User;
 use App\WorkSchedule;
 
 trait ClientDashboard
 {
+
     public function getDashboardResponse()
     {
         $is_admin = auth()->user()->is_admin;
@@ -32,14 +32,14 @@ trait ClientDashboard
 
         $professionalMedia = $this->getProfessionalMediaLinks($client_id);
 
-        $facebook = $this->getSocialProfile($client_id, 'Facebook', 'https://www.fb.com/{id}');
-        $linkedIn = $this->getSocialProfile($client_id, 'Linkedin', 'https://www.linkedin.com/company/{id}');
-        $googlePlus = $this->getSocialProfile($client_id, 'Google+', 'https://plus.google.com/{id}');
-        $twitter = $this->getSocialProfile($client_id, 'Twitter', 'https://twitter.com/{id}');
-        $pinterest = $this->getSocialProfile($client_id, 'Pinterest', 'http://www.pinterest.com/{id}');
-        $fourSquare = $this->getSocialProfile($client_id, 'FourSquare', 'https://foursquare.com/user/{id}');
-        $instagram = $this->getSocialProfile($client_id, 'Instagram', 'https://www.instagram.com/{id}');
-        $youtube = $this->getSocialProfile($client_id, 'Youtube', 'https://www.youtube.com/{id}');
+        $facebook = $client->getSocialProfile('facebook');
+        $linkedIn = $client->getSocialProfile('linkedin');
+        $googlePlus = $client->getSocialProfile('google_plus');
+        $twitter = $client->getSocialProfile('twitter');
+        $pinterest = $client->getSocialProfile('pinterest');
+        $fourSquare = $client->getSocialProfile('foursquare');
+        $instagram = $client->getSocialProfile('instagram');
+        $youtube = $client->getSocialProfile('youtube');
 
         if ($client->client_type == 'architect') {
             $architizer = $this->getProfessionalLink($client_id, 'Architizer');
@@ -65,36 +65,6 @@ trait ClientDashboard
         }
     }
 
-    public function getSocialProfile($user_id, $name, $placeholder)
-    {
-        $customObject = new \stdClass;
-        $customObject->id = '';
-        $customObject->state = false;
-
-        $socialProfile = SocialProfile::where('user_id', $user_id)->where('name', $name)->first();
-
-        if ($socialProfile) {
-            // the URL field is used as the ID
-            // and the URL have to be calculated after replace the ID in the placeholder
-
-            $customObject->state = $socialProfile->state;
-            if ($customObject->state==TRUE) {
-                $customObject->id = $socialProfile->url;
-                $customObject->url = str_replace('{id}', $customObject->id, $placeholder);
-            } else {
-                $customObject->id = '';
-                $customObject->url = '#';
-            }
-
-            // TODO: Update the followers count just once per day
-            // $customObject->followers = $socialProfile->followers;
-        } else {
-            $customObject->url = '#';
-            $customObject->followers = '?';
-        }
-
-        return $customObject;
-    }
 
     public function getProfessionalLink($user_id, $name)
     {

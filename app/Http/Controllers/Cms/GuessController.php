@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Http\Controllers\SocialProfiles;
 use App\Project;
 use App\Service;
 use App\User;
@@ -12,12 +13,19 @@ use App\Http\Controllers\Controller;
 
 class GuessController extends Controller
 {
+    use SocialProfiles;
+
     public function index($id)
     {
         $me = User::find($id);
         $services = $me->services;
         $me->about_us = $me->about_us->description;
-        return view('themes.default.welcome')->with(compact('me', 'services', 'about_us'));
+
+        // social profiles can be used anywhere (via one method defined for the User model)
+
+        return view('themes.default.welcome')->with(compact(
+            'me', 'services', 'about_us'
+        ));
     }
 
     public function projects($id)
