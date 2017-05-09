@@ -66,7 +66,7 @@
             <th scope="row">Publicaciones</th>
         </tr>
         <tr>
-            <td>Facebok</td>
+            <td>Facebook</td>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'facebook_post' ])
         </tr>
         <tr>
