@@ -16,7 +16,7 @@
     <div id="portfolio" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="page-title text-center">
+                <div class="page-title">
                     <ol>
                         @foreach ($projects as $project)
                             <li>

@@ -16,7 +16,7 @@
     <div class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="page-title text-center">
+                <div class="page-title">
                     <p class="lead">{{ $aboutUs->description }}</p>
 
                     <hr class="pg-titl-bdr-btm">

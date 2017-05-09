@@ -8,7 +8,7 @@
                 <div class="jumbotron">
                     <h1 class="small">Bienvenido a <span class="bold">{{ $me->name }}</span></h1>
                     <p class="big">{{ $me->description }}</p>
-                    <a href="#" class="btn btn-banner">Learn More<i class="fa fa-send"></i></a>
+                    <a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-banner">Ver proyectos realizados<i class="fa fa-send"></i></a>
                 </div>
             </div>
         </div>
@@ -109,7 +109,10 @@
                 <div class="page-title text-center">
                     <h1>Nosotros</h1>
                     <p>{{ $me->about_us }}</p>
-                    <hr class="pg-titl-bdr-btm">
+                    <p>
+                        <a href="{{ $me->getLinkTo('/contacto') }}">Leer más</a>
+                    </p>
+                    {{--<hr class="pg-titl-bdr-btm">--}}
                 </div>
             </div>
         </div>
