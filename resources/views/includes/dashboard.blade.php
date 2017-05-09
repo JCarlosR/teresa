@@ -161,7 +161,7 @@
                             Architizer
                         </p>
                         <a href="{{ $architizer }}" target="_blank">
-                            @if ($architizet == '#')
+                            @if ($architizer == '#')
                                 <img src="{{ asset('/images/professional/architizer-off.png') }}" alt="Architizer" width="36">
                             @else
                                 <img src="{{ asset('/images/professional/architizer.png') }}" alt="Architizer" width="36">
