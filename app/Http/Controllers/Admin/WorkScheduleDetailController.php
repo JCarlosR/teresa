@@ -66,7 +66,7 @@ class WorkScheduleDetailController extends Controller
                 $detail->delete();
                 $notification = 'Se ha eliminado la actividad seleccionada.';
             } else {
-                $detail->state = $request->input('state');
+                $detail->state = $request->input('state') ?: 0;
                 $detail->save();
                 $notification = 'Se ha cambiado el estado de la actividad seleccionada.';
             }
