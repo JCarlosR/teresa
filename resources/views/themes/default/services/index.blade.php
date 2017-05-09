@@ -22,7 +22,8 @@
                         <li>
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                 {{ $service->name }}
-                            </a>: {{ $service->description }}
+                            </a>.
+                            <p>{{ $service->description }}</p>
                             <hr class="pg-titl-bdr-btm">
                         </li>
                         @endforeach

@@ -22,7 +22,8 @@
                             <li>
                                 <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
                                     {{ $project->name }}
-                                </a>: {{ $project->description }}
+                                </a>.
+                                <p>{{ $project->description }}</p>
                                 <hr class="pg-titl-bdr-btm">
                             </li>
                         @endforeach

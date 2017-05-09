@@ -50,9 +50,11 @@
                 <div class="col-md-4">
                     <p>
                         <strong>Dirección:</strong>
+                        {{ $me->address }}
                     </p>
                     <p>
                         <strong>Teléfono(s):</strong>
+                        {{ $me->phones }}
                     </p>
                 </div>
             </div>
