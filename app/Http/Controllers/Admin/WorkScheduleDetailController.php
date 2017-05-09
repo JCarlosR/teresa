@@ -75,8 +75,9 @@ class WorkScheduleDetailController extends Controller
             $detail->work_schedule_id = $id;
             $detail->type = $request->input('type');
             $detail->month_offset = $request->input('month_offset');
-            $detail->state = $request->input('state');
+            $detail->state = $request->input('state') ?: 0; // when state is sent as 0, it is received as null, so we fix doing it
             $detail->save();
+
             $notification = 'Se ha registrado una nueva actividad.';
         }
 
