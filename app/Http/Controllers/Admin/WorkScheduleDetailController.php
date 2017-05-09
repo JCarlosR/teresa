@@ -58,7 +58,7 @@ class WorkScheduleDetailController extends Controller
         ];
         $this->validate($request, $rules);
 
-        $detail = WorkScheduleDetail::where('type', $request->input('type'))
+        $detail = WorkScheduleDetail::where('work_schedule_id', $id)->where('type', $request->input('type'))
             ->where('month_offset', $request->input('month_offset'))->first();
 
         if ($detail) {
