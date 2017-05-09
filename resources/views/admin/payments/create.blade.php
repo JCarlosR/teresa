@@ -56,7 +56,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="total_amount">Monto total bruto</label>
-                                <input type="number" class="form-control" name="total_amount" placeholder="Monto total a pagar" value="{{ old('total_amount') }}">
+                                <input type="number" class="form-control" name="total_amount" placeholder="Monto total a pagar" value="{{ old('total_amount') }}" step="0.01">
                             </div>
                         </div>
                         <div class="col-md-6">
