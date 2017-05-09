@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="39" column="163" lean-forward="false" selection-start-line="39" selection-start-column="163" selection-end-line="39" selection-end-column="163" />
+              <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -67,15 +68,14 @@
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="295">
+              <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
                 <element signature="e#279#392#0#PHP" expanded="false" />
-                <element signature="e#1603#2187#0#PHP" expanded="false" />
-                <element signature="e#2194#3184#0#PHP" expanded="false" />
-                <element signature="e#3190#4714#0#PHP" expanded="false" />
-                <element signature="e#4721#5002#0#PHP" expanded="false" />
-                <element signature="e#5008#5886#0#PHP" expanded="false" />
+                <element signature="e#2208#3198#0#PHP" expanded="false" />
+                <element signature="e#3204#4728#0#PHP" expanded="false" />
+                <element signature="e#4735#5016#0#PHP" expanded="false" />
+                <element signature="e#5022#5900#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -572,14 +572,7 @@
       <workItem from="1493906504563" duration="7121000" />
       <workItem from="1493995413293" duration="7652000" />
       <workItem from="1494193817573" duration="599000" />
-      <workItem from="1494338539367" duration="14147000" />
-    </task>
-    <task id="LOCAL-00179" summary="Fix">
-      <created>1493217420928</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1493217420928</updated>
+      <workItem from="1494338539367" duration="14236000" />
     </task>
     <task id="LOCAL-00180" summary="Clear fix (ignore pull left and right)">
       <created>1493217645278</created>
@@ -917,11 +910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494361658522</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="Rename column use of the profile id">
+      <created>1494361737208</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1494361737208</updated>
+    </task>
+    <option name="localTasksCounter" value="229" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519560000" />
+    <option name="totallyTimeSpent" value="519649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -967,7 +967,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix different sizes img" />
     <MESSAGE value="Better CSS" />
     <MESSAGE value="Services slider show" />
     <MESSAGE value="Typo" />
@@ -992,11 +991,12 @@
     <MESSAGE value="Display name and name" />
     <MESSAGE value="Fix not found column" />
     <MESSAGE value="Fix placeholder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix placeholder" />
+    <MESSAGE value="Rename column use of the profile id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename column use of the profile id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1399,15 +1399,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state relative-caret-position="295">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding>
             <element signature="e#279#392#0#PHP" expanded="false" />
-            <element signature="e#1603#2187#0#PHP" expanded="false" />
-            <element signature="e#2194#3184#0#PHP" expanded="false" />
-            <element signature="e#3190#4714#0#PHP" expanded="false" />
-            <element signature="e#4721#5002#0#PHP" expanded="false" />
-            <element signature="e#5008#5886#0#PHP" expanded="false" />
+            <element signature="e#2208#3198#0#PHP" expanded="false" />
+            <element signature="e#3204#4728#0#PHP" expanded="false" />
+            <element signature="e#4735#5016#0#PHP" expanded="false" />
+            <element signature="e#5022#5900#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1415,7 +1414,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/admin/profiles/social.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="39" column="163" lean-forward="false" selection-start-line="39" selection-start-column="163" selection-end-line="39" selection-end-column="163" />
+          <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
           <folding />
         </state>
       </provider>

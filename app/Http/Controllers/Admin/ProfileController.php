@@ -53,7 +53,7 @@ class ProfileController extends Controller
             'name' => $request->get('name'),
             'user_id' => session('client_id')
         ]);
-        $socialProfile->url = $request->get('url');
+        $socialProfile->profile_id = $request->get('profile_id');
         $socialProfile->state = $request->get('state');
         // $socialProfile->followers = $request->get('followers');
         $socialProfile->notes = $request->get('notes');
