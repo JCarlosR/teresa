@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers\Cms;
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\SocialProfiles;
 use App\Project;
 use App\Service;
 use App\User;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class GuessController extends Controller
 {
-    use SocialProfiles;
-
     public function index($id)
     {
         $me = User::find($id);
