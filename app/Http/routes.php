@@ -25,6 +25,10 @@ Route::post('/datos/principales', 'Client\DataController@update');
 // Profile image
 Route::post('/user/image', 'Client\DataController@postProfileImage');
 
+
+// SERP Summary
+Route::get('/serp/resumen', 'SERPController@index');
+
 // Services
 Route::get('/servicios', 'ServiceController@index');
 Route::get('/servicio/{id}/ver', 'ServiceController@show');
