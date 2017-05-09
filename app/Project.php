@@ -37,6 +37,11 @@ class Project extends Model
 
     // accessors
 
+    public function getFeaturedImageAttribute()
+    {
+        return ProjectImage::where('project_id', $this->id)->first();
+    }
+
     public function getCharactersCountAttribute()
     {
         return strlen(strip_tags($this->question_1)) +
