@@ -40,7 +40,7 @@ class ProfileController extends Controller
             ]);
 
             $socialProfile->display = $socialPage[0]; // temporal attribute
-            $socialProfile->placeholder = $socialPage[1];
+            $socialProfile->placeholder = $socialPage[2];
             $socialProfiles->push($socialProfile);
         }
 
