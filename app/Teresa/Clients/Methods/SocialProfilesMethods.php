@@ -20,8 +20,8 @@ trait SocialProfilesMethods
     public function getSocialProfile($name)
     {
         $placeholder = '';
-        if (isset($this->socialProfile[$name]))
-            $placeholder = $this->socialProfile[$name];
+        if (isset($this->socialProfilePlaceholders[$name]))
+            $placeholder = $this->socialProfilePlaceholders[$name];
 
         $customObject = new \stdClass;
         $customObject->id = '';
