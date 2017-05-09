@@ -37,7 +37,7 @@
                             <input type="hidden" name="name" readonly class="form-control" value="{{ $socialProfile->name }}">
                         </td>
                         <td>
-                            <input type="text" name="url" class="form-control" placeholder="{{ $socialProfile->placeholder }}" value="{{ $socialProfile->url }}">
+                            <input type="text" name="url" class="form-control" placeholder="{{ $socialProfile->placeholder }}" value="{{ $socialProfile->profile_id }}">
                         </td>
                         <td class="col-md-2">
                             <div class="form-group">
