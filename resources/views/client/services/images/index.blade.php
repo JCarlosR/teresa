@@ -89,7 +89,7 @@
         // "myAwesomeDropzone" is the camelized version of the HTML element's ID
         Dropzone.options.myAwesomeDropzone = {
             paramName: "file",
-            maxFilesize: 2,
+            maxFilesize: 3,
             success: function (file, response) {
                 // console.log(response);
                 $('#refresh-button').slideDown('slow');
