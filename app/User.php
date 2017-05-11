@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Http\Controllers\SocialProfilesMethods;
+use App\Teresa\Clients\Methods\SocialProfilesMethods;
 use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
 use App\Teresa\Clients\Accessors\PhotosRelatedAccessors;
