@@ -23,7 +23,8 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = $this->client()->projects;
-        return view('client.projects.index')->with(compact('projects'));
+        $description = $this->client()->projects_description;
+        return view('client.projects.index')->with(compact('projects', 'description'));
     }
 
     public function show($id)

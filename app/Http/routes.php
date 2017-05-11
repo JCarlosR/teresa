@@ -28,6 +28,9 @@ Route::post('/user/image', 'Client\DataController@postProfileImage');
 
 // SERP Summary
 Route::get('/serp/resumen', 'SERPController@index');
+Route::post('/servicios/descripcion', 'SERPController@descriptionServices');
+Route::post('/proyectos/descripcion', 'SERPController@descriptionProjects');
+Route::post('/citas/descripcion', 'SERPController@descriptionQuotes');
 
 // Services
 Route::get('/servicios', 'ServiceController@index');

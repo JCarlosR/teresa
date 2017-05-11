@@ -18,7 +18,8 @@ class ServiceController extends Controller
     public function index()
     {
         $services = $this->client()->services;
-        return view('client.services.index')->with(compact('services'));
+        $description = $this->client()->services_description;
+        return view('client.services.index')->with(compact('services', 'description'));
     }
 
     public function show($id)

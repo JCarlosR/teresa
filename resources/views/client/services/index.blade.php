@@ -9,9 +9,28 @@
         <div class="widget-body">
             @if (session('notification'))
                 <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
                     <p>{{ session('notification') }}</p>
                 </div>
             @endif
+
+            <form action="{{ url('/servicios/descripcion') }}" class="form-horizontal" method="POST">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="description" class="col-md-12">Descripción de los servicios:</label>
+                    <div>
+                        <div class="col-md-11">
+                            <input type="text" placeholder="Ingresa aquí un resumen de los servicios que brinda la empresa en menos de 155 caracteres." required class="form-control" value="{{ $description }}" name="description">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-floppy-disk"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
             <a href="{{ url('/servicios/registrar') }}" class="btn btn-success pull-right">
                 <span class="glyphicon glyphicon-plus"></span>

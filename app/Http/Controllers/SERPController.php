@@ -21,4 +21,34 @@ class SERPController extends Controller
         $client = $this->client();
         return view('client.serp')->with(compact('client'));
     }
+
+    public function descriptionServices(Request $request)
+    {
+        $client = $this->client();
+        $client->services_description = $request->input('description');
+        $client->save();
+
+        $notification = 'La descripción de los servicios se actualizó correctamente.';
+        return back()->with(compact('notification'));
+    }
+
+    public function descriptionProjects(Request $request)
+    {
+        $client = $this->client();
+        $client->projects_description = $request->input('description');
+        $client->save();
+
+        $notification = 'La descripción de los proyectos se actualizó correctamente.';
+        return back()->with(compact('notification'));
+    }
+
+    public function descriptionQuotes(Request $request)
+    {
+        $client = $this->client();
+        $client->quotes_description = $request->input('description');
+        $client->save();
+
+        $notification = 'La descripción de las citas se actualizó correctamente.';
+        return back()->with(compact('notification'));
+    }
 }

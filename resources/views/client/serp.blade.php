@@ -27,6 +27,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <a href="/servicios" class="btn btn-secondary pull-right" title="Editar servicios">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
                             <div class="google-results">
                                 <a href="#" onclick="return false;">
                                     <span class="title">{{ $client->trade_name }} - Servicios</span>
@@ -38,6 +41,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <a href="/proyectos" class="btn btn-secondary pull-right" title="Editar proyectos">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
                             <div class="google-results">
                                 <a href="#" onclick="return false;">
                                     <span class="title">{{ $client->trade_name }} - Proyectos</span>
@@ -49,6 +55,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <a href="/nosotros" class="btn btn-secondary pull-right" title="Editar sección nosotros">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
                             <div class="google-results">
                                 <a href="#" onclick="return false;">
                                     <span class="title">Sobre {{ $client->trade_name }}</span>
@@ -60,6 +69,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <a href="/citas" class="btn btn-secondary pull-right" title="Editar citas">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
                             <div class="google-results">
                                 <a href="#" onclick="return false;">
                                     <span class="title">{{ $client->trade_name }} - Citas</span>
@@ -76,10 +88,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('scripts')
-    <!-- Google maps-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK0Wk9CEkyOK4MtWPFkzvhBmxly_5TpU0"></script>
-    <script src="{{ asset('build/js/page-content/maps/google-maps.js') }}"></script>
 @endsection

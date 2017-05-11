@@ -19,7 +19,8 @@ class QuoteController extends Controller
     public function index()
     {
         $quotes = $this->client()->quotes;
-        return view('client.quotes.index')->with(compact('quotes'));
+        $description = $this->client()->quotes_description;
+        return view('client.quotes.index')->with(compact('quotes', 'description'));
     }
 
     public function create()
