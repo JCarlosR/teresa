@@ -123,6 +123,10 @@
             @include('includes.user.work.show_activities_in_tds', ['type' => 'button_call_me_back' ])
         </tr>
         <tr>
+            <th scope="row">Grabación de visitas en video</th>
+            @include('includes.user.work.show_activities_in_tds', ['type' => 'visitor_recordings' ])
+        </tr>
+        <tr>
             <th scope="row">Informes de resultado</th>
             @include('includes.user.work.show_activities_in_tds', ['type' => 'results_report' ])
         </tr>

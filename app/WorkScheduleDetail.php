@@ -36,6 +36,7 @@ class WorkScheduleDetail extends Model
 
             case 'register_in_google_maps': return 'Registro en Google Maps';
             case 'button_call_me_back': return 'Botón de llamada (call me back)';
+            case 'visitor_recordings': return 'Grabación de visitas en video';
             case 'results_report': return 'Informes de resultado';
 
             default: return 'Actividad desconocida';
