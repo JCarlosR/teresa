@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <h1>Nuestros servicios</h1>
+                    <h2>Nuestros servicios</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. </p>
                     <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <h1>Nuestros proyectos</h1>
+                    <h2>Nuestros proyectos</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. </p>
                     <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
@@ -116,7 +116,7 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <h1>Nosotros</h1>
+                    <h2>Nosotros</h2>
                     <p>{{ $me->about_us }}</p>
                     <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
                 </div>

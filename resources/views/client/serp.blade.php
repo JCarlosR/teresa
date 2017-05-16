@@ -65,7 +65,9 @@
                                 <div>
                                     <cite>{{ $client->domain }}/nosotros</cite>
                                 </div>
+                                @if($client->about_us)
                                 <span class="description">{{ $client->about_us->description }}</span>
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-6">
