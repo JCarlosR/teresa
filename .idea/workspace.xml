@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/client/serp.blade.php" afterPath="$PROJECT_DIR$/resources/views/client/serp.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,21 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="823">
+              <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serp.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/client/serp.blade.php">
+      <file leaf-file-name="2017_05_11_141554_add_description_of_services_projects_and_quotes_to_users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_11_141554_add_description_of_services_projects_and_quotes_to_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+            <state relative-caret-position="312">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -163,8 +162,8 @@
         <option value="$PROJECT_DIR$/app/WorkScheduleDetail.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/user/work/show_activities_table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" />
-        <option value="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/client/serp.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -504,14 +503,7 @@
       <workItem from="1494425821439" duration="2292000" />
       <workItem from="1494511591735" duration="4067000" />
       <workItem from="1494598231573" duration="4714000" />
-      <workItem from="1494945403022" duration="1465000" />
-    </task>
-    <task id="LOCAL-00190" summary="Default theme advances">
-      <created>1493916388929</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1493916388929</updated>
+      <workItem from="1494945403022" duration="1882000" />
     </task>
     <task id="LOCAL-00191" summary="Questions">
       <created>1493999481494</created>
@@ -849,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494607438695</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="Check if about_us is an object">
+      <created>1494953095404</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1494953095404</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="536416000" />
+    <option name="totallyTimeSpent" value="536833000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1159,13 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_11_141554_add_description_of_services_projects_and_quotes_to_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-798">
@@ -1303,18 +1295,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/serp.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="69" column="38" lean-forward="false" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_11_141554_add_description_of_services_projects_and_quotes_to_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
           <folding />
         </state>
       </provider>
