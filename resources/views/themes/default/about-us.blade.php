@@ -20,7 +20,8 @@
                     <p class="lead">{{ $aboutUs->description }}</p>
 
                     <hr class="pg-titl-bdr-btm">
-
+                </div>
+                <div class="page-content">
                     {{--¿Qué tipo de empresa es?--}}
                     {!! $aboutUs->question_1 !!}
 
@@ -38,6 +39,40 @@
 
                     {{--¿Cómo ven el futuro de la empresa?--}}
                     {!! $aboutUs->question_6 !!}
+
+                    @if (isset($aboutUs->images))
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                @foreach ($aboutUs->images as $key => $image)
+                                    <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
+                                @endforeach
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                @foreach ($aboutUs->images as $key => $image)
+                                    <div class="item @if($key==0) active @endif">
+                                        <img src="/images/about-us/{{ $image->file_name }}" alt="{{ $image->name }}">
+                                        <div class="carousel-caption">
+                                            <h3>{{ $image->name }}</h3>
+                                            <p>{{ $image->description }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
