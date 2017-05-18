@@ -33,18 +33,8 @@
       <file leaf-file-name="about-us.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="76" column="30" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="76" selection-end-column="30" />
+            <state relative-caret-position="189">
+              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -554,14 +544,7 @@
       <workItem from="1494511591735" duration="4067000" />
       <workItem from="1494598231573" duration="4714000" />
       <workItem from="1494945403022" duration="2661000" />
-      <workItem from="1495118796930" duration="1930000" />
-    </task>
-    <task id="LOCAL-00196" summary="Full path (?)">
-      <created>1494001750123</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1494001750123</updated>
+      <workItem from="1495118796930" duration="2157000" />
     </task>
     <task id="LOCAL-00197" summary="Slider (?)">
       <created>1494002271367</created>
@@ -899,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495120643468</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="About us images">
+      <created>1495121059727</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1495121059728</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539542000" />
+    <option name="totallyTimeSpent" value="539769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -972,7 +962,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Only project with images" />
     <MESSAGE value="Show only services ID" />
     <MESSAGE value="Btn default" />
     <MESSAGE value="Contact info" />
@@ -997,7 +986,8 @@
     <MESSAGE value="New menu order" />
     <MESSAGE value="JSON social media" />
     <MESSAGE value="remove tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove tab" />
+    <MESSAGE value="About us images" />
+    <option name="LAST_COMMIT_MESSAGE" value="About us images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1364,16 +1354,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="76" column="30" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="76" selection-end-column="30" />
+        <state relative-caret-position="42">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/about-us.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        <state relative-caret-position="189">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding />
         </state>
       </provider>
