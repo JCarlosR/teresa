@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/includes/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/includes/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,29 +33,23 @@
       <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2478">
+            <state relative-caret-position="21">
               <caret line="118" column="37" lean-forward="false" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/base.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="291">
+              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <marker date="1495120548808" expanded="true" signature="2222:2457" ph="..." />
+                <marker date="1495120548808" expanded="true" signature="2273:2321" ph="..." />
+                <marker date="1495120548808" expanded="true" signature="2460:2531" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +57,8 @@
       <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="11" column="90" lean-forward="false" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+            <state relative-caret-position="231">
+              <caret line="11" column="82" lean-forward="true" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -192,8 +186,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Cms/GuessController.php" />
         <option value="$PROJECT_DIR$/resources/views/client/serp.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/themes/default/includes/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" />
       </list>
     </option>
   </component>
@@ -564,14 +558,7 @@
       <workItem from="1494511591735" duration="4067000" />
       <workItem from="1494598231573" duration="4714000" />
       <workItem from="1494945403022" duration="2661000" />
-      <workItem from="1495118796930" duration="994000" />
-    </task>
-    <task id="LOCAL-00193" summary="Project show">
-      <created>1494000623154</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1494000623154</updated>
+      <workItem from="1495118796930" duration="1442000" />
     </task>
     <task id="LOCAL-00194" summary="Service show">
       <created>1494000815702</created>
@@ -909,11 +896,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495119948181</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="New menu order">
+      <created>1495120124888</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1495120124889</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="538606000" />
+    <option name="totallyTimeSpent" value="539054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -982,8 +976,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix typo" />
-    <MESSAGE value="No text-center" />
     <MESSAGE value="Test services and projects from each client" />
     <MESSAGE value="Only project with images" />
     <MESSAGE value="Show only services ID" />
@@ -1007,7 +999,9 @@
     <MESSAGE value="Check if about_us is an object" />
     <MESSAGE value="Show description of each section" />
     <MESSAGE value="Google analytics for the default theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Google analytics for the default theme" />
+    <MESSAGE value="New menu order" />
+    <MESSAGE value="JSON social media" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSON social media" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1348,24 +1342,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2478">
+        <state relative-caret-position="21">
           <caret line="118" column="37" lean-forward="false" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="11" column="90" lean-forward="false" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1375,6 +1353,26 @@
         <state relative-caret-position="315">
           <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="82" lean-forward="true" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <marker date="1495120548808" expanded="true" signature="2222:2457" ph="..." />
+            <marker date="1495120548808" expanded="true" signature="2273:2321" ph="..." />
+            <marker date="1495120548808" expanded="true" signature="2460:2531" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

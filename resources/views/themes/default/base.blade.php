@@ -20,6 +20,29 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
 
     @yield('styles')
+
+    <script type="application/ld+json">
+    {
+      "{{ '@' }}context" : "http://schema.org",
+      "@type" : "company",
+      "name" : "{{ $me->trade_name }}",
+      "url" : "{{ url()->current() }}",
+      "sameAs" : [
+        @if ($me->getSocialProfile('facebook')->url != '#')
+            "{{ $me->getSocialProfile('facebook')->url }}",
+        @endif
+        @if ($me->getSocialProfile('twitter')->url != '#')
+            "{{ $me->getSocialProfile('twitter')->url }}",
+        @endif
+        @if ($me->getSocialProfile('google_plus')->url != '#')
+            "{{ $me->getSocialProfile('google_plus')->url }}",
+        @endif
+        @if ($me->getSocialProfile('linkedin')->url != '#')
+            "{{ $me->getSocialProfile('linkedin')->url }}"
+        @endif
+      ]
+    }
+    </script>
 </head>
 <body>
 
