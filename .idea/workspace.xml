@@ -43,12 +43,12 @@
       <file leaf-file-name="base.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/base.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="438">
+              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
               <folding>
-                <marker date="1495120548808" expanded="true" signature="2222:2457" ph="..." />
-                <marker date="1495120548808" expanded="true" signature="2273:2321" ph="..." />
-                <marker date="1495120548808" expanded="true" signature="2460:2531" ph="..." />
+                <marker date="1495120628100" expanded="true" signature="2206:2441" ph="..." />
+                <marker date="1495120628100" expanded="true" signature="2257:2305" ph="..." />
+                <marker date="1495120628100" expanded="true" signature="2444:2515" ph="..." />
               </folding>
             </state>
           </provider>
@@ -558,14 +558,7 @@
       <workItem from="1494511591735" duration="4067000" />
       <workItem from="1494598231573" duration="4714000" />
       <workItem from="1494945403022" duration="2661000" />
-      <workItem from="1495118796930" duration="1442000" />
-    </task>
-    <task id="LOCAL-00194" summary="Service show">
-      <created>1494000815702</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1494000815702</updated>
+      <workItem from="1495118796930" duration="1509000" />
     </task>
     <task id="LOCAL-00195" summary="Project images">
       <created>1494001272823</created>
@@ -903,11 +896,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495120124889</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="JSON social media">
+      <created>1495120565965</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1495120565965</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539054000" />
+    <option name="totallyTimeSpent" value="539121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1366,12 +1366,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/base.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="438">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding>
-            <marker date="1495120548808" expanded="true" signature="2222:2457" ph="..." />
-            <marker date="1495120548808" expanded="true" signature="2273:2321" ph="..." />
-            <marker date="1495120548808" expanded="true" signature="2460:2531" ph="..." />
+            <marker date="1495120628100" expanded="true" signature="2206:2441" ph="..." />
+            <marker date="1495120628100" expanded="true" signature="2257:2305" ph="..." />
+            <marker date="1495120628100" expanded="true" signature="2444:2515" ph="..." />
           </folding>
         </state>
       </provider>
