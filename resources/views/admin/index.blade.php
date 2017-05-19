@@ -58,6 +58,10 @@
                                    data-toggle="tooltip" data-placement="top" title="Clic para destacar o quitar destacado">
                                     <i class="glyphicon glyphicon-{{ $client->star_state }} big-black-icon"></i>
                                 </a>
+                                <a href="/ver/{{ $client->id }}" target="_blank"
+                                   data-toggle="tooltip" data-placement="top" title="Previsualizar datos en el theme por defecto">
+                                    <i class="glyphicon glyphicon glyphicon-globe big-black-icon"></i>
+                                </a>
                                 <a href="/admin/cliente/{{ $client->id }}/impersonate"
                                    data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
                                     <i class="glyphicon glyphicon-log-in big-black-icon"></i>
