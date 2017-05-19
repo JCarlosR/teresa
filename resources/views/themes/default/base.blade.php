@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class=" js no-touch">
+<html lang="es" class="js no-touch">
 <head>
     <meta charset="utf-8">
     <title>{{ $me->title }}</title>

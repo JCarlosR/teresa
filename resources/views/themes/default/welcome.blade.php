@@ -44,7 +44,9 @@
                             </div>
 
                             <div class="service-text col-md-9">
-                                <h3>{{ $service->name }}</h3>
+                                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
+                                    <h3>{{ $service->name }}</h3>
+                                </a>
                                 <p>
                                     @if (strlen($service->description) > 25)
                                         {{ $service->description }}
@@ -84,7 +86,9 @@
                         @foreach ($me->projects as $project)
                             @if ($project->featuredImage)
                             <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
-                                <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                                    <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                </a>
                             </div>
                             @endif
                         @endforeach
