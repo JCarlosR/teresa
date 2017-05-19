@@ -12,6 +12,10 @@
     <meta property="og:site_name" content="{{ $me->name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
 
+    <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
+    <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
+    <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/font-awesome.min.css') }}">
