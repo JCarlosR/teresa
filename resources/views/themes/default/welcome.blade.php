@@ -19,7 +19,7 @@
     <div class="cta-1">
         <div class="container">
             <div class="row text-center white">
-                <h1 class="cta-title">Say Hey to Tempo!!</h1>
+                <h3 class="cta-title">Say Hey to Tempo!!</h3>
                 <p class="cta-sub-title">Full Responsive HTML5 Bootstrap Template.</p>
             </div>
         </div>
@@ -133,7 +133,7 @@
     <div class="cta2">
         <div class="container">
             <div class="row white text-center">
-                <h3 class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - {{ $me->name }}</h3>
+                <p class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - {{ $me->name }}</p>
                 <p class="cta-sub-title"></p>
                 <a href="#" class="btn btn-default">Contactar</a>
             </div>
