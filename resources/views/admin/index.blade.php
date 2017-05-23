@@ -50,7 +50,7 @@
 
         <div class="row">
             @foreach ($clients as $client)
-                <div class="col-md-3" data-status="{{ $client->client_type }}">
+                <div class="col-xs-4 col-md-3" data-status="{{ $client->client_type }}">
                     <div class="widget client-widget">
                         <div class="widget-body text-center">
                             <p  class="text-right">
