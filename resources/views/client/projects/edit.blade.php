@@ -50,13 +50,13 @@
                     <legend>Ficha del proyecto</legend>
 
                     <div class="form-group">
-                        <label for="project-name" class="col-sm-2 control-label">Nombre del proyecto</label>
+                        <label for="project-name" class="col-sm-2 control-label">Título SERP</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name', $project->name) }}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="project-description" class="col-sm-2 control-label">Resumen del proyecto</label>
+                        <label for="project-description" class="col-sm-2 control-label">Resumen SERP</label>
                         <div class="col-sm-10">
                             <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description', $project->description) }}">
                         </div>
@@ -146,7 +146,7 @@
                     <span id="status0" class="pull-right"></span>
                     <h3>
                         Título de la historia del proyecto.
-                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
+                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde? <em>(entre 55 y 70 caracteres)</em></small>
                     </h3>
                     <span id="limit0"></span>
                     <input id="note0" title="Pregunta 0" name="question_0" class="form-control"

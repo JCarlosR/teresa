@@ -46,13 +46,13 @@
                     <legend>Ficha del proyecto</legend>
 
                     <div class="form-group">
-                        <label for="project-name" class="col-sm-2 control-label">Nombre del proyecto</label>
+                        <label for="project-name" class="col-sm-2 control-label">Título SERP</label>
                         <div class="col-sm-10">
                             <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name') }}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="project-description" class="col-sm-2 control-label">Resumen del proyecto</label>
+                        <label for="project-description" class="col-sm-2 control-label">Resumen SERP</label>
                         <div class="col-sm-10">
                             <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description') }}">
                         </div>
