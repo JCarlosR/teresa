@@ -141,7 +141,7 @@
 
                     <h3>
                         Título de la historia del proyecto.
-                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde?</small>
+                        <small>¿Qué logramos? ¿En cuánto tiempo? ¿Dónde? <em>(entre 55 y 70 caracteres)</em></small>
                     </h3>
                     <span id="limit0"></span>
                     <span id="status0" class="pull-right"></span>
