@@ -24,6 +24,7 @@
     <!--START-->
     <div class="section-padding">
         <div class="container">
+            @if (isset($aboutUs))
             <div class="row">
                 <div class="page-title">
                     <p class="lead">{{ $aboutUs->description }}</p>
@@ -84,6 +85,7 @@
                     @endif
                 </div>
             </div>
+            @endif
         </div>
     </div>
     <!--PORTFOLIO END-->
