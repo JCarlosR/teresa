@@ -54,7 +54,7 @@ class ServiceController extends Controller
 
         $service = new Service();
         $service->user_id = $this->client()->id;
-        $service->name = $request->get('name');
+        $service->name = trim($request->get('name'));
         $service->description = $request->get('description');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
@@ -88,7 +88,7 @@ class ServiceController extends Controller
         $this->validate($request, $rules, $messages);
 
         $service = Service::find($request->get('service_id'));
-        $service->name = $request->get('name');
+        $service->name = trim($request->get('name'));
         $service->description = $request->get('description');
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
