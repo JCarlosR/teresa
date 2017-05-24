@@ -83,8 +83,8 @@
       <file leaf-file-name="config.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="118" column="5" lean-forward="false" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+            <state relative-caret-position="338">
+              <caret line="116" column="6" lean-forward="false" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -569,14 +569,7 @@
       <workItem from="1495118796930" duration="4381000" />
       <workItem from="1495207895643" duration="2691000" />
       <workItem from="1495548182372" duration="3765000" />
-      <workItem from="1495634570103" duration="596000" />
-    </task>
-    <task id="LOCAL-00210" summary="Step accept decimal numbers">
-      <created>1494341533879</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1494341533879</updated>
+      <workItem from="1495634570103" duration="737000" />
     </task>
     <task id="LOCAL-00211" summary="Store new activity with status 0 (null received)">
       <created>1494342539851</created>
@@ -914,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495552601390</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Div editable">
+      <created>1495635171775</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1495635171775</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549045000" />
+    <option name="totallyTimeSpent" value="549186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1378,8 +1378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="118" column="5" lean-forward="false" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+        <state relative-caret-position="338">
+          <caret line="116" column="6" lean-forward="false" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
           <folding />
         </state>
       </provider>
