@@ -26,7 +26,7 @@
                 <div class="widget-heading">
                     <h3 class="widget-title">Configuración del formulario de contacto</h3>
                 </div>
-                <x class="widget-body">
+                <div class="widget-body">
                     @if (! $client->contact_email || ! $client->google_account)
                         <div class="alert alert-danger">
                             @if (! $client->contact_email)
@@ -86,35 +86,37 @@
                     <h3>Ejemplo</h3>
                     <p>Es recomendable seguir los 4 pasos antes descritos sin omitir las clases o la estructura que tiene el formulario de cada plantilla.</p>
                     <p>Sin embargo, para tener una idea, a continuación se muestra un código HTML totalmente funcional:</p>
-<xmp>
-<form action="{{ url('/formulario/contacto') }}">
-    <input type="hidden" name="user_id" value="{{ $client->id }}">
 
-    Nombre completo:
-    <input type="text" name="name" required>
+                    <xmp>
+                        <form action="{{ url('/formulario/contacto') }}">
+                            <input type="hidden" name="user_id" value="{{ $client->id }}">
 
-    Email de contacto:
-    <input type="email" name="email" required>
+                            Nombre completo:
+                            <input type="text" name="name" required>
 
-    Teléfono:
-    <input type="text" name="phone">
+                            Email de contacto:
+                            <input type="email" name="email" required>
 
-    Asunto:
-    <select name="topic" required>
-        <option value="">Seleccione motivo</option>
-        <option value="Proyectos">Presupuestos</option>
-        <option value="Proveedores">Proveedores</option>
-        <option value="Empleo">Empleo</option>
-        <option value="Contacto directo">Contacto directo</option>
-        <option value="Otros">Otros</option>
-    </select>
+                            Teléfono:
+                            <input type="text" name="phone">
 
-    Mensaje:
-    <textarea name="content" required></textarea>
+                            Asunto:
+                            <select name="topic" required>
+                                <option value="">Seleccione motivo</option>
+                                <option value="Proyectos">Presupuestos</option>
+                                <option value="Proveedores">Proveedores</option>
+                                <option value="Empleo">Empleo</option>
+                                <option value="Contacto directo">Contacto directo</option>
+                                <option value="Otros">Otros</option>
+                            </select>
 
-    <button type="submit">Enviar</button>
-</form>
-</xmp>
+                            Mensaje:
+                            <textarea name="content" required></textarea>
+
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </xmp>
+
                     <p class="text-muted">No se recomienda copiar y pegar porque se perderían los estilos del formulario de la plantilla. Se debe usar como guía.</p>
                 </div>
             </div>

@@ -83,8 +83,8 @@
       <file leaf-file-name="config.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="116" column="6" lean-forward="false" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+            <state relative-caret-position="235">
+              <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -569,14 +569,7 @@
       <workItem from="1495118796930" duration="4381000" />
       <workItem from="1495207895643" duration="2691000" />
       <workItem from="1495548182372" duration="3765000" />
-      <workItem from="1495634570103" duration="737000" />
-    </task>
-    <task id="LOCAL-00211" summary="Store new activity with status 0 (null received)">
-      <created>1494342539851</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1494342539851</updated>
+      <workItem from="1495634570103" duration="792000" />
     </task>
     <task id="LOCAL-00212" summary="From null to zero also for updating">
       <created>1494342722743</created>
@@ -914,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495635171775</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary="XMP tag">
+      <created>1495635320807</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1495635320807</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="549186000" />
+    <option name="totallyTimeSpent" value="549241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -987,7 +987,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Max file size to 3 MB (project, service and about us images)" />
     <MESSAGE value="Fix namespace and add description fields" />
     <MESSAGE value="Update description fields and SERP" />
     <MESSAGE value="Visitor recordings as new activity type for work schedules" />
@@ -1012,7 +1011,8 @@
     <MESSAGE value="Target _blank social links" />
     <MESSAGE value="Trim services name" />
     <MESSAGE value="Div editable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Div editable" />
+    <MESSAGE value="XMP tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="XMP tag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1378,8 +1378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/inbox/config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="116" column="6" lean-forward="false" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+        <state relative-caret-position="235">
+          <caret line="117" column="20" lean-forward="false" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
           <folding />
         </state>
       </provider>
