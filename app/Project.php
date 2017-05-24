@@ -39,7 +39,22 @@ class Project extends Model
 
     public function getFeaturedImageAttribute()
     {
-        return ProjectImage::where('project_id', $this->id)->first();
+        $projectImages = $this->images;
+
+        if (count($projectImages) == 0) {
+            $projectImage = new ProjectImage();
+            $projectImage->fullPath = url('images/teresa-placeholder.png');
+            $projectImage->name = 'Proyeto sin imagen asignada';
+            return $projectImage;
+        }
+
+        foreach ($projectImages as $projectImage) {
+            if ($projectImage->featured)
+                return $projectImage;
+        }
+
+        // there is no a featured image (?)
+        return $projectImages->first();
     }
 
     public function getCharactersCountAttribute()

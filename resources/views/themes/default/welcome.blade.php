@@ -92,22 +92,6 @@
                             </div>
                             @endif
                         @endforeach
-                        {{--<div class="filimg mix category-1 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="2">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea1.jpg') }}" class="img-responsive">--}}
-                        {{--</div>--}}
-                        {{--<div class="filimg mix category-2 col-md-4 col-sm-4 col-xs-12" data-myorder="4">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea2.jpg') }}" class="img-responsive">--}}
-                        {{--</div>--}}
-                        {{--<div class="filimg mix category-1 col-md-4 col-sm-4 col-xs-12" data-myorder="1">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea3.jpg') }}" class="img-responsive">								</div>--}}
-                        {{--<div class="filimg mix category-2 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="8">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea4.jpg') }}" class="img-responsive">								</div>--}}
-                        {{--<div class="filimg mix category-2 col-md-4 col-sm-4 col-xs-12" data-myorder="8">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea5.jpg') }}" class="img-responsive">--}}
-                        {{--</div>--}}
-                        {{--<div class="filimg mix category-2 category-3 col-md-4 col-sm-4 col-xs-12" data-myorder="8">--}}
-                            {{--<img src="{{ asset('/themes/default/img/fea6.jpg') }}" class="img-responsive">--}}
-                        {{--</div>--}}
                     </div>
                 </div>
             </div>
