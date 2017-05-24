@@ -63,6 +63,15 @@ Route::get('/proyecto/imagenes/{id}/editar', 'ProjectImageController@edit');
 Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
 Route::get('/proyecto/imagenes/{id}/destacar', 'ProjectImageController@setFeatured');
 
+// Customers
+Route::get('/clientes', 'CustomerController@index');
+Route::get('/clientes/registrar', 'CustomerController@create');
+Route::post('/clientes/registrar', 'CustomerController@store');
+Route::get('/clientes/{id}/editar', 'CustomerController@edit');
+Route::post('/clientes/editar', 'CustomerController@update');
+Route::get('/clientes/{id}/eliminar', 'CustomerController@delete');
+
+
 // Quotes
 Route::get('/citas', 'QuoteController@index');
 Route::get('/citas/registrar', 'QuoteController@create');

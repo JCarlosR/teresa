@@ -20,6 +20,11 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Project');
     }
 
+    public function customers()
+    {
+        return $this->hasMany('App\Customer');
+    }
+
     public function quotes()
     {
         return $this->hasMany('App\Quote');

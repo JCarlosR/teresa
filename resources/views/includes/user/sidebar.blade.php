@@ -47,6 +47,7 @@
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
                 <li><a href="{{ url('/servicios') }}">Servicios</a></li>
                 <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
+                <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                 <li><a href="{{ url('/citas') }}">Citas</a></li>
             </ul>
         </li>
