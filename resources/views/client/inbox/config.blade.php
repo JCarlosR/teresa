@@ -86,7 +86,7 @@
                     <h3>Ejemplo</h3>
                     <p>Es recomendable seguir los 4 pasos antes descritos sin omitir las clases o la estructura que tiene el formulario de cada plantilla.</p>
                     <p>Sin embargo, para tener una idea, a continuación se muestra un código HTML totalmente funcional:</p>
-                    <textarea id="form-contact-example" class="form-control"
+<div contenteditable="true" id="form-contact-example" class="form-control"
                           style="font-family: Monospace, sans-serif; font-size: 12px; border: 0;"
                           rows="20">
 <form action="{{ url('/formulario/contacto') }}">
@@ -116,7 +116,7 @@
 
     <button type="submit">Enviar</button>
 </form>
-                    </textarea>
+</div>
                     <p class="text-muted">No se recomienda copiar y pegar porque se perderían los estilos del formulario de la plantilla. Se debe usar como guía.</p>
                 </div>
             </div>
