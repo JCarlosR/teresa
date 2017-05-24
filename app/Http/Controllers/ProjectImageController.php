@@ -7,6 +7,7 @@ use App\ProjectImage;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class ProjectImageController extends Controller
@@ -70,5 +71,28 @@ class ProjectImageController extends Controller
 
         $notification = 'La datos de la imagen se han actualizado correctamente.';
         return back()->with('notification', $notification);
+    }
+
+    public function setFeatured($id)
+    {
+        $projectImage = ProjectImage::find($id);
+        if (!$projectImage) return back();
+
+        $project = $projectImage->project;
+
+        // check permissions
+        $user = auth()->user();
+        if (!$user->is_admin && $user->id != $project->user_id)
+            return back();
+
+        // go and set the new featured image
+        DB::table('project_images')
+            ->where('project_id', $project->id)
+            ->update(['featured' => false]);
+
+        $projectImage->featured = true;
+        $projectImage->save();
+
+        return back();
     }
 }

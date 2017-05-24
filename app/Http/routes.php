@@ -61,6 +61,7 @@ Route::post('/proyecto/{id}/imagenes', 'ProjectImageController@upload');
 Route::get('/proyecto/imagenes/{id}/eliminar', 'ProjectImageController@delete');
 Route::get('/proyecto/imagenes/{id}/editar', 'ProjectImageController@edit');
 Route::post('/proyecto/imagenes/{id}/editar', 'ProjectImageController@update');
+Route::get('/proyecto/imagenes/{id}/destacar', 'ProjectImageController@setFeatured');
 
 // Quotes
 Route::get('/citas', 'QuoteController@index');

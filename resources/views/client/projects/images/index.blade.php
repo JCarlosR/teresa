@@ -9,6 +9,10 @@
         .thumbnail img {
             max-height: 95%;
         }
+        .big-black-icon {
+            color: #1f364f;
+            font-size: 1.2em;
+        }
     </style>
 @endsection
 
@@ -36,6 +40,12 @@
                     <div class="col-md-3">
                         <div class="widget">
                             <div class="widget-heading">
+                                <p class="pull-right">
+                                    <a href="/proyecto/imagenes/{{ $image->id }}/destacar"
+                                       data-toggle="tooltip" data-placement="top" title="Clic para destacar esta imagen">
+                                        <i class="glyphicon glyphicon-{{ ($image->featured ? 'star' : 'star-empty' ) }} big-black-icon"></i>
+                                    </a>
+                                </p>
                                 <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
                             </div>
                             <div class="widget-body">
