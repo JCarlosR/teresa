@@ -44,6 +44,7 @@
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
+                        <th>URL</th>
                         <th class="text-center">Imagen</th>
                         <th>Opciones</th>
                     </tr>
@@ -53,7 +54,14 @@
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $customer->name }}</td>
-                            <td>{{ $customer->image ?: 'Sin imagen' }}</td>
+                            <td>{{ $customer->url ?: 'Sin asignar' }}</td>
+                            <td class="text-center">
+                                @if ($customer->image)
+                                    <img src="{{ asset('images/customers/'.$customer->image) }}" alt="Imagen del cliente {{ $customer->name }}">
+                                @else
+                                    Sin imagen
+                                @endif
+                            </td>
                             <td>
                                 <a href="{{ url("clientes/$customer->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>

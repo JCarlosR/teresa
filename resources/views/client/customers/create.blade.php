@@ -27,7 +27,7 @@
                 </div>
             @endif
 
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
 
                 <fieldset>
@@ -36,8 +36,12 @@
                         <input type="text" name="name" id="customer-name" class="form-control" placeholder="Ingresa aquí el nombre del cliente" value="{{ old('name') }}">
                     </div>
                     <div class="form-group">
+                        <label for="customer-url">URL de la página del cliente</label>
+                        <input type="text" name="url" id="customer-url" class="form-control" placeholder="Ingresa aquí la página del cliente" value="{{ old('url') }}">
+                    </div>
+                    <div class="form-group">
                         <label for="customer-image">Logo del cliente</label>
-                        <input type="file" name="image" id="customer-image" class="form-control">
+                        <input type="file" name="image" id="customer-image" class="form-control" required>
                     </div>
                 </fieldset>
 

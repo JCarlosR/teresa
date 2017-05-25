@@ -27,7 +27,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/clientes/editar') }}" method="POST">
+            <form action="{{ url('/clientes/editar') }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="hidden" name="customer_id" value="{{ $customer->id }}">
                 <fieldset>
@@ -35,6 +35,10 @@
                     <div class="form-group">
                         <label for="customer-name">Nombre del cliente</label>
                         <input type="text" name="name" id="customer-name" class="form-control" placeholder="Ingresa aquí el nombre del cliente" value="{{ old('name', $customer->name) }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-url">URL de la página del cliente</label>
+                        <input type="text" name="url" id="customer-url" class="form-control" placeholder="Ingresa aquí la página del cliente" value="{{ old('url', $customer->url) }}">
                     </div>
                     <div class="form-group">
                         <label for="customer-image">Logo del cliente <em>Subir solo si se desea reemplazar</em></label>
