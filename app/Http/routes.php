@@ -2,6 +2,12 @@
 
 use Illuminate\Routing\Router;
 
+Route::group([
+    'domain' => 'seoproser.com'
+], function () {
+    Route::get('/', 'Cms\HomeController@index');
+});
+
 Route::get('/', 'GuessController@welcome');
 Route::get('/privacidad', 'GuessController@privacy');
 Route::get('/twitter/counter', 'Vendor\TwitterController@counter');
