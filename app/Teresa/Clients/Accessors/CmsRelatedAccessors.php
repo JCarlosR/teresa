@@ -7,6 +7,10 @@ trait CmsRelatedAccessors
 
     public function getLinkTo($path)
     {
+        if (strpos(url(), 'teresa') !== false) {
+            return url($path);
+        }
+
         return url('/ver/' . $this->id . $path);
     }
 
