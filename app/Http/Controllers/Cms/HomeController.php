@@ -12,6 +12,6 @@ class HomeController extends Controller
     public function index()
     {
         $c = new GuessController();
-        return $c->index(6);
+        return $c->index(25);
     }
 }
