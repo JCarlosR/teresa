@@ -7,7 +7,7 @@ trait CmsRelatedAccessors
 
     public function getLinkTo($path)
     {
-        if (strpos(url(), 'teresa') !== false) {
+        if (strpos(url('/'), 'teresa') !== false) {
             return url($path);
         }
 

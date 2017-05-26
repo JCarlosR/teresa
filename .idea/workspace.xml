@@ -73,8 +73,8 @@
       <file leaf-file-name="CmsRelatedAccessors.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Teresa/Clients/Accessors/CmsRelatedAccessors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="189">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -579,14 +579,7 @@
       <workItem from="1495548182372" duration="3765000" />
       <workItem from="1495634570103" duration="7445000" />
       <workItem from="1495722477784" duration="3858000" />
-      <workItem from="1495807885446" duration="1202000" />
-    </task>
-    <task id="LOCAL-00220" summary="Only project with images">
-      <created>1494347380502</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1494347380502</updated>
+      <workItem from="1495807885446" duration="1256000" />
     </task>
     <task id="LOCAL-00221" summary="Show only services ID">
       <created>1494347546702</created>
@@ -924,11 +917,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495808798937</updated>
     </task>
-    <option name="localTasksCounter" value="269" />
+    <task id="LOCAL-00269" summary="New link calculation">
+      <created>1495809112085</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1495809112085</updated>
+    </task>
+    <option name="localTasksCounter" value="270" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="560954000" />
+    <option name="totallyTimeSpent" value="561008000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -997,7 +997,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="New menu order" />
     <MESSAGE value="JSON social media" />
     <MESSAGE value="remove tab" />
     <MESSAGE value="About us images" />
@@ -1022,7 +1021,8 @@
     <MESSAGE value="Upload / edit images, URL field" />
     <MESSAGE value="Test custom domain" />
     <MESSAGE value="Change ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change ID" />
+    <MESSAGE value="New link calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="New link calculation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1399,8 +1399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Teresa/Clients/Accessors/CmsRelatedAccessors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="189">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding />
         </state>
       </provider>
