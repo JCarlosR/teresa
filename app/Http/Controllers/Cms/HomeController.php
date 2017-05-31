@@ -42,7 +42,7 @@ class HomeController extends Controller
     public function showService($service)
     {
         $c = new GuessController();
-        return $c->showProject($this->getUserId(), $service);
+        return $c->showService($this->getUserId(), $service);
     }
 
     public function aboutUs()
