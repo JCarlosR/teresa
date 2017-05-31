@@ -6,6 +6,12 @@ Route::group([
     'domain' => 'seoproser.com'
 ], function () {
     Route::get('/', 'Cms\HomeController@index');
+    Route::get('/proyectos', 'Cms\HomeController@projects');
+    Route::get('/proyecto/{project}', 'Cms\HomeController@showProject');
+    Route::get('/servicios', 'Cms\HomeController@services');
+    Route::get('/servicio/{service}', 'Cms\HomeController@showService');
+    Route::get('/nosotros', 'Cms\HomeController@aboutUs');
+    Route::get('/contacto', 'Cms\HomeController@contact');
 });
 
 Route::get('/', 'GuessController@welcome');
