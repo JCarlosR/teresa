@@ -3,7 +3,7 @@
 use Illuminate\Routing\Router;
 
 Route::group([
-    'domain' => 'seoproser.com'
+    'domain' => '*.seoproser.com'
 ], function () {
     Route::get('/', 'Cms\HomeController@index');
     Route::get('/proyectos', 'Cms\HomeController@projects');
