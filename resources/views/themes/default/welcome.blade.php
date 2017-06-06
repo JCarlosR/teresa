@@ -116,10 +116,9 @@
     <div class="cta2">
         <div class="container">
             <div class="row white text-center">
-                <p class="wd75 fnt-24">Confían en nosotros</p>
-                <p class="cta-sub-title">Clientes de {{ $me->name }}</p>
+                <p class="fnt-24">Confían en nosotros</p>
                 @foreach ($me->customers as $customer)
-                    <img src="/customers/{{ $customer->image }}" alt="{{ $customer->name }}">
+                    <img src="/images/customers/{{ $customer->image }}" alt="{{ $customer->name }}">
                 @endforeach
             </div>
         </div>
