@@ -30,7 +30,8 @@ class VerifyCsrfToken extends BaseVerifier
         }
 
         // throw new TokenMismatchException;
-        return back()->withErrors([
+        return back()->withInput($request->except('_token'))
+            ->withErrors([
             'csrf_token_expired' => 'Oops, el formulario estuvo inactivo por mucho tiempo. Por favor inténtalo de nuevo.'
         ]);
     }
