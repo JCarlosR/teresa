@@ -12,7 +12,13 @@
                value="{{ old('structure', $architect_project ? $architect_project->structure : '') }}">
     </div>
 </div>
-
+<div class="form-group">
+    <label for="project-management" class="col-sm-2 control-label">Gerencia de proyecto</label>
+    <div class="col-sm-10">
+        <input type="text" name="management" id="project-management" class="form-control" placeholder="Gerencia del proyecto"
+               value="{{ old('management', $architect_project ? $architect_project->management : '') }}">
+    </div>
+</div>
 
 <div class="form-group">
     <label for="project-location" class="col-sm-2 control-label">Ubicación</label>

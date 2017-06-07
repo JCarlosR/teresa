@@ -3,6 +3,8 @@
     <p>{{ $architect_project->architect ?: '---' }}</p>
     <p class="small">Estructuras</p>
     <p>{{ $architect_project->structure ?: '---' }}</p>
+    <p class="small">Gerencia de proyecto</p>
+    <p>{{ $architect_project->management ?: '---' }}</p>
 
     <p class="small">Ubicación</p>
     <p>{{ $architect_project->location ?: '---' }}</p>

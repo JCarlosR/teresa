@@ -101,6 +101,7 @@ class ProjectController extends Controller
                 $architect_project = new ArchitectProject();
                 $architect_project->architect = $request->get('architect');
                 $architect_project->structure = $request->get('structure');
+                $architect_project->management = $request->get('management');
                 $architect_project->location = $request->get('location');
                 $architect_project->ground_area = $request->get('ground_area');
                 $architect_project->project_area = $request->get('project_area');
@@ -188,6 +189,7 @@ class ProjectController extends Controller
 
                 $architect_project->architect = $request->get('architect');
                 $architect_project->structure = $request->get('structure');
+                $architect_project->management = $request->get('management');
                 $architect_project->location = $request->get('location');
                 $architect_project->ground_area = $request->get('ground_area');
                 $architect_project->project_area = $request->get('project_area');
