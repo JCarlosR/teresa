@@ -1,0 +1,65 @@
+
+/*------------------------------------------------*/
+/*-----------------[FOOTER STYLE 3]---------------*/
+/*------------------------------------------------*/
+.footer-logo img {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-3 {
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    position: relative;
+    padding: 80px 0;
+}
+.footer-3 .copyright {
+ padding-top: 15px;
+}
+.footer * {
+    color: inherit;
+}
+.footer a:hover,
+.footer a:focus {
+    text-decoration: none;
+    color: #a0ce4e;
+}
+
+.footer .list-inline {
+    margin-left: -15px;
+}
+
+.footer .list-inline > li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer .list-inline > li a {
+    text-decoration: none;
+}
+.social-icons {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.social-icons > li {
+    display: inline-block;
+}
+.social-icons > li > a i {
+    color: #fff;
+}
+.social-icons > li > a {
+    background: #222 none repeat scroll 0 0;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin: 15px 8px 0 0;
+    text-align: center;
+    width: 32px;
+    border-radius: 50%;
+}
+.social-icons > li > a:hover{
+  background: #a0ce4e;
+}

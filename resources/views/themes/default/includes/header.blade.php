@@ -12,7 +12,8 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="{{ $me->getLinkTo('/') }}">Inicio</a></li>
+                    <li class="active">
+                        <a href="{{ $me->getLinkTo('/') }}">Inicio</a></li>
                     <li><a href="{{ $me->getLinkTo('/nosotros') }}">Nosotros</a></li>
                     <li><a href="{{ $me->getLinkTo('/servicios') }}">Servicios</a></li>
                     <li><a href="{{ $me->getLinkTo('/proyectos') }}">Proyectos</a></li>
