@@ -10,8 +10,17 @@ use App\User;
 
 class GuessController extends Controller
 {
+    private function getTheme(User $user)
+    {
+        $theme = $user->theme;
+        if (! $theme)
+            $theme = 'default';
+
+        return $theme;
+    }
+
     public function index($id)
-    {  
+    {
         $me = User::find($id);
         $services = $me->services;
 
@@ -22,7 +31,8 @@ class GuessController extends Controller
 
         // social profiles can be used anywhere (via one method defined for the User model)
 
-        return view('themes.classify.welcome')->with(compact(
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.welcome")->with(compact(
             'me', 'services', 'about_us'
         ));
     }
@@ -31,40 +41,52 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $projects = $me->projects;
-        return view('themes.classify.projects.index')->with(compact('me', 'projects'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.projects.index")->with(compact('me', 'projects'));
     }
 
     public function showProject($id, $project)
     {
         $me = User::find($id);
         $project = Project::find($project);
-        return view('themes.classify.projects.show')->with(compact('me', 'project'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.projects.show")->with(compact('me', 'project'));
     }
 
     public function services($id)
     {
         $me = User::find($id);
         $services = $me->services;
-        return view('themes.classify.services.index')->with(compact('me', 'services'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.services.index")->with(compact('me', 'services'));
     }
 
     public function showService($id, $service)
     {
         $me = User::find($id);
         $service = Service::find($service);
-        return view('themes.classify.services.show')->with(compact('me', 'service'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.services.show")->with(compact('me', 'service'));
     }
 
     public function aboutUs($id)
     {
         $me = User::find($id);
         $aboutUs = $me->about_us;
-        return view('themes.classify.about-us')->with(compact('me', 'aboutUs'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.about-us")->with(compact('me', 'aboutUs'));
     }
 
     public function contact($id)
     {
         $me = User::find($id);
-        return view('themes.classify.contact')->with(compact('me'));
+
+        $theme = $this->getTheme($me);
+        return view("themes.$theme.contact")->with(compact('me'));
     }
 }

@@ -5,6 +5,4 @@ use App\Service;
 trait CustomersRelatedAccessors
 {
 
-
-
 }

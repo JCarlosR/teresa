@@ -113,13 +113,13 @@
     </div>
     <!--TEAM END-->
 
-    <!--CTA2 START-->
     <div class="cta2">
         <div class="container">
             <div class="row white text-center">
-                <p class="wd75 fnt-24">“Every Thing is designed. Few Things are Designed well.” - {{ $me->name }}</p>
-                <p class="cta-sub-title"></p>
-                <a href="#" class="btn btn-default">Contactar</a>
+                <p class="fnt-24">Confían en nosotros</p>
+                @foreach ($me->customers as $customer)
+                    <img src="/images/customers/{{ $customer->image }}" alt="{{ $customer->name }}">
+                @endforeach
             </div>
         </div>
     </div>

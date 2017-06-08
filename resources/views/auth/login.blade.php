@@ -9,24 +9,22 @@
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
 
-        <div class="form-group{{ $errors->has('email') ? ' has-warning' : '' }}">
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
+
+        <div class="form-group">
             <div class="col-xs-12">
                 <input type="text" placeholder="E-mail" class="form-control" name="email" value="{{ old('email') }}">
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
             </div>
         </div>
-        <div class="form-group{{ $errors->has('password') ? ' has-warning' : '' }}">
+        <div class="form-group">
             <div class="col-xs-12">
                 <input type="password" placeholder="Contraseña" class="form-control" name="password" autocomplete="new-password">
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
             </div>
         </div>
         <div class="form-group">
