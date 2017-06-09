@@ -40,7 +40,7 @@
                     <div class="col-md-4">
                         <div class="service-box">
                             <div class="service-icon col-md-3">
-                                <i class="fa fa-diamond"></i>
+
                             </div>
 
                             <div class="service-text col-md-9">

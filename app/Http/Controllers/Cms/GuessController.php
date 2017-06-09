@@ -31,17 +31,16 @@ class GuessController extends Controller
 
         // social profiles can be used anywhere (via one method defined for the User model)
 
+
         $theme = $this->getTheme($me);
         return view("themes.$theme.welcome")->with(compact(
-            'me', 'services', 'about_us'
-        ));
+            'me', 'services', 'about_us'));
     }
 
     public function projects($id)
-    {
+    {        
         $me = User::find($id);
         $projects = $me->projects;
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.projects.index")->with(compact('me', 'projects'));
     }
@@ -50,7 +49,6 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $project = Project::find($project);
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.projects.show")->with(compact('me', 'project'));
     }
@@ -59,7 +57,6 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $services = $me->services;
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.services.index")->with(compact('me', 'services'));
     }
@@ -68,7 +65,6 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $service = Service::find($service);
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.services.show")->with(compact('me', 'service'));
     }
@@ -77,7 +73,6 @@ class GuessController extends Controller
     {
         $me = User::find($id);
         $aboutUs = $me->about_us;
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.about-us")->with(compact('me', 'aboutUs'));
     }
@@ -85,7 +80,6 @@ class GuessController extends Controller
     public function contact($id)
     {
         $me = User::find($id);
-
         $theme = $this->getTheme($me);
         return view("themes.$theme.contact")->with(compact('me'));
     }
