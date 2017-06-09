@@ -27,6 +27,19 @@ class Service extends Model
 
     // accessors
 
+    public function getFeaturedImageAttribute()
+    {
+        $serviceImages = $this->images;
+
+        foreach ($serviceImages as $serviceImage) {
+            if ($serviceImage->featured)
+                return $serviceImage;
+        }
+
+        // there is no a featured image (?)
+        return $serviceImages->first();
+    }
+
     public function getCharactersCountAttribute()
     {
         return strlen(strip_tags($this->question_1)) +

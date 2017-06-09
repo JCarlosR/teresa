@@ -23,6 +23,7 @@
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                 {{ $service->name }}
                             </a>.
+                            <img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">
                             <p>{{ $service->description }}</p>
                             <hr class="pg-titl-bdr-btm">
                         </li>
