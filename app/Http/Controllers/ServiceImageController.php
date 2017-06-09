@@ -7,6 +7,7 @@ use App\ServiceImage;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class ServiceImageController extends Controller
@@ -73,4 +74,26 @@ class ServiceImageController extends Controller
         return back()->with('notification', $notification);
     }
 
+    public function setFeatured($id)
+    {
+        $serviceImage = ServiceImage::find($id);
+        if (!$serviceImage) return back();
+
+        $service = $serviceImage->service;
+
+        // check permissions
+        $user = auth()->user();
+        if (!$user->is_admin && $user->id != $service->user_id)
+            return back();
+
+        // go and set the new featured image
+        DB::table('service_images')
+            ->where('service_id', $service->id)
+            ->update(['featured' => false]);
+
+        $serviceImage->featured = true;
+        $serviceImage->save();
+
+        return back();
+    }
 }
