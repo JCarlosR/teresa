@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="Show featur">
+    <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service.php" afterPath="$PROJECT_DIR$/app/Service.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="139" lean-forward="false" selection-start-line="25" selection-start-column="139" selection-end-line="25" selection-end-column="139" />
+            <state relative-caret-position="378">
+              <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -603,14 +602,7 @@
       <workItem from="1496781057567" duration="5282000" />
       <workItem from="1496842144967" duration="7028000" />
       <workItem from="1496931552457" duration="3616000" />
-      <workItem from="1497020953022" duration="917000" />
-    </task>
-    <task id="LOCAL-00242" summary="New menu order">
-      <created>1495120124888</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1495120124889</updated>
+      <workItem from="1497020953022" duration="1172000" />
     </task>
     <task id="LOCAL-00243" summary="JSON social media">
       <created>1495120565965</created>
@@ -948,11 +940,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497021380247</updated>
     </task>
-    <option name="localTasksCounter" value="291" />
+    <task id="LOCAL-00291" summary="Show featured service image">
+      <created>1497021883704</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1497021883704</updated>
+    </task>
+    <option name="localTasksCounter" value="292" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="585328000" />
+    <option name="totallyTimeSpent" value="585583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +997,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Upload / edit images, URL field" />
     <MESSAGE value="Test custom domain" />
     <MESSAGE value="Change ID" />
     <MESSAGE value="New link calculation" />
@@ -1023,7 +1021,8 @@
     <MESSAGE value="Display errors in &lt;p&gt;" />
     <MESSAGE value="Add theme to users" />
     <MESSAGE value="Add featured image to services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add featured image to services" />
+    <MESSAGE value="Show featured service image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show featured service image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1423,8 +1422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/services/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="139" lean-forward="false" selection-start-line="25" selection-start-column="139" selection-end-line="25" selection-end-column="139" />
+        <state relative-caret-position="378">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
           <folding />
         </state>
       </provider>
