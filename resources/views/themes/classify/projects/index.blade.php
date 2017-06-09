@@ -29,62 +29,45 @@
         <section class="home-main-contant-style bg-white">
             <div class="cd-home-title">
                 <h2>Proyectos de Arquitectura y Construcción</h2>
-                <p>Diferentes proyectos desarrollados por la oficina 1.8.10 Consultores en los años de experiencia ....</p>
+                <p>{{ $me->projects_description }}</p>
             </div>
-          </div>
-            </div>
-        </section>
-        <!--END SERVICE-->
-        <!-- START MAIN CONTAIN -->
-        <div class="main-contain">
-            <div class="container">
-
-<div id="js-filters-masonry" class="cbp-l-filters-button">
-    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-        TODOS <div class="cbp-filter-counter"></div>
-    </div>
-    <div data-filter=".identity" class="cbp-filter-item">
-        Acondicionamiento de Oficinas
-        <div class="cbp-filter-counter"></div>
-    </div>
-    <div data-filter=".web-design" class="cbp-filter-item">
-      Licencias de Funcionamiento
-      <div class="cbp-filter-counter"></div>
-    </div>
-    <div data-filter=".graphic" class="cbp-filter-item"><!--.graphic-->
-      Tramites Municipales de Licencia de Construcción
-     <div class="#"></div>
-    </div>
-    <div data-filter="-" class="cbp-filter-item"><!--.graphic, .identity-->
-      Soporte Técnico para Oficinas de Arquitectura
-
-     <div data-filter=".graphic" class="cbp-filter-counter"></div>
-    </div>
-    <div data-filter=".graphic" class="cbp-filter-item"><!--.graphic, .identity-->
-        Desarrollo de Planos de Seguridad y Evacuación<div class="cbp-filter-counter">
         </div>
     </div>
-    <div data-filter=".graphic" class="cbp-filter-item"><!--.graphic, .identity-->
-        Capacitación en Atención al Público <div class="cbp-filter-counter">
-        </div>
+</section>
+<!--END SERVICE-->
+<!-- START MAIN CONTAIN -->
+<div class="main-contain">
+    <div class="container">
+
+
+
+        <div class="port-sec">
+                    <div class="col-md-12 fil-btn text-center">
+                        <div class="filter wrk-title active" data-filter="all" style="">Ver todos</div>
+                        @foreach ($me->services as $service)
+                            <div class="filter wrk-title" data-filter=".category-{{ $service->id }}">
+                                {{ $service->name }}
+                            </div>
+                        @endforeach
+                    </div>
+                    <div id="Container">
+                        @foreach ($me->projects as $project)
+                            @if ($project->featuredImage)
+                                <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
+
+                                    <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                    </a>
+                                    
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
     </div>
+
+
 </div>
-
-<ol>
-                    @foreach ($projects as $project)
-                        <li>
-                            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
-                                {{ $project->name }}
-                            </a>.
-                            <p>{{ $project->description }}</p>
-                            <hr class="pg-titl-bdr-btm">
-                        </li>
-                    @endforeach
-                </ol>
 </div>
-
-
-            </div>
-        </div>
     <!-- END MAIN CONTAIN -->
 @endsection

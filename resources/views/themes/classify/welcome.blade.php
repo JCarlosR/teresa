@@ -112,7 +112,7 @@
                 @foreach ($services as $service)
                     <div class="col-md-4" >
                         <div class="service-box">
-                            <div class="service-icon col-md-3">
+                            <div class=" col-md-3">
                                 <i ></i>
                             </div>
 

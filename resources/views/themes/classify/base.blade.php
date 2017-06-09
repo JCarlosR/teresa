@@ -119,6 +119,7 @@
 <script type="text/javascript" src="{{ asset('/themes/classify/js/cubeportfolio/blog-grid-3col.js') }}"></script>
 <!-- CUSTOM-->
 <script type="text/javascript" src="{{ asset('/themes/classify/js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/themes/classify/js/jquery.mixitup.js') }}"></script>
 
 </body>
 </html>
