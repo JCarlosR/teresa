@@ -15,16 +15,17 @@
     </div>
     <!--BANNER END-->
 
-    <!--CTA1 START-->
-    <div class="cta-1">
+    <div id="about" class="section-padding">
         <div class="container">
-            <div class="row text-center white">
-                <h3 class="cta-title">Say Hey to Tempo!!</h3>
-                <p class="cta-sub-title">Full Responsive HTML5 Bootstrap Template.</p>
+            <div class="row">
+                <div class="page-title text-center">
+                    <h2>Nosotros</h2>
+                    <p>{{ $me->about_us }}</p>
+                    <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
+                </div>
             </div>
         </div>
     </div>
-    <!--CTA1 END-->
 
     <!--SERVICE START-->
     <div id="service" class="section-padding">
@@ -68,7 +69,7 @@
         <div class="container">
             <div class="row">
                 <div class="page-title text-center">
-                    <h2>Nuestros proyectos</h2>
+                    <h2>Proyectos recientes</h2>
                     <p>{{ $me->projects_description }}</p>
                     <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
@@ -98,20 +99,6 @@
         </div>
     </div>
     <!--PORTFOLIO END-->
-
-    <!--TEAM START-->
-    <div id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="page-title text-center">
-                    <h2>Nosotros</h2>
-                    <p>{{ $me->about_us }}</p>
-                    <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--TEAM END-->
 
     <div class="cta2">
         <div class="container">
