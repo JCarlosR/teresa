@@ -118,7 +118,9 @@
             <div class="row white text-center">
                 <p class="fnt-24">Confían en nosotros</p>
                 @foreach ($me->customers as $customer)
-                    <img src="/images/customers/{{ $customer->image }}" alt="{{ $customer->name }}">
+                    <a href="{{ $customer->url ?: '#' }}">
+                        <img src="/images/customers/{{ $customer->image }}" alt="{{ $customer->name }}">
+                    </a>
                 @endforeach
             </div>
         </div>
