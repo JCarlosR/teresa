@@ -16,8 +16,8 @@
             <div class="col-md-6">
                 <h3>Datos de contacto</h3>
                 <div class="footer_copyright">
-                    <p><strong>Teléfono:</strong> {{ $me->address }}</p>
-                    <p><strong>Dirección:</strong> {{ $me->phones }}</p>
+                    <p><strong>Teléfono:</strong> {{ $me->phones }}</p>
+                    <p><strong>Dirección:</strong> {{ $me->address }}</p>
                 </div>
                 <a href="{{ $me->getLinkTo('/contacto') }}" class="btn btn-primary">Contáctanos ya!</a>
             </div>
