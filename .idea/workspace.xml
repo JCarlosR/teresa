@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,21 +50,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="data-tables.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/themes/default/contact.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="21" column="99" lean-forward="false" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -82,8 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>perfiles pro</find>
-      <find>descr</find>
       <find>span</find>
       <find>learn more</find>
       <find>nuestros proyectos</find>
@@ -112,6 +120,8 @@
       <find>cronograma</find>
       <find>say</find>
       <find>nuestros pro</find>
+      <find>linkto</find>
+      <find>link</find>
     </findStrings>
     <replaceStrings>
       <replace>$client</replace>
@@ -140,7 +150,6 @@
         <option value="$PROJECT_DIR$/resources/views/client/projects/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/client/projects/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" />
         <option value="$PROJECT_DIR$/resources/views/client/inbox/config.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_05_24_141946_add_featured_to_project_images.php" />
@@ -184,6 +193,7 @@
         <option value="$PROJECT_DIR$/app/WorkScheduleDetail.php" />
         <option value="$PROJECT_DIR$/resources/views/client/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -564,14 +574,7 @@
       <workItem from="1496931552457" duration="3616000" />
       <workItem from="1497020953022" duration="2966000" />
       <workItem from="1497113280372" duration="425000" />
-      <workItem from="1497306305916" duration="456000" />
-    </task>
-    <task id="LOCAL-00247" summary="Center image">
-      <created>1495121381960</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1495121381960</updated>
+      <workItem from="1497306305916" duration="2415000" />
     </task>
     <task id="LOCAL-00248" summary="Link to each project &amp; service">
       <created>1495208971087</created>
@@ -909,11 +912,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497306634660</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="Reorder sections in welcome view">
+      <created>1497306777481</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1497306777481</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="588258000" />
+    <option name="totallyTimeSpent" value="590217000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -959,7 +969,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix order result" />
     <MESSAGE value="Env variable for MB size limit (images)" />
     <MESSAGE value="Routes for client domain" />
     <MESSAGE value="Fix typo" />
@@ -984,7 +993,8 @@
     <MESSAGE value="Remove useless data-table dependencies" />
     <MESSAGE value="Add customer links" />
     <MESSAGE value="Add target _blank" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add target _blank" />
+    <MESSAGE value="Reorder sections in welcome view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reorder sections in welcome view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,20 +1003,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/quotes/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-819">
@@ -1317,14 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -1351,8 +1339,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+        <state relative-caret-position="207">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/js/page-content/tables/data-tables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/themes/default/includes/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="21" column="99" lean-forward="false" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
           <folding />
         </state>
       </provider>

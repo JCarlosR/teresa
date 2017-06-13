@@ -1,8 +1,8 @@
-<!--FOOTER START-->
 <footer class="footer section-padding">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div style="visibility: visible; animation-name: zoomIn;" class="col-sm-12 text-center wow zoomIn">
+
+            <div class="col-md-6 text-center">
                 <h3>Síguenos en</h3>
                 <div class="footer_social">
                     <ul>
@@ -12,18 +12,26 @@
                         <li><a target="_blank" class="f_linkedin" href="{{ $me->getSocialProfile('linkedin')->url }}"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-            </div><!--- END COL -->
+            </div>
+            <div class="col-md-6">
+                <h3>Datos de contacto</h3>
+                <div class="footer_copyright">
+                    <p><strong>Teléfono:</strong> {{ $me->address }}</p>
+                    <p><strong>Dirección:</strong> {{ $me->phones }}</p>
+                </div>
+                <a href="{{ $me->getLinkTo('/contacto') }}" class="btn btn-primary">Contáctanos ya!</a>
+            </div>
+
         </div><!--- END ROW -->
     </div><!--- END CONTAINER -->
 </footer>
-<!--FOOTER END-->
+
+
 <div class="footer-bottom">
     <div class="container">
-        <div style="visibility: visible; animation-name: zoomIn;" class="col-md-12 text-center wow zoomIn">
+        <div class="col-md-12 text-center">
             <div class="footer_copyright">
-                <p>© Copyright, Todos los derechos reservados.</p>
-                <div class="credits">
-                </div>
+                <p>© Copyright - Todos los derechos reservados.</p>
             </div>
         </div>
     </div>
