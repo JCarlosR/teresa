@@ -68,6 +68,6 @@
     <script type="text/javascript" src="{{ asset('plugins/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js') }}"></script>
     {{-- Dashboard logic --}}
-    <script type="text/javascript" src="{{ asset('build/js/page-content/dashboard/index.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('build/js/page-content/tables/data-tables.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('src/dashboard/index.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('src/dashboard/data-tables.js') }}"></script>
 @endsection

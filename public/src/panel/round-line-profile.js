@@ -2,8 +2,7 @@
 
 $(document).ready(function() {
 
-    // User Profile
-    // --------------------------------------------------
+    // User profile: line round
 
     $('#esp-user-profile').easyPieChart({
         barColor: '#17A88B',
