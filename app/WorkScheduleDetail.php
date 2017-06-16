@@ -22,7 +22,7 @@ class WorkScheduleDetail extends Model
 
             case 'facebook_post': return 'Publicaciones en Facebook';
             case 'linkedin_post': return 'Publicaciones en Linkedin';
-            case 'google_plus_post': return 'Publicaciones en Google`+';
+            case 'google_plus_post': return 'Publicaciones en Google+';
             case 'twitter_post': return 'Publicaciones en Twitter';
             case 'pinterest_post': return 'Publicaciones en Pinterest';
             case 'instagram_post': return 'Publicaciones en Instagram';

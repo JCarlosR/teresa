@@ -65,6 +65,7 @@ Route::post('/servicio/{id}/imagenes', 'ServiceImageController@upload');
 Route::get('/servicio/imagenes/{id}/eliminar', 'ServiceImageController@delete');
 Route::get('/servicio/imagenes/{id}/editar', 'ServiceImageController@edit');
 Route::post('/servicio/imagenes/{id}/editar', 'ServiceImageController@update');
+Route::get('/servicio/imagenes/{id}/destacar', 'ServiceImageController@setFeatured');
 
 // Projects
 Route::get('/proyectos', 'ProjectController@index');

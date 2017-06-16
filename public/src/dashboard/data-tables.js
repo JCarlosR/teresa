@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var tableProjects = $('#table-projects').DataTable({
+    /*var tableProjects = */$('#table-projects').DataTable({
         lengthChange: false,
         iDisplayLength: 10,
         language: {
@@ -19,7 +19,6 @@ $(document).ready(function() {
             }
         }
     });
-    tableProjects.buttons().container().appendTo('#table-projects_wrapper .col-sm-6:eq(0)');
 
     /*var tableServices = */$('#table-services').DataTable({
         lengthChange: false,
@@ -41,7 +40,5 @@ $(document).ready(function() {
             }
         }
     });
-
-    // tableServices.buttons().container().appendTo('#table-services_wrapper .col-sm-6:eq(0)');
 
 });

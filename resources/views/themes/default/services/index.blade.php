@@ -16,20 +16,21 @@
     <div id="portfolio" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="page-title">
 
-                        @foreach ($services as $service)
-                        <li>
+                @foreach ($services as $service)
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                 {{ $service->name }}
-                            </a>.
+                            </a>
+                            <img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">
                             <p>{{ $service->description }}</p>
-                            <hr class="pg-titl-bdr-btm">
-                        </li>
-                        @endforeach
-
-
+                        </div>
+                    </div>
                 </div>
+                @endforeach
+
             </div>
         </div>
     </div>

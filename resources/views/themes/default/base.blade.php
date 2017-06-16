@@ -9,7 +9,7 @@
     <meta property="og:type" content="company"/>
     <meta property="og:url" content="{{ url()->current() }}"/>
     <meta property="og:image" content="{{ $me->photo_route }}"/>
-    <meta property="og:site_name" content="{{ $me->name }}"/>
+    <meta property="og:site_name" content="{{ $me->trade_name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
 
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">

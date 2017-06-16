@@ -348,34 +348,33 @@
     </aside>
     <!-- Right Sidebar end-->
 </div>
-<!-- jQuery-->
+
+{{-- jQuery --}}
 <script type="text/javascript" src="{{ asset('plugins/jquery/dist/jquery.min.js') }}"></script>
-<!-- Bootstrap JavaScript-->
+{{-- Bootstrap --}}
 <script type="text/javascript" src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<!-- Malihu Scrollbar-->
+{{-- Malihu Scrollbar --}}
 <script type="text/javascript" src="{{ asset('plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-<!-- Animo.js-->
+{{-- Animo.js --}}
 <script type="text/javascript" src="{{ asset('plugins/animo.js/animo.min.js') }}"></script>
-<!-- Bootstrap Progressbar-->
+{{-- Bootstrap: Progressbar --}}
 <script type="text/javascript" src="{{ asset('plugins/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
-<!-- jQuery Easy Pie Chart-->
+{{-- jQuery Easy Pie Chart --}}
 <script type="text/javascript" src="{{ asset('plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
-<!-- MomentJS-->
+{{-- MomentJS --}}
 <script type="text/javascript" src="{{ asset('plugins/moment/min/moment.min.js') }}"></script>
-<!-- jQuery BlockUI-->
+{{-- jQuery BlockUI --}}
 <script type="text/javascript" src="{{ asset('plugins/blockUI/jquery.blockUI.js') }}"></script>
-<!-- jQuery Counter Up-->
+{{-- jQuery Counter Up --}}
 <script type="text/javascript" src="{{ asset('plugins/jquery-waypoints/waypoints.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plugins/Counter-Up/jquery.counterup.min.js') }}"></script>
-
-<!-- Bootstrap Date Range Picker-->
+{{-- Bootstrap: Date range picker --}}
 <script type="text/javascript" src="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
 
-<!-- Core JS-->
-<script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
-<script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>
-<!-- Upload image profile -->
-<script type="text/javascript" src="{{ asset('build/js/image-profile.js') }}"></script>
+{{-- Core JS --}}
+<script type="text/javascript" src="{{ asset('src/panel/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('src/panel/round-line-profile.js') }}"></script>
+<script type="text/javascript" src="{{ asset('src/panel/upload-image-profile.js') }}"></script>
 @yield('scripts')
 </body>
 </html>
