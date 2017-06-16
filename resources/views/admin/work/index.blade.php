@@ -53,6 +53,16 @@
                 </div>
             @endif
 
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
             <p>Para registrar un nuevo cronograma <strong>simplemente ingresa la fecha de inicio</strong>.</p>
             <ul>
                 <li>
