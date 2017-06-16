@@ -149,7 +149,7 @@
                     </div>
                     <div class="port-sec">
                         <div class="col-md-12 fil-btn text-center">
-                            <div class="filter wrk-title active" data-filter="all">Ver todos</div>
+                            <div class="filter wrk-title active" data-filter="active">Ver todos</div>
                             @foreach ($me->services as $service)
                                 <div class="filter wrk-title" data-filter=".category-{{ $service->id }}">
                                     {{ $service->name }}

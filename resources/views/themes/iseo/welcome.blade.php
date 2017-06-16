@@ -1,4 +1,4 @@
-@extends('themes.default.base')
+@extends('themes.iseo.base')
 
 @section('content')
     <!--BANNER START-->
