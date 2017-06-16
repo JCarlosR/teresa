@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf24fea5-b092-4acd-b3c0-1ad9134ad9d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/work/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/work/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,17 +40,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkScheduleController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WorkScheduleController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="48" column="80" lean-forward="false" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
+            <state relative-caret-position="251">
+              <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/work/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -172,8 +172,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/resources/views/themes/default/base.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/themes/default/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/work/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php" />
       </list>
     </option>
   </component>
@@ -560,14 +560,7 @@
       <workItem from="1497561659130" duration="12000" />
       <workItem from="1497570007324" duration="111000" />
       <workItem from="1497585605861" duration="29000" />
-      <workItem from="1497624206476" duration="462000" />
-    </task>
-    <task id="LOCAL-00251" summary="Show data in the default theme">
-      <created>1495209988424</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1495209988424</updated>
+      <workItem from="1497624206476" duration="633000" />
     </task>
     <task id="LOCAL-00252" summary="is set about us">
       <created>1495548274922</created>
@@ -905,11 +898,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497624577479</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="Display error messages (work schedules)">
+      <created>1497624680608</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1497624680608</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="597395000" />
+    <option name="totallyTimeSpent" value="597566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -955,8 +955,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Strange condition" />
-    <MESSAGE value="Test all sub domain" />
     <MESSAGE value="Back" />
     <MESSAGE value="seoproser.com 301 redirect for www" />
     <MESSAGE value="Customer advances in default theme" />
@@ -980,7 +978,9 @@
     <MESSAGE value="Contact info in footer" />
     <MESSAGE value="Swap values" />
     <MESSAGE value="Validation for work schedules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation for work schedules" />
+    <MESSAGE value="Display error messages (work schedules)" />
+    <MESSAGE value="Date format validation rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="Date format validation rule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1320,14 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="48" column="80" lean-forward="false" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/client/work/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-189">
@@ -1348,6 +1340,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/WorkScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
           <folding />
         </state>
       </provider>

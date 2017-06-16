@@ -42,10 +42,10 @@ class WorkScheduleController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'start_date' => 'date|required'
+            'start_date' => 'date_format:Y-m-d|required'
         ];
         $messages = [
-            'start_date.date' => 'Ingrese un formato de fecha válido.',
+            'start_date.date_format' => 'Ingrese un formato de fecha válido.',
             'start_date.required' => 'Es necesario ingresar una fecha de inicio para el cronograma.'
         ];
         $this->validate($request, $rules, $messages);
