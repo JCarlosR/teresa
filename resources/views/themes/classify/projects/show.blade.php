@@ -10,25 +10,41 @@
 @endsection
 
 @section('content')
-    <!--CTA1 START-->
-    <div class="cta-1">
-        <div class="container">
-            <div class="row text-center white">
-                <h1 class="cta-title">{{ $project->name }}</h1>
-                <p class="cta-sub-title">{{ $project->description }}</p>
+<!-- Start Breadcrumb -->
+        <div class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1 class="cta-title">{{ $project->name }}</h1>
+                        <div class="breadcrumb">
+                            <p class="cta-sub-title">{{ $project->description }}</p>
+                            <div>
+                              <span class='st_facebook_large' displayText='Facebook' ></span>
+                              <span class='st_googleplus_large' displayText='Google +' ></span>
+                              <span class='st_linkedin_large' displayText='LinkedIn' ></span>
+                              <span class='st_twitter_large' displayText='Tweet' ></span>
+                              <span class='st_pinterest_large' displayText='Pinterest' ></span>
+                              <span class='st_fblike_large' displayText='Facebook Like' ></span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--CTA1 END-->
+        <!-- End Breadcrumb -->
+
 
     <!--PORTFOLIO START-->
     <div class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="panel">
-                    <div class="panel-heading">
-                        <h1>{{ $project->question_0 }}</h1>
+                    <div class="col-md-8">
+                        <div class="panel-heading">
+                            <center><h1>{{ $project->question_0 }}</h1></center>
+                        </div>
                     </div>
+
                     <div class="panel-body">
 
                         <div class="row">
