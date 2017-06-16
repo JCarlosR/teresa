@@ -43,16 +43,13 @@
                                     <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                         {{ $service->name }}
                                     </a>.
-                                      <img src=""  alt="imagenes"/>
 
-
-                                        <p>{{ $service->description }}</p>
-                                        <hr class="pg-titl-bdr-btm">
+                                    <img src="{{ $service->featuredImage->fullPath }}" class="imagenes" title="{{ $service->featuredImage->name }}">
+                                
+                                    <p>{{ $service->description }}</p>
+                                    <hr class="pg-titl-bdr-btm">
                                 </li>
                             </ul>
-
-
-
                             @endforeach
 
 

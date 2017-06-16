@@ -1,4 +1,4 @@
-@extends('themes.Classify.base')
+@extends('themes.classify.base')
 
 @section('styles')
     <style>

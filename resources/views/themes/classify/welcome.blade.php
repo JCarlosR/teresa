@@ -120,11 +120,10 @@
                                 <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                     <h3>{{ $service->name }}</h3>
                                 </a>
+                                <p>{{ $service->description }}</p>
                                 <p>
-                                    @if (strlen($service->description) > 25)
-                                        {{ $service->description }}
-                                    @else
-                                        Sin descripción: doloremque laudantium, rem aperiam, eaque ipsa quae ab veritatis.
+                                    @if ($service->featuredImage)
+                                        <img src="{{ $service->featuredImage->fullPath }}" class="imagenes" title="{{ $service->featuredImage->name }}">
                                     @endif
                                 </p>
                             </div>
@@ -139,12 +138,14 @@
                 <!--PORTFOLIO START-->
         <div id="portfolio" class="section-padding">
             <div class="container">
-                <div class="row">
+                <div class="row col-md-12">
+
                     <div class="page-title text-center">
-                        <h2>Nuestros proyectos</h2>
+                    <h2>Nuestros proyectos</h2>
                         <p>{{ $me->projects_description }}</p>
                         <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-default">Ver más</a></p>
-                        <hr class="pg-titl-bdr-btm">
+                        <br>
+                        <center><hr class="pg-titl-bdr-btm"></center>
                     </div>
                     <div class="port-sec">
                         <div class="col-md-12 fil-btn text-center">
