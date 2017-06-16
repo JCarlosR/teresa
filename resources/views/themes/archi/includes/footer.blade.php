@@ -1,38 +1,46 @@
-<footer class="footer section-padding">
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-md-6 text-center">
-                <h3>Síguenos en</h3>
-                <div class="footer_social">
-                    <ul>
-                        <li><a target="_blank" class="f_facebook" href="{{ $me->getSocialProfile('facebook')->url }}"><i class="fa fa-facebook"></i></a></li>
-                        <li><a target="_blank" class="f_twitter" href="{{ $me->getSocialProfile('twitter')->url }}"><i class="fa fa-twitter"></i></a></li>
-                        <li><a target="_blank" class="f_google" href="{{ $me->getSocialProfile('google_plus')->url }}"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a target="_blank" class="f_linkedin" href="{{ $me->getSocialProfile('linkedin')->url }}"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h3>Datos de contacto</h3>
-                <div class="footer_copyright">
-                    <p><strong>Teléfono:</strong> {{ $me->phones }}</p>
-                    <p><strong>Dirección:</strong> {{ $me->address }}</p>
-                </div>
-                <a href="{{ $me->getLinkTo('/contacto') }}" class="btn btn-primary">Contáctanos ya!</a>
-            </div>
-
-        </div><!--- END ROW -->
-    </div><!--- END CONTAINER -->
-</footer>
-
-
-<div class="footer-bottom">
-    <div class="container">
-        <div class="col-md-12 text-center">
-            <div class="footer_copyright">
-                <p>© Copyright - Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Footer -->
+			<footer id="wrap-footer">
+				<div class="container color-w">
+					<div class="row">
+						<div class="brad-h brad-h-w" data-top-bottom="transform: translateY(-100px);" data-bottom-top="transform: translateY(100px);">
+							<p>ARCHI.</p>
+						</div>
+						<!-- Contact info -->
+						<div class="col-sm-4 col-md-5 col-lg-5">
+							<a href="#" class="logo"><img src="../images/logo.png" alt="logo"></a>
+							<p class="f-35 f-bold m-t-20">0188-678-088</p>
+							<p class="m-b-15">Support@atchitec.com</p>
+							<p>276 Fifth Avenue Suite 204 New York NY 10001</p>
+						</div>
+						<!-- Newsletter -->
+						<div class="col-sm-4 col-md-4 col-lg-4 m-t-90 m-t-xs-30">
+							<h3>NEWSLETTER</h3>
+							<form>
+								<div class="input-icon">
+									<input type="text" class="form-item" placeholder="">
+									<button type="submit"><i class="fa fa-send-o"></i></button>
+								</div>
+							</form>
+						</div>
+						<!-- Social link -->
+						<div class="col-sm-4 col-md-3 col-lg-3 m-t-170 m-t-xs-30">
+							<ul class="list-inline pull-right pull-left-xs">
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bt">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6">
+								<p>© 2017 <a href="https://themeforest.net/user/t3theme">T3THEME</a> | Privacy Policy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>

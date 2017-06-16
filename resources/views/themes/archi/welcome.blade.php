@@ -2,115 +2,251 @@
 
 @section('content')
     <!--BANNER START-->
-    <div id="banner" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="jumbotron">
-                    <h1 class="small">Bienvenido a <span class="bold">{{ $me->name }}</span></h1>
-                    <p class="big">{{ $me->description }}</p>
-                    <a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-banner">Ver proyectos realizados<i class="fa fa-send"></i></a>
+    <div id="wrap-body">
+            <!-- Slideshow -->
+            <section>
+                <div class="brad-h" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(550px);">
+                    <p>ARCHI.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!--BANNER END-->
-
-    <div id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="page-title text-center">
-                    <h2>Nosotros</h2>
-                    <p>{{ $me->about_us }}</p>
-                    <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--SERVICE START-->
-    <div id="service" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="page-title text-center">
-                    <h2>Nuestros servicios</h2>
-                    <p>{{ $me->services_description }}</p>
-                    <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn btn-default">Ver más</a></p>
-                    <hr class="pg-titl-bdr-btm">
-                </div>
-                @foreach ($services as $service)
-                    <div class="col-md-4">
-                        <div class="service-box">
-                            <div class="service-icon col-md-3">
-
+                <div class="container">
+                    <div class="row ht-rf">
+                        <div class="col-sm-5 col-md-4 col-lg-4">
+                            <h1>Archi.</h1>
+                            <div data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(50px);">
+                                <div class="ht-rf-item"><b>231.</b>Projects</div>
                             </div>
-
-                            <div class="service-text col-md-9">
-                                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
-                                    <h3>{{ $service->name }}</h3>
-                                </a>
-                                <p>
-                                    @if (strlen($service->description) > 25)
-                                        {{ $service->description }}
-                                    @else
-                                        Sin descripción: doloremque laudantium, rem aperiam, eaque ipsa quae ab veritatis.
-                                    @endif
-                                </p>
+                            <div class="p-l-100 p-l-xs-50">
+                                <div class="ht-rf-item"><b>08.</b>Awards</div>
+                            </div>
+                            <div data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(50px);">
+                                <div class="ht-rf-item"><b>63.</b>Clients</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-md-8 col-lg-8 m-t-xs-50">
+                            <div class="bg-main-dark" data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
+                                <div class="list-rec">
+                                    <p class="bg-b"></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                    <p class="bg-b"></p>
+                                    <p class="bg-b"></p>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!--SERVICE END-->
-
-    <!--PORTFOLIO START-->
-    <div id="portfolio" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="page-title text-center">
-                    <h2>Proyectos recientes</h2>
-                    <p>{{ $me->projects_description }}</p>
-                    <p><a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-default">Ver más</a></p>
-                    <hr class="pg-titl-bdr-btm">
                 </div>
-                <div class="port-sec">
-                    <div class="col-md-12 fil-btn text-center">
-                        <div class="filter wrk-title active" data-filter="all">Ver todos</div>
-                        @foreach ($me->services as $service)
-                            <div class="filter wrk-title" data-filter=".category-{{ $service->id }}">
-                                {{ $service->name }}
-                            </div>
-                        @endforeach
+            </section>
+            <!-- Introduction -->
+            <section class="m-t-100">
+                <div class="container">
+                    <div class="brad-h" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(100px);">
+                        <p>ARCHI.</p>
                     </div>
-                    <div id="Container">
-                        @foreach ($me->projects as $project)
-                            @if ($project->featuredImage)
-                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
-                                <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
-                                    <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-8 col-lg-8">
+                            <h2 class="p-b-30 p-t-30 f-bold">Design at the intersection of performance and human experience.</h2>
+                            <p>Lorem ipsum dolor sit amet consecsed do eiusmod temp aliqu Lorem ipsum dolor sit amet consecsed do eiusmod temp incidunt ut labore et daliqu Lorem ipsum dolor sit amet consecsed do eiusmod temp incidunt ut labore et dincidunt ut labore et dolore magna aliqu Lorem ipsaliqu Lorem ipsum dolor sit amet consecsed do eiusmod temp incidunt ut labore et dum dolor sit amet consecsed do eiusmod temp incidunt ut labore et dolore magna aliqu Lorem ipsum d</p>
+                            <a href="#" class="btn ht-btn">View all projects</a>
+                        </div>
+                        <div class="col-sm-5 col-md-4 col-lg-4 text-right m-t-xs-50">
+                            <div class="border-20 p-30">
+                                <div data-top-bottom="transform: translateY(-130px);" data-bottom-top="transform: translateY(150px);">
+                                    <div class="title text-align-right">
+                                        <h2>Contact us</h2>
+                                    </div>
+                                    <p class="f-30 f-bold color-yellow">123-456-789</p>
+                                    <p class="m-b-15">Support@atchitec.com</p>
+                                    <p>276 Fifth Avenue Suite 204 New York NY 10001</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Services -->
+            <section class="m-t-100 color-w">
+                <div class="container">
+                    <div class="title text-align-left">
+                        <h2>Our services</h2>
+                    </div>
+                    <div class="row m-b-30" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(50px);">
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <div class="service-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
                                 </a>
+                                <div class="caption" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(0px);">
+                                    <h3><strong>01.</strong>Artchitecture</h3>
+                                </div>
                             </div>
-                            @endif
-                        @endforeach
+                        </div>
+                    </div>
+                    <div class="row m-b-30">
+                        <div class="col-sm-7 col-md-7 col-lg-7 col-lg-offset-5  col-md-offset-5  col-sm-offset-5">
+                            <div class="service-item bor-r-20 m-t-ab-150 m-t-xs-0 xs-no-border">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <div class="caption" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(0px);">
+                                    <h3><strong>02.</strong>Interior Design</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(150px);">
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <div class="service-item bor-l-20 m-t-ab-100 m-t-xs-0 xs-no-border">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <div class="caption" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(0px);">
+                                    <h3><strong>03.</strong>Planning</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- Tesimonials -->
+            <section class="m-t-100">
+                <div class="container">
+                    <div class="brad-h" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(0px);">
+                        <p>ARCHI.</p>
+                    </div>
+                    <div class="title text-align-left">
+                        <h2>testimonials</h2>
+                    </div>
+                    <div class="row">
+                        <!-- Tesimonial item -->
+                        <div class="col-sm-12 col-md-6 col-lg-6 m-b-xs-30">
+                            <div class="border-20 m-r-20 m-r-sm-0 m-r-xs-0">
+                                <div class="testimonial-item">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-md-5 col-lg-5">
+                                            <img src="/themes/archi/images/default.png" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                            <div class="testimonial-txt m-t-xs-20"><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet consecsed d do eiusmod temp incidunt ut labore et dolore magna allabore et dolore magna aliqu Lorem ipsum dolor sit amet et dincidunt ut labore et dolore magna aliqu Lorem ipsaliqu </div>
+                                            <p class="line"></p>
+                                            <p class="testimonial-name"><strong>Jan Bold</strong> / CEO &amp; Founder Archi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tesimonial item -->
+                        <div class="col-sm-12 col-md-6 col-lg-6"  data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(0px);">
+                            <div class="border-20 m-l-20 m-l-sm-0 m-l-xs-0">
+                                <div class="testimonial-item">
+                                    <div class="row">
+                                        <div class="col-sm-5 col-md-5 col-lg-5">
+                                            <img src="/themes/archi/images/default.png" alt="image">
+                                        </div>
+                                        <div class="col-sm-7 col-md-7 col-lg-7">
+                                            <div class="testimonial-txt m-t-xs-20"><i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet consecsed d do eiusmod temp incidunt ut labore et dolore magna allabore et dolore magna aliqu Lorem ipsum dolor sit amet et dincidunt ut labore et dolore magna aliqu Lorem ipsaliqu </div>
+                                            <p class="line"></p>
+                                            <p class="testimonial-name"><strong>Jan Bold</strong> / CEO &amp; Founder Archi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Team -->
+            <section class="m-t-100">
+                <div class="container">
+                    <div class="title">
+                        <h2>Our Team</h2>
+                    </div>
+                    <div class="row">
+                        <!-- Team item -->
+                        <div class="col-sm-4 col-md-4 col-lg-4 m-b-30"  data-top-bottom="transform: translateY(-100px);" data-bottom-top="transform: translateY(400px);">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Austin Evon</h4>
+                                <p>Co-manager associated</p>
+                            </div>
+                        </div>
+                        <!-- Team item-->
+                        <div class="col-sm-3 col-md-3 col-lg-3 m-b-30">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Austin Evon</h4>
+                                <p>Co-manager associated</p>
+                            </div>
+                        </div>
+                        <!-- Team item-->
+                        <div class="col-sm-2 col-md-2 col-lg-2 m-t-40" data-top-bottom="transform: translateY(-100px);" data-bottom-top="transform: translateY(100px);">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Mery Insi</h4>
+                                <p>Designer - Photographer</p>
+                            </div>
+                        </div>
+                        <!-- Team item-->
+                        <div class="col-sm-3 col-md-3 col-lg-3 m-t-40" data-top-bottom="transform: translateY(-100px);" data-bottom-top="transform: translateY(100px);">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Mery Insi</h4>
+                                <p>Designer - Photographer</p>
+                            </div>
+                        </div>
+                        <!-- Team item-->
+                        <div class="col-sm-3 col-md-3 col-lg-3 m-t-30">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Mery Insi</h4>
+                                <p>Designer - Photographer</p>
+                            </div>
+                        </div>
+                        <!-- Team item-->
+                        <div class="col-sm-4 col-md-4 col-lg-4 m-t-30" data-top-bottom="transform: translateY(-100px);" data-bottom-top="transform: translateY(100px);">
+                            <div class="team-item">
+                                <a href="#">
+                                    <img src="/themes/archi/images/default.png" alt="image">
+                                </a>
+                                <h4>Mery Insi</h4>
+                                <p>Designer - Photographer</p>
+                            </div>
+                        </div>
+                        <div class="brad-h m-l-100" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(780px);">
+                            <h3>ARCHI.</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-    <!--PORTFOLIO END-->
 
-    <div class="cta2">
-        <div class="container">
-            <div class="row white text-center">
-                <p class="fnt-24">Confían en nosotros</p>
-                @foreach ($me->customers as $customer)
-                    <a href="{{ $customer->url ?: '#' }}" target="_blank" title="Enlace al cliente {{ $customer->name }}">
-                        <img src="/images/customers/{{ $customer->image }}" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
-                    </a>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!--CTA2 END-->
 @endsection
