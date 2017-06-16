@@ -136,7 +136,7 @@
                         <div class="col-md-12">
                             <div id="logo" class="logo">
                                 <a href="index.html">
-                                    <img src="themes/zupahealth/img/logo.png" alt="logo" />
+                                    <img src="/themes/zupahealth/img/logo.png" alt="logo" />
                                 </a>
                             </div><!-- /#logo -->
                             <div class="btn-menu"><span></span></div><!-- //mobile menu button -->
