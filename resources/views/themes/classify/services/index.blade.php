@@ -44,8 +44,10 @@
                                         {{ $service->name }}
                                     </a>.
 
-                                    <img src="{{ $service->featuredImage->fullPath }}" class="imagenes" title="{{ $service->featuredImage->name }}">
-                                
+                                    @if ($service->featuredImage)
+                                        <img src="{{ $service->featuredImage->fullPath }}" class="imagenes" title="{{ $service->featuredImage->name }}">
+                                    @endif
+
                                     <p>{{ $service->description }}</p>
                                     <hr class="pg-titl-bdr-btm">
                                 </li>
