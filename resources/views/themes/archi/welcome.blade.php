@@ -1,9 +1,9 @@
 @extends('themes.archi.base')
 
 @section('content')
-    <!--BANNER START-->
+
     <div id="wrap-body">
-            <!-- Slideshow -->
+
             <section>
                 <div class="brad-h" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(550px);">
                     <p>ARCHI.</p>
@@ -13,13 +13,13 @@
                         <div class="col-sm-5 col-md-4 col-lg-4">
                             <h1>Archi.</h1>
                             <div data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(50px);">
-                                <div class="ht-rf-item"><b>231.</b>Projects</div>
+                                <div class="ht-rf-item"><b></b>Projects</div>
                             </div>
                             <div class="p-l-100 p-l-xs-50">
-                                <div class="ht-rf-item"><b>08.</b>Awards</div>
+                                <div class="ht-rf-item"><b></b>Awards</div>
                             </div>
                             <div data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(50px);">
-                                <div class="ht-rf-item"><b>63.</b>Clients</div>
+                                <div class="ht-rf-item"><b></b>Clients</div>
                             </div>
                         </div>
                         <div class="col-sm-7 col-md-8 col-lg-8 m-t-xs-50">
