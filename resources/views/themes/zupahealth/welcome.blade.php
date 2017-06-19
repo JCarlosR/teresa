@@ -2,6 +2,8 @@
 
 @section('content')
 <!-- Main Slider -->
+
+roel cc
         <section class="main-slider">
 	        <div id="rev-slider1">
 	            <ul>
