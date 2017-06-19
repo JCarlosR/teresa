@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="row col-md-12">
                     <div class="page-title" style="text-align:center">
-
+                    
                             @foreach ($services as $service)
                             <ul class="col-md-4">
                                 <li  style="padding:4px 4px 4px 4px ;text-align:justify">
