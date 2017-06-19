@@ -202,16 +202,16 @@
                 <div class="container">
                     <ul class="row">
                         <li class="item col-md-3 col-sm-6 mb30 clients-block">
-                            <img src="/themes/classify/img/logopiel.jpg" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
+                            <img src="/themes/classify/img/" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
                         </li>
                         <li class="item col-md-3 col-sm-6 mb30 clients-block">
-                            <img src="/themes/classify/img/logopiel1.jpg" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
+                            <img src="/themes/classify/img/" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
                         </li>
                         <li class="item col-md-3 col-sm-6 mb30 clients-block">
-                           <img src="/themes/classify/img/logopiel2.jpg" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
+                           <img src="/themes/classify/img/" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
                         </li>
                         <li class="item col-md-3 col-sm-6 mb30 clients-block">
-                           <img src="/themes/classify/img/logopiel3.jpg" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
+                           <img src="/themes/classify/img/" alt=" Clientes 1.8.10 Consultores" title="Clientes 1.8.10 Consultores" class="img-responsive" />
                         </li>
                     </ul>
 
