@@ -49,12 +49,16 @@
                 <span class="sidebar-title">Contenido web</span>
             </a>
             <ul id="collapse2" class="list-unstyled collapse">
+                <li><a href="{{ url('/admin/sections') }}"><strong>Gestionar secciones</strong></a></li>
                 <li><a href="{{ url('/serp/resumen') }}">Resumen SERP</a></li>
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
                 <li><a href="{{ url('/servicios') }}">Servicios</a></li>
                 <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
                 <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                 <li><a href="{{ url('/citas') }}">Citas</a></li>
+                @foreach (client()->sections as $section)
+                    <li><a href="{{ url($section->route) }}">{{ $section->name }}</a></li>
+                @endforeach
             </ul>
         </li>
 

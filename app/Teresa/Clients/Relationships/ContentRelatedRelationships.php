@@ -4,6 +4,10 @@ namespace App\Teresa\Clients\Relationships;
 
 trait ContentRelatedRelationships
 {
+    public function sections()
+    {
+        return $this->belongsToMany('App\Section', 'client_sections');
+    }
 
     public function about_us()
     {

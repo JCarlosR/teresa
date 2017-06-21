@@ -158,7 +158,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/cliente/registrar', 'Admin\ClientController@create');
     Route::post('/cliente/registrar', 'Admin\ClientController@store');
 
-    // Clients data
+    // Client sections
+    Route::get('/sections', 'Admin\SectionController@index');
+    Route::get('/sections/{id}/{action}', 'Admin\SectionController@status');
+
+    // Client data
     Route::get('/dashboard/', 'Admin\DashboardController@index');
     Route::get('/datos/principales', 'Admin\DataController@edit');
     Route::post('/datos/principales', 'Admin\DataController@update');
