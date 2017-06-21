@@ -51,6 +51,18 @@ Route::post('/servicios/descripcion', 'SERPController@descriptionServices');
 Route::post('/proyectos/descripcion', 'SERPController@descriptionProjects');
 Route::post('/citas/descripcion', 'SERPController@descriptionQuotes');
 
+// About us
+Route::get('/nosotros', 'AboutUsController@show');
+Route::get('/nosotros/editar', 'AboutUsController@edit');
+Route::post('/nosotros', 'AboutUsController@update');
+// About us images
+Route::get('/nosotros/imagenes', 'AboutUsImageController@index');
+Route::post('/nosotros/imagenes', 'AboutUsImageController@upload');
+Route::get('/nosotros/imagenes/{id}/eliminar', 'AboutUsImageController@delete');
+Route::get('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@edit');
+Route::post('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@update');
+
+
 // Services
 Route::get('/servicios', 'ServiceController@index');
 Route::get('/servicio/{id}/ver', 'ServiceController@show');
@@ -91,7 +103,6 @@ Route::get('/clientes/{id}/editar', 'CustomerController@edit');
 Route::post('/clientes/editar', 'CustomerController@update');
 Route::get('/clientes/{id}/eliminar', 'CustomerController@delete');
 
-
 // Quotes
 Route::get('/citas', 'QuoteController@index');
 Route::get('/citas/registrar', 'QuoteController@create');
@@ -100,16 +111,9 @@ Route::get('/citas/{id}/editar', 'QuoteController@edit');
 Route::post('/citas/{id}/editar', 'QuoteController@update');
 Route::get('/citas/{id}/eliminar', 'QuoteController@delete');
 
-// About us
-Route::get('/nosotros', 'AboutUsController@show');
-Route::get('/nosotros/editar', 'AboutUsController@edit');
-Route::post('/nosotros', 'AboutUsController@update');
-// About us images
-Route::get('/nosotros/imagenes', 'AboutUsImageController@index');
-Route::post('/nosotros/imagenes', 'AboutUsImageController@upload');
-Route::get('/nosotros/imagenes/{id}/eliminar', 'AboutUsImageController@delete');
-Route::get('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@edit');
-Route::post('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@update');
+// Courses
+Route::get('/cursos', 'CourseController@index');
+
 
 // Work schedule
 Route::get('/cronograma', 'Client\WorkScheduleController@index');

@@ -9,6 +9,9 @@ trait ContentRelatedRelationships
         return $this->belongsToMany('App\Section', 'client_sections');
     }
 
+
+    // fixed sections
+
     public function about_us()
     {
         return $this->hasOne('App\AboutUs');
@@ -33,4 +36,13 @@ trait ContentRelatedRelationships
     {
         return $this->hasMany('App\Quote');
     }
+
+
+    // optional sections
+
+    public function courses()
+    {
+        return $this->hasMany('App\Course');
+    }
+
 }
