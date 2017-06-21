@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="es" class="js no-touch">
+<html  xml:lang="es" lang="es">
 <head>
+
     <meta charset="utf-8">
-    <title>{{ $me->title }}</title>
-    <meta name="description" content="{{ $me->description }}"/>
+    <title>Servicios Profesionales SEO</title>
 
-    <meta property="og:title" content="{{ $me->title }}"/>
-    <meta property="og:type" content="company"/>
-    <meta property="og:url" content="{{ url()->current() }}"/>
-    <meta property="og:image" content="{{ $me->photo_route }}"/>
-    <meta property="og:site_name" content="{{ $me->name }}"/>
-    <meta property="og:description" content="{{ $me->description }}"/>
+    <meta name="author" content="SPS">
 
-    <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
-    <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
-    <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/font-awesome.min.css') }}">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/slick-team-slider.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="{{asset('/themes/iseo/stylesheets/bootstrap.css')}}" >
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{{asset('/themes/iseo/stylesheets/style.css')}}">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="{{asset('/themes/iseo/stylesheets/responsive.css')}}">
+
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="{{asset('/themes/iseo/stylesheets/colors/color1.css')}}" id="colors">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="{{asset('/themes/iseo/stylesheets/animate.css')}}">
+
+    <!-- Favicon and touch icons  -->
+    <link href="{{asset ('/themes/iseo/imagenes/logo/apple-touch-icon-48-precomposed.png') }}" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="{{asset ('/themes/iseo/imagenes/logo/apple-touch-icon-32-precomposed.png') }}" rel="apple-touch-icon-precomposed">
+    <link href="{{asset ('/themes/iseo/imagenes/favicon.ico') }}" rel="shortcut icon">
 
     @yield('styles')
 
@@ -50,11 +57,11 @@
 </head>
 <body>
 
-@include('themes.default.includes.header')
+@include('themes.iseo.includes.header')
 
 @yield('content')
 
-@include('themes.default.includes.footer')
+@include('themes.iseo.includes.footer')
 
 @if ($me->google_analytics)
 <script>
@@ -68,12 +75,23 @@
 </script>
 @endif
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="{{ asset('/themes/default/js/jquery.easing.min.js') }}"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ asset('/themes/default/js/jquery.mixitup.js') }}" type="text/javascript"></script>
-<script type="text/javascript" src="{{ asset('/themes/default/js/slick.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('/themes/default/js/custom.js') }}"></script>
+<!-- Javascript -->
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.easing.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery-waypoints.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.cookie.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.fitvids.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/parallax.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.magnific-popup.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/owl.carousel.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.flexslider-min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery-validate.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/main.js')}}"></script>
 
+    <!-- Revolution Slider -->
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.themepunch.tools.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/jquery.themepunch.revolution.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('/themes/iseo/javascript/slider.js')}}"></script>
 </body>
 </html>
