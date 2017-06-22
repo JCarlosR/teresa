@@ -119,6 +119,14 @@ Route::get('/cursos/{id}/editar', 'CourseController@edit');
 Route::post('/cursos/{id}/editar', 'CourseController@update');
 Route::get('/cursos/{id}/eliminar', 'CourseController@delete');
 
+// Brands
+Route::get('/marcas', 'BrandController@index');
+Route::get('/marcas/registrar', 'BrandController@create');
+Route::post('/marcas/registrar', 'BrandController@store');
+Route::get('/marcas/{id}/editar', 'BrandController@edit');
+Route::post('/marcas/{id}/editar', 'BrandController@update');
+Route::get('/marcas/{id}/eliminar', 'BrandController@delete');
+
 
 // Work schedule
 Route::get('/cronograma', 'Client\WorkScheduleController@index');
