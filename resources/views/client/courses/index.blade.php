@@ -46,7 +46,7 @@
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
-                        <th>Precio</th>
+                        <th class="text-center">Precio</th>
                         <th class="text-center">Descuento</th>
                         <th>Opciones</th>
                     </tr>
@@ -57,18 +57,16 @@
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $course->name }}</td>
                             <td>{{ $course->description ?: 'Sin descripción' }}</td>
-                            <td>{{ $course->price }}</td>
-                            <td>{{ $course->discount }}</td>
+                            <td class="text-center">{{ $course->price }}</td>
+                            <td class="text-center">{{ $course->discount }}</td>
                             <td>
-                                <a href="{{ url("curso/$course->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
-
-                                <a href="{{ url("curso/$course->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
+                                {{--<a href="{{ url("curso/$course->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
+                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
+                                {{--</a>--}}
+                                <a href="{{ url("cursos/$course->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
-
-                                <a href="{{ url('/curso/'.$course->id.'/eliminar') }}"
+                                <a href="{{ url('/cursos/'.$course->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar servicio"
                                    onclick="return confirm('¿Estás seguro que deseas eliminar este curso?');">
                                     <span class="glyphicon glyphicon-remove"></span>

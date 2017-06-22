@@ -113,6 +113,11 @@ Route::get('/citas/{id}/eliminar', 'QuoteController@delete');
 
 // Courses
 Route::get('/cursos', 'CourseController@index');
+Route::get('/cursos/registrar', 'CourseController@create');
+Route::post('/cursos/registrar', 'CourseController@store');
+Route::get('/cursos/{id}/editar', 'CourseController@edit');
+Route::post('/cursos/{id}/editar', 'CourseController@update');
+Route::get('/cursos/{id}/eliminar', 'CourseController@delete');
 
 
 // Work schedule

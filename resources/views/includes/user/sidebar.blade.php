@@ -49,6 +49,9 @@
                 <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
                 <li><a href="{{ url('/clientes') }}">Clientes</a></li>
                 <li><a href="{{ url('/citas') }}">Citas</a></li>
+                @foreach (auth()->user()->sections as $section)
+                    <li><a href="{{ url($section->route) }}">{{ $section->name }}</a></li>
+                @endforeach
             </ul>
         </li>
 
