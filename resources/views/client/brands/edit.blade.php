@@ -6,6 +6,9 @@
     <style>
         textarea { display: none; }
     </style>
+    @if (auth()->user()->is_admin)
+        <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
+    @endif
 @endsection
 
 @section('dashboard_content')
@@ -33,6 +36,32 @@
 
             <form action="" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
+
+                <fieldset>
+                    <legend>SERP</legend>
+                    <div class="form-group">
+                        <label for="brand-title" class="col-sm-2 control-label">Título</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="title" id="brand-title" class="form-control" placeholder="Título de la página" value="{{ old('title', $brand->title) }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-description" class="col-sm-2 control-label">Descripción</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="description" id="brand-description" class="form-control" placeholder="Descripción de la marca" value="{{ old('description', $brand->description) }}">
+                            <span class="help-block">Se recomienda ingresar entre 140 y 155 caracteres.</span>
+                        </div>
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">{{ $brand->name }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/marcas/<span>{{ str_slug($brand->name) }}</span></cite>
+                        </div>
+                        <span class="description">{{ $brand->description }}</span>
+                    </div>
+                </fieldset>
 
                 <fieldset>
                     <legend>Ficha de la marca</legend>
@@ -135,4 +164,7 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
 
     <script src="{{ asset('/panel/brands/create.js') }}"></script>
+    @if (auth()->user()->is_admin)
+        <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    @endif
 @endsection

@@ -60,6 +60,7 @@ class BrandController extends Controller
         $brand->user_id = $this->client()->id;
 
         $brand->name = $request->get('name');
+        $brand->title = $request->get('name'); // SEO fields will be edited later
         $brand->type = $request->get('type');
         $brand->industry = $request->get('industry');
         $brand->foundation = $request->get('foundation');
@@ -109,6 +110,8 @@ class BrandController extends Controller
         $brand->user_id = $this->client()->id;
 
         $brand->name = $request->get('name');
+        $brand->title = $request->get('title'); // SEO field (just seen by administrators)
+        $brand->description = $request->get('description'); // SEO field (just seen by administrators)
         $brand->type = $request->get('type');
         $brand->industry = $request->get('industry');
         $brand->foundation = $request->get('foundation');
