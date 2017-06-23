@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Brand;
 use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
@@ -18,8 +19,7 @@ class BrandController extends Controller
 
     public function index()
     {
-        // $brands = $this->client()->brands;
-        $brands = collect();
+        $brands = $this->client()->brands;
         // $description = $this->client()->projects_description;
         return view('client.brands.index')->with(compact('brands'));
     }
@@ -45,167 +45,87 @@ class BrandController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required|min:4|unique:projects,name',
-            'description' => 'max:155',
-            'services.*' => 'exists:services,name',
-            'client' => 'min:3',
-            'year' => 'required|integer|min:1980'
+            'name' => 'required|min:3',
+            'website' => 'required|url'
         ];
         $messages = [
-            'name.unique' => 'Este nombre de proyecto ya se encuentra registrado. Por favor usa otro.',
-            'name.required' => 'Debes ingresar el nombre del proyecto.',
-            'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
-            'description.max' => 'La descripción del proyecto es muy extensa (resumen).',
-            'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
-            'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
-            'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
-            'year.integer' => 'El formato del año es inadecuado.',
-            'year.min' => 'Se admiten proyectos desarrollados desde el año 1980 en adelante.'
+            'name.required' => 'Debes ingresar el nombre de la marca.',
+            'name.min' => 'El nombre ingresado es muy corto (se requieren al menos 3 caracteres).',
+            'website.required' => 'Debes ingresar el sitio web de la marca.',
+            'website.url' => 'La URL ingresada no tiene un formato válido.'
         ];
         $this->validate($request, $rules, $messages);
 
-        $services_name = $request->get('services') ?: [];
+        $brand = new Brand();
+        $brand->user_id = $this->client()->id;
 
-        $project = new Project();
-        $project->user_id = $this->client()->id;
+        $brand->name = $request->get('name');
+        $brand->type = $request->get('type');
+        $brand->industry = $request->get('industry');
+        $brand->foundation = $request->get('foundation');
+        $brand->founder = $request->get('founder');
+        $brand->products = $request->get('products');
+        $brand->website = $request->get('website');
 
-        $project->name = $request->get('name');
-        $project->description = $request->get('description');
-        $project->client = $request->get('client');
-        $project->year = $request->get('year');
-        $project->type = $request->get('type');
-        $project->duration = $request->get('duration');
-        $project->status = $request->get('status');
-        $project->acknowledgments = $request->get('acknowledgments');
+        $brand->question_1 = $request->get('question_1');
+        $brand->question_2 = $request->get('question_2');
+        $brand->question_3 = $request->get('question_3');
 
-        $project->question_0 = $request->get('question_0');
-        $project->question_1 = $request->get('question_1');
-        $project->question_2 = $request->get('question_2');
-        $project->question_3 = $request->get('question_3');
+        $brand->save();
 
-        $project->save();
-
-        foreach ($services_name as $service_name) {
-            $service = Service::where('name', $service_name)->first();
-            if ($service)
-                $project->services()->attach($service);
-        }
-
-        if ($this->client()->client_type_id) {
-            if ($this->client()->client_type_id==1) { // SEO Architects
-
-                $architect_project = new ArchitectProject();
-                $architect_project->architect = $request->get('architect');
-                $architect_project->structure = $request->get('structure');
-                $architect_project->management = $request->get('management');
-                $architect_project->location = $request->get('location');
-                $architect_project->ground_area = $request->get('ground_area');
-                $architect_project->project_area = $request->get('project_area');
-                $architect_project->builder = $request->get('builder');
-                $architect_project->floors = $request->get('floors');
-                $architect_project->basements = $request->get('basements');
-
-                $architect_project->project_id = $project->id;
-                $architect_project->save();
-            }
-        }
-
-        $notification = 'El proyecto se ha registrado correctamente!';
+        $notification = 'La marca se ha registrado correctamente!';
         session()->flash('notification', $notification);
 
-        return redirect('/proyectos');
+        return redirect('/marcas');
     }
 
     public function edit($id)
     {
-        // $brand = Brand::findOrFail($id);
+        $brand = Brand::findOrFail($id);
 
         // Check if the project really belongs to the user
-        //if ($brand->user_id !== $this->client()->id)
-        //    return redirect('/marcas');
+        if ($brand->user_id !== $this->client()->id)
+            return redirect('/marcas');
 
-        // $client = $this->client();
-        return view('client.brands.edit'); //->with(compact('client', 'brand'));
+        $client = $this->client();
+        return view('client.brands.edit')->with(compact('client', 'brand'));
     }
 
-    public function update(Request $request)
+    public function update($id, Request $request)
     {
         $rules = [
-            'project_id' => 'required|exists:projects,id',
-            'name' => 'required|min:4',
-            'description' => 'max:155',
-            'services.*' => 'exists:services,name',
-            'client' => 'min:3',
-            'year' => 'required|integer|min:1980'
+            'name' => 'required|min:3',
+            'website' => 'required|url'
         ];
         $messages = [
-            'project_id.required' => 'Es necesario indicar el proyecto que se va a editar.',
-            'project_id.exists' => 'El proyecto indicado no existe en nuestra base de datos.',
-            'name.required' => 'Debes ingresar el nombre del proyecto.',
-            'name.min' => 'El nombre del proyecto debe constar de al menos 4 caracteres.',
-            'description.max' => 'La descripción del proyecto es muy extensa (resumen).',
-            'services.*' => 'El servicio indicado en :attribute no existe en la base de datos (el primero es posición 0).',
-            // 'client.required' => 'Es necesario ingresar el nombre del cliente.',
-            'client.min' => 'El nombre del cliente debe constar de al menos 3 caracteres.',
-            'year.required' => 'Debes especificar el año en que se desarrolló el proyecto.',
-            'year.integer' => 'El formato del año es inadecuado.',
-            'year.min' => 'Se admiten proyectos desarrollados desde el año 1980 en adelante.'
+            'name.required' => 'Debes ingresar el nombre de la marca.',
+            'name.min' => 'El nombre ingresado es muy corto (se requieren al menos 3 caracteres).',
+            'website.required' => 'Debes ingresar el sitio web de la marca.',
+            'website.url' => 'La URL ingresada no tiene un formato válido.'
         ];
         $this->validate($request, $rules, $messages);
 
-        $services_name = $request->get('services') ?: [];
+        $brand = Brand::find($id);
+        $brand->user_id = $this->client()->id;
 
-        $project = Project::find($request->get('project_id'));
-        $project->name = $request->get('name');
-        $project->description = $request->get('description');
-        $project->client = $request->get('client');
-        $project->year = $request->get('year');
-        $project->type = $request->get('type');
-        $project->duration = $request->get('duration');
-        $project->status = $request->get('status');
-        $project->acknowledgments = $request->get('acknowledgments');
+        $brand->name = $request->get('name');
+        $brand->type = $request->get('type');
+        $brand->industry = $request->get('industry');
+        $brand->foundation = $request->get('foundation');
+        $brand->founder = $request->get('founder');
+        $brand->products = $request->get('products');
+        $brand->website = $request->get('website');
 
-        $project->question_0 = $request->get('question_0');
-        $project->question_1 = $request->get('question_1');
-        $project->question_2 = $request->get('question_2');
-        $project->question_3 = $request->get('question_3');
+        $brand->question_1 = $request->get('question_1');
+        $brand->question_2 = $request->get('question_2');
+        $brand->question_3 = $request->get('question_3');
 
-        $project->save();
+        $brand->save();
 
-        if ($this->client()->client_type_id) {
-            if ($this->client()->client_type_id==1) { // SEO Architects
+        $notification = 'La marca se ha modificado correctamente!';
+        session()->flash('notification', $notification);
 
-                $architect_project = $project->architect_project;
-
-                if (! $architect_project) {
-                    $architect_project = new ArchitectProject();
-                    $architect_project->project_id = $project->id;
-                }
-
-                $architect_project->architect = $request->get('architect');
-                $architect_project->structure = $request->get('structure');
-                $architect_project->management = $request->get('management');
-                $architect_project->location = $request->get('location');
-                $architect_project->ground_area = $request->get('ground_area');
-                $architect_project->project_area = $request->get('project_area');
-                $architect_project->builder = $request->get('builder');
-                $architect_project->floors = $request->get('floors');
-                $architect_project->basements = $request->get('basements');
-
-                $architect_project->save();
-            }
-        }
-
-        $services = [];
-        foreach ($services_name as $service_name) {
-            $service = Service::where('name', $service_name)->first(['id']);
-            if ($service)
-                $services[] = $service->id;
-        }
-        $project->services()->sync($services);
-
-        // $notification = 'El proyecto se ha actualizado correctamente!';
-        return redirect('/proyecto/'.$project->id.'/ver');
+        return redirect('/marcas');
     }
 
     public function delete($id)

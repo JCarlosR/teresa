@@ -45,4 +45,9 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Course');
     }
 
+    public function brands()
+    {
+        return $this->hasMany('App\Brand');
+    }
+
 }

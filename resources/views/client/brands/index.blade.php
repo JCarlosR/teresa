@@ -45,7 +45,7 @@
                         <th></th>{{-- Semaphore--}}
                         <th>Nombre</th>
                         <th>Tipo</th>
-                        <th class="text-center">Fotos</th>
+                        {{--<th class="text-center">Fotos</th>--}}
                         <th class="text-right">Contador</th>
                         <th class="text-center">Porcentaje</th>
                         <th>Opciones</th>
@@ -58,27 +58,27 @@
                             <td><img src="/images/semaphores/{{ $brand->status_color }}.png" alt="Semáforo de estado" height="40"></td>
                             <td>{{ $brand->name }}</td>
                             <td>{{ $brand->type ?: 'Sin especificar' }}</td>
-                            <td class="text-center text-{{ $brand->hasPhotos ? 'success' : 'danger' }}">
-                                @if ($brand->hasPhotos)
-                                    <i class="ion-checkmark-round"></i>
-                                @else
-                                    <i class="ion-close"></i>
-                                @endif
-                            </td>
+                            {{--<td class="text-center text-{{ $brand->hasPhotos ? 'success' : 'danger' }}">--}}
+                                {{--@if ($brand->hasPhotos)--}}
+                                    {{--<i class="ion-checkmark-round"></i>--}}
+                                {{--@else--}}
+                                    {{--<i class="ion-close"></i>--}}
+                                {{--@endif--}}
+                            {{--</td>--}}
                             <td class="text-right">{{ $brand->characters_count }}</td>
-                            <td class="text-center">{{ $brand->characters_percent }}</td>
+                            <td class="text-center">{{ $brand->characters_percent }} %</td>
                             <td>
-                                <a href="{{ url("marcas/$brand->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
+                                {{--<a href="{{ url("marcas/$brand->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
+                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
+                                {{--</a>--}}
 
                                 <a href="{{ url("marcas/$brand->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 
-                                <a href="{{ url("marcas/$brand->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                </a>
+                                {{--<a href="{{ url("marcas/$brand->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">--}}
+                                    {{--<span class="glyphicon glyphicon-picture"></span>--}}
+                                {{--</a>--}}
 
                                 <a href="{{ url('/marcas/'.$brand->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar marca"

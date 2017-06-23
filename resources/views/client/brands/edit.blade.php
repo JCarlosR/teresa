@@ -13,12 +13,12 @@
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
         <li><a href="/marcas">Marcas</a></li>
-        <li class="active">Nueva marca</li>
+        <li class="active">Editar marca</li>
     </ol>
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Registrar nueva marca</h3>
+            <h3 class="widget-title">Modificar marca seleccionada</h3>
         </div>
         <div class="widget-body">
             @if (count($errors) > 0)
@@ -31,7 +31,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/marcas/registrar') }}" method="POST" class="form-horizontal">
+            <form action="" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <fieldset>
@@ -40,33 +40,33 @@
                     <div class="form-group">
                         <label for="brand-name" class="col-sm-2 control-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" id="brand-name" class="form-control" placeholder="Nombre de la marca" value="{{ old('name') }}">
+                            <input type="text" name="name" id="brand-name" class="form-control" placeholder="Nombre de la marca" value="{{ old('name', $brand->name) }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="brand-type" class="col-sm-2 control-label">Tipo</label>
                         <div class="col-sm-10">
-                            <input type="text" name="type" id="brand-type" class="form-control" placeholder="Pública o privada" value="{{ old('type') }}">
+                            <input type="text" name="type" id="brand-type" class="form-control" placeholder="Pública o privada" value="{{ old('type', $brand->type) }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="brand-industry" class="col-sm-2 control-label">Industria</label>
                         <div class="col-sm-10">
-                            <input type="text" name="industry" id="brand-industry" class="form-control" placeholder="Comercial, moda, medicina, inmobiliaria u otro" value="{{ old('industry') }}">
+                            <input type="text" name="industry" id="brand-industry" class="form-control" placeholder="Comercial, moda, medicina, inmobiliaria u otro" value="{{ old('industry', $brand->industry) }}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="brand-foundation" class="col-sm-2 control-label">Fundación</label>
                         <div class="col-sm-10">
-                            <input type="text" name="foundation" id="brand-foundation" class="form-control" placeholder="Indica ciudad, país, año" value="{{ old('foundation') }}">
+                            <input type="text" name="foundation" id="brand-foundation" class="form-control" placeholder="Indica ciudad, país, año" value="{{ old('foundation', $brand->foundation) }}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="brand-founder" class="col-sm-2 control-label">Fundador</label>
                         <div class="col-sm-10">
-                            <input type="text" name="founder" id="brand-founder" class="form-control" placeholder="Persona o empresa que fundó la marca" value="{{ old('founder') }}">
+                            <input type="text" name="founder" id="brand-founder" class="form-control" placeholder="Persona o empresa que fundó la marca" value="{{ old('founder', $brand->founder) }}">
                         </div>
                     </div>
 
@@ -74,14 +74,14 @@
                         <label for="brand-products" class="col-sm-2 control-label">Productos</label>
                         <div class="col-sm-10">
                             <input type="text" name="products" id="brand-products" class="form-control"
-                                   placeholder="Nombres de los productos más destacados que vende o distribuye" value="{{ old('products') }}">
+                                   placeholder="Nombres de los productos más destacados que vende o distribuye" value="{{ old('products', $brand->products) }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="brand-website" class="col-sm-2 control-label">Sitio web</label>
                         <div class="col-sm-10">
                             <input type="text" name="website" id="brand-status" class="form-control"
-                                   placeholder="Dirección URL completa" value="{{ old('website') }}">
+                                   placeholder="Dirección URL completa" value="{{ old('website', $brand->website) }}">
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@
                     </h3>
                     <span id="limit1"></span>
                     <span id="status1" class="pull-right"></span>
-                    <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1') }}</textarea>
+                    <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1', $brand->question_1) }}</textarea>
 
                     <h3>
                         Historia de la marca
@@ -104,7 +104,7 @@
                     </h3>
                     <span id="limit2"></span>
                     <span id="status2" class="pull-right"></span>
-                    <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2') }}</textarea>
+                    <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2', $brand->question_2) }}</textarea>
 
                     <h3>
                         Lineas de productos
@@ -112,15 +112,15 @@
                     </h3>
                     <span id="limit3"></span>
                     <span id="status3" class="pull-right"></span>
-                    <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3') }}</textarea>
+                    <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3', $brand->question_3) }}</textarea>
                 </fieldset>
 
                 <div class="text-right">
                     <button type="button" class="btn btn-default" onclick="window.history.back();">
-                        Cancelar registro
+                        Volver sin guardar
                     </button>
                     <button type="submit" class="btn btn-primary">
-                        Registrar marca
+                        Guardar cambios
                     </button>
                 </div>
             </form>
