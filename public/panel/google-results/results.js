@@ -1,5 +1,7 @@
 $(function () {
-    $('[name=name]').on('keyup', onChangeName);
+    if (typeof inputName == 'undefined')
+        inputName = 'name';
+    $('[name='+inputName+']').on('keyup', onChangeName);
     $('[name=description]').on('keyup', onChangeDescription);
 });
 

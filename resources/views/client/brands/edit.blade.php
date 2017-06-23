@@ -54,7 +54,7 @@
                     </div>
                     <div class="google-results">
                         <a href="#" onclick="return false;">
-                            <span class="title">{{ $brand->name }}</span>
+                            <span class="title">{{ $brand->title }}</span>
                         </a>
                         <div>
                             <cite>{{ $client->domain }}/marcas/<span>{{ str_slug($brand->name) }}</span></cite>
@@ -165,6 +165,7 @@
 
     <script src="{{ asset('/panel/brands/create.js') }}"></script>
     @if (auth()->user()->is_admin)
+        <script>var inputName = 'title';</script>
         <script src="{{ asset('/panel/google-results/results.js') }}"></script>
     @endif
 @endsection
