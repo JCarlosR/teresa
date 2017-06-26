@@ -12,6 +12,11 @@ trait ContentRelatedRelationships
 
     // fixed sections
 
+    public function slides()
+    {
+        return $this->hasMany('App\Slide');
+    }
+
     public function about_us()
     {
         return $this->hasOne('App\AboutUs');

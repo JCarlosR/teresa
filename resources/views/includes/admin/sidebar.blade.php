@@ -51,6 +51,7 @@
             <ul id="collapse2" class="list-unstyled collapse">
                 <li><a href="{{ url('/admin/sections') }}"><strong>Gestionar secciones</strong></a></li>
                 <li><a href="{{ url('/serp/resumen') }}">Resumen SERP</a></li>
+                <li><a href="{{ url('/slides') }}">Slider</a></li>
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
                 <li><a href="{{ url('/servicios') }}">Servicios</a></li>
                 <li><a href="{{ url('/proyectos') }}">Proyectos</a></li>
