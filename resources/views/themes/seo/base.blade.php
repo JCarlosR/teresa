@@ -37,7 +37,12 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/style.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/responsive.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/responsive.css') }}" media="screen">
-
+        <!--botones de compartir-->
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "908f2558-341c-4601-9d33-303d837ce8de", doNotHash: false, doNotCopy: false,
+        hashAddressBar: false});</script>
+        <!--end botones de compartir-->
     @yield('styles')
 
     <script type="application/ld+json">

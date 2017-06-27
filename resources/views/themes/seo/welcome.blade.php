@@ -127,7 +127,6 @@
         <div class="main-heading col-sm-12 no-padding ">
             <h2>Proyectos Digitales Recientes</h2>
             <p>{{ $me->projects_description }}</p>
-            <p><a href="{{ $me->getLinkTo('/proyectos') }}" >
         </div>
         <div class="row">
             <div class="col-sm-12 no-padding grid">
@@ -142,8 +141,9 @@
                                 <div class="hover center">
                                     <div class="inner">
                                         <h4><a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" title="Ver Proyecto {{ $project->name }}">{{ $project->name }}</a> </h4>
-                                        <div class="category">{{ $project->service }}</div>
-
+                                        <div class="category">
+                                            {{ $project->services()->first()->name }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@
             <br>
             <br>
             <div class="col-sm-12 button text-center">
-                <a href="/proyectos" title="Ver proyectos digitales de SEO-arquitectos" class="btn radius-2x hvr-sweep-to-right">Ver todos los proyectos</a>
+                <a href="{{ $me->getLinkTo('/proyectos') }}" title="Ver proyectos digitales de SEO-arquitectos" class="btn radius-2x hvr-sweep-to-right">Ver todos los proyectos</a>
             </div>
         </div>
     </div>
