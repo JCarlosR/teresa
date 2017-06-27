@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/font-awesome.min.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/slick-team-slider.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
 
     @yield('styles')
@@ -72,8 +71,8 @@
 <script src="{{ asset('/themes/default/js/jquery.easing.min.js') }}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ asset('/themes/default/js/jquery.mixitup.js') }}" type="text/javascript"></script>
-<script type="text/javascript" src="{{ asset('/themes/default/js/slick.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('/themes/default/js/custom.js') }}"></script>
+<script src="{{ asset('/themes/default/js/slick.min.js') }}"></script>
+<script src="{{ asset('/themes/default/js/custom.js') }}"></script>
 
 </body>
 </html>

@@ -22,6 +22,8 @@
                     <h2>Nosotros</h2>
                     <p>{{ $me->about_us }}</p>
                     <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
+                    <hr class="pg-titl-bdr-btm">
+                    {{--<p>{{ $me->about_us->question_0 }}</p>--}}
                 </div>
             </div>
         </div>
@@ -41,7 +43,7 @@
                     <div class="col-md-4">
                         <div class="service-box">
                             <div class="service-icon col-md-3">
-
+                                <span></span>
                             </div>
 
                             <div class="service-text col-md-9">

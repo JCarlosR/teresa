@@ -44,11 +44,6 @@ Header
     padding-top: 5px;
 }
 
-.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
-{
-	border-bottom: 2px solid #E74C3C;
-    outline: none;
-}
 .navbar {
 	min-height: inherit;
 	margin-bottom: 0px;
@@ -63,10 +58,6 @@ Header
     margin-top: 5px;
 }
 
-.navbar-default .navbar-brand {
-    color: #e43c5c;
-}
-
 .navbar-default .navbar-nav > li > a {
 	color: #354242;
 	font-weight: 600;
@@ -79,11 +70,6 @@ Header
 {
 	padding: 0px;
 }
-.jumbotron
-{
-    background-color: transparent;
-    padding-top: 90px;
-}
 .jumbotron p.big
 {
     line-height: 21px;
@@ -92,10 +78,8 @@ Header
     padding: 0px;
     letter-spacing: 6px;
     font-size: 15px;
-    color: #fff;
     text-transform: uppercase;
     font-weight: 400;
-    color: #ffffff;
     -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     -ms-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
@@ -111,7 +95,6 @@ a.btn-banner {
     font-weight: 400;
     font-size: 11px;
     text-transform: uppercase;
-    color: #ffffff;
     letter-spacing: 1px;
     display: inline-block;
     margin-top: 95px;
@@ -149,15 +132,10 @@ a.btn-banner:hover, a.btn-banner:focus
     letter-spacing: 6px;
     text-transform: uppercase;
     font-weight: 400;
-    color: #ffffff;
     -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     -ms-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-}
-.container .jumbotron, .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 0px;
 }
 .bgblue-dark
 {
@@ -177,8 +155,8 @@ a.btn-banner:hover, a.btn-banner:focus
 }
 .cta-1, .cta2
 {
-	background-color: #e43c5c;
-	padding: 40px 0px;
+	background-color: rgba(0,0,0,0.5);
+	padding: 40px 0;
 }
 p.cta-sub-title
 {
@@ -450,12 +428,6 @@ margin-top: 5px;
 .footer_copyright a {
     color: #e43c5c;
 }
-#banner
-{
-    background: url('../img/banner-bg.jpg') no-repeat;
-    background-size: cover;
-    min-height: 500px;
-}
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus
 {
     padding: 10px 25px;
@@ -591,6 +563,3 @@ p.cta-sub-title {
     border: 0px;
 }
 }
-/**************************************
-form element
-**************************************/

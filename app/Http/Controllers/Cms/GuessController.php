@@ -24,13 +24,7 @@ class GuessController extends Controller
         $me = User::find($id);
         $services = $me->services;
 
-        if ($me->about_us)
-            $me->about_us = $me->about_us->description;
-        else
-            $me->about_us = '';
-
         // social profiles can be used anywhere (via one method defined for the User model)
-
 
         $theme = $this->getTheme($me);
         return view("themes.$theme.welcome")->with(compact(
