@@ -9,8 +9,10 @@ trait CmsRelatedAccessors
     {
         // !==false is not the same that ===true
 
-        // if contains 'teresa' or contains 'localhost'
-        if (strpos(url('/'), 'teresa') !== false || strpos(url('/'), 'localhost') !== false) {
+        // if contains 'teresa' or contains 'localhost' (or the old 'teresa')
+        if (strpos(url('/'), 'theressa') !== false
+            || strpos(url('/'), 'localhost') !== false
+            || strpos(url('/'), 'teresa') !== false) {
             return url('/ver/' . $this->id . $path);
         }
 
