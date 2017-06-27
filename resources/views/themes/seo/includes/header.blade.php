@@ -9,17 +9,18 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                                <a href="index.html" title="Volver a la página de inicio" class="menu-logo black">SEO-arquitectos</a>
+                                <a class="menu-logo black" href="{{ $me->getLinkTo('/') }}">{{ $me->name }}</a>
                         </div>
                         <!--Nav links-->
+
                         <div class=" navbar-collapse col-sm-9 col-md-9" id="menu_nav">
                             <a href="#" class="closs"><i class="icofont"></i></a>
                             <ul class="nav navbar-nav">
-                              <li><a href="nosotros.html" title="Sobre SEO-arquitectos">Nosotros</a></li>
-                              <li><a href="servicios.html" title="Servicios digitales que ofrecemos">Servicios</a></li>
-                              <li><a href="proyectos.html" title="Proyectos destacados">Proyectos</a></li>
-                              <li><a href="publicaciones.html" title="Artículos de opinión sobre Presencia en Internet para oficinas AEC">Publicaciones</a></li>
-                              <li><a href="contacto.html" title="Datos de contacto">Contacto</a></li>
+                      <li><a href="{{ $me->getLinkTo('/nosotros') }}" title="Sobre SEO-arquitectos">Nosotros</a></li>
+                      <li><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios digitales que ofrecemos">Servicios</a></li>
+                      <li><a href="{{ $me->getLinkTo('/proyectos') }}" title="Proyectos destacados">Proyectos</a></li>
+                      <li><a href="publicaciones.html" title="Artículos de opinión sobre Presencia en Internet para oficinas AEC">Publicaciones</a></li>
+                      <li><a href="{{ $me->getLinkTo('/contacto') }}" title="Datos de contacto">Contacto</a></li>
                             </ul>
                         </div>
                         <!--/.navbar-collapse-->

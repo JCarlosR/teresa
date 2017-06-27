@@ -5,6 +5,9 @@
                 <div class="col-sm-4 footer-block about-text">
                     <a href="index.html" title="SEO-arquitectos Presencia en Internet para OFicinas AEC" class="menu-logo black">SEO-arquitectos</a>
                     <p>SEO-arquitectos es una empresa de servicios digitales y presencia en Internet para el rubro de Arquitectura, Ingeniería, construcción AEC que ofrece servicios de marketing digital con una propuesta disruptiva basada en el White Hat SEO.</p>
+                    <p><strong>Teléfono:</strong> {{ $me->phones }}</p>
+                    <p><strong>Dirección:</strong> {{ $me->address }}</p>
+
                     <ul class="social two">
                         <li><a href="https://www.facebook.com/SEOarquitectos" title="SEO-arquitectos en Facebook" target="new" rel="publisher" ><i class="fa fa-facebook"></i> </a> </li>
                         <li><a href="https://www.linkedin.com/company/seo-arquitectos" title="SEO-arquitectos en Linkedin" target="new" rel="publisher" ><i class="fa fa-linkedin"></i> </a> </li>
