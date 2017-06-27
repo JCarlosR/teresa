@@ -105,7 +105,7 @@ a.btn-banner i
 }
 a.btn-banner:hover, a.btn-banner:focus
 {
-    background-color: #e43c5c;
+    background-color: #0069ff;
     color: #fff;
     border-color: #E74C3C;
     display: inline-block;
@@ -166,7 +166,7 @@ p.cta-sub-title
 {
 	width: 100px;
 	height: 3px;
-	background-color: #e43c5c;
+	background-color: #0069ff;
 }
 .service-box {
     margin: 0 0 60px;
@@ -180,7 +180,7 @@ p.cta-sub-title
     border: 1px solid #e9e9e9;
     line-height: 75px;
     text-align: center;
-    color: #e43c5c;
+    color: #0069ff;
     font-size: 30px;
     margin-right: 23px;
     float: left;
@@ -236,7 +236,7 @@ p.cta-sub-title
 }
 .fil-btn .active
 {
-	background-color: #e43c5c;
+	background-color: #0069ff;
 }
 .img-sec, .fig-caption
 {
@@ -361,7 +361,7 @@ margin-top: 5px;
 }
 
 .button-medium {
-    background: #e43c5c;
+    background: #0069ff;
     border-radius: 40px;
     color: #ffffff;
     cursor: pointer;
@@ -378,7 +378,7 @@ margin-top: 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 1px solid #e43c5c;
+    border: 1px solid #0069ff;
     box-shadow: none;
     outline: none;
     -webkit-transition: all 0.5s ease 0s;
@@ -426,7 +426,7 @@ margin-top: 5px;
     margin-bottom: 0;
 }
 .footer_copyright a {
-    color: #e43c5c;
+    color: #0069ff;
 }
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus
 {
