@@ -7,25 +7,36 @@
 
         <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
         <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="stylesheet" href="{{ asset ('/themes/seo/css/print.css') }}" media="print">
         <link rel="apple-touch-icon" sizes="180x180" href="imagenes/SEO-arquitectos.png">
         <link rel="shortcut icon" type="image/x-icon" href="imagenes/favicon.ico">
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- All Css -->
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/bootstrap.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/bootstrap.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/font-awesome.min.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/font-awesome.min.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/icofont.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/icofont.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/hover-min.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/hover-min.css') }}" media="screen">
         <!--Owl Carousel-->
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/owl.carousel.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/owl.carousel.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/owl.theme.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/owl.theme.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/owl.transitions.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/owl.transitions.css') }}" media="screen">
         <!--Portfolio-->
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/spsimpleportfolio.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/spsimpleportfolio.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/featherlight.min.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/featherlight.min.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/style.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/style.css') }}" media="screen">
         <link rel="stylesheet" type="text/css" href="{{ asset ('/themes/seo/css/responsive.css') }}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/themes/seo/css/responsive.css') }}" media="screen">
 
     @yield('styles')
 
@@ -74,6 +85,7 @@
 
 <!--All Js-->
 <script type="text/javascript" src="{{ asset ('/themes/seo/js/jQuery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/themes/seo/js/jQuery.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('/themes/seo/js/jquery.easing.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset ('/themes/seo/js/bootstrap.js') }}"></script>
 <script src="https://use.fontawesome.com/e18447245b.js"></script>

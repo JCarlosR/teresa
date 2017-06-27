@@ -15,10 +15,10 @@
 
                         <br>
                         <p><span class="data"><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: es_ES</script>
-    <script type="IN/FollowCompany" data-id="5212625" data-counter="right"></script></span>
-    <span class="data"> </span></p>
+                        <script type="IN/FollowCompany" data-id="5212625" data-counter="right"></script></span>
+                        <span class="data"> </span></p>
 
-                        <a href="servicios.html" title="Vér proyectos de marketing digital de SEO-arquitectos" class="btn icon radius-2x hvr-bounce-to-right">Ver Servicios  <i class="icofont icofont-caret-right"></i></a>
+                        <a href="{{$me->getlinkTo('/servicios')}}" title="Vér proyectos de marketing digital de SEO-arquitectos" class="btn icon radius-2x hvr-bounce-to-right">Ver Servicios  <i class="icofont icofont-caret-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -29,52 +29,43 @@
 <section id="services" class="space one">
     <h4 class="rotate-heading">Servicios digitales</h4>
     <div class="container">
+        <div class="text-center">
+            <h2>Servicios de Marketing Digital</h2>
+            <br>
+            <p>{{ $me->services_description }}</p>
+        </div>
         <div class="row">
-            <div class="text-center">
-                <h2>Servicios de Marketing Digital</h2>
-                <br>
-                <p>{{ $me->services_description }}</p>
 
-              <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn btn-default">Ver más</a></p>
-              <hr class="pg-titl-bdr-btm">
+        @foreach ($services->take(4) as $service)
+            <div class="col-sm-3 service-block">
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
+                    <h3>{{ $service->name }}</h3>
+                </a>
+                <p >
+                    @if (strlen($service->description) > 25)
+                        {{ $service->description }}
+                    @else
+                        Sin descripción.
+                    @endif
+                </p>
             </div>
+        @endforeach
 
-
-        @foreach ($services as $service)
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="service-icon col-md-3">
-                        </div>
-
-                        <div class="service-text col-md-9">
-                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
-                                <h3>{{ $service->name }}</h3>
-                            </a>
-                            <p >
-                                @if (strlen($service->description) > 25)
-                                    {{ $service->description }}
-                                @else
-                                    Sin descripción: doloremque laudantium, rem aperiam, eaque ipsa quae ab veritatis.
-                                @endif
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
     </div>
+    <br>
+    <p><a href="{{ $me->getLinkTo('/servicios') }}" class="btn green-btn radius-2x hvr-bounce-to-right" style="margin-left:480px;">Ver todos los servicios</a></p>
 </section>
+
 <!--About us-->
 <section id="about-us" class="one">
     <div class="text-center">
         <h4 class="rotate-heading">Sobre Nosotros</h4>
-        <p>{{ $me->about_us }}</p>
-        <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-7 about-block space ">
-                <h3>Estamos en el rubro digital hace 5 años.</h3>
+                <h3>{{ $me->about_us->description }}</h3>
                 <ul class="social-list list-horizontal share">
                     <span class='st_facebook_large' displayText='Facebook'></span>
                     <span class='st_googleplus_large' displayText='Google +'></span>
@@ -84,8 +75,8 @@
                     <span class='st_fblike_large' displayText='Facebook Like'></span>
                   </ul>
 
-                <p>Servicio de presencia en Internet para Oficinas de arquitectura, ingeniería y construcción AEC. Mediante la presencia en Internet el valor de tu marca irá subiendo y google le dará cada vez más importancia. Optimización web, medios sociales, directorios y difusión de proyectos por el mundo y así poder tener un alcance mayor al actual para promocionar tu arquitectura.</p>
-                <a href="nosotros.html" class="btn orange-btn radius-2x hvr-bounce-to-right">Sobre SEO-arquitectos</a>
+                <p>{!! $me->about_us->question_1 !!}</p>
+                <a href="{{ $me->getLinkTo('/nosotros') }}" class="btn orange-btn radius-2x hvr-bounce-to-right">Sobre SEO-arquitectos</a>
             </div>
             <div class="col-sm-5 about-block">
             <img src="/themes/seo/imagenes/logos/logo-SEO-arquitectos-home.jpg" alt="Marketing Digital para oficinas de arquitectura, ingeniería y construcción AEC" title="Marketing Digital para oficinas de arquitectura, ingeniería y construcción AEC">
@@ -143,12 +134,19 @@
                 <div class="grid-sizer"></div>
 
 
-                    @foreach ($me->projects as $project)
+                    @foreach ($me->projects->take(3) as $project)
                         @if ($project->featuredImage)
-                        <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
-                            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                        <div class="col-sm-4 portfolio-block no-padding">
+                            <div class="inner">
                                 <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
-                            </a>
+                                <div class="hover center">
+                                    <div class="inner">
+                                        <h4><a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" title="Ver Proyecto {{ $project->name }}">{{ $project->name }}</a> </h4>
+                                        <div class="category">{{ $project->service }}</div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         @endif
                     @endforeach
