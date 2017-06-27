@@ -3,6 +3,13 @@
 use Illuminate\Routing\Router;
 
 Route::group([
+    'domain' => 'teresa.seo-arquitectos.com'
+], function () {
+    Route::get('/', function () {
+        return redirect('http://theressa.net', 301);
+    });
+});
+Route::group([
     'domain' => 'www.seoproser.com'
 ], function () {
     Route::get('/', function () {
