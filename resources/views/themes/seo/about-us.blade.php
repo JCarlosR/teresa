@@ -38,7 +38,9 @@
 
                     <p>{!! $me->about_us->question_1 !!}</p>
                     <br>
-                    <img src="" alt="SEO-arquitectos Presencia en Internet para Oficinas AEC">
+                    @foreach ($me->about_us->images as $image)
+                        <img src="{{ asset('/images/about-us/'.$image->file_name) }}" alt="Acerca de {{ $me->name }}">
+                    @endforeach
                     <br>
                     <p>{!! $me->about_us->question_2 !!}</p>
 
