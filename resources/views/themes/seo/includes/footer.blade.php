@@ -3,27 +3,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 footer-block about-text">
-                    <a href="index.html" title="SEO-arquitectos Presencia en Internet para OFicinas AEC" class="menu-logo black">SEO-arquitectos</a>
-                    <p>SEO-arquitectos es una empresa de servicios digitales y presencia en Internet para el rubro de Arquitectura, Ingeniería, construcción AEC que ofrece servicios de marketing digital con una propuesta disruptiva basada en el White Hat SEO.</p>
+                    <a href="{{ $me->getLinkTo('/') }}7" title="SEO-arquitectos Presencia en Internet para OFicinas AEC" class="menu-logo black">SEO-arquitectos</a>
+                    <p>{{ $me->about_us->description }}</p>
                     <p><strong>Teléfono:</strong> {{ $me->phones }}</p>
                     <p><strong>Dirección:</strong> {{ $me->address }}</p>
 
                     <ul class="social two">
-                        <li><a href="https://www.facebook.com/SEOarquitectos" title="SEO-arquitectos en Facebook" target="new" rel="publisher" ><i class="fa fa-facebook"></i> </a> </li>
-                        <li><a href="https://www.linkedin.com/company/seo-arquitectos" title="SEO-arquitectos en Linkedin" target="new" rel="publisher" ><i class="fa fa-linkedin"></i> </a> </li>
-                        <li><a href="https://plus.google.com/+SEO-arquitectos" title="SEO-arquitectos en Google+" target="new" rel="publisher" ><i class="fa fa-google-plus"></i> </a> </li>
-                        <li><a href="https://twitter.com/SEOarquitectos" title="SEO-arquitectos en Twitter" target="new" rel="publisher" ><i class="fa fa-twitter"></i> </a> </li>
-                        <li><a href="https://es.foursquare.com/v/seoarquitectos/539d44a3498ebaba34f89517" title="SEO-arquitectos en Foursquare" target="new" rel="publisher" ><i class="fa fa-foursquare"></i> </a> </li>
+                        <li><a href="{{ $me->getSocialProfile('facebook')->url }}" title="SEO-arquitectos en Facebook" target="new" rel="publisher" ><i class="fa fa-facebook"></i> </a> </li>
+                        <li><a href="{{ $me->getSocialProfile('linkedin')->url }}" title="SEO-arquitectos en Linkedin" target="new" rel="publisher" ><i class="fa fa-linkedin"></i> </a> </li>
+                        <li><a href="{{ $me->getSocialProfile('google_plus')->url }}" title="SEO-arquitectos en Google+" target="new" rel="publisher" ><i class="fa fa-google-plus"></i> </a> </li>
+                        <li><a href="{{ $me->getSocialProfile('twitter')->url }}" title="SEO-arquitectos en Twitter" target="new" rel="publisher" ><i class="fa fa-twitter"></i> </a> </li>
+                        <li><a href="{{ $me->getSocialProfile('foursquare')->url }}" title="SEO-arquitectos en Foursquare" target="new" rel="publisher" ><i class="fa fa-foursquare"></i> </a> </li>
                     </ul>
                 </div>
                 <div class="col-sm-3 footer-block">
                     <h4>Servicios Digitales</h4>
                     <ul class="important-link">
-                        <li><a href="servicios/presencia-en-internet.html" title="Ver servicio de Presencia en Internet para Oficinas AEC">Presencia Digital</a> </li>
-                        <li><a href="servicios/websites-corporativas.html" title="Ver servicio de Website Corporativa para Oficinas AEC">Website Corporativa</a> </li>
-                        <li><a href="servicios/optimizacion-seo.html" title="Ver Servicio de Optimización SEO para Oficinas AEC">Optimización SEO</a> </li>
-                        <li><a href="servicios/formacion-digital.html" title="Ver Servicio Formación Digital">Formación Digital</a> </li>
-                        <li><a href="serviciosdiagnostico-digital.html" title="Ver Servicio Diagnóstico digital para Oficinas AEC">Diagnóstico Digital</a> </li>
+                        @foreach ($me->services as $service)
+                            <li>
+                                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" title="Ver servicio: {{ $service->name }}">
+                                    {{ $service->name }}
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
 
