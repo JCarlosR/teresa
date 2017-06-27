@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="page-title text-center">
                     <h2>Nosotros</h2>
-                    <p>{{ $me->about_us }}</p>
+                    <p>{{ $me->about_us->description }}</p>
                     <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
                     <hr class="pg-titl-bdr-btm">
-                    {{--<p>{{ $me->about_us->question_0 }}</p>--}}
+                    <p>{{ $me->about_us->question_1 }}</p>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                     <div class="col-md-4">
                         <div class="service-box">
                             <div class="service-icon col-md-3">
-                                <span></span>
+                                <span class="glyphicon glyphicon-check"></span>
                             </div>
 
                             <div class="service-text col-md-9">
@@ -54,7 +54,7 @@
                                     @if (strlen($service->description) > 25)
                                         {{ $service->description }}
                                     @else
-                                        Sin descripción: doloremque laudantium, rem aperiam, eaque ipsa quae ab veritatis.
+                                        Este servicio no cuenta con una descripción.
                                     @endif
                                 </p>
                             </div>
@@ -77,22 +77,21 @@
                     <hr class="pg-titl-bdr-btm">
                 </div>
                 <div class="port-sec">
-                    <div class="col-md-12 fil-btn text-center">
-                        <div class="filter wrk-title active" data-filter="all">Ver todos</div>
-                        @foreach ($me->services as $service)
-                            <div class="filter wrk-title" data-filter=".category-{{ $service->id }}">
-                                {{ $service->name }}
-                            </div>
-                        @endforeach
-                    </div>
                     <div id="Container">
-                        @foreach ($me->projects as $project)
+                        @foreach ($me->projects()->latest()->take(3)->get() as $project)
                             @if ($project->featuredImage)
                             <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                 <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
                                     <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
                                 </a>
                             </div>
+                            @else
+                                <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
+                                    <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                                        <img src="https://www.google.com.pe/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiYiN3osd7UAhVBbSYKHaUeDCEQjRwIBw&url=http%3A%2F%2Fes.minecraft.wikia.com%2Fwiki%2FArchivo%3ASin_imagen.png&psig=AFQjCNGlXWJNQuiBFJN-BRel7sMJZWfS1w&ust=1498665395769621"
+                                             class="img-responsive" title="{{ $project->name }}">
+                                    </a>
+                                </div>
                             @endif
                         @endforeach
                     </div>
