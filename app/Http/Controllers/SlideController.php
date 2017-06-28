@@ -65,4 +65,47 @@ class SlideController extends Controller
 
         return redirect('/slides');
     }
+
+    public function edit($id)
+    {
+        $client = $this->client();
+        $slide = Slide::find($id);
+        return view('client.slides.edit')->with(compact('client', 'slide'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $rules = [
+            'title' => 'required|min:4',
+            'description' => 'max:255'
+        ];
+        $messages = [
+            'title.require' => 'Es necesario ingresar un título para el slide (incluso si no se va a mostrar).',
+            'title.min' => 'El título debe presentar al menos 4 caracteres.',
+            'description.max' => 'La descripción admite un máximo de 255 caracteres.'
+        ];
+        $this->validate($request, $rules, $messages);
+
+        $slide = Slide::find($id);
+        $slide->title = $request->get('title');
+        $slide->description = $request->get('description');
+        $slide->url = $request->get('url');
+
+        if ($request->hasFile('image')) {
+            // TO DO: Remove the previous image
+            $file = $request->file('image');
+            $path = public_path() . '/images/slides';
+            $fileName = uniqid() . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+
+            $slide->image = $fileName;
+        }
+
+        $slide->save();
+
+        $notification = 'El slide se ha modificado exitosamente!';
+        session()->flash('notification', $notification);
+
+        return redirect('/slides');
+    }
 }

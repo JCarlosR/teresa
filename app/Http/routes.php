@@ -75,7 +75,7 @@ Route::get('/slides', 'SlideController@index');
 Route::get('/slides/registrar', 'SlideController@create');
 Route::post('/slides/registrar', 'SlideController@store');
 Route::get('/slides/{id}/editar', 'SlideController@edit');
-Route::post('/slides/editar', 'SlideController@update');
+Route::post('/slides/{id}/editar', 'SlideController@update');
 Route::get('/slides/{id}/eliminar', 'SlideController@delete');
 
 // Services

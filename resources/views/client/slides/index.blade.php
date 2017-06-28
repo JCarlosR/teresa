@@ -35,18 +35,19 @@
                     @foreach ($slides as $key => $slide)
                         <tr>
                             <th scope="row">{{ ++$key }}</th>
-                            <td>{{ $project->title }}</td>
-                            <td>{{ $project->description ?: 'Sin especificar' }}</td>
+                            <td>{{ $slide->title }}</td>
+                            <td>{{ $slide->description ?: 'Sin especificar' }}</td>
                             <td>
-                                {{--<a href="{{ url("proyecto/$project->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
-                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
-                                {{--</a>--}}
+                                <a href="{{ url("images/slides/$slide->image") }}" class="btn btn-default btn-sm"
+                                   title="Ver image" target="_blank">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
 
-                                <a href="{{ url("slides/$project->id/editar") }}" class="btn btn-info btn-sm" title="Editar slide">
+                                <a href="{{ url("slides/$slide->id/editar") }}" class="btn btn-info btn-sm" title="Editar slide">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 
-                                <a href="{{ url('/slides/'.$project->id.'/eliminar') }}"
+                                <a href="{{ url('/slides/'.$slide->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar slide"
                                    onclick="return confirm('¿Estás seguro que deseas eliminar este slide?');">
                                     <span class="glyphicon glyphicon-remove"></span>
