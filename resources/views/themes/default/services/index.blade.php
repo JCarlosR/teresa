@@ -24,7 +24,11 @@
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}">
                                 {{ $service->name }}
                             </a>
-                            <img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">
+                            @if ($service->featuredImage)
+                                <img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">
+                            @else
+                                <img src="" class="img-responsive" alt="{{ $service->name }}">
+                            @endif
                             <p>{{ $service->description }}</p>
                         </div>
                     </div>
