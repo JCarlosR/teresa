@@ -6,7 +6,7 @@
 <div class="tp-banner" >
     <ul>
         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-            <img src="imagenes/slides/fotolia_99588132.jpg" alt="slider-image" />
+            <img src="/themes/iseo/imagenes/slides/fotolia_99588132.jpg" alt="slider-image" />
             <div class="tp-caption sfl title-slide color-white center" data-x="15" data-y="110" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
                 Marketing Digital <br> profesional</div>
             <div class="tp-caption sfr desc-slide color-white center" data-x="15" data-y="250" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
@@ -16,7 +16,7 @@
         </li>
 
         <li data-transition="random-static" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-            <img src="imagenes/slides/fotolia_134240213.jpg" alt="slider-image" />
+            <img src="/themes/iseo/imagenes/slides/fotolia_134240213.jpg" alt="slider-image" />
             <div class="tp-caption sfl title-slide color-white center" data-x="15" data-y="110" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
                 Presencia en Internet <br> eficiente</div>
             <div class="tp-caption sfr desc-slide color-white center" data-x="15" data-y="250" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
@@ -26,7 +26,7 @@
         </li>
 
         <li data-transition="slidedown" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on">
-            <img src="imagenes/slides/fotolia_121832460.jpg" alt="slider-image" />
+            <img src="/themes/iseo/imagenes/slides/fotolia_121832460.jpg" alt="slider-image" />
             <div class="tp-caption sfl title-slide color-white center" data-x="15" data-y="110" data-speed="1000" data-start="1000" data-easing="Power3.easeInOut">
                 White Hat <br> Seo</div>
             <div class="tp-caption sfr desc-slide color-white center" data-x="15" data-y="250" data-speed="1000" data-start="1500" data-easing="Power3.easeInOut">
@@ -57,7 +57,7 @@
         <div class="col-md-4">
             <div class="iconbox center circle lagre">
                 <div class="box-header">
-                    <img src="images/icon/icon4.svg" alt="icon">
+                    <img src="themes/iseo/images/icon/icon4.svg" alt="icon">
                     <div class="box-title"><a href="#">Presencia en Internet</a></div>
                 </div>
                 <div class="box-content">Presencia en Internet para empresas desde una página web , medios sociales y medios profesionales.</div>
@@ -69,7 +69,7 @@
         <div class="col-md-4">
             <div class="iconbox center circle lagre">
                 <div class="box-header">
-                    <img src="images/icon/icon7.svg" alt="icon">
+                    <img src="/themes/iseo/images/icon/icon7.svg" alt="icon">
                     <div class="box-title"><a href="#">Páginas Web</a></div>
                 </div>
                 <div class="box-content">Construcción y optimización de pagina web para empresas con visión digital y necesidad de participación dle mercado digital.</div>
@@ -79,7 +79,7 @@
         <div class="col-md-4">
             <div class="iconbox center circle lagre">
                 <div class="box-header">
-                    <img src="images/icon/icon8.svg" alt="icon">
+                    <img src="/themes/iseo/images/icon/icon8.svg" alt="icon">
                     <div class="box-title"><a href="#">Optimización SEO</a></div>
                 </div>
                 <div class="box-content">Diagnóstico y ajustes técnicos de partes concretas de un website para lograr grandes resultados en los buscadores y posicionamieto web.</div>
@@ -192,7 +192,7 @@
     <div class="portfolio-wrap clearfix">
         <div class="item builder painting">
             <div class="featured-images">
-                <img src="images/internet.jpg" alt="images">
+                <img src="/themes/iseo/images/internet.jpg" alt="images">
                 <h3 class="project-title"><a href="servicios.html">Representacion Digital</a></h3>
                 <div class="overlay">
                 </div>
@@ -201,7 +201,7 @@
 
         <div class="item builder hammer">
             <div class="featured-images">
-                <img src="images/diagnostico1.jpg" alt="images">
+                <img src="/themes/iseo/images/diagnostico1.jpg" alt="images">
                 <h3 class="project-title"><a href="servicios.html">Diagnostico Digital</a></h3>
                 <div class="overlay">
                 </div>
@@ -210,7 +210,7 @@
 
         <div class="item electric painting">
             <div class="featured-images">
-                <img src="images/paginas.jpg" alt="images">
+                <img src="/themes/iseo/images/paginas.jpg" alt="images">
                 <h3 class="project-title"><a href="servicios.html">Web Site</a></h3>
                 <div class="overlay">
                 </div>
@@ -220,7 +220,7 @@
 
         <div class="item electric hammer">
             <div class="featured-images">
-                <img src="images/google1.jpg" alt="images">
+                <img src="/themes/iseo/images/google1.jpg" alt="images">
                 <h3 class="project-title"><a href="servicios.html">White Hat Seo</a></h3>
                 <div class="overlay">
                 </div>
@@ -250,7 +250,7 @@
                     <article class="post clearfix">
                         <div class="featured-post">
                             <div class="overlay"></div>
-                            <img src="imagenes/slides/fotolia_134240213.jpg" alt="image">
+                            <img src="/themes/iseo/imagenes/slides/fotolia_134240213.jpg" alt="image">
 
                         </div><!-- /.feature-post -->
                         <div class="content-post">
@@ -283,7 +283,7 @@
                     <article class="post clearfix">
                         <div class="featured-post">
                             <div class="overlay"></div>
-                            <img src="imagenes/slides/fotolia_96752713.jpg" alt="image">
+                            <img src="/themes/iseo/imagenes/slides/fotolia_96752713.jpg" alt="image">
 
                         </div><!-- /.feature-post -->
                         <div class="content-post">
@@ -318,7 +318,7 @@
                     <article class="post clearfix">
                         <div class="featured-post">
                             <div class="overlay"></div>
-                            <img src="imagenes/slides/fotolia_135702283.jpg" alt="image">
+                            <img src="/themes/iseo/imagenes/slides/fotolia_135702283.jpg" alt="image">
 
                         </div><!-- /.feature-post -->
                         <div class="content-post">
@@ -380,7 +380,7 @@
 
                     <div class="avatar">
                         <div class="testimonial-author-thumbnail">
-                            <img src="images/SPS.jpg" alt="images">
+                            <img src="/themes/iseo/images/SPS.jpg" alt="images">
                         </div>
                         <div class="name"><span>John Smith</span></div>
                         <div class="position">CEO &amp; Founder - Okler</div>
@@ -396,7 +396,7 @@
 
                     <div class="avatar">
                         <div class="testimonial-author-thumbnail">
-                            <img src="images/SPS.jpg" alt="images">
+                            <img src="/themes/iseo/images/SPS.jpg" alt="images">
                         </div>
                         <div class="name"><span>John Smith</span></div>
                         <div class="position">CEO &amp; Founder - Okler</div>
@@ -412,7 +412,7 @@
 
                     <div class="avatar">
                         <div class="testimonial-author-thumbnail">
-                            <img src="images/SPS.jpg" alt="images">
+                            <img src="/themes/iseo//themes/iseo/images/SPS.jpg" alt="images">
                         </div>
                         <div class="name"><span>John Smith</span></div>
                         <div class="position">CEO &amp; Founder - Okler</div>
@@ -430,22 +430,22 @@
 <div class="container">
     <ul class="flat-client" data-item="6" data-nav="false" data-dots="false" data-auto="true">
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-01.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-01.jpg"/>
         </li>
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-02.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-02.jpg"/>
         </li>
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-03.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-03.jpg"/>
         </li>
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-04.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-04.jpg"/>
         </li>
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-05.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-05.jpg"/>
         </li>
         <li>
-            <img alt="owlcarousel-item-img" src="images/clients/Logo-06.jpg"/>
+            <img alt="owlcarousel-item-img" src="/themes/iseo/images/clients/Logo-06.jpg"/>
         </li>
     </ul>
 </div>
