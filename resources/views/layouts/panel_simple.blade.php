@@ -46,7 +46,7 @@
 
 <header>
     <a href="{{ url(auth()->user()->root_route) }}" class="brand">
-        <img src="{{ asset('images/logo.jpg') }}" alt="Logo Teresa" width="100">
+        <img src="{{ asset('images/logo.jpg') }}" alt="Logo Teresa" width="180">
     </a>
     <ul class="notification-bar list-inline pull-right">
         <li class="dropdown hidden-sm hidden-xs">
@@ -99,9 +99,6 @@
 <script type="text/javascript" src="{{ asset('plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
 <!-- Bootstrap Date Range Picker-->
 <script type="text/javascript" src="{{ asset('plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-<!-- Core JS-->
-<script type="text/javascript" src="{{ asset('build/js/first-layout/app.js') }}"></script>
-<script type="text/javascript" src="{{ asset('build/js/first-layout/demo.js') }}"></script>
 @yield('scripts')
 
 </body>

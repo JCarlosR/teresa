@@ -27,7 +27,7 @@
                             @if ($service->featuredImage)
                                 <img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">
                             @else
-                                <img src="" class="img-responsive" alt="{{ $service->name }}">
+                                <img src="http://www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="{{ $service->name }}">
                             @endif
                             <p>{{ $service->description }}</p>
                         </div>
