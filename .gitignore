@@ -1,10 +1,12 @@
 /vendor
 /node_modules
 /public/storage
+/public/images/slides
 /public/images/about-us
 /public/images/services
 /public/images/projects
 /public/images/quotes
+/public/images/customers
 Homestead.yaml
 Homestead.json
 .env
