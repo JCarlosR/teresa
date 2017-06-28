@@ -49,7 +49,7 @@
         </div>
     </form>
     <a href="{{ url(auth()->user()->root_route) }}" class="brand">
-        <img src="{{ asset('images/logo-dark.png') }}" alt="Logo Teresa" width="100">
+        <img src="{{ asset('images/logo.jpg') }}" alt="Logo Theressa" width="100">
     </a>
     @include('includes.panel_notification_bar')
 </header>
