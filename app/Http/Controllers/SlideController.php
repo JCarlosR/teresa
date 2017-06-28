@@ -7,6 +7,7 @@ use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\File;
 
 class SlideController extends Controller
 {
@@ -107,5 +108,24 @@ class SlideController extends Controller
         session()->flash('notification', $notification);
 
         return redirect('/slides');
+    }
+
+    public function delete($id)
+    {
+        $slide = Slide::find($id);
+
+        $path = public_path() . '/images/slides/' . $slide->image;
+        if (File::isFile($path)) {
+            File::delete($path);
+        }
+
+        $deleted = $slide->delete();
+
+        if ($deleted)
+            $notification = 'Se ha eliminado la slide seleccionada.';
+        else
+            $notification = 'No se ha podido eliminar la slide seleccionada.';
+
+        return redirect('/slides')->with(compact('notification'));
     }
 }
