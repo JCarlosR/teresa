@@ -38,7 +38,9 @@
 
                     <p>{!! $me->about_us->question_1 !!}</p>
                     <br>
-                    <img src="" alt="SEO-arquitectos Presencia en Internet para Oficinas AEC">
+                    @foreach ($me->about_us->images as $image)
+                        <img src="{{ asset('/images/about-us/'.$image->file_name) }}" alt="Acerca de {{ $me->name }}">
+                    @endforeach
                     <br>
                     <p>{!! $me->about_us->question_2 !!}</p>
 
@@ -53,7 +55,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!--main heading-->
-                <div class="main-heading two col-sm-12 no-padding text-center owl-carousel owl-theme action_3-slider">
+                <div class="main-heading two col-sm-12 no-padding text-center owl-carousel owl-theme action_3-slider" style="text-align:center">
                     <div class="item blue space-top">
                         <h3 class="animate-in move-up">¿Como Nace SEO-arquitectos?</h3>
                         <p>{!! $me->about_us->question_3 !!}</p>

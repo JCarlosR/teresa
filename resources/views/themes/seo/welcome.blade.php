@@ -180,7 +180,7 @@
                         <div class="testi-header">
                             <img src="/themes/seo/imagenes/testimonios/hernani-canessa.jpg" alt="Testimonio Hernani Canessa de Vértice Arquitectos" title="Hernani Canessa de Vértice Arquitectos">
                             <div class="title">
-                                <h4><a href="https://www.linkedin.com/in/hernani-canessa-lohmann-23333056/" title="Hernani Canessa Lohmann en Linkedin" target="new" rel="nofollow">Hernani Canessa</a> </h4>
+                                <h4><a href="https://www.linkedin.com/in/hernani-canessa-lohmann-23333056/" title="Hernani Canessa en Linkedin" target="new" rel="nofollow">Hernani Canessa</a> </h4>
                                 <div class="company">Vértice Arquitectos</div>
                             </div>
                         </div>
