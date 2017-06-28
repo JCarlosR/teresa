@@ -57,7 +57,7 @@
         <div class="col-md-4">
             <div class="iconbox center circle lagre">
                 <div class="box-header">
-                    <img src="themes/iseo/images/icon/icon4.svg" alt="icon">
+                    <img src="/themes/iseo/images/icon/icon4.svg" alt="icon">
                     <div class="box-title"><a href="#">Presencia en Internet</a></div>
                 </div>
                 <div class="box-content">Presencia en Internet para empresas desde una página web , medios sociales y medios profesionales.</div>
@@ -412,7 +412,7 @@
 
                     <div class="avatar">
                         <div class="testimonial-author-thumbnail">
-                            <img src="/themes/iseo//themes/iseo/images/SPS.jpg" alt="images">
+                            <img src="/themes/iseo/images/SPS.jpg" alt="images">
                         </div>
                         <div class="name"><span>John Smith</span></div>
                         <div class="position">CEO &amp; Founder - Okler</div>
