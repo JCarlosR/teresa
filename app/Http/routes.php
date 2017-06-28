@@ -71,7 +71,7 @@ Route::post('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@update');
 
 // Slider (slides)
 Route::get('/slides', 'SlideController@index');
-Route::get('/slides/{id}/ver', 'SlideController@show');
+//Route::get('/slides/{id}/ver', 'SlideController@show');
 Route::get('/slides/registrar', 'SlideController@create');
 Route::post('/slides/registrar', 'SlideController@store');
 Route::get('/slides/{id}/editar', 'SlideController@edit');
