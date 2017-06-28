@@ -55,7 +55,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!--main heading-->
-                <div class="main-heading two col-sm-12 no-padding text-center owl-carousel owl-theme action_3-slider">
+                <div class="main-heading two col-sm-12 no-padding text-center owl-carousel owl-theme action_3-slider" style="text-align:center">
                     <div class="item blue space-top">
                         <h3 class="animate-in move-up">¿Como Nace SEO-arquitectos?</h3>
                         <p>{!! $me->about_us->question_3 !!}</p>
