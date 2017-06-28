@@ -10,7 +10,7 @@
                     <div class="col-md-3">
                         <div id="logo" class="logo">
                             <a href="index.html" rel="home">
-                                <img src="imagenes/logos/sps-logo-cuad-transp.png" width="80" height="80" alt="SEO Professional Services">
+                                <img src="/themes/iseo/imagenes/logos/sps-logo-cuad-transp2@2x.png" width="80" height="80" alt="SEO Professional Services">
                             </a>
                         </div><!-- /.logo -->
                         <div class="btn-menu">
