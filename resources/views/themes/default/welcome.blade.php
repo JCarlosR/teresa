@@ -24,7 +24,7 @@
                         <p>{{ $me->about_us->description }}</p>
                         <p><a href="{{ $me->getLinkTo('/nosotros') }}" class="btn btn-default">Ver más</a></p>
                         <hr class="pg-titl-bdr-btm">
-                        <p>{{ $me->about_us->question_1 }}</p>
+                        <p>{!! $me->about_us->question_1 !!}</p>
                     @else
                         <p><em>Aún no se ha definido contenido para esta sección.</em></p>
                     @endif

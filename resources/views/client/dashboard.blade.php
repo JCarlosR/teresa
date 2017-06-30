@@ -40,6 +40,11 @@
             <div class="col-md-12">
                 <div class="widget">
                     <div class="widget-body">
+                        <a href="/ver/{{ auth()->user()->id }}" target="_blank" class="btn btn-primary pull-right"
+                           data-toggle="tooltip" data-placement="top" title="Previsualizar datos en el theme por defecto">
+                            <i class="glyphicon glyphicon glyphicon-globe big-black-icon"></i> Previsualizar
+                        </a>
+                        
                         <p><b>Bienvenido {{ auth()->user()->name }}!</b></p>
                         <p>Seleccione una opción del menú de la izquierda para acceder a la sección de su interés.</p>
                     </div>
