@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="jumbotron">
-                    <h1 class="small">Bienvenido a <span class="bold">{{ $me->name }}</span></h1>
+                    <h1>Bienvenido a <span class="bold">{{ $me->name }}</span></h1>
                     <p class="big">{{ $me->description }}</p>
                     <a href="{{ $me->getLinkTo('/proyectos') }}" class="btn btn-banner">Ver proyectos realizados<i class="fa fa-send"></i></a>
                 </div>
