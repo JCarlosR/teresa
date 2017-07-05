@@ -43,18 +43,17 @@
                 {{ csrf_field() }}
 
                 <fieldset>
-                    <legend>Ficha del proyecto</legend>
-
+                    <legend>Search Engine Results Page</legend>
                     <div class="form-group">
-                        <label for="project-name" class="col-sm-2 control-label">Título SERP</label>
+                        <label for="project-name" class="col-sm-2 control-label">Título</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" id="project-name" class="form-control" placeholder="Ingresa aquí el nombre del proyecto" value="{{ old('name') }}">
+                            <input type="text" name="name" id="project-name" class="form-control" placeholder="Título de la página del proyecto" value="{{ old('name') }}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="project-description" class="col-sm-2 control-label">Resumen SERP</label>
+                        <label for="project-description" class="col-sm-2 control-label">Descripción</label>
                         <div class="col-sm-10">
-                            <input type="text" name="description" id="project-description" class="form-control" placeholder="Ingresa aquí una descripción breve del proyecto" value="{{ old('description') }}">
+                            <input type="text" name="description" id="project-description" class="form-control" placeholder="Descripción de la página del proyecto" value="{{ old('description') }}">
                         </div>
                     </div>
                     <div class="google-results">
@@ -66,6 +65,11 @@
                         </div>
                         <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
                     </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ficha del proyecto</legend>
+
                     <div class="form-group">
                         <label for="project-service" class="col-sm-2 control-label">Servicios</label>
                         <div class="col-sm-10">
@@ -196,7 +200,7 @@
     </script>
 
     <!-- Tag-it and the required jquery ui -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="{{ asset('vendor/tag-it/tag-it.min.js') }}" type="text/javascript" charset="utf-8"></script>
 
     <!-- Summer note editor for text-areas -->
@@ -204,4 +208,7 @@
 
     <script src="{{ asset('/panel/projects/create.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    <script>
+        googleResults('[name="name"]', '[name="description"]', '.google-results');
+    </script>
 @endsection

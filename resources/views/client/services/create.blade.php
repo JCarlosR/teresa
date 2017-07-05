@@ -37,15 +37,16 @@
             <form action="" method="POST">
                 {{ csrf_field() }}
 
+                @if (auth()->user()->is_admin)
                 <fieldset>
-                    <legend>Datos generales</legend>
+                    <legend>Search Engine Results Page</legend>
                     <div class="form-group">
-                        <label for="service-name">Nombre del servicio</label>
-                        <input type="text" name="name" id="service-name" class="form-control" placeholder="Ingresa aquí el nombre del servicio" value="{{ old('name') }}">
+                        <label for="service-title">Título</label>
+                        <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title') }}">
                     </div>
                     <div class="form-group">
-                        <label for="service-description">Resumen del servicio</label>
-                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Ingresa aquí una descripción breve del servicio" value="{{ old('description') }}">
+                        <label for="service-description">Descripción</label>
+                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description') }}">
                     </div>
                     <div class="google-results">
                         <a href="#" onclick="return false;">
@@ -55,6 +56,15 @@
                             <cite>{{ $client->domain }}/servicios/<span>example</span></cite>
                         </div>
                         <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
+                    </div>
+                </fieldset>
+                @endif
+
+                <fieldset>
+                    <legend>Datos generales</legend>
+                    <div class="form-group">
+                        <label for="service-name">Nombre del servicio</label>
+                        <input type="text" name="name" id="service-name" class="form-control" placeholder="Ingresa aquí el nombre del servicio" value="{{ old('name') }}">
                     </div>
                 </fieldset>
 
@@ -118,4 +128,7 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ asset('/panel/services/create.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    <script>
+        googleResults('[name="title"]', '[name="description"]', '.google-results');
+    </script>
 @endsection

@@ -40,24 +40,35 @@
             <form action="{{ url('/servicio/editar') }}" method="POST">
                 {{ csrf_field() }}
                 <input type="hidden" name="service_id" value="{{ $service->id }}">
+
+                @if (auth()->user()->is_admin)
+                <fieldset>
+                    <legend>Datos generales</legend>
+                    <div class="form-group">
+                        <label for="service-title">Título</label>
+                        <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title', $service->title) }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-description">Descripción</label>
+                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description', $service->description) }}">
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">{{ $service->title ?: 'Sin título' }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
+                        </div>
+                        <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
+                    </div>
+                </fieldset>
+                @endif
+
                 <fieldset>
                     <legend>Datos generales</legend>
                     <div class="form-group">
                         <label for="service-name">Nombre del servicio</label>
                         <input type="text" name="name" id="service-name" class="form-control" placeholder="Ingresa aquí el nombre del servicio" value="{{ old('name', $service->name) }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="service-description">Resumen del servicio</label>
-                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Ingresa aquí una descripción breve del servicio" value="{{ old('description', $service->description) }}">
-                    </div>
-                    <div class="google-results">
-                        <a href="#" onclick="return false;">
-                            <span class="title">{{ $service->name }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
-                        </div>
-                        <span class="description">{{ $service->description }}</span>
                     </div>
                 </fieldset>
 
@@ -124,4 +135,7 @@
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ asset('/panel/services/create.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    <script>
+        googleResults('[name="title"]', '[name="description"]', '.google-results');
+    </script>
 @endsection

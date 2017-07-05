@@ -48,14 +48,17 @@ class ServiceController extends Controller
         ];
         $messages = [
             'name.required' => 'Debe ingresar un nombre para el servicio.',
-            'description.max' => 'La descripción del servicio es muy extensa (resumen).'
+            'description.max' => 'La descripción del servicio es muy extensa.'
         ];
         $this->validate($request, $rules, $messages);
 
         $service = new Service();
         $service->user_id = $this->client()->id;
         $service->name = trim($request->get('name'));
-        $service->description = $request->get('description');
+        if (auth()->user()->is_admin) {
+            $service->title = $request->get('title');
+            $service->description = $request->get('description');
+        }
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
         $service->question_3 = $request->get('question_3');
@@ -89,7 +92,10 @@ class ServiceController extends Controller
 
         $service = Service::find($request->get('service_id'));
         $service->name = trim($request->get('name'));
-        $service->description = $request->get('description');
+        if (auth()->user()->is_admin) {
+            $service->title = $request->get('title');
+            $service->description = $request->get('description');
+        }
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
         $service->question_3 = $request->get('question_3');

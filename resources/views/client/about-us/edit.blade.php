@@ -47,20 +47,19 @@
 
                 <fieldset>
                     <div class="form-group">
-                        <label for="about-us-description" class="col-sm-2 control-label">Resumen de "Nosotros"</label>
+                        <label for="about-us-description" class="col-sm-2 control-label">Descripción de "Nosotros"</label>
                         <div class="col-sm-10">
                             <input type="text" name="description" id="about-us-description" class="form-control" placeholder="Ingresa aquí una descripción breve del equipo de la empresa" value="{{ old('description', $about_us->description) }}">
                         </div>
-                        <br><br>
-                        <div class="google-results">
-                            <a href="#" onclick="return false;">
-                                <span class="title">Sobre {{ $client->trade_name }}</span>
-                            </a>
-                            <div>
-                                <cite>{{ $client->domain }}/nosotros</cite>
-                            </div>
-                            <span class="description">{{ $about_us->description }}</span>
+                    </div>
+                    <div class="google-results">
+                        <a href="#" onclick="return false;">
+                            <span class="title">Sobre {{ $client->trade_name }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/nosotros</cite>
                         </div>
+                        <span class="description">{{ $about_us->description }}</span>
                     </div>
 
                     <span id="status1" class="pull-right"></span>
@@ -125,4 +124,7 @@
 
     <script src="{{ asset('/panel/about-us/index.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    <script>
+        googleResults(null, '[name="description"]', '.google-results');
+    </script>
 @endsection
