@@ -142,6 +142,22 @@ Route::get('/marcas/{id}/editar', 'BrandController@edit');
 Route::post('/marcas/{id}/editar', 'BrandController@update');
 Route::get('/marcas/{id}/eliminar', 'BrandController@delete');
 
+// Products
+Route::get('/productos', 'ProductController@index');
+Route::get('/productos/registrar', 'ProductController@create');
+Route::post('/productos/registrar', 'ProductController@store');
+Route::get('/productos/{id}/editar', 'ProductController@edit');
+Route::post('/productos/{id}/editar', 'ProductController@update');
+Route::get('/productos/{id}/eliminar', 'ProductController@delete');
+
+// Articles
+Route::get('/articulos', 'ArticleController@index');
+Route::get('/articulos/registrar', 'ArticleController@create');
+Route::post('/articulos/registrar', 'ArticleController@store');
+Route::get('/articulos/{id}/editar', 'ArticleController@edit');
+Route::post('/articulos/{id}/editar', 'ArticleController@update');
+Route::get('/articulos/{id}/eliminar', 'ArticleController@delete');
+
 
 // Work schedule
 Route::get('/cronograma', 'Client\WorkScheduleController@index');
