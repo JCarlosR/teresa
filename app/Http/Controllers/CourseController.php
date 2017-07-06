@@ -31,12 +31,28 @@ class CourseController extends Controller
 
     public function store(Request $request)
     {
+        $rules = [
+            'pdf' => 'mimes:pdf'
+        ];
+        $messages = [
+            'pdf.mimes' => 'El archivo adjunto no es un PDF válido.'
+        ];
+        $this->validate($request, $rules, $messages);
+
         $course = new Course();
         $course->name = $request->input('name');
         $course->description = $request->input('description');
         $course->price = $request->input('price');
         $course->discount = $request->input('discount');
         $course->user_id = $this->client()->id;
+        // dd($request->hasFile('pdf'));
+        if ($request->hasFile('pdf')) {
+            $file = $request->file('pdf');
+            $path = public_path() . '/pdf/courses';
+            $fileName = uniqid() . '-' . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $course->pdf = $fileName;
+        }
         $course->save();
 
         $notification = 'El curso se ha registrado correctamente!';

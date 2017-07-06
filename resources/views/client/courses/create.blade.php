@@ -27,7 +27,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/cursos/registrar') }}" method="POST" class="form-horizontal">
+            <form action="{{ url('/cursos/registrar') }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
                 {{ csrf_field() }}
 
                 <fieldset>
@@ -55,6 +55,12 @@
                         <label for="course-discount" class="col-sm-2 control-label">Descuento <em>(en %)</em></label>
                         <div class="col-sm-10">
                             <input type="text" name="discount" id="course-discount" class="form-control" placeholder="Descuento (ingresar un valor en porcentaje que será descontado del total)" value="{{ old('discount') }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="course-pdf" class="col-sm-2 control-label">Adjuntar PDF</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="pdf" id="course-pdf" class="form-control" placeholder="(Opcional)">
                         </div>
                     </div>
 
