@@ -56,7 +56,19 @@
                             <input type="text" name="discount" id="course-discount" class="form-control" placeholder="Descuento (ingresar un valor en porcentaje que será descontado del total)" value="{{ old('discount', $course->discount) }}">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label for="course-pdf" class="col-sm-2 control-label">Adjuntar PDF <em>(solo si desea reemplazar el actual)</em></label>
+                        <div class="col-sm-10">
+                            <input type="file" name="pdf" id="course-pdf" class="form-control" placeholder="(Opcional)">
+                            @if ($course->pdf)
+                                <p class="help-block">
+                                    <a href="/pdf/courses/{{ $course->pdf }}" target="_blank">Ver PDF</a> actual.
+                                </p>
+                            @else
+                                <p class="help-block">Actualmente no se ha asignado ningún PDF.</p>
+                            @endif
+                        </div>
+                    </div>
                 </fieldset>
 
                 <div class="text-right">

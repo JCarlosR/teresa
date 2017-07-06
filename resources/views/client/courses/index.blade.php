@@ -60,9 +60,12 @@
                             <td class="text-center">{{ $course->price }}</td>
                             <td class="text-center">{{ $course->discount }}</td>
                             <td>
-                                {{--<a href="{{ url("curso/$course->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
-                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
-                                {{--</a>--}}
+                                @if ($course->pdf)
+                                <a href="{{ url("/pdf/courses/$course->pdf") }}" class="btn btn-default btn-sm"
+                                   title="Ver PDF adjunto" target="_blank">
+                                    <span class="glyphicon glyphicon-open-file"></span>
+                                </a>
+                                @endif
                                 <a href="{{ url("cursos/$course->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>

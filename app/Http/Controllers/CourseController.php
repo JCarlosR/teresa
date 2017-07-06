@@ -76,6 +76,14 @@ class CourseController extends Controller
         $course->price = $request->input('price');
         $course->discount = $request->input('discount');
         $course->user_id = $this->client()->id;
+
+        if ($request->hasFile('pdf')) {
+            $file = $request->file('pdf');
+            $path = public_path() . '/pdf/courses';
+            $fileName = uniqid() . '-' . $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $course->pdf = $fileName;
+        }
         $course->save();
 
         $notification = 'El curso se ha modificado correctamente!';
