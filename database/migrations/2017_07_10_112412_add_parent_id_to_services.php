@@ -13,7 +13,7 @@ class AddParentIdToServices extends Migration
     public function up()
     {
         Schema::table('services', function($table) {
-            $table->integer('parent_id')->nullable();
+            $table->integer('parent_id')->unsigned()->nullable();
             $table->foreign('parent_id')->references('id')->on('services');
         });
     }
