@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Teresa\Clients\Accessors\CustomersRelatedAccessors;
+use App\Teresa\Clients\Accessors\PagePresentationAccessors;
 use App\Teresa\Clients\Methods\SocialProfilesMethods;
 use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
@@ -46,6 +47,7 @@ class User extends Authenticatable
     use TypeAndStatusAccessors;
 
     // accessors: client content
+    use PagePresentationAccessors;
     use ServicesRelatedAccessors;
     use ProjectsRelatedAccessors;
     use CustomersRelatedAccessors;

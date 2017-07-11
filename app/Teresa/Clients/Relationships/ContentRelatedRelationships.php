@@ -2,6 +2,8 @@
 
 namespace App\Teresa\Clients\Relationships;
 
+use App\PageDescription;
+
 trait ContentRelatedRelationships
 {
     public function sections()
@@ -55,4 +57,12 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Brand');
     }
 
+
+
+    // page descriptions with format (presentations)
+
+    public function presentations()
+    {
+        return $this->hasMany(PageDescription::class);
+    }
 }

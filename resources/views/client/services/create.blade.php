@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
     <style>
-        textarea {
-            display: none;
-        }
+        textarea { display: none; }
     </style>
 @endsection
 
