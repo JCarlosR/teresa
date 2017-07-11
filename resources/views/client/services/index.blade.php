@@ -40,7 +40,7 @@
 
             <div class="row">
                 @foreach ($services as $key => $service)
-                    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="col-sm-12 col-md-6 col-xl-4">
                         <div class="widget">
                             <div class="widget-heading">
                                 <h3 class="widget-title text-center">
