@@ -37,58 +37,81 @@
                 Registrar nuevo servicio
             </a>
             <p class="mb-20">A continuación, un listado de los servicios profesionales brindados por la empresa.</p>
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th></th>{{-- Semaphore--}}
-                        <th>Nombre</th>
-                        <th class="text-center">Fotos</th>
-                        <th class="text-center">Contador</th>
-                        <th class="text-center">Porcentaje</th>
-                        <th>Opciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($services as $key => $service)
-                        <tr>
-                            <th scope="row">{{ ++$key }}</th>
-                            <td><img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="40"></td>
-                            <td>{{ $service->name }}</td>
-                            <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
-                                @if ($service->hasPhotos)
-                                    <i class="ion-checkmark-round"></i>
-                                @else
-                                    <i class="ion-close"></i>
-                                @endif
-                            </td>
-                            <td class="text-center">{{ $service->characters_count }}</td>
-                            <td class="text-center">{{ $service->characters_percent }}</td>
-                            <td>
-                                <a href="{{ url("/servicio/$service->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
 
-                                <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Editar datos">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                </a>
+            <div class="row">
+                @foreach ($services as $key => $service)
+                    <div class="col-md-4">
+                        <div class="widget">
+                            <div class="widget-heading">
+                                <h3 class="widget-title text-center">
+                                    ({{ ++$key }})
+                                    {{ $service->name }}
+                                    <img src="/images/semaphores/{{ $service->status_color }}.png" alt="Semáforo de estado" height="40"></h3>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Fotos:
+                                    <span class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
+                                     @if ($service->hasPhotos)
+                                            <i class="ion-checkmark-round"></i>
+                                    @else
+                                        <i class="ion-close"></i>
+                                    @endif
+                                    </span>
+                                </p>
+                                <p>Contador de caracteres: {{ $service->characters_count }}</p>
+                                <p>Porcentaje del total sugerido: {{ $service->characters_percent }} %</p>
+                                <ul class="list-group">
+                                    @foreach ($service->services as $s)
+                                        <li class="list-group-item">
+                                            {{ $s->name }}
+                                            <p class="pull-right">
+                                                <a href="{{ url("/servicio/$service->id/ver") }}" class="btn btn-default btn-xs" title="Ver datos">
+                                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                                </a>
+                                                <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-xs" title="Editar datos">
+                                                    <span class="glyphicon glyphicon-edit"></span>
+                                                </a>
+                                                <a href="{{ url("servicio/$service->id/imagenes") }}" class="btn btn-warning btn-xs" title="Editar imágenes">
+                                                    <span class="glyphicon glyphicon-picture"></span>
+                                                </a>
 
-                                <a href="{{ url("servicio/$service->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                </a>
+                                                <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
+                                                   class="btn btn-danger btn-xs" title="Eliminar servicio"
+                                                   onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');">
+                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                </a>
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="widget-footer">
+                                <p class="text-center">
+                                    <a href="{{ url("/servicio/$service->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
 
-                                <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
-                                   class="btn btn-danger btn-sm" title="Eliminar servicio"
-                                   onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                                    <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm" title="Editar datos">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </a>
+
+                                    <a href="{{ url("servicio/$service->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                    </a>
+
+                                    <a href="{{ url('/servicio/'.$service->id.'/eliminar') }}"
+                                       class="btn btn-danger btn-sm" title="Eliminar servicio"
+                                       onclick="return confirm('¿Estás seguro que deseas eliminar este servicio?');">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
+
         </div>
     </div>
 </div>

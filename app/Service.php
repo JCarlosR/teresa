@@ -14,6 +14,17 @@ class Service extends Model
 
     // relationships
 
+    // $service->parent
+    // $service->service
+    public function parent()
+    {
+        return $this->belongsTo('App\Service');
+    }
+    public function services()
+    {
+        return $this->hasMany('App\Service', 'parent_id');
+    }
+    
     public function projects()
     {
         return $this->belongsToMany('App\Project')->withTimestamps();
