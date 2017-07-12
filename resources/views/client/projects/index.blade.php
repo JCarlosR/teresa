@@ -15,22 +15,34 @@
                 </div>
             @endif
 
-            <form action="{{ url('/proyectos/descripcion') }}" class="form-horizontal" method="POST">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <label for="description" class="col-md-12">Descripción de los proyectos:</label>
-                    <div>
-                        <div class="col-md-11">
-                            <input type="text" placeholder="Ingresa aquí un resumen de los proyectos realizados por la empresa, en menos de 155 caracteres." required class="form-control" value="{{ $description }}" name="description">
+            @if (auth()->user()->is_admin)
+                <div class="widget">
+                    <div class="widget-heading clearfix">
+                        <h3 class="widget-title pull-left">Search Engine Results Page</h3>
+                        <ul class="widget-tools pull-right list-inline">
+                            <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="widget-body" style="display: none;">
+                        <form action="{{ url('/proyectos/descripcion') }}" class="form-horizontal" method="POST">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label for="description" class="col-md-12">Descripción de los proyectos:</label>
+                            <div>
+                                <div class="col-md-11">
+                                    <input type="text" placeholder="Ingresa aquí un resumen de los proyectos realizados por la empresa, en menos de 155 caracteres." required class="form-control" value="{{ $description }}" name="description">
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="submit" class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-1">
-                            <button type="submit" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-floppy-disk"></span>
-                            </button>
-                        </div>
+                    </form>
                     </div>
                 </div>
-            </form>
+            @endif
 
             <a href="{{ url('/proyectos/registrar') }}" class="btn btn-success pull-right">
                 <span class="glyphicon glyphicon-plus"></span>
