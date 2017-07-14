@@ -17,7 +17,7 @@ $.fn.extend({
         var tree = $(this);
         tree.addClass("tree");
         tree.find('li').has("ul").each(function () {
-            var branch = $(this); //li with children ul
+            var branch = $(this); // li with children ul
             branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
             branch.addClass('branch');
             branch.on('click', function (e) {
@@ -26,16 +26,16 @@ $.fn.extend({
                     icon.toggleClass(openedClass + " " + closedClass);
                     $(this).children().children().toggle();
                 }
-            })
+            });
             branch.children().children().toggle();
         });
-        //fire event from the dynamically added icon
+        // fire event from the dynamically added icon
         tree.find('.branch .indicator').each(function(){
             $(this).on('click', function () {
                 $(this).closest('li').click();
             });
         });
-        //fire event to open branch if the li contains an anchor instead of text
+        // fire event to open branch if the li contains an anchor instead of text
         tree.find('.branch>a').each(function () {
             $(this).on('click', function (e) {
                 $(this).closest('li').click();
