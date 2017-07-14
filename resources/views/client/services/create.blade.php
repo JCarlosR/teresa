@@ -35,29 +35,6 @@
             <form action="" method="POST">
                 {{ csrf_field() }}
 
-                @if (auth()->user()->is_admin)
-                <fieldset>
-                    <legend>Search Engine Results Page</legend>
-                    <div class="form-group">
-                        <label for="service-title">Título</label>
-                        <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title') }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="service-description">Descripción</label>
-                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description') }}">
-                    </div>
-                    <div class="google-results">
-                        <a href="#" onclick="return false;">
-                            <span class="title">Este es un ejemplo de un título con 70 caracteres de longitud</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/servicios/<span>example</span></cite>
-                        </div>
-                        <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
-                    </div>
-                </fieldset>
-                @endif
-
                 <fieldset>
                     <legend>Datos generales</legend>
                     <div class="form-group">
@@ -110,6 +87,29 @@
                     <span id="status5" class="pull-right"></span>
                     <textarea id="note5" title="Pregunta 5" name="question_5">{{ old('question_5') }}</textarea>
                 </fieldset>
+
+                @if (auth()->user()->is_admin)
+                    <fieldset>
+                        <legend>Search Engine Results Page</legend>
+                        <div class="form-group">
+                            <label for="service-title">Título</label>
+                            <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title') }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="service-description">Descripción</label>
+                            <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description') }}">
+                        </div>
+                        <div class="google-results">
+                            <a href="#" onclick="return false;">
+                                <span class="title">Este es un ejemplo de un título con 70 caracteres de longitud</span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/servicios/<span>example</span></cite>
+                            </div>
+                            <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
+                        </div>
+                    </fieldset>
+                @endif
 
                 <div class="text-right">
                     <button type="submit" class="btn btn-primary">

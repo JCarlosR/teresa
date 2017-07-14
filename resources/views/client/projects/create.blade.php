@@ -39,36 +39,20 @@
                 </div>
             @endif
 
+
             <form action="{{ url('/proyectos/registrar') }}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <fieldset>
-                    <legend>Search Engine Results Page</legend>
-                    <div class="form-group">
-                        <label for="project-name" class="col-sm-2 control-label">Título</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="name" id="project-name" class="form-control" placeholder="Título de la página del proyecto" value="{{ old('name') }}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="project-description" class="col-sm-2 control-label">Descripción</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="description" id="project-description" class="form-control" placeholder="Descripción de la página del proyecto" value="{{ old('description') }}">
-                        </div>
-                    </div>
-                    <div class="google-results">
-                        <a href="#" onclick="return false;">
-                            <span class="title">Este es un ejemplo de un título con 70 caracteres de longitud</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/proyectos/<span>example</span></cite>
-                        </div>
-                        <span class="description">Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.</span>
-                    </div>
-                </fieldset>
-
-                <fieldset>
                     <legend>Ficha del proyecto</legend>
+
+                    <div class="form-group">
+                        <label for="project-client" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="project-name" class="form-control"
+                                   placeholder="Nombre del proyecto" value="{{ old('name') }}">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="project-service" class="col-sm-2 control-label">Servicios</label>
@@ -177,6 +161,38 @@
                     <textarea id="note3" title="Pregunta 3" name="question_3">{{ old('question_3') }}</textarea>
                 </fieldset>
 
+                @if (auth()->user()->is_admin)
+                    <fieldset>
+                        <legend>Search Engine Results Page</legend>
+                        <div class="form-group">
+                            <label for="project-title" class="col-sm-2 control-label">Título</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="title" id="project-title" class="form-control" placeholder="Título de la página del proyecto" value="{{ old('title') }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-description" class="col-sm-2 control-label">Descripción</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="description" id="project-description" class="form-control"
+                                       placeholder="Descripción de la página del proyecto" value="{{ old('description') }}">
+                            </div>
+                        </div>
+                        <div class="google-results">
+                            <a href="#" onclick="return false;">
+                                <span class="title">
+                                    {{ old('title', 'Este es un ejemplo de un título con 70 caracteres de longitud') }}
+                                </span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/proyectos/<span>example</span></cite>
+                            </div>
+                            <span class="description">
+                                {{ old('description', 'Este es un ejemplo de cómo se muestran los resultados en Google. Este contenido lo obtiene Google (y los demás buscadores) en base a etiquetas meta que se encarga de configurar Teresa.') }}
+                            </span>
+                        </div>
+                    </fieldset>
+                @endif
+
                 <div class="text-right">
                     <button type="button" class="btn btn-default" onclick="window.history.back();">
                         Cancelar registro
@@ -186,6 +202,7 @@
                     </button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
@@ -209,6 +226,6 @@
     <script src="{{ asset('/panel/projects/create.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
     <script>
-        googleResults('[name="name"]', '[name="description"]', '.google-results');
+        googleResults('[name="title"]', '[name="description"]', '.google-results');
     </script>
 @endsection

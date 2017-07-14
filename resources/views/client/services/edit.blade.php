@@ -41,29 +41,6 @@
                 {{ csrf_field() }}
                 <input type="hidden" name="service_id" value="{{ $service->id }}">
 
-                @if (auth()->user()->is_admin)
-                <fieldset>
-                    <legend>Datos generales</legend>
-                    <div class="form-group">
-                        <label for="service-title">Título</label>
-                        <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title', $service->title) }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="service-description">Descripción</label>
-                        <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description', $service->description) }}">
-                    </div>
-                    <div class="google-results">
-                        <a href="#" onclick="return false;">
-                            <span class="title">{{ $service->title ?: 'Sin título' }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
-                        </div>
-                        <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
-                    </div>
-                </fieldset>
-                @endif
-
                 <fieldset>
                     <legend>Datos generales</legend>
                     <div class="form-group">
@@ -116,6 +93,29 @@
                     <span id="limit5"></span>
                     <textarea id="note5" title="Pregunta 5" name="question_5">{{ old('question_5', $service->question_5) }}</textarea>
                 </fieldset>
+
+                @if (auth()->user()->is_admin)
+                    <fieldset>
+                        <legend>Search Engine Results Page</legend>
+                        <div class="form-group">
+                            <label for="service-title">Título</label>
+                            <input type="text" name="title" id="service-title" class="form-control" placeholder="Título de la página de servicio" value="{{ old('title', $service->title) }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="service-description">Descripción</label>
+                            <input type="text" name="description" id="service-description" class="form-control" placeholder="Descripción de la página de servicio" value="{{ old('description', $service->description) }}">
+                        </div>
+                        <div class="google-results">
+                            <a href="#" onclick="return false;">
+                                <span class="title">{{ $service->title ?: 'Sin título' }}</span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
+                            </div>
+                            <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
+                        </div>
+                    </fieldset>
+                @endif
 
                 <div class="text-right">
                     <a href="/servicios" type="button" class="btn btn-default">

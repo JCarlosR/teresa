@@ -75,6 +75,7 @@ class ProjectController extends Controller
         $project->user_id = $this->client()->id;
 
         $project->name = $request->get('name');
+        $project->title = $request->get('title');
         $project->description = $request->get('description');
         $project->client = $request->get('client');
         $project->year = $request->get('year');
@@ -163,6 +164,7 @@ class ProjectController extends Controller
 
         $project = Project::find($request->get('project_id'));
         $project->name = $request->get('name');
+        $project->title = $request->get('title');
         $project->description = $request->get('description');
         $project->client = $request->get('client');
         $project->year = $request->get('year');
