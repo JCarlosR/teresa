@@ -65,7 +65,6 @@ trait ClientDashboard
         }
     }
 
-
     public function getProfessionalLink($user_id, $name)
     {
         $professionalProfile = ProfessionalProfile::where('user_id', $user_id)->where('name', $name)->first();
@@ -95,4 +94,5 @@ trait ClientDashboard
         }
         return $professionalMedia;
     }
+
 }

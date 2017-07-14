@@ -42,8 +42,9 @@ Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
 Route::post('password/reset', 'Auth\PasswordController@reset');
 
 // Redirect after login / register
-Route::get('/dashboard', 'Client\DashboardController@index');
 Route::get('/admin', 'AdminController@index');
+Route::get('/super/client', 'SuperClientController@index');
+Route::get('/dashboard', 'Client\DashboardController@index');
 
 // General data
 Route::get('/datos/principales', 'Client\DataController@edit');

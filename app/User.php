@@ -38,8 +38,9 @@ class User extends Authenticatable
     ];
 
     // where to redirect users after login / registration.
-    protected $clientPath = '/dashboard';
     protected $adminPath = '/admin';
+    protected $superClientPath = '/super/client';
+    protected $clientPath = '/dashboard';
 
     // accessors: client data
     use DataPresentationAccessors;
