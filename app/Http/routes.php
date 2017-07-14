@@ -46,9 +46,6 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/super/client', 'SuperClientController@index');
 Route::get('/dashboard', 'Client\DashboardController@index');
 
-// Super client routes
-Route::get('/client/dashboard', 'SuperClient\DashboardController@index');
-
 // General data
 Route::get('/datos/principales', 'Client\DataController@edit');
 Route::post('/datos/principales', 'Client\DataController@update');
@@ -271,4 +268,17 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/pagos/{id}/titulo', 'Admin\PaymentController@updateTitle');
     Route::post('/pagos/eliminar', 'Admin\PaymentController@delete');
 
+});
+
+// Super client management
+Route::group(['prefix' => 'super/client'], function () {
+
+    // Go to client dashboard
+    Route::get('/seleccionar/{client_id}', 'SuperClientController@select');
+    // Star switching
+    // Route::get('/cliente/{client_id}/destacar/{state}', 'SuperClientController@star');
+    // Impersonate (login as client)
+    Route::get('/impersonate/{client_id}', 'SuperClientController@impersonate');
+
+    Route::get('/dashboard', 'SuperClient\DashboardController@index');
 });

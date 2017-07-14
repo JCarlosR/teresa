@@ -25,10 +25,10 @@ class SuperClientController extends Controller
         session()->put('client_name', $client->trade_name);
         session()->put('client_photo_route', $client->photo_route);
 
-        return redirect('/admin/dashboard');
+        return redirect('/super/client/dashboard');
     }
 
-    public function index(Request $request)
+    public function index()
     {
         $query = User::client()->where('parent_id', auth()->user()->id);
         $clients = $query->get();

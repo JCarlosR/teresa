@@ -34,12 +34,12 @@
                                    data-toggle="tooltip" data-placement="top" title="Previsualizar datos en el theme por defecto">
                                     <i class="glyphicon glyphicon glyphicon-globe big-black-icon"></i>
                                 </a>
-                                <a href="/admin/cliente/{{ $client->id }}/impersonate"
+                                <a href="/super/client/impersonate/{{ $client->id }}"
                                    data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
                                     <i class="glyphicon glyphicon-log-in big-black-icon"></i>
                                 </a>
                             </p>
-                            <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
+                            <a href="{{ url("super/client/seleccionar/$client->id") }}">
                                 <img src="{{ url($client->photo_route) }}" width="100" alt="Logo {{ $client->name }}" class="img-circle">
                                 <h4 class="mt-20 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
                             </a>
