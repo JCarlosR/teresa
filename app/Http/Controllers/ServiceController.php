@@ -18,9 +18,16 @@ class ServiceController extends Controller
     public function index()
     {
         $services = $this->client()->services()->whereNull('parent_id')->get();
+        $hasSubServices = Service::where('user_id', $this->client()->id)
+            ->whereNotNull('parent_id')->exists();
+
         $description = $this->client()->services_description;
         $presentation = $this->client()->presentation('services');
-        return view('client.services.index')->with(compact('services', 'description', 'presentation'));
+
+        return view('client.services.index')->with(compact(
+            'services', 'hasSubServices',
+            'description', 'presentation'
+        ));
     }
 
     public function show($id)
