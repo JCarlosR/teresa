@@ -1,5 +1,13 @@
 @extends('layouts.panel')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
+    <style>
+        textarea { display: none; }
+    </style>
+@endsection
+
 @section('dashboard_content')
 <div class="page-content container-fluid">
     <div class="widget">
@@ -43,6 +51,32 @@
                     </div>
                 </div>
             @endif
+
+            <div class="widget">
+                <div class="widget-heading clearfix">
+                    <h3 class="widget-title pull-left">Presentación</h3>
+                    <ul class="widget-tools pull-right list-inline">
+                        <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="widget-body" style="display: none;">
+                    <form action="{{ url('/page/projects/presentation') }}" method="POST">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <h4>
+                                ¿Cómo presentarías los proyectos de tu empresa?
+                                <small>Presenta la página de proyectos a tus potenciales clientes.</small>
+                            </h4>
+                            <span id="limit1"></span>
+                            <span id="status1" class="pull-right"></span>
+                            <textarea name="presentation" id="note1" title="Descripción de los proyectos">{{ old('presentation', $presentation) }}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                        </button>
+                    </form>
+                </div>
+            </div>
 
             <a href="{{ url('/proyectos/registrar') }}" class="btn btn-success pull-right">
                 <span class="glyphicon glyphicon-plus"></span>
@@ -109,4 +143,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
+    <script src="{{ asset('/panel/projects/index.js') }}"></script>
 @endsection
