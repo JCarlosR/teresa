@@ -53,4 +53,4 @@ $.fn.extend({
 });
 
 // Initialization of tree views
-$('#servicesTree').treed();
+$('#serviceTree').treed();

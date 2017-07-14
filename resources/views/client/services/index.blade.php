@@ -81,7 +81,9 @@
             <p class="mb-20">A continuación, un listado de los servicios profesionales brindados por la empresa.</p>
 
             @if ($hasSubServices)
-                @include('includes.user.services.tree', ['services' => $services])
+                <ul id="serviceTree">
+                    @include('includes.user.services.tree', ['services' => $services])
+                </ul>
             @else
                 <div class="table-responsive">
                         <table class="table table-hover">
