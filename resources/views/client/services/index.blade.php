@@ -6,6 +6,7 @@
     <style>
         textarea { display: none; }
     </style>
+    <link rel="stylesheet" href="{{ asset('/panel/services/tree.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -144,4 +145,5 @@
 @section('scripts')
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ asset('/panel/services/index.js') }}"></script>
+    <script src="{{ asset('/panel/services/tree.js') }}"></script>
 @endsection
