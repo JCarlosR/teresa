@@ -33,7 +33,7 @@ class SuperClientController extends Controller
         $query = User::client()->where('parent_id', auth()->user()->id);
         $clients = $query->get();
 
-        return view('admin.index')->with(compact('clients'));
+        return view('super_client.index')->with(compact('clients'));
     }
 
     public function impersonate($client_id)

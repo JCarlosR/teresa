@@ -13,10 +13,13 @@ trait ClientDashboard
 {
 
     public function getDashboardResponse()
-    {
-        $is_admin = auth()->user()->is_admin;
+    {   // to do: pass a parameter $isAdminOrSuperClient in this method
+        // in the future, to avoid 2 queries here (has to be sent from the DashboardControllers)
 
-        if ($is_admin) {
+        $is_admin = auth()->user()->is_admin;
+        $is_super_client = auth()->user()->is_super_client;
+
+        if ($is_admin ||$is_super_client) {
             $client_id = session('client_id');
             $client = User::findOrFail($client_id);
         } else {
