@@ -1,6 +1,6 @@
 @foreach ($services as $service)
     <li>
-        {{ $service->name }}
+        <a href="#">{{ $service->name }}</a>
 
         <a href="{{ url("/servicio/$service->id/ver") }}" class="btn btn-default btn-xs" title="Ver datos">
             <span class="glyphicon glyphicon-eye-open"></span>
