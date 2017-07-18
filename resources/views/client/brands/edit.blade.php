@@ -136,7 +136,7 @@
                     <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2', $brand->question_2) }}</textarea>
 
                     <h3>
-                        Lineas de productos
+                        Líneas de productos
                         <small>¿Qué líneas de productos presenta? ¿Cómo se organizan?</small>
                     </h3>
                     <span id="limit3"></span>

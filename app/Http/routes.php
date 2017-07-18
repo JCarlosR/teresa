@@ -142,6 +142,7 @@ Route::get('/cursos/{id}/eliminar', 'CourseController@delete');
 Route::get('/marcas', 'BrandController@index');
 Route::get('/marcas/registrar', 'BrandController@create');
 Route::post('/marcas/registrar', 'BrandController@store');
+Route::get('/marcas/{id}/ver', 'BrandController@show');
 Route::get('/marcas/{id}/editar', 'BrandController@edit');
 Route::post('/marcas/{id}/editar', 'BrandController@update');
 Route::get('/marcas/{id}/eliminar', 'BrandController@delete');

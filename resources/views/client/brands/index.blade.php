@@ -68,9 +68,9 @@
                             <td class="text-right">{{ $brand->characters_count }}</td>
                             <td class="text-center">{{ $brand->characters_percent }} %</td>
                             <td>
-                                {{--<a href="{{ url("marcas/$brand->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">--}}
-                                    {{--<span class="glyphicon glyphicon-eye-open"></span>--}}
-                                {{--</a>--}}
+                                <a href="{{ url("marcas/$brand->id/ver") }}" class="btn btn-default btn-sm" title="Ver datos">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
 
                                 <a href="{{ url("marcas/$brand->id/editar") }}" class="btn btn-info btn-sm" title="Editar datos">
                                     <span class="glyphicon glyphicon-edit"></span>

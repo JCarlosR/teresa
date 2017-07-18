@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+
+    // accessors
+
     public function getCharactersCountAttribute()
     {
         return strlen(strip_tags($this->question_1)) +
@@ -30,5 +33,32 @@ class Brand extends Model
             return 'yellow';
         // else
         return 'green';
+    }
+
+
+    // methods
+
+    public function questionStatus($i) {
+        $characters = 0;
+        switch ($i) {
+            case 1:
+                $characters = strlen(strip_tags($this->question_1));
+                break;
+            case 2:
+                $characters = strlen(strip_tags($this->question_2));
+                break;
+            case 3:
+                $characters = strlen(strip_tags($this->question_3));
+                break;
+        }
+
+        // other questions
+        if ($characters >= 500)
+            return 'success';
+        else if ($characters >= 300)
+            return 'warning';
+        else
+            return 'danger';
+
     }
 }

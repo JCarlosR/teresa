@@ -24,17 +24,18 @@ class BrandController extends Controller
         return view('client.brands.index')->with(compact('brands'));
     }
 
-//    public function show($id)
-//    {
-//        $project = Project::findOrFail($id);
-//
-//        // Check if the project really belongs to the user
-//        if ($project->user_id !== $this->client()->id)
-//            return redirect('/proyectos');
-//
-//        $client = $this->client();
-//        return view('client.projects.show')->with(compact('client', 'project'));
-//    }
+    public function show($id)
+    {
+        $client = $this->client();
+
+        $brand = Brand::findOrFail($id);
+
+        // Check if the project really belongs to the user
+        if ($brand->user_id !== $client->id)
+            return redirect('/marcas');
+
+        return view('client.brands.show')->with(compact('client', 'brand'));
+    }
 
     public function create()
     {
@@ -139,4 +140,5 @@ class BrandController extends Controller
         $notification = 'La marca seleccionada se ha eliminado correctamente.';
         return back()->with(compact('notification'));
     }
+
 }
