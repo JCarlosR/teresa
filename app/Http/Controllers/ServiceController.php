@@ -63,10 +63,13 @@ class ServiceController extends Controller
         $service = new Service();
         $service->user_id = $this->client()->id;
         $service->name = trim($request->get('name'));
+
         if (auth()->user()->is_admin) {
             $service->title = $request->get('title');
-            $service->description = $request->get('description');
-        }
+            $service->description = $request->get('description') ?: '';
+        } else
+            $service->description = '';
+
         $service->question_1 = $request->get('question_1');
         $service->question_2 = $request->get('question_2');
         $service->question_3 = $request->get('question_3');

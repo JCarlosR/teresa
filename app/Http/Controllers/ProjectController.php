@@ -76,7 +76,7 @@ class ProjectController extends Controller
 
         $project->name = $request->get('name');
         $project->title = $request->get('title');
-        $project->description = $request->get('description');
+        $project->description = $request->get('description') ?: '';
         $project->client = $request->get('client');
         $project->year = $request->get('year');
         $project->type = $request->get('type');
