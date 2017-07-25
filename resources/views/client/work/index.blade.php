@@ -28,7 +28,11 @@
             <p class="text-muted">Al finalizar el año, el cronograma de actividades se actualizará
                 a fin de planificar una estrategia adecuada según los progresos alcanzados.</p>
 
-            @include('includes.user.work.show_activities_table')
+            @if ($workSchedule->time_toast_code)
+                <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+            @else
+                @include('includes.user.work.show_activities_table')
+            @endif
         </div>
     </div>
 
