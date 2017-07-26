@@ -34,6 +34,17 @@ class InboxController extends Controller
         return view('client.inbox.index')->with(compact('messages', 'topic'));
     }
 
+    public function show($id)
+    {
+        $client = $this->client();
+
+        $message = InboxMessage::find($id);
+        if ($message->user_id != $client->id)
+            return redirect('/inbox');
+
+        return view('client.inbox.show')->with(compact('message'));
+    }
+
     public function config()
     {
         $client = $this->client();
