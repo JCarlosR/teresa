@@ -370,7 +370,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="height: 29em; overflow: auto;">
+            <div class="widget-body" style="height: 32em; overflow: auto;">
                 @if (isset($workSchedule))
                     @if ($workSchedule->time_toast_code)
                         <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
@@ -407,20 +407,21 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach ($messages as $message)
                     <tr class="unread">
                         <td class="email-select">
-                            Proyectos
+                            {{ $message->topic }}
                             <p class="text-muted mb-0">
-                                <time datetime="2017-03-22 16:22:12" class="fs-13 mr-5">
-                                    22/03/2017
+                                <time datetime="{{ $message->created_at }}" class="fs-13 mr-5">
+                                    {{ $message->created_at->format('d/m/Y') }}
                                 </time>
                             </p>
                         </td>
                         <td class="email-from">
                             <div class="media">
                                 <div class="media-body">
-                                    <h5 class="media-heading">Magdalena</h5>
-                                    <span>954343777</span>
+                                    <h5 class="media-heading">{{ $message->name }}</h5>
+                                    <span>{{ $message->phone }}</span>
                                 </div>
                             </div>
                         </td>
@@ -430,98 +431,7 @@
                             </a>
                         </td>
                     </tr>
-                    <tr class="unread">
-                        <td class="email-select">
-                            Proveedores
-                            <p class="text-muted mb-0">
-                                <time datetime="2017-03-22 16:18:53" class="fs-13 mr-5">
-                                    22/03/2017
-                                </time>
-                            </p>
-                        </td>
-                        <td class="email-from">
-                            <div class="media">
-                                <div class="media-body">
-                                    <h5 class="media-heading">Benito</h5>
-                                    <span class="email-title">911543777</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="#">
-                                Ver mensaje
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="email-select">
-                            Empleo
-                            <p class="text-muted mb-0">
-                                <time datetime="2017-03-22 16:17:56" class="fs-13 mr-5">
-                                    22/03/2017
-                                </time>
-                            </p>
-                        </td>
-                        <td class="email-from">
-                            <div class="media">
-                                <div class="media-body">
-                                    <h5 class="media-heading">Rosa</h5>
-                                    <span>966378777</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="#">
-                                Ver mensaje
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="unread">
-                        <td class="email-select">
-                            Proyectos
-                            <p class="text-muted mb-0">
-                                <time datetime="2017-03-22 16:15:11" class="fs-13 mr-5">
-                                    22/03/2017
-                                </time>
-                            </p>
-                        </td>
-                        <td class="email-from">
-                            <div class="media">
-                                <div class="media-body">
-                                    <h5 class="media-heading">María</h5>
-                                    <span>966468468</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="#">
-                                Ver mensaje
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="email-select">
-                            C. Directo
-                            <p class="text-muted mb-0">
-                                <time datetime="2017-03-22 16:10:15" class="fs-13 mr-5">
-                                    22/03/2017
-                                </time>
-                            </p>
-                        </td>
-                        <td class="email-from">
-                            <div class="media">
-                                <div class="media-body">
-                                    <h5 class="media-heading">Carlos</h5>
-                                    <span>966543777</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <a href="#">
-                                Ver mensaje
-                            </a>
-                        </td>
-                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

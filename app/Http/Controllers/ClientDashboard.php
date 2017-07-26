@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\InboxMessage;
 use App\ProfessionalMedia;
 use App\ProfessionalProfile;
 use App\Project;
@@ -44,6 +45,9 @@ trait ClientDashboard
         $instagram = $client->getSocialProfile('instagram');
         $youtube = $client->getSocialProfile('youtube');
 
+        $messages = InboxMessage::where('user_id', $client->id)
+            ->orderBy('id', 'desc')->get();
+
         if ($client->client_type == 'architect') {
             $architizer = $this->getProfessionalLink($client_id, 'Architizer');
             $archello = $this->getProfessionalLink($client_id, 'Archello');
@@ -55,7 +59,7 @@ trait ClientDashboard
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'architizer', 'archello', 'archilovers', 'buildings', 'behance',
                 'client', 'projects', 'services', 'professionalMedia',
-                'workSchedule'
+                'workSchedule', 'messages'
             ));
         } else {
             $professionalLinks = $this->getProfessionalProfileLinks($client_id);
@@ -63,7 +67,7 @@ trait ClientDashboard
                 'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
                 'professionalLinks',
                 'client', 'projects', 'services', 'professionalMedia',
-                'workSchedule'
+                'workSchedule', 'messages'
             ));
         }
     }
