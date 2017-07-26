@@ -360,7 +360,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <div class="widget">
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Cronograma de trabajo</h3>
@@ -372,21 +372,27 @@
             </div>
             <div class="widget-body" style="height: 29em; overflow: auto;">
                 @if (isset($workSchedule))
-                    <ul class="activity-list activity-sm list-unstyled mb-0">
-                        @foreach ($workSchedule->details as $detail)
-                        <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
-                            <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
-                            <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
-                        </li>
-                        @endforeach
-                    </ul>
+                    @if ($workSchedule->time_toast_code)
+                        <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                    @else
+                        <ul class="activity-list activity-sm list-unstyled mb-0">
+                            @foreach ($workSchedule->details as $detail)
+                                <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
+                                    <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
+                                    <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 @else
                     <p>Aun no se ha establecido un cronograma de trabajo.</p>
                 @endif
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+</div>
+<div class="row">
+    <div class="col-md-6">
         <div class="widget">
             <div class="widget-heading">
                 <h3 class="widget-title">Últimos mensajes recibidos</h3>
@@ -521,7 +527,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="widget">
             <div class="widget-heading">
                 <h3 class="widget-title">Últimos artículos</h3>
