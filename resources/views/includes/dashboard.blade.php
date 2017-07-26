@@ -318,6 +318,39 @@
 </div>
 
 <div class="row">
+    <div class="col-md-12">
+        <div class="widget">
+            <div class="widget-heading clearfix">
+                <h3 class="widget-title pull-left">Cronograma de trabajo</h3>
+                <ul class="widget-tools pull-right list-inline">
+                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                    <li><a href="{{ url(auth()->user()->work_schedule_route) }}"><i class="ion-calendar"></i></a></li>
+                    <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
+                </ul>
+            </div>
+            <div class="widget-body" @if (isset($workSchedule)) style="height: 32em; overflow: auto;" @endif>
+                @if (isset($workSchedule))
+                    @if ($workSchedule->time_toast_code)
+                        <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                    @else
+                        <ul class="activity-list activity-sm list-unstyled mb-0">
+                            @foreach ($workSchedule->details as $detail)
+                                <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
+                                    <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
+                                    <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                @else
+                    <p>Aun no se ha establecido un cronograma de trabajo.</p>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-lg-12">
         <div class="widget">
             <div class="widget-heading clearfix">
@@ -371,38 +404,7 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="widget">
-            <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Cronograma de trabajo</h3>
-                <ul class="widget-tools pull-right list-inline">
-                    <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
-                    <li><a href="{{ url(auth()->user()->work_schedule_route) }}"><i class="ion-calendar"></i></a></li>
-                    <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
-                </ul>
-            </div>
-            <div class="widget-body" @if (isset($workSchedule)) style="height: 32em; overflow: auto;" @endif>
-                @if (isset($workSchedule))
-                    @if ($workSchedule->time_toast_code)
-                        <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-                    @else
-                        <ul class="activity-list activity-sm list-unstyled mb-0">
-                            @foreach ($workSchedule->details as $detail)
-                                <li title="{{ $detail->state_name }}" class="activity-{{ $detail->state_color }}">
-                                    <time datetime="" class="fs-13 text-muted">{{ $detail->work_schedule->start_date->addMonths($detail->month_offset)->format('F Y') }}</time>
-                                    <p class="mt-10 mb-0">{{ $detail->type_name }}</p>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                @else
-                    <p>Aun no se ha establecido un cronograma de trabajo.</p>
-                @endif
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="row">
     <div class="col-md-6">
         <div class="widget">
