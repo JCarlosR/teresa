@@ -58,7 +58,7 @@
                         </div>
                     </td>
                     <td>
-                        <a href="#">
+                        <a href="{{ url('/inbox/messages/'.$message->id) }}">
                             <span class="email-title">{{ $message->phone }}</span>
                             <span class="email-summary"> - {{ $message->short_content }}</span>
                         </a>

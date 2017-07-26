@@ -175,7 +175,7 @@ Route::get('/leads/{id}', 'Client\LeadController@show');
 
 // Inbox
 Route::get('/inbox', 'InboxController@index');
-Route::get('/inbox/message/{id}', 'InboxController@show');
+Route::get('/inbox/messages/{id}', 'InboxController@show');
 
 // Location
 Route::get('/mapa', 'Client\MapController@index');

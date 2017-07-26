@@ -42,7 +42,8 @@ class InboxController extends Controller
         if ($message->user_id != $client->id)
             return redirect('/inbox');
 
-        return view('client.inbox.show')->with(compact('message'));
+        $topic = '';
+        return view('client.inbox.show')->with(compact('message', 'topic'));
     }
 
     public function config()
