@@ -68,12 +68,13 @@
             </tbody>
         </table>
     </div>
-    {{ $messages->links() }}
-    {{--<div class="clearfix">--}}
-    {{--<div class="pull-left">Mostrando 1 - 10 de 100</div>--}}
-    {{--<div class="btn-group pull-right">--}}
-    {{--<button type="button" class="btn btn-default"><i class="ion-arrow-left-c"></i></button>--}}
-    {{--<button type="button" class="btn btn-default"><i class="ion-arrow-right-c"></i></button>--}}
-    {{--</div>--}}
-    {{--</div>--}}
+    <div class="clearfix">
+        <div class="pull-left">
+            Mostrando {{ $messages->firstItem() }} - {{ $messages->lastItem() }}
+            de {{ $messages->count() }}
+        </div>
+        <div class="pull-right">
+            {{ $messages->links() }}
+        </div>
+    </div>
 @endsection
