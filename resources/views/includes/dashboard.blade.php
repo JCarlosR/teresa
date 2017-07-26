@@ -49,7 +49,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="min-height: 25em;">
+            <div class="widget-body" @if (count($services) > 0) style="min-height: 25em;" @endif>
                 @if (count($services) > 0)
                     <table id="table-services" class="table mb-0 dt-responsive nowrap">
                         <thead>
@@ -82,7 +82,7 @@
                         </tbody>
                     </table>
                 @else
-                    <p>Aún no has registrado ningún servicios.</p>
+                    <p>Aún no has registrado ningún servicio.</p>
                     <p>
                         <a href="/servicios" class="btn btn-primary">Empezar a registrar servicios</a>
                     </p>
@@ -274,7 +274,7 @@
                 </ul>
             </div>
             <div class="widget-body" style="">
-
+                @if (count($projects) > 0)
                 <table id="table-projects" class="table mb-0 dt-responsive nowrap">
                     <thead>
                     <tr>
@@ -306,7 +306,12 @@
                     {{--<td class="text-center"><span class="label label-outline label-purple">En progreso</span></td>--}}
                     </tbody>
                 </table>
-
+                @else
+                    <p>Aún no has registrado ningún proyecto.</p>
+                    <p>
+                        <a href="/proyectos" class="btn btn-primary">Empezar a registrar proyectos</a>
+                    </p>
+                @endif
             </div>
         </div>
     </div>
