@@ -42,8 +42,8 @@
         <p>{{ $message->content }}</p>
         <hr>
         <div class="text-right">
-            <a href="{{ url('/inbox') }}" type="button" class="btn btn-success">
-                <i class="ion-paper-airplane mr-5"></i> Volver a la bandeja
+            <a href="{{ url('/inbox') }}" type="button" class="btn btn-default">
+                <i class="ion-filing mr-5"></i> Volver a la bandeja
             </a>
             <a href="{{ url('/inbox/messages/'.$message->id.'/delete') }}" type="button" class="btn btn-danger" onclick="return confirm('¿Seguro que desea eliminar este mensaje?');">
                 <i class="ion-trash-b mr-5"></i> Eliminar

@@ -4,7 +4,10 @@
 <div class="page-content container-fluid">
     <div class="sidebar-container sidebar-sm">
         <div class="sidebar-toggle bg-white"><i class="ion-grid"></i></div>
-        <div data-mcs-theme="minimal-dark" class="sidebar sidebar-sm bg-white mCustomScrollbar"><a href="email-compose.html" class="btn btn-rounded btn-success mb-20"><i class="ion-paintbrush mr-5"></i> Redactar</a>
+        <div data-mcs-theme="minimal-dark" class="sidebar sidebar-sm bg-white mCustomScrollbar">
+            {{--<a href="{{ url('/inbox/new') }}" class="btn btn-rounded btn-success mb-20">--}}
+                {{--<i class="ion-paintbrush mr-5"></i> Redactar--}}
+            {{--</a>--}}
             <div class="list-group no-border">
                 <a href="javascript:;" class="list-group-item active">
                     <i class="ion-filing"></i> Inbox (5)
