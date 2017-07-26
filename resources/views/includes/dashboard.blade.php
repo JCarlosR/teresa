@@ -50,36 +50,43 @@
                 </ul>
             </div>
             <div class="widget-body" style="min-height: 25em;">
-                <table id="table-services" class="table mb-0 dt-responsive nowrap">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center">Fotos</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($services as $key => $service)
+                @if (count($services) > 0)
+                    <table id="table-services" class="table mb-0 dt-responsive nowrap">
+                        <thead>
                         <tr>
-                            <td>{{ $key +1 }}</td>
-                            <td>
-                                <a href="/servicio/{{ $service->id }}/ver">
-                                    {{ $service->name }}
-                                </a>
-                            </td>
-                            <td class="text-center">
-                                <img src="/images/semaphores/{{ $service->status_color }}.png"
-                                     alt="Semáforo de estado" height="24"
-                                    title="{{ $service->characters_percent }} %">
-                            </td>
-                            <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
-                                <i class="ion-{{ $service->hasPhotos ? 'checkmark' : 'close' }}-round"></i>
-                            </td>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th class="text-center">Estado</th>
+                            <th class="text-center">Fotos</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        @foreach ($services as $key => $service)
+                            <tr>
+                                <td>{{ $key +1 }}</td>
+                                <td>
+                                    <a href="/servicio/{{ $service->id }}/ver">
+                                        {{ $service->name }}
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <img src="/images/semaphores/{{ $service->status_color }}.png"
+                                         alt="Semáforo de estado" height="24"
+                                        title="{{ $service->characters_percent }} %">
+                                </td>
+                                <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
+                                    <i class="ion-{{ $service->hasPhotos ? 'checkmark' : 'close' }}-round"></i>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                @else
+                    <p>Aún no has registrado ningún servicios.</p>
+                    <p>
+                        <a href="/servicios" class="btn btn-primary">Empezar a registrar servicios</a>
+                    </p>
+                @endif
             </div>
         </div>
     </div>
@@ -370,7 +377,7 @@
                     <li><a href="javascript:;" class="widget-remove"><i class="ion-close-round"></i></a></li>
                 </ul>
             </div>
-            <div class="widget-body" style="height: 32em; overflow: auto;">
+            <div class="widget-body" @if (isset($workSchedule)) style="height: 32em; overflow: auto;" @endif>
                 @if (isset($workSchedule))
                     @if ($workSchedule->time_toast_code)
                         <iframe src="https://www.timetoast.com/embed/{{ $workSchedule->time_toast_code }}" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
@@ -397,7 +404,7 @@
             <div class="widget-heading">
                 <h3 class="widget-title">Últimos mensajes recibidos</h3>
             </div>
-            <div class="widget-body">
+            <div class="widget-body" style="height: 28em; overflow: auto;">
                 <table class="table table-hover">
                     <thead>
                     <tr>

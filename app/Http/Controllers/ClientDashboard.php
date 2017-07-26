@@ -46,7 +46,7 @@ trait ClientDashboard
         $youtube = $client->getSocialProfile('youtube');
 
         $messages = InboxMessage::where('user_id', $client->id)
-            ->orderBy('id', 'desc')->get();
+            ->orderBy('id', 'desc')->take(7);
 
         if ($client->client_type == 'architect') {
             $architizer = $this->getProfessionalLink($client_id, 'Architizer');
