@@ -70,8 +70,8 @@
     </div>
     <div class="clearfix">
         <div class="pull-left">
-            Mostrando {{ $messages->firstItem() }} - {{ $messages->lastItem() }}
-            de {{ $messages->count() }}
+            Mostrando del {{ $messages->firstItem() }} al {{ $messages->lastItem() }}
+            de un total de {{ $messages->total() }} mensajes
         </div>
         <div class="pull-right">
             {{ $messages->links() }}
