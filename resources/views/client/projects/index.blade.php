@@ -28,10 +28,10 @@
                     <div class="widget-heading clearfix">
                         <h3 class="widget-title pull-left">Search Engine Results Page</h3>
                         <ul class="widget-tools pull-right list-inline">
-                            <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
+                            <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
                         </ul>
                     </div>
-                    <div class="widget-body">
+                    <div class="widget-body" style="display: none;">
                         <form action="{{ url('/proyectos/descripcion') }}" class="form-horizontal" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
@@ -56,10 +56,10 @@
                 <div class="widget-heading clearfix">
                     <h3 class="widget-title pull-left">Presentación</h3>
                     <ul class="widget-tools pull-right list-inline">
-                        <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-down"></i></a></li>
+                        <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     </ul>
                 </div>
-                <div class="widget-body" style="display: none;">
+                <div class="widget-body">
                     <form action="{{ url('/page/projects/presentation') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
