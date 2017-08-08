@@ -20,7 +20,7 @@ trait ClientDashboard
         $is_admin = auth()->user()->is_admin;
         $is_super_client = auth()->user()->is_super_client;
 
-        if ($is_admin ||$is_super_client) {
+        if ($is_admin || $is_super_client) {
             $client_id = session('client_id');
             $client = User::findOrFail($client_id);
         } else {

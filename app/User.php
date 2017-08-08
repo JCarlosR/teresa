@@ -49,7 +49,6 @@ class User extends Authenticatable
 
     // accessors: client content
     use PagePresentationAccessors;
-    // use SectionsRelatedMethods;
     use ProjectsRelatedAccessors;
     use CustomersRelatedAccessors;
     use CmsRelatedAccessors;

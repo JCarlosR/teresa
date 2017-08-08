@@ -55,7 +55,7 @@
 </header>
 <!-- Header end-->
 <div class="main-container">
-    @if (auth()->user()->is_admin)
+    @if (auth()->user()->is_admin || auth()->user()->is_super_client)
         @include('includes.admin.sidebar')
     @else
         @include('includes.user.sidebar')
