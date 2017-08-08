@@ -1,0 +1,101 @@
+@extends('layouts.panel')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
+    {{--<style>textarea { display: none; }</style>--}}
+@endsection
+
+@section('dashboard_content')
+<div class="page-content container-fluid">
+    <ol class="breadcrumb">
+        <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
+        <li><a href="/articulos">Artículos</a></li>
+        <li class="active">Nuevo artículo</li>
+    </ol>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Registrar nuevo artículo</h3>
+        </div>
+        <div class="widget-body">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ url('/articulos/registrar') }}" method="POST" class="form-horizontal">
+                {{ csrf_field() }}
+
+                <fieldset>
+                    <legend>Ficha del artículo</legend>
+
+                    <div class="form-group">
+                        <label for="article-title" class="col-sm-2 control-label">Título del artículo</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" id="article-title" class="form-control" placeholder="Título del artículo (1 oración)" value="{{ old('article-main-idea') }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-idea" class="col-sm-2 control-label">Idea principal</label>
+                        <div class="col-sm-10">
+                            <textarea name="article-idea" id="article-idea" rows="2" class="form-control" placeholder="Sugerencia: 2 oraciones"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-objective" class="col-sm-2 control-label">Objetivo frente a nuestra audiencia</label>
+                        <div class="col-sm-10">
+                            <textarea name="article-objective" id="article-objective" rows="2" class="form-control" placeholder="Una frase breve (difundir ideas sobre... generar conciencia acerca de... indicar las ventajas de... demostrar el expertise de... comunicar los avances de... establecer los parámetros de...)"></textarea>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Memoria descriptiva</legend>
+
+                    <h3>
+                        Contexto.
+                        <small>Sugerencia: 100 palabras</small>
+                    </h3>
+                    <span id="limit1"></span>
+                    <span id="status1" class="pull-right"></span>
+                    <textarea id="note1" title="Pregunta 1" name="question_1">{{ old('question_1') }}</textarea>
+
+                    <h3>
+                        Desarrollo de la idea central
+                        <small>Sugerencia: 150 palabras</small>
+                    </h3>
+                    <span id="limit2"></span>
+                    <span id="status2" class="pull-right"></span>
+                    <textarea id="note2" title="Pregunta 2" name="question_2">{{ old('question_2') }}</textarea>
+                    <p class="help-block">De qué manera nos adaptamos al contexto y qué valor añadimos dentro de nuestros servicios.
+                        ¿Qué queda por hacer? ¿Qué comentarios, logros o reconocimientos hemos recibido por el desarrollo de estas actividades?</p>
+                </fieldset>
+
+                <div class="text-right">
+                    <button type="button" class="btn btn-default" onclick="window.history.back();">
+                        Cancelar registro
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Registrar artículo
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+    <!-- Summer note editor for text-areas -->
+    <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
+
+    <script src="{{ asset('/panel/articles/create.js') }}"></script>
+@endsection
