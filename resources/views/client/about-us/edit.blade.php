@@ -42,7 +42,6 @@
                 </div>
             @endif
 
-            @if (auth()->user()->is_admin)
             <form action="{{ url('/nosotros') }}" method="POST">
                 {{ csrf_field() }}
 
@@ -114,7 +113,6 @@
                     </button>
                 </div>
             </form>
-            @endif
         </div>
     </div>
 </div>
