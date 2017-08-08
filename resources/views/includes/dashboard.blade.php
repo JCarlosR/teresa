@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+
         <div class="widget">
             <div class="widget-heading clearfix">
                 <h3 class="widget-title pull-left">Servicios al {{ $client->services_percent }} %</h3>

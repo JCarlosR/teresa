@@ -10,7 +10,7 @@ use App\Http\Requests;
 
 class DataController extends Controller
 {
-    // TODO: Middleare to check if a client was selected previously
+    // TODO: Middleware to check if a client was selected previously
 
     public function edit()
     {

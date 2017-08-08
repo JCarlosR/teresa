@@ -9,7 +9,7 @@ use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
 use App\Teresa\Clients\Accessors\PhotosRelatedAccessors;
 use App\Teresa\Clients\Accessors\RolesRelatedAccessors;
-use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
+use App\Teresa\Clients\Accessors\SectionsRelatedMethods;
 use App\Teresa\Clients\Accessors\TypeAndStatusAccessors;
 use App\Teresa\Clients\Relationships\WorkScheduleRelationships;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     // accessors: client content
     use PagePresentationAccessors;
-    use ServicesRelatedAccessors;
+    use SectionsRelatedMethods;
     use ProjectsRelatedAccessors;
     use CustomersRelatedAccessors;
     use CmsRelatedAccessors;
@@ -57,8 +57,9 @@ class User extends Authenticatable
     // accessors: photos
     use PhotosRelatedAccessors;
 
-    // methods: profiles
+    // methods
     use SocialProfilesMethods;
+    use SectionsRelatedMethods;
 
     // relationships
     use ContentRelatedRelationships;
