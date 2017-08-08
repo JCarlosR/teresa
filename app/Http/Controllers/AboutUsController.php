@@ -40,7 +40,9 @@ class AboutUsController extends Controller
             'user_id' => $this->client()->id
         ]);
 
-        $about_us->description = $request->input('description');
+        if (auth()->user()->is_admin)
+            $about_us->description = $request->input('description');
+
         $about_us->question_1 = $request->input('question_1');
         $about_us->question_2 = $request->input('question_2');
         $about_us->question_3 = $request->input('question_3');

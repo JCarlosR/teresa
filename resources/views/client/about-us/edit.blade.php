@@ -12,11 +12,9 @@
         }
     </style>
 
-    {{-- Tag-it styles --}}
-    <link href="{{ asset('vendor/tag-it/jquery.tagit.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/tag-it/tagit.ui-zendesk.css') }}" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
+    @if (auth()->user()->is_admin)
+        <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
+    @endif
 @endsection
 
 @section('dashboard_content')
@@ -45,6 +43,7 @@
             <form action="{{ url('/nosotros') }}" method="POST">
                 {{ csrf_field() }}
 
+                @if (auth()->user()->is_admin)
                 <fieldset>
                     <div class="form-group">
                         <label for="about-us-description" class="col-sm-2 control-label">Descripción de "Nosotros"</label>
@@ -61,7 +60,10 @@
                         </div>
                         <span class="description">{{ $about_us->description }}</span>
                     </div>
+                </fieldset>
+                @endif
 
+                <fieldset>
                     <span id="status1" class="pull-right"></span>
                     <h3>
                         ¿Qué tipo de empresa es?
@@ -121,10 +123,11 @@
 @section('scripts')
     <!-- Summer note editor for text-areas -->
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
-
     <script src="{{ asset('/panel/about-us/index.js') }}"></script>
+    @if (auth()->user()->is_admin)
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
     <script>
         googleResults(null, '[name="description"]', '.google-results');
     </script>
+    @endif
 @endsection
