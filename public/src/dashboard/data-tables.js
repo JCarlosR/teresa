@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    /*var tableProjects = */$('#table-projects').DataTable({
+    $('#table-projects').DataTable({
         lengthChange: false,
         iDisplayLength: 10,
         language: {
@@ -20,7 +20,7 @@ $(document).ready(function() {
         }
     });
 
-    /*var tableServices = */$('#table-services').DataTable({
+    $('#table-services').DataTable({
         lengthChange: false,
         iDisplayLength: 10,
         searching: false,
@@ -41,4 +41,23 @@ $(document).ready(function() {
         }
     });
 
+    $('#table-brands').DataTable({
+        lengthChange: false,
+        iDisplayLength: 10,
+        language: {
+            paginate: {
+                previous: 'Anterior',
+                next: 'Siguiente'
+            },
+            search: "Buscar: ",
+            info: "Mostrando del _START_ al _END_ de _TOTAL_ marcas"
+        },
+        fnDrawCallback: function() {
+            if (jQuery('#table-brands_paginate .paginate_button').size() > 3) {
+                jQuery('#table-brands_paginate')[0].style.display = "block";
+            } else {
+                jQuery('#table-brands_paginate')[0].style.display = "none";
+            }
+        }
+    });
 });

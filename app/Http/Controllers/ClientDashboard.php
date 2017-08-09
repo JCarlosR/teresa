@@ -48,6 +48,12 @@ trait ClientDashboard
         $messages = InboxMessage::where('user_id', $client->id)
             ->orderBy('id', 'desc')->take(7);
 
+        $variables = compact(
+            'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
+            'client', 'projects', 'services', 'professionalMedia',
+            'workSchedule', 'messages'
+        );
+
         if ($client->client_type == 'architect') {
             $architizer = $this->getProfessionalLink($client_id, 'Architizer');
             $archello = $this->getProfessionalLink($client_id, 'Archello');
@@ -55,21 +61,22 @@ trait ClientDashboard
             $buildings = $this->getProfessionalLink($client_id, 'Open Buildings');
             $behance = $this->getProfessionalLink($client_id, 'Behance');
 
-            return view('client.dashboard')->with(compact(
-                'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
-                'architizer', 'archello', 'archilovers', 'buildings', 'behance',
-                'client', 'projects', 'services', 'professionalMedia',
-                'workSchedule', 'messages'
-            ));
+            $variables += compact(
+                'architizer', 'archello', 'archilovers', 'buildings', 'behance'
+            );
         } else {
             $professionalLinks = $this->getProfessionalProfileLinks($client_id);
-            return view('client.dashboard')->with(compact(
-                'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',
-                'professionalLinks',
-                'client', 'projects', 'services', 'professionalMedia',
-                'workSchedule', 'messages'
-            ));
+            $variables += compact(
+                'professionalLinks'
+            );
         }
+
+        if ($client->hasSection('Marcas')) {
+            $brands = $client->brands;
+            $variables += compact('brands');
+        }
+
+        return view('client.dashboard')->with($variables);
     }
 
     public function getProfessionalLink($user_id, $name)
