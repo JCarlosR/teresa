@@ -2,6 +2,7 @@
 
 namespace App\Teresa\Clients\Relationships;
 
+use App\Article;
 use App\PageDescription;
 
 trait ContentRelatedRelationships
@@ -55,6 +56,11 @@ trait ContentRelatedRelationships
     public function brands()
     {
         return $this->hasMany('App\Brand');
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
     }
 
 

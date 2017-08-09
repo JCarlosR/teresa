@@ -11,12 +11,12 @@
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
         <li><a href="/articulos">Artículos</a></li>
-        <li class="active">Nuevo artículo</li>
+        <li class="active">Editar artículo</li>
     </ol>
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Registrar nuevo artículo</h3>
+            <h3 class="widget-title">Editar artículo</h3>
         </div>
         <div class="widget-body">
             @if (count($errors) > 0)
@@ -29,7 +29,7 @@
                 </div>
             @endif
 
-            <form action="{{ url('/articulos/registrar') }}" method="POST" class="form-horizontal">
+            <form action="" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
 
                 <fieldset>
@@ -38,19 +38,19 @@
                     <div class="form-group">
                         <label for="article-title" class="col-sm-2 control-label">Título del artículo</label>
                         <div class="col-sm-10">
-                            <input type="text" name="title" id="article-title" class="form-control" placeholder="Título del artículo (1 oración)" value="{{ old('title') }}">
+                            <input type="text" name="title" id="article-title" class="form-control" placeholder="Título del artículo (1 oración)" value="{{ old('title', $article->title) }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="article-idea" class="col-sm-2 control-label">Idea principal</label>
                         <div class="col-sm-10">
-                            <textarea name="idea" id="article-idea" rows="2" class="form-control" placeholder="Sugerencia: 2 oraciones">{{ old('idea') }}</textarea>
+                            <textarea name="idea" id="article-idea" rows="2" class="form-control" placeholder="Sugerencia: 2 oraciones">{{ old('idea', $article->idea) }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="article-objective" class="col-sm-2 control-label">Objetivo frente a nuestra audiencia</label>
                         <div class="col-sm-10">
-                            <textarea name="objective" id="article-objective" rows="2" class="form-control" placeholder="Una frase breve (difundir ideas sobre... generar conciencia acerca de... indicar las ventajas de... demostrar el expertise de... comunicar los avances de... establecer los parámetros de...)">{{ old('objective') }}</textarea>
+                            <textarea name="objective" id="article-objective" rows="2" class="form-control" placeholder="Una frase breve (difundir ideas sobre... generar conciencia acerca de... indicar las ventajas de... demostrar el expertise de... comunicar los avances de... establecer los parámetros de...)">{{ old('objective', $article->objective) }}</textarea>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
                     </h3>
                     <span id="limit1"></span>
                     <span id="status1" class="pull-right"></span>
-                    <textarea id="note1" title="Pregunta 1" name="context">{{ old('context') }}</textarea>
+                    <textarea id="note1" title="Pregunta 1" name="context">{{ old('context', $article->context) }}</textarea>
 
                     <h3>
                         Desarrollo de la idea central
@@ -73,7 +73,7 @@
                     </h3>
                     <span id="limit2"></span>
                     <span id="status2" class="pull-right"></span>
-                    <textarea id="note2" title="Pregunta 2" name="idea_development">{{ old('idea_development') }}</textarea>
+                    <textarea id="note2" title="Pregunta 2" name="idea_development">{{ old('idea_development', $article->idea_development) }}</textarea>
                     <p class="help-block">De qué manera nos adaptamos al contexto y qué valor añadimos dentro de nuestros servicios.
                         ¿Qué queda por hacer? ¿Qué comentarios, logros o reconocimientos hemos recibido por el desarrollo de estas actividades?</p>
                 </fieldset>
@@ -83,7 +83,7 @@
                         Cancelar registro
                     </button>
                     <button type="submit" class="btn btn-primary">
-                        Registrar artículo
+                        Guardar cambios
                     </button>
                 </div>
             </form>

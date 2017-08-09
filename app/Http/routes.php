@@ -157,6 +157,7 @@ Route::get('/productos/{id}/eliminar', 'ProductController@delete');
 
 // Articles
 Route::get('/articulos', 'ArticleController@index');
+Route::get('/articulos/{id}/ver', 'ArticleController@show');
 Route::get('/articulos/registrar', 'ArticleController@create');
 Route::post('/articulos/registrar', 'ArticleController@store');
 Route::get('/articulos/{id}/editar', 'ArticleController@edit');

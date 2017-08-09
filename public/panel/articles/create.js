@@ -9,7 +9,6 @@ $(document).ready(function() {
     var toolbarConfig = [
         ['style', ['style']],
         ['font', ['bold', 'italic', 'underline', 'clear']],
-        ['fontname', ['fontname']],
         ['fontsize', ['fontsize']],
         ['para', ['ul', 'ol', 'paragraph']],
         ['insert', ['link', 'picture', 'hr']],
