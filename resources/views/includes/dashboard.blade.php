@@ -225,6 +225,14 @@
     </div>
 </div>
 
+@if ($client->hasSection('Artículos'))
+    <div class="row">
+        <div class="col-md-12">
+            @include('includes.dashboard.widget_articles')
+        </div>
+    </div>
+@endif
+
 <div class="row">
     <div class="col-md-12">
         <div class="widget">

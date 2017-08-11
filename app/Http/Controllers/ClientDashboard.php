@@ -75,6 +75,10 @@ trait ClientDashboard
             $brands = $client->brands;
             $variables += compact('brands');
         }
+        if ($client->hasSection('Artículos')) {
+            $articles = $client->articles;
+            $variables += compact('articles');
+        }
 
         return view('client.dashboard')->with($variables);
     }
