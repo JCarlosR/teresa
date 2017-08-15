@@ -281,7 +281,6 @@ function reloadAnalyticsForNewDateRange(start, end) {
 function setupSocialCounters() {
     var $wrapper = $('#wrapper');
     $wrapper.SocialCounter({
-        //Get Usernames
         // dribbble_user: 'username_here',
         facebook_user: $wrapper.find('[data-social="facebook"]').data('id'),
         google_plus_id: $wrapper.find('[data-social="googlePlus"]').data('id'),
@@ -302,7 +301,7 @@ function setupSocialCounters() {
 
         // Access tokens, keys, client_ids
         // dribbble_token: 'token_here',
-        instagram_token: '4928751214.1677ed0.2933bfc9a12145c581c37a314dfbae30',
+        instagram_token: $wrapper.find('[data-instagram-token]').data('instagram-token'),
         google_plus_key: 'AIzaSyChRafLoh052qjGq-yuZZOQt74pF5a1rmk',
         facebook_token: '351967525166562|Ukz2I63XP18E4uw-JKwl5REQEUM',
         youtube_key: 'AIzaSyChRafLoh052qjGq-yuZZOQt74pF5a1rmk',

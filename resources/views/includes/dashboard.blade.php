@@ -92,7 +92,7 @@
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
-                    <div class="col-social">
+                    <div class="col-social" data-instagram-token="{{ $client->instagram_token }}">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Instagram</p>
                         <a href="{{ $instagram->url }}" target="_blank" data-social="instagram" data-id="{{ $instagram->id }}">
                             <i class="block ion-social-instagram fs-36 @if($instagram->state) social-color-instagram @else social-color-black @endif"></i>
