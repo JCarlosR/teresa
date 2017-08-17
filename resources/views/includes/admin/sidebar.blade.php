@@ -54,10 +54,7 @@
                 {{-- Slider temporary disable (awaiting for the Theressa's return) --}}
                 {{--<li><a href="{{ url('/slides') }}">Slider</a></li>--}}
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
-                {{--<li><a href="{{ url('/servicios') }}">Servicios</a></li>--}}
-                {{--<li><a href="{{ url('/proyectos') }}">Proyectos</a></li>--}}
-                {{--<li><a href="{{ url('/clientes') }}">Clientes</a></li>--}}
-                {{--<li><a href="{{ url('/citas') }}">Citas</a></li>--}}
+
                 @foreach (client()->sections as $section)
                     <li><a href="{{ url($section->route) }}">{{ $section->name }}</a></li>
                 @endforeach

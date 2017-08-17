@@ -41,7 +41,13 @@
             </div>
         </div>
 
-        @include('includes.dashboard.widget_services')
+        @if ($client->hasSection('Servicios'))
+            @include('includes.dashboard.widget_services')
+        @endif
+
+        @if ($client->hasSection('Artículos'))
+            @include('includes.dashboard.widget_articles')
+        @endif
     </div>
     <div class="col-md-8">
         <div class="widget text-center">
@@ -217,21 +223,16 @@
             </div>
         </div>
 
+        @if ($client->hasSection('Proyectos'))
+            @include('includes.dashboard.widget_projects')
+        @endif
+
         @if ($client->hasSection('Marcas'))
             @include('includes.dashboard.widget_brands')
-        @else
-            @include('includes.dashboard.widget_projects')
         @endif
     </div>
 </div>
 
-@if ($client->hasSection('Artículos'))
-    <div class="row">
-        <div class="col-md-12">
-            @include('includes.dashboard.widget_articles')
-        </div>
-    </div>
-@endif
 
 <div class="row">
     <div class="col-md-12">
