@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Formulario de contacto</h1>
+
     <p>Han usado el formulario de contacto con los siguientes datos:</p>
     <blockquote>
         <p><strong>Nombre: </strong> {{ $name }}</p>
@@ -17,5 +18,7 @@
         <p><strong>Asunto: </strong> {{ $topic }}</p>
         <p><strong>Mensaje: </strong> {{ $content }}</p>
     </blockquote>
+
+    <p><em>Este mensaje ha sido enviado desde: {{ $url }}</em></p>
 </body>
 </html>
