@@ -49,11 +49,14 @@ class ContactController extends Controller
 
         $this->validate($request, $rules, $messages);
 
+        $senderEmail = $request->input('email');
+
         $client = User::find($request->input('user_id'));
 
-        Mail::send('emails.external.contact', $request->all(), function ($m) use ($client) {
-            $m->to($client->google_account, 'Juan Ramos')
+        Mail::send('emails.external.contact', $request->all(), function ($m) use ($client, $senderEmail) {
+            $m->to($client->google_account, $client->name)
                 ->cc($client->contact_email)
+                ->replyTo($senderEmail)
                 ->subject('Han usado el formulario de contacto!');
         });
 
@@ -62,7 +65,7 @@ class ContactController extends Controller
         $inboxMessage = new InboxMessage();
         $inboxMessage->user_id = $request->input('user_id');
         $inboxMessage->name = $request->input('name');
-        $inboxMessage->email = $request->input('email');
+        $inboxMessage->email = $senderEmail;
         $inboxMessage->phone = $request->input('phone');
         $inboxMessage->content = $request->input('content');
         $inboxMessage->topic = $request->input('topic');
