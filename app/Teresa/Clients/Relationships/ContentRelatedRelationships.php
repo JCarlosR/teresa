@@ -9,7 +9,7 @@ trait ContentRelatedRelationships
 {
     public function sections()
     {
-        return $this->belongsToMany('App\Section', 'client_sections');
+        return $this->belongsToMany('App\Section', 'client_sections')->orderBy('name');
     }
 
 
