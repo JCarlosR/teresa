@@ -63,6 +63,10 @@ class ArticleController extends Controller
         $article->context = $request->get('context');
         $article->idea_development = $request->get('idea_development');
 
+        // initial Search Results Page values
+        $article->meta_title = $article->title;
+        $article->meta_description = $article->idea;
+
         $article->save();
 
         $notification = 'El artículo se ha registrado correctamente!';
@@ -104,6 +108,11 @@ class ArticleController extends Controller
         $article->objective = $request->get('objective');
         $article->context = $request->get('context');
         $article->idea_development = $request->get('idea_development');
+
+        if (auth()->user()->is_admin) {
+            $article->meta_title = $request->get('meta_title');
+            $article->meta_description = $request->get('meta_description');
+        }
 
         $article->save();
 

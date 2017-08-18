@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
     <style>#note1, #note2 { display: none; }</style>
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -76,6 +77,34 @@
                     <textarea id="note2" title="Pregunta 2" name="idea_development">{{ old('idea_development', $article->idea_development) }}</textarea>
                 </fieldset>
 
+                @if (auth()->user()->is_admin)
+                    <fieldset>
+                        <legend>Search Engine Results Page</legend>
+
+                        <div class="form-group">
+                            <label for="article-title" class="col-sm-2 control-label">Título</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="meta_title" id="article-title" class="form-control" placeholder="Título de la página del artículo" value="{{ old('title', $article->meta_title) }}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-description" class="col-sm-2 control-label">Descripción</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="meta_description" id="article-description" class="form-control" placeholder="Descripción de la página del artículo" value="{{ old('description', $article->meta_description) }}">
+                            </div>
+                        </div>
+                        <div class="google-results">
+                            <a href="#" onclick="return false;">
+                                <span class="title">{{ old('title', $article->meta_title) }}</span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($article->meta_title) }}</span></cite>
+                            </div>
+                            <span class="description">{{ old('description', $article->meta_description) }}</span>
+                        </div>
+                    </fieldset>
+                @endif
+
                 <div class="text-right">
                     <button type="button" class="btn btn-default" onclick="window.history.back();">
                         Cancelar registro
@@ -95,4 +124,9 @@
     <!-- Summer note editor for text-areas -->
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ asset('/panel/articles/create.js') }}"></script>
+
+    <script src="{{ asset('/panel/google-results/results.js') }}"></script>
+    <script>
+        googleResults('[name="meta_title"]', '[name="meta_description"]', '.google-results');
+    </script>
 @endsection
