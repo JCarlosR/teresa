@@ -23,17 +23,19 @@ $(document).ready(function() {
             onInit: function() {
                 setCharactersLengthMessage($('#note1'), $('#limit1'), $('#status1'));
             }
-        }
+        },
+        height: 60
     });
 
     $('#note2').summernote({
         toolbar: toolbarConfig,
-        placeholder: 'Exposición del metodo de trabajo y las caracteristicas del servicio, ventajas de alguna innovación o acciones llevadas a cabo, descripción de diversos aspectos sociales, económicos, técnicos o laborales de la propia función desarrollada. Implicancias y consecuencias de ellos.',
+        placeholder: 'Exposición del metodo de trabajo y las caracteristicas del servicio, ventajas de alguna innovación o acciones llevadas a cabo, descripción de diversos aspectos sociales, económicos, técnicos o laborales de la propia función desarrollada. Implicancias y consecuencias de ellos. De qué manera nos adaptamos al contexto y qué valor añadimos dentro de nuestros servicios. ¿Qué queda por hacer? ¿Qué comentarios, logros o reconocimientos hemos recibido por el desarrollo de estas actividades?',
         callbacks: {
             onInit: function() {
                 setCharactersLengthMessage($('#note2'), $('#limit2'), $('#status2'));
             }
-        }
+        },
+        height: 100
     });
 
     $('#note1').on('summernote.keyup', onKeyUp1);

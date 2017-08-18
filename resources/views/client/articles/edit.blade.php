@@ -74,8 +74,6 @@
                     <span id="limit2"></span>
                     <span id="status2" class="pull-right"></span>
                     <textarea id="note2" title="Pregunta 2" name="idea_development">{{ old('idea_development', $article->idea_development) }}</textarea>
-                    <p class="help-block">De qué manera nos adaptamos al contexto y qué valor añadimos dentro de nuestros servicios.
-                        ¿Qué queda por hacer? ¿Qué comentarios, logros o reconocimientos hemos recibido por el desarrollo de estas actividades?</p>
                 </fieldset>
 
                 <div class="text-right">
