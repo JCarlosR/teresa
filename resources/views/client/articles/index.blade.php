@@ -79,9 +79,9 @@
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 
-                                {{--<a href="{{ url("articulos/$article->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">--}}
-                                    {{--<span class="glyphicon glyphicon-picture"></span>--}}
-                                {{--</a>--}}
+                                <a href="{{ url("articulos/$article->id/imagenes") }}" class="btn btn-warning btn-sm" title="Editar imágenes">
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                </a>
 
                                 <a href="{{ url('/articulos/'.$article->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar artículo"

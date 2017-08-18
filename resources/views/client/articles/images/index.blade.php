@@ -20,13 +20,13 @@
 <div class="page-content container-fluid">
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
-        <li><a href="/proyectos">Proyectos</a></li>
+        <li><a href="/articulos">Artículos</a></li>
         <li class="active">Imágenes</li>
     </ol>
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Imágenes del proyecto {{ $project->name }}</h3>
+            <h3 class="widget-title">Imágenes del artículo {{ $article->title }}</h3>
         </div>
         <div class="widget-body">
             @if (session('notification'))
@@ -36,32 +36,32 @@
             @endif
 
             <div class="row">
-                @foreach ($project->images as $image)
+                @foreach ($article->images as $image)
                     <div class="col-md-3">
                         <div class="widget">
                             <div class="widget-heading">
-                                <p class="pull-right">
-                                    <a href="/proyecto/imagenes/{{ $image->id }}/destacar"
-                                       data-toggle="tooltip" data-placement="top" title="Clic para destacar esta imagen">
-                                        <i class="glyphicon glyphicon-{{ ($image->featured ? 'star' : 'star-empty' ) }} big-black-icon"></i>
-                                    </a>
-                                </p>
+                                {{--<p class="pull-right">--}}
+                                    {{--<a href="/articulos/imagenes/{{ $image->id }}/destacar"--}}
+                                       {{--data-toggle="tooltip" data-placement="top" title="Clic para destacar esta imagen">--}}
+                                        {{--<i class="glyphicon glyphicon-{{ ($image->featured ? 'star' : 'star-empty' ) }} big-black-icon"></i>--}}
+                                    {{--</a>--}}
+                                {{--</p>--}}
                                 <h3 class="widget-title">{{ $image->name ?: 'Sin nombre' }}</h3>
                             </div>
                             <div class="widget-body">
                                 <div class="thumbnail">
-                                    <img src="/images/projects/{{ $image->file_name }}"
+                                    <img src="/images/articles/{{ $image->file_name }}"
                                          alt="{{ $image->name ?: 'Imagen sin nombre' }}"
                                          title="{{ $image->description ?: 'Sin descripción' }}">
                                 </div>
                                 <div class="row btn-demo animation-demo">
                                     <div class="col-xs-6">
-                                        <a href="{{ url('/proyecto/imagenes/'.$image->id.'/editar') }}" class="btn btn-sm btn-block btn-outline btn-rounded btn-primary">
+                                        <a href="{{ url('/articulos/imagenes/'.$image->id.'/editar') }}" class="btn btn-sm btn-block btn-outline btn-rounded btn-primary">
                                             <span class="glyphicon glyphicon-edit"></span> Editar
                                         </a>
                                     </div>
                                     <div class="col-xs-6">
-                                        <a href="{{ url('/proyecto/imagenes/'.$image->id.'/eliminar') }}" onclick="return confirm('Está seguro que desea eliminar esta imagen?');" class="btn btn-sm btn-block btn-outline btn-rounded btn-danger">
+                                        <a href="{{ url('/articulos/imagenes/'.$image->id.'/eliminar') }}" onclick="return confirm('Está seguro que desea eliminar esta imagen?');" class="btn btn-sm btn-block btn-outline btn-rounded btn-danger">
                                             <span class="glyphicon glyphicon-remove"></span> Eliminar
                                         </a>
                                     </div>
@@ -76,7 +76,7 @@
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Subir imágenes al proyecto {{ $project->name }}</h3>
+            <h3 class="widget-title">Subir imágenes al artículo {{ $article->name }}</h3>
         </div>
         <div class="widget-body">
             <div class="form-group">
@@ -84,7 +84,7 @@
                     <span class="glyphicon glyphicon-refresh"></span> Actualizar página
                 </a>
             </div>
-            <form action="{{ asset('/proyecto/'.$project->id.'/imagenes') }}"
+            <form action="{{ asset('/articulos/'.$article->id.'/imagenes') }}"
                   class="dropzone" id="my-awesome-dropzone">
                 {{ csrf_field() }}
             </form>
@@ -94,7 +94,7 @@
 @endsection
 
 @section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
     <script>
         // "myAwesomeDropzone" is the camelized version of the HTML element's ID
         Dropzone.options.myAwesomeDropzone = {

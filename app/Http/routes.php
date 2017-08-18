@@ -163,6 +163,13 @@ Route::post('/articulos/registrar', 'ArticleController@store');
 Route::get('/articulos/{id}/editar', 'ArticleController@edit');
 Route::post('/articulos/{id}/editar', 'ArticleController@update');
 Route::get('/articulos/{id}/eliminar', 'ArticleController@delete');
+// Article images
+Route::get('/articulos/{id}/imagenes', 'ArticleImageController@index');
+Route::post('/articulos/{id}/imagenes', 'ArticleImageController@upload');
+Route::get('/articulos/imagenes/{id}/eliminar', 'ArticleImageController@delete');
+Route::get('/articulos/imagenes/{id}/editar', 'ArticleImageController@edit');
+Route::post('/articulos/imagenes/{id}/editar', 'ArticleImageController@update');
+// Route::get('/articulos/imagenes/{id}/destacar', 'ArticleImageController@setFeatured');
 
 
 // Work schedule
