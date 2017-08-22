@@ -37,6 +37,7 @@
                 Redactar nuevo artículo
             </a>
             <p class="mb-20">A continuación, un listado de <strong>todos los artículos</strong> redactados por la empresa.</p>
+            <p>Nota: Sólo se muestra la primera oración de la idea principal, en caso de existir.</p>
 
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -60,7 +61,7 @@
                             <td>
                                 {{ $article->title }}
                             </td>
-                            <td>{{ $article->idea ?: 'Sin especificar' }}</td>
+                            <td>{{ $article->idea ? preg_replace('/([^?!.]*.).*/', '\\1', $article->idea) : 'Sin especificar' }}</td>
                             {{--<td class="text-center text-{{ $article->hasPhotos ? 'success' : 'danger' }}">--}}
                                 {{--@if ($article->hasPhotos)--}}
                                     {{--<i class="ion-checkmark-round"></i>--}}

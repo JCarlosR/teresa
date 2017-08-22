@@ -58,7 +58,6 @@
 
                 <fieldset>
                     <legend>Memoria descriptiva</legend>
-
                     <h3>
                         Contexto.
                         <small>Sugerencia: 100 palabras</small>

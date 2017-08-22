@@ -98,7 +98,7 @@
                                 <span class="title">{{ old('title', $article->meta_title) }}</span>
                             </a>
                             <div>
-                                <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($article->meta_title) }}</span></cite>
+                                <cite>{{ $client->domain }}/blog/<span>{{ str_slug($article->meta_title) }}</span></cite>
                             </div>
                             <span class="description">{{ old('description', $article->meta_description) }}</span>
                         </div>
