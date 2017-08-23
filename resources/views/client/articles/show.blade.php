@@ -61,12 +61,12 @@
         <div class="widget-body">
             <div class="google-results">
                 <a href="#" onclick="return false;">
-                    <span class="title">{{ old('title', $article->meta_title) }}</span>
+                    <span class="title">{{ $article->meta_title ?: 'Sin título' }}</span>
                 </a>
                 <div>
                     <cite>{{ $client->domain }}/blog/<span>{{ str_slug($article->meta_title) }}</span></cite>
                 </div>
-                <span class="description">{{ old('description', $article->meta_description) }}</span>
+                <span class="description">{{ $article->meta_description ?: 'Sin descripción' }}</span>
             </div>
         </div>
     </div>

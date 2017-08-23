@@ -1,7 +1,7 @@
 @extends('layouts.panel')
 
 @section('styles')
-
+    <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -19,10 +19,9 @@
                style="color: #57caff; font-size: 2em;">
                 <i class="glyphicon glyphicon-pencil"></i>
             </a>
-            <h1>{{ $project->question_0 }}</h1>
+            <h1 class="widget-title">{{ $project->question_0 }}</h1>
         </div>
         <div class="widget-body">
-
             <div class="row">
                 <div class="col-md-8">
                     <fieldset>
@@ -93,16 +92,31 @@
                     @endif
                 </div>
             </div>
-
-
             <div class="text-right">
                 <a href="/proyectos" type="button" class="btn btn-default">
                     Volver al listado
                 </a>
             </div>
-
         </div>
     </div>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Search Engine Results Page</h3>
+        </div>
+        <div class="widget-body">
+            <div class="google-results">
+                <a href="#" onclick="return false;">
+                    <span class="title">{{ $project->title ?: 'Sin título' }}</span>
+                </a>
+                <div>
+                    <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($project->title) }}</span></cite>
+                </div>
+                <span class="description">{{ $project->description ?: 'Sin descripción' }}</span>
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection
 
