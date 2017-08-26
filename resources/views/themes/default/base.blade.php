@@ -31,18 +31,21 @@
       "name" : "{{ $me->trade_name }}",
       "url" : "{{ url()->current() }}",
       "sameAs" : [
-        @if ($me->getSocialProfile('facebook')->url != '#')
-        "{{ $me->getSocialProfile('facebook')->url }}",
-        @endif
-        @if ($me->getSocialProfile('twitter')->url != '#')
-        "{{ $me->getSocialProfile('twitter')->url }}",
-        @endif
-        @if ($me->getSocialProfile('google_plus')->url != '#')
-        "{{ $me->getSocialProfile('google_plus')->url }}",
-        @endif
-        @if ($me->getSocialProfile('linkedin')->url != '#')
-        "{{ $me->getSocialProfile('linkedin')->url }}"
-        @endif
+@if ($me->getSocialProfile('facebook')->url != '#')
+"{{ $me->getSocialProfile('facebook')->url }}",
+@endif
+@if ($me->getSocialProfile('twitter')->url != '#')
+"{{ $me->getSocialProfile('twitter')->url }}",
+@endif
+@if ($me->getSocialProfile('google_plus')->url != '#')
+"{{ $me->getSocialProfile('google_plus')->url }}",
+@endif
+@if ($me->getSocialProfile('linkedin')->url != '#')
+"{{ $me->getSocialProfile('linkedin')->url }}"
+@endif
+@if ($me->getSocialProfile('instagram')->url != '#')
+    "{{ $me->getSocialProfile('instagram')->url }}"
+@endif
       ]
     }
     </script>
