@@ -11,7 +11,7 @@ $(document).ready(function() {
         ['font', ['bold', 'italic', 'underline', 'clear']],
         ['fontsize', ['fontsize']],
         ['para', ['ul', 'ol', 'paragraph']],
-        ['insert', ['link', 'picture', 'hr']],
+        ['insert', ['link', 'hr']],
         ['view', ['fullscreen']]
     ];
 
