@@ -46,9 +46,9 @@
                         <th>#</th>
                         {{--<th></th>--}}{{-- Semaphore--}}
                         <th>Título</th>
-                        <th>Idea</th>
+                        <th>Descripción</th>
                         {{--<th class="text-center">Fotos</th>--}}
-                        <th class="text-right">Contador</th>
+                        <th class="text-center">Contador</th>
                         {{--<th class="text-center">Porcentaje</th>--}}
                         <th>Opciones</th>
                     </tr>
@@ -61,7 +61,7 @@
                             <td>
                                 {{ $article->title }}
                             </td>
-                            <td>{{ $article->idea ? preg_replace('/([^?!.]*.).*/', '\\1', $article->idea) : 'Sin especificar' }}</td>
+                            <td>{{ $article->meta_description ?: 'Sin descripción' }}</td>
                             {{--<td class="text-center text-{{ $article->hasPhotos ? 'success' : 'danger' }}">--}}
                                 {{--@if ($article->hasPhotos)--}}
                                     {{--<i class="ion-checkmark-round"></i>--}}
@@ -69,7 +69,7 @@
                                     {{--<i class="ion-close"></i>--}}
                                 {{--@endif--}}
                             {{--</td>--}}
-                            <td class="text-right">{{ $article->characters_count }}</td>
+                            <td class="text-center">{{ $article->characters_count }}</td>
                             {{--<td class="text-center">{{ $article->characters_percent }}</td>--}}
                             <td>
                                 <a href="{{ url("articulos/$article->id/ver") }}" class="btn btn-default btn-sm" title="Ver artículos">

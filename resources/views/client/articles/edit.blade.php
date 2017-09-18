@@ -3,7 +3,14 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
-    <style>#note1, #note2 { display: none; }</style>
+    <style>
+        textarea {
+            display: none;
+        }
+        [id^="status"] {
+            font-size: 1.2em;
+        }
+    </style>
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
 @endsection
 
@@ -34,47 +41,39 @@
                 {{ csrf_field() }}
 
                 <fieldset>
-                    <legend>Ficha del artículo</legend>
-
-                    <div class="form-group">
-                        <label for="article-title" class="col-sm-2 control-label">Título del artículo</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="title" id="article-title" class="form-control" placeholder="Título del artículo (1 oración)" value="{{ old('title', $article->title) }}">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="article-idea" class="col-sm-2 control-label">Idea principal</label>
-                        <div class="col-sm-10">
-                            <textarea name="idea" id="article-idea" rows="2" class="form-control" placeholder="Sugerencia: 2 oraciones">{{ old('idea', $article->idea) }}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="article-objective" class="col-sm-2 control-label">Objetivo frente a nuestra audiencia</label>
-                        <div class="col-sm-10">
-                            <textarea name="objective" id="article-objective" rows="2" class="form-control" placeholder="Una frase breve (difundir ideas sobre... generar conciencia acerca de... indicar las ventajas de... demostrar el expertise de... comunicar los avances de... establecer los parámetros de...)">{{ old('objective', $article->objective) }}</textarea>
-                        </div>
-                    </div>
-
-                </fieldset>
-
-                <fieldset>
-                    <legend>Memoria descriptiva</legend>
+                    <h3>
+                        Título del artículo
+                        <small>Debe ser interesante para los lectores. Es una buena idea tener un ranking (los mejores 10 factores, las 7 mejores ideas, los 3 mejores productos, etcétera). <em>Entre 55 y 70 caracteres.</em></small>
+                    </h3>
+                    <span id="limit0"></span>
+                    <span id="status0" class="pull-right"></span>
+                    <input type="text" name="title" id="note0" class="form-control" placeholder="Título del artículo" value="{{ old('title', $article->title) }}">
 
                     <h3>
-                        Contexto.
-                        <small>Sugerencia: 100 palabras</small>
+                        ¿Qué encontraremos en este artículo?
+                        <small>Resumen de la idea principal, que irá en texto grande a manera de introducción. Acuérdate que las personas no tienen tiempo de leer todo. Aquí debes convencerlos de seguir leyendo!</small>
                     </h3>
                     <span id="limit1"></span>
                     <span id="status1" class="pull-right"></span>
-                    <textarea id="note1" title="Pregunta 1" name="context">{{ old('context', $article->context) }}</textarea>
+                    <textarea id="note1" rows="5" title="Pregunta 1" name="idea">{{ old('idea', $article->idea) }}</textarea>
+
 
                     <h3>
-                        Desarrollo de la idea central
-                        <small>Sugerencia: 150 palabras</small>
+                        Desarrollo del artículo
+                        <small>Aquí puedes escribir todo lo que necesites comunicar. Recuerda usar "bullets", resaltar textos importantes y vincular el contenido con otros sitios web.</small>
                     </h3>
                     <span id="limit2"></span>
                     <span id="status2" class="pull-right"></span>
                     <textarea id="note2" title="Pregunta 2" name="idea_development">{{ old('idea_development', $article->idea_development) }}</textarea>
+
+                    <h3>
+                        ¿Qué queda por hacer?
+                        <small>Como remate peudes recomendar a tus lectores visitar algún otro artículo, página, producto, para afianzar tu autoridad en la materia. No olvides agradecer siempre a tus colaboradores o sponsors.</small>
+                    </h3>
+                    <span id="limit3"></span>
+                    <span id="status3" class="pull-right"></span>
+                    <textarea id="note3" rows="6" title="Pregunta 3" name="bottom_line">{{ old('bottom_line', $article->bottom_line) }}</textarea>
+
                 </fieldset>
 
                 @if (auth()->user()->is_admin)

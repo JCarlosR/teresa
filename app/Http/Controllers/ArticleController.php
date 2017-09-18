@@ -59,13 +59,12 @@ class ArticleController extends Controller
 
         $article->title = $request->get('title');
         $article->idea = $request->get('idea');
-        $article->objective = $request->get('objective');
-        $article->context = $request->get('context');
         $article->idea_development = $request->get('idea_development');
+        $article->bottom_line = $request->get('bottom_line');
 
         // initial Search Results Page values
         $article->meta_title = $article->title;
-        $article->meta_description = $article->idea;
+        $article->meta_description = '';
 
         $article->save();
 
@@ -105,9 +104,8 @@ class ArticleController extends Controller
 
         $article->title = $request->get('title');
         $article->idea = $request->get('idea');
-        $article->objective = $request->get('objective');
-        $article->context = $request->get('context');
         $article->idea_development = $request->get('idea_development');
+        $article->bottom_line = $request->get('bottom_line');
 
         if (auth()->user()->is_admin) {
             $article->meta_title = $request->get('meta_title');

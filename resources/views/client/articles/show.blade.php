@@ -25,15 +25,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <fieldset>
-                        <p>{{ $article->idea }}</p>
-
-                        <p>{{ $article->objective }}</p>
-
-                        {{-- Contexto --}}
-                        {!! $article->context !!}
-
-                        {{-- Desarrollo de la idea central --}}
+                        {!! $article->idea !!}
                         {!! $article->idea_development !!}
+                        {!! $article->bottom_line !!}
                     </fieldset>
                 </div>
                 {{--<div class="col-md-4">--}}

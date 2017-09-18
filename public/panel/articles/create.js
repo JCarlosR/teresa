@@ -16,41 +16,33 @@ $(document).ready(function() {
     ];
 
     // Summer note setup
-    $('#note1').summernote({
-        toolbar: toolbarConfig,
-        placeholder: 'Contexto y Ambiente de trabajo en el que se desarrollan las actividades. Desventajas y desafíos encontrados, problemáticas, necesidades. ',
-        callbacks: {
-            onInit: function() {
-                setCharactersLengthMessage($('#note1'), $('#limit1'), $('#status1'));
-            }
-        },
-        height: 60
-    });
+    for (var i=1; i<=3; ++i) {
+        var $note = $('#note'+i);
+        var $limit = $('#limit'+i);
+        var $status = $('#status'+i);
 
-    $('#note2').summernote({
-        toolbar: toolbarConfig,
-        placeholder: 'Exposición del metodo de trabajo y las caracteristicas del servicio, ventajas de alguna innovación o acciones llevadas a cabo, descripción de diversos aspectos sociales, económicos, técnicos o laborales de la propia función desarrollada. Implicancias y consecuencias de ellos. De qué manera nos adaptamos al contexto y qué valor añadimos dentro de nuestros servicios. ¿Qué queda por hacer? ¿Qué comentarios, logros o reconocimientos hemos recibido por el desarrollo de estas actividades?',
-        callbacks: {
-            onInit: function() {
-                setCharactersLengthMessage($('#note2'), $('#limit2'), $('#status2'));
-            }
-        },
-        height: 100
-    });
+        (function ($note, $limit, $status) {
+            $note.summernote({
+                toolbar: toolbarConfig,
+                callbacks: {
+                    onInit: function() {
+                        setCharactersLengthMessage($note, $limit, $status);
+                    }
+                }
+            });
 
-    $('#note1').on('summernote.keyup', onKeyUp1);
-    $('#note2').on('summernote.keyup', onKeyUp2);
-
-    function onKeyUp1() {
-        setCharactersLengthMessage($(this), $('#limit1'), $('#status1'));
+            $note.on('summernote.keyup', function () {
+                setCharactersLengthMessage($note, $limit, $status);
+            });
+        })($note, $limit, $status);
     }
-    function onKeyUp2() {
-        setCharactersLengthMessage($(this), $('#limit2'), $('#status2'));
-    }
+
     function setCharactersLengthMessage($summerNote, $limit, $status) {
+        // console.log('fired');
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
             .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
 
+        console.log($summerNote);
         $limit.html(charactersNum + ' caracteres');
 
         // for questions
