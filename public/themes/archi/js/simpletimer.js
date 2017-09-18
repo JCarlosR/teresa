@@ -1,8 +1,4 @@
 /* @charset "UTF-8" */
-/*
- * @author 山超<shanchao@myhexin.com>
- * @create 2016-12-12
- */
 (function ($) {
 	//默认参数
 	var defaluts = {
