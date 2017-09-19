@@ -8,7 +8,7 @@ use App\Project;
 use App\Service;
 use App\User;
 
-class GuessController extends Controller
+class GuestController extends Controller
 {
     private function getTheme(User $user)
     {

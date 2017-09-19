@@ -42,7 +42,7 @@ $(document).ready(function() {
         var charactersNum = $summerNote.next('.note-editor').find('.note-editable').text()
             .replace(/<(?:.|\n)*?>/gm, '').length; // remove html comments added by summer note
 
-        console.log($summerNote);
+        // console.log($summerNote);
         $limit.html(charactersNum + ' caracteres');
 
         // for questions
