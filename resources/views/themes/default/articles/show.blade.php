@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row text-center white">
                 <h1 class="cta-title">{{ $article->title }}</h1>
-                <p class="cta-sub-title">{{ $article->meta_description }}</p>
+                {{--<p class="cta-sub-title">{{ $article->meta_description }}</p>--}}
             </div>
         </div>
     </div>
