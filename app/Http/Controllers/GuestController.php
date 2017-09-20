@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class GuessController extends Controller
+class GuestController extends Controller
 {
 
     public function welcome()
