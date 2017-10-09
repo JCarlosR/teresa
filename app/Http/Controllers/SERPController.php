@@ -19,7 +19,9 @@ class SERPController extends Controller
     public function index()
     {
         $client = $this->client();
-        return view('client.serp')->with(compact('client'));
+        $services = $client->services;
+        $projects = $client->projects;
+        return view('client.serp')->with(compact('client', 'services', 'projects'));
     }
 
     public function descriptionServices(Request $request)

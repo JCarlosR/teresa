@@ -181,7 +181,7 @@
                         </div>
                         <div class="google-results">
                             <a href="#" onclick="return false;">
-                                <span class="title">{{ old('title', $project->title) }}</span>
+                                <span class="title">{{ old('title', $project->title) ?: 'Sin título' }}</span>
                             </a>
                             <div>
                                 <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($project->title) }}</span></cite>
