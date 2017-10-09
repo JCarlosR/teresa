@@ -8,9 +8,20 @@
     <meta property="og:title" content="{{ $me->title }}"/>
     <meta property="og:type" content="company"/>
     <meta property="og:url" content="{{ url()->current() }}"/>
-    <meta property="og:image" content="{{ $me->photo_route }}"/>
     <meta property="og:site_name" content="{{ $me->trade_name }}"/>
     <meta property="og:description" content="{{ $me->description }}"/>
+    <meta property="og:image" content="{{ $me->photo_route }}"/>
+    <meta property="og:image:alt" content="{{ $me->title }}"/>
+
+    @if ($me->getSocialProfile('twitter')->id)
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ '@' . $me->getSocialProfile('twitter')->id }}">
+    <meta name="twitter:creator" content="{{ '@' . $me->getSocialProfile('twitter')->id }}">
+    <meta name="twitter:url"  content="{{ url()->current() }}">
+    <meta name="twitter:title" content="{{ $me->title }}">
+    <meta name="twitter:description" content="{{ $me->description }}">
+    <meta name="twitter:image" content="{{ $me->photo_route }}">
+    @endif
 
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
@@ -26,27 +37,27 @@
 
     <script type="application/ld+json">
     {
-      "{{ '@' }}context" : "http://schema.org",
-      "@type" : "company",
-      "name" : "{{ $me->trade_name }}",
-      "url" : "{{ url()->current() }}",
-      "sameAs" : [
-@if ($me->getSocialProfile('facebook')->url != '#')
-"{{ $me->getSocialProfile('facebook')->url }}",
-@endif
-@if ($me->getSocialProfile('twitter')->url != '#')
-"{{ $me->getSocialProfile('twitter')->url }}",
-@endif
-@if ($me->getSocialProfile('google_plus')->url != '#')
-"{{ $me->getSocialProfile('google_plus')->url }}",
-@endif
-@if ($me->getSocialProfile('linkedin')->url != '#')
-"{{ $me->getSocialProfile('linkedin')->url }}"
-@endif
-@if ($me->getSocialProfile('instagram')->url != '#')
-    "{{ $me->getSocialProfile('instagram')->url }}"
-@endif
-      ]
+        "{{ '@' }}context" : "http://schema.org",
+        "@type" : "company",
+        "name" : "{{ $me->trade_name }}",
+        "url" : "{{ url()->current() }}",
+        "sameAs" : [
+    @if ($me->getSocialProfile('facebook')->url != '#')
+    "{{ $me->getSocialProfile('facebook')->url }}",
+    @endif
+    @if ($me->getSocialProfile('twitter')->url != '#')
+    "{{ $me->getSocialProfile('twitter')->url }}",
+    @endif
+    @if ($me->getSocialProfile('google_plus')->url != '#')
+    "{{ $me->getSocialProfile('google_plus')->url }}",
+    @endif
+    @if ($me->getSocialProfile('linkedin')->url != '#')
+    "{{ $me->getSocialProfile('linkedin')->url }}",
+    @endif
+    @if ($me->getSocialProfile('instagram')->url != '#')
+    "{{ $me->getSocialProfile('instagram')->url }}",
+    @endif
+        ]
     }
     </script>
 </head>
