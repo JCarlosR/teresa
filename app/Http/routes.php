@@ -226,6 +226,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/sections/{id}/{action}', 'Admin\SectionController@status');
     // Client sitemap
     Route::get('/sitemap', 'Admin\SiteMapController@index');
+    Route::post('/sitemap', 'Admin\SiteMapController@store');
+    Route::put('/sitemap', 'Admin\SiteMapController@update');
 
     // Client data
     Route::get('/dashboard/', 'Admin\DashboardController@index');

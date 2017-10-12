@@ -51,7 +51,6 @@
             <ul id="collapse2" class="list-unstyled collapse">
                 <li><a href="{{ url('/admin/sections') }}"><strong>Gestionar secciones</strong></a></li>
                 <li><a href="{{ url('/serp/resumen') }}">Resumen SERP</a></li>
-                <li><a href="{{ url('/admin/sitemap') }}">Sitemap</a></li>
                 {{-- Slider temporary disable (awaiting for the Theressa's return) --}}
                 {{--<li><a href="{{ url('/slides') }}">Slider</a></li>--}}
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
@@ -60,6 +59,13 @@
                     <li><a href="{{ url($section->route) }}">{{ $section->name }}</a></li>
                 @endforeach
             </ul>
+        </li>
+
+        <li class="panel">
+            <a href="{{ url('/admin/sitemap') }}">
+                <i class="ion-ios-shuffle bg-default"></i>
+                <span class="sidebar-title">Sitemap</span>
+            </a>
         </li>
 
         <li class="panel">
