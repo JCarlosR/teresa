@@ -30,7 +30,7 @@
                             <ul>
                                 @foreach ($home->children as $node)
                                     <li>
-                                        <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
+                                        <a href="{{ $node->url }}" data-edit="{{ $node->id }}" data-type="{{ $node->type }}">
                                             <form action="{{ url('/admin/sitemap') }}" method="post">
                                                 {{ csrf_field() }}
                                                 <input type="hidden" name="add_to" value="{{ $node->id }}">
@@ -43,9 +43,26 @@
                                         <ul>
                                             @foreach ($node->children as $child)
                                             <li>
-                                                <a href="{{ $child->url }}" data-edit="{{ $child->id }}">
-                                                    {{ $child->name }}
+                                                <a href="{{ $child->url }}" data-edit="{{ $child->id }}" data-type="{{ $child->type }}">
+                                                    <form action="{{ url('/admin/sitemap') }}" method="post">
+                                                        {{ csrf_field() }}
+                                                        <input type="hidden" name="add_to" value="{{ $child->id }}">
+                                                        <i class="glyphicon glyphicon-plus-sign" data-add></i>
+                                                    </form>
+
+                                                    <span data-name>{{ $child->name }}</span>
+                                                    <small data-description style="display: none">{{ $child->description }}</small>
                                                 </a>
+                                                <ul>
+                                                    @foreach ($child->children as $item)
+                                                        <li>
+                                                            <a href="{{ $item->url }}" data-edit="{{ $item->id }}" data-type="{{ $item->type }}">
+                                                                <span data-name>{{ $item->name }}</span>
+                                                                <small data-description style="display: none">{{ $item->description }}</small>
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
                                             </li>
                                             @endforeach
                                         </ul>
@@ -100,6 +117,14 @@
                         <input type="text" class="form-control" id="field-3" placeholder="Descripción breve de la página" name="description">
                     </div>
                     <div class="form-group">
+                        <label for="field-4" class="control-label">Tipo de nodo</label>
+                        <select name="type" id="field-4" class="form-control">
+                            <option value="0">Enlace genérico</option>
+                            <option value="projects">Proyectos</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <div class="checkbox-custom">
                             <input id="check-delete" type="checkbox" value="1" name="check-delete">
                             <label for="check-delete">Deseo eliminar este enlace del sitemap y así mismo sus nodos descendientes</label>
@@ -140,11 +165,15 @@
             var name = $(this).find('[data-name]').text();
             var description = $(this).find('[data-description]').text();
             var url = $(this).attr('href');
+            var type = $(this).data('type');
+            if (!type)
+                type = 0;
 
             $modalEdit.find('[name=site_map_link_id]').val(target);
             $modalEdit.find('[name=name]').val(name);
             $modalEdit.find('[name=description]').val(description);
             $modalEdit.find('[name=url]').val(url);
+            $modalEdit.find('[name=type]').val(type);
             $modalEdit.modal('show');
             return false;
         }

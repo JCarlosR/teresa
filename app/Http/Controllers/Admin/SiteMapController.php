@@ -46,6 +46,7 @@ class SiteMapController extends Controller
                 $siteMapLink->name = $request->name;
                 $siteMapLink->description = $request->description;
                 $siteMapLink->url = $request->url;
+                $siteMapLink->type = $request->type === '0'  ? null : $request->type;
                 $siteMapLink->save();
             }
         }
