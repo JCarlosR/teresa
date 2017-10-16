@@ -8,6 +8,6 @@ class SiteMapLink extends Model
 {
     public function children()
     {
-        return $this->hasMany(SiteMapLink::class);
+        return $this->hasMany(SiteMapLink::class)->orderBy('id');
     }
 }

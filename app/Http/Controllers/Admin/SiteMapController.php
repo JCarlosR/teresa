@@ -39,10 +39,15 @@ class SiteMapController extends Controller
         // validate if the link belongs to the client
         $client = $this->client();
         if ($siteMapLink->user_id == $client->id) {
-            $siteMapLink->name = $request->name;
-            $siteMapLink->description = $request->description;
-            $siteMapLink->url = $request->url;
-            $siteMapLink->save();
+            if ($request->input('check-delete') == '1') {
+                $siteMapLink->children()->delete();
+                $siteMapLink->delete();
+            } else {
+                $siteMapLink->name = $request->name;
+                $siteMapLink->description = $request->description;
+                $siteMapLink->url = $request->url;
+                $siteMapLink->save();
+            }
         }
 
         return back();
@@ -53,10 +58,13 @@ class SiteMapController extends Controller
         $client = $this->client();
 
         $siteMapLink = new SiteMapLink();
+
+        $uniqueId = uniqid();
+
         // TO DO - validate if the parent link belongs to the client
-        $siteMapLink->name = $request->name;
-        $siteMapLink->description = $request->description;
-        $siteMapLink->url = $request->url;
+        $siteMapLink->name = $request->name ?: 'Nodo nuevo';
+        $siteMapLink->description = $request->description ?: "Sin descripción";
+        $siteMapLink->url = $request->url ?: "/nodo-$uniqueId";
         $siteMapLink->site_map_link_id = $request->add_to;
         $siteMapLink->user_id = $client->id;
         $siteMapLink->save();

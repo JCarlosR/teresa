@@ -13,12 +13,17 @@
         <div class="widget-body">
             <p class="mb-20">Sitemap planificado para la realización del sitio web.</p>
 
-            <div data-sitemap>
+            <div data-sitemap style="display: none">
                 <nav class="primary">
                     <ul>
                         <li id="home">
                             <a href="{{ $home->url }}" data-edit="{{ $home->id }}">
-                                <i class="glyphicon glyphicon-plus-sign" data-add="{{ $home->id }}"></i>
+                                <form action="{{ url('/admin/sitemap') }}" method="post">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="add_to" value="{{ $home->id }}">
+                                    <i class="glyphicon glyphicon-plus-sign" data-add></i>
+                                </form>
+
                                 <span data-name>{{ $home->name }}</span>
                                 <small data-description>{{ $home->description }}</small>
                             </a>
@@ -26,7 +31,12 @@
                                 @foreach ($home->children as $node)
                                     <li>
                                         <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
-                                            <i class="glyphicon glyphicon-plus-sign" data-add="{{ $node->id }}"></i>
+                                            <form action="{{ url('/admin/sitemap') }}" method="post">
+                                                {{ csrf_field() }}
+                                                <input type="hidden" name="add_to" value="{{ $node->id }}">
+                                                <i class="glyphicon glyphicon-plus-sign" data-add></i>
+                                            </form>
+
                                             <span data-name>{{ $node->name }}</span>
                                             <small data-description>{{ $node->description }}</small>
                                         </a>
@@ -59,49 +69,6 @@
     </div>
 </div>
 
-<div id="modal-add-node" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Añadir enlace</h4>
-            </div>
-            <form action="{{ url('/admin/sitemap') }}" method="post">
-                {{ csrf_field() }}
-                <input type="hidden" name="add_to" value="">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="field-1" class="control-label">Nombre</label>
-                                <input type="text" class="form-control" id="field-1" placeholder="Nombre o título de la página" name="name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="field-2" class="control-label">Url</label>
-                                <input type="text" class="form-control" id="field-2" placeholder="Ruta hacia una página (ejemplo /blog)" name="url">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="field-3" class="control-label">Descripción</label>
-                                <input type="text" class="form-control" id="field-3" placeholder="Descripción breve de la página" name="description">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-info waves-effect waves-light">Añadir</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
 <div id="modal-edit-node" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -128,12 +95,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="field-3" class="control-label">Descripción</label>
-                                <input type="text" class="form-control" id="field-3" placeholder="Descripción breve de la página" name="description">
-                            </div>
+                    <div class="form-group">
+                        <label for="field-3" class="control-label">Descripción</label>
+                        <input type="text" class="form-control" id="field-3" placeholder="Descripción breve de la página" name="description">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-custom">
+                            <input id="check-delete" type="checkbox" value="1" name="check-delete">
+                            <label for="check-delete">Deseo eliminar este enlace del sitemap y así mismo sus nodos descendientes</label>
                         </div>
                     </div>
                 </div>
@@ -149,23 +118,22 @@
 
 @section('scripts')
     <script>
-        var $modalAdd, $modalEdit;
+        var $modalEdit;
 
         $(function () {
-            $modalAdd = $('#modal-add-node');
+            $('[data-sitemap]').fadeIn();
             $modalEdit = $('#modal-edit-node');
             $('[data-add]').on('click', addNode);
             $('[data-edit]').on('click', editNode);
         });
 
-        function addNode() {
-            var addTo = $(this).data('add');
-            // alert('add to ' + addTo);
+        function addNode(event) {
+            $(this).parent().submit();
 
-            $modalAdd.find('[name=add_to]').val(addTo);
-            $modalAdd.modal('show');
+            event.stopPropagation();
             return false;
         }
+
         function editNode() {
             var target = $(this).data('edit');
             // alert('edit ' + target);
