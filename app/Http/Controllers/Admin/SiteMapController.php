@@ -29,7 +29,15 @@ class SiteMapController extends Controller
             $home->save();
         }
 
-        return view('admin.sitemap.index')->with(compact('home'));
+        $hasProjectsNode = $client->siteMapLinks()->where('type', 'projects')->exists();
+        if ($hasProjectsNode)
+            $projects = $client->projects;
+
+        $hasServicesNode = $client->siteMapLinks()->where('type', 'services')->exists();
+        if ($hasServicesNode)
+            $services = $client->services;
+
+        return view('admin.sitemap.index')->with(compact('home', 'projects', 'services'));
     }
 
     public function update(Request $request)

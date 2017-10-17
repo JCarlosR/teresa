@@ -29,44 +29,7 @@
                             </a>
                             <ul>
                                 @foreach ($home->children as $node)
-                                    <li>
-                                        <a href="{{ $node->url }}" data-edit="{{ $node->id }}" data-type="{{ $node->type }}">
-                                            <form action="{{ url('/admin/sitemap') }}" method="post">
-                                                {{ csrf_field() }}
-                                                <input type="hidden" name="add_to" value="{{ $node->id }}">
-                                                <i class="glyphicon glyphicon-plus-sign" data-add></i>
-                                            </form>
-
-                                            <span data-name>{{ $node->name }}</span>
-                                            <small data-description>{{ $node->description }}</small>
-                                        </a>
-                                        <ul>
-                                            @foreach ($node->children as $child)
-                                            <li>
-                                                <a href="{{ $child->url }}" data-edit="{{ $child->id }}" data-type="{{ $child->type }}">
-                                                    <form action="{{ url('/admin/sitemap') }}" method="post">
-                                                        {{ csrf_field() }}
-                                                        <input type="hidden" name="add_to" value="{{ $child->id }}">
-                                                        <i class="glyphicon glyphicon-plus-sign" data-add></i>
-                                                    </form>
-
-                                                    <span data-name>{{ $child->name }}</span>
-                                                    <small data-description style="display: none">{{ $child->description }}</small>
-                                                </a>
-                                                <ul>
-                                                    @foreach ($child->children as $item)
-                                                        <li>
-                                                            <a href="{{ $item->url }}" data-edit="{{ $item->id }}" data-type="{{ $item->type }}">
-                                                                <span data-name>{{ $item->name }}</span>
-                                                                <small data-description style="display: none">{{ $item->description }}</small>
-                                                            </a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
+                                    @include('admin.sitemap.node-level-2')
                                 @endforeach
                             </ul>
                         </li>
@@ -121,7 +84,7 @@
                         <select name="type" id="field-4" class="form-control">
                             <option value="0">Enlace genérico</option>
                             <option value="projects">Proyectos</option>
-                            <option value="servicios">Servicios</option>
+                            <option value="services">Servicios</option>
                         </select>
                     </div>
                     <div class="form-group">
