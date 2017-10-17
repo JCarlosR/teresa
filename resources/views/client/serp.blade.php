@@ -9,7 +9,7 @@
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Resumen SERP - General</h3>
+            <h3 class="widget-title">Resumen SERP General</h3>
         </div>
         <div class="widget-body">
             <p>Previsualización de cada enlace sobre la página de resultados en buscadores.</p>
@@ -69,20 +69,20 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <a href="/citas" class="btn btn-secondary pull-right" title="Editar citas">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                    <div class="google-results">
-                        <a href="#" onclick="return false;">
-                            <span class="title">{{ $client->trade_name }} - Citas</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/citas</cite>
-                        </div>
-                        <span class="description">{{ $client->quotes_description }}</span>
-                    </div>
-                </div>
+                {{--<div class="col-md-6">--}}
+                    {{--<a href="/citas" class="btn btn-secondary pull-right" title="Editar citas">--}}
+                        {{--<span class="glyphicon glyphicon-pencil"></span>--}}
+                    {{--</a>--}}
+                    {{--<div class="google-results">--}}
+                        {{--<a href="#" onclick="return false;">--}}
+                            {{--<span class="title">{{ $client->trade_name }} - Citas</span>--}}
+                        {{--</a>--}}
+                        {{--<div>--}}
+                            {{--<cite>{{ $client->domain }}/citas</cite>--}}
+                        {{--</div>--}}
+                        {{--<span class="description">{{ $client->quotes_description }}</span>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
