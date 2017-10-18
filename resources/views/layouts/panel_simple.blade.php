@@ -41,6 +41,8 @@
         }
     </style>
     @yield('styles')
+
+    @include('includes.favicon')
 </head>
 <body>
 

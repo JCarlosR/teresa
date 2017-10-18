@@ -12,6 +12,8 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}">
 
+    @include('includes.favicon')
+
     <style>
         body {
             font-family: 'Lato', serif;

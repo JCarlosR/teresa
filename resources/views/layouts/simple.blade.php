@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
     <!-- Core CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/first-layout.css') }}">
+
+    @include('includes.favicon')
 </head>
 <body class="body-bg-full">
 <div class="container page-container">

@@ -31,6 +31,8 @@
     <!-- Core CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('build/css/first-layout.css') }}">
     @yield('styles')
+
+    @include('includes.favicon')
 </head>
 <body>
 <!-- Header start-->
