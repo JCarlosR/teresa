@@ -89,6 +89,32 @@
 
     <div class="widget">
         <div class="widget-heading">
+            <h3 class="widget-title">Resumen SERP - Páginas</h3>
+        </div>
+        <div class="widget-body">
+            <div class="row">
+                @foreach ($links as $link)
+                <div class="col-md-6">
+                    <a href="/serp/link/{{ $link->id }}" class="btn btn-secondary pull-right" title="Ver código de encabezado">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                    <div class="google-results">
+                        <a href="{{ $link->url }}" target="_blank">
+                            <span class="title">{{ $link->name ?: 'Sin título' }}</span>
+                        </a>
+                        <div>
+                            <cite>{{ $client->domain }}/<span>{{ ltrim($link->url, '/') }}</span></cite>
+                        </div>
+                        <span class="description">{{ $link->description ?: 'Sin descripción' }}</span>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget-heading">
             <h3 class="widget-title">Resumen SERP - Servicios</h3>
         </div>
         <div class="widget-body">

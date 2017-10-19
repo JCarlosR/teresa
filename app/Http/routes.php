@@ -59,6 +59,9 @@ Route::post('/servicios/descripcion', 'SERPController@descriptionServices');
 Route::post('/proyectos/descripcion', 'SERPController@descriptionProjects');
 Route::post('/citas/descripcion', 'SERPController@descriptionQuotes');
 
+// Get code for a specific link
+Route::get('/serp/link/{link}', 'SERPController@link');
+
 // Description with format for each page
 Route::post('page/{name}/presentation', 'PageDescriptionController@update');
 

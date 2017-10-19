@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\SiteMapLink;
 use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,10 @@ class SERPController extends Controller
         $client = $this->client();
         $services = $client->services;
         $projects = $client->projects;
-        return view('client.serp')->with(compact('client', 'services', 'projects'));
+        $links = $client->siteMapLinks()
+            ->whereNull('type')
+            ->whereNotNull('site_map_link_id')->get();
+        return view('client.serp')->with(compact('client', 'services', 'projects', 'links'));
     }
 
     public function descriptionServices(Request $request)
@@ -52,5 +56,20 @@ class SERPController extends Controller
 
         $notification = 'La descripción de las citas se actualizó correctamente.';
         return back()->with(compact('notification'));
+    }
+
+    public function link(SiteMapLink $link)
+    {
+        $me = $this->client();
+        $content = view()->make('client.serp.header')->with(compact('link', 'me'));
+
+        $filename = ($link->name ?: $link->id).'.txt';
+
+        $headers = [
+            'Content-Type' => 'plain/txt',
+            'Content-Disposition' => sprintf('attachment; filename="%s"', $filename)
+        ];
+
+        return response()->make($content, '200', $headers);
     }
 }

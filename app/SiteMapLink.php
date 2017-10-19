@@ -10,4 +10,9 @@ class SiteMapLink extends Model
     {
         return $this->hasMany(SiteMapLink::class)->orderBy('id');
     }
+
+    public function absoluteUrl($domain)
+    {
+        return $domain . '/' . ltrim($this->url, '/');
+    }
 }
