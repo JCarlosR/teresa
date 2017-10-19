@@ -14,6 +14,9 @@
         @elseif ($node->type === 'services')
             <span data-name>Servicios</span>
             <small data-description>Página de servicios</small>
+        @elseif ($node->type === 'about_us')
+            <span data-name>Nosotros</span>
+            <small data-description>Acerca de nosotros</small>
         @else
             <span data-name>{{ $node->name }}</span>
             <small data-description>{{ $node->description }}</small>

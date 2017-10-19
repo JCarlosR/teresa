@@ -85,6 +85,7 @@
                             <option value="0">Enlace genérico</option>
                             <option value="projects">Proyectos</option>
                             <option value="services">Servicios</option>
+                            <option value="about_us">Nosotros</option>
                         </select>
                     </div>
                     <div class="form-group">
