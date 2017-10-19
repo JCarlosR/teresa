@@ -26,12 +26,9 @@
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/font-awesome.min.css') }}">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
+
+    <!-- Inserta aquí tus estilos CSS -->
 
     @yield('styles')
 
