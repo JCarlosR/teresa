@@ -37,7 +37,17 @@ class SiteMapController extends Controller
         if ($hasServicesNode)
             $services = $client->services;
 
-        return view('admin.sitemap.index')->with(compact('home', 'projects', 'services'));
+        $hasArticlesNode = $client->siteMapLinks()->where('type', 'articles')->exists();
+        if ($hasArticlesNode)
+            $articles = $client->articles;
+
+        $hasBrandsNode = $client->siteMapLinks()->where('type', 'brands')->exists();
+        if ($hasBrandsNode)
+            $brands = $client->brands;
+
+        return view('admin.sitemap.index')->with(compact(
+            'home', 'projects', 'services', 'brands', 'articles'
+        ));
     }
 
     public function update(Request $request)

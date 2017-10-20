@@ -85,6 +85,8 @@
                             <option value="0">Enlace genérico</option>
                             <option value="projects">Proyectos</option>
                             <option value="services">Servicios</option>
+                            <option value="articles">Artículos</option>
+                            <option value="brands">Marcas</option>
                             <option value="about_us">Nosotros</option>
                         </select>
                     </div>
