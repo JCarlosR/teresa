@@ -59,7 +59,7 @@
                 <li><a href="{{ url('/admin/sections') }}"><strong>Gestionar secciones</strong></a></li>
                 <li><a href="{{ url('/serp/resumen') }}">Resumen SERP</a></li>
                 {{-- Slider temporary disable (awaiting for the Theressa's return) --}}
-                {{--<li><a href="{{ url('/slides') }}">Slider</a></li>--}}
+                <li><a href="{{ url('/slides') }}">Slider</a></li>
                 <li><a href="{{ url('/nosotros') }}">Nosotros</a></li>
 
                 @foreach (client()->sections as $section)
