@@ -6,6 +6,7 @@ use App\Teresa\Clients\Accessors\CustomersRelatedAccessors;
 use App\Teresa\Clients\Accessors\PagePresentationAccessors;
 use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
 use App\Teresa\Clients\Accessors\SiteMapRelatedAccessors;
+use App\Teresa\Clients\Accessors\SlidesRelatedAccessors;
 use App\Teresa\Clients\Methods\SocialProfilesMethods;
 use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
