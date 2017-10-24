@@ -45,7 +45,7 @@
                     </div>
                     <div class="form-group">
                         <label for="slide-image">Imagen para el slide</label>
-                        <input type="file" name="image" id="slide-image" class="form-control" placeholder="Selecciona una imagen" required>
+                        <input type="file" name="image" id="slide-image" class="form-control" placeholder="Selecciona una imagen">
                     </div>
                 </fieldset>
 
