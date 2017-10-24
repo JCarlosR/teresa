@@ -28,6 +28,7 @@
                         <th>#</th>
                         <th>Título</th>
                         <th>Descripción</th>
+                        <th class="text-center">Foto</th>
                         <th>Opciones</th>
                     </tr>
                     </thead>
@@ -37,11 +38,25 @@
                             <th scope="row">{{ ++$key }}</th>
                             <td>{{ $slide->title }}</td>
                             <td>{{ $slide->description ?: 'Sin especificar' }}</td>
+                            <td class="text-center">
+                                @if ($slide->image)
+                                    <i class="ion-checkmark-round"></i>
+                                @else
+                                    <i class="ion-close"></i>
+                                @endif
+                            </td>
                             <td>
+                                @if ($slide->image)
                                 <a href="{{ url("images/slides/$slide->image") }}" class="btn btn-default btn-sm"
-                                   title="Ver image" target="_blank">
+                                   title="Ver imagen" target="_blank">
                                     <span class="glyphicon glyphicon-eye-open"></span>
                                 </a>
+                                @else
+                                    <button class="btn btn-default btn-sm" disabled
+                                       title="Este slide no tiene ninguna imagen asociada">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </button>
+                                @endif
 
                                 <a href="{{ url("slides/$slide->id/editar") }}" class="btn btn-info btn-sm" title="Editar slide">
                                     <span class="glyphicon glyphicon-edit"></span>
