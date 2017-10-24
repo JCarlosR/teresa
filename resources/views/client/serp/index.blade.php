@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
+    <link rel="stylesheet" href="{{ asset('/vendor/prism/prism.css') }}">
 @endsection
 
 @section('dashboard_content')
@@ -89,15 +90,21 @@
 
     <div class="widget">
         <div class="widget-heading">
-            <h3 class="widget-title">Resumen SERP - Páginas</h3>
+            <h3 class="widget-title">Resumen SERP - URLs</h3>
         </div>
         <div class="widget-body">
             <div class="row">
                 @foreach ($links as $link)
                 <div class="col-md-6">
-                    <a href="/serp/link/{{ $link->id }}" class="btn btn-secondary pull-right" title="Ver código de encabezado">
-                        <span class="glyphicon glyphicon-link"></span>
-                    </a>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-modal="{{ $link->id }}">
+                            <span class="glyphicon glyphicon-file"></span>
+                        </button>
+                        <button class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                    </div>
+
                     <div class="google-results">
                         <a href="{{ $link->url }}" target="_blank">
                             <span class="title">{{ $link->name ?: 'Sin título' }}</span>
@@ -160,4 +167,18 @@
     </div>
 
 </div>
+
+@include('client.serp.includes.serp-code-modals')
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('vendor/prism/prism.js') }}"></script>
+    <script>
+        $(document).on('click', '[data-modal]', onClickModalBtn);
+
+        function onClickModalBtn() {
+            var id = $(this).data('modal');
+            $('#modal-code-'+id).modal('show');
+        }
+    </script>
 @endsection

@@ -25,7 +25,15 @@ class SERPController extends Controller
         $links = $client->siteMapLinks()
             ->whereNull('type')
             ->whereNotNull('site_map_link_id')->get();
-        return view('client.serp')->with(compact('client', 'services', 'projects', 'links'));
+
+        $this->addHeadCodeToLinks($links, $client);
+
+        return view('client.serp.index')->with(compact('client', 'services', 'projects', 'links'));
+    }
+
+    public function addHeadCodeToLinks($links, $me) {
+        foreach ($links as $link)
+            $link->code_string = view()->make('client.serp.header')->with(compact('link', 'me'))->render();
     }
 
     public function descriptionServices(Request $request)
