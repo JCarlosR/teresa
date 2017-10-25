@@ -29,6 +29,10 @@ class SiteMapController extends Controller
             $home->save();
         }
 
+        if (SiteMapLink::where('user_id', $client->id)->whereNull('site_map_link_id')->count <= 1) {
+            $this->createInitialNodes($client->id);
+        }
+
         $hasProjectsNode = $client->siteMapLinks()->where('type', 'projects')->exists();
         if ($hasProjectsNode)
             $projects = $client->projects;
@@ -48,6 +52,37 @@ class SiteMapController extends Controller
         return view('admin.sitemap.index')->with(compact(
             'home', 'projects', 'services', 'brands', 'articles'
         ));
+    }
+
+    public function createInitialNodes($client_id)
+    {
+        $login = new SiteMapLink();
+        $login->user_id = $client_id;
+        $login->name = 'Iniciar sesión';
+        $login->url = '/login';
+        $login->site_map_link_id = null;
+        $login->save();
+
+        $siteMap = new SiteMapLink();
+        $siteMap->user_id = $client_id;
+        $siteMap->name = 'Site Map';
+        $siteMap->url = '/sitemap';
+        $siteMap->site_map_link_id = null;
+        $siteMap->save();
+
+        $faqs = new SiteMapLink();
+        $faqs->user_id = $client_id;
+        $faqs->name = 'Preguntas frecuentes';
+        $faqs->url = '/faqs';
+        $faqs->site_map_link_id = null;
+        $faqs->save();
+
+        $terms = new SiteMapLink();
+        $terms->user_id = $client_id;
+        $terms->name = 'Términos y condiciones';
+        $terms->url = '/terms';
+        $terms->site_map_link_id = null;
+        $terms->save();
     }
 
     public function update(Request $request)
