@@ -29,8 +29,12 @@ class SiteMapController extends Controller
             $home->save();
         }
 
-        if (SiteMapLink::where('user_id', $client->id)->whereNull('site_map_link_id')->count <= 1) {
+        $query_lv1_nodes = SiteMapLink::where('user_id', $client->id)
+            ->whereNull('site_map_link_id')->where('id', '<>', $home->id);
+        $lv1_nodes = $query_lv1_nodes->get();
+        if (count($lv1_nodes) <= 1) {
             $this->createInitialNodes($client->id);
+            $lv1_nodes = $query_lv1_nodes->get(); // get after create :D
         }
 
         $hasProjectsNode = $client->siteMapLinks()->where('type', 'projects')->exists();
@@ -50,7 +54,7 @@ class SiteMapController extends Controller
             $brands = $client->brands;
 
         return view('admin.sitemap.index')->with(compact(
-            'home', 'projects', 'services', 'brands', 'articles'
+            'home', 'projects', 'services', 'brands', 'articles', 'lv1_nodes'
         ));
     }
 

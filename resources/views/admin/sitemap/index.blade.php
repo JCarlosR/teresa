@@ -37,10 +37,13 @@
 
                 <nav class="secondary">
                     <ul>
-                        <li><a href="/login">Sign In</a></li>
-                        <li><a href="/sitemap">Site Map</a></li>
-                        <li><a href="/faqs">FAQs</a></li>
-                        <li><a href="/terms">Terms &amp; Conditions</a></li>
+                        @foreach ($lv1_nodes as $node)
+                        <li>
+                            <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
+                                <span data-name>{{ $node->name }}</span>
+                            </a>
+                        </li>
+                        @endforeach
                     </ul>
                 </nav>
             </div>
