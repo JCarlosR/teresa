@@ -19,7 +19,6 @@
             <small data-description>Acerca de nosotros</small>
         @else
             <span data-name>{{ $node->name }}</span>
-            <small data-description>{{ $node->description }}</small>
         @endif
     </a>
     <ul>

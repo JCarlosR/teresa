@@ -25,7 +25,6 @@
                                 </form>
 
                                 <span data-name>{{ $home->name }}</span>
-                                <small data-description>{{ $home->description }}</small>
                             </a>
                             <ul>
                                 @foreach ($home->children as $node)
@@ -74,10 +73,6 @@
                                 <input type="text" class="form-control" id="field-2" placeholder="Ruta hacia una página (ejemplo /blog)" name="url">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="field-3" class="control-label">Descripción</label>
-                        <input type="text" class="form-control" id="field-3" placeholder="Descripción breve de la página" name="description">
                     </div>
                     <div class="form-group">
                         <label for="field-4" class="control-label">Tipo de nodo</label>
@@ -129,7 +124,6 @@
             var target = $(this).data('edit');
             // alert('edit ' + target);
             var name = $(this).find('[data-name]').text();
-            var description = $(this).find('[data-description]').text();
             var url = $(this).attr('href');
             var type = $(this).data('type');
             if (!type)
@@ -137,7 +131,6 @@
 
             $modalEdit.find('[name=site_map_link_id]').val(target);
             $modalEdit.find('[name=name]').val(name);
-            $modalEdit.find('[name=description]').val(description);
             $modalEdit.find('[name=url]').val(url);
             $modalEdit.find('[name=type]').val(type);
             $modalEdit.modal('show');
