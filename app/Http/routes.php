@@ -60,7 +60,9 @@ Route::post('/proyectos/descripcion', 'SERPController@descriptionProjects');
 Route::post('/citas/descripcion', 'SERPController@descriptionQuotes');
 
 // Get code for a specific link
-Route::get('/serp/link/{link}', 'SERPController@link');
+Route::get('/serp/link/{link}/edit', 'SERPController@edit');
+Route::post('/serp/link/{link}/edit', 'SERPController@update');
+Route::get('/serp/link/{link}', 'SERPController@link'); // should be renamed to download
 
 // Description with format for each page
 Route::post('page/{name}/presentation', 'PageDescriptionController@update');

@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="/servicios" class="btn btn-secondary pull-right" title="Editar servicios">
+                    <a href="/servicios" class="btn btn-info btn-sm pull-right" title="Editar servicios">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <div class="google-results">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="/proyectos" class="btn btn-secondary pull-right" title="Editar proyectos">
+                    <a href="/proyectos" class="btn btn-info btn-sm pull-right" title="Editar proyectos">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <div class="google-results">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="/nosotros" class="btn btn-secondary pull-right" title="Editar sección nosotros">
+                    <a href="/nosotros" class="btn btn-info btn-sm pull-right" title="Editar sección nosotros">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <div class="google-results">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 {{--<div class="col-md-6">--}}
-                    {{--<a href="/citas" class="btn btn-secondary pull-right" title="Editar citas">--}}
+                    {{--<a href="/citas" class="btn btn-info btn-sm pull-right" title="Editar citas">--}}
                         {{--<span class="glyphicon glyphicon-pencil"></span>--}}
                     {{--</a>--}}
                     {{--<div class="google-results">--}}
@@ -100,9 +100,9 @@
                         <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-modal="{{ $link->id }}">
                             <span class="glyphicon glyphicon-file"></span>
                         </button>
-                        <button class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">
+                        <a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">
                             <span class="glyphicon glyphicon-pencil"></span>
-                        </button>
+                        </a>
                     </div>
 
                     <div class="google-results">

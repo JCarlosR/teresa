@@ -80,4 +80,23 @@ class SERPController extends Controller
 
         return response()->make($content, '200', $headers);
     }
+
+    public function edit(SiteMapLink $link)
+    {
+        $client = $this->client();
+        return view('client.serp.edit')->with(compact('client', 'link'));
+    }
+
+    public function update(Request $request, SiteMapLink $link)
+    {
+        // dd($request->all());
+        $client = $this->client();
+        if ($link->user_id == $client->id) {
+            $link->name = $request->input('title');
+            $link->description = $request->input('description');
+            $link->content = $request->input('content');
+            $link->save();
+        }
+        return redirect('/serp/resumen');
+    }
 }
