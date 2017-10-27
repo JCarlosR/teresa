@@ -22,28 +22,55 @@ class InboxController extends Controller
     {
         $client = $this->client();
 
-        $messagesQuery = InboxMessage::where('user_id', $client->id);
-
         $topic = $request->input('categoria');
-        if ($topic && $topic != 'Todas') { // no filter for empty param
-            $messagesQuery->where('topic', $topic);
+        if ($topic && $topic != 'Todos') { // no filter for empty param
+            $client->inbox_messages()->where('topic', $topic);
         }
 
-        $messages = $messagesQuery->orderBy('id', 'desc')->paginate(10);
+        $categories = $client->inbox_messages()->distinct()->pluck('topic');
+        // dd($categories);
 
-        return view('client.inbox.index')->with(compact('messages', 'topic'));
+        $messages = $client->inbox_messages()
+            ->orderBy('read')
+            ->orderBy('id', 'desc')->paginate(10);
+
+        $deleted_count = $client->inbox_messages()
+            ->onlyTrashed()->count();
+
+        $pending_count = $client->inbox_messages()
+            ->where('read', false)->count();
+
+        return view('client.inbox.index')->with(compact(
+            'categories', 'messages', 'topic',
+            'deleted_count', 'pending_count'
+        ));
     }
 
     public function show($id)
     {
         $client = $this->client();
+        $categories = $client->inbox_messages()->distinct()->pluck('topic');
 
         $message = InboxMessage::find($id);
         if ($message->user_id != $client->id)
             return redirect('/inbox');
 
+        if ($message->read == false) {
+            $message->read = true;
+            $message->save();
+        }
+
         $topic = '';
-        return view('client.inbox.show')->with(compact('message', 'topic'));
+        $deleted_count = $client->inbox_messages()
+            ->onlyTrashed()->count();
+
+        $pending_count = $client->inbox_messages()
+            ->where('read', false)->count();
+
+        return view('client.inbox.show')->with(compact(
+            'categories', 'message', 'topic',
+            'deleted_count', 'pending_count'
+        ));
     }
 
     public function config()

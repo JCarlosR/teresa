@@ -14,6 +14,8 @@ class AddSoftDeletesAndSpamToInboxMessages extends Migration
     {
         Schema::table('inbox_messages', function($table) {
             $table->boolean('spam')->default(false);
+            $table->boolean('read')->default(false);
+            $table->boolean('important')->default(false);
             $table->softDeletes();
         });
     }
@@ -26,7 +28,9 @@ class AddSoftDeletesAndSpamToInboxMessages extends Migration
     public function down()
     {
         Schema::table('inbox_messages', function($table) {
-            $table->dropColumn('spam');
+            $table->dropColumn([
+                'spam', 'read', 'important'
+            ]);
             $table->dropSoftDeletes();
         });
     }

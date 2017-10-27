@@ -9,8 +9,8 @@
                 {{--<i class="ion-paintbrush mr-5"></i> Redactar--}}
             {{--</a>--}}
             <div class="list-group no-border">
-                <a href="javascript:;" class="list-group-item active">
-                    <i class="ion-filing"></i> Inbox (5)
+                <a href="{{ url('/inbox') }}" class="list-group-item active">
+                    <i class="ion-filing"></i> Inbox ({{ $pending_count }})
                 </a>
                 {{--<a href="javascript:;" class="list-group-item">--}}
                     {{--<i class="ion-paper-airplane"></i> Enviados--}}
@@ -22,42 +22,28 @@
                     <i class="ion-pricetag"></i> Importantes
                 </a>
                 <a href="javascript:;" class="list-group-item">
-                    <i class="ion-trash-b"></i> Eliminados (7)
+                    <i class="ion-trash-b"></i> Eliminados ({{ $deleted_count }})
                 </a>
             </div>
 
             <h6 class="text-uppercase">Categorías</h6>
             <div class="list-group no-border">
-                <a href="{{ url('/inbox?categoria=Todas') }}"
-                   class="list-group-item @if($topic == 'Todas') active @endif">
+                <a href="{{ url('/inbox?categoria=Todos') }}"
+                   class="list-group-item @if($topic == 'Todos') active @endif">
                     <i class="ion-folder"></i> Todas
                 </a>
-                <a href="{{ url('/inbox?categoria=Proyectos') }}"
-                   class="list-group-item @if($topic == 'Proyectos') active @endif">
-                    <i class="ion-folder"></i> Proyectos
+                @foreach ($categories as $category)
+                <a href="{{ url('/inbox?categoria='.$category) }}"
+                   class="list-group-item @if($topic == $category) active @endif">
+                    <i class="ion-folder"></i> {{ $category }}
                 </a>
-                <a href="{{ url('/inbox?categoria=Proveedores') }}"
-                   class="list-group-item @if($topic == 'Proveedores') active @endif">
-                    <i class="ion-folder"></i> Proveedores
-                </a>
-                <a href="{{ url('/inbox?categoria=Empleo') }}"
-                   class="list-group-item @if($topic == 'Empleo') active @endif">
-                    <i class="ion-folder"></i> Empleo
-                </a>
-                <a href="{{ url('/inbox?categoria=Directo') }}"
-                   class="list-group-item @if($topic == 'Directo') active @endif">
-                    <i class="ion-folder"></i> C. Directo
-                </a>
-                <a href="{{ url('/inbox?categoria=Otros') }}"
-                   class="list-group-item @if($topic == 'Otros') active @endif">
-                    <i class="ion-folder"></i> Otros
-                </a>
+                @endforeach
             </div>
             {{--<h6 class="text-uppercase">Labels</h6>--}}
             {{--<div class="list-group no-border"><a href="javascript:;" class="list-group-item"><i class="ion-record text-danger"></i> Family</a><a href="javascript:;" class="list-group-item"><i class="ion-record text-success"></i> Work</a><a href="javascript:;" class="list-group-item"><i class="ion-record text-primary"></i> Shop</a><a href="javascript:;" class="list-group-item"><i class="ion-record text-warning"></i> Google</a></div>--}}
-            <div class="block mb-10"><span>5% de Spam</span></div>
+            <div class="block mb-10"><span>2% de Spam</span></div>
             <div class="progress progress-xs mb-0">
-                <div role="progressbar" data-transitiongoal="5" class="progress-bar progress-bar-danger"></div>
+                <div role="progressbar" data-transitiongoal="2" class="progress-bar progress-bar-danger"></div>
             </div>
         </div>
     </div>

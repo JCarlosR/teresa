@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
@@ -46,11 +47,26 @@ class ContactController extends Controller
             'content.min' => 'El mensaje ingresado es demasiado corto.',
         ];
 
-        $this->validate($request, $rules, $messages);
+        $validator = Validator::make($request, $rules, $messages);
 
-        $senderEmail = $request->input('email');
 
         $client = User::find($request->input('user_id'));
+
+        $validator->after(function ($validator) use ($client) {
+            if ($client->google_account) {
+                $validator->errors()->add('google_account', 'Aún no se ha configurado el Google Account!');
+            }
+            if ($client->contact_email) {
+                $validator->errors()->add('contact_email', 'Aún no se ha configurado un email de contacto!');
+            }
+        });
+
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), 200);
+        }
+
+
+        $senderEmail = $request->input('email');
 
         Mail::send('emails.external.contact', $request->all(), function ($m) use ($client, $senderEmail) {
             $m->to($client->google_account, $client->name)

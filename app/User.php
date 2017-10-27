@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Teresa\Clients\Accessors\CustomersRelatedAccessors;
+use App\Teresa\Clients\Accessors\InboxRelatedAccessors;
 use App\Teresa\Clients\Accessors\PagePresentationAccessors;
 use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
 use App\Teresa\Clients\Accessors\SiteMapRelatedAccessors;
@@ -57,6 +58,9 @@ class User extends Authenticatable
     use ServicesRelatedAccessors;
     use CustomersRelatedAccessors;
     use CmsRelatedAccessors;
+
+    // accessors: client leads
+    use InboxRelatedAccessors;
 
     // accessors: photos
     use PhotosRelatedAccessors;

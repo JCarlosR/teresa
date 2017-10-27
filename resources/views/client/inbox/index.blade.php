@@ -37,7 +37,7 @@
                 </div>
             @endif
             @foreach ($messages as $message)
-                <tr class="unread">
+                <tr class="@if (!$message->read) unread @endif">
                     <td class="email-select">
                         <div class="checkbox checkbox-custom m-0">
                             <input id="chk{{ $message->id }}" type="checkbox">
@@ -48,7 +48,9 @@
                     <td class="email-from">
                         <div class="media">
                             <div class="media-body">
-                                <h5 class="media-heading">{{ $message->name }}</h5>
+                                <h5 class="media-heading">
+                                    {{ $message->name }}
+                                </h5>
                                 <p class="text-muted mb-0">
                                     <time datetime="{{ $message->created_at }}" class="fs-13 mr-5">
                                         {{ $message->created_at->format('d/m/Y') }}
