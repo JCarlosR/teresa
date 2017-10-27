@@ -20,8 +20,7 @@ class ContactController extends Controller
             'email' => 'required|email',
             'phone' => 'min:6|max:30',
             'topic' => [
-                'required',
-                'in:Proyectos,Proveedores,Empleo,Contacto directo,Otros',
+                'required'
             ],
             'content' => 'required|min:15',
         ];

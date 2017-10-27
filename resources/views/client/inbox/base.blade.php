@@ -12,17 +12,17 @@
                 <a href="javascript:;" class="list-group-item active">
                     <i class="ion-filing"></i> Inbox (5)
                 </a>
+                {{--<a href="javascript:;" class="list-group-item">--}}
+                    {{--<i class="ion-paper-airplane"></i> Enviados--}}
+                {{--</a>--}}
+                {{--<a href="javascript:;" class="list-group-item">--}}
+                    {{--<i class="ion-edit"></i> Borradores (2)--}}
+                {{--</a>--}}
                 <a href="javascript:;" class="list-group-item">
-                    <i class="ion-paper-airplane"></i> Enviados
-                </a>
-                <a href="javascript:;" class="list-group-item">
-                    <i class="ion-edit"></i> Borradores (2)
+                    <i class="ion-pricetag"></i> Importantes
                 </a>
                 <a href="javascript:;" class="list-group-item">
                     <i class="ion-trash-b"></i> Eliminados (7)
-                </a>
-                <a href="javascript:;" class="list-group-item">
-                    <i class="ion-pricetag"></i> Importantes
                 </a>
             </div>
 
