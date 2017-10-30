@@ -8,18 +8,7 @@
         </form>
         @endif
 
-        @if ($node->type === 'projects')
-            <span data-name>Proyectos</span>
-            <small data-description>Página de proyectos</small>
-        @elseif ($node->type === 'services')
-            <span data-name>Servicios</span>
-            <small data-description>Página de servicios</small>
-        @elseif ($node->type === 'about_us')
-            <span data-name>Nosotros</span>
-            <small data-description>Acerca de nosotros</small>
-        @else
-            <span data-name>{{ $node->name }}</span>
-        @endif
+        <span data-name>{{ $node->name }}</span>
     </a>
     <ul>
         @if ($node->type === 'projects')
