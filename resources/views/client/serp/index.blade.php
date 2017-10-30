@@ -3,6 +3,11 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendor/prism/prism.css') }}">
+    <style>
+        .google-results span.description {
+            display: none;
+        }
+    </style>
 @endsection
 
 @section('dashboard_content')
@@ -179,6 +184,19 @@
         function onClickModalBtn() {
             var id = $(this).data('modal');
             $('#modal-code-'+id).modal('show');
+        }
+
+        $(function () {
+            $('.google-results span.description').each(applyLimitsToDescription);
+        });
+
+        function applyLimitsToDescription(i, e) {
+            var description = $(e).text();
+            if (description.length > 156) {
+                description = description.substr(0, 152) + ' ...';
+            }
+            $(e).text(description);
+            $(e).slideDown();
         }
     </script>
 @endsection
