@@ -105,9 +105,11 @@
                         <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-modal="{{ $link->id }}">
                             <span class="glyphicon glyphicon-file"></span>
                         </button>
-                        <a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                        </a>
+                        @if (auth()->user()->is_admin)
+                            <a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                        @endif
                     </div>
 
                     <div class="google-results">
@@ -141,15 +143,15 @@
                             {{--<span class="glyphicon glyphicon-pencil"></span>--}}
                             {{--</a>--}}
                         </div>
-                    <div class="google-results">
-                        <a href="{{ $client->getLinkTo('/servicio/'.$service->id) }}" target="_blank">
-                            <span class="title">{{ $service->title ?: 'Sin título' }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
+                        <div class="google-results">
+                            <a href="{{ $client->getLinkTo('/servicio/'.$service->id) }}" target="_blank">
+                                <span class="title">{{ $service->title ?: 'Sin título' }}</span>
+                            </a>
+                            <div>
+                                <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
+                            </div>
+                            <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
                         </div>
-                        <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
-                    </div>
                     @endforeach
                 </div>
             </div>
