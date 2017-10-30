@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>{{ $link->name ?: 'Sin título' }}</title>
-    <meta name="description" content="{{ $link->description ?: 'Sin descripción' }}"/>
+    <meta name="description" content="{{ $link->description ?: 'Sin descripción' }}">
 
-    <meta property="og:title" content="{{ $link->name ?: 'Sin título' }}"/>
+    <meta property="og:title" content="{{ $link->name ?: 'Sin título' }}">
     <meta property="og:type" content="company">
-    <meta property="og:url" content="{{ $link->absoluteUrl($me->domain) }}"/>
-    <meta property="og:site_name" content="{{ $me->trade_name }}"/>
-    <meta property="og:description" content="{{ $link->description ?: 'Sin descripción' }}"/>
-    <meta property="og:image" content="{{ $me->photo_route }}"/>
-    <meta property="og:image:alt" content="{{ $link->name ?: 'Sin título' }}"/>
+    <meta property="og:url" content="{{ $link->absoluteUrl($me->domain) }}">
+    <meta property="og:site_name" content="{{ $me->trade_name }}">
+    <meta property="og:description" content="{{ $link->description ?: 'Sin descripción' }}">
+    <meta property="og:image" content="{{ $me->photo_route }}">
+    <meta property="og:image:alt" content="{{ $link->name ?: 'Sin título' }}">
 
     @if ($me->getSocialProfile('twitter')->id)
         <meta name="twitter:card" content="summary">

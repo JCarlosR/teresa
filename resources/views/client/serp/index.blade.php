@@ -131,8 +131,16 @@
         </div>
         <div class="widget-body">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     @foreach ($services as $service)
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-service="{{ $service->id }}">
+                                <span class="glyphicon glyphicon-file"></span>
+                            </button>
+                            {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
+                            {{--<span class="glyphicon glyphicon-pencil"></span>--}}
+                            {{--</a>--}}
+                        </div>
                     <div class="google-results">
                         <a href="{{ $client->getLinkTo('/servicio/'.$service->id) }}" target="_blank">
                             <span class="title">{{ $service->title ?: 'Sin título' }}</span>
@@ -174,21 +182,28 @@
 </div>
 
 @include('client.serp.includes.serp-code-modals')
+@include('client.serp.includes.services-serp-modals')
 @endsection
 
 @section('scripts')
     <script src="{{ asset('vendor/prism/prism.js') }}"></script>
     <script>
-        $(document).on('click', '[data-modal]', onClickModalBtn);
+        $(function () {
+            // show head code
+            $(document).on('click', '[data-modal]', onClickModalBtn);
+            $(document).on('click', '[data-service]', onClickServiceModalBtn);
+
+            $('.google-results span.description').each(applyLimitsToDescription);
+        });
 
         function onClickModalBtn() {
             var id = $(this).data('modal');
             $('#modal-code-'+id).modal('show');
         }
-
-        $(function () {
-            $('.google-results span.description').each(applyLimitsToDescription);
-        });
+        function onClickServiceModalBtn() {
+            var id = $(this).data('service');
+            $('#modal-service-'+id).modal('show');
+        }
 
         function applyLimitsToDescription(i, e) {
             var description = $(e).text();

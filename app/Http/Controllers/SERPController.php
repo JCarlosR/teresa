@@ -27,6 +27,7 @@ class SERPController extends Controller
             ->whereNotNull('site_map_link_id')->get();
 
         $this->addHeadCodeToLinks($links, $client);
+        $this->addHeadCodeToServices($services, $client);
 
         return view('client.serp.index')->with(compact('client', 'services', 'projects', 'links'));
     }
@@ -34,6 +35,15 @@ class SERPController extends Controller
     public function addHeadCodeToLinks($links, $me) {
         foreach ($links as $link)
             $link->code_string = view()->make('client.serp.header')->with(compact('link', 'me'))->render();
+    }
+    public function addHeadCodeToServices($services, $client) {
+        foreach ($services as $service) {
+            $data = [
+                'link' => $service,
+                'me' => $client
+            ];
+            $service->code_string = view()->make('client.serp.header')->with($data)->render();
+        }
     }
 
     public function descriptionServices(Request $request)

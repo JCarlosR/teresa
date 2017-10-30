@@ -83,6 +83,12 @@ class Service extends Model
         return ServiceImage::where('service_id', $this->id)->count();
     }
 
+    public function getUrlAttribute()
+    {
+        // temporary FIXED url
+        return str_slug($this->name);
+    }
+
 
     // methods
 
@@ -112,5 +118,10 @@ class Service extends Model
             return 'warning';
         else
             return 'danger';
+    }
+
+    public function absoluteUrl($domain)
+    {
+        return $domain . '/servicios/' . ltrim($this->url, '/');
     }
 }
