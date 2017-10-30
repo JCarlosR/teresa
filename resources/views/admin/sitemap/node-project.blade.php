@@ -1,5 +1,5 @@
 <li>
-    <a href="" onclick="return false;">
-        <span data-name>{{ $project->name }}</span>
+    <a href="{{ $project->url }}" onclick="return false;">
+        {{--<span data-name>{{ $project->name }}</span>--}}
     </a>
 </li>

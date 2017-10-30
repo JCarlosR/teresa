@@ -100,7 +100,7 @@ class SiteMapController extends Controller
                 $siteMapLink->children()->delete();
                 $siteMapLink->delete();
             } else {
-                $siteMapLink->name = $request->name;
+//                $siteMapLink->name = $request->name;
                 $siteMapLink->url = $request->url;
                 $siteMapLink->type = $request->type === '0'  ? null : $request->type;
                 $siteMapLink->save();

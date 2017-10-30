@@ -88,6 +88,11 @@ class Project extends Model
         return ProjectImage::where('project_id', $this->id)->count();
     }
 
+    public function getUrlAttribute()
+    {
+        // temporary FIXED url
+        return str_slug($this->name);
+    }
 
 
     // methods

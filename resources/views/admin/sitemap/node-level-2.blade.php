@@ -8,7 +8,7 @@
         </form>
         @endif
 
-        <span data-name>{{ $node->name }}</span>
+        {{--<span data-name>{{ $node->name }}</span>--}}
     </a>
     <ul>
         @if ($node->type === 'projects')

@@ -24,7 +24,7 @@
                                     <i class="glyphicon glyphicon-plus-sign" data-add></i>
                                 </form>
 
-                                <span data-name>{{ $home->name }}</span>
+                                {{--<span data-name>{{ $home->name }}</span>--}}
                             </a>
                             <ul>
                                 @foreach ($home->children as $node)
@@ -40,7 +40,7 @@
                         @foreach ($lv1_nodes as $node)
                         <li>
                             <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
-                                <span data-name>{{ $node->name }}</span>
+                                {{--<span data-name>{{ $node->name }}</span>--}}
                             </a>
                         </li>
                         @endforeach
@@ -64,13 +64,13 @@
                 <input type="hidden" name="site_map_link_id" value="">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="field-1" class="control-label">Nombre</label>
-                                <input type="text" class="form-control" id="field-1" placeholder="Nombre o título de la página" name="name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                        {{--<div class="col-md-6">--}}
+                            {{--<div class="form-group">--}}
+                                {{--<label for="field-1" class="control-label">Nombre</label>--}}
+                                {{--<input type="text" class="form-control" id="field-1" placeholder="Nombre o título de la página" name="name">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="field-2" class="control-label">Url</label>
                                 <input type="text" class="form-control" id="field-2" placeholder="Ruta hacia una página (ejemplo /blog)" name="url">
@@ -126,14 +126,14 @@
         function editNode() {
             var target = $(this).data('edit');
             // alert('edit ' + target);
-            var name = $(this).find('[data-name]').text();
+//            var name = $(this).find('[data-name]').text();
             var url = $(this).attr('href');
             var type = $(this).data('type');
             if (!type)
                 type = 0;
 
             $modalEdit.find('[name=site_map_link_id]').val(target);
-            $modalEdit.find('[name=name]').val(name);
+//            $modalEdit.find('[name=name]').val(name);
             $modalEdit.find('[name=url]').val(url);
             $modalEdit.find('[name=type]').val(type);
             $modalEdit.modal('show');
