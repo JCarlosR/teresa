@@ -24,7 +24,7 @@
                                     <i class="glyphicon glyphicon-plus-sign" data-add></i>
                                 </form>
 
-                                {{--<span data-name>{{ $home->name }}</span>--}}
+                                <span data-name>{{ $home->name }}</span>
                             </a>
                             <ul>
                                 @foreach ($home->children as $node)
