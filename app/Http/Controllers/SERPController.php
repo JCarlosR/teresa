@@ -28,6 +28,7 @@ class SERPController extends Controller
 
         $this->addHeadCodeToLinks($links, $client);
         $this->addHeadCodeToServices($services, $client);
+        $this->addHeadCodeToProjects($projects, $client);
 
         return view('client.serp.index')->with(compact('client', 'services', 'projects', 'links'));
     }
@@ -43,6 +44,15 @@ class SERPController extends Controller
                 'me' => $client
             ];
             $service->code_string = view()->make('client.serp.header')->with($data)->render();
+        }
+    }
+    public function addHeadCodeToProjects($projects, $client) {
+        foreach ($projects as $project) {
+            $data = [
+                'link' => $project,
+                'me' => $client
+            ];
+            $project->code_string = view()->make('client.serp.header')->with($data)->render();
         }
     }
 

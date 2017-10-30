@@ -132,6 +132,10 @@ class Project extends Model
             else
                 return 'danger';
         }
+    }
 
+    public function absoluteUrl($domain)
+    {
+        return $domain . '/servicios/' . ltrim($this->url, '/');
     }
 }

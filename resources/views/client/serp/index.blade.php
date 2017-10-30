@@ -164,8 +164,16 @@
         </div>
         <div class="widget-body">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     @foreach ($projects as $project)
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-project="{{ $project->id }}">
+                                <span class="glyphicon glyphicon-file"></span>
+                            </button>
+                            {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
+                            {{--<span class="glyphicon glyphicon-pencil"></span>--}}
+                            {{--</a>--}}
+                        </div>
                         <div class="google-results">
                             <a href="{{ $client->getLinkTo('/proyecto/'.$project->id) }}" target="_blank">
                                 <span class="title">{{ old('title', $project->title) ?: 'Sin título' }}</span>
@@ -185,6 +193,7 @@
 
 @include('client.serp.includes.serp-code-modals')
 @include('client.serp.includes.services-serp-modals')
+@include('client.serp.includes.projects-serp-modals')
 @endsection
 
 @section('scripts')
@@ -194,6 +203,7 @@
             // show head code
             $(document).on('click', '[data-modal]', onClickModalBtn);
             $(document).on('click', '[data-service]', onClickServiceModalBtn);
+            $(document).on('click', '[data-project]', onClickProjectModalBtn);
 
             $('.google-results span.description').each(applyLimitsToDescription);
         });
@@ -205,6 +215,10 @@
         function onClickServiceModalBtn() {
             var id = $(this).data('service');
             $('#modal-service-'+id).modal('show');
+        }
+        function onClickProjectModalBtn() {
+            var id = $(this).data('project');
+            $('#modal-project-'+id).modal('show');
         }
 
         function applyLimitsToDescription(i, e) {
