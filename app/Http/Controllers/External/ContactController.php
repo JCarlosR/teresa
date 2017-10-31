@@ -47,7 +47,7 @@ class ContactController extends Controller
             'content.min' => 'El mensaje ingresado es demasiado corto.',
         ];
 
-        $validator = Validator::make($request, $rules, $messages);
+        $validator = Validator::make($request->all(), $rules, $messages);
 
 
         $client = User::find($request->input('user_id'));
