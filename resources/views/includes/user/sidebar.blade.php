@@ -38,6 +38,13 @@
         </li>
 
         <li class="panel">
+            <a href="{{ url('/sitemap') }}">
+                <i class="ion-ios-shuffle bg-default"></i>
+                <span class="sidebar-title">Sitemap</span>
+            </a>
+        </li>
+
+        <li class="panel">
             <a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
                 <i class="ion-ios-browsers bg-danger"></i>
                 <span class="sidebar-title">Contenido web</span>

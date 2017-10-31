@@ -46,6 +46,9 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/super/client', 'SuperClientController@index');
 Route::get('/dashboard', 'Client\DashboardController@index');
 
+// Site map
+Route::get('/sitemap', 'Client\SiteMapController@index');
+
 // General data
 Route::get('/datos/principales', 'Client\DataController@edit');
 Route::post('/datos/principales', 'Client\DataController@update');
