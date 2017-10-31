@@ -53,10 +53,10 @@ class ContactController extends Controller
         $client = User::find($request->input('user_id'));
 
         $validator->after(function ($validator) use ($client) {
-            if ($client->google_account) {
+            if (!$client->google_account) {
                 $validator->errors()->add('google_account', 'Aún no se ha configurado el Google Account!');
             }
-            if ($client->contact_email) {
+            if (!$client->contact_email) {
                 $validator->errors()->add('contact_email', 'Aún no se ha configurado un email de contacto!');
             }
         });
