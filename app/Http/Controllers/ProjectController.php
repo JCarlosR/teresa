@@ -181,8 +181,10 @@ class ProjectController extends Controller
 
         $project->save();
 
-        if ($this->client()->client_type_id) {
-            if ($this->client()->client_type_id==1) { // SEO Architects
+        $client = $this->client();
+
+        if ($client->client_type_id) {
+            if ($client->client_type_id==1) { // SEO Architects
 
                 $architect_project = $project->architect_project;
 
@@ -207,7 +209,7 @@ class ProjectController extends Controller
 
         $services = [];
         foreach ($services_name as $service_name) {
-            $service = Service::where('name', $service_name)->first(['id']);
+            $service = $client->services()->where('name', $service_name)->first(['id']);
             if ($service)
                 $services[] = $service->id;
         }
