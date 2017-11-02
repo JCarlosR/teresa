@@ -32,15 +32,17 @@
                     </div>
                     <div id="Container">
                         @foreach ($me->projects as $project)
-                            @if ($project->featuredImage)
-                                <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
-                                    <h4 class="text-center">{{ $project->name }}</h4>
-                                    <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
-                                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
-                                    </a>
-                                    <p class="text-center">{{ $project->description }}</p>
-                                </div>
-                            @endif
+                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
+                                <h4 class="text-center">{{ $project->name }}</h4>
+                                <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                                    @if ($project->featuredImage)
+                                      <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                    @else
+                                        <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="{{ $service->name }}">
+                                    @endif
+                                </a>
+                                <p class="text-center">{{ $project->description }}</p>
+                            </div>
                         @endforeach
                     </div>
                 </div>
