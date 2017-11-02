@@ -13,6 +13,7 @@ class AboutUsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('as_client');
     }
 
     public function show()
