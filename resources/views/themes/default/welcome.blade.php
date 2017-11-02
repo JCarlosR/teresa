@@ -125,7 +125,7 @@
                             @else
                                 <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                     <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
-                                        <img src="https://www.google.com.pe/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiYiN3osd7UAhVBbSYKHaUeDCEQjRwIBw&url=http%3A%2F%2Fes.minecraft.wikia.com%2Fwiki%2FArchivo%3ASin_imagen.png&psig=AFQjCNGlXWJNQuiBFJN-BRel7sMJZWfS1w&ust=1498665395769621"
+                                        <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png"
                                              class="img-responsive" title="{{ $project->name }}">
                                     </a>
                                 </div>
