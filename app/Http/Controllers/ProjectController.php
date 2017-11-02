@@ -69,10 +69,11 @@ class ProjectController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
+        $client = $this->client();
         $services_name = $request->get('services') ?: [];
 
         $project = new Project();
-        $project->user_id = $this->client()->id;
+        $project->user_id = $client->id;
 
         $project->name = $request->get('name');
         $project->title = $request->get('title');
@@ -92,13 +93,13 @@ class ProjectController extends Controller
         $project->save();
 
         foreach ($services_name as $service_name) {
-            $service = Service::where('name', $service_name)->first();
+            $service = $client->services()->where('name', $service_name)->first();
             if ($service)
                 $project->services()->attach($service);
         }
 
-        if ($this->client()->client_type_id) {
-            if ($this->client()->client_type_id==1) { // SEO Architects
+        if ($client->client_type_id) {
+            if ($client->client_type_id==1) { // SEO Architects
 
                 $architect_project = new ArchitectProject();
                 $architect_project->architect = $request->get('architect');
