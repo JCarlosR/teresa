@@ -21,13 +21,15 @@
 
             <p class="mb-20">A continuación, es posible definir <strong>los asuntos</strong> disponibles en el formulario de contacto principal.</p>
 
-            <form action="{{ url('/admin/inbox/topics') }}" class="form" method="post">
-                {{ csrf_field() }}
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="{{ url('/admin/inbox/topics') }}" class="form" method="post">
+                        {{ csrf_field() }}
 
-                <template id="template-topic">
-                    <div class="form-group input-group">
-                        <input type="text" class="form-control" name="topics[]">
-                        <span class="input-group-btn">
+                        <template id="template-topic">
+                            <div class="form-group input-group">
+                                <input type="text" class="form-control" name="topics[]">
+                                <span class="input-group-btn">
                         <button class="btn btn-info" type="button">
                             <i class="glyphicon glyphicon-move"></i>
                         </button>
@@ -35,13 +37,13 @@
                             <i class="glyphicon glyphicon-remove"></i>
                         </button>
                     </span>
-                    </div>
-                </template>
-                <div id="topics">
-                    @foreach ($topics as $topic)
-                        <div class="form-group input-group">
-                            <input type="text" class="form-control" name="topics[]" value="{{ $topic }}">
-                            <span class="input-group-btn">
+                            </div>
+                        </template>
+                        <div id="topics">
+                            @foreach ($topics as $topic)
+                                <div class="form-group input-group">
+                                    <input type="text" class="form-control" name="topics[]" value="{{ $topic }}">
+                                    <span class="input-group-btn">
                                 <button class="btn btn-info" type="button">
                                     <i class="glyphicon glyphicon-move"></i>
                                 </button>
@@ -49,20 +51,22 @@
                                     <i class="glyphicon glyphicon-remove"></i>
                                 </button>
                             </span>
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
-                </div>
 
-                <div class="form-group">
-                    <button class="btn btn-primary" data-add type="button">
-                        <i class="glyphicon glyphicon-plus"></i>
-                    </button>
-                    <button type="submit" class="btn btn-success">
-                        <i class="glyphicon glyphicon-floppy-save"></i>
-                        Guardar cambios
-                    </button>
+                        <div class="form-group">
+                            <button class="btn btn-primary" data-add type="button">
+                                <i class="glyphicon glyphicon-plus"></i>
+                            </button>
+                            <button type="submit" class="btn btn-success">
+                                <i class="glyphicon glyphicon-floppy-save"></i>
+                                Guardar cambios
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
