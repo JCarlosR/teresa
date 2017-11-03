@@ -191,6 +191,7 @@ Route::get('/leads/{id}', 'Client\LeadController@show');
 
 // Inbox
 Route::get('/inbox', 'InboxController@index');
+Route::get('/inbox/form', 'InboxTopicController@index');
 Route::get('/inbox/messages/{id}', 'InboxController@show');
 
 // Location
@@ -281,6 +282,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/leads/update', 'Admin\LeadController@update');
     // Inbox
     Route::get('/inbox/config', 'InboxController@config');
+    Route::get('/inbox/form', 'Admin\InboxTopicController@index');
+    Route::post('/inbox/topics', 'Admin\InboxTopicController@store');
 
     // Payments
     Route::get('/pagos', 'Admin\PaymentController@index');

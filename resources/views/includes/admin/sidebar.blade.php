@@ -85,6 +85,7 @@
             <ul id="collapse3" class="list-unstyled collapse">
                 <li><a href="{{ url('/admin/leads') }}">Reportes</a></li>
                 <li><a href="{{ url('/inbox') }}">Bandeja</a></li>
+                <li><a href="{{ url('/admin/inbox/form') }}">Formulario</a></li>
                 <li><a href="{{ url('/admin/inbox/config') }}">Configuración</a></li>
             </ul>
         </li>
