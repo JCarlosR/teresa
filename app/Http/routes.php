@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\Cms\TemporalController;
+use App\User;
 use Illuminate\Routing\Router;
+
+Route::group(['domain' => 'samuelcardenas.com'], function () {
+    Route::get('/', 'Cms\TemporalController@samuel');
+});
 
 Route::group([
     'domain' => 'teresa.seo-arquitectos.com'

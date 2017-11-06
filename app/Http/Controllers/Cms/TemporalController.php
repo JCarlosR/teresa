@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class TemporalController extends Controller
 {
+    public function samuel()
+    {
+        return $this->index(User::find(23));
+    }
+
     public function index(User $client)
     {
         return view('cms.temporal')->with(compact('client'));
