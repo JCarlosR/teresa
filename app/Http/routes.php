@@ -207,6 +207,7 @@ Route::group(['middleware' => 'cors'], function(Router $router){
 });
 
 // Teresa CMS
+Route::get('/temporal/{client}', 'Cms\TemporalController@index');
 Route::get('/ver/{id}', 'Cms\GuestController@index');
 Route::get('/ver/{id}/proyectos', 'Cms\GuestController@projects');
 Route::get('/ver/{id}/proyecto/{project}', 'Cms\GuestController@showProject');
