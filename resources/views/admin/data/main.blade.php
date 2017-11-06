@@ -117,6 +117,7 @@
                         <label for="google_analytics" class="col-lg-2 control-label">Google Analytics</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" name="google_analytics" placeholder="ID de Google Analytics" value="{{ old('google_analytics', $client->google_analytics) }}">
+                            <p class="help-block">Importante: No olvidar otorgar permisos a {{ env('GA_SERVICE_ACCOUNT') }}</p>
                         </div>
                     </div>
                     <div class="form-group">
