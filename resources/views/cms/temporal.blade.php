@@ -8,15 +8,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ $client->name }}</title>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico"> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap-theme.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('cms/temporal/fonts/style.css') }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="{{ asset('cms/temporal/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
@@ -31,20 +29,17 @@
         <div class="navbar-header">
             <img src="https://theressa.net/images/logo.jpg" alt="Logo Theressa" width="180">
         </div>
-        <div class="boton hidden-xs">
-            <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>
-        </div>
-        <div class="boton visible-xs">
-            <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" style="padding: 5px 8px 3px 8px"><span class="glyphicon glyphicon-envelope"></span></a>
-        </div>
-        <!--/.navbar-collapse -->
+        {{--<div class="boton hidden-xs">--}}
+            {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>--}}
+        {{--</div>--}}
+        {{--<div class="boton visible-xs">--}}
+            {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" style="padding: 5px 8px 3px 8px"><span class="glyphicon glyphicon-envelope"></span></a>--}}
+        {{--</div>--}}
     </div>
 </nav>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-
 <div class="container app-container">
-    <!-- Example row of columns -->
     <div class="row app-row">
         <div class="col-md-5 text-center">
             <img src="{{ asset($client->photo_route) }}">
@@ -53,12 +48,34 @@
             <div class="cont-text">
                 <h2>{{ $client->trade_name }}</h2>
                 <h3>{{ $client->description }}</h3>
+                {{--<div class="boton2">--}}
+                    {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Notifícame</a>--}}
+                {{--</div>--}}
                 <div class="boton2">
-                    <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Notifícame</a>
+                    <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>
                 </div>
-                <p><a href="mailto:informes@blend.pe">informes@blend.pe</a> | +511-2424234</p>
+                <p>{{ $client->address }} | {{ $client->phones }}</p>
                 <div class="rs">
-                    <a href="#"><span class="icon-icon-facebook"></span></a>
+                    @if ($client->getSocialProfile('facebook')->url != '#')
+                        <a target="_blank" href="{{ $client->getSocialProfile('facebook')->url }}">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    @endif
+                    @if ($client->getSocialProfile('facebook')->url != '#')
+                        <a target="_blank" href="{{ $client->getSocialProfile('twitter')->url }}">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    @endif
+                    @if ($client->getSocialProfile('facebook')->url != '#')
+                        <a target="_blank" href="{{ $client->getSocialProfile('google_plus')->url }}">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    @endif
+                    @if ($client->getSocialProfile('facebook')->url != '#')
+                        <a target="_blank" href="{{ $client->getSocialProfile('linkedin')->url }}">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -114,7 +131,6 @@
     </div><!-- modal-dialog -->
 </div><!-- modal -->
 
-<!-- Modal3 -->
 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -129,7 +145,6 @@
     </div>
 </div>
 
-<!-- Modal2 -->
 <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -159,9 +174,10 @@
         </div><!-- modal-content -->
     </div><!-- modal-dialog -->
 </div><!-- modal -->
+
 <footer>
     <div class="container-fluid menu-footer">
-        <p>&copy; {{ date('Y') }} {{ $client->name }}. Todos los Derechos Reservados</p>
+        <p>&copy; {{ date('Y') }} {{ $client->name }}. Todos los Derechos Reservados.</p>
     </div>
 </footer>
 <script>window.jQuery || document.write('<script src="{{ asset('cms/temporal/js/vendor/jquery-1.11.2.min.js') }}"><\/script>')</script>
@@ -169,5 +185,6 @@
 <script src="{{ asset('cms/temporal/js/main.js') }}"></script>
 <script src="{{ asset('cms/temporal/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('cms/temporal/js/list.js') }}"></script>
+
 </body>
 </html>

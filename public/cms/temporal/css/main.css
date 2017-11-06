@@ -232,6 +232,10 @@ footer{    margin: 25px 0;}
 
 }
 
+.rs .fa {
+	color: white;
+}
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -239,13 +243,11 @@ footer{    margin: 25px 0;}
   display: flex;
   flex-wrap: wrap;
 }
-
 .row > [class*='col-'] {
   display: flex;
   flex-direction: column;
   align-self: center;
 }
-
 .row > [class*='col-'] img {
   align-self: center;
 }
