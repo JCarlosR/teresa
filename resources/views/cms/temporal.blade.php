@@ -76,7 +76,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid menu-top">
         <div class="navbar-header">
-            <img src="https://theressa.net/images/logo.jpg" alt="Logo Theressa" width="180">
+
         </div>
         {{--<div class="boton hidden-xs">--}}
             {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>--}}
@@ -101,7 +101,9 @@
                     {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Notifícame</a>--}}
                 {{--</div>--}}
                 <div class="boton2">
-                    <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>
+                    <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
+                        Contacto <i class="fa fa-send"></i>
+                    </a>
                 </div>
                 <p>{{ $client->address }} | {{ $client->phones }}</p>
                 <div class="rs">
@@ -141,33 +143,31 @@
             </div>
 
             <div class="modal-body">
-                <h2>Te escuchamos</h2>
-                <h3>Escríbenos que siempre estamos listos para comenzar nuevos proyectos</h3>
+                <h2>Contáctanos</h2>
+                <h3>Siempre listos para comenzar nuevos proyectos</h3>
                 <!-- <h2>Get in touch</h2>
                 <h3>Be first to know about the latest updates and get exclusive offer our grand opening.</h3> -->
                 <form method="POST" action="send_form" id="form_blend">
-                    <div class="form-group row">
-                        <div class="col-10">
-                            <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
-                        </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-10">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
-                        </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-10">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
-                        </div>
+                    <div class="form-group">
+                        <select name="" id="" class="form-control">
+                            <option value="">Seleccione asunto</option>
+                            <option value="A">Asunto A</option>
+                            <option value="B">Asunto B</option>
+                        </select>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-10">
-                            <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
-                        </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
                     </div>
                     <div class="boton2" style="margin: 15px 0;">
-                        <button type="submit" class="btn btn-demo">¡Enviar ahora!</button>
+                        <button type="submit" class="btn btn-demo">
+                            Enviar <i class="fa fa-send"></i>
+                        </button>
                     </div>
                     <div class="boton3">
                         <!-- <a href="#" type="submit" class="btn btn-demo">Cancelar</a> -->

@@ -235,6 +235,9 @@ footer{    margin: 25px 0;}
 .rs .fa {
 	color: white;
 }
+textarea {
+	resize: vertical; /* user can resize vertically, but width is fixed */
+}
 
 .row {
   display: -webkit-box;
