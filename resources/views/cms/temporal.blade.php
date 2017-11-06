@@ -6,10 +6,59 @@
 <html class="no-js" lang="es"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ $client->name }}</title>
-    <meta name="description" content="">
+    <title>{{ $client->title }}</title>
+    <meta name="description" content="{{ $client->description }}"/>
+
+    <meta property="og:title" content="{{ $client->title }}"/>
+    <meta property="og:type" content="company"/>
+    <meta property="og:url" content="{{ url()->current() }}"/>
+    <meta property="og:site_name" content="{{ $client->trade_name }}"/>
+    <meta property="og:description" content="{{ $client->description }}"/>
+    <meta property="og:image" content="{{ $client->photo_route }}"/>
+    <meta property="og:image:alt" content="{{ $client->title }}"/>
+
+    @if ($client->getSocialProfile('twitter')->id)
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="{{ '@' . $client->getSocialProfile('twitter')->id }}">
+        <meta name="twitter:creator" content="{{ '@' . $client->getSocialProfile('twitter')->id }}">
+        <meta name="twitter:url"  content="{{ url()->current() }}">
+        <meta name="twitter:title" content="{{ $client->title }}">
+        <meta name="twitter:description" content="{{ $client->description }}">
+        <meta name="twitter:image" content="{{ $client->photo_route }}">
+    @endif
+
+    <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
+    <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
+    <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
+    
+    <script type="application/ld+json">
+    {
+        "{{ '@' }}context" : "http://schema.org",
+        "@type" : "company",
+        "name" : "{{ $client->trade_name }}",
+        "url" : "{{ url()->current() }}",
+        "sameAs" : [
+    @if ($client->getSocialProfile('facebook')->url != '#')
+            "{{ $client->getSocialProfile('facebook')->url }}",
+    @endif
+        @if ($client->getSocialProfile('twitter')->url != '#')
+            "{{ $client->getSocialProfile('twitter')->url }}",
+    @endif
+        @if ($client->getSocialProfile('google_plus')->url != '#')
+            "{{ $client->getSocialProfile('google_plus')->url }}",
+    @endif
+        @if ($client->getSocialProfile('linkedin')->url != '#')
+            "{{ $client->getSocialProfile('linkedin')->url }}",
+    @endif
+        @if ($client->getSocialProfile('instagram')->url != '#')
+            "{{ $client->getSocialProfile('instagram')->url }}",
+    @endif
+        ]
+    }
+    </script>
 
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap-theme.min.css') }}">
