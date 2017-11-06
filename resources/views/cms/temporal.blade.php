@@ -46,10 +46,10 @@
 <div class="container app-container">
     <!-- Example row of columns -->
     <div class="row app-row">
-        <div class="col-md-7 text-center">
+        <div class="col-md-5 text-center">
             <img src="{{ asset($client->photo_route) }}">
         </div>
-        <div class="col-md-5 text">
+        <div class="col-md-7 text">
             <div class="cont-text">
                 <h2>{{ $client->trade_name }}</h2>
                 <h3>{{ $client->description }}</h3>
