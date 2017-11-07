@@ -89,8 +89,8 @@ html{height: 100%;}
 .navbar-fixed-top{position: relative;}
 .text{position: relative;}
 .cont-text{position: absolute; height: 470px; top:0px; bottom: 0px; margin-top: auto; margin-bottom: auto;}
-.text h2{font-family: 'montserratmedium'; font-size: 74px;letter-spacing: -2px;color:#3c3c3c;line-height: 70px;}
-.text h3{font-family: 'montserratlight'; font-size: 18px;color:#666d74;    margin-top: 15px;}
+.text h1{font-family: 'montserratmedium'; font-size: 74px;letter-spacing: -2px;color:#3c3c3c;line-height: 70px;}
+.text h2{font-family: 'montserratlight'; font-size: 18px;color:#666d74;    margin-top: 15px;}
 .text p{font-family: 'montserratmedium'; font-size: 14px;color:#3c3c3c;float: left;	width: 100%;}
 .text p a{color:#3c3c3c;}
 .app-container{height: 79%;}

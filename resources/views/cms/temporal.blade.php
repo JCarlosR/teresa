@@ -95,8 +95,8 @@
         </div>
         <div class="col-md-7 text">
             <div class="cont-text">
-                <h2>{{ $client->trade_name }}</h2>
-                <h3>{{ $client->description }}</h3>
+                <h1>{{ $client->trade_name }}</h1>
+                <h2>{{ $client->description }}</h2>
                 {{--<div class="boton2">--}}
                     {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Notifícame</a>--}}
                 {{--</div>--}}
@@ -225,9 +225,22 @@
 
 <footer>
     <div class="container-fluid menu-footer">
-        <p>&copy; {{ date('Y') }} {{ $client->name }}. Todos los Derechos Reservados.</p>
+        <p>&copy; {{ date('Y') }} {{ $client->name }}. Optimizado por <a href="//seo-arquitectos.com">SEO-arquitectos</a> - Outsourcing Digital.</p>
     </div>
 </footer>
+
+@if ($client->google_analytics)
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ $client->google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+@endif
+
 <script>window.jQuery || document.write('<script src="{{ asset('cms/temporal/js/vendor/jquery-1.11.2.min.js') }}"><\/script>')</script>
 <script src="{{ asset('cms/temporal/js/vendor/bootstrap.min.js') }}"></script>
 <script src="{{ asset('cms/temporal/js/main.js') }}"></script>
