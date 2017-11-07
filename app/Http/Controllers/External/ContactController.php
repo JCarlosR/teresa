@@ -65,6 +65,11 @@ class ContactController extends Controller
             return response()->json($validator->messages(), 200);
         }
 
+        if (!$request->has('url')) {
+            $request->request->add([
+                'url' => $request->fullUrl()
+            ]);
+        }
 
         $senderEmail = $request->input('email');
 

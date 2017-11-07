@@ -145,8 +145,7 @@
             <div class="modal-body">
                 <h2>Contáctanos</h2>
                 <h3>Siempre listos para comenzar nuevos proyectos</h3>
-                <!-- <h2>Get in touch</h2>
-                <h3>Be first to know about the latest updates and get exclusive offer our grand opening.</h3> -->
+
                 <form method="POST" action="send_form" id="form_blend">
                     <div class="form-group">
                         <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
