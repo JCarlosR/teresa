@@ -146,8 +146,8 @@ footer{z-index: 1;position: relative;}
 	}
 .modal-content{background-color: #eaeeef;position: relative;}
 .modal-header{background-color: inherit;}
-.modal-body h2{font-family: 'montserratmedium';font-size: 74px;letter-spacing: -2px;color: #3c3c3c;line-height: 70px;}
-.modal-body h3{font-family: 'montserratlight';font-size: 18px;color: #666d74;margin-top: 35px;margin-bottom: 35px;    line-height: 30px;}
+.modal-body h1{font-family: 'montserratmedium';font-size: 74px;letter-spacing: -2px;color: #3c3c3c;line-height: 70px;}
+.modal-body h2{font-family: 'montserratlight';font-size: 18px;color: #666d74;margin-top: 35px;margin-bottom: 35px;    line-height: 30px;}
 .modal-body{position: absolute;top: 0;bottom: 0;display: table;width: 60%;left: 0;right: 0;margin: auto;}
 .close{font-size: 66px;font-weight: normal; color: #0e83cd;    opacity: 0.5;}
 .close:hover, .close:focus, .close:active{color: #0e83cd;    opacity: 1;outline: none;}
@@ -160,8 +160,8 @@ footer{z-index: 1;position: relative;}
 .btn:hover, .btn:focus, .btn.focus{color: #ffffff;}
 .header-feedback{float: left; width: 100%;}
 .body-feedback{width: 85%; text-align: center;padding-top: 0px;}
-.body-feedback h2{font-size: 50px;}
-.body-feedback h3{margin-top: 7px;    margin-bottom: 67px;}
+.body-feedback h1{font-size: 50px;}
+.body-feedback h2{margin-top: 7px;    margin-bottom: 67px;}
 .body-feedback .close{margin-top: -24px;}
 
 
@@ -169,19 +169,19 @@ footer{z-index: 1;position: relative;}
 /****************MEDIA QUERYS****************/
 
 @media only screen and (max-width : 1366px) {
-.modal-body h2{font-size: 63px; line-height: 54px;}
-.modal-body h3{margin-top: 23px; margin-bottom: 23px;}
+.modal-body h1{font-size: 63px; line-height: 54px;}
+.modal-body h2{margin-top: 23px; margin-bottom: 23px;}
 .modal.right .modal-dialog{width: 59%;}
 
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-.text h2{font-size: 61px;line-height: 60px;}
+.text h1{font-size: 61px;line-height: 60px;}
 .modal.right .modal-dialog{width: 70%;}
 .boton3 a{padding: 10px 40px;}
-.modal-body h3{margin-top: 25px;margin-bottom: 25px;}
-.modal-body h2{    font-size: 65px;    line-height: 70px;}
+.modal-body h2{margin-top: 25px;margin-bottom: 25px;}
+.modal-body h1{    font-size: 65px;    line-height: 70px;}
 
 }
 
@@ -210,26 +210,25 @@ footer{z-index: 1;position: relative;}
 .boton{margin: 0 auto;display: table;}
 .menu-top{    padding: 20px 0px;}
 .fullpage{height: -webkit-calc( 100vh); height: calc( 100vh);background-position: 6% 45px;background-size: 143%;}
-.text h2{    font-size: 40px; line-height: 39px;}
+.text h1{    font-size: 40px; line-height: 39px;}
 .cont-text{position: relative; height: auto;}
 .app-container{height: auto;}
 .blank{height: 208px;}
 .rs{    margin-top: 20px;}
 footer{    margin: 25px 0;}
 .modal-body{margin: 0 auto;width: 85%}
-.modal-body h2{    font-size: 46px;margin-top: 28px;}
-.modal-body h3{line-height: 24px;    margin-top: 10px;}
+.modal-body h1{    font-size: 46px;margin-top: 28px;}
+.modal-body h2{line-height: 24px;    margin-top: 10px;}
 .modal-header{position: relative;z-index: 2;}
 .modal-header .close{    margin-top: -14px;}
 .close{    font-size: 50px;}
-.body-feedback h2{margin-top: 0;}
+.body-feedback h1{margin-top: 0;}
 }
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
 .blank{height: 185px;}
-.modal-body h2{    font-size: 41px;}
-
+.modal-body h1{    font-size: 41px;}
 }
 
 .rs .fa {
