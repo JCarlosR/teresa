@@ -30,13 +30,13 @@
                             <div class="form-group input-group">
                                 <input type="text" class="form-control" name="topics[]">
                                 <span class="input-group-btn">
-                        <button class="btn btn-info" type="button">
-                            <i class="glyphicon glyphicon-move"></i>
-                        </button>
-                        <button class="btn btn-danger" type="button">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </span>
+                                    <button class="btn btn-info" type="button">
+                                        <i class="glyphicon glyphicon-move"></i>
+                                    </button>
+                                    <button class="btn btn-danger" type="button">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                    </button>
+                                </span>
                             </div>
                         </template>
                         <div id="topics">
@@ -44,13 +44,13 @@
                                 <div class="form-group input-group">
                                     <input type="text" class="form-control" name="topics[]" value="{{ $topic }}">
                                     <span class="input-group-btn">
-                                <button class="btn btn-info" type="button">
-                                    <i class="glyphicon glyphicon-move"></i>
-                                </button>
-                                <button class="btn btn-danger" type="button">
-                                    <i class="glyphicon glyphicon-remove"></i>
-                                </button>
-                            </span>
+                                    <button class="btn btn-info" type="button">
+                                        <i class="glyphicon glyphicon-move"></i>
+                                    </button>
+                                    <button class="btn btn-danger" type="button">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                    </button>
+                                </span>
                                 </div>
                             @endforeach
                         </div>
@@ -63,6 +63,45 @@
                                 <i class="glyphicon glyphicon-floppy-save"></i>
                                 Guardar cambios
                             </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h3 class="widget-title">Previsualización</h3>
+        </div>
+        <div class="widget-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="text" class="form-control" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="topic">Asunto</label>
+                            <select id="topic" class="form-control" required>
+                                <option value="">Seleccione motivo de contacto</option>
+                                @foreach ($topics as $topic)
+                                    <option value="{{ $topic }}">{{ $topic }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" rows="3" class="form-control"></textarea>
                         </div>
                     </form>
                 </div>
