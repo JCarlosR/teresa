@@ -91,7 +91,7 @@
 <div class="container app-container">
     <div class="row app-row">
         <div class="col-md-5 text-center">
-            <img src="{{ asset($client->photo_route) }}">
+            <img src="{{ asset($client->photo_route) }}" alt="{{ $client->name }}" title="{{ $client->name }}">
         </div>
         <div class="col-md-7 text">
             <div class="cont-text">
