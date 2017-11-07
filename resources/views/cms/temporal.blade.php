@@ -62,7 +62,7 @@
 
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap-theme.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('cms/temporal/css/main.css?v=3') }}">
+    <link rel="stylesheet" href="{{ asset('cms/temporal/css/main.css?v=4') }}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="{{ asset('cms/temporal/js/vendor/modernizr-2.8.3.min.js') }}"></script>
@@ -98,11 +98,11 @@
             <div class="col-md-7 text ">
                 <div class="cont-text text-center">
                     <h1>{{ $client->trade_name }}</h1>
-                    <p>{{ $client->description }}</p>
-                    <br>
-                    <br>
+                    <p class="pad-b20">{{ $client->description }}</p>
 
-                    <div class="boton2 text-center">
+
+
+                    <div class="boton2 text-center pad-bootom">
                         <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
                             <h2>  Contacto <i class="fa fa-send"></i></h2>
                         </a>

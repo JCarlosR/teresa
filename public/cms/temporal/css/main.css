@@ -748,7 +748,7 @@ div.pad {
 
     .boton2 {
            float: inherit;
-           margin: 25px auto;
+           /*margin: 25px auto;*/
            padding-top: 60px;
            padding-bottom: 0px;
        }
@@ -765,7 +765,9 @@ div.pad {
         width: 100%;
     }
 }
-
+.pad-b20{
+    padding-bottom: 15px;
+}
 /*!*!* Extra Small Devices, Phones *!*!*/
 @media only screen and (max-width: 480px) {
     .container-fluid > .navbar-header {
