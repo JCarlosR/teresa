@@ -97,9 +97,7 @@
             <div class="cont-text">
                 <h1>{{ $client->trade_name }}</h1>
                 <h2>{{ $client->description }}</h2>
-                {{--<div class="boton2">--}}
-                    {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">Notifícame</a>--}}
-                {{--</div>--}}
+
                 <div class="boton2">
                     <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
                         Contacto <i class="fa fa-send"></i>
@@ -192,36 +190,6 @@
         </div>
     </div>
 </div>
-
-<div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-
-            <div class="modal-body">
-                <h2>Notifícame</h2>
-                <h3>Sea el primero en enterarse del lanzamiento de nuestro renovado sitio web</h3>
-                <!-- <h2>Notify Me</h2>
-                <h3>Be first to know about the latest updates and get exclusive offer our grand opening.</h3> -->
-                <form method="POST" action="send_notificacion" id="form_notify">
-                    <div class="form-group row">
-                        <input type="email" class="form-control" id="email_notify" name="email_notify" aria-describedby="emailHelp" placeholder="Correo" required>
-                    </div>
-                    <div class="boton2" style="margin: 15px 0;">
-                        <button type="submit" class="btn btn-demo">Suscríbete</button>
-                    </div>
-                    <div class="boton3">
-                        <button type="button" class="btn btn-demo" data-dismiss="modal" aria-label="Close" id="close_notify">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-
-        </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-</div><!-- modal -->
 
 <footer>
     <div class="container-fluid menu-footer">
