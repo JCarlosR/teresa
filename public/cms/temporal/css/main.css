@@ -200,7 +200,7 @@ footer{z-index: 1;position: relative;}
 .text p{width: 100%;}
 .app-container{height: 85%;}
 .menu-footer{text-align: center;}
-.text h2{font-size: 74px;line-height: 70px;}
+.text h1{font-size: 74px;line-height: 70px;}
 .modal.right .modal-dialog{width: 100%;}
 }
 
