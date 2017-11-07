@@ -62,7 +62,7 @@
 
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('cms/temporal/css/bootstrap-theme.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('cms/temporal/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('cms/temporal/css/main.css?v=2') }}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="{{ asset('cms/temporal/js/vendor/modernizr-2.8.3.min.js') }}"></script>
