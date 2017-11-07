@@ -69,10 +69,10 @@
 </head>
 <body>
 
-<div class="fullpage"></div>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+{{--<div class="fullpage"></div>--}}
+
+{{--<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>--}}
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid menu-top">
         <div class="navbar-header">
@@ -89,113 +89,151 @@
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container app-container">
-    <div class="row app-row">
-        <div class="col-md-5 text-center">
-            <img src="{{ asset($client->photo_route) }}" alt="{{ $client->name }}" title="{{ $client->name }}">
-        </div>
-        <div class="col-md-7 text">
-            <div class="cont-text">
-                <h1>{{ $client->trade_name }}</h1>
-                <h2>{{ $client->description }}</h2>
-
-                <div class="boton2">
-                    <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
-                        Contacto <i class="fa fa-send"></i>
-                    </a>
-                </div>
-                <p>{{ $client->address }} | {{ $client->phones }}</p>
-                <div class="rs">
-                    @if ($client->getSocialProfile('facebook')->url != '#')
-                        <a target="_blank" href="{{ $client->getSocialProfile('facebook')->url }}">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    @endif
-                    @if ($client->getSocialProfile('facebook')->url != '#')
-                        <a target="_blank" href="{{ $client->getSocialProfile('twitter')->url }}">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    @endif
-                    @if ($client->getSocialProfile('facebook')->url != '#')
-                        <a target="_blank" href="{{ $client->getSocialProfile('google_plus')->url }}">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    @endif
-                    @if ($client->getSocialProfile('facebook')->url != '#')
-                        <a target="_blank" href="{{ $client->getSocialProfile('linkedin')->url }}">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    @endif
-                </div>
+    <div class="row app-row ">
+        <div class="col-md-12 ">
+            <div class="col-md-5 text-center height">
+                <img src="{{ asset($client->photo_route) }}" alt="{{ $client->name }}" title="{{ $client->name }}">
+                {{--<img src="/images/users/logo-samuel-cardenas.jpg" alt="">--}}
             </div>
+            <div class="col-md-7 text ">
+                <div class="cont-text">
+                    <h1>{{ $client->trade_name }}</h1>
+                    <p>{{ $client->description }}</p>
+
+                    <div class="boton2">
+                        <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
+                            <h2>  Contacto <i class="fa fa-send"></i></h2>
+                        </a>
+                    </div>
+                    <p>{{ $client->address }} | {{ $client->phones }}</p>
+                    <div class="rs">
+                        @if ($client->getSocialProfile('facebook')->url != '#')
+                            <a target="_blank" href="{{ $client->getSocialProfile('facebook')->url }}" title="{{ $client->name }} en Facebook" >
+                                <i class="fa fa-facebook fa1 faceshare"></i>
+                            </a>
+                        @endif
+                        @if ($client->getSocialProfile('facebook')->url != '#')
+                            <a target="_blank" href="{{ $client->getSocialProfile('twitter')->url }}" title="{{ $client->name }} en Twitter" >
+                                <i class="fa fa-twitter fa1 twittershare"></i>
+                            </a>
+                        @endif
+                        @if ($client->getSocialProfile('facebook')->url != '#')
+                            <a target="_blank" href="{{ $client->getSocialProfile('google_plus')->url }}" title="{{ $client->name }} en Google+ " >
+                                <i class="fa fa-google-plus fa1 googleshare"></i>
+                            </a>
+                        @endif
+                        @if ($client->getSocialProfile('facebook')->url != '#')
+                            <a target="_blank" href="{{ $client->getSocialProfile('linkedin')->url }}" title="{{ $client->name }} en Linkedin" >
+                                <i class="fa fa-linkedin fa1 linkedinshare"></i>
+                            </a>
+                        @endif
+                    </div>
+                    <div class="col-md-12 col-sm-12 pda-t color2">
+                        <p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>
+                    </div>
+
+                    {{--<div class="col-md-12 pad-t">--}}
+                    {{--<footer class="center-foo">--}}
+                    {{--<div class="container-fluid menu-footer">--}}
+                    {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
+                    {{--</div>--}}
+                    {{--</footer>--}}
+                    {{--</div>--}}
+
+                </div>
+                {{--<div class="cont-text1">--}}
+                    {{--<div class="col-md-12 col-sm-12 pda-t color2">--}}
+                        {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            </div>
+            <br>
+            <br>
+
         </div>
+
+
     </div>
 </div> <!-- /container -->
+<br>
+{{--<div class="container pad-t">--}}
+    {{--<div class="row">--}}
+        {{--<div class="col-md-12">--}}
+            {{--<footer class="center-foo">--}}
+                {{--<div class="container-fluid menu-footer">--}}
+                    {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
+                {{--</div>--}}
+            {{--</footer>--}}
+        {{--</div>--}}
+
+    {{--</div>--}}
+{{--</div>--}}
 
 
-<div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+<div>
+    <div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
 
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
 
-            <div class="modal-body">
-                <h2>Contáctanos</h2>
-                <h3>Siempre listos para comenzar nuevos proyectos</h3>
+                <div class="modal-body">
+                    <h2>Contáctanos</h2>
+                    <h3>Siempre listos para comenzar nuevos proyectos</h3>
 
-                <form method="POST" action="send_form" id="form_blend">
-                    <div class="form-group">
-                        <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
-                    </div>
-                    <div class="form-group">
-                        <select name="" id="" class="form-control">
-                            <option value="">Seleccione asunto</option>
-                            <option value="A">Asunto A</option>
-                            <option value="B">Asunto B</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <div class="boton2" style="margin: 15px 0;">
-                        <button type="submit" class="btn btn-demo">
-                            Enviar <i class="fa fa-send"></i>
-                        </button>
-                    </div>
-                    <div class="boton3">
-                        <!-- <a href="#" type="submit" class="btn btn-demo">Cancelar</a> -->
-                        <button type="button" class="btn btn-demo" data-dismiss="modal" aria-label="Close" id="close_form_blend">Cancelar</button>
-                    </div>
-                </form>
-            </div>
+                    <form method="POST" action="send_form" id="form_blend">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="" class="form-control">
+                                <option value="">Seleccione asunto</option>
+                                <option value="A">Asunto A</option>
+                                <option value="B">Asunto B</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div class="boton2" style="margin: 15px 0;">
+                            <button type="submit" class="btn btn-demo">
+                                Enviar <i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                        <div class="boton3">
+                            <!-- <a href="#" type="submit" class="btn btn-demo">Cancelar</a> -->
+                            <button type="button" class="btn btn-demo" data-dismiss="modal" aria-label="Close" id="close_form_blend">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
 
-        </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-</div><!-- modal -->
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
 
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header header-feedback">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body body-feedback" style="position:relative;">
-                <h2>¡Gracias!</h2>
-                <h3>Tu solicitud ha sido enviada con éxito.</h3>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header header-feedback">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body body-feedback" style="position:relative;">
+                    <p>¡Gracias!</p>
+                    <p>Tu solicitud ha sido enviada con éxito.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<footer>
-    <div class="container-fluid menu-footer">
-        <p>&copy; {{ date('Y') }} {{ $client->name }}. Optimizado por <a href="//seo-arquitectos.com">SEO-arquitectos</a> - Outsourcing Digital.</p>
-    </div>
-</footer>
+
+
 
 @if ($client->google_analytics)
     <script>
