@@ -189,11 +189,44 @@
         </div>
     </div>
 
+    @if ($client->hasSection('Artículos'))
+        <div class="widget">
+            <div class="widget-heading">
+                <h3 class="widget-title">Resumen SERP - Artículos</h3>
+            </div>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        @foreach ($articles as $article)
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-article="{{ $article->id }}">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </button>
+                                {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
+                                {{--<span class="glyphicon glyphicon-pencil"></span>--}}
+                                {{--</a>--}}
+                            </div>
+                            <div class="google-results">
+                                <a href="{{ $client->getLinkTo('/blog/'.$article->id) }}" target="_blank">
+                                    <span class="title">{{ $article->meta_title ?: 'Sin título' }}</span>
+                                </a>
+                                <div>
+                                    <cite>{{ $client->domain }}/blog/<span>{{ str_slug($article->meta_title) }}</span></cite>
+                                </div>
+                                <span class="description">{{ $article->meta_description }}</span>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 </div>
 
 @include('client.serp.includes.serp-code-modals')
 @include('client.serp.includes.services-serp-modals')
 @include('client.serp.includes.projects-serp-modals')
+@include('client.serp.includes.articles-serp-modals')
 @endsection
 
 @section('scripts')
@@ -204,6 +237,7 @@
             $(document).on('click', '[data-modal]', onClickModalBtn);
             $(document).on('click', '[data-service]', onClickServiceModalBtn);
             $(document).on('click', '[data-project]', onClickProjectModalBtn);
+            $(document).on('click', '[data-article]', onClickArticleModalBtn);
 
             $('.google-results span.description').each(applyLimitsToDescription);
         });
@@ -219,6 +253,10 @@
         function onClickProjectModalBtn() {
             var id = $(this).data('project');
             $('#modal-project-'+id).modal('show');
+        }
+        function onClickArticleModalBtn() {
+            var id = $(this).data('article');
+            $('#modal-article-'+id).modal('show');
         }
 
         function applyLimitsToDescription(i, e) {
