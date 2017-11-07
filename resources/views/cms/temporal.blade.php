@@ -96,13 +96,13 @@
                 {{--<img src="/images/users/logo-samuel-cardenas.jpg" alt="">--}}
             </div>
             <div class="col-md-7 text ">
-                <div class="cont-text">
+                <div class="cont-text text-center">
                     <h1>{{ $client->trade_name }}</h1>
                     <p>{{ $client->description }}</p>
                     <br>
                     <br>
 
-                    <div class="boton2">
+                    <div class="boton2 text-center">
                         <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
                             <h2>  Contacto <i class="fa fa-send"></i></h2>
                         </a>
