@@ -4,7 +4,7 @@ use App\Http\Controllers\Cms\TemporalController;
 use App\User;
 use Illuminate\Routing\Router;
 
-Route::group(['domain' => 'samuelcardenas.com'], function () {
+Route::group(['domain' => 'www.samuelcardenas.com'], function () {
     Route::get('/', 'Cms\TemporalController@samuel');
 });
 
