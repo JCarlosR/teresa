@@ -99,6 +99,8 @@
                 <div class="cont-text">
                     <h1>{{ $client->trade_name }}</h1>
                     <p>{{ $client->description }}</p>
+                    <br>
+                    <br>
 
                     <div class="boton2">
                         <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
