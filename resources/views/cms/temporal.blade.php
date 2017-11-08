@@ -30,6 +30,9 @@
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
+    @if ($client->favicon)
+        <link rel="shortcut icon" type="image/x-icon" href="{{ $client->favicon_url }}">
+    @endif
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
@@ -69,31 +72,19 @@
 </head>
 <body>
 
-{{--<div class="fullpage"></div>--}}
-
-{{--<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>--}}
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid menu-top">
         <div class="navbar-header">
 
         </div>
-        {{--<div class="boton hidden-xs">--}}
-            {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">Contáctanos</a>--}}
-        {{--</div>--}}
-        {{--<div class="boton visible-xs">--}}
-            {{--<a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" style="padding: 5px 8px 3px 8px"><span class="glyphicon glyphicon-envelope"></span></a>--}}
-        {{--</div>--}}
     </div>
 </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="container app-container">
     <div class="row app-row ">
         <div class="col-md-12 ">
             <div class="col-md-5 text-center height">
                 <img src="{{ asset($client->photo_route) }}" alt="{{ $client->name }}" title="{{ $client->name }}">
-                {{--<img src="/images/users/logo-samuel-cardenas.jpg" alt="">--}}
             </div>
             <div class="col-md-7 text ">
                 <div class="cont-text text-center">
@@ -104,10 +95,10 @@
 
                     <div class="boton2 text-center pad-bootom">
                         <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
-                            <h2>  Contacto <i class="fa fa-send"></i></h2>
+                            <h2>Contacto <i class="fa fa-send"></i></h2>
                         </a>
                     </div>
-                    <p>{{ $client->address }} | {{ $client->phones }}</p>
+                    <p>{{ $client->address }}</p>
                     <div class="rs">
                         @if ($client->getSocialProfile('facebook')->url != '#')
                             <a target="_blank" href="{{ $client->getSocialProfile('facebook')->url }}" title="{{ $client->name }} en Facebook" >
@@ -130,48 +121,20 @@
                             </a>
                         @endif
                     </div>
+                    <p>
+                        {!! $client->phones_with_link  !!}
+                    </p>
                     <div class="col-md-12 col-sm-12 pda-t pad">
                         <p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>
                     </div>
-
-                    {{--<div class="col-md-12 pad-t">--}}
-                    {{--<footer class="center-foo">--}}
-                    {{--<div class="container-fluid menu-footer">--}}
-                    {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
-                    {{--</div>--}}
-                    {{--</footer>--}}
-                    {{--</div>--}}
-
                 </div>
-                {{--<div class="cont-text1">--}}
-                    {{--<div class="col-md-12 col-sm-12 pda-t color2">--}}
-                        {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-
             </div>
             <br>
-            <br>
-
         </div>
 
 
     </div>
 </div> <!-- /container -->
-<br>
-{{--<div class="container pad-t">--}}
-    {{--<div class="row">--}}
-        {{--<div class="col-md-12">--}}
-            {{--<footer class="center-foo">--}}
-                {{--<div class="container-fluid menu-footer">--}}
-                    {{--<p class="left">&copy; {{ date('Y') }} {{ $client->name }}.</p><p class="right"> Optimizado por <a href="//seo-arquitectos.com" title="SEO arquitectos">SEO-arquitectos</a> - Outsourcing Digital.</p>--}}
-                {{--</div>--}}
-            {{--</footer>--}}
-        {{--</div>--}}
-
-    {{--</div>--}}
-{{--</div>--}}
-
 
 <div>
     <div class="modal right fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -184,7 +147,6 @@
 
                 <div class="modal-body">
                     <h2>Contáctanos</h2>
-                    <h3>Siempre listos para comenzar nuevos proyectos</h3>
 
                     <form method="POST" action="send_form" id="form_blend">
                         <div class="form-group">

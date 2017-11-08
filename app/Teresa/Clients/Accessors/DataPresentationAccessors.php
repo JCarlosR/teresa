@@ -30,4 +30,13 @@ trait DataPresentationAccessors
         return '/cronograma';
     }
 
+    public function getPhonesWithLinkAttribute()
+    {
+        $phones = explode("\n", $this->phones);
+        $result_html = '';
+        foreach ($phones as $phone) {
+            $result_html .= "| <a href='tel:$phone'>$phone</a> ";
+        }
+        return $result_html;
+    }
 }

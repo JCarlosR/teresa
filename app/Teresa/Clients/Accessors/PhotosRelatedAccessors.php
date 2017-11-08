@@ -12,4 +12,10 @@ trait PhotosRelatedAccessors
 
         return url($path . $file_name);
     }
+
+    public function getFaviconUrlAttribute()
+    {
+        $path = 'images/favicon/';
+        return asset($path . $this->favicon);
+    }
 }
