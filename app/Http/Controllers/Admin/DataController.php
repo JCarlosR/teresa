@@ -10,7 +10,11 @@ use App\Http\Requests;
 
 class DataController extends Controller
 {
-    // TODO: Middleware to check if a client was selected previously
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('as_client');
+    }
 
     public function edit()
     {
@@ -67,6 +71,15 @@ class DataController extends Controller
         $user->domain = $request->get('domain');
         $user->title = $request->get('title');
         $user->description = $request->get('description');
+        if ($request->hasFile('favicon')) {
+            $file = $request->file('faviconp');
+            // Move uploaded File
+            $destinationPath = public_path('images/favicon');
+            $fileName = $user->id . '.ico';
+            $moved = $file->move($destinationPath, $fileName);
+            if ($moved)
+                $user->favicon = $fileName;
+        }
 
         $user->google_analytics = $request->get('google_analytics');
         $user->google_analytics_view_id = $request->get('google_analytics_view_id');

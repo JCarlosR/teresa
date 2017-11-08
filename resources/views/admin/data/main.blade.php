@@ -20,7 +20,7 @@
                 </div>
             @endif
 
-            <form class="form-horizontal" method="POST" action="{{ url('admin/datos/principales') }}">
+            <form class="form-horizontal" method="POST" action="{{ url('admin/datos/principales') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <fieldset>
                     <legend>Datos de la empresa</legend>
@@ -114,10 +114,23 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="favicon" class="col-lg-2 control-label">Favicon</label>
+                        <div class="col-lg-10">
+                            <input type="file" class="form-control" name="favicon">
+                            <p class="help-block">
+                            @if ($client->favicon)
+                                Seleccione un archivo sólo si desea modifivar el <a href="{{ asset('images/favicon/'.$client->favicon) }}">favicon actual</a>.
+                            @else
+                                Este usuario aún no tiene ningún favicon asginado.
+                            @endif
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="google_analytics" class="col-lg-2 control-label">Google Analytics</label>
                         <div class="col-lg-10">
                             <input type="text" class="form-control" name="google_analytics" placeholder="ID de Google Analytics" value="{{ old('google_analytics', $client->google_analytics) }}">
-                            <p class="help-block">Importante: No olvidar otorgar permisos a {{ env('GA_SERVICE_ACCOUNT') }}</p>
+                            <p class="help-block">No olvidar otorgar permisos a {{ env('GA_SERVICE_ACCOUNT') }}</p>
                         </div>
                     </div>
                     <div class="form-group">
