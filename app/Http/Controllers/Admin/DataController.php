@@ -72,7 +72,7 @@ class DataController extends Controller
         $user->title = $request->get('title');
         $user->description = $request->get('description');
         if ($request->hasFile('favicon')) {
-            $file = $request->file('faviconp');
+            $file = $request->file('favicon');
             // Move uploaded File
             $destinationPath = public_path('images/favicon');
             $fileName = $user->id . '.ico';
