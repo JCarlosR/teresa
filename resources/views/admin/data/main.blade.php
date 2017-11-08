@@ -119,7 +119,7 @@
                             <input type="file" class="form-control" name="favicon">
                             <p class="help-block">
                             @if ($client->favicon)
-                                Seleccione un archivo sólo si desea modifivar el <a href="{{ asset('images/favicon/'.$client->favicon) }}">favicon actual</a>.
+                                Seleccione un archivo sólo si desea modifivar el <a href="{{ asset('images/favicon/'.$client->favicon) }}" target="_blank">favicon actual</a>.
                             @else
                                 Este usuario aún no tiene ningún favicon asginado.
                             @endif
