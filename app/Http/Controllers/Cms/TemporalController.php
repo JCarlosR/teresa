@@ -17,6 +17,7 @@ class TemporalController extends Controller
 
     public function index(User $client)
     {
-        return view('cms.temporal')->with(compact('client'));
+        $topics = $client->inboxTopics()->pluck('name');
+        return view('cms.temporal')->with(compact('client', 'topics'));
     }
 }

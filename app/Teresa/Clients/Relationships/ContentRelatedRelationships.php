@@ -3,6 +3,7 @@
 namespace App\Teresa\Clients\Relationships;
 
 use App\Article;
+use App\InboxTopic;
 use App\PageDescription;
 
 trait ContentRelatedRelationships
@@ -45,6 +46,10 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Quote');
     }
 
+    public function inboxTopics()
+    {
+        return $this->hasMany(InboxTopic::class);
+    }
 
     // optional sections
 

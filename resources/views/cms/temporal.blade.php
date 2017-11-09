@@ -91,8 +91,6 @@
                     <h1>{{ $client->trade_name }}</h1>
                     <p class="pad-b20">{{ $client->description }}</p>
 
-
-
                     <div class="boton2 text-center pad-bootom">
                         <a href="#" type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal" title="{{ $client->name }}">
                             <h2>Contacto <i class="fa fa-send"></i></h2>
@@ -148,22 +146,27 @@
                 <div class="modal-body">
                     <h2>Contáctanos</h2>
 
-                    <form method="POST" action="send_form" id="form_blend">
+                    <form id="contactForm">
+                        <input type="hidden" name="user_id" value="{{ $client->id }}">
                         <div class="form-group">
-                            <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
+                            <input class="form-control" type="text" name="name" placeholder="Nombre" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
+                            <input type="email" class="form-control" name="email" placeholder="Correo" required>
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control">
+                            <input type="text" class="form-control" name="phone" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="topic" class="form-control" required>
                                 <option value="">Seleccione asunto</option>
-                                <option value="A">Asunto A</option>
-                                <option value="B">Asunto B</option>
+                                @foreach ($topics as $topic)
+                                    <option value="{{ $topic }}">{{ $topic }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" name="message" placeholder="Mensaje" required></textarea>
+                            <textarea class="form-control" name="content" placeholder="Mensaje" required></textarea>
                         </div>
                         <div class="boton2" style="margin: 15px 0;">
                             <button type="submit" class="btn btn-demo">
@@ -171,7 +174,6 @@
                             </button>
                         </div>
                         <div class="boton3">
-                            <!-- <a href="#" type="submit" class="btn btn-demo">Cancelar</a> -->
                             <button type="button" class="btn btn-demo" data-dismiss="modal" aria-label="Close" id="close_form_blend">Cancelar</button>
                         </div>
                     </form>
