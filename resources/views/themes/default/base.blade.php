@@ -33,6 +33,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ asset('/themes/default/css/style.css') }}">
 
+    @if ($me->favicon)
+        <link rel="shortcut icon" type="image/x-icon" href="{{ $me->favicon_url }}">
+    @endif
+
     @yield('styles')
 
     <script type="application/ld+json">
