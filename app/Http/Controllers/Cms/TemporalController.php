@@ -15,6 +15,11 @@ class TemporalController extends Controller
         return $this->index(User::find(23));
     }
 
+    public function flat()
+    {
+        return $this->index(User::find(41));
+    }
+
     public function index(User $client)
     {
         $topics = $client->inboxTopics()->pluck('name');

@@ -7,6 +7,9 @@ use Illuminate\Routing\Router;
 Route::group(['domain' => 'www.samuelcardenas.com'], function () {
     Route::get('/', 'Cms\TemporalController@samuel');
 });
+Route::group(['domain' => 'www.flat.pe'], function () {
+    Route::get('/', 'Cms\TemporalController@flat');
+});
 
 Route::group([
     'domain' => 'teresa.seo-arquitectos.com'
