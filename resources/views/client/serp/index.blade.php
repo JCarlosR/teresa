@@ -226,7 +226,10 @@
 @include('client.serp.includes.serp-code-modals')
 @include('client.serp.includes.services-serp-modals')
 @include('client.serp.includes.projects-serp-modals')
-@include('client.serp.includes.articles-serp-modals')
+
+@if ($client->hasSection('Artículos'))
+    @include('client.serp.includes.articles-serp-modals')
+@endif
 @endsection
 
 @section('scripts')
