@@ -19,22 +19,22 @@
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Proyectos</h6>
                         <div class="fs-36 fw-300"><span class="counter">{{ $client->projects_count }}</span></div>
-                        <div class="progress progress-xs mb-0">
+                        <div class="progress progress-striped progress-sm mb-0">
                             <div role="progressbar" data-transitiongoal="{{ $client->projects_percent }}" class="progress-bar progress-bar-{{ $client->projects_status }}"></div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Servicios</h6>
                         <div class="fs-36 fw-300"><span class="counter">{{ $client->services_count }}</span></div>
-                        <div class="progress progress-xs mb-0">
+                        <div class="progress progress-striped progress-sm mb-0">
                             <div role="progressbar" data-transitiongoal="{{ $client->services_percent }}" class="progress-bar progress-bar-{{ $client->services_status }}"></div>
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <h6 class="text-uppercase">Leads</h6>
-                        <div class="fs-36 fw-300"><span class="counter">28</span><span>%</span></div>
-                        <div class="progress progress-xs mb-0">
-                            <div role="progressbar" data-transitiongoal="28" class="progress-bar progress-bar-purple"></div>
+                        <div class="fs-36 fw-300"><span class="counter">{{ $client->inbox_messages->count() }}</span></div>
+                        <div class="progress progress-striped progress-sm mb-0">
+                            <div role="progressbar" data-transitiongoal="100" class="progress-bar progress-bar-purple"></div>
                         </div>
                     </div>
                 </div>

@@ -9,13 +9,12 @@
     </div>
     <div class="widget-body" @if (count($services) > 0) style="min-height: 25em;" @endif>
         @if (count($services) > 0)
-            <table id="table-services" class="table mb-0 dt-responsive nowrap">
+            <table id="table-services" class="table mb-0 nowrap">
                 <thead>
                 <tr>
                     <th>#</th>
                     <th>Nombre</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Fotos</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,9 +30,6 @@
                             <img src="/images/semaphores/{{ $service->status_color }}.png"
                                  alt="Semáforo de estado" height="24"
                                  title="{{ $service->characters_percent }} %">
-                        </td>
-                        <td class="text-center text-{{ $service->hasPhotos ? 'success' : 'danger' }}">
-                            <i class="ion-{{ $service->hasPhotos ? 'checkmark' : 'close' }}-round"></i>
                         </td>
                     </tr>
                 @endforeach
