@@ -13,6 +13,11 @@ class InboxTopicController extends Controller
 {
     use AccessClientAsAdmin;
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $client = $this->client();
@@ -40,4 +45,5 @@ class InboxTopicController extends Controller
         $notification = 'Los asuntos del formulario de contacto se han actualizado exitosamente!';
         return back()->with(compact('notification'));
     }
+
 }

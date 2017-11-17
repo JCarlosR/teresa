@@ -55,8 +55,9 @@ visitsMonthOptions.xaxis = {
 
 $(document).ready(function() {
     setupSocialCounters();
+    setupChartLeads();
 
-    // jQuery Counter Up
+    // Counter up
     // --------------------------------------------------
     $('.counter').counterUp({
         delay: 10,
@@ -99,7 +100,6 @@ $(document).ready(function() {
 
     // Bootstrap Date Range Picker
     // --------------------------------------------------
-
     $dateRangePicker.daterangepicker({
         ranges: {
             'Today': [moment(), moment()],
@@ -312,5 +312,48 @@ function setupSocialCounters() {
         foursquare_token: 'OTPZ04SSPJUZPATMOOYTR2MCT5NUQ2V4MVX0SSZMVDA35D3N',
         linkedin_oauth: 'AQXr1IpWpZK9D1WJlNkYUgaaH-WRAhzIUI7DHT-RPo9fkQgyxyerCaY3MCESx1JyvFmw7ITcPGuStVm1p01JxLdnlREh_7MYYvUek0M36yWvULusbRp1f0jSLBYSK3NlLcqALhv-D8jaBvIyH2oCNQqL7YKCrvSUgKD5gyCcUcCioGG0JLg',
         linkedin_company_id: $wrapper.find('[data-social="linkedIn"]').data('id')
+    });
+}
+
+function setupChartLeads() {
+    var $chartLeads = $('#chart-leads');
+    var optionsDonut = {
+        series: {
+            pie: {
+                show: true,
+                stroke: {
+                    width: 0
+                },
+                innerRadius: 0.4,
+                label: {
+                    show: true
+                },
+                highlight: {
+                    opacity: 0
+                }
+            }
+        },
+        grid: {
+            hoverable: true
+        },
+        tooltip: {
+            show: true,
+            content: '%s: %p.0%',
+            defaultTheme: false
+        },
+        legend: {
+            show: true,
+            labelBoxBorderColor: '#FFF',
+            margin: 0
+        }
+    };
+
+    $.get('/inbox/leads/chart', function (data) {
+        console.log(data.length);
+        if (data.length > 0) {
+            $.plot($chartLeads, data, optionsDonut);
+        } else {
+            $chartLeads.text('Aún no se han configurado los asuntos disponibles para el formulario de contacto.');
+        }
     });
 }

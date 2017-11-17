@@ -202,6 +202,8 @@ Route::get('/leads/{id}', 'Client\LeadController@show');
 Route::get('/inbox', 'InboxController@index');
 Route::get('/inbox/form', 'InboxTopicController@index');
 Route::get('/inbox/messages/{id}', 'InboxController@show');
+// Chart for dashboard API
+Route::get('/inbox/leads/chart', 'InboxTopicController@chartData');
 
 // Location
 Route::get('/mapa', 'Client\MapController@index');

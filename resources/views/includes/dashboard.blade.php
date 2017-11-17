@@ -324,83 +324,15 @@
 
 <div class="row">
     <div class="col-md-6">
-        <div class="widget">
-            <div class="widget-heading">
-                <h3 class="widget-title">Últimos mensajes recibidos</h3>
-            </div>
-            <div class="widget-body" style="height: 28em; overflow: auto;">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Categoría</th>
-                        <th>Emisor</th>
-                        <th>Mensaje</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($messages as $message)
-                    <tr class="unread">
-                        <td class="email-select">
-                            {{ $message->topic }}
-                            <p class="text-muted mb-0">
-                                <time datetime="{{ $message->created_at }}" class="fs-13 mr-5">
-                                    {{ $message->created_at->format('d/m/Y') }}
-                                </time>
-                            </p>
-                        </td>
-                        <td class="email-from">
-                            <div class="media">
-                                <div class="media-body">
-                                    <h5 class="media-heading">{{ $message->name }}</h5>
-                                    <span>{{ $message->phone }}</span>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center">
-                            <a href="{{ url('/inbox/messages/'.$message->id) }}" class="btn btn-primary btn-sm" title="Ver mensaje">
-                                <i class="glyphicon glyphicon-envelope"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        @include('includes.dashboard.widget_inbox_messages')
     </div>
     <div class="col-md-6">
         <div class="widget">
             <div class="widget-heading">
-                <h3 class="widget-title">Últimos artículos</h3>
+                <h3 class="widget-title">Leads</h3>
             </div>
-            <div class="widget-body">
-                <ul class="media-list media-lg mb-0">
-                    <li class="media">
-                        <div class="media-left"><img src="{{ asset('build/images/products/18.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
-                        <div class="media-body media-middle"><a href="#" class="text-base">
-                                <h5 class="media-heading">Easy Steps To Better Icon Design</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Mary Green</a></span></div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left"><img src="{{ asset('build/images/products/14.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
-                        <div class="media-body media-middle"><a href="#" class="text-base">
-                                <h5 class="media-heading">Dear Web Font Providers</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Samuel Schultz</a></span></div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left"><img src="{{ asset('build/images/products/20.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
-                        <div class="media-body media-middle"><a href="#" class="text-base">
-                                <h5 class="media-heading">Flat And Thin Are In</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Timothy Owens</a></span></div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left"><img src="{{ asset('build/images/products/15.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
-                        <div class="media-body media-middle"><a href="#" class="text-base">
-                                <h5 class="media-heading">Building With Gulp</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Aaron Holland</a></span></div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left"><img src="{{ asset('build/images/products/01.jpg') }}" alt="" class="media-object mo-lg img-circle"></div>
-                        <div class="media-body media-middle"><a href="#" class="text-base">
-                                <h5 class="media-heading">Designing For Digital Products</h5></a><span class="fs-13 text-muted text-italic">By <a href="#">Sara Price</a></span></div>
-                    </li>
-                </ul>
+            <div class="widget-body" style="height: 28em; overflow: auto;">
+                <div id="chart-leads" style="height: 340px"></div>
             </div>
         </div>
     </div>

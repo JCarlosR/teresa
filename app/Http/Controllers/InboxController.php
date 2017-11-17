@@ -78,4 +78,5 @@ class InboxController extends Controller
         $client = $this->client();
         return view('client.inbox.config', compact('client'));
     }
+
 }
