@@ -9,7 +9,7 @@
     </div>
     <div class="widget-body" style="">
         @if (count($projects) > 0)
-            <table id="table-projects" class="table mb-0 dt-responsive nowrap">
+            <table id="table-projects" class="table mb-0 dt-responsive">
                 <thead>
                 <tr>
                     <th>#</th>

@@ -9,7 +9,7 @@
     </div>
     <div class="widget-body" @if (count($services) > 0) style="min-height: 25em;" @endif>
         @if (count($services) > 0)
-            <table id="table-services" class="table mb-0 nowrap">
+            <table id="table-services" class="table mb-0">
                 <thead>
                 <tr>
                     <th>#</th>

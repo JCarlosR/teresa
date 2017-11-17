@@ -23,19 +23,13 @@ $(document).ready(function() {
 
     $('#table-services').DataTable({
         lengthChange: false,
-        iDisplayLength: 10,
+        iDisplayLength: 7,
+        pagingType: "numbers",
         searching: false,
         info: false,
         language: {
             paginate: paginateButtonTexts
             // search: "Buscar: "
-        },
-        fnDrawCallback: function() {
-            if (jQuery('#table-services_paginate .paginate_button').size() > 3) {
-                jQuery('#table-services_paginate')[0].style.display = "block";
-            } else {
-                jQuery('#table-services_paginate')[0].style.display = "none";
-            }
         }
     });
 
