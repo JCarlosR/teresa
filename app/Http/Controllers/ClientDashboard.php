@@ -46,7 +46,7 @@ trait ClientDashboard
         $youtube = $client->getSocialProfile('youtube');
 
         $messages = InboxMessage::where('user_id', $client->id)
-            ->orderBy('id', 'desc')->take(7);
+            ->orderBy('id', 'desc')->take(7)->get();
 
         $variables = compact(
             'facebook', 'linkedIn', 'googlePlus', 'twitter', 'pinterest', 'fourSquare', 'instagram', 'youtube',

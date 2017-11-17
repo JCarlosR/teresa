@@ -356,9 +356,9 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <a href="#">
-                                Ver mensaje
+                        <td class="text-center">
+                            <a href="{{ url('/inbox/messages/'.$message->id) }}" class="btn btn-primary btn-sm" title="Ver mensaje">
+                                <i class="glyphicon glyphicon-envelope"></i>
                             </a>
                         </td>
                     </tr>
