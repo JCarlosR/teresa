@@ -10,6 +10,15 @@ Route::group(['domain' => 'www.samuelcardenas.com'], function () {
 Route::group(['domain' => 'www.flat.pe'], function () {
     Route::get('/', 'Cms\TemporalController@flat');
 });
+Route::group(['domain' => '*.tawa.com.pe'], function () {
+    Route::get('/', 'Cms\TemporalController@tawaPe');
+});
+Route::group(['domain' => '*.tawa.cl'], function () {
+    Route::get('/', 'Cms\TemporalController@tawaCl');
+});
+Route::group(['domain' => '*.rom.com.pe'], function () {
+    Route::get('/', 'Cms\TemporalController@romPe');
+});
 
 Route::group([
     'domain' => 'teresa.seo-arquitectos.com'

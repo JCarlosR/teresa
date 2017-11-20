@@ -10,6 +10,21 @@ use App\Http\Controllers\Controller;
 
 class TemporalController extends Controller
 {
+    public function tawaPe()
+    {
+        return $this->index(User::find(35));
+    }
+
+    public function tawaCl()
+    {
+        return $this->index(User::find(36));
+    }
+
+    public function romPe()
+    {
+        return $this->index(User::find(28));
+    }
+
     public function samuel()
     {
         return $this->index(User::find(23));
