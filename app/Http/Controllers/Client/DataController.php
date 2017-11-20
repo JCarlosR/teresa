@@ -47,6 +47,17 @@ class DataController extends Controller
         $user->trade_name = $request->get('trade_name');
         $user->fiscal_name = $request->get('fiscal_name');
         $user->ruc = $request->get('ruc');
+
+        $country_code = $request->get('country_code');
+        $parts = explode(';', $country_code);
+        if (sizeof($parts) == 2) {
+            $user->country_code_alpha = $parts[0]; // PE
+            $user->country_code_number = $parts[1]; // 51
+        } else {
+            $user->country_code_alpha = null;
+            $user->country_code_number = null;
+        }
+
         $user->address = $request->get('address');
         $user->phones = $request->get('phones');
         $user->schedule_start = $request->get('schedule_start');
