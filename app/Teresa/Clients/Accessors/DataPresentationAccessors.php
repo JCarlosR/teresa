@@ -10,6 +10,11 @@ trait DataPresentationAccessors
         return $parts[0];
     }
 
+    public function getCountryCodeAttribute()
+    {
+        return $this->country_code_alpha . ';' . $this->country_code_number;
+    }
+
     public function getScheduleStartFormatAttribute()
     {
         $parts = explode(':', $this->schedule_start);
