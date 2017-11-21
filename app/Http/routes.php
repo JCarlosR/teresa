@@ -257,6 +257,7 @@ Route::group(['prefix' => 'admin'], function () {
     // Client sitemap
     Route::get('/sitemap', 'Admin\SiteMapController@index');
     Route::post('/sitemap', 'Admin\SiteMapController@store');
+    Route::post('/sitemap/secondary', 'Admin\SiteMapController@secondary');
     Route::put('/sitemap', 'Admin\SiteMapController@update');
 
     // Client data

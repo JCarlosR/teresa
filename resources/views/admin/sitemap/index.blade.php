@@ -38,15 +38,23 @@
                 <nav class="secondary">
                     <ul>
                         @foreach ($lv1_nodes as $node)
-                        <li>
-                            <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
-                                {{--<span data-name>{{ $node->name }}</span>--}}
-                            </a>
-                        </li>
+                            <li>
+                                <a href="{{ $node->url }}" data-edit="{{ $node->id }}">
+                                    {{--<span data-name>{{ $node->name }}</span>--}}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </nav>
             </div>
+
+            <form action="{{ url('/admin/sitemap/secondary') }}" method="post">
+                {{ csrf_field() }}
+                <button class="btn btn-default btn-sm">
+                    <i class="glyphicon glyphicon-plus-sign" data-add></i>
+                    Añadir nodo secundario
+                </button>
+            </form>
         </div>
     </div>
 </div>

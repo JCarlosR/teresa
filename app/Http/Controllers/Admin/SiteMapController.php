@@ -13,6 +13,12 @@ class SiteMapController extends Controller
 {
     use AccessClientAsAdmin;
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('as_client');
+    }
+
     public function index()
     {
         $client = $this->client();
@@ -60,12 +66,12 @@ class SiteMapController extends Controller
 
     public function createInitialNodes($client_id)
     {
-        $login = new SiteMapLink();
-        $login->user_id = $client_id;
-        $login->name = 'Iniciar sesión';
-        $login->url = '/login';
-        $login->site_map_link_id = null;
-        $login->save();
+        $faqs = new SiteMapLink();
+        $faqs->user_id = $client_id;
+        $faqs->name = 'Copyrights';
+        $faqs->url = '/copyrights';
+        $faqs->site_map_link_id = null;
+        $faqs->save();
 
         $siteMap = new SiteMapLink();
         $siteMap->user_id = $client_id;
@@ -73,13 +79,6 @@ class SiteMapController extends Controller
         $siteMap->url = '/sitemap';
         $siteMap->site_map_link_id = null;
         $siteMap->save();
-
-        $faqs = new SiteMapLink();
-        $faqs->user_id = $client_id;
-        $faqs->name = 'Preguntas frecuentes';
-        $faqs->url = '/faqs';
-        $faqs->site_map_link_id = null;
-        $faqs->save();
 
         $terms = new SiteMapLink();
         $terms->user_id = $client_id;
@@ -123,6 +122,25 @@ class SiteMapController extends Controller
         $siteMapLink->description = $request->description ?: "Sin descripción";
         $siteMapLink->url = $request->url ?: "/nodo-$uniqueId";
         $siteMapLink->site_map_link_id = $request->add_to;
+        $siteMapLink->user_id = $client->id;
+        $siteMapLink->save();
+
+        return back();
+    }
+
+    public function secondary(Request $request)
+    {
+        $client = $this->client();
+
+        $siteMapLink = new SiteMapLink();
+
+        $uniqueId = uniqid();
+
+        // TO DO - validate if the parent link belongs to the client
+        $siteMapLink->name = $request->name ?: 'Nodo nuevo';
+        $siteMapLink->description = $request->description ?: "Sin descripción";
+        $siteMapLink->url = $request->url ?: "/nodo-$uniqueId";
+        $siteMapLink->site_map_link_id = null;
         $siteMapLink->user_id = $client->id;
         $siteMapLink->save();
 
