@@ -162,9 +162,9 @@
                                 <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-article="{{ $article->id }}">
                                     <span class="glyphicon glyphicon-file"></span>
                                 </button>
-                                {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
-                                {{--<span class="glyphicon glyphicon-pencil"></span>--}}
-                                {{--</a>--}}
+                                <a href="{{ url('/articulo/'.$article->id.'/editar') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar artículo">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
                             </div>
                             @include('client.serp.includes.google-results', [
                                 'link' => $client->getLinkTo('/blog/'.$article->id),

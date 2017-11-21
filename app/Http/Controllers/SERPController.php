@@ -15,6 +15,7 @@ class SERPController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('as_client');
     }
 
     public function index()
@@ -40,36 +41,54 @@ class SERPController extends Controller
         ));
     }
 
-    public function addHeadCodeToLinks($links, $me) {
-        foreach ($links as $link)
-            $link->code_string = view()->make('client.serp.header')->with(compact('link', 'me'))->render();
+    public function addHeadCodeToLinks($links, $client) {
+        foreach ($links as $link) {
+            $data = [
+                'title' => $link->name,
+                'description' => $link->description,
+                'absoluteUrl' => $link->absoluteUrl($client->domain),
+                'me' => $client
+            ];
+
+            $link->code_string = view()->make('client.serp.header')->with($data)->render();
+        }
     }
+
     public function addHeadCodeToServices($services, $client) {
         foreach ($services as $service) {
             $data = [
-                'link' => $service,
+                'title' => $service->name,
+                'description' => $service->description,
+                'absoluteUrl' => $service->absoluteUrl($client->domain),
                 'me' => $client
             ];
+
             $service->code_string = view()->make('client.serp.header')->with($data)->render();
         }
     }
+
     public function addHeadCodeToProjects($projects, $client) {
         foreach ($projects as $project) {
             $data = [
-                'link' => $project,
+                'title' => $project->name,
+                'description' => $project->description,
+                'absoluteUrl' => $project->absoluteUrl($client->domain),
                 'me' => $client
             ];
+
             $project->code_string = view()->make('client.serp.header')->with($data)->render();
         }
     }
+
     public function addHeadCodeToArticles($articles, $client) {
         foreach ($articles as $article) {
-            $article->description = $article->meta_description;
-            $article->name = $article->meta_title;
             $data = [
-                'link' => $article,
+                'title' => $article->meta_title,
+                'description' => $article->meta_description,
+                'absoluteUrl' => $article->absoluteUrl($client->domain),
                 'me' => $client
             ];
+
             $article->code_string = view()->make('client.serp.header')->with($data)->render();
         }
     }
@@ -80,7 +99,7 @@ class SERPController extends Controller
         $client->services_description = $request->input('description');
         $client->save();
 
-        $notification = 'La descripción de los servicios se actualizó correctamente.';
+        $notification = 'La descripción de la página de servicios se actualizó correctamente.';
         return back()->with(compact('notification'));
     }
 

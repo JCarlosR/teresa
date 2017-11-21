@@ -2,24 +2,24 @@
 <html lang="es" class="js no-touch">
 <head>
     <meta charset="utf-8">
-    <title>{{ $link->name ?: 'Sin título' }}</title>
-    <meta name="description" content="{{ $link->description ?: 'Sin descripción' }}">
+    <title>{{ $title ?: 'Sin título' }}</title>
+    <meta name="description" content="{{ $description ?: 'Sin descripción' }}">
 
-    <meta property="og:title" content="{{ $link->name ?: 'Sin título' }}">
+    <meta property="og:title" content="{{ $title ?: 'Sin título' }}">
     <meta property="og:type" content="company">
-    <meta property="og:url" content="{{ $link->absoluteUrl($me->domain) }}">
+    <meta property="og:url" content="{{ $absoluteUrl }}">
     <meta property="og:site_name" content="{{ $me->trade_name }}">
-    <meta property="og:description" content="{{ $link->description ?: 'Sin descripción' }}">
+    <meta property="og:description" content="{{ $description ?: 'Sin descripción' }}">
     <meta property="og:image" content="{{ $me->photo_route }}">
-    <meta property="og:image:alt" content="{{ $link->name ?: 'Sin título' }}">
+    <meta property="og:image:alt" content="{{ $title ?: 'Sin título' }}">
 
     @if ($me->getSocialProfile('twitter')->id)
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="{{ '@' . $me->getSocialProfile('twitter')->id }}">
         <meta name="twitter:creator" content="{{ '@' . $me->getSocialProfile('twitter')->id }}">
-        <meta name="twitter:url"  content="{{ $link->absoluteUrl($me->domain) }}">
-        <meta name="twitter:title" content="{{ $link->name ?: 'Sin título' }}">
-        <meta name="twitter:description" content="{{ $link->description ?: 'Sin descripción' }}">
+        <meta name="twitter:url"  content="{{ $absoluteUrl }}">
+        <meta name="twitter:title" content="{{ $title ?: 'Sin título' }}">
+        <meta name="twitter:description" content="{{ $description ?: 'Sin descripción' }}">
         <meta name="twitter:image" content="{{ $me->photo_route }}">
     @endif
 
@@ -37,7 +37,7 @@
         "{{ '@' }}context" : "http://schema.org",
         "@type" : "company",
         "name" : "{{ $me->trade_name }}",
-        "url" : "{{ $link->absoluteUrl($me->domain) }}",
+        "url" : "{{ $absoluteUrl }}",
         "sameAs" : [
     @if ($me->getSocialProfile('facebook')->url != '#')
             "{{ $me->getSocialProfile('facebook')->url }}",
