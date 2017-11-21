@@ -7,6 +7,7 @@ use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use stdClass;
 
 class SERPController extends Controller
 {
@@ -36,9 +37,62 @@ class SERPController extends Controller
             $this->addHeadCodeToArticles($articles, $client);
         }
 
+        $general_pages = $this->getHeadCodeForGeneralPages($client);
+
         return view('client.serp.index')->with(compact(
-            'client', 'services', 'projects', 'links', 'articles'
+            'client', 'services', 'projects', 'links', 'articles', 'general_pages'
         ));
+    }
+
+    public function getHeadCodeForGeneralPages($client)
+    {
+        $general_pages = collect();
+
+        $root_page = new stdClass();
+        $root_page->id = 'root';
+        $root_page->title = $client->title;
+        $root_page->description = $client->description;
+        $root_page->absoluteUrl = $client->domain;
+        $root_page = $this->addHeadCodeToGeneralPage($root_page, $client);
+        $general_pages->push($root_page);
+
+        $services_page = new stdClass();
+        $services_page->id = 'services';
+        $services_page->title = $client->trade_name . ' - Servicios';
+        $services_page->description = $client->services_description;
+        $services_page->absoluteUrl = $client->domain . '/servicios';
+        $services_page = $this->addHeadCodeToGeneralPage($services_page, $client);
+        $general_pages->push($services_page);
+
+        $projects_page = new stdClass();
+        $projects_page->id = 'projects';
+        $projects_page->title = $client->trade_name . ' - Proyectos';
+        $projects_page->description = $client->projects_description;
+        $projects_page->absoluteUrl = $client->domain . '/proyectos';
+        $projects_page = $this->addHeadCodeToGeneralPage($projects_page, $client);
+        $general_pages->push($projects_page);
+
+        $about_us_page = new stdClass();
+        $about_us_page->id = 'about_us';
+        $about_us_page->title = $client->trade_name . ' - Nosotros';
+        $about_us_page->description = $client->about_us->description;
+        $about_us_page->absoluteUrl = $client->domain . '/nosotros';
+        $about_us_page = $this->addHeadCodeToGeneralPage($about_us_page, $client);
+        $general_pages->push($about_us_page);
+
+        return $general_pages;
+    }
+
+    public function addHeadCodeToGeneralPage($general_page, $client)
+    {
+        $data = [
+            'title' => $general_page->title,
+            'description' => $general_page->description,
+            'absoluteUrl' => $general_page->absoluteUrl,
+            'me' => $client
+        ];
+        $general_page->code_string = view()->make('client.serp.header')->with($data)->render();
+        return $general_page;
     }
 
     public function addHeadCodeToLinks($links, $client) {

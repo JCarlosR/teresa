@@ -19,6 +19,11 @@
             <p>Previsualización de cada enlace sobre la página de resultados en buscadores.</p>
             <div class="row">
                 <div class="col-md-12">
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-general="root">
+                            <span class="glyphicon glyphicon-file"></span>
+                        </button>
+                    </div>
                     @include('client.serp.includes.google-results', [
                         'link' => $client->getLinkTo('/'),
                         'title' => $client->title,
@@ -27,9 +32,14 @@
                     ])
                 </div>
                 <div class="col-md-6">
-                    <a href="/servicios" class="btn btn-info btn-sm pull-right" title="Editar servicios">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-general="services">
+                            <span class="glyphicon glyphicon-file"></span>
+                        </button>
+                        <a href="/servicios" class="btn btn-info btn-sm pull-right" title="Editar servicios">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </div>
                     @include('client.serp.includes.google-results', [
                         'link' => $client->getLinkTo('/servicios'),
                         'title' => $client->trade_name . ' - Servicios',
@@ -38,9 +48,14 @@
                     ])
                 </div>
                 <div class="col-md-6">
-                    <a href="/proyectos" class="btn btn-info btn-sm pull-right" title="Editar proyectos">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-general="projects">
+                            <span class="glyphicon glyphicon-file"></span>
+                        </button>
+                        <a href="/proyectos" class="btn btn-info btn-sm pull-right" title="Editar proyectos">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </div>
                     @include('client.serp.includes.google-results', [
                         'link' => $client->getLinkTo('/proyectos'),
                         'title' => $client->trade_name . ' - Proyectos',
@@ -49,9 +64,14 @@
                     ])
                 </div>
                 <div class="col-md-6">
-                    <a href="/nosotros" class="btn btn-info btn-sm pull-right" title="Editar sección nosotros">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-general="about_us">
+                            <span class="glyphicon glyphicon-file"></span>
+                        </button>
+                        <a href="/nosotros" class="btn btn-info btn-sm pull-right" title="Editar sección nosotros">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </div>
                     @include('client.serp.includes.google-results', [
                         'link' => $client->getLinkTo('/nosotros'),
                         'title' => $client->trade_name . ' - Nosotros',
@@ -180,7 +200,8 @@
     @endif
 </div>
 
-@include('client.serp.includes.serp-code-modals')
+@include('client.serp.includes.general-serp-modals')
+@include('client.serp.includes.links-serp-modals')
 @include('client.serp.includes.services-serp-modals')
 @include('client.serp.includes.projects-serp-modals')
 
@@ -198,6 +219,7 @@
             $(document).on('click', '[data-service]', onClickServiceModalBtn);
             $(document).on('click', '[data-project]', onClickProjectModalBtn);
             $(document).on('click', '[data-article]', onClickArticleModalBtn);
+            $(document).on('click', '[data-general]', onClickGeneralModalBtn);
 
             $('.google-results span.description').each(applyLimitsToDescription);
         });
@@ -217,6 +239,10 @@
         function onClickArticleModalBtn() {
             var id = $(this).data('article');
             $('#modal-article-'+id).modal('show');
+        }
+        function onClickGeneralModalBtn() {
+            var id = $(this).data('general');
+            $('#modal-general-'+id).modal('show');
         }
 
         function applyLimitsToDescription(i, e) {
