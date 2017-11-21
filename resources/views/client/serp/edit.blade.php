@@ -3,15 +3,11 @@
 @section('styles')
     <link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/summernote/dist/summernote.css') }}">
-    <style>
-        textarea {
-            display: none;
-        }
-        [id^="status"] {
-            font-size: 1.8em;
-        }
-    </style>
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
+    <style>
+        textarea#content { display: none; }
+        [id^="status"] { font-size: 1.8em; }
+    </style>
 @endsection
 
 @section('dashboard_content')
@@ -68,7 +64,7 @@
 
 @section('scripts')
     <script src="{{ asset('/plugins/summernote/dist/summernote.min.js') }}"></script>
-    <script src="{{ asset('/src//panel/serp/edit.js') }}"></script>
+    <script src="{{ asset('/src/panel/serp/edit.js') }}"></script>
     <script src="{{ asset('/panel/google-results/results.js') }}"></script>
     <script>
         googleResults('[name="title"]', '[name="description"]', '.google-results');

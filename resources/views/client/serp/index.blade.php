@@ -4,9 +4,7 @@
     <link rel="stylesheet" href="{{ asset('/panel/google-results/results.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendor/prism/prism.css') }}">
     <style>
-        .google-results span.description {
-            display: none;
-        }
+        .google-results span.description { display: none; }
     </style>
 @endsection
 
@@ -21,74 +19,46 @@
             <p>Previsualización de cada enlace sobre la página de resultados en buscadores.</p>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="google-results">
-                        <a href="{{ $client->getLinkTo('/') }}" target="_blank">
-                            <span class="title">{{ $client->title ?: ' Sin título' }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}</cite>
-                        </div>
-                        <span class="description">{{ $client->description }}</span>
-                    </div>
+                    @include('client.serp.includes.google-results', [
+                        'link' => $client->getLinkTo('/'),
+                        'title' => $client->title,
+                        'domain' => $client->domain,
+                        'description' => $client->description
+                    ])
                 </div>
                 <div class="col-md-6">
                     <a href="/servicios" class="btn btn-info btn-sm pull-right" title="Editar servicios">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
-                    <div class="google-results">
-                        <a href="{{ $client->getLinkTo('/servicios') }}" target="_blank">
-                            <span class="title">{{ $client->trade_name }} - Servicios</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/servicios</cite>
-                        </div>
-                        <span class="description">{{ $client->services_description }}</span>
-                    </div>
+                    @include('client.serp.includes.google-results', [
+                        'link' => $client->getLinkTo('/servicios'),
+                        'title' => $client->trade_name . ' - Servicios',
+                        'domain' => $client->domain . '/servicios',
+                        'description' => $client->services_description
+                    ])
                 </div>
                 <div class="col-md-6">
                     <a href="/proyectos" class="btn btn-info btn-sm pull-right" title="Editar proyectos">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
-                    <div class="google-results">
-                        <a href="{{ $client->getLinkTo('/proyectos') }}" target="_blank">
-                            <span class="title">{{ $client->trade_name }} - Proyectos</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/proyectos</cite>
-                        </div>
-                        <span class="description">{{ $client->projects_description }}</span>
-                    </div>
+                    @include('client.serp.includes.google-results', [
+                        'link' => $client->getLinkTo('/proyectos'),
+                        'title' => $client->trade_name . ' - Proyectos',
+                        'domain' => $client->domain . '/proyectos',
+                        'description' => $client->projects_description
+                    ])
                 </div>
                 <div class="col-md-6">
                     <a href="/nosotros" class="btn btn-info btn-sm pull-right" title="Editar sección nosotros">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
-                    <div class="google-results">
-                        <a href="{{ $client->getLinkTo('/nosotros') }}" target="_blank">
-                            <span class="title">Sobre {{ $client->trade_name }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/nosotros</cite>
-                        </div>
-                        @if($client->about_us)
-                        <span class="description">{{ $client->about_us->description }}</span>
-                        @endif
-                    </div>
+                    @include('client.serp.includes.google-results', [
+                        'link' => $client->getLinkTo('/nosotros'),
+                        'title' => $client->trade_name . ' - Nosotros',
+                        'domain' => $client->domain . '/nosotros',
+                        'description' => $client->about_us->description
+                    ])
                 </div>
-                {{--<div class="col-md-6">--}}
-                    {{--<a href="/citas" class="btn btn-info btn-sm pull-right" title="Editar citas">--}}
-                        {{--<span class="glyphicon glyphicon-pencil"></span>--}}
-                    {{--</a>--}}
-                    {{--<div class="google-results">--}}
-                        {{--<a href="#" onclick="return false;">--}}
-                            {{--<span class="title">{{ $client->trade_name }} - Citas</span>--}}
-                        {{--</a>--}}
-                        {{--<div>--}}
-                            {{--<cite>{{ $client->domain }}/citas</cite>--}}
-                        {{--</div>--}}
-                        {{--<span class="description">{{ $client->quotes_description }}</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -111,16 +81,12 @@
                             </a>
                         @endif
                     </div>
-
-                    <div class="google-results">
-                        <a href="{{ $link->url }}" target="_blank">
-                            <span class="title">{{ $link->name ?: 'Sin título' }}</span>
-                        </a>
-                        <div>
-                            <cite>{{ $client->domain }}/<span>{{ ltrim($link->url, '/') }}</span></cite>
-                        </div>
-                        <span class="description">{{ $link->description ?: 'Sin descripción' }}</span>
-                    </div>
+                    @include('client.serp.includes.google-results', [
+                        'link' => $link->url,
+                        'title' => $link->name,
+                        'domain' => $client->domain  .'/'. ltrim($link->url, '/'),
+                        'description' => $link->description
+                    ])
                 </div>
                 @endforeach
             </div>
@@ -139,19 +105,16 @@
                             <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-service="{{ $service->id }}">
                                 <span class="glyphicon glyphicon-file"></span>
                             </button>
-                            {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
-                            {{--<span class="glyphicon glyphicon-pencil"></span>--}}
-                            {{--</a>--}}
-                        </div>
-                        <div class="google-results">
-                            <a href="{{ $client->getLinkTo('/servicio/'.$service->id) }}" target="_blank">
-                                <span class="title">{{ $service->title ?: 'Sin título' }}</span>
+                            <a href="{{ url('/servicio/'.$service->id.'/editar') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar servicio">
+                                <span class="glyphicon glyphicon-pencil"></span>
                             </a>
-                            <div>
-                                <cite>{{ $client->domain }}/servicios/<span>{{ str_slug($service->name) }}</span></cite>
-                            </div>
-                            <span class="description">{{ $service->description ?: 'Sin descripción' }}</span>
                         </div>
+                        @include('client.serp.includes.google-results', [
+                            'link' => $client->getLinkTo('/servicio/'.$service->id),
+                            'title' => $service->title,
+                            'domain' => $client->domain .'/servicios/'. str_slug($service->name),
+                            'description' => $service->description
+                        ])
                     @endforeach
                 </div>
             </div>
@@ -170,19 +133,16 @@
                             <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-project="{{ $project->id }}">
                                 <span class="glyphicon glyphicon-file"></span>
                             </button>
-                            {{--<a href="{{ url('serp/link/'.$link->id.'/edit') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar SERP">--}}
-                            {{--<span class="glyphicon glyphicon-pencil"></span>--}}
-                            {{--</a>--}}
-                        </div>
-                        <div class="google-results">
-                            <a href="{{ $client->getLinkTo('/proyecto/'.$project->id) }}" target="_blank">
-                                <span class="title">{{ old('title', $project->title) ?: 'Sin título' }}</span>
+                            <a href="{{ url('/proyecto/'.$project->id.'/editar') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar proyecto">
+                                <span class="glyphicon glyphicon-pencil"></span>
                             </a>
-                            <div>
-                                <cite>{{ $client->domain }}/proyectos/<span>{{ str_slug($project->title) }}</span></cite>
-                            </div>
-                            <span class="description">{{ old('description', $project->description) }}</span>
                         </div>
+                        @include('client.serp.includes.google-results', [
+                            'link' => $client->getLinkTo('/proyecto/'.$project->id),
+                            'title' => $project->title,
+                            'domain' => $client->domain .'/proyectos/'. str_slug($project->title),
+                            'description' => $project->description
+                        ])
                     @endforeach
                 </div>
             </div>
@@ -206,15 +166,12 @@
                                 {{--<span class="glyphicon glyphicon-pencil"></span>--}}
                                 {{--</a>--}}
                             </div>
-                            <div class="google-results">
-                                <a href="{{ $client->getLinkTo('/blog/'.$article->id) }}" target="_blank">
-                                    <span class="title">{{ $article->meta_title ?: 'Sin título' }}</span>
-                                </a>
-                                <div>
-                                    <cite>{{ $client->domain }}/blog/<span>{{ str_slug($article->meta_title) }}</span></cite>
-                                </div>
-                                <span class="description">{{ $article->meta_description }}</span>
-                            </div>
+                            @include('client.serp.includes.google-results', [
+                                'link' => $client->getLinkTo('/blog/'.$article->id),
+                                'title' => $project->title,
+                                'domain' => $client->domain .'/blog/'. str_slug($article->meta_title),
+                                'description' => $article->meta_description
+                            ])
                         @endforeach
                     </div>
                 </div>
