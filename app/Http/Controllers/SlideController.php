@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Slide;
+use App\Slider;
 use App\Teresa\Admin\AccessClientAsAdmin;
 use Illuminate\Http\Request;
 
@@ -18,19 +19,19 @@ class SlideController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Slider $slider)
     {
-        $slides = $this->client()->slides;
-        return view('client.slides.index')->with(compact('slides'));
+        $slides = $slider->slides;
+        return view('client.slides.index')->with(compact('slides', 'slider'));
     }
 
-    public function create()
+    public function create(Slider $slider)
     {
         $client = $this->client();
-        return view('client.slides.create')->with(compact('client'));
+        return view('client.slides.create')->with(compact('client', 'slider'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $slider)
     {
         $rules = [
             'title' => 'required|min:4',
@@ -48,6 +49,7 @@ class SlideController extends Controller
         $slide->title = $request->get('title');
         $slide->description = $request->get('description');
         $slide->url = $request->get('url');
+        $slide->slider_id = $slider;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -64,17 +66,16 @@ class SlideController extends Controller
         $notification = 'El slide se ha registrado correctamente!';
         session()->flash('notification', $notification);
 
-        return redirect('/slides');
+        return redirect('/sliders/'.$slider.'/slides');
     }
 
-    public function edit($id)
+    public function edit(Slider $slider, Slide $slide)
     {
         $client = $this->client();
-        $slide = Slide::find($id);
-        return view('client.slides.edit')->with(compact('client', 'slide'));
+        return view('client.slides.edit')->with(compact('client', 'slider', 'slide'));
     }
 
-    public function update($id, Request $request)
+    public function update(Request $request, $slider, Slide $slide)
     {
         $rules = [
             'title' => 'required|min:4',
@@ -87,7 +88,7 @@ class SlideController extends Controller
         ];
         $this->validate($request, $rules, $messages);
 
-        $slide = Slide::find($id);
+
         $slide->title = $request->get('title');
         $slide->description = $request->get('description');
         $slide->url = $request->get('url');
@@ -107,13 +108,11 @@ class SlideController extends Controller
         $notification = 'El slide se ha modificado exitosamente!';
         session()->flash('notification', $notification);
 
-        return redirect('/slides');
+        return redirect('/sliders/'.$slider.'/slides');
     }
 
-    public function delete($id)
+    public function delete($slider, Slide $slide)
     {
-        $slide = Slide::find($id);
-
         $path = public_path() . '/images/slides/' . $slide->image;
         if (File::isFile($path)) {
             File::delete($path);
@@ -126,6 +125,6 @@ class SlideController extends Controller
         else
             $notification = 'No se ha podido eliminar la slide seleccionada.';
 
-        return redirect('/slides')->with(compact('notification'));
+        return redirect('/sliders/'.$slider.'/slides')->with(compact('notification'));
     }
 }

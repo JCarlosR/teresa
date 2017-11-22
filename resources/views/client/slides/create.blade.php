@@ -8,7 +8,8 @@
 <div class="page-content container-fluid">
     <ol class="breadcrumb">
         <li><a href="{{ url(auth()->user()->root_route) }}"><i class="ion-home mr-5"></i> Inicio</a></li>
-        <li><a href="/slides">Slides</a></li>
+        <li><a href="/sliders">Sliders</a></li>
+        <li><a href="/sliders/{{ $slider->id }}/slides">{{ $slider->name }}</a></li>
         <li class="active">Nueva slide</li>
     </ol>
 

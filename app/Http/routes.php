@@ -108,13 +108,13 @@ Route::post('/sliders/{slider}/editar', 'SliderController@update');
 Route::get('/sliders/{slider}/eliminar', 'SliderController@destroy');
 
 // Slides
-Route::get('/slides', 'SlideController@index');
-//Route::get('/slides/{id}/ver', 'SlideController@show');
-Route::get('/slides/registrar', 'SlideController@create');
-Route::post('/slides/registrar', 'SlideController@store');
-Route::get('/slides/{id}/editar', 'SlideController@edit');
-Route::post('/slides/{id}/editar', 'SlideController@update');
-Route::get('/slides/{id}/eliminar', 'SlideController@delete');
+Route::get('/sliders/{slider}/slides', 'SlideController@index');
+//Route::get('/sliders/{slider}/slides/{id}/ver', 'SlideController@show');
+Route::get('/sliders/{slider}/slides/registrar', 'SlideController@create');
+Route::post('/sliders/{slider}/slides/registrar', 'SlideController@store');
+Route::get('/sliders/{slider}/slides/{slide}/editar', 'SlideController@edit');
+Route::post('/sliders/{slider}/slides/{slide}/editar', 'SlideController@update');
+Route::get('/sliders/{slider}/slides/{slide}/eliminar', 'SlideController@delete');
 
 // Services
 Route::get('/servicios', 'ServiceController@index');

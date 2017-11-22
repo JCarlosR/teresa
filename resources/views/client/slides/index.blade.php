@@ -15,11 +15,11 @@
                 </div>
             @endif
 
-            <a href="{{ url('/slides/registrar') }}" class="btn btn-success pull-right">
+            <a href="{{ url('/sliders/'.$slider->id.'/slides/registrar') }}" class="btn btn-success pull-right">
                 <span class="glyphicon glyphicon-plus"></span>
                 Registrar nuevo slide
             </a>
-            <p class="mb-20">A continuación, un listado de <strong>todos los slides</strong> presentados en la página principal.</p>
+            <p class="mb-20">A continuación, un listado de <strong>todos los slides</strong> presentes en el slider <strong>{{ $slider->name }}</strong>.</p>
 
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -58,11 +58,11 @@
                                     </button>
                                 @endif
 
-                                <a href="{{ url("slides/$slide->id/editar") }}" class="btn btn-info btn-sm" title="Editar slide">
+                                <a href="{{ url("sliders/$slider->id/slides/$slide->id/editar") }}" class="btn btn-info btn-sm" title="Editar slide">
                                     <span class="glyphicon glyphicon-edit"></span>
                                 </a>
 
-                                <a href="{{ url('/slides/'.$slide->id.'/eliminar') }}"
+                                <a href="{{ url('sliders/'.$slider->id.'/slides/'.$slide->id.'/eliminar') }}"
                                    class="btn btn-danger btn-sm" title="Eliminar slide"
                                    onclick="return confirm('¿Estás seguro que deseas eliminar este slide?');">
                                     <span class="glyphicon glyphicon-remove"></span>

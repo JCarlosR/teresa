@@ -41,7 +41,7 @@
                             <td class="text-center">{{ $slider->slides()->count() }}</td>
                             <td>
                                 <a href="{{ url("sliders/$slider->id/slides") }}" class="btn btn-default btn-sm" title="Editar slides">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                    <span class="glyphicon glyphicon-list"></span>
                                 </a>
                                 @if (auth()->user()->is_admin)
                                     <a href="{{ url("sliders/$slider->id/editar") }}" class="btn btn-info btn-sm" title="Editar slider">
