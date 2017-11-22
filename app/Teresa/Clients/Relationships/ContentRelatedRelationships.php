@@ -14,12 +14,7 @@ trait ContentRelatedRelationships
     }
 
 
-    // fixed sections
-
-    public function slides()
-    {
-        return $this->hasMany('App\Slide');
-    }
+    // common sections
 
     public function about_us()
     {
@@ -41,15 +36,26 @@ trait ContentRelatedRelationships
         return $this->hasMany('App\Customer');
     }
 
+    public function inboxTopics()
+    {
+        return $this->hasMany(InboxTopic::class);
+    }
+
+    public function sliders()
+    {
+        return $this->hasMany('App\Slider');
+    }
+
+    public function slides()
+    {
+        return $this->hasMany('App\Slide');
+    }
+
     public function quotes()
     {
         return $this->hasMany('App\Quote');
     }
 
-    public function inboxTopics()
-    {
-        return $this->hasMany(InboxTopic::class);
-    }
 
     // optional sections
 
@@ -69,11 +75,11 @@ trait ContentRelatedRelationships
     }
 
 
-
     // page descriptions with format (presentations)
 
     public function presentations()
     {
         return $this->hasMany(PageDescription::class);
     }
+
 }

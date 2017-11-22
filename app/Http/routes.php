@@ -99,7 +99,15 @@ Route::get('/nosotros/imagenes/{id}/eliminar', 'AboutUsImageController@delete');
 Route::get('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@edit');
 Route::post('/nosotros/imagenes/{id}/editar', 'AboutUsImageController@update');
 
-// Slider (slides)
+// Sliders
+Route::get('/sliders', 'SliderController@index');
+Route::get('/sliders/registrar', 'SliderController@create');
+Route::post('/sliders/registrar', 'SliderController@store');
+Route::get('/sliders/{slider}/editar', 'SliderController@edit');
+Route::post('/sliders/{slider}/editar', 'SliderController@update');
+Route::get('/sliders/{slider}/eliminar', 'SliderController@destroy');
+
+// Slides
 Route::get('/slides', 'SlideController@index');
 //Route::get('/slides/{id}/ver', 'SlideController@show');
 Route::get('/slides/registrar', 'SlideController@create');

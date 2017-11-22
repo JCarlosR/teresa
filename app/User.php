@@ -7,7 +7,6 @@ use App\Teresa\Clients\Accessors\InboxRelatedAccessors;
 use App\Teresa\Clients\Accessors\PagePresentationAccessors;
 use App\Teresa\Clients\Accessors\ServicesRelatedAccessors;
 use App\Teresa\Clients\Accessors\SiteMapRelatedAccessors;
-use App\Teresa\Clients\Accessors\SlidesRelatedAccessors;
 use App\Teresa\Clients\Methods\SocialProfilesMethods;
 use App\Teresa\Clients\Accessors\CmsRelatedAccessors;
 use App\Teresa\Clients\Accessors\DataPresentationAccessors;
@@ -62,7 +61,7 @@ class User extends Authenticatable
     // accessors: client leads
     use InboxRelatedAccessors;
 
-    // accessors: photos
+    // accessors: photos & favicon
     use PhotosRelatedAccessors;
 
     // methods
