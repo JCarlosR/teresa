@@ -32,11 +32,11 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required|min:5'
+            'name' => 'required|min:3'
         ];
         $messages = [
             'name.required' => 'Es necesario ingresar un nombre para el slider.',
-            'name.min' => 'El slider debe tener como mínimo 5 caracteres.'
+            'name.min' => 'El slider debe tener como mínimo 3 caracteres.'
         ];
         $this->validate($request, $rules, $messages);
 
