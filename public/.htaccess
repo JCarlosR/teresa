@@ -8,6 +8,9 @@
     RewriteCond %{HTTP_HOST} ^tawa.com.pe [NC]
     RewriteRule ^(.*)$ https://www.tawa.com.pe/$1 [L,R=301]
 
+    RewriteCond %{HTTP_HOST} ^rom.com.pe [NC]
+    RewriteRule ^(.*)$ https://www.rom.com.pe/$1 [L,R=301]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
