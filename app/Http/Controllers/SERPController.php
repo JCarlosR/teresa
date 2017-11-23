@@ -75,7 +75,10 @@ class SERPController extends Controller
         $about_us_page = new stdClass();
         $about_us_page->id = 'about_us';
         $about_us_page->title = $client->trade_name . ' - Nosotros';
-        $about_us_page->description = $client->about_us->description;
+        if ($client->about_us)
+            $about_us_page->description = $client->about_us->description;
+        else
+            $about_us_page->description = 'Sin descripción';
         $about_us_page->absoluteUrl = $client->domain . '/nosotros';
         $about_us_page = $this->addHeadCodeToGeneralPage($about_us_page, $client);
         $general_pages->push($about_us_page);
