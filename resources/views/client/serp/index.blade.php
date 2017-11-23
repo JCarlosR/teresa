@@ -76,7 +76,7 @@
                         'link' => $client->getLinkTo('/nosotros'),
                         'title' => $client->trade_name . ' - Nosotros',
                         'domain' => $client->domain . '/nosotros',
-                        'description' => $client->about_us->description
+                        'description' => ($client->about_us?$client->about_us->description:'Sin descripción')
                     ])
                 </div>
             </div>
