@@ -23,6 +23,15 @@
                         <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-general="root">
                             <span class="glyphicon glyphicon-file"></span>
                         </button>
+                        @if (auth()->user()->is_admin)
+                            <a href="{{ url('/admin/datos/principales') }}" class="btn btn-info btn-sm pull-right" title="Editar pág principal">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                        {{--@else--}}
+                            {{--<button class="btn btn-info btn-sm pull-right" disabled title="Se necesitan permisos de administrador">--}}
+                                {{--<span class="glyphicon glyphicon-pencil"></span>--}}
+                            {{--</button>--}}
+                        @endif
                     </div>
                     @include('client.serp.includes.google-results', [
                         'link' => $client->getLinkTo('/'),
