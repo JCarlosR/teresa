@@ -48,7 +48,7 @@
                 </nav>
             </div>
 
-            <form action="{{ url('/admin/sitemap/secondary') }}" method="post">
+            <form action="{{ url('/admin/sitemap/secondary') }}" method="post" style="display: none" id="form-secondary">
                 {{ csrf_field() }}
                 <button class="btn btn-default btn-sm">
                     <i class="glyphicon glyphicon-plus-sign" data-add></i>
@@ -118,10 +118,11 @@
         var $modalEdit;
 
         $(function () {
-            $('[data-sitemap]').fadeIn();
             $modalEdit = $('#modal-edit-node');
             $('[data-add]').on('click', addNode);
             $('[data-edit]').on('click', editNode);
+
+            $('[data-sitemap], #form-secondary').fadeIn();
         });
 
         function addNode(event) {

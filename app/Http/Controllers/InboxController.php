@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\InboxMessage;
 use App\Teresa\Admin\AccessClientAsAdmin;
-use App\User;
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 
 class InboxController extends Controller
 {
@@ -71,12 +68,6 @@ class InboxController extends Controller
             'categories', 'message', 'topic',
             'deleted_count', 'pending_count'
         ));
-    }
-
-    public function config()
-    {
-        $client = $this->client();
-        return view('client.inbox.config', compact('client'));
     }
 
 }

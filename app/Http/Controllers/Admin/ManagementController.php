@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\ServerAccess;
 use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class AdminController extends Controller
+class ManagementController extends Controller
 {
 
     public function __construct()

@@ -69,8 +69,8 @@
 
         <li class="panel">
             <a href="{{ url('/admin/cronograma') }}">
-                <i class="ion-ios-clock bg-info"></i>
-                <span class="sidebar-title">Cronogramas <small>de trabajo</small></span>
+                <i class="ion-calendar bg-info"></i>
+                <span class="sidebar-title">Cronogramas</span>
             </a>
         </li>
 
@@ -90,7 +90,7 @@
         </li>
         <li class="panel">
             <a href="{{ url('/admin/pagos') }}">
-                <i class="ion-ios-calendar-outline bg-purple"></i>
+                <i class="ion-clipboard bg-purple"></i>
                 <span class="sidebar-title">Facturación</span>
             </a>
         </li>

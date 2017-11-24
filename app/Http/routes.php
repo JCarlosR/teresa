@@ -60,7 +60,7 @@ Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
 Route::post('password/reset', 'Auth\PasswordController@reset');
 
 // Redirect after login / register
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'Admin\ManagementController@index');
 Route::get('/super/client', 'SuperClientController@index');
 Route::get('/dashboard', 'Client\DashboardController@index');
 
@@ -245,84 +245,91 @@ Route::get('/ver/{id}/nosotros', 'Cms\GuestController@aboutUs');
 Route::get('/ver/{id}/contacto', 'Cms\GuestController@contact');
 Route::get('/ver/{id}/articulos/{article}', 'Cms\ArticleController@show');
 
-// Admin management
-Route::group(['prefix' => 'admin'], function () {
 
-    // Go to client dashboard
-    Route::get('/cliente/seleccionar/{client_id}', 'AdminController@select');
+// Admin management
+Route::group([
+    'prefix' => 'admin',
+    'middleware' => [
+        'auth', 'admin'
+    ],
+    'namespace' => 'Admin'
+], function () {
+
+    // Navigate to client dashboard
+    Route::get('/cliente/seleccionar/{client_id}', 'ManagementController@select');
     // Star switching
-    Route::get('/cliente/{client_id}/destacar/{state}', 'AdminController@star');
+    Route::get('/cliente/{client_id}/destacar/{state}', 'ManagementController@star');
     // Impersonate (login as client)
-    Route::get('/cliente/{client_id}/impersonate', 'AdminController@impersonate');
+    Route::get('/cliente/{client_id}/impersonate', 'ManagementController@impersonate');
 
     // Clients management
-    Route::get('/cliente/registrar', 'Admin\ClientController@create');
-    Route::post('/cliente/registrar', 'Admin\ClientController@store');
+    Route::get('/cliente/registrar', 'ClientController@create');
+    Route::post('/cliente/registrar', 'ClientController@store');
 
     // Client sections
-    Route::get('/sections', 'Admin\SectionController@index');
-    Route::get('/sections/{id}/{action}', 'Admin\SectionController@status');
+    Route::get('/sections', 'SectionController@index');
+    Route::get('/sections/{id}/{action}', 'SectionController@status');
     // Client sitemap
-    Route::get('/sitemap', 'Admin\SiteMapController@index');
-    Route::post('/sitemap', 'Admin\SiteMapController@store');
-    Route::post('/sitemap/secondary', 'Admin\SiteMapController@secondary');
-    Route::put('/sitemap', 'Admin\SiteMapController@update');
+    Route::get('/sitemap', 'SiteMapController@index');
+    Route::post('/sitemap', 'SiteMapController@store');
+    Route::post('/sitemap/secondary', 'SiteMapController@secondary');
+    Route::put('/sitemap', 'SiteMapController@update');
 
     // Client data
-    Route::get('/dashboard/', 'Admin\DashboardController@index');
-    Route::get('/datos/principales', 'Admin\DataController@edit');
-    Route::post('/datos/principales', 'Admin\DataController@update');
+    Route::get('/dashboard/', 'DashboardController@index');
+    Route::get('/datos/principales', 'DataController@edit');
+    Route::post('/datos/principales', 'DataController@update');
 
     // Client access
-    Route::get('/datos/acceso', 'Admin\AccessDataController@index');
-    Route::post('/datos/acceso', 'Admin\AccessDataController@store');
-    Route::post('/datos/acceso/editar', 'Admin\AccessDataController@update');
-    Route::post('/datos/acceso/eliminar', 'Admin\AccessDataController@delete');
+    Route::get('/datos/acceso', 'AccessDataController@index');
+    Route::post('/datos/acceso', 'AccessDataController@store');
+    Route::post('/datos/acceso/editar', 'AccessDataController@update');
+    Route::post('/datos/acceso/eliminar', 'AccessDataController@delete');
 
     // Profiles (social)
-    Route::get('/perfiles/sociales', 'Admin\ProfileController@getSocialProfiles');
-    Route::post('/perfiles/sociales', 'Admin\ProfileController@postSocialProfile');
+    Route::get('/perfiles/sociales', 'ProfileController@getSocialProfiles');
+    Route::post('/perfiles/sociales', 'ProfileController@postSocialProfile');
     // Profiles (professional)
-    Route::get('/perfiles/profesionales', 'Admin\ProfileController@getProfessionalProfiles');
-    Route::post('/perfiles/profesionales', 'Admin\ProfileController@postProfessionalProfile');
+    Route::get('/perfiles/profesionales', 'ProfileController@getProfessionalProfiles');
+    Route::post('/perfiles/profesionales', 'ProfileController@postProfessionalProfile');
     // Professional media
-    Route::get('/medios/profesionales', 'Admin\ProfileController@getProfessionalMedia');
-    Route::post('/medios/profesionales', 'Admin\ProfileController@postProfessionalMedia');
+    Route::get('/medios/profesionales', 'ProfileController@getProfessionalMedia');
+    Route::post('/medios/profesionales', 'ProfileController@postProfessionalMedia');
 
     // Personal
-    Route::get('/personal', 'Admin\PersonalController@index');
-    Route::post('/personal', 'Admin\PersonalController@store');
-    Route::post('/personal/editar', 'Admin\PersonalController@update');
-    Route::post('/personal/eliminar', 'Admin\PersonalController@delete');
+    Route::get('/personal', 'PersonalController@index');
+    Route::post('/personal', 'PersonalController@store');
+    Route::post('/personal/editar', 'PersonalController@update');
+    Route::post('/personal/eliminar', 'PersonalController@delete');
 
     // Work schedule
-    Route::get('/cronograma', 'Admin\WorkScheduleController@index');
-    Route::post('/cronograma', 'Admin\WorkScheduleController@store');
-    Route::get('/cronograma/{id}', 'Admin\WorkScheduleController@show');
-    Route::get('/cronograma/{id}/editar', 'Admin\WorkScheduleController@edit');
-    Route::put('/cronograma/{id}/editar', 'Admin\WorkScheduleController@update');
+    Route::get('/cronograma', 'WorkScheduleController@index');
+    Route::post('/cronograma', 'WorkScheduleController@store');
+    Route::get('/cronograma/{id}', 'WorkScheduleController@show');
+    Route::get('/cronograma/{id}/editar', 'WorkScheduleController@edit');
+    Route::put('/cronograma/{id}/editar', 'WorkScheduleController@update');
     // Details
-    Route::post('/cronograma/{id}/editar', 'Admin\WorkScheduleDetailController@store');
-    Route::get('/cronograma/{id}/detalle', 'Admin\WorkScheduleDetailController@updateByActivityAndOffset');
-    Route::get('/cronograma/detalle/{detail_id}', 'Admin\WorkScheduleDetailController@update');
+    Route::post('/cronograma/{id}/editar', 'WorkScheduleDetailController@store');
+    Route::get('/cronograma/{id}/detalle', 'WorkScheduleDetailController@updateByActivityAndOffset');
+    Route::get('/cronograma/detalle/{detail_id}', 'WorkScheduleDetailController@update');
 
     // Leads
-    Route::get('/leads', 'Admin\LeadController@index');
-    Route::get('/leads/{id}', 'Admin\LeadController@edit');
-    Route::post('/leads/update', 'Admin\LeadController@update');
+    Route::get('/leads', 'LeadController@index');
+    Route::get('/leads/{id}', 'LeadController@edit');
+    Route::post('/leads/update', 'LeadController@update');
     // Inbox
     Route::get('/inbox/config', 'InboxController@config');
-    Route::get('/inbox/form', 'Admin\InboxTopicController@index');
-    Route::post('/inbox/topics', 'Admin\InboxTopicController@store');
+    Route::get('/inbox/form', 'InboxTopicController@index');
+    Route::post('/inbox/topics', 'InboxTopicController@store');
 
     // Payments
-    Route::get('/pagos', 'Admin\PaymentController@index');
-    Route::get('/pagos/registrar', 'Admin\PaymentController@create');
-    Route::post('/pagos/registrar', 'Admin\PaymentController@store');
-    Route::get('/pagos/{id}', 'Admin\PaymentController@edit');
-    Route::post('/pagos/detalles', 'Admin\PaymentController@detailPayment'); // update payment_date
-    Route::post('/pagos/{id}/titulo', 'Admin\PaymentController@updateTitle');
-    Route::post('/pagos/eliminar', 'Admin\PaymentController@delete');
+    Route::get('/pagos', 'PaymentController@index');
+    Route::get('/pagos/registrar', 'PaymentController@create');
+    Route::post('/pagos/registrar', 'PaymentController@store');
+    Route::get('/pagos/{id}', 'PaymentController@edit');
+    Route::post('/pagos/detalles', 'PaymentController@detailPayment'); // update payment_date
+    Route::post('/pagos/{id}/titulo', 'PaymentController@updateTitle');
+    Route::post('/pagos/eliminar', 'PaymentController@delete');
 
 });
 
