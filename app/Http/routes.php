@@ -261,6 +261,8 @@ Route::group([
     Route::get('/cliente/{client_id}/destacar/{state}', 'ManagementController@star');
     // Impersonate (login as client)
     Route::get('/cliente/{client_id}/impersonate', 'ManagementController@impersonate');
+    // Display mode
+    Route::get('/cliente/display', 'ManagementController@displayMode');
 
     // Clients management
     Route::get('/cliente/registrar', 'ClientController@create');

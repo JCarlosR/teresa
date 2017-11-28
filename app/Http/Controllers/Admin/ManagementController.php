@@ -44,6 +44,7 @@ class ManagementController extends Controller
             $query->orderBy('starred', 'desc');
 
         $clients = $query->get();
+        // dd(session('clients_display_mode'));
         return view('admin.index')->with(compact('clients'));
     }
 
@@ -63,4 +64,9 @@ class ManagementController extends Controller
         return redirect('/');
     }
 
+    public function displayMode(Request $request)
+    {
+        session()->set('clients_display_mode', $request->input('mode'));
+        return back();
+    }
 }
