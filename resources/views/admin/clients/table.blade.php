@@ -3,7 +3,8 @@
     <tr>
         <td>ID</td>
         <td>Tipo</td>
-        <td>Info</td>
+        <td>Logo</td>
+        <td>Información</td>
 
         <td>Opciones</td>
     </tr>
@@ -15,9 +16,11 @@
         <td>{{ $client->client_type }}</td>
         <td>
             <a href="{{ url("admin/cliente/seleccionar/$client->id") }}">
-                <img src="{{ url($client->photo_route) }}" width="80" alt="Logo {{ $client->name }}" class="img-circle">
-                <h4 class="mt-10 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
+                <img src="{{ url($client->photo_route) }}" width="60" alt="Logo {{ $client->name }}">
             </a>
+        </td>
+        <td>
+            <h4 class="mt-10 mb-5 text-black">{{ $client->name ?: 'Sin alias' }}</h4>
             <p class="fs-12 text-uppercase text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
             <p>{{ $client->description ?: 'Descripción sin especificar' }}</p>
         </td>
