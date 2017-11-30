@@ -26,12 +26,11 @@
             <div class="row">
                 @foreach ($services as $service)
                 <div class="col-md-4 col-sm-6 col-xs-12  heig-serv ">
-                    <img src="" alt="">
-                    <h3>{{ $service->name }}</h3>
 
                     @if($service->featuredImage)
                         <img src="{{ $service->featuredImage->fullPath }}" alt="">
                     @endif
+                    <h3>{{ $service->name }}</h3>
                     <p>{{ $service->description }}</p>
                     <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="button back-btn">Ver más</a>
 
