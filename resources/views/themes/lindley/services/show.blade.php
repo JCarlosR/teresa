@@ -33,7 +33,7 @@
 
                     <div class="col-md-6">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
-                            <img src="{{ $image->url }}" class="img-responsive" alt="{{ $image->name }}">
+                            <img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}">
                         @endforeach
                     </div>
 

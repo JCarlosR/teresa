@@ -27,7 +27,7 @@
             <div class="col-md-12">
                 <div class="col-md-8">
                     @foreach ($project->images()->where('featured', false)->get() as $image)
-                        <img src="{{ $image->url }}" class="img-responsive" alt="{{ $image->name }}">
+                        <img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}">
                     @endforeach
                 </div>
                 <div class="col-md-4 pad40">
