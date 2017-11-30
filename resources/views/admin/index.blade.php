@@ -21,13 +21,15 @@
             </div>
         @endif
 
-        <div class="row text-right">
-            <div class="col-md-12">
-                <a href="{{ url('/admin/cliente/registrar') }}" class="btn btn-primary">
-                    <i class="glyphicon glyphicon-user"></i>
-                    Registrar nuevo cliente
-                </a>
-            </div>
+        <div class="text-right">
+            <a href="{{ url('/admin/cliente/registrar') }}" class="btn btn-sm btn-primary">
+                <i class="glyphicon glyphicon-plus"></i>
+                Nuevo cliente
+            </a>
+            <a href="{{ url('/admin/super') }}" class="btn btn-info btn-sm">
+                <i class="glyphicon glyphicon-cloud"></i>
+                Ir al super panel
+            </a>
         </div>
 
         <p><b>Bienvenido {{ auth()->user()->name }}!</b></p>

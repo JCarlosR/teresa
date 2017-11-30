@@ -263,6 +263,8 @@ Route::group([
     Route::get('/cliente/{client_id}/impersonate', 'ManagementController@impersonate');
     // Display mode
     Route::get('/cliente/display', 'ManagementController@displayMode');
+    // Super panel
+    Route::get('/super', 'SuperPanelController@index');
 
     // Clients management
     Route::get('/cliente/registrar', 'ClientController@create');
