@@ -27,79 +27,72 @@
                 @foreach ($services as $service)
                 <div class="col-md-4 col-sm-6 col-xs-12  heig-serv ">
 
-                    @if($service->featuredImage)
-                        <img src="{{ $service->featuredImage->fullPath }}" alt="">
-                    @endif
-                    <h3>{{ $service->name }}</h3>
-                    <p>{{ $service->description }}</p>
-                    <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="button back-btn">Ver más</a>
+                @if($service->featuredImage)
+                <img src="{{ $service->featuredImage->fullPath }}" alt="">
+                @endif
+                <h3>{{ $service->name }}</h3>
+                <p>{{ $service->description }}</p>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="button back-btn">Ver más</a>
 
                 </div>
                 @endforeach
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
+                    {{--<h3>TIENDA RETAIL</h3>--}}
+                    {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de locales--}}
+                        {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                    {{--<a href="" class="button back-btn">Ver más</a>--}}
+
+                {{--</div>--}}
+                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>DESARROLLO INTEGRAL</h3>--}}
-                    {{--<p>Basándonos en el layout y parámetros que nos da el cliente, desarrollamos el proyecto de--}}
-                        {{--arquitectura con detalles y especialidades como instalaciones eléctricas, instalaciones--}}
-                        {{--sanitarias, instalaciones de seguridad, instalaciones electromecánicas y estructurales según sea--}}
-                        {{--el requerimiento, con todos estos planos y documentos, tramitar las diversas licencias del--}}
-                        {{--proyecto con el centro comercial o al Municipio correspondiente.</p>--}}
+
+                    {{--<p>Desarrollamos el Proyecto de Arquitectura con detalles y todas las especialidades, diseños, mantenimiento, construcción, supervisión que sean necesarias.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>IMPLEMENTACÍON TIENDAS RETAIL</h3>--}}
-                    {{--<p>Es el servicio de construcción e implementación total de la tienda. Se inicia con la elaboración--}}
-                        {{--del presupuesto de obra según el proyecto de arquitectura, detalles, mobiliario, accesorios y--}}
-                        {{--especialidades para la tienda. Entregamos la tienda totalmente implementada.</p>--}}
+                    {{--<p>Servicios de implementación, mantenimiento por Lindley Arquitectos, implementando más de 10 Tiendas Retail en centros comerciales y ciudades del Perú.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>MANTENIMIENTO TIENDAS--}}
 
                     {{--</h3>--}}
-                    {{--<p>Mantenimiento en general de toda la tienda, mantenimiento de carpintería, mantenimiento de--}}
-                        {{--muebles, pintura de interiores y fachadas, mantenimiento de Instalaciones eléctricas e--}}
-                        {{--iluminación, mantenimiento de equipos de Aire Acondicionado, mantenimiento del sistema de--}}
-                        {{--seguridad, mantenimiento del sistema de detección de humo, mantenimiento del sistema de agua--}}
-                        {{--contra incendio y de todo lo que sea necesario.</p>--}}
+                    {{--<p>Mantenimiento general de Tiendas y Locales Comerciales, y de todo lo que sea Necesario para que todas las instalaciones del local estén siempre operativas.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>DISEÑO DE PLANOS DE SEGURIDAD--}}
 
                     {{--</h3>--}}
-                    {{--<p>Somos especialistas en el diseño de Planos de Seguridad, señalización y evacuación para proyectos--}}
-                        {{--de tiendas y locales comerciales.</p>--}}
+                    {{--<p>Servicio especializado de diseño del Proyecto de Seguridad para diferentes tiendas retail y locales comerciales por Lindley Arquitectos,Lima, Perú.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>SUPERVISIÓN PROYECTOS--}}
 
                     {{--</h3>--}}
-                    {{--<p>Ofrecemos el servicio de supervisión del proyecto de construcción, arquitectura e implementación--}}
-                        {{--de Tiendas y locales Comerciales Retail de terceros, en centros comerciales o independientes.--}}
-                        {{--Esta supervisión es para revisar y verificar la correcta implementación de la Tienda según el--}}
-                        {{--proyecto.</p>--}}
+                    {{--<p>Servicio de supervisión del proyectos comerciales en especialidades como construcción e implementación de Tiendas y locales Retail en centros comerciales.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
                 {{--<div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-4 heig-serv ">--}}
-                    {{--<img src="" alt="">--}}
+                    {{--<img src="/themes/lindley/imagenes/servicios/1.jpg" alt="">--}}
                     {{--<h3>--}}
                         {{--MANTENIMIENTO SISTEMA SEGURIDAD--}}
 
                     {{--</h3>--}}
-                    {{--<p>Servicio especializado de Mantenimiento de Sistemas de alarma contra incendio, Sistema de--}}
-                        {{--detección de humo, Sistema de agua contra incendio, luces de emergencia, extintores, señalética,--}}
-                        {{--etc. En tiendas de diferentes centros comerciales del Perú.</p>--}}
+                    {{--<p>Mantenimiento general de Tiendas y Locales Comerciales, y de todo lo que sea Necesario para que todas las instalaciones del local estén siempre operativas.</p>--}}
                     {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
