@@ -345,6 +345,10 @@ div.back-services i{
 }
 
 /*proyectos*/
+.h1-projects h1
+{
+    font-size: 22px;
+}
 .sect-projects{
     background: #f5f5f5;
     margin: 40px 0px;
@@ -587,8 +591,16 @@ ul.list-footer{
     color: #ddd;
 }
 .breadcrumb-item a{
-    color: #c71c77;
+    color: #777;
     text-decoration: none;
+    text-transform: initial;
+}
+.breadcrumb-item a:hover{
+    color:#c71c77;
+}
+.breadcrumb>.active {
+    color: #777;
+    text-transform: initial;
 }
 .copyrights{
     color: #777;

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-5">
-                <div>
+                <div class="h1-projects">
                     <h1>{{ $project->name }}</h1>
                 </div>
             </div>
