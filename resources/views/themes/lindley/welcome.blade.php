@@ -197,42 +197,7 @@
             </a>
         @endforeach
 
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-before-after.html" class="bathrooms clickable">--}}
-                {{--<img src="/images/latest-project-02.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Bathroom</h4>--}}
-                        {{--<span>February 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
 
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-content-right.html" class="kitchens clickable">--}}
-                {{--<img src="/images/latest-project-03.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Kitchen</h4>--}}
-                        {{--<span>January 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
-
-
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-before-after.html" class="bathrooms clickable">--}}
-                {{--<img src="/images/latest-project-04.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Bathroom</h4>--}}
-                        {{--<span>December 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
 
         </div>
 
@@ -245,57 +210,7 @@
         </div>
 
     </div>
-    {{--<section class="sect-projects pad-t60 pa">--}}
-    {{--<div class="container">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-md-12 pad-bt40 text-center">--}}
 
-    {{--<h2>ARQUITECTURA TIENDAS Y LOCALES COMERCIALES</h2>--}}
-    {{--</div>--}}
-    {{--<h3 class=" pad40 text-center">PROYECTOS RECIENTES</h3>--}}
-    {{--<ul class="dise-leter text-center">--}}
-    {{--<li class="btn active filter-button" data-filter="todos">Todos</li>--}}
-    {{--<li class="btn  filter-button" data-filter="tiendas">Tiendas</li>--}}
-    {{--<li class="btn  filter-button" data-filter="oficinas">Oficinas</li>--}}
-    {{--<li class="btn  filter-button" data-filter="supervision">Supervisión</li>--}}
-    {{--<li class="btn  filter-button" data-filter="otros">Otros</li>--}}
-    {{--</ul>--}}
-    {{--<br>--}}
-    {{--<div class="row img-padding pad-bt40">--}}
-
-    {{--<div class="col-lg-4 col-md-4  col-sm-4 col-xs-6 img filter tiendas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter oficinas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter supervision">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter tiendas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--</div>--}}
-
-
-    {{--</div>--}}
-    {{--<div class="pad-bt20">--}}
-    {{--<ul>--}}
-    {{--<li class="text-center">--}}
-    {{--<a href="#small-dialog" class="button border medium ">--}}
-    {{--<span>VER TODOS LOS PROYECTOS</span></a>--}}
-    {{--</li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-
-    {{--</div>--}}
-
-    {{--</div>--}}
-    {{--</section>--}}
     <section class="container">
         <div class="row">
             <div class="col-md-12 border-bt">

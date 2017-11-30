@@ -5,8 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-sm-5">
-                    <div>
+                    <div class="title-pes">
                         <h1>Servicios</h1>
+                        <span>Diseño y Arquitectura de Tiendas y Locales Comerciales</span>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-7">
