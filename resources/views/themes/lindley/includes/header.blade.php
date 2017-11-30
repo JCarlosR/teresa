@@ -5,7 +5,7 @@
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div id="logo">
-                    <a href="{{ $me->getLinkTo('/') }}}" title="">
+                    <a href="{{ $me->getLinkTo('/') }}}" title="Lindley Arquitectos">
                         <img src="/themes/lindley/imagenes/logos/logo-lindley-arquitectos-web.jpg" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
                 </div>
             </div>
@@ -66,11 +66,11 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav menu">
                             {{--poner active el class vacio estudiar ese tema--}}
-                            <li class=""><a href="{{ $me->getLinkTo('/') }}">INICIO</a></li>
-                            <li><a href="{{ $me->getLinkTo('/nosotros') }}">NOSOTROS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/servicios') }}">SERVICIOS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/proyectos') }}">PROYECTOS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/contacto') }}">CONTACTO</a></li>
+                            <li class=""><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">INICIO</a></li>
+                            <li><a href="{{ $me->getLinkTo('/nosotros') }}" title="Sobre Lindley Arquitectos">NOSOTROS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">SERVICIOS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/proyectos') }}" title="Proyectos de Lindley Arquitectos">PROYECTOS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/contacto') }}" title="Página de contacto Lindley Arquitectos">CONTACTO</a></li>
 
                         </ul>
 

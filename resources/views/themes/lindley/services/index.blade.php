@@ -30,12 +30,12 @@
                 <div class="col-md-4 col-sm-4 col-xs-12  service-alt  ">
 
                 @if($service->featuredImage)
-                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover"><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title=""><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
                 @endif
                 <div class="heig-serv">
                 <h3 class="service-h3">{{ $service->name }}</h3>
                 <p>{{ $service->description }}</p>
-                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="back-btn">Ver más</a>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="back-btn" title="Ver Todos los Servicios">Ver más</a>
                 </div>
 
 

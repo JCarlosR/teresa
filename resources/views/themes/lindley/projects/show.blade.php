@@ -11,8 +11,8 @@
             <div class="col-md-7 col-sm-7">
                 <nav id="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}">Inicio </a></li>
-                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/proyectos') }}">Proyectos </a></li>
+                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">Inicio </a></li>
+                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/proyectos') }}" title="Proyectos de Arquitectura Lindley Arquitectos">Proyectos </a></li>
                         <li class="breadcrumb-item active">{{ $project->name }}</li>
                     </ol>
                 </nav>

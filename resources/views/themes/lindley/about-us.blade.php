@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 pad40 border-bt-2 link-projects">
-                        <h2><a href="/proyectos">VER TODOS LOS PROYECTOS</a></h2>
+                        <h2><a href="{{ $me->getLinkTo('/proyectos') }}">VER TODOS LOS PROYECTOS</a></h2>
                     </div>
 
 

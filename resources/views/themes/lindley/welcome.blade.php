@@ -13,7 +13,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item slides active">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Los Angeles">
+                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">
                 <div class="hero">
 
 
@@ -22,7 +22,7 @@
 
                     <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
 
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
+                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
 
 
                 </div>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="item slides">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Chicago">
+                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">
                 <div class="hero">
 
 
@@ -39,14 +39,14 @@
 
                     <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
 
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
+                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
 
 
                 </div>
             </div>
 
             <div class="item">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="New York">
+                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">
                 <div class="hero">
 
 
@@ -55,7 +55,7 @@
 
                     <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
 
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
+                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
 
 
                 </div>
@@ -63,11 +63,11 @@
         </div>
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" data-slide="next" title="Ir a Slider Siguiente">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -180,9 +180,9 @@
         <div class="full-width projects">
 
            @foreach ($me->projects()->take(4)->get() as $project)
-            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class="kitchens clickable">
+            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" title="{{ $project->featuredImage->name }}" class="kitchens clickable">
                     @if ($project->featuredImage)
-                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}" alt="{{ $project->featuredImage->name }}">
                     {{--@else--}}
                         {{--<img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="">--}}
                     @endif
@@ -204,7 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ $me->getLinkTo('/proyecto') }}" class="button medium border">VER TODOS LOS PROYECTOS</a>
+                    <a href="{{ $me->getLinkTo('/proyecto') }}" class="button medium border" title="Ir a página de Todos los Proyectos">VER TODOS LOS PROYECTOS</a>
                 </div>
             </div>
         </div>
@@ -328,13 +328,17 @@
     <section >
         <div class="container">
             <div class="row">
-                <div class="col-md-12 border-bt pad-t40">
-                    <h2 class="text-center">NUESTROS CLIENTES</h2>
+                <div class="col-md-12">
+                    <div class="border-bt-3">
+                        <p>ALGUNOS DE NUESTROS CLIENTES, <span class="color-span"> ÚNETE A ELLOS!</span></p>
+                    </div>
+
 
                 </div>
-                @include('themes.lindley.includes.clients-carousel')
+
 
             </div>
+            @include('themes.lindley.includes.clients-carousel')
 
         </div>
 
