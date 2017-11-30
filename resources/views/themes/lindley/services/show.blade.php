@@ -1,0 +1,96 @@
+@extends('themes.lindley.base')
+@section('content')
+    <section class="breadcrumb-section back-breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-5">
+                    <div>
+                        <h1 class="size-title">{{ $service->name }}</h1>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-7">
+                    <nav id="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}">Inicio </a></li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/servicios') }}">Servicios</a></li>
+
+                            <li class="breadcrumb-item active">{{ $service->name }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+
+        <div class="container">
+
+
+            <div class="row">
+                @include('themes.lindley.includes.service-nav')
+                <div class="col-md-9">
+
+                    <div class="col-md-6">
+                        {{--@foreach ($service->images()->where('featured', false)->get())--}}
+                        {{--@if ($service->featuredImage)--}}
+                            {{--<img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">--}}
+                        {{--@else--}}
+                            {{--<img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="{{ $service->name }}">--}}
+                        {{--@endif--}}
+                        {{--@endforeach--}}
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="border-bt">
+                            <h3>{{ $service->name }}</h3>
+                        </div>
+
+                       {!! $service->question_1 !!}
+
+                       {!! $service->question_2 !!}
+
+
+                       {!! $service->question_3 !!}
+
+
+
+                       {!! $service->question_5 !!}
+
+
+                        <div class="border-t ">
+                            <h3>PROYECTO DE ARQUITECTURA</h3>
+                        </div>
+
+                       {!! $service->question_4 !!}
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pad40 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="border-bt-3">
+                        <p>ALGUNOS DE NUESTROS CLIENTES, <span class="color-span"> ÚNETE A ELLOS!</span></p>
+                    </div>
+                    @include('themes.lindley.includes.clients-carousel')
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+@endsection
