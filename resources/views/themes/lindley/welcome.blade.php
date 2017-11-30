@@ -179,7 +179,7 @@
         <!-- Projects -->
         <div class="full-width projects">
 
-           @foreach ($me->projects()->take(4) as $projects)
+           @foreach ($me->projects()->take(4)->get() as $project)
             <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class="kitchens clickable">
                     @if ($project->featuredImage)
                         <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">

@@ -5,15 +5,15 @@
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <div>
-                    <h1>Proyecto 01</h1>
+                    <h1>{{ $project->name }}</h1>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7">
                 <nav id="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Inicio </a></li>
-                        <li class="breadcrumb-item"><a href="/proyecto">Proyectos </a></li>
-                        <li class="breadcrumb-item active">proyectos 01</li>
+                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}">Inicio </a></li>
+                        <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/proyectos') }}">Proyectos </a></li>
+                        <li class="breadcrumb-item active">{{ $project->name }}</li>
                     </ol>
                 </nav>
             </div>
@@ -26,7 +26,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-8">
-
+                    @foreach ($project->images()->where('featured', false)->get() as $image)
+                        <img src="{{ $image->url }}" class="img-responsive" alt="{{ $image->name }}">
+                    @endforeach
                 </div>
                 <div class="col-md-4 pad40">
                     <div class="border-bt">

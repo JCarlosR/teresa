@@ -1,4 +1,5 @@
 @extends('themes.lindley.base')
+
 @section('content')
     <section class="breadcrumb-section back-breadcrumb">
         <div class="container">
@@ -31,16 +32,11 @@
                 <div class="col-md-9">
 
                     <div class="col-md-6">
-                        {{--@foreach ($service->images()->where('featured', false)->get())--}}
-                        {{--@if ($service->featuredImage)--}}
-                            {{--<img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">--}}
-                        {{--@else--}}
-                            {{--<img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="{{ $service->name }}">--}}
-                        {{--@endif--}}
-                        {{--@endforeach--}}
-
-
+                        @foreach ($service->images()->where('featured', false)->get() as $image)
+                            <img src="{{ $image->url }}" class="img-responsive" alt="{{ $image->name }}">
+                        @endforeach
                     </div>
+
                     <div class="col-md-6">
                         <div class="border-bt">
                             <h3>{{ $service->name }}</h3>
