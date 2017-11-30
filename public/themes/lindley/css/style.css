@@ -649,11 +649,13 @@ ul.list-footer{
 #testimonials {
     position: relative;
     height: 320px;
-    background: url(../images/testimonials-bg.jpg) no-repeat 50%;
+    background: url(/themes/lindley/imagenes/testimonials-bg.jpg) no-repeat 50%;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
     width: 100%;
 }
 #testimonials:before {
@@ -661,7 +663,7 @@ ul.list-footer{
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(34,34,34,0.8);
+    background-color: rgba(34,34,34,0.4);
     position: absolute;
 }
 

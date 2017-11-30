@@ -27,7 +27,7 @@
             <div class="col-md-12">
                 <div class="col-md-8 pad-t80 img-spacio">
                     @foreach ($project->images()->where('featured', false)->get() as $image)
-                        <a href="" class="mfp-gallery img-hover" title="{{ $image->name }}"> <img src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"></a>
+                        <a href="" class=" img-hover" title="{{ $image->name }}"> <img src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"></a>
                     @endforeach
                     <div>
                         <ul>
