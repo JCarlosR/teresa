@@ -21,14 +21,15 @@
             </div>
         </div>
     </section>
+
     <section class="pad80">
         <div class="container">
             <div class="row">
                 @foreach ($services as $service)
-                <div class="col-md-4 col-sm-4 col-xs-12  service-alt ">
+                <div class="col-md-4 col-sm-4 col-xs-12  service-alt  ">
 
                 @if($service->featuredImage)
-                <a href="" class="img-hover"><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover"><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
                 @endif
                 <div class="heig-serv">
                 <h3 class="service-h3">{{ $service->name }}</h3>

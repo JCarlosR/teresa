@@ -1775,6 +1775,9 @@ ul.nav-list{
     .heig-serv {
         width: 100%;
     }
+    .sidebar{
+        position: inherit;
+    }
 
     /*end carousel slider*/
     /* Aquí van los estilos para iPad horizontal */
@@ -1952,6 +1955,7 @@ ul.nav-list{
         text-align: center;
 
     }
+
 
 
 

@@ -6,7 +6,7 @@
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div id="logo">
                     <a href="{{ $me->getLinkTo('/') }}}" title="">
-                        <img src="{{ $me->photo_route }}" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
+                        <img src="/themes/lindley/imagenes/logos/logo-lindley-arquitectos-web.jpg" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
                 </div>
             </div>
 
