@@ -33,13 +33,13 @@
                         </div>
                     </li>
 
-                    <li class="small-dialog-headline">
-                        <a href="#small-dialog" class="button border medium " data-toggle="modal" data-target="#myModal"
-                           title="Escribir al formulario Grupo Tawa">
-                            Solicitar Servicio
 
-                        </a>
-                    </li>
+
+                        <li class="small-dialog-headline">
+                            <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
+                                <span>Solicitar Servicio</span></a>
+                        </li>
+
                 </ul>
             </div>
             <div class="clearfix"></div>

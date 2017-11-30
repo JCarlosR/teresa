@@ -31,7 +31,7 @@
                 @include('themes.lindley.includes.service-nav')
                 <div class="col-md-9">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 img-service-prin">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
                             <img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}">
                         @endforeach

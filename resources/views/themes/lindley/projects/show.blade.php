@@ -25,10 +25,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-8">
+                <div class="col-md-8 pad-t80 img-spacio">
                     @foreach ($project->images()->where('featured', false)->get() as $image)
-                        <img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}">
+                        <a href="" class="mfp-gallery img-hover" title="{{ $image->name }}"> <img src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"></a>
                     @endforeach
+                    <div>
+                        <ul>
+                            <li class="small-dialog-headline">
+                                <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
+                                    <span>Solicitar Nuestro servicio</span></a>
+                            </li>
+                        </ul>
+
+                       <h3> CARACTERÍSTICAS TÉCNICAS</h3>
+
+                       <p>Como característica de marca, la fachada tiene enchape de ladrillo pintados en blanco, molduras de madera fresadas, marcos de madera en los vidrios templados de las mamparas fijas de las vitrinas, la puerta de ingreso cambia a ser una puerta de mamparas corredizas de vidrio templado.</p>
+
+                        <p>Al interior de la tienda, tiene molduras rectas, pisos laminados, enchape de madera pino con acabados de diferentes colores según la zona de venta. El mobiliario es variado, predomina el MDF enchapado en tablero de pino terciado ranurado, MDF pintado y madera. Los muros, falsos techos y algunos detalles fueron trabajados en drywall.</p>
+
+                        <p>Todas las luminarias en la zona de venta son led y están ubicadas para resaltar el producto y a la vez iluminar detalles de techos o muros de la misma tienda.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 pad40">
                     <div class="border-bt">
@@ -52,8 +68,9 @@
                     </ul>
                     <br>
                     <ul>
+
                         <li class="small-dialog-headline">
-                            <a href="#small-dialog" class="button border medium ">
+                            <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
                                 <span>Escríbenos</span></a>
                         </li>
                     </ul>
@@ -69,7 +86,7 @@
                     <br>
                     <ul>
                         <li class="small-dialog-headline">
-                            <a href="#small-dialog" class="button border medium ">
+                            <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
                                 <span>Escríbenos</span></a>
                         </li>
                     </ul>
