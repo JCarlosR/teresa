@@ -46,8 +46,8 @@
                                 <h3> CARACTERÍSTICAS TÉCNICAS</h3>
                             </div>
                             {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
-                            <p> {!! $project->question_3 !!}</p>
-                            <br>
+                            <p class="pad-bt40"> {!! $project->question_3 !!}</p>
+
 
                         </div>
                     </div>
