@@ -34,7 +34,7 @@
                                         src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"
                                         title="{{ $image->name }}"></a>
                         @endforeach
-                        <div class="pad40">
+                        <div class="pad-bt40">
                             <ul>
                                 <li class="small-dialog-headline">
                                     <a data-toggle="modal" data-target="#myModal" class="button border medium ">
