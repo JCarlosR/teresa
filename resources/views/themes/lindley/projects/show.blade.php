@@ -42,9 +42,12 @@
                                 </li>
                             </ul>
 
-                            <h3> CARACTERÍSTICAS TÉCNICAS</h3>
+                            <div class="border-bt">
+                                <h3> CARACTERÍSTICAS TÉCNICAS</h3>
+                            </div>
                             {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
                             <p> {!! $project->question_3 !!}</p>
+                            <br>
 
                         </div>
                     </div>
