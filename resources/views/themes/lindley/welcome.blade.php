@@ -338,15 +338,15 @@
                         </div>
 
                         <!-- Carousel Buttons Next/Prev -->
-                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                        {{--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>--}}
+                        {{--<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--}}
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
-    <section >
+    <section class="pad60">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

@@ -5,7 +5,7 @@
                 <div class="item  active">
                     <div class="row">
                         @foreach ($me->customers as $customer)
-                            <a href="{{ $customer->url ?: '#' }}" target="_blank" title="Enlace al cliente {{ $customer->name }}">
+                            <a href="{{ $customer->url ?: '#' }}" target="_blank" class="responsive" title="Enlace al cliente {{ $customer->name }}">
                                 <img src="/images/customers/{{ $customer->image }}" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
                             </a>
                         @endforeach
