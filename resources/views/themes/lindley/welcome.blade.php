@@ -5,12 +5,12 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            {{--@foreach ($me->slides as $key => $slide)--}}
-                {{--<li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>--}}
-            {{--@endforeach--}}
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            @foreach ($me->slides as $key => $slide)
+                <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
+            @endforeach
+            {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
+            {{--<li data-target="#myCarousel" data-slide-to="1"></li>--}}
+            {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
         </ol>
 
         <!-- Wrapper for slides -->
@@ -283,12 +283,12 @@
             <div class='row'>
                 <div class=' text-center pad60  col-md-12'>
                     <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                        <!-- Bottom Carousel Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#quote-carousel" data-slide-to="1"></li>
-                            <li data-target="#quote-carousel" data-slide-to="2"></li>
-                        </ol>
+                        {{--<!-- Bottom Carousel Indicators -->--}}
+                        {{--<ol class="carousel-indicators">--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="1"></li>--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="2"></li>--}}
+                        {{--</ol>--}}
 
                         <!-- Carousel Slides / Quotes -->
                         <div class="carousel-inner">
@@ -337,9 +337,9 @@
                             </div>
                         </div>
 
-                        {{--<!-- Carousel Buttons Next/Prev -->--}}
-                        {{--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>--}}
-                        {{--<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--}}
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
