@@ -5,62 +5,80 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            @foreach ($me->slides as $key => $slide)
+                <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
+            @endforeach
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item slides active">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">
-                <div class="hero">
+            @foreach ($me->slides as $key => $slide)
+                <div class="item @if($key==0) active @endif">
+                    <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}">
+                    <div class="hero">
 
 
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
+                        <!-- Caption Content -->
+                        <div class="caption-title">{{ $slide->title }}</div>
 
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
+                        <div class="caption-text">{{ $slide->description }}</div>
 
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
-
-
-                </div>
-
-            </div>
-
-            <div class="item slides">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">
-                <div class="hero">
+                        <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
 
 
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
-
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
-
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
-
+                    </div>
 
                 </div>
-            </div>
-
-            <div class="item">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">
-                <div class="hero">
-
-
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
-
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
-
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
+            @endforeach
+            {{--<div class="item slides active">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">--}}
+                {{--<div class="hero">--}}
 
 
-                </div>
-            </div>
-        </div>
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+
+            {{--</div>--}}
+
+            {{--<div class="item slides">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">--}}
+                {{--<div class="hero">--}}
+
+
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+            {{--</div>--}}
+
+            {{--<div class="item">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">--}}
+                {{--<div class="hero">--}}
+
+
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
