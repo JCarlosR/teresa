@@ -34,7 +34,7 @@
                                         src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"
                                         title="{{ $image->name }}"></a>
                         @endforeach
-                        <div>
+                        <div class="pad40">
                             <ul>
                                 <li class="small-dialog-headline">
                                     <a data-toggle="modal" data-target="#myModal" class="button border medium ">
@@ -46,7 +46,7 @@
                                 <h3> CARACTERÍSTICAS TÉCNICAS</h3>
                             </div>
                             {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
-                            <p class="pad-bt40"> {!! $project->question_3 !!}</p>
+                            <p > {!! $project->question_3 !!}</p>
 
 
                         </div>
