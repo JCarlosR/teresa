@@ -61,24 +61,24 @@
                         <p>  {{--<small>¿Cuál fue el encargo?</small>--}}
                             {!! $project->question_1 !!}</p>
                         <ul class="borde-ul">
-                            <li><b>NOMBRE DEL PROYECTO:</b>{{ $project->name }}</li>
+                            <li><b>NOMBRE DEL PROYECTO:</b> {{ $project->name }}</li>
 
                             @if (! isset($project->services) || $project->services->count() == 0)
                                 <p>---</p>
                             @else
 
                                 @foreach ($project->services as $service)
-                                    <li><b>SERVICIOS:</b>{{ $service->name }}</li>
+                                    <li><b>SERVICIOS:</b> {{ $service->name }}</li>
                                 @endforeach
 
                             @endif
-                            <li><b>AÑO: </b>{{ $project->year }}</li>
-                            <li><b>LOCACIÓN: </b></li>
-                            <li><b>UBICACIÓN: </b></li>
-                            <li><b>CLIENTE: </b>{{ $project->client ?: '---' }}</li>
-                            <li><b>TIPO DE PROYECTO: </b>{{ $project->type ?: '---' }}</li>
-                            <li><b>ÁREA DE TIENDA: </b></li>
-                            <li><b>DURACIÓN DE PROYECTO:</b>{{ $project->duration ?: '---' }}</li>
+                            <li><b>AÑO:</b> {{ $project->year }}</li>
+                            <li><b>LOCACIÓN:</b></li>
+                            <li><b>UBICACIÓN:</b></li>
+                            <li><b>CLIENTE:</b> {{ $project->client ?: '---' }}</li>
+                            <li><b>TIPO DE PROYECTO:</b> {{ $project->type ?: '---' }}</li>
+                            <li><b>ÁREA DE TIENDA:</b></li>
+                            <li><b>DURACIÓN DE PROYECTO:</b> {{ $project->duration ?: '---' }}</li>
 
                         </ul>
                         <br>
