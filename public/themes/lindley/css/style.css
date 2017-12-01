@@ -30,7 +30,7 @@ ul{
     list-style: none;
 }
 ol{
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
     text-transform: uppercase;
 }
 
@@ -895,6 +895,7 @@ ul.list-footer{
     font-size: 13px;
     float: right;
     padding-top: 40px;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #breadcrumb ul{
     display:block;
