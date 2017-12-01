@@ -2229,5 +2229,6 @@ input[type="text"], input[type="email"], input[type="tel"], textarea, select {
     font-size: 13px;
     line-height: 23px;
     padding: 8px 16px;
+    margin-bottom: 26px;
 }
 
