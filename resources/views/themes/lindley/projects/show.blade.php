@@ -43,7 +43,8 @@
                             </ul>
 
                             <h3> CARACTERÍSTICAS TÉCNICAS</h3>
-
+                            {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
+                            <p> {!! $project->question_3 !!}</p>
 
                         </div>
                     </div>
@@ -99,10 +100,10 @@
                             </li>
                         </ul>
                         <br>
-                        <h4>CARACTERÍSTICAS TÉCNICAS</h4>
+                        {{--<h4>CARACTERÍSTICAS TÉCNICAS</h4>--}}
 
                         {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
-                        <p> {!! $project->question_3 !!}</p>
+                        {{--<p> {!! $project->question_3 !!}</p>--}}
 
 
                     </div>
