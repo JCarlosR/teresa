@@ -43,7 +43,7 @@
                         </div>
 
                         <div id="contact-message"></div>
-                        <form id="formContacto" action="https://theressa.net/formulario/contacto">
+                        <form id="lindleyFormulario" action="https://theressa.net/formulario/contacto">
                             <input type="hidden" name="user_id" value="6">
                             <input type="hidden" name="url" value="{{ request()->fullUrl() }}">
                             <div class="row">

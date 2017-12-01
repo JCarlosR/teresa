@@ -1,3 +1,35 @@
+
+//formulario theressa
+var $submitContact = $('#lindleyFormulario')
+$submitContact.on('submit', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $.ajax({
+        type: "GET",
+        url: 'https://theressa.net/formulario/contacto',
+        dataType: 'json',
+        data: $this.serialize(),
+        success: function (data) {
+            if (data.success) {
+                alert('Formulario enviado correctamente.');
+            } else {
+                displayErrorMessages(data);
+            }
+        },
+        error: function (error) {
+            console.log('Error inesperado:');
+            displayErrorMessages(error.responseJSON);
+        }
+    });
+});
+
+function displayErrorMessages(errors) {
+    for (var property in errors) {
+        if (errors.hasOwnProperty(property)) {
+            alert(errors[property]);
+        }
+    }
+}
 // Start Back To Top Start
 $('#back-to-top').on('click', function () {
     $('html, body').animate({scrollTop: 0}, 800);
@@ -126,34 +158,3 @@ $('#filters a').click(function (e) {
     $(this).addClass('selected');
 });
 
-//formulario theressa
-var $submitContact = $('#lindleyFormulario')
-$submitContact.on('submit', function (e) {
-    e.preventDefault();
-    var $this = $(this);
-    $.ajax({
-        type: "GET",
-        url: 'https://theressa.net/formulario/contacto',
-        dataType: 'json',
-        data: $this.serialize(),
-        success: function (data) {
-            if (data.success) {
-                alert('Formulario enviado correctamente.');
-            } else {
-                displayErrorMessages(data);
-            }
-        },
-        error: function (error) {
-            console.log('Error inesperado:');
-            displayErrorMessages(error.responseJSON);
-        }
-    });
-});
-
-function displayErrorMessages(errors) {
-    for (var property in errors) {
-        if (errors.hasOwnProperty(property)) {
-            alert(errors[property]);
-        }
-    }
-}

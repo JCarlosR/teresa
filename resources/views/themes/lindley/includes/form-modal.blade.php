@@ -11,7 +11,7 @@
             <div class="modal-body back-modal ">
                 <div id="contact-message"></div>
 
-                <form id="lindleyFormmulario" class="contact-form " action="https://theressa.net/formulario/contacto">
+                <form id="lindleyFormulario" class="contact-form " action="https://theressa.net/formulario/contacto">
                     <input type="hidden" name="user_id" value="6">
                     <input type="hidden" name="url" value="{{ request()->fullUrl() }}">
                     <div class="divider border-padbtm"></div>
