@@ -26,10 +26,10 @@
                     </li>
 
                     <li class="li-right">
-                        <i class="icon-call-in"></i>
+                        <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos"> <i class="icon-call-in"></i></a>
                         <div class="widget-content">
                             <span class="title">¿Consultas?</span>
-                            <span class="data"> <a href="#">(+51) 987-936-976 </a></span>
+                            <span class="data"> <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos">(+51) 987-936-976 </a></span>
                         </div>
                     </li>
 
