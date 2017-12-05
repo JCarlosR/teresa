@@ -5,8 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-sm-5">
-                    <div>
+                    <div class="title-pes">
                         <h1>Servicios</h1>
+                        <span>Diseño y Arquitectura de Tiendas y Locales Comerciales</span>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-7">
@@ -21,87 +22,132 @@
             </div>
         </div>
     </section>
-    <section class="pad-bt100">
+
+    <section class="pad80">
         <div class="container">
             <div class="row">
                 @foreach ($services as $service)
-                <div class="col-md-4 col-sm-6 col-xs-12  heig-serv ">
-                    <img src="" alt="">
-                    <h3>{{ $service->name }}</h3>
+                <div class="col-md-4 col-sm-4 col-xs-12  service-alt  ">
 
-                    @if($service->featuredImage)
-                        <img src="{{ $service->featuredImage->fullPath }}" alt="">
-                    @endif
-                    <p>{{ $service->description }}</p>
-                    <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="button back-btn">Ver más</a>
+                @if($service->featuredImage)
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title=""><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
+                @endif
+                <div class="heig-serv">
+                <h3 class="service-h3">{{ $service->name }}</h3>
+                <p>{{ $service->description }}</p>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="back-btn" title="Ver Todos los Servicios">Ver más</a>
+                </div>
+
 
                 </div>
                 @endforeach
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>DESARROLLO INTEGRAL</h3>--}}
-                    {{--<p>Basándonos en el layout y parámetros que nos da el cliente, desarrollamos el proyecto de--}}
-                        {{--arquitectura con detalles y especialidades como instalaciones eléctricas, instalaciones--}}
-                        {{--sanitarias, instalaciones de seguridad, instalaciones electromecánicas y estructurales según sea--}}
-                        {{--el requerimiento, con todos estos planos y documentos, tramitar las diversas licencias del--}}
-                        {{--proyecto con el centro comercial o al Municipio correspondiente.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
+
+                {{--<div class="col-md-4 col-sm-4 col-xs-12 service-alt">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<br>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                       {{--<div>--}}
+                           {{--<a href="" class=" back-btn">Ver más</a>--}}
+                       {{--</div>--}}
+                    {{--</div>--}}
+
 
                 {{--</div>--}}
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>IMPLEMENTACÍON TIENDAS RETAIL</h3>--}}
-                    {{--<p>Es el servicio de construcción e implementación total de la tienda. Se inicia con la elaboración--}}
-                        {{--del presupuesto de obra según el proyecto de arquitectura, detalles, mobiliario, accesorios y--}}
-                        {{--especialidades para la tienda. Entregamos la tienda totalmente implementada.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
+                {{--<div class="col-md-4 col-sm-4 col-xs-12 service-alt">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                        {{--<div>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
 
                 {{--</div>--}}
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>MANTENIMIENTO TIENDAS--}}
+                {{--<div class="col-md-4 col-sm-4 col-xs-12 service-alt">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                        {{--<div>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    {{--</h3>--}}
-                    {{--<p>Mantenimiento en general de toda la tienda, mantenimiento de carpintería, mantenimiento de--}}
-                        {{--muebles, pintura de interiores y fachadas, mantenimiento de Instalaciones eléctricas e--}}
-                        {{--iluminación, mantenimiento de equipos de Aire Acondicionado, mantenimiento del sistema de--}}
-                        {{--seguridad, mantenimiento del sistema de detección de humo, mantenimiento del sistema de agua--}}
-                        {{--contra incendio y de todo lo que sea necesario.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
-
-                {{--</div>--}}
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>DISEÑO DE PLANOS DE SEGURIDAD--}}
-
-                    {{--</h3>--}}
-                    {{--<p>Somos especialistas en el diseño de Planos de Seguridad, señalización y evacuación para proyectos--}}
-                        {{--de tiendas y locales comerciales.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 heig-serv">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>SUPERVISIÓN PROYECTOS--}}
+                {{--<div class="col-md-4 col-sm-6 col-xs-12 service-alt ">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                        {{--<div>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    {{--</h3>--}}
-                    {{--<p>Ofrecemos el servicio de supervisión del proyecto de construcción, arquitectura e implementación--}}
-                        {{--de Tiendas y locales Comerciales Retail de terceros, en centros comerciales o independientes.--}}
-                        {{--Esta supervisión es para revisar y verificar la correcta implementación de la Tienda según el--}}
-                        {{--proyecto.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
 
                 {{--</div>--}}
-                {{--<div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-4 heig-serv ">--}}
-                    {{--<img src="" alt="">--}}
-                    {{--<h3>--}}
-                        {{--MANTENIMIENTO SISTEMA SEGURIDAD--}}
+                {{--<div class="col-md-4 col-sm-4 col-xs-12 service-alt ">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                        {{--<div>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    {{--</h3>--}}
-                    {{--<p>Servicio especializado de Mantenimiento de Sistemas de alarma contra incendio, Sistema de--}}
-                        {{--detección de humo, Sistema de agua contra incendio, luces de emergencia, extintores, señalética,--}}
-                        {{--etc. En tiendas de diferentes centros comerciales del Perú.</p>--}}
-                    {{--<a href="" class="button back-btn">Ver más</a>--}}
+
+                {{--</div>--}}
+                {{--<div class="col-md-4 col-sm-4 col-xs-12  service-alt">--}}
+                    {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                       {{--class="img-responsive"></a>--}}
+                    {{--<div class="heig-serv">--}}
+                        {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                        {{--<br>--}}
+                        {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                            {{--locales--}}
+                            {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                        {{--<div>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
+
+                {{--</div>--}}
+                {{--<div class="col-md-4 col-sm-4 col-xs-12 ">--}}
+                    {{--<div class="service-alt">--}}
+                        {{--<a href="" class="img-hover "><img src="/themes/lindley/imagenes/servicios/1.jpg" alt=""--}}
+                                                           {{--class="img-responsive"></a>--}}
+                        {{--<div class="heig-serv">--}}
+                            {{--<a href=""><h3 class="service-h3">TIENDA comerciales retaiñ</h3></a>--}}
+                            {{--<p>El servicio principal de la oficina de Lindley Arquitectos es el Diseño y Remodelación de--}}
+                                {{--locales--}}
+                                {{--comerciales y Tiendas Retail para Centros Comerciales.</p>--}}
+                            {{--<a href="" class=" back-btn">Ver más</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+
+
 
                 {{--</div>--}}
 

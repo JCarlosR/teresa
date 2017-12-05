@@ -1,4 +1,5 @@
 @extends('themes.lindley.base')
+
 @section('content')
     <section class="breadcrumb-section back-breadcrumb">
         <div class="container">
@@ -11,8 +12,8 @@
                 <div class="col-md-7 col-sm-7">
                     <nav id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}">Inicio </a></li>
-                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/servicios') }}">Servicios</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">Inicio </a></li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">Servicios</a></li>
 
                             <li class="breadcrumb-item active">{{ $service->name }}</li>
                         </ol>
@@ -21,7 +22,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="pad60">
 
         <div class="container">
 
@@ -30,17 +31,12 @@
                 @include('themes.lindley.includes.service-nav')
                 <div class="col-md-9">
 
-                    <div class="col-md-6">
-                        {{--@foreach ($service->images()->where('featured', false)->get())--}}
-                        {{--@if ($service->featuredImage)--}}
-                            {{--<img src="{{ $service->featuredImage->fullPath }}" class="img-responsive" alt="{{ $service->featuredImage->name }}">--}}
-                        {{--@else--}}
-                            {{--<img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="{{ $service->name }}">--}}
-                        {{--@endif--}}
-                        {{--@endforeach--}}
-
-
+                    <div class="col-md-6 img-service-prin">
+                        @foreach ($service->images()->where('featured', false)->get() as $image)
+                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}"></a>
+                        @endforeach
                     </div>
+
                     <div class="col-md-6">
                         <div class="border-bt">
                             <h3>{{ $service->name }}</h3>

@@ -30,7 +30,7 @@ ul{
     list-style: none;
 }
 ol{
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
     text-transform: uppercase;
 }
 
@@ -345,6 +345,10 @@ div.back-services i{
 }
 
 /*proyectos*/
+.h1-projects h1
+{
+    font-size: 22px;
+}
 .sect-projects{
     background: #f5f5f5;
     margin: 40px 0px;
@@ -545,9 +549,31 @@ a.googleshare i {
 .face-share a{
     text-decoration: none;
 }
-
+.title-pes span{
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 3px;
+    margin-top: 6px;
+    display: inline-block;
+}
 /*end botones de compartir*/
 /*Footer*/
+.button.social-btn {
+    padding-left: 50px;
+    position: relative;
+    color:#fff;
+    background-color: #3b5998;
+    top: 4px;
+    text-decoration: none;
+}
+.button.social-btn:hover{
+    padding-left: 50px;
+    position: relative;
+    border:2px solid #3b5998;
+    background-color: #fff;
+    color:#666;
+    top: 4px;
+}
 
 .background{
     background: #202020;
@@ -564,31 +590,73 @@ a.googleshare i {
 ul.list-footer{
     padding-left: 0px;
     margin:0px 0px 15px 0px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
 }
-.list-footer li{
+
+.list-footer li {
     position: relative;
     list-style: none;
     padding-left: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+.list-footer li:hover{
+    color:#fff;
 }
 .list-footer li:before{
     font-family: "FontAwesome";
     font-size: 14px;
     content: "";
-    color: #fff;
+
     position: absolute;
     left: 0;
     top: 0px;
     padding: 0 15px 0 0;
     color: #ddd;
     padding-right: 80px;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.list-footer li>a{
+    color:#aaa;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .tex-call span,a{
     color: #ddd;
 }
 .breadcrumb-item a{
-    color: #c71c77;
+    color: #777;
     text-decoration: none;
+    text-transform: initial;
+}
+.breadcrumb-item a:hover{
+    color:#c71c77;
+}
+.breadcrumb>.active {
+    color: #777;
+    text-transform: initial;
 }
 .copyrights{
     color: #777;
@@ -649,11 +717,13 @@ ul.list-footer{
 #testimonials {
     position: relative;
     height: 320px;
-    background: url(../images/testimonials-bg.jpg) no-repeat 50%;
+    background: url(/themes/lindley/imagenes/testimonials-bg.jpg) no-repeat 50%;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
     width: 100%;
 }
 #testimonials:before {
@@ -661,7 +731,7 @@ ul.list-footer{
     width: 100%;
     height: 100%;
     display: inline-block;
-    background-color: rgba(34,34,34,0.8);
+    background-color: rgba(34,34,34,0.4);
     position: absolute;
 }
 
@@ -825,6 +895,8 @@ ul.list-footer{
     font-size: 13px;
     float: right;
     padding-top: 40px;
+    font-weight: 600;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #breadcrumb ul{
     display:block;
@@ -918,32 +990,177 @@ h2.left{
 
 /*Servicios*/
 .heig-serv{
-    height: 520px;
-    background: #f6f6f6;
+    padding: 31px 37px;
+    background-color: #f6f6f6;
     display: inline-block;
-    margin: 40px 20px;
-    width: 350px;
-    padding: 10px 45px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+.service-alt a {
+    float: left;
+    margin: 0;
+
 }
 a.back-btn{
     padding: 10px;
     background: #c71c77;
     color: #fff;
     text-decoration: none;
+    margin: 0px 0px 0px 20px;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+a.back-btn:hover{
+    background-color: #666;
+    top: 0;
+    padding: 10px 18px;
+    color: #fff;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+a.footer-link{
+    padding: 0px 3px;
+
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 0px 0px 0px;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+a.footer-link:hover{
+    background-color: transparent;
+    top: 0;
+    padding: 0px 0px;
+    color: #fff;
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .heig-serv h3
-{
-    font-size: 20px;
+{      margin-top: 0;
+    /*line-height: 6px;*/
+    font-size: 16px;
+    text-decoration: none;
+    padding-bottom: 10px;
 
 }
 .heig-serv a{
-    text-align: center;
+    text-decoration: none;
+}
+.heig-serv p{
+    width: 100%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-hover:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34,34,34,0.15);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+}
+.service-alt a.img-hover:before {
+    opacity: 1;
+    background-color: rgba(34,34,34,0.05);
+    z-index:9;
 }
 
+.service-alt a.img-hover:hover:before {
+    background-color: rgba(34,34,34,0.2);
+}
+
+/* Plus Icon */
+.service-alt a.img-hover:after {
+    position: absolute;
+    content:"\f067";
+    font-family: "FontAwesome";
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #c71c77;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    text-align: center;
+    -webkit-transition: transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.service-alt a.img-hover:hover:after {
+    visibility: visible;
+    opacity: 1;
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.service-alt a img {
+    transform: scale(1.09) translateX(-4%);
+    -wekbit-transition: transform 0.3s;
+    transition: transform 0.3s;
+    opacity: 0.98;
+    -webkit-opacity: 1;
+}
+
+.service-alt a:hover img { transform: scale(1.09) translateX(4%); }
+.service-alt a {
+    float: left;
+    margin: 0;
+}
 /*end services*/
+/*pages servicios*/
+.img-service-prin img{
+    padding-bottom: 20px;
+}
+/*pages end services*/
 
 /*proyectos*/
 .img-padding{
@@ -1300,7 +1517,7 @@ ul.nav-list{
 }
 
 .projects a .overlay:after {
-    background-color: #666;
+    background-color: #c71c77;
     opacity: 0.8;
 }
 
@@ -1453,7 +1670,14 @@ ul.nav-list{
 @media( max-width: 566px ) {
 
     /* Aquí van los estilos para iPad vertical */
-
+    .button.social-btn {
+        padding-left: 14px;
+        position: relative;
+        color:#fff;
+        background-color: #3b5998;
+        top: 4px;
+        text-decoration: none;
+    }
     /*General*/
     h1{
         font-size: 28px;
@@ -1533,20 +1757,16 @@ ul.nav-list{
         backface-visibility: hidden;
     }
     p{
-        text-align: justify;
+        text-align: inherit;
         initial-letter: 1px;
     }
     /*end proyectos*/
     /*servicios*/
     .heig-serv{
-        height: 520px;
-        background: #f6f6f6;
+        padding: 31px 37px;
+        background-color: #f6f6f6;
         display: inline-block;
-        margin: 40px 0px;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+        margin-bottom: 40px;
     }
     .back-services{
         background:#f5f5f5 ;
@@ -1653,7 +1873,23 @@ ul.nav-list{
 
 @media only screen and ( max-width: 1023px ) and (min-width: 567px) {
     /*carousel slider*/
+    .service-alt {
+        width: 100%;
+    }
 
+    .service-alt a {
+        line-height: 35px;
+    }
+    service-alt a>img{
+        width: 100%;
+    }
+
+    .heig-serv {
+        width: 100%;
+    }
+    .sidebar{
+        position: inherit;
+    }
 
     /*end carousel slider*/
     /* Aquí van los estilos para iPad horizontal */
@@ -1667,6 +1903,7 @@ ul.nav-list{
         background: #c71c77;
         color: #000;
     }
+
     /*menu logo telefono y boton*/
     #logo {
         margin-top: 5px;
@@ -1676,6 +1913,7 @@ ul.nav-list{
         text-align: center;
         margin-left: 20px;
     }
+
     .header-widget li {
         list-style: none;
         display: inline-block;
@@ -1685,6 +1923,7 @@ ul.nav-list{
         line-height: 24px;
         position: relative;
     }
+
     .header-widget {
         margin-top: 10px;
     }
@@ -1706,7 +1945,8 @@ ul.nav-list{
         float: left;
         width: 25%;
     }
-    .header-widget li i{
+
+    .header-widget li i {
         font-size: 30px;
         width: 40px;
     }
@@ -1724,13 +1964,18 @@ ul.nav-list{
         width: 100%;
         text-align: center;
     }
+
     .header-widget li .widget-content {
         float: none;
         max-width: 150px;
     }
-    .header-widget li span.data a { color: #c71c77; font-size: 12px }
-    /*end menu logo boton*/
 
+    .header-widget li span.data a {
+        color: #c71c77;
+        font-size: 12px
+    }
+
+    /*end menu logo boton*/
     /*end testimonial*/
     .par-testimonial {
         color: #fff;
@@ -1740,31 +1985,31 @@ ul.nav-list{
         margin-left: 0px;
         margin-right: 0px;
 
-
         padding-bottom: 160px;
     }
+
     .par-testimonial p {
         font-size: 16px;
     }
 
     /*end tetimonial*/
-
     /*HEro*/
-    .ver-nuevo{
+    .ver-nuevo {
         padding-top: 10px;
     }
+
     /*servicios*/
     .heig-serv {
-        height: 520px;
-        background: #f6f6f6;
+        padding: 31px 37px;
+        background-color: #f6f6f6;
         display: inline-block;
-        margin: 40px 10px;
-        width: 350px;
-        padding: 10px 45px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+        margin-bottom: 40px;
+        width: auto;
     }
+
+    .heig-serv p {
+        float: left;
+   }
     /*slider*/
     .caption-title{
         color: #fff;
@@ -1822,6 +2067,9 @@ ul.nav-list{
         text-align: center;
 
     }
+
+
+
 
 
 }
@@ -1959,3 +2207,30 @@ input[type="text"], input[type="email"], input[type="tel"], textarea, select {
     line-height: 1;
     width: 100%;
 }
+.img-spacio img{
+    padding-bottom: 30px;
+}
+
+/*imagenesde proyectoso*/
+.img-hover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.img-hover[title]:after {
+    content: attr(title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    background-color: rgba(34,34,34,0.5);
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 23px;
+    padding: 8px 16px;
+    margin-bottom: 26px;
+}
+

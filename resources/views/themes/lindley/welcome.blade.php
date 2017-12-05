@@ -5,69 +5,90 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            @foreach ($me->slides as $key => $slide)
+                <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
+            @endforeach
+            {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
+            {{--<li data-target="#myCarousel" data-slide-to="1"></li>--}}
+            {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item slides active">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Los Angeles">
-                <div class="hero">
+            @foreach ($me->slides as $key => $slide)
+                <div class="item @if($key==0) active @endif">
+                    <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}">
+                    <div class="hero">
 
 
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
+                        <!-- Caption Content -->
+                        <div class="caption-title">{{ $slide->title }}</div>
 
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
+                        <div class="caption-text">{{ $slide->description }}</div>
 
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
-
-
-                </div>
-
-            </div>
-
-            <div class="item slides">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Chicago">
-                <div class="hero">
+                        <a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>
 
 
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
-
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
-
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
-
+                    </div>
 
                 </div>
-            </div>
-
-            <div class="item">
-                <img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="New York">
-                <div class="hero">
-
-
-                    <!-- Caption Content -->
-                    <div class="caption-title">Diseño de Locales Comerciales</div>
-
-                    <div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>
-
-                    <a href="#small-dialog" class="button medium  popup-with-zoom-anim">Solicitar Servicio</a>
+            @endforeach
+            {{--<div class="item slides active">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">--}}
+                {{--<div class="hero">--}}
 
 
-                </div>
-            </div>
-        </div>
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+
+            {{--</div>--}}
+
+            {{--<div class="item slides">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">--}}
+                {{--<div class="hero">--}}
+
+
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+            {{--</div>--}}
+
+            {{--<div class="item">--}}
+                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">--}}
+                {{--<div class="hero">--}}
+
+
+                    {{--<!-- Caption Content -->--}}
+                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
+
+                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
+
+                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
+
+
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" data-slide="next" title="Ir a Slider Siguiente">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -179,10 +200,10 @@
         <!-- Projects -->
         <div class="full-width projects">
 
-           @foreach ($me->projects()->take(4) as $projects)
-            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class="kitchens clickable">
+           @foreach ($me->projects()->take(4)->get() as $project)
+            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" title="{{ $project->featuredImage->name }}" class="kitchens clickable">
                     @if ($project->featuredImage)
-                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}" alt="{{ $project->featuredImage->name }}">
                     {{--@else--}}
                         {{--<img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png" class="img-responsive" alt="">--}}
                     @endif
@@ -197,105 +218,20 @@
             </a>
         @endforeach
 
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-before-after.html" class="bathrooms clickable">--}}
-                {{--<img src="/images/latest-project-02.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Bathroom</h4>--}}
-                        {{--<span>February 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
 
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-content-right.html" class="kitchens clickable">--}}
-                {{--<img src="/images/latest-project-03.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Kitchen</h4>--}}
-                        {{--<span>January 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
-
-
-            {{--<!-- Item -->--}}
-            {{--<a href="single-project-before-after.html" class="bathrooms clickable">--}}
-                {{--<img src="/images/latest-project-04.jpg" alt="">--}}
-                {{--<div class="overlay">--}}
-                    {{--<div class="overlay-content">--}}
-                        {{--<h4>Bathroom</h4>--}}
-                        {{--<span>December 2016</span>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="plus-icon"></div>--}}
-            {{--</a>--}}
 
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ $me->getLinkTo('/proyecto') }}" class="button medium border">VER TODOS LOS PROYECTOS</a>
+                    <a href="{{ $me->getLinkTo('/proyecto') }}" class="button medium border" title="Ir a página de Todos los Proyectos">VER TODOS LOS PROYECTOS</a>
                 </div>
             </div>
         </div>
 
     </div>
-    {{--<section class="sect-projects pad-t60 pa">--}}
-    {{--<div class="container">--}}
-    {{--<div class="row">--}}
-    {{--<div class="col-md-12 pad-bt40 text-center">--}}
 
-    {{--<h2>ARQUITECTURA TIENDAS Y LOCALES COMERCIALES</h2>--}}
-    {{--</div>--}}
-    {{--<h3 class=" pad40 text-center">PROYECTOS RECIENTES</h3>--}}
-    {{--<ul class="dise-leter text-center">--}}
-    {{--<li class="btn active filter-button" data-filter="todos">Todos</li>--}}
-    {{--<li class="btn  filter-button" data-filter="tiendas">Tiendas</li>--}}
-    {{--<li class="btn  filter-button" data-filter="oficinas">Oficinas</li>--}}
-    {{--<li class="btn  filter-button" data-filter="supervision">Supervisión</li>--}}
-    {{--<li class="btn  filter-button" data-filter="otros">Otros</li>--}}
-    {{--</ul>--}}
-    {{--<br>--}}
-    {{--<div class="row img-padding pad-bt40">--}}
-
-    {{--<div class="col-lg-4 col-md-4  col-sm-4 col-xs-6 img filter tiendas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter oficinas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter supervision">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 img filter tiendas">--}}
-    {{--<img src="/imagenes/prueba.jpg" class="img-responsive">--}}
-    {{--</div>--}}
-
-    {{--</div>--}}
-
-
-    {{--</div>--}}
-    {{--<div class="pad-bt20">--}}
-    {{--<ul>--}}
-    {{--<li class="text-center">--}}
-    {{--<a href="#small-dialog" class="button border medium ">--}}
-    {{--<span>VER TODOS LOS PROYECTOS</span></a>--}}
-    {{--</li>--}}
-    {{--</ul>--}}
-    {{--</div>--}}
-
-    {{--</div>--}}
-
-    {{--</div>--}}
-    {{--</section>--}}
     <section class="container">
         <div class="row">
             <div class="col-md-12 border-bt">
@@ -347,12 +283,12 @@
             <div class='row'>
                 <div class=' text-center pad60  col-md-12'>
                     <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                        <!-- Bottom Carousel Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#quote-carousel" data-slide-to="1"></li>
-                            <li data-target="#quote-carousel" data-slide-to="2"></li>
-                        </ol>
+                        {{--<!-- Bottom Carousel Indicators -->--}}
+                        {{--<ol class="carousel-indicators">--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="1"></li>--}}
+                            {{--<li data-target="#quote-carousel" data-slide-to="2"></li>--}}
+                        {{--</ol>--}}
 
                         <!-- Carousel Slides / Quotes -->
                         <div class="carousel-inner">
@@ -401,7 +337,7 @@
                             </div>
                         </div>
 
-                        {{--<!-- Carousel Buttons Next/Prev -->--}}
+                        <!-- Carousel Buttons Next/Prev -->
                         {{--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>--}}
                         {{--<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--}}
                     </div>
@@ -410,16 +346,20 @@
 
         </div>
     </section>
-    <section >
+    <section class="pad60">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 border-bt pad-t40">
-                    <h2 class="text-center">NUESTROS CLIENTES</h2>
+                <div class="col-md-12">
+                    <div class="border-bt-3">
+                        <p>ALGUNOS DE NUESTROS CLIENTES, <span class="color-span"> ÚNETE A ELLOS!</span></p>
+                    </div>
+
 
                 </div>
-                @include('themes.lindley.includes.clients-carousel')
+
 
             </div>
+            @include('themes.lindley.includes.clients-carousel')
 
         </div>
 

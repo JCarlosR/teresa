@@ -52,7 +52,7 @@
         <div class="full-width projects">
         @foreach ($me->projects as $project)
             <!-- Item -->
-            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class=".category-{{ $service->id }}">
+            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class="@foreach ($project->services as $service) category-{{ $service->id }} @endforeach">
                 @if ($project->featuredImage)
                 <img src="{{ $project->featuredImage->fullPath }}" alt="">
                 @endif

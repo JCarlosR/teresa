@@ -5,8 +5,8 @@
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div id="logo">
-                    <a href="{{ $me->getLinkTo('/') }}}" title="">
-                        <img src="{{ $me->photo_route }}" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
+                    <a href="{{ $me->getLinkTo('/') }}}" title="Lindley Arquitectos">
+                        <img src="/themes/lindley/imagenes/logos/logo-lindley-arquitectos-web.jpg" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
                 </div>
             </div>
 
@@ -26,20 +26,20 @@
                     </li>
 
                     <li class="li-right">
-                        <i class="icon-call-in"></i>
+                        <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos"> <i class="icon-call-in"></i></a>
                         <div class="widget-content">
                             <span class="title">¿Consultas?</span>
-                            <span class="data"> <a href="#">(+51) 987-936-976 </a></span>
+                            <span class="data"> <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos">(+51) 987-936-976 </a></span>
                         </div>
                     </li>
 
-                    <li class="small-dialog-headline">
-                        <a href="#small-dialog" class="button border medium " data-toggle="modal" data-target="#myModal"
-                           title="Escribir al formulario Grupo Tawa">
-                            Solicitar Servicio
 
-                        </a>
-                    </li>
+
+                        <li class="small-dialog-headline">
+                            <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
+                                <span>Solicitar Servicio</span></a>
+                        </li>
+
                 </ul>
             </div>
             <div class="clearfix"></div>
@@ -66,11 +66,11 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav menu">
                             {{--poner active el class vacio estudiar ese tema--}}
-                            <li class=""><a href="{{ $me->getLinkTo('/') }}">INICIO</a></li>
-                            <li><a href="{{ $me->getLinkTo('/nosotros') }}">NOSOTROS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/servicios') }}">SERVICIOS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/proyectos') }}">PROYECTOS</a></li>
-                            <li><a href="{{ $me->getLinkTo('/contacto') }}">CONTACTO</a></li>
+                            <li class=""><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">INICIO</a></li>
+                            <li><a href="{{ $me->getLinkTo('/nosotros') }}" title="Sobre Lindley Arquitectos">NOSOTROS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">SERVICIOS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/proyectos') }}" title="Proyectos de Lindley Arquitectos">PROYECTOS</a></li>
+                            <li><a href="{{ $me->getLinkTo('/contacto') }}" title="Página de contacto Lindley Arquitectos">CONTACTO</a></li>
 
                         </ul>
 
