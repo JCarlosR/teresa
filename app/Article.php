@@ -12,6 +12,7 @@ class Article extends Model
         return strlen(strip_tags($this->context)) +
             strlen(strip_tags($this->idea_development));
     }
+
     public function getUrlAttribute()
     {
         // temporary FIXED url

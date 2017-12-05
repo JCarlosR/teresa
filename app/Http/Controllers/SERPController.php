@@ -36,11 +36,16 @@ class SERPController extends Controller
             $articles = $client->articles;
             $this->addHeadCodeToArticles($articles, $client);
         }
+        if ($client->hasSection('Marcas')) {
+            $brands = $client->brands;
+            $this->addHeadCodeToBrands($brands, $client);
+        }
 
         $general_pages = $this->getHeadCodeForGeneralPages($client);
 
         return view('client.serp.index')->with(compact(
-            'client', 'services', 'projects', 'links', 'articles', 'general_pages'
+            'client', 'services', 'projects', 'links',
+            'articles', 'brands', 'general_pages'
         ));
     }
 
@@ -147,6 +152,19 @@ class SERPController extends Controller
             ];
 
             $article->code_string = view()->make('client.serp.header')->with($data)->render();
+        }
+    }
+
+    public function addHeadCodeToBrands($brands, $client) {
+        foreach ($brands as $brand) {
+            $data = [
+                'title' => $brand->title,
+                'description' => $brand->description,
+                'absoluteUrl' => $brand->absoluteUrl($client->domain),
+                'me' => $client
+            ];
+
+            $brand->code_string = view()->make('client.serp.header')->with($data)->render();
         }
     }
 

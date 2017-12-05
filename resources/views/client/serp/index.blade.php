@@ -207,16 +207,50 @@
             </div>
         </div>
     @endif
+
+    @if ($client->hasSection('Marcas'))
+        <div class="widget">
+            <div class="widget-heading">
+                <h3 class="widget-title">Resumen SERP - Marcas</h3>
+            </div>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        @foreach ($brands as $brand)
+                            <div class="btn-group pull-right">
+                                <button class="btn btn-primary btn-sm waves-effect waves-light" title="Ver código" data-brand="{{ $brand->id }}">
+                                    <span class="glyphicon glyphicon-file"></span>
+                                </button>
+                                <a href="{{ url('/marcas/'.$brand->id.'/editar') }}" class="btn btn-info btn-sm waves-effect waves-light" title="Editar marca">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                            </div>
+                            @include('client.serp.includes.google-results', [
+                                'link' => $client->getLinkTo('/marcas/'.$brand->id),
+                                'title' => $brand->title,
+                                'domain' => $client->domain .'/marcas/'. str_slug($brand->name),
+                                'description' => $brand->description
+                            ])
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 </div>
 
-@include('client.serp.includes.general-serp-modals')
-@include('client.serp.includes.links-serp-modals')
-@include('client.serp.includes.services-serp-modals')
-@include('client.serp.includes.projects-serp-modals')
+    @include('client.serp.includes.general-serp-modals')
+    @include('client.serp.includes.links-serp-modals')
+    @include('client.serp.includes.services-serp-modals')
+    @include('client.serp.includes.projects-serp-modals')
 
-@if ($client->hasSection('Artículos'))
-    @include('client.serp.includes.articles-serp-modals')
-@endif
+    @if ($client->hasSection('Artículos'))
+        @include('client.serp.includes.articles-serp-modals')
+    @endif
+
+    @if ($client->hasSection('Marcas'))
+        @include('client.serp.includes.brands-serp-modals')
+    @endif
 @endsection
 
 @section('scripts')
@@ -228,6 +262,7 @@
             $(document).on('click', '[data-service]', onClickServiceModalBtn);
             $(document).on('click', '[data-project]', onClickProjectModalBtn);
             $(document).on('click', '[data-article]', onClickArticleModalBtn);
+            $(document).on('click', '[data-brand]', onClickBrandModalBtn);
             $(document).on('click', '[data-general]', onClickGeneralModalBtn);
 
             $('.google-results span.description').each(applyLimitsToDescription);
@@ -248,6 +283,10 @@
         function onClickArticleModalBtn() {
             var id = $(this).data('article');
             $('#modal-article-'+id).modal('show');
+        }
+        function onClickBrandModalBtn() {
+            var id = $(this).data('brand');
+            $('#modal-brand-'+id).modal('show');
         }
         function onClickGeneralModalBtn() {
             var id = $(this).data('general');

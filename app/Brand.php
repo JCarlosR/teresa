@@ -61,4 +61,9 @@ class Brand extends Model
             return 'danger';
 
     }
+
+    public function absoluteUrl($domain)
+    {
+        return $domain . '/marcas/' . ltrim(str_slug($this->name), '/');
+    }
 }
