@@ -197,7 +197,7 @@
                             </div>
                             @include('client.serp.includes.google-results', [
                                 'link' => $client->getLinkTo('/blog/'.$article->id),
-                                'title' => $project->title,
+                                'title' => $article->title,
                                 'domain' => $client->domain .'/blog/'. str_slug($article->meta_title),
                                 'description' => $article->meta_description
                             ])
