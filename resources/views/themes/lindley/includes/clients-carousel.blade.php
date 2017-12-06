@@ -22,8 +22,8 @@
                             {{--<a class="responsive" href="#"><img alt="Samsonite" src="/themes/lindley/imagenes/clientes/samsonite.jpg"></a>--}}
                         {{--</div>--}}
 
-                    </div>
-                </div>
+                    {{--</div>--}}
+                {{--</div>--}}
                 {{--<div class="item  ">--}}
                     {{--<div class="row">--}}
                         {{--<div class="col-md-3">--}}
