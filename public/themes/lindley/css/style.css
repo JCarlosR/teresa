@@ -2341,5 +2341,12 @@ input[type="text"], input[type="email"], input[type="tel"], textarea, select {
     border-radius: 100px;
 }
 .carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
-    display: inline-block;
+   margin: 0px 30px 0px 30px;
+
+}
+@media(max-width: 768px){
+    .pad-bmv{
+        padding-bottom: 10px;
+
+    }
 }
