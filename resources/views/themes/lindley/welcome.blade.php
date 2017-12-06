@@ -8,15 +8,12 @@
             @foreach ($me->slides as $key => $slide)
                 <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
             @endforeach
-            {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
-            {{--<li data-target="#myCarousel" data-slide-to="1"></li>--}}
-            {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             @foreach ($me->slides as $key => $slide)
-                <div class="item @if($key==0) active @endif">
+                <div class="item slides @if($key==0) active @endif">
                     <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}">
                     <div class="hero">
 
@@ -33,55 +30,7 @@
 
                 </div>
             @endforeach
-            {{--<div class="item slides active">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-
-            {{--</div>--}}
-
-            {{--<div class="item slides">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="item">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+        </div>
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
@@ -93,6 +42,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <section>
         <div class="container">
             <div class="row">
@@ -278,11 +228,11 @@
 
     </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <div class='row'>
-                <div class=' text-center pad60  col-md-12'>
-                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+    {{--<section id="testimonials">--}}
+        {{--<div class="container">--}}
+            {{--<div class='row'>--}}
+                {{--<div class=' text-center pad60  col-md-12'>--}}
+                    {{--<div class="carousel slide" data-ride="carousel" id="quote-carousel">--}}
                         {{--<!-- Bottom Carousel Indicators -->--}}
                         {{--<ol class="carousel-indicators">--}}
                             {{--<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>--}}
@@ -290,60 +240,101 @@
                             {{--<li data-target="#quote-carousel" data-slide-to="2"></li>--}}
                         {{--</ol>--}}
 
-                        <!-- Carousel Slides / Quotes -->
-                        <div class="carousel-inner">
+                        {{--<!-- Carousel Slides / Quotes -->--}}
+                        {{--<div class="carousel-inner">--}}
 
-                            <!-- Quote 1 -->
-                            <div class="item active">
+                            {{--<!-- Quote 1 -->--}}
+                            {{--<div class="item active">--}}
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div  class="par-testimonial">
-                                            <p>Somos una empresa especializada en brindar las mejores soluciones de Diseño y elaboración de proyectos, proponiendo materiales innovadores y de calidad.</p>
-                                            <small>Diseño, Materiales y Calidad</small>
-                                        </div>
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-12">--}}
+                                        {{--<div  class="par-testimonial">--}}
+                                            {{--<p>Somos una empresa especializada en brindar las mejores soluciones de Diseño y elaboración de proyectos, proponiendo materiales innovadores y de calidad.</p>--}}
+                                            {{--<small>Diseño, Materiales y Calidad</small>--}}
+                                        {{--</div>--}}
 
-                                    </div>
-                                </div>
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
-                            </div>
-                            <!-- Quote 2 -->
-                            <div class="item">
+                            {{--</div>--}}
+                            {{--<!-- Quote 2 -->--}}
+                            {{--<div class="item">--}}
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="par-testimonial" >
-                                            <p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
-                                            <small>Calidad e Imágen</small>
-                                        </div>
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-12">--}}
+                                        {{--<div class="par-testimonial" >--}}
+                                            {{--<p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>--}}
+                                            {{--<small>Calidad e Imágen</small>--}}
+                                        {{--</div>--}}
 
-                                    </div>
-                                </div>
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
-                            </div>
-                            <!-- Quote 3 -->
-                            <div class="item">
+                            {{--</div>--}}
+                            {{--<!-- Quote 3 -->--}}
+                            {{--<div class="item">--}}
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="par-testimonial">
-                                            <p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
-                                            <small>Lindley Arquitectos</small>
-                                        </div>
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-md-12">--}}
+                                        {{--<div class="par-testimonial">--}}
+                                            {{--<p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>--}}
+                                            {{--<small>Lindley Arquitectos</small>--}}
+                                        {{--</div>--}}
 
-                                    </div>
-                                </div>
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
-                            </div>
-                        </div>
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <!-- Carousel Buttons Next/Prev -->
+                        {{--<!-- Carousel Buttons Next/Prev -->--}}
                         {{--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>--}}
                         {{--<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+        {{--</div>--}}
+    {{--</section>--}}
+    <section id="carousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                    <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                            <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner pad21">
+                            <div class="active item">
+                                <blockquote>
+                                    <p>Somos una empresa especializada en brindar las mejores soluciones de Diseño y elaboración de proyectos, proponiendo materiales innovadores y de calidad.</p>
+                                    <small>Diseño, Materiales y Calidad</small>
+                                </blockquote>
+                                {{--<div class="profile-circle" style="background-color: rgba(0,0,0,.2);"></div>--}}
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
+                                    <small>Calidad e Imágen</small>
+                                </blockquote>
+                                {{--<div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>--}}
+                            </div>
+                            <div class="item">
+                                <blockquote>
+                                    <p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
+                                    <small>Lindley Arquitectos</small>
+                                </blockquote>
+                                {{--<div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>--}}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <section class="pad60">

@@ -33,7 +33,7 @@
                             <li><a href="#filter" class="selected" data-filter="*">TODOS</a></li>
                             @foreach ($me->services as $service)
                                 <li><a href="#filter" data-filter=".category-{{ $service->id }}">
-                                        {{ $service->name }}
+                                        {{ $service->short_name }}
                                     </a></li>
                             {{--<li><a href="#filter" data-filter=".kitchens">TIENDAS</a></li>--}}
                             {{--<li><a href="#filter" data-filter=".bathrooms">OFICINAS</a></li>--}}

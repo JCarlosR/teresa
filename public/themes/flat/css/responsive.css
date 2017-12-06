@@ -1,0 +1,88 @@
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    .menu-top {
+        background-color: #ffffff;
+        padding: 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .menu-top .navbar-nav > li > a {
+        color: #555555;
+        text-align: center;
+    }
+    .menu-top .navbar-nav > li > a:focus,
+    .menu-top .navbar-nav > li > a:hover {
+        color: #555555;
+    }
+    .menu-top .navbar-nav > .active > a,
+    .menu-top .navbar-nav > .active > a:focus,
+    .menu-top .navbar-nav > .active > a:hover {
+        color: #555555;
+    }
+    .menu-top .navbar-brand {
+        font-size: 20px;
+    }
+    .single-slider-item {
+        height: 600px;
+        padding-top: 0;
+    }
+    .single-slider-item h1 {
+        font-size: 25px;
+    }
+    .single-slider-item h1 span {
+        font-size: 28px;
+        line-height: normal;
+    }
+    .default-btn {
+        font-size: 13px;
+        padding: 10px 23px;
+    }
+    .single-slider-item .banner-btn .white-btn {
+        margin-left: 5px;
+    }
+    .single-slider-item p {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-top .navbar-nav > li > a {
+        padding: 15px 10px;
+    }
+
+    .single-slider-item h1 {
+        font-size: 30px;
+    }
+
+    .single-slider-item h1 span {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .single-slider-item h1 span {
+        font-size: 40px;
+    }
+    .about-us .about-us-text {
+        padding-top: 0;
+    }
+    .single-slider-item p {
+        padding: 0 30px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    .project-details-content {
+        margin: 12% auto 0;
+    }
+}
