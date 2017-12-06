@@ -10,7 +10,7 @@
         @endif
 
         <div class="form-group text-right">
-            <a href="{{ url('/admin') }}" class="btn btn-sm btn-info">
+            <a href="{{ url('/admin/super') }}" class="btn btn-sm btn-info">
                 <i class="glyphicon glyphicon-hand-left"></i>
                 Volver al super panel
             </a>
