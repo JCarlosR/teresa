@@ -8,13 +8,12 @@
             @foreach ($me->slides as $key => $slide)
                 <li data-target="#myCarousel" data-slide-to="{{ $key }}" @if($key==0) class="active" @endif></li>
             @endforeach
-
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             @foreach ($me->slides as $key => $slide)
-                <div class="item @if($key==0) active @endif">
+                <div class="item slides @if($key==0) active @endif">
                     <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}">
                     <div class="hero">
 
