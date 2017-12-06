@@ -94,16 +94,16 @@
 
 
 
-        {{--<!-- Left and right controls -->--}}
-        {{--<a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">--}}
-            {{--<span class="glyphicon glyphicon-chevron-left"></span>--}}
-            {{--<span class="sr-only">Previous</span>--}}
-        {{--</a>--}}
-        {{--<a class="right carousel-control" href="#myCarousel" data-slide="next" title="Ir a Slider Siguiente">--}}
-            {{--<span class="glyphicon glyphicon-chevron-right"></span>--}}
-            {{--<span class="sr-only">Next</span>--}}
-        {{--</a>--}}
-    {{--</div>--}}
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next" title="Ir a Slider Siguiente">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <section>
         <div class="container">
             <div class="row">
