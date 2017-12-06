@@ -72,8 +72,8 @@
                     </div>
                     <div class="col-md-12">
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#home" role="tab">EXPERIENCIA</a>
+                            <li class="nav-item active">
+                                <a class="nav-link " data-toggle="tab" href="#home" role="tab">EXPERIENCIA</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#profile" role="tab">ÚLTIMO PROYECTO</a>

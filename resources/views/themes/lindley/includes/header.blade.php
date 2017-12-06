@@ -65,8 +65,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav menu">
-                            {{--poner active el class vacio estudiar ese tema--}}
-                            <li class="active"><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">INICIO</a></li>
+                            <li class=""><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">INICIO</a></li>
                             <li><a href="{{ $me->getLinkTo('/nosotros') }}" title="Sobre Lindley Arquitectos">NOSOTROS</a></li>
                             <li><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">SERVICIOS</a></li>
                             <li><a href="{{ $me->getLinkTo('/proyectos') }}" title="Proyectos de Lindley Arquitectos">PROYECTOS</a></li>
