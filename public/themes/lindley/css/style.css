@@ -2223,7 +2223,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea, select {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     width: 100%;
 }
 .img-hover[title]:after {
@@ -2363,3 +2363,14 @@ margin: 0px 0px;
 
     }
 }
+/*.menu > li > a:first {*/
+    /*color: #333;*/
+    /*!*padding: 0;*!*/
+    /*display: inline-block;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 600;*/
+    /*font-size: 14px;*/
+    /*margin-right: 5px;*/
+    /*padding: 22px 15px;*/
+    /*border-bottom: 3px solid #000;*/
+/*}*/
