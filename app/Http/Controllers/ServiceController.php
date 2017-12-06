@@ -104,6 +104,7 @@ class ServiceController extends Controller
         $service = Service::find($request->get('service_id'));
         $service->name = trim($request->get('name'));
         if (auth()->user()->is_admin) {
+            $service->short_name = trim($request->get('short_name'));
             $service->title = $request->get('title');
             $service->description = $request->get('description');
         }

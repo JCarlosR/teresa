@@ -47,6 +47,12 @@
                         <label for="service-name">Nombre del servicio</label>
                         <input type="text" name="name" id="service-name" class="form-control" placeholder="Ingresa aquí el nombre del servicio" value="{{ old('name', $service->name) }}">
                     </div>
+                    @if (auth()->user()->is_admin)
+                        <div class="form-group">
+                            <label for="service-short-name">Nombre del servicio</label>
+                            <input type="text" name="short_name" id="service-short-name" class="form-control" placeholder="Ingresa aquí un nombre de corto, un nombre de botón" value="{{ old('short_name', $service->short_name) }}">
+                        </div>
+                    @endif
                 </fieldset>
 
                 <fieldset>
