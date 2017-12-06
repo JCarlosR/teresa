@@ -1,17 +1,5 @@
 @extends('layouts.panel_simple')
 
-@section('styles')
-    <style>
-        .big-black-icon {
-            color: #1f364f;
-            font-size: 1.2em;
-        }
-        .client-widget {
-            height: 360px;
-        }
-    </style>
-@endsection
-
 @section('dashboard_content')
 <div class="widget">
     <div class="widget-body">

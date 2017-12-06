@@ -265,6 +265,7 @@ Route::group([
     Route::get('/cliente/display', 'ManagementController@displayMode');
     // Super panel
     Route::get('/super', 'SuperPanelController@index');
+    Route::get('/super/cliente/{client}/editar', 'SuperPanelController@edit');
 
     // Clients management
     Route::get('/cliente/registrar', 'ClientController@create');

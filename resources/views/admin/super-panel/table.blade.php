@@ -32,70 +32,51 @@
                     <p class="fs-12 text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <small>P: {{ $client->projects_percent }} % | S: {{ $client->services_percent }} %</small>
+                    <p class="small">P: {{ $client->projects_percent }} %</p>
+                    <p class="small">S: {{ $client->services_percent }} %</p>
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
                 <td>
-                    <select name="" id="">
-                        <option value="">sí</option>
-                        <option value="">no</option>
-                        <option value="">cola</option>
-                    </select>
+                    no
                 </td>
 
                 <td>
+                    <a href="/admin/super/cliente/{{ $client->id }}/editar"
+                       class="btn btn-primary btn-xs"
+                       data-toggle="tooltip" data-placement="top" title="Editar el estado del cliente">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
                     <a href="/admin/cliente/{{ $client->id }}/destacar/{{ $client->inverse_star_state }}"
-                       data-toggle="tooltip" data-placement="top" title="Clic para destacar o quitar destacado">
-                        <i class="glyphicon glyphicon-{{ $client->star_state }} big-black-icon"></i>
+                       class="btn btn-secondary btn-xs"
+                       data-toggle="tooltip" data-placement="top" title="Clic para {{ $client->starred ? 'quitar destacado' : 'destacar' }}">
+                        <i class="glyphicon glyphicon-{{ $client->star_state }}"></i>
                     </a>
                     <a href="/ver/{{ $client->id }}" target="_blank"
+                       class="btn btn-info btn-xs"
                        data-toggle="tooltip" data-placement="top" title="Previsualizar datos en el theme por defecto">
-                        <i class="glyphicon glyphicon glyphicon-globe big-black-icon"></i>
+                        <i class="glyphicon glyphicon glyphicon-globe"></i>
                     </a>
                     <a href="/admin/cliente/{{ $client->id }}/impersonate"
+                       class="btn btn-default btn-xs"
                        data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
-                        <i class="glyphicon glyphicon-log-in big-black-icon"></i>
+                        <i class="glyphicon glyphicon-log-in"></i>
                     </a>
                 </td>
             </tr>
