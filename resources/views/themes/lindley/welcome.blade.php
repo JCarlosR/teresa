@@ -30,69 +30,7 @@
 
                 </div>
             @endforeach
-
-
-
-
-
-        {{--<ol class="carousel-indicators">--}}
-
-            {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
-            {{--<li data-target="#myCarousel" data-slide-to="1"></li>--}}
-            {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
-        {{--</ol>--}}
-        {{--<div class="carousel-inner">--}}
-            {{--<div class="item slides active">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-01.jpg" alt="Lindley Arquitectos Locales Comerciales" title="Lindley Arquitectos Locales Comerciales">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-
-            {{--</div>--}}
-
-            {{--<div class="item slides">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-02.jpg" alt="Lindley Arquitectos, tiendas comerciales" title="Lindley Arquitectos, tiendas comerciales">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="item">--}}
-                {{--<img src="/themes/lindley/imagenes/fotolia/sliders-lindley-arquitectos-03.jpg" alt="Lindley Arquitectos, arquitectura comercial" title="Lindley Arquitectos, arquitectura comercial">--}}
-                {{--<div class="hero">--}}
-
-
-                    {{--<!-- Caption Content -->--}}
-                    {{--<div class="caption-title">Diseño de Locales Comerciales</div>--}}
-
-                    {{--<div class="caption-text">Diseño integral de Locales Comerciales, construcción, implementación, equipamiento y mantenimiento de todas las instalaciones en general.</div>--}}
-
-                    {{--<a href="#small-dialog" class="button medium  popup-with-zoom-anim" title="Solicitar Servicio de Lindley Arquitectos">Solicitar Servicio</a>--}}
-
-
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-
+        </div>
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev" title="Ir a Slider Anterior">
@@ -104,6 +42,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <section>
         <div class="container">
             <div class="row">
