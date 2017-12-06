@@ -59,7 +59,7 @@
                 <div class="overlay">
                     <div class="overlay-content">
                         <h4>{{ $project->name }}</h4>
-                        <span>{{ $project->short_name }}</span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="plus-icon"></div>
