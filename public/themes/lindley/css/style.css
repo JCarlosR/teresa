@@ -1231,6 +1231,7 @@ ul.nav-list{
     margin-left: 0px;
     width: 100%;
     display: inline-block;
+    text-transform: uppercase;
 }
 .nav-list li{
     background: #f6f6f6;
