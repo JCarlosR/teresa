@@ -875,8 +875,8 @@ ul.list-footer{
 }
 .media-carousel img
 {
-    width: 202px;
-    height: 80px
+    width: 300px;
+    height: 80px;
 }
 /* End carousel */
 
@@ -1764,7 +1764,7 @@ ul.nav-list{
     }
     p{
         text-align: inherit;
-        initial-letter: 1px;
+        /*initial-letter: 1px;*/
     }
     /*end proyectos*/
     /*servicios*/

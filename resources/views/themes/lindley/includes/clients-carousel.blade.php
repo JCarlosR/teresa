@@ -7,7 +7,7 @@
                 <div class="item @if ($key==0) active @endif">
                     <div class="row">
                         @foreach ($customers_group as $customer)
-                            <div class="col-md-3 col-sm-6 col-xs-12 pad-bmv">
+                            <div class="col-md-3 col-sm-6 col-xs-12 ">
                                 <a href="{{ $customer->url ?: '#' }}" target="_blank" class="responsive" title="Enlace al cliente {{ $customer->name }}">
                                     <img src="/images/customers/{{ $customer->image }}" class="img-responsive" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
                                 </a>
