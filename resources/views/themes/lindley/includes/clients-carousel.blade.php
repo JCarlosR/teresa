@@ -17,8 +17,12 @@
                 </div>
                 @endforeach
 
-            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-            <a data-slide="next" href="#media" class="right carousel-control">›</a>
+            <div class="left-control">
+                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+            </div>
+           <div class="right-control">
+               <a data-slide="next" href="#media" class="right carousel-control">›</a>
+           </div>
         </div>
     </div>
 </div>

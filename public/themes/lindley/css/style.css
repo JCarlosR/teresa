@@ -827,10 +827,11 @@ ul.list-footer{
     left: -8px;
     background-image: none;
     background: none repeat scroll 0 0 #f0f0f0;
-    border: 4px solid #FFFFFF;
+    /*border: 4px solid #FFFFFF;*/
     height: 80px;
     width : 50px;
     margin-top: 10px;
+
     padding-top: 20px;
     font-size: 50px;
 
@@ -841,9 +842,10 @@ ul.list-footer{
     right: -8px !important;
     background-image: none;
     background: none repeat scroll 0 0 #f0f0f0;
-    border: 4px solid #fff;
+    /*border: 4px solid #fff;*/
     height: 80px;
     width : 50px;
+
     margin-top: 10px;
     padding-top: 20px;
     font-size: 50px;
@@ -853,6 +855,7 @@ ul.list-footer{
 .media-carousel .carousel-control.right:hover{
     background:#c71c77 ;
 }
+
 /* Changes the position of the indicators */
 .media-carousel .carousel-indicators
 {
@@ -918,6 +921,9 @@ nav{
 }
 h2.left{
     float:left;
+}
+.left{
+    float: left;
 }
 .right{
     float: right;
