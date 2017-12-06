@@ -25,4 +25,9 @@ class SuperPanelController extends Controller
         $clients = $query->get();
         return view('admin.super-panel.index')->with(compact('clients'));
     }
+
+    public function edit(User $client)
+    {
+        return view('admin.super-panel.edit')->with(compact('client'));
+    }
 }
