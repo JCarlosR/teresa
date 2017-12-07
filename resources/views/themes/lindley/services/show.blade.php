@@ -23,23 +23,18 @@
         </div>
     </section>
     <section class="pad60">
-
         <div class="container">
-
-
             <div class="row">
                 @include('themes.lindley.includes.service-nav')
                 <div class="col-md-9">
-
                     <div class="col-md-6 img-service-prin">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
                             <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
                         @endforeach
                     </div>
-
                     <div class="col-md-6">
                         <div class="border-bt">
-                            <h3>{{ $service->name }}</h3>
+                            <h2>{{ $service->name }}</h2>
                         </div>
 
                        {!! $service->question_1 !!}
@@ -53,24 +48,13 @@
 
                        {!! $service->question_5 !!}
 
-
                         <div class="border-t ">
                             <h3>PROYECTO DE ARQUITECTURA</h3>
                         </div>
-
                        {!! $service->question_4 !!}
-
-
-
-
                     </div>
-
-
-
                 </div>
-
             </div>
-
         </div>
     </section>
 
@@ -82,11 +66,8 @@
                         <p>ALGUNOS DE NUESTROS CLIENTES, <span class="color-span"> ÚNETE A ELLOS!</span></p>
                     </div>
                     @include('themes.lindley.includes.clients-carousel')
-
                 </div>
-
             </div>
-
         </div>
     </div>
 @endsection
