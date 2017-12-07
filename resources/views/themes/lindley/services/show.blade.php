@@ -33,7 +33,7 @@
 
                     <div class="col-md-6 img-service-prin">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
-                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}"></a>
+                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
                         @endforeach
                     </div>
 
@@ -74,7 +74,7 @@
         </div>
     </section>
 
-    <section class="pad40 ">
+    <div class="pad40 ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -88,5 +88,5 @@
             </div>
 
         </div>
-    </section>
+    </div>
 @endsection
