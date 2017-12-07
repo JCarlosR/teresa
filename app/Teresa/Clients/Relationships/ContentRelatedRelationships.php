@@ -3,11 +3,17 @@
 namespace App\Teresa\Clients\Relationships;
 
 use App\Article;
+use App\ClientState;
 use App\InboxTopic;
 use App\PageDescription;
 
 trait ContentRelatedRelationships
 {
+    public function state()
+    {
+        return $this->hasOne(ClientState::class);
+    }
+
     public function sections()
     {
         return $this->belongsToMany('App\Section', 'client_sections')->orderBy('name');

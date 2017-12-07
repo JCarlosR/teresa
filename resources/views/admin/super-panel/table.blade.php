@@ -32,29 +32,53 @@
                     <p class="fs-12 text-muted">{{ $client->service_started_at->format('d/m/Y') }}</p>
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->sitemap ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
                 <td>
                     no
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->website ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->google_analytics ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
                 <td>
                     <p class="small">P: {{ $client->projects_percent }} %</p>
                     <p class="small">S: {{ $client->services_percent }} %</p>
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->social_media ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->professional_media ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
                 <td>
-                    no
+                    @if ($client->state)
+                        {{ $client->state->broadcasting ? 'sí' : 'no' }}
+                    @else
+                        -
+                    @endif
                 </td>
 
                 <td>

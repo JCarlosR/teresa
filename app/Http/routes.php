@@ -266,6 +266,7 @@ Route::group([
     // Super panel
     Route::get('/super', 'SuperPanelController@index');
     Route::get('/super/cliente/{client}/editar', 'SuperPanelController@edit');
+    Route::post('/super/cliente/{client}/editar', 'SuperPanelController@update');
 
     // Clients management
     Route::get('/cliente/registrar', 'ClientController@create');

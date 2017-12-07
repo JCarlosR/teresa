@@ -17,12 +17,13 @@
         </div>
 
         <h1>Editando estado del cliente {{ $client->name }}</h1>
-        <form action="">
+        <form action="" method="post">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label for="sitemap">Sitemap</label>
                 <select name="sitemap" id="sitemap" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->sitemap) selected @endif>sí</option>
                 </select>
             </div>
             <div class="form-group">
@@ -37,35 +38,35 @@
                 <label for="website">Website</label>
                 <select name="website" id="website" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->website) selected @endif>sí</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="google_analytics">Google Analytics</label>
                 <select name="google_analytics" id="google_analytics" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->google_analytics) selected @endif>sí</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="social_media">Medios sociales</label>
                 <select name="social_media" id="social_media" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->social_media) selected @endif>sí</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="professional_media">Medios profesionales</label>
                 <select name="professional_media" id="professional_media" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->professional_media) selected @endif>sí</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="broadcasting">Difusión</label>
                 <select name="broadcasting" id="broadcasting" class="form-control">
                     <option value="0">no</option>
-                    <option value="1">sí</option>
+                    <option value="1" @if($state->broadcasting) selected @endif>sí</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success">
