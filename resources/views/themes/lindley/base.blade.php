@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="{{ $me->description }}">
     <meta name="twitter:image" content="{{ $me->photo_route }}">
     @endif
-
+    <link rel="canonical" href="{{ url()->current() }}" />
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
