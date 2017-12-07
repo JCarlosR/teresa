@@ -38,7 +38,7 @@
                 </div>
                 <div class="tex-call">
                     <span> {{ $me->address }}</span>
-                    <p>Tel. 1: <span><a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos"> {{$me->phones}}</a></span></p>
+                    <p>Tel. 1: <span><a href="tel:+51987936976" title="Llamar a Lindley Arquitectos"> {{$me->phones}}</a></span></p>
                     {{--<p>Tel. 2: <span><a href=""> (51) 987-936-976</a></span></p>--}}
                 </div>
                 <br>
