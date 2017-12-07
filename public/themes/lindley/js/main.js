@@ -136,7 +136,7 @@ $('#filters a').click(function (e) {
 //Menu Activado
 
 
-$(function() {
+// $(function() {
 
 //     // elementos de la lista
 //     var menues = $(".menu li");
