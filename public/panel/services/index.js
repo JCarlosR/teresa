@@ -9,7 +9,7 @@ $(document).ready(function() {
         toolbar: [
             ['style', ['style']],
             ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['para', ['ul', 'ol', 'paragraph']],
+            ['para', ['ul', 'ol']],
             ['insert', ['link', 'picture', 'hr']],
             ['view', ['fullscreen']]
         ],

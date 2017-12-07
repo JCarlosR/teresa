@@ -18,9 +18,7 @@ $(document).ready(function() {
         toolbar: [
             ['style', ['style']],
             ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['fontsize', ['fontsize']],
-            ['para', ['ul', 'ol', 'paragraph']],
+            ['para', ['ul', 'ol']],
             ['insert', ['link', 'picture', 'hr']],
             ['view', ['fullscreen']]
         ],
