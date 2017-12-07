@@ -95,33 +95,7 @@ $('#myTab a').click(function (e) {
 
 
 // //filter proyectos
-//
-// $(document).ready(function(){
-//
-//     $(".filter-button").click(function(){
-//         var value = $(this).attr('data-filter');
-//
-//         if(value == "todos")
-//         {
-//             //$('.filter').removeClass('hidden');
-//             $('.filter').show('1000');
-//         }
-//         else
-//         {
-// //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-// //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-//             $(".filter").not('.'+value).hide('3000');
-//             $('.filter').filter('.'+value).show('3000');
-//
-//         }
-//     });
-//
-//     if ($(".filter-button").removeClass("active")) {
-//         $(this).removeClass("active");
-//     }
-//     $(this).addClass("active");
-//
-// });
+
 
 //filter de proyectos
 
@@ -158,3 +132,56 @@ $('#filters a').click(function (e) {
     $(this).addClass('selected');
 });
 
+
+//Menu Activado
+
+
+// $(function() {
+
+//     // elementos de la lista
+//     var menues = $(".menu li");
+//
+//     // manejador de click sobre todos los elementos
+//     menues.click(function() {
+//         // eliminamos active de todos los elementos
+//         menues.removeClass("active");
+//         // activamos el elemento clicado.
+//         $(this).addClass("active");
+//     });
+//
+// });
+
+//class activo de Nosotros
+
+var $tabsNav    = $('.nav-tabs'),
+    $tabsNavLis = $tabsNav.children('li');
+
+$tabsNav.each(function() {
+    var $this = $(this);
+
+    $this.next().children('.tab-pane').stop(true,true).hide()
+        .first().show();
+
+    $this.children('li').first().addClass('active').stop(true,true).show();
+});
+
+$tabsNavLis.on('click', function(e) {
+    var $this = $(this);
+
+    $this.siblings().removeClass('active').end()
+        .addClass('active');
+
+    $this.parent().next().children('.tab-pane').stop(true,true).hide()
+        .siblings( $this.find('a').attr('href') ).fadeIn();
+
+    e.preventDefault();
+});
+var hash = window.location.hash;
+var anchor = $('.nav-tabs a[href="' + hash + '"]');
+if (anchor.length === 0) {
+    $(".nav-tabs li:first").addClass("active").show(); //Activate first tab
+    $(".tab-pane:first").show(); //Show first tab content
+} else {
+    console.log(anchor);
+    anchor.parent('li').click();
+}

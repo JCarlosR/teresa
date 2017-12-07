@@ -4,7 +4,7 @@
 
         <ul class="nav-list">
             @foreach ($me->services as $item)
-            <li><a href="{{ $me->getLinkTo('/servicio/'.$item->id) }}">{{ $item->short_name }}<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="{{ $me->getLinkTo('/servicio/'.$item->id) }}" title="{{ $item->name }}">{{ $item->short_name }}<i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
             @endforeach
 
                 {{--<li><a href="">TIENDA RETAIL <i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>--}}

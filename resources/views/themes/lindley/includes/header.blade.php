@@ -5,7 +5,7 @@
 
             <div class="col-md-3 col-sm-12 col-xs-12">
                 <div id="logo">
-                    <a href="{{ $me->getLinkTo('/') }}}" title="Lindley Arquitectos">
+                    <a href="{{ $me->getLinkTo('/') }}" title="Lindley Arquitectos">
                         <img src="/themes/lindley/imagenes/logos/logo-lindley-arquitectos-web.jpg" alt="Lindley Arquitectos" title="Lindley Arquitectos"></a>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                         <div class="widget-content">
                             <span class="title">Síguenos</span>
                             <span class="data">
-                <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: es_ES</script>
+                <script src="//platform.linkedin.com/in.js" type="text/javascript" async>lang: es_ES</script>
                 <script type="IN/FollowCompany" data-id="16157557" data-counter="right"></script>
               </span>
                             <span class="data"> </span>
@@ -26,10 +26,10 @@
                     </li>
 
                     <li class="li-right">
-                        <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos"> <i class="icon-call-in"></i></a>
+                        <a href="tel:+51987936976" title="Llamar a Lindley Arquitectos"> <i class="icon-call-in"></i></a>
                         <div class="widget-content">
                             <span class="title">¿Consultas?</span>
-                            <span class="data"> <a href="tel:+51 987-936-976" title="Llamar a Lindley Arquitectos">(+51) 987-936-976 </a></span>
+                            <span class="data"> <a href="tel:+51987936976" title="Llamar a Lindley Arquitectos">(+51) 987-936-976 </a></span>
                         </div>
                     </li>
 
@@ -65,7 +65,6 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav menu">
-                            {{--poner active el class vacio estudiar ese tema--}}
                             <li class=""><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">INICIO</a></li>
                             <li><a href="{{ $me->getLinkTo('/nosotros') }}" title="Sobre Lindley Arquitectos">NOSOTROS</a></li>
                             <li><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">SERVICIOS</a></li>

@@ -52,14 +52,14 @@
         <div class="full-width projects">
         @foreach ($me->projects as $project)
             <!-- Item -->
-            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" class="@foreach ($project->services as $service) category-{{ $service->id }} @endforeach">
+            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}" title="{{ $project->name }}" class="@foreach ($project->services as $service) category-{{ $service->id }} @endforeach">
                 @if ($project->featuredImage)
-                <img src="{{ $project->featuredImage->fullPath }}" alt="">
+                <img src="{{ $project->featuredImage->fullPath }}" alt="{{ $project->name }}" title="{{ $project->name }}">
                 @endif
                 <div class="overlay">
                     <div class="overlay-content">
                         <h4>{{ $project->name }}</h4>
-                        <span>March 2016</span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="plus-icon"></div>

@@ -46,7 +46,7 @@
                                 <h3> CARACTERÍSTICAS TÉCNICAS</h3>
                             </div>
                             {{--<small>¿Qué detalles técnicos especificarías?</small>--}}
-                            <p > {!! $project->question_3 !!}</p>
+                           <p>{!! $project->question_3 !!}</p>
 
 
                         </div>
@@ -91,8 +91,8 @@
                         </ul>
                         <br>
                         <h4>DESARROLLO DEL PROYECTO</h4>
-                        <p>  {{--<small>¿Cuál fue el planteamiento del proyecto?</small>--}}
-                            {!! $project->question_2 !!}</p>
+                      {{--<small>¿Cuál fue el planteamiento del proyecto?</small>--}}
+                           <p>{!! $project->question_2 !!}</p>
 
 
                         <br>

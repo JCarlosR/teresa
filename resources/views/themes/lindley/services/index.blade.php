@@ -13,7 +13,7 @@
                 <div class="col-md-7 col-sm-7">
                     <nav id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}">Inicio </a></li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}" title="Ir a la página de Inicio">Inicio </a></li>
 
                             <li class="breadcrumb-item active">Servicios</li>
                         </ol>
@@ -30,7 +30,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12  service-alt  ">
 
                 @if($service->featuredImage)
-                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title=""><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt=""></a>
+                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title="{{ $service->name }}"><img src="{{ $service->featuredImage->fullPath }}"  class="img-responsive" alt="{{ $service->name }}" title="{{ $service->name }}"></a>
                 @endif
                 <div class="heig-serv">
                 <h3 class="service-h3">{{ $service->name }}</h3>

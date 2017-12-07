@@ -1,5 +1,5 @@
-<div class='row'>
-    <div class='col-md-12'>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="carousel slide media-carousel text-center" id="media">
             <div class="carousel-inner">
 
@@ -7,9 +7,9 @@
                 <div class="item @if ($key==0) active @endif">
                     <div class="row">
                         @foreach ($customers_group as $customer)
-                            <div class="col-md-3">
-                                <a href="{{ $customer->url ?: '#' }}" target="_blank" class="responsive" title="Enlace al cliente {{ $customer->name }}">
-                                    <img src="/images/customers/{{ $customer->image }}" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
+                            <div class="col-md-3 col-sm-3 col-xs-12 ">
+                                <a href="{{ $customer->url ?: '#' }}" target="_blank" rel="nofollow" class="responsive" title="Enlace al cliente {{ $customer->name }}">
+                                    <img src="/images/customers/{{ $customer->image }}" class="img-responsive" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
                                 </a>
                             </div>
                         @endforeach
@@ -17,9 +17,13 @@
                 </div>
                 @endforeach
 
-            <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-            <a data-slide="next" href="#media" class="right carousel-control">›</a>
+            <div class="left-control">
+                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+            </div>
+           <div class="right-control">
+               <a data-slide="next" href="#media" class="right carousel-control">›</a>
+           </div>
         </div>
     </div>
 </div>
-
+</div>
