@@ -1,5 +1,5 @@
-<div class='row'>
-    <div class='col-md-12'>
+<div class="row">
+    <div class="col-md-12 col-sm-6 col-xs-12">
         <div class="carousel slide media-carousel text-center" id="media">
             <div class="carousel-inner">
 
@@ -8,7 +8,7 @@
                     <div class="row">
                         @foreach ($customers_group as $customer)
                             <div class="col-md-3 col-sm-6 col-xs-12 ">
-                                <a href="{{ $customer->url ?: '#' }}" target="_blank" class="responsive" title="Enlace al cliente {{ $customer->name }}">
+                                <a href="{{ $customer->url ?: '#' }}" target="_blank" rel="nofollow" class="responsive" title="Enlace al cliente {{ $customer->name }}">
                                     <img src="/images/customers/{{ $customer->image }}" class="img-responsive" alt="Imagen del cliente {{ $customer->name }}" title="Cliente {{ $customer->name }} de {{ $me->trade_name }}">
                                 </a>
                             </div>
@@ -26,4 +26,4 @@
         </div>
     </div>
 </div>
-
+</div>

@@ -14,7 +14,7 @@
         <div class="carousel-inner">
             @foreach ($me->slides as $key => $slide)
                 <div class="item slides @if($key==0) active @endif">
-                    <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}">
+                    <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}" title="{{ $slide->title }}">
                     <div class="hero">
 
 
@@ -296,7 +296,7 @@
 
         {{--</div>--}}
     {{--</section>--}}
-    <section id="carousel">
+    <div id="carousel">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -336,25 +336,21 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="pad60">
+    </div>
+    <div class="pad60">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="border-bt-3">
                         <p>ALGUNOS DE NUESTROS CLIENTES, <span class="color-span"> ÚNETE A ELLOS!</span></p>
                     </div>
-
-
                 </div>
-
-
             </div>
             @include('themes.lindley.includes.clients-carousel')
 
         </div>
 
-    </section>
+    </div>
 
 @endsection
 

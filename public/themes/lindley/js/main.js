@@ -95,33 +95,7 @@ $('#myTab a').click(function (e) {
 
 
 // //filter proyectos
-//
-// $(document).ready(function(){
-//
-//     $(".filter-button").click(function(){
-//         var value = $(this).attr('data-filter');
-//
-//         if(value == "todos")
-//         {
-//             //$('.filter').removeClass('hidden');
-//             $('.filter').show('1000');
-//         }
-//         else
-//         {
-// //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-// //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-//             $(".filter").not('.'+value).hide('3000');
-//             $('.filter').filter('.'+value).show('3000');
-//
-//         }
-//     });
-//
-//     if ($(".filter-button").removeClass("active")) {
-//         $(this).removeClass("active");
-//     }
-//     $(this).addClass("active");
-//
-// });
+
 
 //filter de proyectos
 
@@ -164,18 +138,18 @@ $('#filters a').click(function (e) {
 
 $(function() {
 
-    // elementos de la lista
-    var menues = $(".menu li");
-
-    // manejador de click sobre todos los elementos
-    menues.click(function() {
-        // eliminamos active de todos los elementos
-        menues.removeClass("active");
-        // activamos el elemento clicado.
-        $(this).addClass("active");
-    });
-
-});
+//     // elementos de la lista
+//     var menues = $(".menu li");
+//
+//     // manejador de click sobre todos los elementos
+//     menues.click(function() {
+//         // eliminamos active de todos los elementos
+//         menues.removeClass("active");
+//         // activamos el elemento clicado.
+//         $(this).addClass("active");
+//     });
+//
+// });
 
 //class activo de Nosotros
 
