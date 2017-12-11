@@ -6,7 +6,10 @@ trait ServicesRelatedAccessors
 {
     public function getServicesPercentAttribute()
     {
-        $services = $this->services;
+        $services = $this->services()->get([
+            'id',
+            'question_1', 'question_2', 'question_3', 'question_4'
+        ]);
 
         $n = sizeof($services);
         if ($n == 0) return 0;
@@ -22,11 +25,11 @@ trait ServicesRelatedAccessors
 
     public function getServicesStatusAttribute()
     {
-        if ($this->services_percent < 50) {
+        if ($this->services_percent < 50)
             return 'danger';
-        } else if ($this->services_percent < 90) {
+        else if ($this->services_percent < 90)
             return 'warning';
-        } else
+        else
             return 'success';
     }
 

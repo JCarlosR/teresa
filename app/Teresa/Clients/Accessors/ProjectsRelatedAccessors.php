@@ -6,7 +6,10 @@ trait ProjectsRelatedAccessors
 {
     public function getProjectsPercentAttribute()
     {
-        $projects = $this->projects;
+        $projects = $this->projects()->get([
+            'id',
+            'question_1', 'question_2', 'question_3'
+        ]);
 
         $n = sizeof($projects);
         if ($n == 0) return 0;
@@ -22,11 +25,11 @@ trait ProjectsRelatedAccessors
 
     public function getProjectsStatusAttribute()
     {
-        if ($this->projects_percent < 50) {
+        if ($this->projects_percent < 50)
             return 'danger';
-        } else if ($this->projects_percent < 90) {
+        else if ($this->projects_percent < 90)
             return 'warning';
-        } else
+        else
             return 'success';
     }
 

@@ -56,8 +56,15 @@
                     @endif
                 </td>
                 <td>
-                    <p class="small">P: {{ $client->projects_percent }} %</p>
-                    <p class="small">S: {{ $client->services_percent }} %</p>
+                    @if ($client->hasSection('Proyectos'))
+                        <p class="small" title="Proyectos">P: {{ $client->projects_percent }} %</p>
+                    @endif
+                    @if ($client->hasSection('Servicios'))
+                        <p class="small" title="Servicios">S: {{ $client->services_percent }} %</p>
+                    @endif
+                    @if ($client->hasSection('Artículos'))
+                        <p class="small" title="Artículos">A: {{ $client->articles_percent }} %</p>
+                    @endif
                 </td>
                 <td>
                     @if ($client->state)

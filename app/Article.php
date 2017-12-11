@@ -9,8 +9,15 @@ class Article extends Model
     // accessors
     public function getCharactersCountAttribute()
     {
-        return strlen(strip_tags($this->context)) +
+        return strlen(strip_tags($this->idea)) +
             strlen(strip_tags($this->idea_development));
+    }
+
+    public function getCharactersPercentAttribute()
+    {
+        $percent = $this->characters_count / 10; // / 1000 * 100
+        if ($percent > 100) $percent = 100;
+        return number_format((float) $percent, 2, '.', '');
     }
 
     public function getUrlAttribute()
