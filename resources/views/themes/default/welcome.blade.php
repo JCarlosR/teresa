@@ -116,22 +116,17 @@
                 <div class="port-sec">
                     <div id="Container">
                         @foreach ($me->projects()->latest()->take(3)->get() as $project)
-                            @if ($project->featuredImage)
-                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
+                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-3 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                 <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
-                                    <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
-                                    <p class="small">{{ $project->description }}</p>
-                                </a>
-                            </div>
-                            @else
-                                <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
-                                    <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
+                                    @if ($project->featuredImage)
+                                        <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                    @else
                                         <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png"
                                              class="img-responsive" title="{{ $project->name }}">
-                                        <p class="small">{{ $project->description }}</p>
-                                    </a>
-                                </div>
-                            @endif
+                                    @endif
+                                </a>
+                                <p class="small">{{ $project->description }}</p>
+                            </div>
                         @endforeach
                     </div>
                 </div>
