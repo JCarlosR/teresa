@@ -120,6 +120,7 @@
                             <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                 <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
                                     <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
+                                    <p class="small">{{ $project->description }}</p>
                                 </a>
                             </div>
                             @else
@@ -127,6 +128,7 @@
                                     <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
                                         <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png"
                                              class="img-responsive" title="{{ $project->name }}">
+                                        <p class="small">{{ $project->description }}</p>
                                     </a>
                                 </div>
                             @endif
