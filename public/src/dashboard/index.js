@@ -310,7 +310,7 @@ function setupSocialCounters() {
         // vimeo_token:'token_here',
         // behance_client_id:'client_id_here',
         foursquare_token: 'OTPZ04SSPJUZPATMOOYTR2MCT5NUQ2V4MVX0SSZMVDA35D3N',
-        linkedin_oauth: 'AQXr1IpWpZK9D1WJlNkYUgaaH-WRAhzIUI7DHT-RPo9fkQgyxyerCaY3MCESx1JyvFmw7ITcPGuStVm1p01JxLdnlREh_7MYYvUek0M36yWvULusbRp1f0jSLBYSK3NlLcqALhv-D8jaBvIyH2oCNQqL7YKCrvSUgKD5gyCcUcCioGG0JLg',
+        linkedin_oauth: 'AQRTeOrFpAbZW6B49MLcIBJWTny2zyo1UAXwt-MZ_IRiF9YWuH97l4xcGpGXt7a_Q4mv9LF7rf38AbnS1nDONgc9SLzYlSLbEfLIgNC2lJrXNeSYdmd_EuXvGODiJa2rtIffosznLT-zlpIb24VOTmNOOTR5jg',
         linkedin_company_id: $wrapper.find('[data-social="linkedIn"]').data('id')
     });
 }
