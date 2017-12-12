@@ -116,7 +116,7 @@
                 <div class="port-sec">
                     <div id="Container">
                         @foreach ($me->projects()->latest()->take(3)->get() as $project)
-                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-3 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
+                            <div class="filimg mix @foreach ($project->services as $service) category-{{ $service->id }}  @endforeach col-md-4 col-sm-4 col-xs-12" data-myorder="{{ $project->id }}">
                                 <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">
                                     @if ($project->featuredImage)
                                         <img src="{{ $project->featuredImage->fullPath }}" class="img-responsive" title="{{ $project->featuredImage->name }}">
