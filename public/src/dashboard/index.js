@@ -310,7 +310,7 @@ function setupSocialCounters() {
         // vimeo_token:'token_here',
         // behance_client_id:'client_id_here',
         foursquare_token: 'OTPZ04SSPJUZPATMOOYTR2MCT5NUQ2V4MVX0SSZMVDA35D3N',
-        linkedin_oauth: 'AQQFSIzM3pW9cCtGM8P8db_slGDUvBjXOm8rP6KIwaKl0Pj-Rlp2IL4dBOstn3ONMMhavW5jB3COvbE9JS9NqXW0YxFZs4tb719NSN4tTRgFjudnMUl759tiRi3dvqhjvNh7KOCM4B5P-SIgmP8MLhuHGh6rNQ',
+        linkedin_oauth: 'AQW1KHwtmOofjcyfe_lCqq8muaTxv2IZwXugrOOh-oCg8rIeGYVEXJnBTok0XdRbkofGqMYfsVHZjBiyy9YQsSi0TBP3Py_dEU0ebhf2V02ezyN58DWrkDljG5tc-EIPs-698Gf3dmdVdElhE_s30vj20vEaubi4olyxK4dg_EQXPF_ZoVDCqh8uBk-1yHZyxY6H1WE8uhqnnEW9J7nXgdoWehsehcKTTfqMsqKAYwjw3KqB2MgR9rlS93KpieqG4YUtGiaN5Eq_dTfS7oBJOJw9umIzVD8KTkfg_Nwn_6Gc5-GuiBtFA5o1wYITuZHrVbZwQ9lQPCrKQkOucSHfXKd8EUzcSg',
         linkedin_company_id: $wrapper.find('[data-social="linkedIn"]').data('id')
     });
 }
