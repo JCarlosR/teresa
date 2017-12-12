@@ -132,7 +132,9 @@
             $topics.append($topic);
         }
         function removeTopic() {
-            $(this).parents('.form-group').fadeOut();
+            $(this).parents('.form-group').fadeOut('slow', function () {
+                $(this).remove();
+            });
         }
     </script>
 @endsection
