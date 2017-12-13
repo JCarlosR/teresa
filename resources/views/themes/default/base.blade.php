@@ -91,6 +91,7 @@
 <script src="{{ asset('/themes/default/js/jquery.mixitup.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/themes/default/js/slick.min.js') }}"></script>
 <script src="{{ asset('/themes/default/js/custom.js') }}"></script>
+@yield('scripts')
 
 </body>
 </html>

@@ -18,7 +18,7 @@
                         <p>Usa el formulario de contacto, o contáctanos a través de nuestros datos (ubicados en el lado derecho).</p>
                         <hr class="pg-titl-bdr-btm">
                     </div>
-                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <p id="messageSent">Tu mensaje ha sido enviado. Gracias!</p>
                     <div id="errormessage"></div>
 
                     <div class="form-sec">
@@ -86,7 +86,8 @@
                 data: $contactForm.serialize(),
                 success: function (data) {
                     if (data.success) {
-                        $("#contactForm")[0].reset();
+                        $("#contactForm").fadeOut();
+                        $('#messageSent').show();
                     } else {
                         displayErrorMessages(data);
                     }

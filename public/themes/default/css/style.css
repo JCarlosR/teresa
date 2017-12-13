@@ -322,7 +322,7 @@ margin-top: 5px;
     font-size:13px;
 }
 
-#sendmessage {
+#messageSent {
     color: green;
     border:1px solid green;
     display:none;
