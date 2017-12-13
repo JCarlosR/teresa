@@ -75,7 +75,8 @@
             $contactForm.on('submit', onSubmitContact);
         });
 
-        function onSubmitContact() {
+        function onSubmitContact(event) {
+            event.preventDefault();
             $btnSubmitContact.prop('disabled', true);
 
             $.ajax({
