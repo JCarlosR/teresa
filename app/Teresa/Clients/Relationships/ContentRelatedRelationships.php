@@ -88,4 +88,11 @@ trait ContentRelatedRelationships
         return $this->hasMany(PageDescription::class);
     }
 
+    // contact form
+
+    public function topics()
+    {
+        return $this->hasMany(InboxTopic::class);
+    }
+
 }

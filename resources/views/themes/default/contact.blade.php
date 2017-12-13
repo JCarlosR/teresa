@@ -1,8 +1,6 @@
 @extends('themes.default.base')
 
 @section('content')
-
-    <!--CTA1 START-->
     <div class="cta-1">
         <div class="container">
             <div class="row text-center white">
@@ -11,9 +9,7 @@
             </div>
         </div>
     </div>
-    <!--CTA1 END-->
 
-    <!--CONTACT START-->
     <div id="contact" class="section-padding">
         <div class="container">
             <div class="row">
@@ -26,25 +22,31 @@
                     <div id="errormessage"></div>
 
                     <div class="form-sec">
-                        <form action="" method="post" role="form" class="contactForm">
-                            <div class="col-md-4 form-group">
-                                <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validation"></div>
+                        <form id="contactForm">
+                            <input type="hidden" name="user_id" value="{{ $me->id }}">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="name" placeholder="Nombre" required>
                             </div>
-                            <div class="col-md-4 form-group">
-                                <input type="email" class="form-control text-field-box" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                <div class="validation"></div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Correo" required>
                             </div>
-                            <div class="col-md-4 form-group">
-                                <input type="text" class="form-control text-field-box" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validation"></div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="phone" placeholder="Teléfono" required>
                             </div>
-                            <div class="col-md-12 form-group">
-                                <textarea class="form-control text-field-box" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validation"></div>
-
-                                <button class="button-medium" id="contact-submit" type="submit" name="contact">Enviar ahora</button>
+                            <div class="form-group">
+                                <select name="topic" class="form-control" required>
+                                    <option value="">Seleccione asunto</option>
+                                    @foreach ($me->topics()->pluck('name') as $topic)
+                                        <option value="{{ $topic }}">{{ $topic }}</option>
+                                    @endforeach
+                                </select>
                             </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="content" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="btnSubmitContact">
+                                Enviar <i class="fa fa-send"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -61,5 +63,47 @@
             </div>
         </div>
     </div>
-    <!--CONTACT END-->
+@endsection
+
+@section('scripts')
+    <script>
+        var $contactForm, $btnSubmitContact;
+        $(function () {
+            $contactForm = $("#contactForm");
+            $btnSubmitContact = $('#btnSubmitContact');
+
+            $contactForm.on('submit', onSubmitContact);
+        });
+
+        function onSubmitContact() {
+            $btnSubmitContact.prop('disabled', true);
+
+            $.ajax({
+                url: 'https://theressa.net/formulario/contacto',
+                dataType: 'json',
+                type: 'GET',
+                data: $contactForm.serialize(),
+                success: function (data) {
+                    if (data.success) {
+                        $("#contactForm")[0].reset();
+                    } else {
+                        displayErrorMessages(data);
+                    }
+
+                    $btnSubmitContact.prop('disabled', false);
+                },
+                error: function() {
+                    alert('Ocurrió un error inesperado.');
+                }
+            });
+        }
+
+        function displayErrorMessages(errors) {
+            for (var property in errors) {
+                if (errors.hasOwnProperty(property)) {
+                    alert(errors[property]);
+                }
+            }
+        }
+    </script>
 @endsection
