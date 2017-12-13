@@ -28,7 +28,7 @@ class GoogleAnalyticsController extends Controller
             $timeDimension = 'yearMonth';
         }
 
-        $metrics = 'ga:pageviews';
+        $metrics = 'ga:users';
         $optional = [
             'dimensions' => "ga:$timeDimension,ga:medium"
         ];
@@ -140,7 +140,7 @@ class GoogleAnalyticsController extends Controller
         $endDateTime = DateTime::createFromFormat($this->format, $request->input('end'));
         $period = Period::create($startDateTime, $endDateTime);
 
-        $metrics = 'ga:pageviews';
+        $metrics = 'ga:users';
         $optional = [
             'dimensions' => 'ga:channelGrouping'
         ];

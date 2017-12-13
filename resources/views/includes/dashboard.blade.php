@@ -271,7 +271,7 @@
     <div class="col-lg-12">
         <div class="widget">
             <div class="widget-heading clearfix">
-                <h3 class="widget-title pull-left">Visitas del sitio web</h3>
+                <h3 class="widget-title pull-left">Audiencia - Adquisición</h3>
                 <ul class="widget-tools pull-right list-inline">
                     <li><a href="javascript:;" class="widget-collapse"><i class="ion-chevron-up"></i></a></li>
                     <li><a href="javascript:;" class="widget-reload"><i class="ion-refresh"></i></a></li>
@@ -308,7 +308,7 @@
                         <div class="media">
                             <div class="media-body">
                                 <div class="fs-36 fw-300" id="total-visits-count">0</div>
-                                <h6 class="m-0 fw-400 text-muted text-uppercase">Visitas totales</h6>
+                                <h6 class="m-0 fw-400 text-muted text-uppercase">Usuarios totales</h6>
                             </div>
                             <div class="media-right" title="Ir a la sección de Google Analytics">
                                 <i class="ion-arrow-graph-up-right fs-36"></i>
