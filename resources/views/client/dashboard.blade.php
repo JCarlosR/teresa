@@ -43,12 +43,16 @@
                         <div class="pull-right">
                             <a href="/ver/{{ $client->id }}" target="_blank" class="btn btn-primary"
                                data-toggle="tooltip" data-placement="top" title="Previsualizar página">
-                                <i class="glyphicon glyphicon-globe"></i> Previsualizar
+                                <i class="glyphicon glyphicon-globe"></i>
+                            </a>
+                            <a href="/temporal/{{ $client->id }}" target="_blank" class="btn btn-info"
+                               data-toggle="tooltip" data-placement="top" title="Página temporal">
+                                <i class="glyphicon glyphicon-flash"></i>
                             </a>
                             @if (auth()->user()->is_admin)
                                 <a href="/admin/cliente/{{ $client->id }}/impersonate" class="btn btn-default"
                                    data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
-                                    <i class="glyphicon glyphicon-log-in"></i> Impersonate
+                                    <i class="glyphicon glyphicon-log-in"></i>
                                 </a>
                             @endif
                         </div>
