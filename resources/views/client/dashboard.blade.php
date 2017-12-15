@@ -35,15 +35,23 @@
 
 @section('dashboard_content')
     <div class="page-content container-fluid">
-        @if (auth()->user()->is_client)
+
         <div class="row">
             <div class="col-md-12">
                 <div class="widget">
                     <div class="widget-body">
-                        <a href="/ver/{{ auth()->user()->id }}" target="_blank" class="btn btn-primary pull-right"
-                           data-toggle="tooltip" data-placement="top" title="Previsualizar página">
-                            <i class="glyphicon glyphicon glyphicon-globe big-black-icon"></i> Previsualizar
-                        </a>
+                        <div class="pull-right">
+                            <a href="/ver/{{ $client->id }}" target="_blank" class="btn btn-primary"
+                               data-toggle="tooltip" data-placement="top" title="Previsualizar página">
+                                <i class="glyphicon glyphicon-globe"></i> Previsualizar
+                            </a>
+                            @if (auth()->user()->is_admin)
+                                <a href="/admin/cliente/{{ $client->id }}/impersonate" class="btn btn-default"
+                                   data-toggle="tooltip" data-placement="top" title="Iniciar sesión como este usuario">
+                                    <i class="glyphicon glyphicon-log-in"></i> Impersonate
+                                </a>
+                            @endif
+                        </div>
 
                         <p><b>Bienvenido {{ auth()->user()->name }}!</b></p>
                         <p>Seleccione una opción del menú de la izquierda para acceder a la sección de su interés.</p>
@@ -51,7 +59,6 @@
                 </div>
             </div>
         </div>
-        @endif
 
         @include('includes.dashboard')
     </div>
