@@ -11,6 +11,10 @@
             @foreach ($services as $service)
                 @include('client.sitemap.node-service')
             @endforeach
+        @elseif ($node->type === 'articles')
+            @foreach ($articles as $article)
+                @include('client.sitemap.node-article')
+            @endforeach
         @else
             @foreach ($node->children as $child)
                 @include('client.sitemap.node-level-3')
