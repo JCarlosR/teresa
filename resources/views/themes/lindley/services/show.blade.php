@@ -41,10 +41,7 @@
 
                        {!! $service->question_2 !!}
 
-
                        {!! $service->question_3 !!}
-
-
 
                        {!! $service->question_5 !!}
 

@@ -22,17 +22,15 @@
     <meta name="twitter:description" content="{{ $me->description }}">
     <meta name="twitter:image" content="{{ $me->photo_route }}">
     @endif
-    <link rel="canonical" href="{{ url()->current() }}" />
+
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/lindley/css/style.css?v=40') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/lindley/css/icons.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/samuel/css/style.css') }}">
+
     @if ($me->favicon)
         <link rel="shortcut icon" type="image/x-icon" href="{{ $me->favicon_url }}">
     @endif
@@ -67,11 +65,11 @@
 </head>
 <body>
 
-@include('themes.lindley.includes.header')
+@include('themes.samuel.includes.header')
 
 @yield('content')
 
-@include('themes.lindley.includes.footer')
+@include('themes.samuel.includes.footer')
 
 @if ($me->google_analytics)
 <script>
@@ -84,13 +82,10 @@
     ga('send', 'pageview');
 </script>
 @endif
-@include('themes.lindley.includes.form-modal')
-<div class="back-to-top reveal" id="back-to-top">
-    <i class="fa fa-angle-up fa-2x"></i>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ asset('/themes/lindley/js/main.js?v=2') }}"></script>
+<script src="{{ asset('/themes/samuel/js/app.js') }}"></script>
 
 </body>
 </html>
