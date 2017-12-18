@@ -52,8 +52,8 @@
                         </div>
                     </div>
                     <div class="col-md-4 pad40">
-                        <div class="border-bt">
-                            <h4> {{ $project->question_0 }}</h4>
+                        <div class="border-bt1">
+                            <h2> {{ $project->question_0 }}</h2>
                         </div>
                         <br>
                         @include('themes.lindley.includes.redes-sociales-link')
