@@ -30,8 +30,9 @@
                 <div class="col-md-12">
                     <div class="col-md-8 pad-t80 img-spacio">
                         @foreach ($project->images()->where('featured', false)->get() as $image)
-                           <img src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"
-                                        title="{{ $image->name }}">
+                            <a  class=" img-hover" title="{{ $image->name }}"> <img
+                                        src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"
+                                        title="{{ $image->name }}"></a>
                         @endforeach
                         <div class="pad-bt40">
                             <ul>

@@ -12,11 +12,8 @@
                 <div class="col-md-7 col-sm-7">
                     <nav id="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}"
-                                                           title="Volver al inicio Lindely Arquitectos">Inicio </a></li>
-                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/servicios') }}"
-                                                           title="Servicios de Arquitectura Lindley Arquitectos">Servicios</a>
-                            </li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/') }}" title="Volver al inicio Lindely Arquitectos">Inicio </a></li>
+                            <li class="breadcrumb-item"><a href="{{ $me->getLinkTo('/servicios') }}" title="Servicios de Arquitectura Lindley Arquitectos">Servicios</a></li>
 
                             <li class="breadcrumb-item active">{{ $service->name }}</li>
                         </ol>
@@ -32,9 +29,7 @@
                 <div class="col-md-9">
                     <div class="col-md-6 img-service-prin">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
-                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover"
-                               title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive"
-                                                                 alt="{{ $image->name }}" title="{{ $service->name }}"></a>
+                            <a  class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
                         @endforeach
                     </div>
                     <div class="col-md-6">
@@ -42,18 +37,18 @@
                             <h2>{{ $service->name }}</h2>
                         </div>
 
-                        {!! $service->question_1 !!}
+                       {!! $service->question_1 !!}
 
-                        {!! $service->question_2 !!}
+                       {!! $service->question_2 !!}
 
-                        {!! $service->question_3 !!}
+                       {!! $service->question_3 !!}
 
-                        {!! $service->question_5 !!}
+                       {!! $service->question_5 !!}
 
                         <div class="border-t ">
                             <h3>PROYECTO DE ARQUITECTURA</h3>
                         </div>
-                        {!! $service->question_4 !!}
+                       {!! $service->question_4 !!}
                     </div>
                 </div>
             </div>
