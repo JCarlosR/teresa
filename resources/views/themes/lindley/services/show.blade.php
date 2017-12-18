@@ -33,7 +33,7 @@
                         @endforeach
                     </div>
                     <div class="col-md-6">
-                        <div class="border-bt">
+                        <div class="border-bt1">
                             <h2>{{ $service->name }}</h2>
                         </div>
 
@@ -45,7 +45,7 @@
 
                        {!! $service->question_5 !!}
 
-                        <div class="border-t ">
+                        <div class="border-t1 ">
                             <h3>PROYECTO DE ARQUITECTURA</h3>
                         </div>
                        {!! $service->question_4 !!}
