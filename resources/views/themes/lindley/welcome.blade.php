@@ -62,7 +62,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-1"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-tiendas.png" alt="">
+                        {{--<i class="reneva icon-1"></i>--}}
                         <div class="left-services">
                             <h4>diseño tiendas </h4>
                             <p>Diseño y remodelación de tiendas y locales para centros comerciales</p>
@@ -71,7 +72,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-35"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-construccion.png" alt="">
+                        {{--<i class="reneva icon-35"></i>--}}
                         <div class="left-services">
                             <h4>construcción</h4>
                             <p>Metrados, presupuestos y especialidades para locales comerciales</p>
@@ -79,7 +81,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-31"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-supervision.png" alt="">
+                        {{--<i class="reneva icon-31"></i>--}}
                         <div class="left-services">
                             <h4>supervisión</h4>
                             <p>Supervisión de proyectos de arquitectura comercial de terceros</p>
@@ -91,7 +94,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-15"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-implementacion.png" alt="">
+                        {{--<i class="reneva icon-15"></i>--}}
                         <div class="left-services">
                             <h4>implementación</h4>
                             <p>Mobiliario, tabiquería y acabados para locales comerciales</p>
@@ -99,7 +103,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-50"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-mantenimiento.png" alt="">
+                        {{--<i class="reneva icon-50"></i>--}}
                         <div class="left-services">
                             <h4>mantenimiento</h4>
                             <p>Mantenimiento y remodelación de tiendas y locales comerciales</p>
@@ -107,7 +112,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-30"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-indeci.png" alt="">
+                        {{--<i class="reneva icon-30"></i>--}}
                         <div class="left-services">
                             <h4>indeci</h4>
                             <p>Planos de seguridad y evacuación de tiendas y locales comerciales</p>
@@ -178,14 +184,18 @@
             </div>
             <div class="col-md-12 sect-proccess text-center pad-t40">
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-10"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono1.png" alt=""><br>
+                    {{--<i class="fa fa-pencil" aria-hidden="true"></i>--}}
+                    {{--<i class="reneva icon-10"></i><br>--}}
                     <span>ETAPA INICIAL</span>
                     <h4>IDEA CLIENTE</h4>
                     <p>Escuchamos, investigamos y documentamos necesidades del cliente y tienda para crear una relación
                         de las necesidades del proyecto. Para luego pasar a la etapa de investigación y diseño.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-6"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono2.png" alt=""><br>
+                    {{--<i class="fa fa-handshake-o"></i>--}}
+                    {{--<i class="reneva icon-6"></i><br>--}}
                     <span>SEGUNDA ETAPA</span>
                     <h4>PROPUESTA INICIAL</h4>
                     <p>Es aquí donde el cliente recibe el anteproyecto arquitectura de la tienda con diversas
@@ -193,7 +203,8 @@
                         estética de la tienda o local comercial.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-42"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono3.png" alt=""><br>
+                    {{--<i class="reneva icon-42"></i><br>--}}
                     <span>TERCERA ETAPA</span>
                     <h4>CONSTRUCCIÓN</h4>
                     <p>Organización y manejo de todos los participantes en la construcción de un local comercial o
@@ -201,7 +212,8 @@
                         con los altos estándares de calidad que ofrecemos.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-16"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono4.png" alt=""><br>
+                    {{--<i class="reneva icon-16"></i><br>--}}
                     <span>ETAPA FINAL</span>
                     <h4>ACABADOS</h4>
                     <p>Es la etapa donde se definen los acabados constructivos y la ubicación de los productos en

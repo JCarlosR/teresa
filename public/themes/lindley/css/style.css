@@ -157,12 +157,12 @@ ol {
     position: relative;
 }
 
-.header-widget li i {
+.header-widget li img {
     float: left;
-    padding: 10px 30px 10px 10px;
+    padding: 10px 10px 10px 10px;
     display: inline-block;
-    width: 66px;
-    font-size: 42px;
+    width: auto;
+    /*font-size: 42px;*/
 }
 
 .header-widget li:after {
@@ -373,20 +373,20 @@ input[type="button"], input[type="submit"], a.button.border, a.button {
 
 .back-services:hover h4,
 .back-services:hover p,
-.back-services:hover i {
+.back-services:hover img {
     color: #fff;
 }
 
-div.back-services i {
+div.back-services img {
     font-size: 72px;
     color: #c71c77;
     float: left;
     display: inline-block;
-    margin-right: 29px;
+    /*margin-right: 29px;*/
     line-height: 95px;
-    height: 176px;
+    height: auto;
     padding: 30px 20px 0px 20px;
-    width: 50px;
+    width: auto;
 }
 
 .bac-services.left-services {

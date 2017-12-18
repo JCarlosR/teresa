@@ -14,7 +14,8 @@
                 <ul class="header-widget">
 
                     <li class="li-left">
-                        <i class="icon-location-pin"></i>
+                        {{--<i class="icon-location-pin"></i>--}}
+                        <img src="/themes/lindley/imagenes/iconos/icono-location.png" alt="">
                         <div class="widget-content">
                             <span class="title">Síguenos</span>
                             <span class="data">
@@ -26,7 +27,9 @@
                     </li>
 
                     <li class="li-right">
-                        <a href="tel:+51987936976" title="Llamar a Lindley Arquitectos"> <i class="icon-call-in"></i></a>
+                        <a href="tel:+51987936976" title="Llamar a Lindley Arquitectos">
+                            <img src="/themes/lindley/imagenes/iconos/icono-phone.png" alt=""></a>
+                            {{--<i class="icon-call-in"></i></a>--}}
                         <div class="widget-content">
                             <span class="title">¿Consultas?</span>
                             <span class="data"> <a href="tel:+51987936976" title="Llamar a Lindley Arquitectos">(+51) 987-936-976 </a></span>
