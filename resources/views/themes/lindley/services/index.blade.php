@@ -7,7 +7,7 @@
                 <div class="col-md-5 col-sm-5">
                     <div class="title-pes">
                         <h1>Servicios</h1>
-                        <span>Diseño y Arquitectura de Tiendas y Locales Comerciales</span>
+                        <h2 class="spa">Diseño y Arquitectura de Tiendas y Locales Comerciales</h2>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-7">

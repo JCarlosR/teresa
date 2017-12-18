@@ -2688,3 +2688,12 @@ input[type="text"], input[type="email"], input[type="tel"], textarea, select {
 {
     margin-right: 10px;
 }
+h2.spa {
+    font-size: 20px !important;
+    color: #888 !important;
+    margin-bottom: 3px !important;
+    margin-top: 6px !important;
+    display: inline-block !important;
+    text-transform: inherit !important;
+    font-family:  "Lato", Helvetica, Arial, sans-serif;
+}
