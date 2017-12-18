@@ -2696,4 +2696,5 @@ h2.spa {
     display: inline-block !important;
     text-transform: inherit !important;
     font-family:  "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
