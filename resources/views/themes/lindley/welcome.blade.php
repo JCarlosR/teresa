@@ -249,14 +249,14 @@
                             </div>
                             <div class="item">
                                 <blockquote>
-                                    <p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
+                                    <p>Nuestra prioridad es lograr mantener los estándares de <strong>calidad e imagen </strong> corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
                                     <small>Calidad e Imágen</small>
                                 </blockquote>
                                 {{--<div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>--}}
                             </div>
                             <div class="item">
                                 <blockquote>
-                                    <p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
+                                    <p><u>Hemos realizado más de 45 locales y tiendas para centros comerciales</u>, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
                                     <small>Lindley Arquitectos</small>
                                 </blockquote>
                                 {{--<div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>--}}
