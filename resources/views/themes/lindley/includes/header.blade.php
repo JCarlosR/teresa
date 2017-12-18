@@ -39,7 +39,7 @@
 
 
                         <li class="small-dialog-headline">
-                            <a data-toggle="modal" data-target="#myModal"  class="button border medium ">
+                            <a data-toggle="modal" data-target="#myModal"  class="button border medium" title="Solicitar Servicio">
                                 <span>Solicitar Servicio</span></a>
                         </li>
 
