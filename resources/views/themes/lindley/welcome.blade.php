@@ -62,7 +62,7 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-tiendas.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-tiendas.png" alt="Diseño de Tiendas" title="Diseño de Tiendas">
                         {{--<i class="reneva icon-1"></i>--}}
                         <div class="left-services">
                             <h4>diseño tiendas </h4>
@@ -72,7 +72,7 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-construccion.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-construccion.png" alt="Construcción" title="Construcción">
                         {{--<i class="reneva icon-35"></i>--}}
                         <div class="left-services">
                             <h4>construcción</h4>
@@ -81,7 +81,7 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-supervision.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-supervision.png" alt="Supervisión" title="Supervisión">
                         {{--<i class="reneva icon-31"></i>--}}
                         <div class="left-services">
                             <h4>supervisión</h4>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-implementacion.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-implementacion.png" alt="Implementación" title="Implmentación">
                         {{--<i class="reneva icon-15"></i>--}}
                         <div class="left-services">
                             <h4>implementación</h4>
@@ -103,7 +103,7 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-mantenimiento.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-mantenimiento.png" alt="Mantenimiento" title="Mantenimiento">
                         {{--<i class="reneva icon-50"></i>--}}
                         <div class="left-services">
                             <h4>mantenimiento</h4>
@@ -112,7 +112,7 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <img src="/themes/lindley/imagenes/iconos/icono-indeci.png" alt="">
+                        <img src="/themes/lindley/imagenes/iconos/icono-indeci.png" alt="Indice" title="Indice">
                         {{--<i class="reneva icon-30"></i>--}}
                         <div class="left-services">
                             <h4>indeci</h4>
@@ -184,7 +184,7 @@
             </div>
             <div class="col-md-12 sect-proccess text-center pad-t40">
                 <div class="col-md-3 col-proccess">
-                    <img src="/themes/lindley/imagenes/iconos/icono1.png" alt=""><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono1.png" alt="Etapa Inicial" title="Etapa Inicial"><br>
                     {{--<i class="fa fa-pencil" aria-hidden="true"></i>--}}
                     {{--<i class="reneva icon-10"></i><br>--}}
                     <span>ETAPA INICIAL</span>
@@ -193,7 +193,7 @@
                         de las necesidades del proyecto. Para luego pasar a la etapa de investigación y diseño.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <img src="/themes/lindley/imagenes/iconos/icono2.png" alt=""><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono2.png" alt="Segunda Etapa" title="Segunda Etapa"><br>
                     {{--<i class="fa fa-handshake-o"></i>--}}
                     {{--<i class="reneva icon-6"></i><br>--}}
                     <span>SEGUNDA ETAPA</span>
@@ -203,7 +203,7 @@
                         estética de la tienda o local comercial.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <img src="/themes/lindley/imagenes/iconos/icono3.png" alt=""><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono3.png" alt="Tercera Etapa" title="Tercera Etapa"><br>
                     {{--<i class="reneva icon-42"></i><br>--}}
                     <span>TERCERA ETAPA</span>
                     <h4>CONSTRUCCIÓN</h4>
@@ -212,7 +212,7 @@
                         con los altos estándares de calidad que ofrecemos.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <img src="/themes/lindley/imagenes/iconos/icono4.png" alt=""><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono4.png" alt="Etapa Final" title="Etapa Final"><br>
                     {{--<i class="reneva icon-16"></i><br>--}}
                     <span>ETAPA FINAL</span>
                     <h4>ACABADOS</h4>
