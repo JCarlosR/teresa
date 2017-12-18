@@ -7,6 +7,7 @@
                 <div class="col-md-5 col-sm-5">
                     <div>
                         <h1>Proyectos</h1>
+                        <h2 class="spa">Diseño y Elaboración de Proyectos</h2>
                     </div>
                 </div>
                 <div class="col-md-7 col-sm-7">
