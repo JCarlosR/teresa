@@ -62,7 +62,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-1"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-tiendas.png" alt="Diseño de Tiendas" title="Diseño de Tiendas">
+                        {{--<i class="reneva icon-1"></i>--}}
                         <div class="left-services">
                             <h4>diseño tiendas </h4>
                             <p>Diseño y remodelación de tiendas y locales para centros comerciales</p>
@@ -71,7 +72,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-35"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-construccion.png" alt="Construcción" title="Construcción">
+                        {{--<i class="reneva icon-35"></i>--}}
                         <div class="left-services">
                             <h4>construcción</h4>
                             <p>Metrados, presupuestos y especialidades para locales comerciales</p>
@@ -79,7 +81,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-31"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-supervision.png" alt="Supervisión" title="Supervisión">
+                        {{--<i class="reneva icon-31"></i>--}}
                         <div class="left-services">
                             <h4>supervisión</h4>
                             <p>Supervisión de proyectos de arquitectura comercial de terceros</p>
@@ -91,7 +94,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-15"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-implementacion.png" alt="Implementación" title="Implmentación">
+                        {{--<i class="reneva icon-15"></i>--}}
                         <div class="left-services">
                             <h4>implementación</h4>
                             <p>Mobiliario, tabiquería y acabados para locales comerciales</p>
@@ -99,7 +103,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-50"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-mantenimiento.png" alt="Mantenimiento" title="Mantenimiento">
+                        {{--<i class="reneva icon-50"></i>--}}
                         <div class="left-services">
                             <h4>mantenimiento</h4>
                             <p>Mantenimiento y remodelación de tiendas y locales comerciales</p>
@@ -107,7 +112,8 @@
 
                     </div>
                     <div class="col-md-4 col-sm-3 col-xs-12 back-services">
-                        <i class="reneva icon-30"></i>
+                        <img src="/themes/lindley/imagenes/iconos/icono-indeci.png" alt="Indice" title="Indice">
+                        {{--<i class="reneva icon-30"></i>--}}
                         <div class="left-services">
                             <h4>indeci</h4>
                             <p>Planos de seguridad y evacuación de tiendas y locales comerciales</p>
@@ -131,17 +137,7 @@
                     <h2>ARQUITECTURA TIENDAS Y LOCALES COMERCIALES</h2>
                     <h3 class="headline centered">PROYECTOS RECIENTES</h3>
 
-                    <!-- Filters -->
-                    <div id="filters">
-                        <ul class="option-set alt">
-                            <li><a href="#filter" class="selected" data-filter="*">TODOS</a></li>
-                            <li><a href="#filter" data-filter=".kitchens">TIENDAS</a></li>
-                            <li><a href="#filter" data-filter=".bathrooms">OFICINAS</a></li>
-                            <li><a href="#filter" data-filter=".bedrooms">SUPERVISIÓN</a></li>
-                            <li><a href="#filter" data-filter=".living-rooms">OTROS</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
+
 
                 </div>
             </div>
@@ -167,9 +163,6 @@
                 <div class="plus-icon"></div>
             </a>
         @endforeach
-
-
-
         </div>
 
         <div class="container">
@@ -191,14 +184,18 @@
             </div>
             <div class="col-md-12 sect-proccess text-center pad-t40">
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-10"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono1.png" alt="Etapa Inicial" title="Etapa Inicial"><br>
+                    {{--<i class="fa fa-pencil" aria-hidden="true"></i>--}}
+                    {{--<i class="reneva icon-10"></i><br>--}}
                     <span>ETAPA INICIAL</span>
                     <h4>IDEA CLIENTE</h4>
                     <p>Escuchamos, investigamos y documentamos necesidades del cliente y tienda para crear una relación
                         de las necesidades del proyecto. Para luego pasar a la etapa de investigación y diseño.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-6"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono2.png" alt="Segunda Etapa" title="Segunda Etapa"><br>
+                    {{--<i class="fa fa-handshake-o"></i>--}}
+                    {{--<i class="reneva icon-6"></i><br>--}}
                     <span>SEGUNDA ETAPA</span>
                     <h4>PROPUESTA INICIAL</h4>
                     <p>Es aquí donde el cliente recibe el anteproyecto arquitectura de la tienda con diversas
@@ -206,7 +203,8 @@
                         estética de la tienda o local comercial.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-42"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono3.png" alt="Tercera Etapa" title="Tercera Etapa"><br>
+                    {{--<i class="reneva icon-42"></i><br>--}}
                     <span>TERCERA ETAPA</span>
                     <h4>CONSTRUCCIÓN</h4>
                     <p>Organización y manejo de todos los participantes en la construcción de un local comercial o
@@ -214,7 +212,8 @@
                         con los altos estándares de calidad que ofrecemos.</p>
                 </div>
                 <div class="col-md-3 col-proccess">
-                    <i class="reneva icon-16"></i><br>
+                    <img src="/themes/lindley/imagenes/iconos/icono4.png" alt="Etapa Final" title="Etapa Final"><br>
+                    {{--<i class="reneva icon-16"></i><br>--}}
                     <span>ETAPA FINAL</span>
                     <h4>ACABADOS</h4>
                     <p>Es la etapa donde se definen los acabados constructivos y la ubicación de los productos en
@@ -227,75 +226,6 @@
         </div>
 
     </section>
-
-    {{--<section id="testimonials">--}}
-        {{--<div class="container">--}}
-            {{--<div class='row'>--}}
-                {{--<div class=' text-center pad60  col-md-12'>--}}
-                    {{--<div class="carousel slide" data-ride="carousel" id="quote-carousel">--}}
-                        {{--<!-- Bottom Carousel Indicators -->--}}
-                        {{--<ol class="carousel-indicators">--}}
-                            {{--<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>--}}
-                            {{--<li data-target="#quote-carousel" data-slide-to="1"></li>--}}
-                            {{--<li data-target="#quote-carousel" data-slide-to="2"></li>--}}
-                        {{--</ol>--}}
-
-                        {{--<!-- Carousel Slides / Quotes -->--}}
-                        {{--<div class="carousel-inner">--}}
-
-                            {{--<!-- Quote 1 -->--}}
-                            {{--<div class="item active">--}}
-
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-md-12">--}}
-                                        {{--<div  class="par-testimonial">--}}
-                                            {{--<p>Somos una empresa especializada en brindar las mejores soluciones de Diseño y elaboración de proyectos, proponiendo materiales innovadores y de calidad.</p>--}}
-                                            {{--<small>Diseño, Materiales y Calidad</small>--}}
-                                        {{--</div>--}}
-
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                            {{--<!-- Quote 2 -->--}}
-                            {{--<div class="item">--}}
-
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-md-12">--}}
-                                        {{--<div class="par-testimonial" >--}}
-                                            {{--<p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>--}}
-                                            {{--<small>Calidad e Imágen</small>--}}
-                                        {{--</div>--}}
-
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                            {{--<!-- Quote 3 -->--}}
-                            {{--<div class="item">--}}
-
-                                {{--<div class="row">--}}
-                                    {{--<div class="col-md-12">--}}
-                                        {{--<div class="par-testimonial">--}}
-                                            {{--<p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>--}}
-                                            {{--<small>Lindley Arquitectos</small>--}}
-                                        {{--</div>--}}
-
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                            {{--</div>--}}
-                        {{--</div>--}}
-
-                        {{--<!-- Carousel Buttons Next/Prev -->--}}
-                        {{--<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>--}}
-                        {{--<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-        {{--</div>--}}
-    {{--</section>--}}
     <div id="carousel">
         <div class="container">
             <div class="row">
@@ -319,14 +249,14 @@
                             </div>
                             <div class="item">
                                 <blockquote>
-                                    <p>Nuestra prioridad es lograr mantener los estándares de calidad e imagen corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
+                                    <p>Nuestra prioridad es lograr mantener los estándares de <strong>calidad e imagen </strong> corporativa de su empresa, en espacios personalizados, satisfaciendo sus necesidades y logrando confort, buen acabado, tecnología y perfección, para que su trabajo y día a día sean mucho más placenteros.</p>
                                     <small>Calidad e Imágen</small>
                                 </blockquote>
                                 {{--<div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>--}}
                             </div>
                             <div class="item">
                                 <blockquote>
-                                    <p>Hemos realizado más de 45 locales y tiendas para centros comerciales, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
+                                    <p><u>Hemos realizado más de 45 locales y tiendas para centros comerciales</u>, ahora con un dominio pleno en la especialidad del retail en la ciudad de Lima y en todo el Perú.</p>
                                     <small>Lindley Arquitectos</small>
                                 </blockquote>
                                 {{--<div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>--}}

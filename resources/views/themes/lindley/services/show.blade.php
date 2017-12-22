@@ -29,11 +29,11 @@
                 <div class="col-md-9">
                     <div class="col-md-6 img-service-prin">
                         @foreach ($service->images()->where('featured', false)->get() as $image)
-                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
+                            <a  class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
                         @endforeach
                     </div>
                     <div class="col-md-6">
-                        <div class="border-bt">
+                        <div class="border-bt1">
                             <h2>{{ $service->name }}</h2>
                         </div>
 
@@ -41,14 +41,11 @@
 
                        {!! $service->question_2 !!}
 
-
                        {!! $service->question_3 !!}
-
-
 
                        {!! $service->question_5 !!}
 
-                        <div class="border-t ">
+                        <div class="border-t1 ">
                             <h3>PROYECTO DE ARQUITECTURA</h3>
                         </div>
                        {!! $service->question_4 !!}

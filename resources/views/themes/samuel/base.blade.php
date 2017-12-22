@@ -22,20 +22,37 @@
     <meta name="twitter:description" content="{{ $me->description }}">
     <meta name="twitter:image" content="{{ $me->photo_route }}">
     @endif
-    <link rel="canonical" href="{{ url()->current() }}" />
+
     <link rel="author" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="publisher" href="https://plus.google.com/+SEO-arquitectos">
     <link rel="stylesheet" href="{{ asset('/build/css/print.css') }}" media="print">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">--}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/lindley/css/style.css?v=50') }}">
-    {{--<link rel="stylesheet" type="text/css" href="{{ asset('/themes/lindley/css/icons.css') }}">--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/themes/samuel/css/style.css') }}">
+
     @if ($me->favicon)
         <link rel="shortcut icon" type="image/x-icon" href="{{ $me->favicon_url }}">
     @endif
+    {{--icons manual--}}
+    <link rel="apple-touch-icon" sizes="57x57" href="/themes/lindley/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/themes/lindley/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/themes/lindley/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/themes/lindley/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/themes/lindley/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/themes/lindley/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/themes/lindley/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/themes/lindley/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/lindley/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/themes/lindley/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/lindley/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/themes/lindley/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/lindley/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/themes/lindley/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/themes/lindley/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    {{--icons end manual--}}
 
     @yield('styles')
 
@@ -67,11 +84,11 @@
 </head>
 <body>
 
-@include('themes.lindley.includes.header')
+@include('themes.samuel.includes.header')
 
 @yield('content')
 
-@include('themes.lindley.includes.footer')
+@include('themes.samuel.includes.footer')
 
 @if ($me->google_analytics)
 <script>
@@ -84,13 +101,10 @@
     ga('send', 'pageview');
 </script>
 @endif
-@include('themes.lindley.includes.form-modal')
-<div class="back-to-top reveal" id="back-to-top">
-    <i class="fa fa-angle-up fa-2x"></i>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ asset('/themes/lindley/js/main.js?v=2') }}"></script>
+<script src="{{ asset('/themes/samuel/js/app.js') }}"></script>
 
 </body>
 </html>

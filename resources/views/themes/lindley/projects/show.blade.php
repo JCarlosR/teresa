@@ -30,7 +30,7 @@
                 <div class="col-md-12">
                     <div class="col-md-8 pad-t80 img-spacio">
                         @foreach ($project->images()->where('featured', false)->get() as $image)
-                            <a href="{{ $image->full_path }}" class=" img-hover" title="{{ $image->name }}"> <img
+                            <a  class=" img-hover" title="{{ $image->name }}"> <img
                                         src="{{ $image->full_path }}" class="img-responsive " alt="{{ $image->name }}"
                                         title="{{ $image->name }}"></a>
                         @endforeach
@@ -52,8 +52,8 @@
                         </div>
                     </div>
                     <div class="col-md-4 pad40">
-                        <div class="border-bt">
-                            <h4> {{ $project->question_0 }}</h4>
+                        <div class="border-bt1">
+                            <h2> {{ $project->question_0 }}</h2>
                         </div>
                         <br>
                         @include('themes.lindley.includes.redes-sociales-link')

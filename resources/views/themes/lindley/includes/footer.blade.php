@@ -43,7 +43,7 @@
                 </div>
                 <br>
                 <div class="tex-call">
-                    <a data-toggle="modal" data-target="#myModal" class="btn-message">
+                    <a data-toggle="modal" data-target="#myModal" class="btn-message" title="Escríbenos">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <span>Escríbenos</span>
                     </a>
