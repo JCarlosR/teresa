@@ -738,6 +738,25 @@ hr {
     color: #fff;
 }
 @media(max-width: 768px){
+
+    .hero-abouts{
+        position: absolute;
+        top: 50%;
+        font-weight: 700;
+        padding-left: 80px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-left: 41.5%;
+        z-index: 3;
+        width: 100%;
+        background:rgba(000,000,000,0.5);
+        color: #fff;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
     .hero{
         display: none;
     }
