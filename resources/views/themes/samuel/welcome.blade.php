@@ -47,42 +47,53 @@
                                 <div class="main-icon-container">
                                     <!-- ICON BLOCK -->
                                     @foreach ($me->services()->take(3)->get() as $service)
-                                    <div class=" col-md-4 col-sm-4 col-xs-12 icon-block">
-                                        <div class="icon-container">
-                                            <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" title=""><i class="fa fa-facebook"></i></a>
+                                        <div class=" col-md-4 col-sm-4 col-xs-12 icon-block">
+                                            <div class="icon-container">
+                                                <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" title="">
+                                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                            <div class="icon-text h3-home">
+                                                <h3>{{ $service->name }}</h3>
+                                                <p>{{ $service->description }}</p>
+                                            </div>
+
                                         </div>
-                                        <div class="icon-text">
-                                            <h3>{{ $service->name }}</h3>
-                                            <p>{{ $service->description }}</p>
-                                        </div>
+                                    @endforeach
+
+                                    {{--<!-- ICON BLOCK -->--}}
+                                    {{--<div class="col-md-4 col-sm-4 col-xs-12 icon-block">--}}
+                                    {{--<div class="icon-container">--}}
+                                    {{--<a href="#"><i class="flaticon-armchair4"></i></a>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="icon-text">--}}
+                                    {{--<h3>Diseño de Edificios Multifamiliares</h3>--}}
+                                    {{--<p>Voluptate illum dolore ita ipsum, quid deserunt singulis, labore admodum--}}
+                                    {{--ita--}}
+                                    {{--multos malis ea nam nam tamen fore amet. Vidisse quid incurreret ut ut--}}
+                                    {{--possumus.</p>--}}
+                                    {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--<!-- ICON BLOCK -->--}}
+                                    {{--<div class="col-md-4 col-sm-4 col-xs-12 icon-block">--}}
+                                    {{--<div class="icon-container">--}}
+                                    {{--<a href="#"><i class="flaticon-click5"></i></a>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="icon-text">--}}
+                                    {{--<h3>Diseño de Edificios Corporativos</h3>--}}
+                                    {{--<p>Voluptate illum dolore ita ipsum, quid deserunt singulis, labore admodum--}}
+                                    {{--ita--}}
+                                    {{--multos malis ea nam nam tamen fore amet. Vidisse quid incurreret ut ut--}}
+                                    {{--possumus.</p>--}}
+                                    {{--</div>--}}
+                                    {{--</div>--}}
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <div >
+                                        <a href=""
+                                           class="readmore-button">Leer más</a>
                                     </div>
-                                @endforeach
-                                    {{--<!-- ICON BLOCK -->--}}
-                                    {{--<div class="col-md-4 col-sm-4 col-xs-12 icon-block">--}}
-                                        {{--<div class="icon-container">--}}
-                                            {{--<a href="#"><i class="flaticon-armchair4"></i></a>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="icon-text">--}}
-                                            {{--<h3>Diseño de Edificios Multifamiliares</h3>--}}
-                                            {{--<p>Voluptate illum dolore ita ipsum, quid deserunt singulis, labore admodum--}}
-                                                {{--ita--}}
-                                                {{--multos malis ea nam nam tamen fore amet. Vidisse quid incurreret ut ut--}}
-                                                {{--possumus.</p>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                    {{--<!-- ICON BLOCK -->--}}
-                                    {{--<div class="col-md-4 col-sm-4 col-xs-12 icon-block">--}}
-                                        {{--<div class="icon-container">--}}
-                                            {{--<a href="#"><i class="flaticon-click5"></i></a>--}}
-                                        {{--</div>--}}
-                                        {{--<div class="icon-text">--}}
-                                            {{--<h3>Diseño de Edificios Corporativos</h3>--}}
-                                            {{--<p>Voluptate illum dolore ita ipsum, quid deserunt singulis, labore admodum--}}
-                                                {{--ita--}}
-                                                {{--multos malis ea nam nam tamen fore amet. Vidisse quid incurreret ut ut--}}
-                                                {{--possumus.</p>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
+
                                 </div>
                             </div>
 
@@ -95,126 +106,46 @@
                                 <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner">
-                                        {{--@foreach ($me->projects->chunk(2) as $key => $project)--}}
-                                        {{--<div class="item  @if ($key==0) active @endif">--}}
-                                            <div class="item  active ">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-xs-12 width-mediun">
+                                        @foreach ($me->projects->chunk(2) as $key => $group)
+                                            <div class="item  @if ($key==0) active @endif">
+                                                <div class="row">
+                                                    @foreach ($group as $project)
+                                                        <div class="col-md-6 col-sm-6 col-xs-12 width-mediun">
+                                                            <div class="owl-item active ">
+                                                                <figure class="oriel-carousel">
+                                                                    <!-- POST IMAGE -->
+                                                                    <a href="single-project.html" class="ext-link">
+                                                                        @if ($project->featuredImage)
+                                                                            <img src="{{ $project->featuredImage->fullPath }}"
+                                                                                 class="img-responsive"
+                                                                                 alt="{{ $project->name }}">
+                                                                        @else
+                                                                            <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png"
+                                                                                 class="img-responsive"
+                                                                                 title="{{ $project->name }}">
+                                                                        @endif
+                                                                    </a>
+                                                                    <!-- POST CONTENT -->
+                                                                    <figcaption>
+                                                                        <div class="h3-home">
+                                                                            <h3>
+                                                                                <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}">{{ $project->name }}</a>
+                                                                            </h3>
+                                                                            <hr>
+                                                                            <p>{{ $project->description }}</p>
+                                                                            <a href="{{ $me->getLinkTo('/proyecto/'.$project->id) }}"
+                                                                               class="readmore-button">Leer más</a>
+                                                                        </div>
+                                                                    </figcaption>
+                                                                </figure>
 
-
-                                                    <div class="owl-item active ">
-                                                        <figure class="oriel-carousel">
-                                                            @foreach($me->projects as $project)
-                                                            <!-- POST IMAGE -->
-                                                                <a href="single-project.html" class="ext-link">
-                                                                    @if ($project->featuredImage)
-                                                                        <img src="{{ $project->featuredImage->fullPath }}"
-                                                                             class="img-responsive" alt="">
-                                                                    @else
-                                                                        <img src="//www.technodoze.com/wp-content/uploads/2016/03/default-placeholder.png"
-                                                                             class="img-responsive"
-                                                                             title="{{ $project->name }}">
-                                                                    @endif
-                                                                </a>
-                                                            @endforeach
-                                                        <!-- POST CONTENT -->
-                                                            <figcaption>
-                                                                <div>
-                                                                    <h5><a href="single-project.html">Project 2</a></h5>
-                                                                    <hr>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy nibh euismod
-                                                                        tincidunt ut laoreet dolore magna aliquam
-                                                                        erat…</p>
-                                                                    <a href="single-project.html"
-                                                                       class="readmore-button">View Project</a>
-                                                                </div>
-                                                            </figcaption>
-                                                        </figure>
-
-                                                    </div>
-                                                    {{--@endforeach--}}
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
                                                 </div>
-                                                <div class="col-md-6 col-sm-6 col-xs-12 width-mediun">
-                                                    <div class="owl-item active">
-                                                        <figure class="oriel-carousel">
-                                                            <!-- POST IMAGE -->
-                                                            <a href="single-project.html" class="ext-link">
-                                                                <img src="images/photos/600x400.gif"
-                                                                     class="img-responsive" alt="">
-                                                            </a>
-                                                            <!-- POST CONTENT -->
-                                                            <figcaption>
-                                                                <div>
-                                                                    <h5><a href="single-project.html">Project 2</a></h5>
-                                                                    <hr>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy nibh euismod
-                                                                        tincidunt ut laoreet dolore magna aliquam
-                                                                        erat…</p>
-                                                                    <a href="single-project.html"
-                                                                       class="readmore-button">View Project</a>
-                                                                </div>
-                                                            </figcaption>
-                                                        </figure>
-                                                    </div>
-                                                </div>
-
                                             </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-6 col-xs-12 width-mediun">
-                                                    <div class="owl-item active">
-                                                        <figure class="oriel-carousel">
-                                                            <!-- POST IMAGE -->
-                                                            <a href="single-project.html" class="ext-link">
-                                                                <img src="images/photos/600x400.gif"
-                                                                     class="img-responsive" alt="">
-                                                            </a>
-                                                            <!-- POST CONTENT -->
-                                                            <figcaption>
-                                                                <div>
-                                                                    <h5><a href="single-project.html">Project 2</a></h5>
-                                                                    <hr>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy nibh euismod
-                                                                        tincidunt ut laoreet dolore magna aliquam
-                                                                        erat…</p>
-                                                                    <a href="single-project.html"
-                                                                       class="readmore-button">View Project</a>
-                                                                </div>
-                                                            </figcaption>
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6 col-xs-12 width-mediun">
-                                                    <div class="owl-item active">
-                                                        <figure class="oriel-carousel">
-                                                            <!-- POST IMAGE -->
-                                                            <a href="single-project.html" class="ext-link">
-                                                                <img src="images/photos/600x400.gif"
-                                                                     class="img-responsive" alt="">
-                                                            </a>
-                                                            <!-- POST CONTENT -->
-                                                            <figcaption>
-                                                                <div>
-                                                                    <h5><a href="single-project.html">Project 2</a></h5>
-                                                                    <hr>
-                                                                    <p>Lorem ipsum dolor sit amet, consectetuer
-                                                                        adipiscing elit, sed diam nonummy nibh euismod
-                                                                        tincidunt ut laoreet dolore magna aliquam
-                                                                        erat…</p>
-                                                                    <a href="single-project.html"
-                                                                       class="readmore-button">View Project</a>
-                                                                </div>
-                                                            </figcaption>
-                                                        </figure>
-                                                    </div>
-                                                </div>
+                                        @endforeach
 
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-lg-offset-9 col-md-3 media-right">
                                         <!-- Controls -->
@@ -229,17 +160,21 @@
                                 </div>
                             </div>
                             <hr>
-                            <h2>Nosotros</h2>
 
-                            <div class="col-md-12">
-                                <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @if ($me->about_us)
 
+
+                                        <p>{!! $me->about_us->question_1 !!}</p>
+                                        <a href="{{ $me->getLinkTo('/nosotros') }}"
+                                           class="readmore-button">Leer más</a>
+                                    @else
+                                        <p><em>Aún no se ha definido contenido para esta sección.</em></p>
+                                    @endif
                                 </div>
-                                <div class="col-md-6">
-                                    <img src="" alt="">
-                                </div>
-                            
                             </div>
+
                             {{--<h3>Lo que Dicen Nuetsros Clientes de Nosotros</h3>--}}
                             {{--<!-- TESTIMONIALS -->--}}
                             {{--<div class="col-md-12">--}}

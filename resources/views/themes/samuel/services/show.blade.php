@@ -29,33 +29,28 @@
             @include('themes.samuel.includes.sub-menu')
             <div class="col-md-9">
                 <div class="page-block-inner">
-                    <h2>Iudicem ea probant</h2>
-                    <p>Anim admodum o possumus. Ea eu nisi senserit, eiusmod elit sunt cupidatat fugiat. Ad an tamen eiusmod, incurreret eram proident. Et noster quem e tempor. Non culpa exquisitaque. Aut enim graviterque. Ne cupidatat illustriora. Iudicem ea probant, quo malis quid aut nostrud.</p>
+                    <h2>{{ $service->name }}</h2>
+                    {!! $service->question_1 !!}
                     <figure class="caption-image">
                         <div>
                             <img src="/images/photos/1200x460.gif" class="img-responsive" alt="">
                         </div>
-                        <figcaption>Ea eu nisi senserit</figcaption>
+                        <figcaption>{{ $service->name }}</figcaption>
                     </figure>
-                    <p>Iudicem ea probant, quo malis quid aut nostrud, summis ullamco qui laboris o ex culpa aliqua esse proident. Fore litteris qui quibusdam non do quorum excepteur probant. Anim incurreret do duis eram. Ipsum id ad fugiat laboris, ea id dolor eiusmod est hic irure qui quorum, voluptate multos anim pariatur nisi. Cupidatat legam quo deserunt fidelissimae, expetendis esse noster ab sint. E quid relinqueret, arbitror non excepteur in e labore officia. Qui lorem possumus graviterque.</p>
+                {!! $service->question_2 !!}
                     <!-- BLOCKQUOTE -->
                     <blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia ipsum quis diam aliquam vel mollis nisi tempu. Nam et ante urna, ea o lorem eram sint a de do coniunctione, senserit elit enim ab quem se cernantur qui illum incididunt consequat veniam singulis officia.<cite>John Doe</cite>
-                        </p>
+                        {!! $service->question_3 !!}
                     </blockquote>
-                    <p>Ullamco nam eram de ut elit cillum non deserunt de iis varias ab multos est o multos exercitation. In legam aut varias iis probant anim voluptate nostrud, officia dolor quis singulis sunt, te aut fidelissimae, vidisse quorum aliquip, ingeniis enim fabulas, deserunt ea sint nostrud nam velit e de velit incurreret. Varias eiusmod est noster enim ab cupidatat cillum proident, ita veniam se aliqua ex anim litteris te eruditionem ad ingeniis an pariatur se multos o pariatur si elit se in multos senserit, appellat ipsum et ullamco efflorescere. Cupidatat instituendarum do vidisse.</p>
+                    {!! $service->question_5 !!}
                     <hr>
                     <div class="col-md-12">
-                        <div class="col-md-6">
-                            <img src="/images/photos/480x480.gif" class="img-responsive" alt="">
-                            <br>
-                            <img src="/images/photos/480x480.gif" class="img-responsive" alt="">
+                        <div class="col-md-6 ">
+                            @foreach ($service->images()->where('featured', false)->get() as $image)
+                                <a  class="img-hover" title="{{ $service->name }}"><img src="{{ $image->full_path }}" class="img-responsive" alt="{{ $image->name }}" title="{{ $service->name }}"></a>
+                            @endforeach
                         </div>
-                        <div class="col-md-6">
-                            <img src="/images/photos/480x480.gif" class="img-responsive" alt="">
-                            <br>
-                            <img src="/images/photos/480x480.gif" class="img-responsive" alt="">
-                        </div>
+
                     </div>
                 </div>
             </div>

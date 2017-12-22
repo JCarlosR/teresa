@@ -440,6 +440,7 @@ nav ul, nav ol {
     margin-right: -20px;
     display: inline-block;
 }
+
 .icon-block {
     position: relative;
     width: 33%;
@@ -471,6 +472,12 @@ nav ul, nav ol {
     width: 130px;
     height: 130px;
     padding-top: 26px;
+}
+.icon-container a > i{
+
+    font-size: 50px;
+    margin-top: 15px;
+    color: #fff;
 }
 .icon-container a {
     outline: none;
@@ -518,9 +525,11 @@ hr {
     color: #1b1b1b;
 }
 .readmore-button {
+    border: 1px solid #CACFD2;
     word-spacing: 0.1em;
     letter-spacing: 0.01em;
-    padding: 10px 0px;
+    padding: 10px 12px;
+    margin-bottom: 20px;
     line-height: 1;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -534,7 +543,7 @@ hr {
     background-color: #da2f10;
 }
 .readmore-button:hover {
-    padding: 10px 15px;
+    padding: 10px 20px;
 }
 .testimonial .testimonial-text {
     background-color: #f5f1f0;
@@ -895,55 +904,78 @@ hr {
 
 
 /*service*/
-.faq {
-    counter-reset: number-counter;
-    margin:40px 0px 40px 0px;
-    padding:40px 0px 0px 0px;
+.border10{
+    border-top: 1px solid #777777;
+    padding-top: 20px;
 }
-.faq dt {
-    position: relative;
-    font-size:22px;
-    margin-bottom: 20px;
-    line-height: 1;
+faq.left-service{
+    font-size: 72px;
+    color: #c71c77;
+    float: left;
+    display: inline-block;
+     margin-right: 29px;
+    line-height: 95px;
+    height: auto;
+    padding: 30px 20px 0px 20px;
+    width: auto;
 }
-.faq dt:after {
-    content: counter(number-counter);
-    counter-increment: number-counter;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    font: bold 55px/40px Sans-Serif;
-    padding: 20px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    text-align: center;
+faq.right-service p{
+    padding-left: 100px;
 }
-.faq dd {
-    margin: 0px 0px 40px 0px;
-    padding: 0px 0px 40px 0px;
-    word-spacing: 0.15em;
-    line-height: 1.5;
-}
-.faq dt, .faq dd {
-    padding-left: 125px;
-}
-.faq dt {
-    color: #6C7476;
-}
-.faq dd {
-    color:#6C7476;
-    border-bottom: 1px solid #f5f1f0;
-}
-.faq {
-    border-top: 1px solid #f5f1f0;
-}
-.faq dt:after {
-    background-color: #da2f10;
-    color:#fff;
-}
+/*.faq {*/
+    /*counter-reset: number-counter;*/
+    /*margin:40px 0px 40px 0px;*/
+    /*padding:40px 0px 0px 0px;*/
+/*}*/
+/*.faq span {*/
+    /*position: relative;*/
+    /*font-size:22px;*/
+    /*margin-bottom: 20px;*/
+    /*line-height: 1;*/
+/*}*/
+/*.faq p:after {*/
+    /*content: counter(number-counter);*/
+    /*counter-increment: number-counter;*/
+    /*position: absolute;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    /*font: bold 55px/40px Sans-Serif;*/
+    /*padding: 20px;*/
+    /*-webkit-border-radius: 100%;*/
+    /*-moz-border-radius: 100%;*/
+    /*border-radius: 100%;*/
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*text-align: center;*/
+/*}*/
+/*.faq p {*/
+    /*margin: 0px 0px 40px 0px;*/
+    /*padding: 0px 0px 40px 0px;*/
+    /*word-spacing: 0.15em;*/
+    /*line-height: 1.5;*/
+/*}*/
+/*.pad50{*/
+    /*margin-top: 50px;*/
+
+
+/*}*/
+/*.faq span, .faq p {*/
+    /*padding-left: 85px;*/
+/*}*/
+/*.faq span {*/
+    /*color: #6C7476;*/
+/*}*/
+/*.faq span {*/
+    /*color:#6C7476;*/
+    /*border-bottom: 1px solid #f5f1f0;*/
+/*}*/
+/*.faq {*/
+    /*border-top: 1px solid #f5f1f0;*/
+/*}*/
+/*.faq dt:after {*/
+    /*background-color: #da2f10;*/
+    /*color:#fff;*/
+/*}*/
 /* ================= TABS ================== */
 ul.resp-tabs-list {
     margin: 0px;
@@ -1270,11 +1302,10 @@ li.color{
     color: #000;
     background: red;
 }
-/*hr.border{*/
-   /*border: 2px solid #1b6d85;*/
-    /*color: #1b6d85;*/
-    /*background: #1b6d85;*/
-    /*width: 50px;*/
+.h3-home h3{
+    font-size: 20px;
 
-
-/*}*/
+}
+.h3-home h3 >a {
+    color: #1b1b1b !important;
+}
