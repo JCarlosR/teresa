@@ -50,7 +50,7 @@
                                         <div class=" col-md-4 col-sm-4 col-xs-12 icon-block">
                                             <div class="icon-container">
                                                 <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" title="">
-                                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                    <i class="{{ $service->icon }}" aria-hidden="true"></i>
                                                 </a>
                                             </div>
                                             <div class="icon-text h3-home">
