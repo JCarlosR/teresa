@@ -118,7 +118,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="date"
     height: 50px;
 }
 .search-button {
-    background-image: url(../images/search.png);
+    background-image: url(/themes/samuel/imagenes/search.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
