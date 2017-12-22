@@ -1,18 +1,20 @@
 @extends('themes.samuel.base')
 
 @section('content')
+
     <div class="carousel slide width">
-
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
-                <img src="/images/photos/1800x1000.gif" alt="Los Angeles">
-            </div>
+            @foreach ($me->slides()->take(1)->get() as $key => $slide)
+                <div class="item active">
+                    <img src="{{ asset($slide->imageUrl) }}" alt="Los Angeles">
+                </div>
 
-            <div class="hero-abouts "><p>
-                    Show service
-                </p></div>
+                <div class="hero-abouts "><p>
+                        SHOW servicios
+                    </p>
+                </div>
+            @endforeach
         </div>
 
         <!-- Left and right controls -->
@@ -23,7 +25,6 @@
 
         </a>
     </div>
-
     <section class="width">
         <div class="row page-block">
             @include('themes.samuel.includes.sub-menu')

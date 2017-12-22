@@ -3,24 +3,18 @@
 @section('content')
 
     <div class="carousel slide width">
-
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
-                <img src="images/photos/1800x1000.gif" alt="Los Angeles">
-            </div>
+            @foreach ($me->slides()->take(1)->get() as $key => $slide)
+                <div class="item active">
+                    <img src="{{ asset($slide->imageUrl) }}" alt="Los Angeles">
+                </div>
 
-            <div class="item">
-                <img src="images/photos/1800x1000.gif" alt="Chicago">
-            </div>
-
-            <div class="item">
-                <img src="images/photos/1800x1000.gif" alt="New York">
-            </div>
-            <div class="hero-abouts "><p>
-                    SERVICE
-                </p></div>
+                <div class="hero-abouts "><p>
+                        Servicios
+                    </p>
+                </div>
+            @endforeach
         </div>
 
         <!-- Left and right controls -->
