@@ -5,7 +5,7 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            @foreach ($me->slides as $key => $slide)
+            @foreach ($me->slides()->take(1)->get() as $key => $slide)
             <div class="item active">
                 <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}" title="{{ $slide->title }}">
             </div>
