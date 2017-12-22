@@ -152,7 +152,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="date"
 .call-now span {
     font-size: 24px;
     padding: 15px 20px 15px 80px;
-    background-image: url(../images/phone.png);
+    background-image: url(/themes/samuel/imagenes/phone.png);
     background-position: 14px center;
     background-repeat: no-repeat;
     display: block;

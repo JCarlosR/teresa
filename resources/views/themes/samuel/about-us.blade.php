@@ -364,7 +364,7 @@
                                                 <div class="owl-item active" >
                                                     <figure class="oriel-carousel">
                                                         <!-- POST IMAGE -->
-                                                        <a href="{{ $customer->url ?: '#' }}" class="ext-link">
+                                                        <a href="{{ $customer->url ?: '#' }}" class="">
                                                             <img src="/images/customers/{{ $customer->image }}" class="img-responsive" alt="imagen">
                                                         </a>
 

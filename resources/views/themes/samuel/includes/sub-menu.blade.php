@@ -8,7 +8,8 @@
                 </form>
             </div>
             <div class="sidebar-box">
-                <div class="call-now"><span>{{$me->phones}}</span></div>
+                {{--{{$me->phones}}--}}
+                <div class="call-now"><span>{!! $me->phones_with_link  !!}</span></div>
             </div>
             <div class="sidebar-box">
                 <h5>Sub Menu</h5>
