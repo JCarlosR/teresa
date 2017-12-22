@@ -608,7 +608,7 @@ hr {
 .logo img{
     background: #1b1b1b;
     z-index: 1000;
-    padding: 18px 46px !important;
+    padding: 18px 45.5px !important;
     float: left;
 
 }
@@ -642,6 +642,11 @@ hr {
     float: right!important;
     margin-right: -15px;
     padding-top: 40px;
+}
+.navbar-right li a{
+    color:#1b1b1b;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .navbar-default {
@@ -701,7 +706,7 @@ hr {
     font-weight: 700;
     padding-left: 80px;
     padding-top: 20px;
-    margin-left: 222px;
+    margin-left: 230px;
     z-index: 3;
     width: 25%;
     background:#000;
