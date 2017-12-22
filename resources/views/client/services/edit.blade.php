@@ -52,6 +52,10 @@
                             <label for="service-short-name">Nombre corto</label>
                             <input type="text" name="short_name" id="service-short-name" class="form-control" placeholder="Ingresa aquí un nombre de corto, un nombre de botón" value="{{ old('short_name', $service->short_name) }}">
                         </div>
+                        <div class="form-group">
+                            <label for="service-icon">Ícono <em>(código)</em></label>
+                            <input type="text" name="icon" id="service-icon" class="form-control" placeholder="Código de un ícono o imagen representativa" value="{{ old('icon', $service->icon) }}">
+                        </div>
                     @endif
                 </fieldset>
 
