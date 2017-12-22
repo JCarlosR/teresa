@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-6 col-xs-12 deskop">
+<div class="col-md-3 col-sm-6 col-xs-12 deskop wall">
     <aside class="page-block-left">
         <div class="page-block-inner">
             <div class="sidebar-box">

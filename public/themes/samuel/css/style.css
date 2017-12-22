@@ -1333,3 +1333,8 @@ li.color{
 .h3-home h3 >a {
     color: #1b1b1b !important;
 }
+/*adpatacion imagenes proyectos*/
+.ext-link img{
+    width: 420px;
+    height: 320px;
+}
