@@ -53,6 +53,7 @@ a:hover {
 .page-block-left {
     float: left;
     width: 404px;
+    height: 2600px;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
     display: block;
@@ -117,7 +118,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="date"
     height: 50px;
 }
 .search-button {
-    background-image: url(../images/search.png);
+    background-image: url(/themes/samuel/imagenes/search.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -151,7 +152,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="date"
 .call-now span {
     font-size: 24px;
     padding: 15px 20px 15px 80px;
-    background-image: url(../images/phone.png);
+    background-image: url(/themes/samuel/imagenes/phone.png);
     background-position: 14px center;
     background-repeat: no-repeat;
     display: block;
@@ -608,7 +609,7 @@ hr {
 .logo img{
     background: #1b1b1b;
     z-index: 1000;
-    padding: 18px 46px !important;
+    padding: 18px 45.5px !important;
     float: left;
 
 }
@@ -642,6 +643,11 @@ hr {
     float: right!important;
     margin-right: -15px;
     padding-top: 40px;
+}
+.navbar-right li a{
+    color:#1b1b1b;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .navbar-default {
@@ -701,7 +707,7 @@ hr {
     font-weight: 700;
     padding-left: 80px;
     padding-top: 20px;
-    margin-left: 222px;
+    margin-left: 230px;
     z-index: 3;
     width: 25%;
     background:#000;
@@ -722,7 +728,7 @@ hr {
     padding-left: 80px;
     padding-top: 30px;
     padding-bottom: 10px;
-    margin-left: 41.5%;
+    margin-left: 42%;
     z-index: 3;
     width: 25%;
     background:#da2f10;
@@ -738,6 +744,25 @@ hr {
     color: #fff;
 }
 @media(max-width: 768px){
+
+    .hero-abouts{
+        position: absolute;
+        top: 50%;
+        font-weight: 700;
+        padding-left: 80px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-left: 41.5%;
+        z-index: 3;
+        width: 100%;
+        background:rgba(000,000,000,0.5);
+        color: #fff;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
     .hero{
         display: none;
     }
@@ -1308,4 +1333,9 @@ li.color{
 }
 .h3-home h3 >a {
     color: #1b1b1b !important;
+}
+/*adpatacion imagenes proyectos*/
+.ext-link img{
+    width: 420px;
+    height: 320px;
 }

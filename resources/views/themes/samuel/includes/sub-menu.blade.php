@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-6 col-xs-12 deskop">
+<div class="col-md-3 col-sm-6 col-xs-12 deskop wall">
     <aside class="page-block-left">
         <div class="page-block-inner">
             <div class="sidebar-box">
@@ -8,7 +8,8 @@
                 </form>
             </div>
             <div class="sidebar-box">
-                <div class="call-now"><span>{{$me->phones}}</span></div>
+                {{--{{$me->phones}}--}}
+                <div class="call-now"><span>{!! $me->phones_with_link  !!}</span></div>
             </div>
             <div class="sidebar-box">
                 <h5>Sub Menu</h5>

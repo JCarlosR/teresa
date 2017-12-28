@@ -39,7 +39,7 @@
             <div class="row page-block">
                 <div class="width-full">
                     @include('themes.samuel.includes.sub-menu')
-                    <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="col-md-9 col-sm-12 col-xs-12 wall" >
                         <div class="main-2">
                             <div class="col-md-12">
                                 <h2 class="text-center">Nuestros Servicios</h2>
@@ -50,7 +50,7 @@
                                         <div class=" col-md-4 col-sm-4 col-xs-12 icon-block">
                                             <div class="icon-container">
                                                 <a href="{{ $me->getLinkTo('/servicio/'.$service->id) }}" title="">
-                                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                    <i class="{{ $service->icon }}" aria-hidden="true"></i>
                                                 </a>
                                             </div>
                                             <div class="icon-text h3-home">

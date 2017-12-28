@@ -62,6 +62,15 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function() {
+    var heights = $(".wall").map(function() {
+            return $(this).height();
+        }).get(),
+
+        maxHeight = Math.max.apply(null, heights);
+
+    $(".wall").height(maxHeight);
+});
 
 //img
 // $(document).ready(function() {

@@ -1,21 +1,28 @@
 @extends('themes.samuel.base')
 @section('content')
+
     <div class="carousel slide width">
-
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            @foreach ($me->slides as $key => $slide)
+            @foreach ($me->slides()->take(1)->get() as $key => $slide)
             <div class="item active">
-                <img src="{{ asset($slide->imageUrl) }}" alt="{{ $slide->title }}" title="{{ $slide->title }}">
+                <img src="{{ asset($slide->imageUrl) }}" alt="Los Angeles">
             </div>
+
             <div class="hero-abouts "><p>
-                   Nosotros
+                    Nosotros
                 </p>
             </div>
             @endforeach
         </div>
 
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+        </a>
     </div>
 
     <section class="width">
@@ -357,7 +364,7 @@
                                                 <div class="owl-item active" >
                                                     <figure class="oriel-carousel">
                                                         <!-- POST IMAGE -->
-                                                        <a href="{{ $customer->url ?: '#' }}" class="ext-link">
+                                                        <a href="{{ $customer->url ?: '#' }}" class="">
                                                             <img src="/images/customers/{{ $customer->image }}" class="img-responsive" alt="imagen">
                                                         </a>
 
