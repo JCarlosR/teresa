@@ -63,7 +63,7 @@
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
-                    <div class="col-social">
+                    <div class="col-social" data-linkedin-token="{{ env('LINKEDIN_OAUTH_TOKEN') }}">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">Linkedin</p>
                         <a href="{{ $linkedIn->url }}" target="_blank" data-social="linkedIn" data-id="{{ $linkedIn->id }}">
                             <i class="ion-social-linkedin fs-36 @if($linkedIn->state) social-color-linkedin @else social-color-black @endif"></i>
@@ -91,7 +91,7 @@
                             <div class="mt-10 fs-11 text-muted count"></div>
                         </a>
                     </div>
-                    <div class="col-social">
+                    <div class="col-social" data-foursquare-token="{{ env('FOURSQUARE_OAUTH_TOKEN') }}">
                         <p class="fs-12 text-uppercase text-muted hidden-xs">FourSquare</p>
                         <a href="{{ $fourSquare->url }}" target="_blank" data-social="fourSquare" data-id="{{ $fourSquare->id }}">
                             <i class="block ion-social-foursquare fs-36 @if($fourSquare->state) social-color-foursquare @else social-color-black @endif"></i>
